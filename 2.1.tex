@@ -1,0 +1,1657 @@
+\chapter{Số nguyên tố, hợp số}
+
+Trong cấp học trung học cơ sở, các bạn học sinh sẽ được tiếp xúc với nhiều khái niệm mới lạ, bao gồm số nguyên tố (tiếng anh được gọi là \chu{prime number}). Theo nhiều tài liệu ghi chép lại, số nguyên tố lần đầu tiên xuất hiện trong các công trình toán học Hi Lạp cổ đại. Nhà toán học Hi Lạp lỗi lạc $Euclid$ đã đưa ra những định lí cơ bản về số học, trong đó bao gồm cả chứng minh sự tồn tại của vô hạn các số nguyên tố. Riêng đối với cuốn sách này, chương III tập trung nghiên cứu vào các vấn đề liên quan đến số nguyên tố, cụ thể là các tính chất từ cơ bản đến nâng cao của chúng. Chương được chia ra làm $5$ phần
+\begin{itemize}
+    \item\chu{Phần 1.} Về số dư của số nguyên tố trong phép chia cho một số nguyên dương.
+    \item\chu{Phần 2.} Phân tích tiêu chuẩn của một số nguyên tố.
+    \item\chu{Phần 3.} Ứng dụng của đồng dư thức.
+    \item\chu{Phần 4.} Định lí $Fermat$ và ứng dụng.
+    \item\chu{Phần 5.} Số nguyên tố và tính nguyên tố cùng nhau.
+\end{itemize}
+
+
+\section{Các định nghĩa, tính chất cơ bản}
+\subsection{Các định nghĩa}
+\begin{light}
+\chu{Định nghĩa 1.} Số nguyên tố là số tự nhiên lớn hơn $1,$ chỉ có hai ước dương là $1$ và chính nó.
+\end{light} 
+
+Chẳng hạn
+\begin{enumerate}
+    \item Số $2$ được coi là số nguyên tố bởi vì nó có đúng hai ước số tự nhiên lớn hơn $1,$ đó là $1$ và $2.$ Đây cũng là số nguyên tố nhỏ nhất và là số nguyên tố chẵn duy nhất.
+    \item Số $27$ không được coi là số nguyên tố bởi vì nó có bốn ước tự nhiên là $1,3,9$ và $27.$  
+\end{enumerate}
+\begin{light}
+\chu{Định nghĩa 2.} Hợp số là số tự nhiên lớn hơn 1 và có nhiều hơn hai ước dương.
+\end{light}
+Chẳng hạn
+\begin{enumerate}
+    \item Số $6$ là hợp số vì nó có $4$ ước dương là $1,2,3$ và $6$.
+    \item Số $13$ không là hợp số vì nó chỉ có hai ước dương là $1$ và $13$. Số $13$ là số nguyên tố.
+\end{enumerate}
+Chú ý rằng, hai số 0 và 1 không là số nguyên tố, cũng không là hợp số.
+\subsection{Một số tính chất cơ bản}
+\begin{enumerate}
+    \item Mỗi số tự nhiên lớn hơn 1 đều có duy nhất một cách phân tích ra thừa số nguyên tố. Chẳng hạn, ta có cách viết các số $11,100,2408$ thành tích các thừa số nguyên tố\[11=11,\quad 100=2^5\cdot 5^2,\quad 2408=2^3\cdot 7\cdot 43.\]Các cách viết trên là duy nhất!
+    \item Tập hợp các số nguyên tố là vô hạn.
+    \item Với $a,b$ là các số nguyên và tích $ab$ chia hết cho số nguyên tố $p$, khi đó ít nhất một trong hai số $a,b$ chia hết cho $p.$
+\end{enumerate}
+
+\section{Về số dư của số nguyên tố trong phép chia cho một số nguyên dương}
+\setcounter{bx}{0}
+Tiểu mục này chủ yếu nghiên cứu về một vài số nguyên tố đầu tiên của bảng, và số dư của nó khi đem chia cho một vài số khác.
+\subsection{Ví dụ minh họa}
+
+\begin{bx}
+Tìm tất cả các số tự nhiên $n\ge 1$ sao cho $n+1,\:n+3$ và $n+11$ đều là số nguyên tố.
+\loigiai{
+Ba số nguyên $n+1,n+3,n+11$ khác số dư nhau khi chia cho $3,$ bởi vì
+$$n+11\equiv n+2\pmod{3},\quad n+3\equiv n\pmod{3},\quad n+1\equiv n+1\pmod{3}.$$
+Theo đó, trong chúng có một số chia hết bằng $3.$ Các số $n+3$ và $n+11$ đều lớn hơn $3,$ vì vậy chỉ tồn tại trường hợp $n+1=3.$ Đáp số bài toán là $n=2.$}
+\end{bx}
+
+\begin{bx}
+Số dư của một số nguyên tố trong phép chia cho $30$ không phải là một số nguyên tố. Tìm số dư đó.
+\loigiai{
+Trong phép chia đã cho, ta lần lượt gọi số bị chia là $p,$ thương là $q,$ số dư là $r\le 30.$ Ta có
+$p=30q+r.$
+Do $r$ không là số nguyên tố, ta xét các trường hợp.
+\begin{enumerate}
+    \item Nếu $r$ là hợp số nhỏ hơn $30,$ ước nguyên tố của $r$ chỉ có thể là $2,3,5.$ Lúc này số $p$ sẽ là hợp số vì nó nhận ít nhất một trong ba số $2,3,5$ làm ước và lớn hơn chính ước ấy. Điều này mâu thuẫn với giả thiết.
+    \item Nếu $r=1,$ ta sẽ chỉ cần chỉ ra một số nguyên tố $p$ thỏa mãn, chẳng hạn như $p=31.$
+\end{enumerate}
+Nói tóm lại, số dư cần tìm là $r=1.$}
+\end{bx}
+
+\begin{bx} \label{snt01} \
+\begin{enumerate}[a,] 
+    \item Chứng minh rằng một số nguyên tố $p\ge 3$ chỉ có thể có dạng $4k+1$ hoặc $4k+3,$ với $k$ là số nguyên dương.
+    \item Chứng minh rằng một số nguyên tố $p\ge 5$ chỉ có thể có dạng $6k+1$ hoặc $6k+5,$ với $k$ là số nguyên dương.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,] 
+    \item Với $k$ nguyên dương, ta sẽ chứng minh một số nguyên tố $p$ không thể có các dạng còn lại. Thật vậy
+    \begin{itemize}
+        \item Nếu $p=4k,$ ta suy ra $p$ là hợp số vì nó có ba ước $1,2,4k.$
+        \item Nếu $p=4k+2=2(2k+1),$ ta suy ra $p$ là hợp số vì nó có ba ước $1,2,2(2k+1).$      
+    \end{itemize}
+    \item Với $k$ nguyên dương, ta sẽ chứng minh một số nguyên tố $p$ không thể có các dạng còn lại. Thật vậy
+    \begin{itemize}
+        \item Nếu $p=6k,$ ta suy ra $p$ là hợp số vì nó có ba ước  $1,2,3.$
+        \item Nếu $p=6k+2=2(3k+1),$ ta suy ra $p$ là hợp số vì nó có ba ước $1,2,2(3k+1).$   
+        \item Nếu $p=6k+3=3(2k+1),$ ta suy ra $p$ là hợp số vì nó có ba ước $1,3,3(2k+1).$
+        \item Nếu $p=6k+4=2(3k+2),$ ta suy ra $p$ là hợp số vì nó có ba ước $1,2,2(3k+2).$        
+    \end{itemize}
+    Hoàn tất chứng minh.
+\end{enumerate}
+}
+\end{bx}
+
+\begin{bx}
+Tìm bốn số tự nhiên $x_{1}<x_{2}<x_{3}<x_{4}$ sao cho tất cả $6
+$ hiệu giữa chúng đều là số nguyên tố.
+\loigiai{Từ giả thiết, ta có thể đặt
+\begin{align*}
+    p_1=x_4-x_3,\qquad p_2=x_3-x_2,\qquad p_3=x_2-x_1,\\
+    p_4=x_4-x_2,\qquad p_5=x_3-x_1,\qquad p_6=x_4-x_1.
+\end{align*}
+Ta đã biết, số nguyên tố chẵn duy nhất là số $2.$ Căn cứ vào lập luận này, ta xét các trường hợp dưới đây.
+\begin{enumerate}
+    \item Nếu $p_1,p_2,p_3$ cùng tính chẵn lẻ, ta có $p_4=p_1+p_2$ và $p_5=p_2+p_3$ cùng là số chẵn và lớn hơn $2$ nên không thể là số nguyên tố, mâu thuẫn.
+    \item Nếu trong $p_1,p_2,p_3$ có một số bằng $2$ và hai số lẻ, ta có $p_6=p_1+p_2+p_3$ là số chẵn và lớn hơn $2$ nên không thể là số nguyên tố, mâu thuẫn.
+    \item Nếu trong $p_1,p_2,p_3$ có một số bằng $2$ và hai số lẻ, ta chia bài toán thành các trường hợp sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1. }Nếu ${p}_{1}$ là số lẻ và  ${p}_{2}={p}_{3}=2,$ ${p}_{5}=4$ là hợp số, mâu thuẫn.
+        \item \chu{Trường hợp 2. }Nếu ${p}_{3}$ là số lẻ và ${p}_{1}={p}_{2}=2,$  ${p}_{4}=4$ là hợp số, mâu thuẫn.
+        \item \chu{Trường hợp 3. }Nếu ${p}_{2}$ là số lẻ và ${p}_{1}={p}_{3}=2$, ta có ${p}_{4}={p}_{5}={p}_{2}+2 $ và ${p}_{6}={p}_{2}+4$ đều là các số nguyên tố. Lần lượt xét các số dư của $p_2$ khi chia cho $3,$ ta chỉ ra $p_2=3,p_5=5,p_6=7.$
+    \end{itemize}
+\end{enumerate}
+Tổng kết lại, tất cả các bộ số thỏa yêu cầu đều có dạng
+$$\left(x_1,x_2,x_3,x_4\right)=\left(a,a+2,a+5,a+7\right),$$
+trong đó $a$ là một số tự nhiên tùy ý.}
+\end{bx}
+
+\begin{bx} \label{snt02} 
+Một cặp hai số nguyên tố liên tiếp cách nhau 2 đơn vị còn được gọi là cặp số nguyên tố sinh đôi $-$ \chu{twin primes}. Chứng minh rằng một cặp số nguyên tố lớn hơn $5$ sinh đôi bất kì đều có dạng $(6k-1,6k+1),$ trong đó $k$ là số nguyên dương.
+\loigiai{
+Ta giả sử $(p,p+2)$ là một cặp nguyên tố sinh đôi thỏa mãn $p>5.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p$ có dạng $6k+1$ với $k$ nguyên dương, ta có $p+2=6k+3=3(2k+1)$ là hợp số, mâu thuẫn.
+    \item Nếu $p$ có dạng $6k-1$ với $k$ nguyên dương, ta có $p+2=6k+1.$
+\end{enumerate}
+Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Cho số nguyên dương $p.$ Chứng minh rằng nếu $p$ và $8p^2+1$ là số nguyên tố thì $8p^2-1$ là hợp số.
+\loigiai{
+Rõ ràng $8p^2-1\ge 7.$ Ta giả sử phản chứng rằng $8p^2-1$ là số nguyên tố. Lúc này, do $8p^2-1$ và $8p^2+1$ là hai số nguyên tố sinh đôi lớn hơn $5$ nên theo \chu{ví dụ \ref{snt02}}, tồn tại số nguyên dương $k$ sao cho
+$$8p^2-1=6k-1,\qquad 8p^2+1=6k+1.$$
+Ta nhận được $8p^2=6k.$ Ta lần lượt suy ra
+$$3\mid 4p^2\Rightarrow 3\mid p^2\Rightarrow 3\mid p\Rightarrow p=3.$$
+Tuy nhiên, với $p=3,$ ta có $8p^2+1=25$ là hợp số, mâu thuẫn với giả sử.\\
+Giả sử đã cho là sai. Bài toán được chứng minh.}
+\end{bx}
+
+\subsection{Bài tập tự luyện}
+
+\begin{btt}
+Tìm số nguyên tố $n$ sao cho $n-2,n+6,n+12$ và $n+14$  đều là số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên dương $n$ sao cho dãy 
+$$n+1, \:n+2,\:n+3,\ldots,\:n+10$$ chứa nhiều số nguyên tố nhất có thể.
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng trong $10$ số lẻ liên tiếp lớn hơn $5$, tồn tại ít nhất $4$ hợp số. Đồng thời, hãy chỉ ra một dãy thỏa mãn điều kiện trên.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên tố $(p,q)$ cho $p^2-2q^2=1.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ sao cho $10p^3-7$ và $10p^3+7$ đều là số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ sao cho $2^n-1$ và $2^n+1$ đều là số nguyên tố. 
+\end{btt}
+
+\begin{btt}
+Số hoàn hảo $-$ \chu{perfect number} $-$ là một số nguyên dương có các ước nguyên dương (không tính nó) bằng chính số đó. Tìm tất cả các số hoàn hảo $n$ sao cho $n+1$ và $n-1$ là hai số nguyên tố sinh đôi.
+\nguon{Đề thi thử chuyên Khoa học Tự nhiên 2017}
+\end{btt}
+
+\begin{btt}
+Cho hai dãy các số nguyên tố $5<p_{1}<p_{2}<p_{3}<p_{4}$ và $5<q_{1}<q_{2}<q_{3}<q_{4}$ thỏa mãn $p_{4}-p_{1}=8$ và $q_{4}-q_{1}=8.$ Chứng minh rằng $p_1-q_1$ chia hết cho $30.$
+\nguon{Indian National Mathematical Olympiad 2011}
+\end{btt}
+
+\begin{btt}
+Cho $m,p,r$ là các số nguyên tố thỏa mãn $mp+1=r.$ Chứng minh rằng $m^2+r$ hoặc $p^2+r$ là số chính phương.
+\nguon{Chuyên Toán Kiên Giang 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả bộ ba số nguyên tố $(p,q,r)$ thỏa mãn $pq=r+1$ và $2\left(p^2+q^2\right)=r^2+1.$
+\nguon{Chuyên Toán Quảng Nam 2021}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $p,q$ đồng thời thỏa mãn hai điều kiện
+    \begin{enumerate}[i,]
+        \item $p^2q+p$ chia hết cho $p^2+q.$
+        \item $pq^2+q$ chia hết cho $q^2-p.$
+    \end{enumerate}
+\nguon{Chuyên Toán Phú Thọ 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn $7p+q$ và $pq+11$ cũng là số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $x,y,z$ thỏa mãn $x^2+3xy+y^2=5^z$ 
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba số nguyên tố \(\left ( p,q,r \right )\) thỏa mãn $p<q<r$ và
+\[\dfrac{p^2+2q}{q+r},\quad \dfrac{q^2+9r}{r+p},\quad \dfrac{r^2+3p}{p+q}\]
+đều là các số nguyên.
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2020}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên dương $ (a, b) $ thỏa mãn đúng 3 trong 4 điều kiện dưới đây
+\begin{multicols}{2}
+\begin{enumerate}
+	\item[i,] $a=5b+9 $.
+	\item[ii,] $a+6 $ chia hết cho $ b $.
+	\item[iii,] $a+2017b $ chia hết cho $ 5 $.
+	\item[iv,] $a+7b $ là số nguyên tố.
+\end{enumerate}
+\end{multicols}
+\nguon{Tạp chí Pi, tháng 4 năm 2017}
+\end{btt}
+
+\subsection{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm số nguyên tố $n$ sao cho $n-2,n+6,n+12$ và $n+14$  đều là số nguyên tố.
+\loigiai{
+Năm số nguyên tố $n-2,n,n+6, n+12$ và $n+14$ khi chia cho $5$ sẽ có $5$ số dư khác nhau, chứng tỏ trong đó có số $5.$ 
+\begin{enumerate}
+    \item Nếu $n=5,$ tất cả các số đã cho đều là số nguyên tố.
+    \item Nếu $n-2=5$, ta có $n=7$, lúc này $n+14=21$ không phải là số nguyên tố.
+\end{enumerate}
+Đáp số bài toán là $n=5.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên dương $n$ sao cho dãy 
+$$n+1, \:n+2,\:n+3,\ldots,\:n+10$$ chứa nhiều số nguyên tố nhất có thể.
+\loigiai{
+Ta thấy $n+1, \:n+2,\: \ldots,n+10$ là $10$ số tự nhiên liên tiếp. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $n=0$, dãy đã cho có $4$ số nguyên tố là $2,3,5,7.$
+    \item Với ${n}=1$, dãy đã cho có $5$ số nguyên tố là $2,3,5,7,11.$
+    \item Với $n>1$, dãy sẽ gồm $5$ số chẵn lớn hơn $2,$ và ít nhất một trong $5$ số lẻ còn lại chia hết cho $3$ và lớn hơn $3.$ Như vậy, trường hợp này cho ta không quá $4$ số nguyên tố trong dãy.
+\end{enumerate}
+Đáp số bài toán là $n=1.$}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng trong $10$ số lẻ liên tiếp lớn hơn $5$, tồn tại ít nhất $4$ hợp số. Đồng thời, hãy chỉ ra một dãy thỏa mãn điều kiện trên.
+\loigiai{
+Trong $10$ số lẻ liên tiếp đã cho, tồn tại 
+\begin{enumerate}
+    \item[i,] Ít nhất ba số là bội của $3,$ và lớn hơn $3.$
+    \item[ii,] Đúng hai số là bội của $5,$ và lớn hơn $5.$
+    \item[iii,] Tối đa ba số vừa là bội của $3,$ vừa là bội của $15.$
+\end{enumerate}
+Như vậy, số lượng hợp số ít nhất trong dãy $10$ số lẻ liên tiếp lớn hơn $5$ là $3+2-1=4.$ \\Chẳng hạn, dãy $7,9,11,13,15,17,19,21,23,25$ thỏa điều kiện.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên tố $(p,q)$ cho $p^2-2q^2=1.$
+\loigiai{
+Rõ ràng $p$ là số nguyên tố lẻ. Đặt $p=2k+1$ với $k$ nguyên dương, ta có
+$$(2 {k}+1)^{2}=2 {q}^{2}+1 \Leftrightarrow 4 {k}^{2}+4 {k}+1=2 {q}^{2}+1 \Leftrightarrow 2 {k}({k}+1)={q}^{2}.$$
+Do đó $q^2$ là số chẵn nên $q$ cũng chẵn. Kết hợp với việc $q$ là số nguyên tố, ta có $q=2.$\\ Thay trở lại, ta tìm ra $(p,q)=(3,2)$ là cặp số nguyên tố thỏa mãn.}
+\end{gbtt} 
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ sao cho $10p^3-7$ và $10p^3+7$ đều là số nguyên tố.
+\loigiai{
+Nếu $10p^3-7=6k+1,$ ta có $10p^3+7=6k+15$ là hợp số lớn hơn $3,$ trái điều kiện. Do vậy, ta có 
+$$10p^3-7=6k+5.$$ 
+Suy ra $10p^3=6k+12=3(2k+6).$
+Do $(10,3)=1$ nên $p^3$ chia hết cho $3.$ Chỉ có $p=3$ thỏa mãn điều kiện này. Thử lại, ta kết luận $p=3$ là số nguyên tố duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ sao cho $2^n-1$ và $2^n+1$ đều là số nguyên tố.
+\loigiai{
+Thử trực tiếp với $n=1,2,$ ta thấy $n=2$ thỏa mãn. \\
+Với $n\ge 3,$ ta có $2^n-1$ và $2^n+1$ là hai số nguyên tố sinh đôi lớn hơn $5$.\\
+Áp dụng kết quả của \chu{ví dụ \ref{snt02}}, tồn tại số nguyên dương $k$ sao cho 
+$$2^n-1=6k-1,\qquad 2^n+1=6k+1.$$
+Ta nhận được $2^n=6k,$ điều này vô lí do $2^n$ không chia hết cho $3.$ Đáp số của bài toán là $n=2.$}
+\end{gbtt}
+
+\begin{gbtt}
+Số hoàn hảo $-$ \chu{perfect number} $-$ là một số nguyên dương có các ước nguyên dương (không tính nó) bằng chính số đó. Tìm tất cả các số hoàn hảo $n$ sao cho $n+1$ và $n-1$ là hai số nguyên tố sinh đôi.
+\nguon{Đề thi thử chuyên Khoa học Tự nhiên 2017}
+\loigiai{
+Theo như chứng minh ở \chu{ví dụ \ref{snt02}}, ta suy ra $n$ chia hết cho $6.$ Trong trường hợp $n\ge 37,$ tập $$A=\Bigg\{1;2;3;6;\dfrac{n}{6};\dfrac{n}{3};\dfrac{n}{2};n\Bigg\}.$$ là tập con của tập ước của $n.$ Tổng các phần tử của $A$ bằng
+$$1+2+3+6+\dfrac{n}{6}+\dfrac{n}{3}+\dfrac{n}{2}+n=2n+10.$$
+Tổng này lớn hơn $2n,$ và các số $n\ge 37$ không thỏa mãn. Do đó, $n$ là tất cả bội dương của $6$ nhỏ hơn $36.$ Thử trực tiếp với $n=6,12,18,24,30,$ ta chỉ ra $n=6$ là đáp số bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai dãy các số nguyên tố $5<p_{1}<p_{2}<p_{3}<p_{4}$ và $5<q_{1}<q_{2}<q_{3}<q_{4}$ thỏa mãn $p_{4}-p_{1}=8$ và $q_{4}-q_{1}=8.$ Chứng minh rằng $p_1-q_1$ chia hết cho $30.$
+\loigiai{
+Do $p_1>5$ nên $p_1$ có dạng $6k+1$ hoặc $6k+5.$ Nếu $p_1=6k+1$ thì $p_4=6k+9$ là hợp số, trái giả thiết. Như vậy, $p_1$ có dạng $6k+5.$ Ngoài ra, bằng việc xét số dư của $p_1$ khi chia cho $10,$ ta dễ dàng chỉ ra $p_1$ nhận một trong các dạng $10l+1,10l+3,10l+7,10l+9.$
+\begin{enumerate}
+    \item Nếu $p_1=10l+1,$ ta có thể thấy bộ $\tron{p_1,p_2,p_3,p_4}=\tron{11,13,17,19}$ là một cấu hình thỏa mãn.
+    \item Nếu $p_1=10l+3$ thì $p_4=10l+11,$ đồng thời $$10l+3<p_2<p_3<10l+11.$$ Do $p_2$ và $p_3$ là hai số lẻ khác $10l+5$ nên $p_2=10l+7,p_3=10l+9.$ Ta có $p_2,p_3,p_4$ là ba số lẻ liên tiếp lớn hơn $3$ nên trong chúng có một hợp số chia hết cho $3,$ trái giả thiết.
+    \item Nếu $p_1=10l+7$ thì $p_4=10l+15$ là hợp số chia hết cho $5,$ trái giả thiết.
+    \item Nếu $p_1=10l+9$ thì $p_4=10l+17,$ đồng thời $$10l+9<p_2<p_3<10l+17.$$ Do $p_2$ và $p_3$ là hai số lẻ khác $10l+15$ nên $p_2=10l+11,p_3=10l+13.$ Ta có $p_1,p_2,p_3$ là ba số lẻ liên tiếp lớn hon $3$ nên trong chúng có một hợp số chia hết cho $3,$ trái giả thiết.    
+\end{enumerate}
+Nói chung, $p_1$ chia $6$ dư $5$ và chia $10$ dư $1.$ Chứng minh tương tự, $q_1$ cũng có cùng số dư khi chia cho $6$ và $10.$ Như vậy $p_1-q_1$ chia hết cho $[6,10]=30.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $m,p,r$ là các số nguyên tố thỏa mãn $mp+1=r.$ Chứng minh rằng $m^2+r$ hoặc $p^2+r$ là số chính phương.
+\nguon{Chuyên Toán Kiên Giang 2021}
+\loigiai{
+Không mất tính tổng quát, ta giả sử $m\ge p.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $m,p,r$ cùng lẻ, ta có $mp+1$ chẵn, nhưng $r$ lẻ, vô lí.
+    \item Nếu $r=2,$ ta có $mp+1=2,$ hay là $mp=1,$ vô lí.
+    \item Nếu $p=2,$ ta có $r=2m+1.$ Ta nhận thấy rằng
+        $m^2+r=(m+1)^2$
+    là số chính phương.
+\end{enumerate}
+Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả bộ ba số nguyên tố $(p,q,r)$ thỏa mãn $pq=r+1$ và $2\left(p^2+q^2\right)=r^2+1.$
+\nguon{Chuyên Toán Quảng Nam 2021}
+\loigiai{Ta chia bài toán thành các trường hợp sau.
+\begin{enumerate}
+    \item Với $p,q,r$ là ba số nguyên tố lẻ, ta có $pq$ lẻ, còn $r+1$ chẵn. Điều này vô lí.
+    \item Với $r=2,$ ta có $pq=3.$ Điều này vô lí.
+    \item Với $q=2,$ ta thu được hệ phương trình
+    $$\heva{&2p=r+1 \\ &2\left(p^2+4\right)=r^2+1}
+    \Leftrightarrow \heva{&r=2p-1 \\ &2\left(p^2+4\right)=(2p-1)^2+1}
+    \Leftrightarrow \heva{&r=2p-1 \\ &(p-3)(p+2)=0.}$$
+    Do $p$ nguyên tố, ta được $p=3$ và $r=2.$
+    \item Với $p=2,$ làm tương tự trường hợp trên, ta được $q=3$ và $r=2.$
+\end{enumerate}
+Kết quả, có $2$ bộ $(p,q,r)$ thỏa mãn đề bài là $(2,3,2)$ và $(3,2,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $p,q$ đồng thời thỏa mãn hai điều kiện
+    \begin{enumerate}[i,]
+        \item $p^2q+p$ chia hết cho $p^2+q.$
+        \item $pq^2+q$ chia hết cho $q^2-p.$
+    \end{enumerate}
+\nguon{Chuyên Toán Phú Thọ 2021}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thỏa mãn đề bài. Điều kiện i cho ta
+    $$\left(p^{2}+q\right)\mid\left(q(p^2+q)+p-q^{2}\right) \Rightarrow \left(p^{2}+q\right)\mid\left(p-q^{2}\right).$$
+    Đồng thời, điều kiện ii cho ta
+    $$\left(q^{2}-p\right)\mid\left(p\left(q^2-p\right)+q+p^{2}\right)\Rightarrow \left(q^{2}-p\right)\mid\left(q+p^{2}\right).$$
+    Dựa vào hai nhận xét trên, ta có $\left|p^{2}+q\right|=\left|q^{2}-p\right|.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $q^2\ge p,$ ta lần lượt suy ra
+        $$p^2+q=q^2-p\Rightarrow (p+q)(p-q+1)=0\Rightarrow q=p+1.$$
+        Lúc này $p,q$ là hai số nguyên tố liên tiếp, và bắt buộc $p=2,q=3.$
+    \item Với $p>q^2,$ ta lần lượt suy ra
+        $$p^2+q=p-q^2\Rightarrow p(p-1)+q(q+1)=0,$$
+        điều này là không thể xảy ra do $p^2>p$ và $q^2>-q.$
+\end{enumerate}
+Kết luận $(p,q)=(2,3)$ là cặp số nguyên tố duy nhất thỏa mãn.}    
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn $7p+q$ và $pq+11$ cũng là số nguyên tố.
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thoả yêu cầu. Trong bài toán này, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p,q$ cùng lẻ thì $7p+q$ là số chẵn lơn hơn $2,$ trái giả sử.
+    \item Nếu $p=2,$ ta có $q+14$ và $2q+11$ đều là số nguyên tố.
+    \begin{itemize}
+        \item Nếu $q=3$ thì hai số trên nguyên tố.
+        \item Nếu $q$ chia $3$ dư $1,$ ta có $q+14$ chia hết cho $3$ và lớn hơn $3,$ do vậy không là số nguyên tố.
+        \item Nếu $q$ chia $3$ dư $2,$ ta có $2q+11$ chia hết cho $3$ và lớn hơn $3,$ do vậy không là số nguyên tố.   
+    \end{itemize}
+    \item Nếu $q=2,$ bằng cách xét tương tự trường hợp vừa rồi, ta tìm được $p=3.$
+\end{enumerate}
+Kết luận, có hai cặp $(p,q)$ thoả yêu cầu là $(2,3)$ và $(3,2).$}
+\begin{luuy}
+Ngoài cách chia trường hợp như trên, ta còn có thể tiến hành bài toán theo một cách chia khác
+\begin{enumerate}
+    \item $p\equiv q\pmod{3}\Rightarrow pq+11\equiv 0\pmod{3}.$
+    \item $3\mid (p+q)\Rightarrow 7p+q\equiv 0\pmod{3}.$
+    \item $p=3\Rightarrow q=2.$
+    \item $p=2\Rightarrow q=3.$
+\end{enumerate}
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $x,y,z$ thỏa mãn $x^2+3xy+y^2=5^z$ 
+\loigiai{
+Phương trình đã cho tương đương với
+$$x^2-2xy+y^2+5xy=5^z \Leftrightarrow (x-y)^2+5xy=5^z.$$
+Với giả sử tồn tại các số nguyên tố $x,y,z$ thỏa yêu cầu, ta có
+$$5\mid(x-y)^2\Rightarrow 5\mid (x-y)\Rightarrow 25\mid (x-y)^2\Rightarrow 25\mid 5xy\Rightarrow 5\mid xy\Rightarrow\hoac{5\mid x\\ 5\mid y}\Rightarrow \hoac{x&=5\\ y&=5.}$$
+Kkhông mất tổng quát, ta giả sử $y=5.$ Từ $x-y$ chia hết cho $5$ và $y=5,$ ta lại suy ra được $x$ chia hết cho $5,$ và bắt buộc $x=5.$ Bằng cách thế trở lại, ta kết luận $(x,y,z)=(5,5,3)$ là bộ số nguyên tố duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba số nguyên tố \(\left ( p,q,r \right )\) thỏa mãn $p<q<r$ và
+\[\dfrac{p^2+2q}{q+r},\quad \dfrac{q^2+9r}{r+p},\quad \dfrac{r^2+3p}{p+q}\]
+đều là các số nguyên.
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2020}
+\loigiai{
+Nếu $p,q,r$ cùng lẻ, ta có số lẻ $p^2+2q$ chia hết cho số chẵn $q+r,$ mâu thuẫn. Do vậy, một trong ba số $p,q,r$ phải bằng $2.$ Với việc $p<q<r,$ ta có $p=2.$ Ta viết lại hệ điều kiện đã cho thành
+    $$\tron{q+r}\mid\tron{4+2q},\quad \tron{r+2}\mid\tron{q^2+9r},\quad \tron{2+q}\mid\tron{r^2+6}.$$
+    Từ $\tron{q+r}\mid \tron{4+2q}$ và $2(q+r)\le 4+2q,$ ta nhận thấy hoặc $2(q+r)=4+2q,$ hoặc $q+r=4+2q.$
+\begin{enumerate}
+    \item Nếu $2q+2r=4+2q$ thì $r=2.$ Kết hợp với $\tron{2+q}\mid\tron{r^2+6}$ thì $q=3.$ Thử với điều kiện còn lại là $\tron{r+2}\mid\tron{q^2+9r},$ ta thấy không thỏa.
+    \item Nếu $q+r=4+2q$ thì $r=q+4.$ Thế trở lại điều kiện thứ ba, ta có $$\tron{2+q}\mid\tron{\tron{q+4}^2+6},$$ suy ra $\tron{2+q}\mid 10.$ Trường hợp này cũng cho ta $q=3$ và $r=7.$ Thử lại, ta thấy thỏa mãn.    
+\end{enumerate}
+Như vậy, $(p,q,r)=(2,3,7)$ là bộ số duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên dương $ (a, b) $ thỏa mãn đúng 3 trong 4 điều kiện dưới đây
+\begin{multicols}{2}
+\begin{enumerate}
+	\item[i,] $a=5b+9 $.
+	\item[ii,] $a+6 $ chia hết cho $ b $.
+	\item[iii,] $a+2017b $ chia hết cho $ 5 $.
+	\item[iv,] $a+7b $ là số nguyên tố.
+\end{enumerate}
+\end{multicols}
+\nguon{Tạp chí Pi, tháng 4 năm 2017}
+	\loigiai{
+		Giả sử $ (a, b) $ là cặp số nguyên dương thỏa mãn đề bài.
+		Ta có các nhận xét sau.
+\begin{enumerate}[\color{tuancolor}\bfseries\sffamily Nhận xét 1.]
+	\item $ (a, b) $ không thể thỏa mãn đồng thời các điều kiện \chu{i} và \chu{iv}.\\
+		Thật vậy, giả sử ngược lại, $(a, b)$ thỏa mãn đồng thời \chu{i}  và \chu{iv}. Khi đó, phải có 
+		$$ a+7b=(5b+9)+7b=12b+9 $$
+		là số nguyên tố, vô lí vì $ 12b+9 $ lớn hơn $ 3 $ và chia hết cho $ 3 $.
+	\item $ (a, b) $ không thể thỏa mãn đồng thời các điều kiện \chu{iii} và \chu{iv}.\\
+		Thật vậy, giả sử ngược lại, $ (a, b) $ thỏa mãn đồng thời \chu{iii} và \chu{iv}. Khi đó, phải có
+		$$ a+2017b=(a+7b)+2010b$$
+		chia hết cho $ 5 $, kéo theo $ a+7b $ chia hết cho $ 5 $, mâu thuẫn với việc $ a+7b $ là số nguyên tố.
+	\end{enumerate}
+		Từ hai nhận xét trên, hiển nhiên $ (a, b) $ không thể thỏa mãn \chu{iv}, vì nếu ngược lại thì $ (a, b) $ chỉ có thể thỏa mãn tối đa hai điều kiện \chu{ii} và \chu{iv}, trái với yêu cầu của đề bài.
+		Như vậy, $ (a, b) $ thỏa mãn đồng thời \chu{i}, \chu{ii} và \chu{iii}.
+		Từ \chu{i}  và \chu{ii}, ta suy ra
+		$$ a+6=(5b+9)+6=5b+15 $$
+		chia hết cho $ b $, thế nên $ 15 $ chia hết cho $ b $. Ta nhận được $b=1,b=3,b=5$ hoặc $b=15.$ \\
+		Mặt khác, từ \chu{i} và \chu{iii}, suy ra $$ a+2017b=(5b+9)+2017b=5(404b+1)+2b+4 $$
+		chia hết cho $ 5 $, dẫn tới $ 2b+4 $ chia hết cho $ 5 $. Thử trực tiếp các trường hợp $b=1,b=3,b=5,b=15,$ ta được $ b=3 $, và đồng thời, ta tìm ra $a=24$. Kết luận $(a,b)=(24,3)$ là cặp duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\section{Phân tích tiêu chuẩn của một số nguyên tố}
+
+\subsection{Lí thuyết}
+
+Trong mục này, chúng ta sẽ làm quen với một số bài tập có sử dụng một bổ đề khá quen thuộc. Bổ đề được phát biểu như sau
+\begin{quote}
+    \it "Với số nguyên tố $p$ và các số nguyên dương $a,b$ thỏa mãn $ab=p,$ số nhỏ hơn trong $a$ và $b$ phải bằng $1.$"
+\end{quote}
+Theo đó, với một biểu thức cho trước có giá trị nguyên tố, ta có thể tìm điều kiện cho các nhân tử của chúng dựa vào bổ đề trên. Sau đây là các bài toán trong mục.
+
+\subsection{Ví dụ minh họa}
+
+\begin{bx}
+Tìm tất cả các số nguyên $n$ sao cho $n^2-9n+20$ là một số nguyên tố.
+\loigiai{
+Ta nhận thấy rằng
+$n^2-9n+20=|n-4||n-5|.$
+Theo yêu cầu bài toán, do $n^2-9n+20$ là số nguyên tố nên hoặc $|n-4|=1,$ hoặc $|n-5|=1.$
+\begin{enumerate}
+    \item Nếu $|n-4|=1,$ ta tìm ra $n=3$ hoặc $n=5.$ Thử lại, ta thấy chỉ có $n=3$ thỏa mãn.
+    \item Nếu $|n-5|=1,$ ta tìm ra $n=4$ hoặc $n=6.$ Thử lại, ta thấy chỉ có $n=6$ thỏa mãn.
+\end{enumerate}
+Như vậy, có tất cả hai giá trị của $n$ thỏa yêu cầu, đó là $n=3$ và $n=6.$}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $n$ để $n^5+n^4+1$ là số nguyên tố.
+\nguon{Chuyên Toán Sóc Trăng 2021}
+\loigiai{
+Ta nhận thấy rằng
+\begin{align*}
+    n^5+n^4+1
+    &=\left(n^5-n^2\right)+\left(n^4-n\right)+\left(n^2+n+1\right)
+    \\&=n^2(n-1)\left(n^2+n+1\right)+n(n-1)\left(n^2+n+1\right)+\left(n^2+n+1\right)
+    \\&=\left(n^2+n+1\right)\left(n^2(n-1)+n(n-1)+1\right)\\&
+=\left(n^2+n+1\right)\left(n^3-n+1\right).
+\end{align*}
+Theo yêu cầu bài toán, một trong hai số $n^2+n+1$ và $n^3-n+1$ phải bằng $1.$ Tuy nhiên, do $$n^2+n+1\ge 1+1+1=3$$ nên $n^3-n+1=1,$ và ta tìm ra $n=1.$ Thử trực tiếp, ta thấy $n=1$ thỏa mãn đề bài.}
+\end{bx}
+
+\begin{bx}\hfill
+\begin{enumerate}[a,]
+    \item Cho số nguyên dương $n.$ Chứng minh nếu $2^{n}-1$ là số nguyên tố thì $n$ cũng là số nguyên tố.
+    \item Liệu rằng với số nguyên tố $p$ bất kì, $2^p-1$ có luôn là số nguyên tố không? Giải thích tại sao.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Giả sử phản chứng rằng $n$ là hợp số. Ta đặt $n=mk,$ với $m,k$ là các số tự nhiên lớn hơn $1.$ Ta có
+    $$2^n-1=\left(2^k\right)^m-1=\left(2^k-1\right)\left[\left(2^k\right)^{m-1}+\left(2^k\right)^{m-2}+\ldots+2^k+1\right].$$
+    Vì $m,k$ là các số tự nhiên lớn hơn $1$ nên
+    $$2^{k}-1>1,\quad \left(2^{k}\right)^{m-1}+\left(2^{k}\right)^{m-2}+\ldots+2^{k}+1>1.$$ 
+    $2^n-1$ được phân tích thành hai thừa số lớn hơn $1,$ chứng tỏ đây là hợp số, mâu thuẫn với giả thiết. Như vậy, giả sử là sai, và ta có điều phải chứng minh.
+    \item Câu trả lời là phủ định. Thật vậy, với số nguyên tố $p=11,$ ta có
+    \[2^p-1=2^{11}-1=2047=23\cdot89.\]
+\end{enumerate}
+} 
+\end{bx}
+\subsection{Bài tập tự luyện}
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ sao cho $\dfrac{n^3 - 1}{9}$ là số nguyên tố.
+\end{btt}
+\begin{btt}
+Tìm tất cả các số nguyên dương $m$ sao cho $$1+3^{20\left(m^2+m+1\right)}+9^{14\left(m^2+m+1\right)}$$ là số nguyên tố.
+\nguon{Đề thi chọn đội tuyển Phổ thông Năng khiếu 2012 $-$ 2013.}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $x$ và $y$ sao cho $x^4+4y^4$ là số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ và số nguyên tố $p$ thỏa mãn \[\dfrac{1}{x}+\dfrac{1}{y}=\dfrac{1}{p}.\]
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $a,b,c$ đôi một phân biệt thỏa mãn điều kiện $\dfrac{a}{c}=\dfrac{a^2+b^2}{c^2+b^2}$. Chứng minh $a^2+b^2+c^2$ không phải là số nguyên tố.
+\end{btt} 
+
+\begin{btt}
+Tìm tất cả các số nguyên dương ${n}$ sao cho $\left[\dfrac{{n}^{3}+8 {n}^{2}+1}{3 {n}}\right]$ là một số nguyên tố, trong đó $[A]$ được kí hiệu là số nguyên lớn nhất không vượt quá $A.$ 
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng một số nguyên tố tùy ý có dạng $2^{2^n}+1$ (với $n$ nguyên dương) không thể biểu diễn dưới dạng hiệu các lũy thừa bậc năm của hai số tự nhiên.
+\end{btt}
+
+\begin{btt} \
+\begin{enumerate}[a,]
+    \item Cho số nguyên dương $a>1$ và số nguyên dương $n.$ Chứng minh rằng nếu $a^n+1$ là số nguyên tố thì $n$ là lũy thừa số mũ tự nhiên của $2.$
+    \item Tìm tất cả các số nguyên dương $n$ sao cho cả hai số $n^n+1$ và $(2n)^{2n}+1$ là số nguyên tố.
+\end{enumerate}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương \(n\) thỏa mãn \(4k^2+n\) là số nguyên tố, với mọi số nguyên \(k\) không âm nhỏ hơn \(n\).
+\nguon{Tạp chí Kvant}
+\end{btt}
+
+\subsection{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ sao cho $\dfrac{n^3 - 1}{9}$ là số nguyên tố.
+\loigiai{
+Xét các số dư của $n$ khi chia cho $3,$ ta được $n$ chia $3$ dư là $1.$ Đặt $n=3k+1,$ ta có
+\begin{align*}
+   \dfrac{n^3 - 1}{9}= \dfrac{(3k+1)^3 - 1}{9}&= \dfrac{27k^3 + 27k^2 + 9k}{9} \\&= 3k^3 + 3k^2 + k \\&= k(3k^2 + 3k + 1).
+\end{align*}
+Dựa vào so sánh $1\le k<3k^2+3k+1,$ ta suy ra $k=1.$ Lúc này $n = 4$ và $\dfrac{n^3 - 1}{9} = \dfrac{64-1}{9} = 7$ là số nguyên tố. Như vậy, $n = 4$ là giá trị duy nhất cần tìm.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $m$ sao cho $$1+3^{20\left(m^2+m+1\right)}+9^{14\left(m^2+m+1\right)}$$ là số nguyên tố.
+\nguon{Đề thi chọn đội tuyển Phổ thông Năng khiếu 2012 $-$ 2013.}
+\loigiai{
+Đặt $n=3^{4\left(m^2+m+1\right)}.$ Ta có $1+3^{20\left(m^2+m+1\right)}+9^{14\left(m^2+m+1\right)}=n^7+n^5+1.$ Ta nhân thấy rằng
+\begin{align*}
+    n^7+n^5+1
+    &=\left(n^7-n\right)+\left(n^5-n^2\right)+\left(n^2+n+1\right)
+    \\&=n(n+1)\tron{n^2-n+1}(n-1)\tron{n^2+n+1}+n^2(n-1)\tron{n^2+n+1}+\left(n^2+n+1\right)
+    \\&=\left(n^2+n+1\right)\tron{n(n+1)\tron{n^2-n+1}(n-1)+n^2(n-1)+1}
+    \\&=\left(n^2+n+1\right)\left(n^5-n^4+n^3-n+1\right).
+\end{align*}
+Theo yêu cầu bài toán, một trong hai số $n^2+n+1$ và $n^5-n^4+n^3-n+1$ phải bằng $1.$ Ta xét hiệu
+$$n^5-n^4+n^3-n+1-\tron{n^2+n+1}=n^5-n^4+n^3-n^2-n=n^4\tron{n-1}+n\tron{n^2-n-1}.$$
+Hiệu kể trên lớn hơn $0$ nếu như $n\ge 2.$ Theo đó, trong trường hợp $n\ge 2,$ ta có
+$$n^2+n+1=1\Leftrightarrow n(n+1)=0.$$
+Trong trường hợp này, ta không tìm được $n$ nguyên dương. Ngược lại, nếu $n=1,$ ta có
+$$3^{4\left(m^2+m+1\right)}=1.$$ 
+Ta không tìm được $m$ nguyên dương từ đây.  }
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $x$ và $y$ sao cho $x^4+4y^4$ là số nguyên tố.
+\loigiai {
+Phân tích thành nhân tử, ta có $$x^4+4y^4 = \left(x^2+2y^2\right)^2 - (2xy)^2 = \left(x^2+2xy+2y^2\right) \left(x^2-2xy+2y^2\right).$$
+Dựa vào nhận xét $0<x^2-2xy+2y^2<x^2+2xy+2y^2,$ từ việc $x^4+4y^4$ là số nguyên tố, ta suy ra $$x^2 - 2xy + 2y^2 = 1\Leftrightarrow (x-y)^2+y^2=1.$$
+Do $x$ và $y$ là hai số nguyên dương nên $x=y=1$. Thử trực tiếp, ta được $x^4 + 4y^4 = 5$ là số nguyên tố.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ và số nguyên tố $p$ thỏa mãn \[\dfrac{1}{x}+\dfrac{1}{y}=\dfrac{1}{p}.\]
+\loigiai{
+Với các số $x,y,p$ thỏa mãn đề bài, ta có
+\begin{align*}
+   \dfrac{1}{x}+\dfrac{1}{y}=\dfrac{1}{p}&\Rightarrow xy-px-py=0\\&\Rightarrow xy-px-py+p^2=p^2\\&
+   \Rightarrow (x-p)(y-p)=p^2. 
+\end{align*}
+Không mất tính tổng quát, ta giả sử $x\le y,$ thế thì $x-p\le y-p.$ Ngoài ra, cả hai số $x$ và $y$ đều lớn hơn $p,$ nên là $0\le x-p\le y-p.$ Ta xét hai trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $x-p=y-p=p,$ ta tìm được $x=y=2p.$
+    \item Nếu $x-p=1$ và $y-p=p^2,$ ta tìm được $x=p+1,y=p^2+p.$
+\end{enumerate}
+Kết luận, tất cả các bộ $(p,x,y)$ thỏa yêu cầu bài toán là
+$$\left(p,2p,2p\right),\quad \left(p,p+1,p^2+p\right),\quad \left(p,p^2+p,p+1\right),$$
+trong đó, $p$ là một số nguyên tố tùy ý.}
+\end{gbtt}
+
+
+\begin{gbtt}
+Cho các số nguyên dương $a,b,c$ đôi một phân biệt thỏa mãn điều kiện $\dfrac{a}{c}=\dfrac{a^2+b^2}{c^2+b^2}$. Chứng minh $a^2+b^2+c^2$ không phải là số nguyên tố.
+\loigiai{
+Với các số $a,b,c$ thỏa mãn yêu cầu, ta có
+$$\dfrac{{a}}{{c}}=\dfrac{{a}^{2}+{b}^{2}}{{c}^{2}+{b}^{2}} \Leftrightarrow {a}\left({c}^{2}+{b}^{2}\right)={c}\left({a}^{2}+{b}^{2}\right) \Leftrightarrow({a}-{c})\left({b}^{2}-{ac}\right)=0.$$
+Do ${a} \neq {c}$ nên ta được ${b}^{2}-{ac}=0$, hay là ${b}^{2}={ac}$, và như vậy thì
+\begin{align*}
+    a^{2}+b^{2}+c^{2}&=a^{2}+a c+c^{2}\\&=a^{2}+2 a c+c^{2}-a c\\&=(a+c)^{2}-b^{2}\\&=(a-b+c)(a+b+c).
+\end{align*}
+Ta giả sử rằng $a^2+b^2+c^2$ là số nguyên tố. Theo đó, do $0<a-b+c<a+b+c,$ ta cần phải có $a-b+c= 1,$ thế nên
+    \begin{align*}
+        & \quad \:\:\: 4a^2+4b^2+4c^2-4a-4b-4c=0
+        \\&\Leftrightarrow \left(4a^2-4a+1\right)+\left(4b^2-4b+1\right)+\left(4c^2-4c+1\right)=3
+        \\&\Leftrightarrow (2a-1)^2+(2b-1)^2+(2c-1)^2=3.
+    \end{align*}
+Do $a,b,c$ là các số nguyên dương, ta suy ra $2a-1=2b-1=2c-1=1,$ nên là $a=c=1,$ trái giả thiết $a\ne c.$ Các mâu thuẫn chỉ ra chứng tỏ giả sử là sai. Bài toán được chứng minh.}
+\end{gbtt} 
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương ${n}$ sao cho $\left[\dfrac{{n}^{3}+8 {n}^{2}+1}{3 {n}}\right]$ là một số nguyên tố, trong đó $[A]$ được kí hiệu là số nguyên lớn nhất không vượt quá $A.$ 
+\loigiai{
+Đặt $A=\dfrac{n^{3}+8 n^{2}+1}{3 n}=\dfrac{n^{2}}{3}+\dfrac{8 n}{3}+\dfrac{1}{3 n} .$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu ${n}=3 {k}$ với ${k}$ là một số nguyên dương, ta có
+    $$\left[A\right]=\left[3k^2+8k+\dfrac{1}{9k}\right]=3k^2+8k=k(3k+8).$$
+    Do $1\le k<3k+8$ nên $[A]$ là số nguyên tố chỉ khi $k=1.$ Từ đây, ta tìm ra $n=3.$
+    \item Nếu ${n}=3 {k}+1$ với ${k}$ là một số tự nhiên, ta có
+    $$[A]=\left[3 k^{2}+10 k+3+\dfrac{1}{9 k+3}\right]=3k^2+10k+3=(k+3)(3k+1).$$
+    Do $k+3\ge 2$ nên $[A]$ là số nguyên tố chỉ khi $3k+1=1.$ Từ đây, ta tìm ra $n=1.$
+    \item Nếu ${n}=3 {k}+2$ với ${k}$ là một số nguyên dương, ta có
+    $$[{A}]=\left[3 {k}^{2}+12 {k}+6+\dfrac{1}{9 {k}+3}+\dfrac{2}{3}\right]=3 {k}^{2}+12 {k}+6=3\left({k}^{2}+4 {k}+2\right).$$
+    Cả hai số $3$ và $k^2+4k+2$ đều lớn hơn $1.$ Trong trường hợp này, $[A]$ là hợp số.
+\end{enumerate}
+Tổng kết lại, $n=1$ và $n=3$ là hai giá trị của $n$ thỏa yêu cầu bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng một số nguyên tố tùy ý có dạng $2^{2^n}+1$ (với $n$ nguyên dương) không thể biểu diễn dưới dạng hiệu các lũy thừa bậc năm của hai số tự nhiên.
+\loigiai{
+Ta giả sử phản chứng rằng tồn tại hai số tự nhiên $a,b$ thỏa mãn
+$$2^{2^n}+1=b^5-a^5=(b-a)\tron{a^4+a^3b+a^2b^2+ab^3+b^4}.$$
+Do $b-a\le b\le b^4\le a^4+a^3b+a^2b^2+ab^3+b^4$ và $2^{2^n}+1$ là số nguyên tố nên là
+$$b-a=1,\quad a^4+a^3b+a^2b^2+ab^3+b^4=2^{2^n}+1.$$
+Thế $b=a+1$ vào đẳng thức còn lại, ta được
+\begin{align*}
+    2^{2^n}+1
+    &=a^4+a^3(a+1)+a^2(a+1)^2+a(a+1)^3+(a+1)^4
+    \\&=5\tron{a^4+2a^3+2a^2+1}+1.
+\end{align*}
+Ta suy ra $2^{2^n}=5\tron{a^4+2a^3+2a^2+1},$ nhưng điều này vô lí vì $2^{2^n}$ không chia hết cho $5.$ \\
+Giả sử là sai, và bài toán được chứng minh.}
+\end{gbtt}
+
+
+\begin{gbtt} \
+\begin{enumerate}[a,]
+    \item Cho số nguyên dương $a>1$ và số nguyên dương $n.$ Chứng minh rằng nếu $a^n+1$ là số nguyên tố thì $n$ là lũy thừa số mũ tự nhiên của $2.$
+    \item Tìm tất cả các số nguyên dương $n$ sao cho cả hai số $n^n+1$ và $(2n)^{2n}+1$ là số nguyên tố.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Giả sử phản chứng rằng $n$ không là lũy thừa số mũ nguyên dương của $2.$ Ta đặt
+    $$n=2^kl,\text{trong đó }k\text{ là số tự nhiên, }l\text{ là số nguyên dương lẻ}.$$
+    Phép đặt này cho ta
+    $$a^n+1=a^{2^kl}+1=\tron{a^{2^k}+1}\tron{a^{2^k(l-1)}-a^{2^k(l-2)}+\ldots-a^{2^k}+1}.$$
+    Số kể trên là hợp số, bởi vì $a^n+1>a^{2^k}+1>1.$ Giả sử phản chứng là sai. Chứng minh hoàn tất.
+    \item Theo như câu a, $n$ là lũy thừa số mũ tự nhiên của $2.$ Đặt $n=2^k,$ trong đó $k$ là số tự nhiên. Khi đó
+    \begin{align*}
+        n^n+1&=\tron{2^k}^{2^k}+1=2^{k\cdot2^k}+1,\\
+        (2n)^{2n}+1&=\tron{2^{k+1}}^{2^{k+1}}+1=2^{(k+1)2^{k+1}}+1.
+    \end{align*}
+    Nếu như $k=0,$ ta tìm ra $n=1.$ Ngược lại, nếu $k\ge 1,$ áp dụng kết quả câu a một lần nữa, $k\cdot2^k$ và $(k+1)2^{k+1}$ cũng phải là lũy thừa số mũ tự nhiên của $2,$ thế nên $k$ và $k+1$ có tính chất y hệt. Ta đặt
+    $$k=2^a,\: k+1=2^b.$$
+    Lấy hiệu theo vế hai phép đặt trên, ta có
+    $$1=2^b-2^a=2^a\tron{2^{b-a}-1}.$$
+    Bắt buộc, ta phải có $2^a=2^{b-a}-1=1.$ Ta tìm ra $a=0,b=1,$ và thế thì $k=1,n=2.$\\
+    Kết luận, $n=1$ và $n=2$ là tất cả các số tự nhiên thỏa yêu cầu.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương \(n\) thỏa mãn \(4k^2+n\) là số nguyên tố, với mọi số nguyên \(k\) không âm nhỏ hơn \(n\).
+\nguon{Tạp chí Kvant}
+\loigiai{
+Ta giả sử tồn tại số nguyên tố $n$ thỏa yêu cầu bài toán. \\
+Cho $k=0,$ ta chỉ ra $n$ là số nguyên tố. Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $n=2,$ thử trực tiếp, ta thấy thỏa mãn.
+    \item Nếu $n=4m+1,$ cho $k=\dfrac{n-1}{4},$ ta được
+    $$4k^2+n=\dfrac{(n-1)^2}{4}+n=\dfrac{(n+1)^2}{4}.$$
+    Do $\dfrac{n+1}{2}$ là số tự nhiên, ta có $\left(\dfrac{n+1}{2}\right)^2$ là hợp số, mâu thuẫn.
+    \item Nếu $n=4m-1,$ ta gọi $d$ là một ước lẻ nào đó của $m.$ Cho $k=\dfrac{d+1}{2},$ ta có
+    $$4k^2+n=(d+1)^2+4m-1=d^2+2d+4m.$$
+    Số kể trên chia hết cho $d,$ thế nên nó là số nguyên tố chỉ khi $d=1.$ Ước lẻ duy nhất của $m$ là $1,$ chứng tỏ $m$ là một lũy thừa của $2.$ Tới đây, ta xét tiếp các khả năng sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1. }Nếu $m=2^{2a}$ với $a$ là số tự nhiên, ta có
+        $$n=4\cdot2^{2a}-1=2^{2a+2}-1=\left(2^{a+1}-1\right)\left(2^{a+1}+1\right).$$
+        Do $n$ là số nguyên tố, bắt buộc $2^{a+1}-1=1.$ Ta tìm ra $a=0,m=1,$ và $n=3$ từ đây.
+        \item \chu{Trường hợp 2. }Nếu $m=2^{4a+1}$ với $a$ là số tự nhiên, ta có $n=2^{4a+3}-1.$\\     
+        Ta nhận thấy với $a=0,$ ta có $n=7$ thỏa mãn. Nếu $a\ge 0,$ cho $k=2^{2a-1},$ ta được
+        $$4k^2+n=2^{4a}+2^{4a+3}-1=9\cdot2^{4a}-1=\left(3\cdot2^{2a}-1\right)\left(3\cdot2^{2a}+1\right).$$
+        Do $4k^2+n$ là số nguyên tố, bắt buộc $3\cdot 2^{2a}-1=1.$ Ta không tìm được $a$ từ đây.
+        \item \chu{Trường hợp 3. }Nếu $m=2^{4a+3}$ với $a$ là số tự nhiên, ta có $n=2^{4a+5}-1.$\\
+        Cho $k=2^{2a},$ ta được
+        $$4k^2+n=4\cdot2^{4a}+2^{4a+5}-1=36\cdot2^{4a}-1=\left(6\cdot2^{2a}-1\right)\left(6\cdot2^{2a}+1\right).$$  Do $4k^2+n$ là số nguyên tố, bắt buộc $6\cdot 2^{2a}-1=1.$ Ta không tìm được $a$ từ đây.
+    \end{itemize}
+\end{enumerate}
+Kết luận, các số nguyên dương $n$ thỏa yêu cầu bài toán là $n=2,n=3$ và $n=7.$}
+\end{gbtt}
+
+\section{Ứng dụng của đồng dư thức}
+
+\subsection{Lí thuyết}
+
+Trong mục này, chúng ta sẽ tìm hiểu về các ứng dụng về đồng dư thức đối với các bài toán chứa yếu tố số nguyên tố. Tác giả nhắc lại các kiến thức đã học ở \chu{chương I}.
+
+\begin{light}
+Với mọi số nguyên dương $n,$ ta luôn có
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $n^2\equiv 0,1\pmod{3}.$
+    \item $n^2\equiv 0,1\pmod{4}.$
+    \item $n^2\equiv 0,1,4\pmod{5}.$   
+    \item $n^2\equiv 0,1,2,4\pmod{7}.$    
+    \item $n^2\equiv 0,1,4\pmod{8}.$    
+    \item $n^3\equiv 0,1,-1\pmod{7}.$ 
+    \item $n^3\equiv 0,1,-1\pmod{9}.$    
+    \item $n^4\equiv 0,1\pmod{5}.$    
+    \item $n^4\equiv 0,1\pmod{16}.$    
+    \item $n^5\equiv 0,1\pmod{11}.$    
+\end{enumerate}
+\end{multicols}    
+\end{light}
+
+\subsection{Ví dụ minh họa}
+
+\begin{bx}
+Cho số nguyên tố $p>5.$ Chứng minh rằng
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $p^2-1$ chia hết cho $24.$
+    \item $p^4-1$ chia hết cho $240.$
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Một số chính phương chỉ có thể đồng dư $0$ hoặc $1$ theo modulo $3,$ vậy nên
+    $$p^2\equiv 0,1 \pmod{3}.$$
+    Tuy nhiên, do $p$ là số nguyên tố lớn hơn $3$ nên $3\nmid p^2.$ Ta suy ra
+    \[p^2\equiv 1 \pmod{3}\Rightarrow 3\mid \left(p^2-1\right).\tag{1}\label{p211}\]
+    Hơn nữa, một số chính phương chỉ có thể đồng dư $0,1,4$ theo modulo $8,$ vậy nên
+    $$p^2\equiv 0,1,4 \pmod{8}.$$
+    Tuy nhiên, do $p$ là số nguyên tố lẻ nên $4\nmid p^2.$ Ta suy ra
+    \[p^2\equiv 1 \pmod{8}\Rightarrow 8\mid \left(p^2-1\right).\tag{2}\label{p212}\]    
+    Do $(3,8)=1$ nên kết hợp $(\ref{p211})$ và $(\ref{p212}),$ ta được $24\mid \left(p^2-1\right).$ Bài toán được chứng minh.
+    \item Một lũy thừa mũ $4$ chỉ có thể đồng dư với $0$ hoặc $1$ theo modulo $3,5,16.$\\
+    Bằng cách lập luận tương tự câu $a,$ ta chỉ ra $p^4-1$ chia hết cho $3\cdot 5\cdot 16=240.$
+\end{enumerate}}
+\begin{luuy}
+Từ nay về sau, các kết quả tương tự như trong bài toán trên sẽ được dùng trực tiếp mà không thông qua chứng minh. Chẳng hạn
+\begin{enumerate}
+    \item Nếu $p$ là số nguyên tố và $p>3$ thì $p^2\equiv 1\pmod{3}.$
+    \item Nếu $p$ là số nguyên tố và $p>5$ thì $p^2\equiv 1\pmod{5}$ và $p^2\equiv 4\pmod{5}.$ 
+\end{enumerate}
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Tìm các số nguyên tố $p,q,r$ liên tiếp sao cho $p^2+q^2+r^2$ cũng là số nguyên tố.
+\loigiai{Không mất tính tổng quát, ta giả sử $p> q> r.$ Trong bài toán này, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $r>3,$ cả $p,q,r$ đều không chia hết cho $3,$ thế nên
+    $$p^2+q^2+r^2\equiv 1+1+1\equiv 3 \pmod{3}.$$
+    Do giả thiết $p^2+q^2+r^2$ là số nguyên tố, ta suy ra $p^2+q^2+r^2=3,$ vô lí.
+    \item Với $r=3,$ ta có $q=5$ và $p=7.$ Ta được $p^2+q^2+r^2=83$ là số nguyên tố.
+    \item Với $r=2,$ ta có $q=3$ và $p=5.$ Ta được $p^2+q^2+r^2=38$ không là số nguyên tố.
+\end{enumerate}
+Như vậy, có $6$ bộ $(p,q,r)$ thỏa mãn đề bài là $(3,5,7)$ và các hoán vị.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên tố ${p}$ sao cho $2^p+p^2$ cũng là số nguyên tố.
+\loigiai{Trong bài toán này, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p=2$, ta có $2^p+p^2=2^{2}+2^{2}=8$ là hợp số.
+    \item Nếu $p=3$, ta có $2^{{p}}+{p}^{2}=2^{3}+3^{2}=17$ là số nguyên tố.
+    \item Nếu $p>3$, ta nhận thấy $p$ không chia hết cho $3$ và $2.$ Ta đặt $p=2k+1,$ khi đó
+    $$2^p+p^2=2^{2k+1}+p^2=2\cdot 4^k+p^2\equiv 2+1\equiv 0\pmod{3}.$$
+    Lập luận trên cho ta biết, $2^p+p^2$ là hợp số, mâu thuẫn.
+\end{enumerate}
+Kết luận, $p=3$ là số nguyên tố duy nhất thỏa yêu cầu bài toán.}
+\end{bx} 
+
+\begin{bx} \label{chedejbmo1}
+Chứng minh rằng với mọi số nguyên tố $p$ thì $7^p-4^p$ không thể là lũy thừa với số mũ lớn hơn $1$ của một số nguyên dương.
+\nguon{Junior Balkan Mathematical Olympiad Shortlist}
+\loigiai{
+Ta giả sử rằng $7^p-4^p$ là một lũy thừa với số mũ lớn hơn $1.$ Do $7^p-4^p$ chia hết cho $3,$ ta có thể đặt $$7^p-4^p=(3m)^x,$$ 
+trong đó $x$ là số tự nhiên lớn hơn $1$ và $m$ nguyên dương. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p=3,$ ta có $7^p-4^p=7^3-4^3=279$ không là lũy thừa của $3.$
+    \item Nếu $p$ có dạng $3k+1,$ ta nhận thấy
+        \begin{align*}
+        7^p-4^p=7^{3k+1}-4^{3k+1}&=7\cdot 343^k-4\cdot 64^k\equiv 7-4\equiv 3\pmod{9}.
+        \end{align*}
+        Ta suy ra $(3m)^x\equiv 3\pmod{9}$ từ đây, mâu thuẫn.
+    \item Nếu $p$ có dạng $3k+2,$ ta nhận thấy
+        \begin{align*}
+        7^p-4^p=7^{3k+2}-4^{3k+2}&=49\cdot 343^k-16\cdot 64^k\equiv 49-16\equiv 6\pmod{9}.
+        \end{align*}
+        Ta suy ra $(3m)^x\equiv 6\pmod{9}$ từ đây, mâu thuẫn.
+        \end{enumerate}
+Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Xét dãy số nguyên tố $p_{1}, p_{2}, p_{3}, \ldots, p_{n}$ thỏa mãn $p_{1}=2$ và với mọi $n \geq 1, p_{n+1}$ là ước nguyên tố lớn nhất của $p_{1} p_{2} \cdots p_{n}+1$ với mọi $n\ge 2.$ Chứng minh rằng $p_n\ne 5$ với mọi số nguyên dương $n.$
+\nguon{Regional Mathematical Olympiad 2014}
+\loigiai{
+Thử trực tiếp, ta tính toán được $p_{1}=2, p_{2}=3, p_{3}=7.$  \\Ta sẽ đi chứng minh $p_n\ne 2$ và $p_n\ne 3,$ với mọi $n\ge 3.$ Thật vậy, do $p_n$ là ước của 
+    $$p_{1} p_{2} p_3p_4\cdots p_{n}+1=2\cdot3\cdot p_3p_4\cdots p_n+1$$
+    nên $(p_n,2)=(p_n,3)=1,$ và lại do $p_n$ là số nguyên tố nên chúng khác $2$ và $3.$\\ Tiếp theo, ta giả sử tồn tại số nguyên tố $p_n=5.$ Khi phân tích số
+    $$p_{1} p_{2} p_3p_4\cdots p_{n-1}+1$$ ra thừa số nguyên tố, ta không nhận được các thừa số $2$ và $3,$ đồng thời $5$ là thừa số nguyên tố lớn nhất của phân tích này. Vậy nên, $p_1p_2p_3p_4\cdots p_{n-1}+1$ phải là lũy thừa của $5.$ Ta đặt
+    $$p_1p_2p_3\cdots p_{n-1}+1=5^r.$$
+    Tích $p_1p_2p_3\cdots p_{n-1}$ gồm một thừa số $2$ và các thừa số còn lại lẻ nên tích này chia $4$ dư $2.$ Chính vì lẽ đó
+    $$5^r\equiv 2+1\equiv 3\pmod{4}.$$
+    Đây là một điều không thể này xảy ra, bởi vì $5^r\equiv 1\pmod{4}.$ 
+\\
+Như vậy, giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{bx}
+
+\subsection{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ sao cho cả $4p^2+1$ và $6p^2+1$ cũng là các số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $p,q$ thỏa mãn $p+q, p+q^2, p+q^3,p+q^4$ đều là số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên dương $n$ nhỏ nhất thỏa mãn $n$ là ước của mọi số nguyên dương $p^6-1$ với $p$ là số nguyên tố lớn hơn $7.$
+\nguon{Junior Balkan Mathematical Olympiad 2016}
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên tố $p$ sao cho $p^2+59$ có đúng $6$ ước số nguyên dương.
+\nguon{Chuyên Toán Thái Nguyên 2019}
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên tố $p$ sao cho $p^4+29$ có đúng $8$ ước số nguyên dương.
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $p,q,r,s$ phân biệt sao cho \[p^3+q^3+r^3+s^3=1709.\]  
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p_1,p_2,\ldots,p_8$ thỏa mãn điều kiện
+\[p^2_1+p^2_2+\ldots +p^2_7=p^2_8.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ $7$ số nguyên tố sao cho tích của chúng bằng tổng các lũy thừa bậc sáu của chúng.
+
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên tố $(p,q)$ sao cho $p^2+15pq+q^2$ là
+\begin{enumerate}[a,]
+	\item Một lũy thừa số mũ nguyên dương của $17.$
+	\item Bình phương một số tự nhiên.
+\end{enumerate}
+\nguon{Tạp chí Pi tháng 10 năm 2017}
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên tố $p$ nhỏ nhất sao cho $p$ viết được thành $10$ tổng có dạng
+$$p=x_1^2+y_1^2=x_{2}^{2}+2 y_{2}^{2}=x_{3}^{2}+3 y_{3}^{2}=\ldots=x_{10}^{2}+10 y_{10}^{2}.$$ 
+Trong đó, $x_1,x_2, \ldots , x_{10}$ và $y_1, y_2, \ldots y_{10}$ là các số nguyên dương. 
+\nguon{Tạp chí toán học và Tuổi trẻ số 330}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $p,q,r$ thỏa mãn $p^q+q^p=r.$ 
+\end{btt}
+
+\begin{btt}
+Cho $p>3$ là số nguyên tố, chứng minh rằng với mọi số tự nhiên $n$ thì ba số $p+2,2^{n}+p$ và $2^{n}+p+2$ không thể đều là số nguyên tố.
+\nguon{Chọn học sinh giỏi quốc gia Quảng Trị 2017 $-$ 2018}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ để $A=2^{2^{2n+1}}+3$ là số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $m,n$ thỏa mãn $P=3^{3m^2+6n-61}+4$ là số nguyên tố.
+\nguon{Chọn học sinh giỏi thành phố Hà Tĩnh 2016}
+\end{btt}
+
+\begin{btt}
+Tồn tại hay không số tự nhiên \(n\) thỏa mãn \(8^n+47\) là số nguyên tố?
+\nguon{Junior Balkan Mathematical Olympiad Shorlist 2020}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ sao cho $5^{p}+12^{p}$ là lũy thừa với số mũ lớn hơn $1$ của một số nguyên dương.
+\end{btt}
+
+\begin{btt}
+Xét dãy số nguyên tố $p_1,p_2,p_3,\ldots, p_n$ thỏa mãn $p_1=5$ và với mọi $n \geq 1, p_{n+1}$ là ước nguyên tố lớn nhất của $p_{1} p_2\cdots p_n+1$ với mọi $n\ge 2.$ Chứng minh rằng $p_n\ne 7$ với mọi số nguyên dương $n.$
+
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương \(n\) sao cho tồn tại số nguyên tố \(p\) thỏa mãn  $p^n-(p-1)^n$ là một lũy thừa của \(3\).
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2017}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số chính phương $n$ sao cho với mọi ước nguyên dương $a\ge 15$ của $n$ thì $a+15$ là lũy thừa của một số nguyên tố.
+\nguon{Junior Balkan Mathematical Olympiad Shortlists 2019}
+\end{btt}
+
+\subsection{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ sao cho cả $4p^2+1$ và $6p^2+1$ cũng là các số nguyên tố.
+\loigiai{Ta đã biết rằng nếu $p$ là số nguyên tố lớn hơn $5$ thì $p^2\equiv \pm 1 \pmod{5}.$
+\begin{enumerate}
+    \item Với $p^2\equiv 1\pmod{5},$ ta có $4p^2+1$ chia hết cho $5$ và lớn hơn $5,$ thế nên đây là hợp số, mâu thuẫn.
+    \item Với $p^2\equiv -1\pmod{5},$ ta có $6p^2+1$ chia hết cho $5$ và lớn hơn $5,$ thế nên đây là hợp số, mâu thuẫn.  
+    \item Với $p=5,$ thử trực tiếp, ta thấy thỏa mãn.
+\end{enumerate}
+Như vậy, số nguyên tố cần tìm là $p=5.$}
+\end{gbtt} 
+
+\begin{gbtt}
+Tìm các số nguyên tố $p,q$ thỏa mãn
+$p+q,p+q^2, p+q^3,p+q^{4}$ đều là số nguyên tố.
+\loigiai{
+Nếu $p$ và $q$ cùng lẻ, ta có $p+q$ là hợp số chẵn lớn hơn $2,$ vô lí. Do đó, một trong hai số $p,q$ phải bằng $2.$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $p=2$ thì từ $q^2+2$ là số nguyên tố, ta bắt buộc phải có 
+    $$q^2+2\equiv 1,2\pmod{3}\Rightarrow q^2\equiv -1,0\pmod{3}.$$
+    Do $q^2$ không thể đồng dư $-1$ theo modulo $3$ nên bắt buộc $q^2$ chia hết cho $3,$ hay là $q=3.$ \\Thử lại, ta thấy thỏa mãn.
+    \item Nếu $q=2$ thì $p+2,p+4,p+8,p+16$ là số nguyên tố. Lần lượt xét $$p=3k,\quad p=3k+1,\quad p=3k+2,$$ ta chỉ ra chỉ có $p=3k$ thỏa mãn, nhưng do $p$ nguyên tố nên $p=3.$ Thử lại, ta thấy thỏa mãn.
+\end{enumerate}
+Kết luận, có hai cặp số $(p,q)$ thỏa yêu cầu là $(2,3)$ và $(3,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên dương $n$ nhỏ nhất thỏa mãn $n$ là ước của mọi số nguyên dương $p^6-1$ với $p$ là số nguyên tố lớn hơn $7.$
+\nguon{Junior Balkan Mathematical Olympiad 2016}
+\loigiai{
+Bằng kiểm tra trực tiếp, ta chỉ ra
+$\left(11^6-1,13^6-1\right)=504.$ Lập luận trên cho ta biết $n$ là ước của $504.$ Ta sẽ chứng minh rằng $n=504,$ thông qua việc chứng minh $p^6-1$ chia hết cho $504$ với mọi số nguyên tố $p>7.$ Xét phân tích $$p^6-1=\left(p^3+1\right)\left(p^3-1\right).$$
+Do $p>7$ nên $p$ không chia hết cho $7$ và $9.$ Kết hợp với lí thuyết đã học, ta có.
+$$\heva{&p\equiv -1,1 \pmod{7} \\ &p\equiv -1,1\pmod{9}.}$$
+Ta được $p^6-1$ là bội của $7$ và $9.$ Ta đã biết, $p^6-1$ chia hết cho $p^2-1$ và $p^2-1$ chia hết cho $24,$ vậy nên $p^6-1$ chia hết cho bội chung nhỏ nhất của $7,9$ và $24,$ tức là $p^6-1$ chia hết cho $504.$ \\
+Kết quả của bài toán là $n=504.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên tố $p$ sao cho $p^2+59$ có đúng $6$ ước số nguyên dương.
+\nguon{Chuyên Toán Thái Nguyên 2019}
+\loigiai{
+Trong bài toán này, ta xét ba trường hợp sau đây.
+\begin{enumerate}
+    \item Với $p=2$, ta thấy $p^{2}+11=15$ có đúng $4$ ước số nguyên dương.
+    \item Với $p=3$, ta thấy $p^{2}+11=20$ có đúng $6$ ước số.
+    \item Với $p>3$, dựa vào biến đổi $p^2+59=p^2-1+60,$ ta chỉ ra $p^2+59$ chia hết cho $12.$ \\
+    Theo đó, số này có $7$ ước là $1,2,3,4,6,12$ và chính nó, mâu thuẫn.
+\end{enumerate}
+Tổng kết lại, $p=3$ là giá trị duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên tố $p$ sao cho $p^4+29$ có đúng $8$ ước số nguyên dương.
+\loigiai{
+Trong bài toán này, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $p\le 5,$ thử trực tiếp, ta thấy có $p=3$ và $p=5$ thỏa mãn.
+    \item Với $p>5,$ theo như lí thuyết đã học, ta nhận xét được
+    $$p^4+29\equiv 1^2+29\equiv 0\pmod{30}.$$
+    Số $p^4+29$ lúc này lớn hơn $30$ và chia hết cho $30,$ thế nên số ước của nó phải lớn hơn số ước của $30$ (là $8$ ước). Trường hợp này không xảy ra.
+\end{enumerate}
+Tổng kết lại, $p=3$ và $p=5$ là các số nguyên tố cần tìm.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $p,q,r,s$ phân biệt sao cho \[p^3+q^3+r^3+s^3=1709.\]  
+\loigiai{
+Không mất tính tổng quát, ta giả sử $p>q>r>s.$ Ta sẽ lần lượt đi tìm $s,r,q,p.$
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $s=2.$ \\Nếu $s>2,$ cả $p,q,r,s$ đều là số lẻ, thế nên
+    $$1709=p^3+q^3+r^3+s^3 \equiv 1+1+1+1 \equiv 0 \pmod{2}.$$
+    Điều này là vô lí. Mâu thuẫn này chứng tỏ $s=2.$
+    \item Ta chứng minh $r=3.$ \\Thay $s=2$ vào phương trình ban đầu, ta được
+    \[ p^3+q^3+r^3=1701.\tag{*}\label{1701snt}\]
+    Nếu $r>3,$ cả $p,q,r$ đều không chia hết cho $3.$ Theo kiến thức đã biết, lúc này $p^3,q^3,r^3$ sẽ chỉ có thể đồng dư với $1$ hoặc $-1$ theo modulo $9.$ Như vậy
+    $$1701=p^3+q^3+r^3 \equiv \pm 1 \pm 1 \pm 1  \equiv -3,-1,1,3 \pmod{9}.$$
+    Do $1709$ chia hết cho $9,$ điều trên là vô lí. Mâu thuẫn này chứng tỏ $r=3.$  
+    \item Ta chứng minh $q=7.$ \\Thay $r=3$ vào phương trình (\ref{1701snt}), ta được
+    $$p^3+q^3=1674.$$
+    Với $q=5,$ ta không tìm được $p.$ Còn với $q>7,$  cả $p$ và $q$ đều không chia hết cho $7.$ Theo kiến thức đã biết, lúc này $p^3,q^3$ sẽ chỉ có thể đồng dư với $1$ hoặc $-1$ theo modulo $7.$ Như vậy
+    $$1674=p^3+q^3 \equiv \pm 1 \pm 1 \pm  \equiv -2,0,2 \pmod{7}.$$ 
+    Do $1674$ khi chia cho $7$ được dư là $1,$ điều trên là vô lí. Mâu thuẫn này chứng tỏ $q=7.$ \\
+    Tiếp tục thay ngược lại, ta tìm được $p=11.$    
+\end{enumerate}
+Như vậy, các bộ số $(p,q,r,s)$ thỏa mãn đề bài là $(2,3,7,11)$ kèm theo các hoán vị.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p_1,p_2,\ldots,p_8$ thỏa mãn điều kiện
+\[p^2_1+p^2_2+\ldots +p^2_7=p^2_8.\]
+\loigiai{Ta đã biết, với $p$ là số nguyên tố lẻ, $p^2\equiv 1\pmod{8}.$ Từ giả thiết, ta suy ra $p_8>2,$ do đó nó là số nguyên tố lẻ. Ta gọi $a$ là số các số lẻ ở vế trái. Vế trái lúc này có đúng $7-a$ số $2,$ thế nên
+$$a+4(7-a)\equiv 1 \pmod{8}.$$
+Một cách tương đương, ta có $27-3a$ chia hết cho $8,$ nhưng vì $0\le a\le 7$ nên $a=1.$\\
+Vế trái có đúng một số lẻ, còn $6$ số bằng $2.$ Giả sử $p_7$ lẻ, lúc này
+\begin{align*}
+    6\cdot 2^2+p_7^2&=p_8^2\\ \left(p_8-p_7\right)\left(p_8+p_7\right)&=24.
+\end{align*}
+Do $p_8-p_7+p_8+p_7$ là số chẵn, $p_8-p_7$ và $p_8+p_7$ cùng tính chẵn lẻ.
+\begin{enumerate}
+    \item Với $p_8-p_7=2$ và $p_8+p_7=12,$ ta được $p_8=7$ và $p_7=5.$
+    \item Với $p_8-p_7=4$ và $p_8+p_7=6,$ ta được $p_8=5$ và $p_7=1,$ mâu thuẫn.    
+\end{enumerate}
+Tổng kết lại, tất cả các bộ nguyên tố $\left(p_1,p_2,\ldots,p_8\right)$ cần tìm là hoán vị $7$ phần tử đầu của bộ $$(2,2,2,2,2,2,5,7).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ $7$ số nguyên tố sao cho tích của chúng bằng tổng các lũy thừa bậc sáu của chúng.
+
+\loigiai{
+Ta đã biết, với $p$ là một số nguyên tố khác $7,$ ta có $p^3\equiv -1,1\pmod{7}$, thế nên $p^6\equiv 1\pmod{7}.$\\
+Gọi các số nguyên tố thoả yêu cầu là $p_1,p_2,\ldots,p_7.$ Ta có
+$$p_1^6+p_2^6+\ldots+p_7^6=p_1p_2\cdots p_7.$$
+Gọi $a$ số các số $7$ ở vế trái. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $a=0$ thì $VT\equiv 1+1+\ldots+1\equiv 7\pmod{7},$ còn vế phải không chia hết cho $7,$ mâu thuẫn.
+    \item Nếu $a=7$ thì $p_1=p_2=\ldots=p_6=7.$ Thử lại, ta thấy thỏa mãn.
+    \item Nếu $1\le a\le 6$ thì vế phải chia hết cho $7$ và
+    $$VT\equiv 7-a\pmod{7}.$$
+    Bắt buộc, $7-a\equiv 7\pmod{7},$ vô lí do $1\le a\le 6.$
+\end{enumerate}
+Kết luận, bộ bảy số nguyên tố duy nhất thỏa mãn là bộ bảy số $7.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên tố $(p,q)$ sao cho $p^2+15pq+q^2$ là
+\begin{enumerate}[a,]
+	\item Một lũy thừa số mũ nguyên dương của $17.$
+	\item Bình phương một số tự nhiên.
+\end{enumerate}
+\nguon{Tạp chí Pi tháng 10 năm 2017}
+\loigiai
+{\begin{enumerate}[a,]
+	\item Giả sử tồn tại hai số nguyên tố $p,q$ và số nguyên dương $z\ge 2$ thỏa mãn
+        $$(p-q)^2+17pq=17^z.$$
+    Từ giả sử trên, ta có
+    $$17\mid(p-q)\Rightarrow 17^2\mid (p-q)^2\Rightarrow 17^2\mid 17pq \Rightarrow 17\mid pq\Rightarrow\hoac{17\mid p\\ 17\mid q}\Rightarrow \hoac{p&=17\\ q&=17.}$$
+    Không mất tổng quát, ta giả sử $q=17.$ Từ $p-q$ chia hết cho $17$ và $q=17,$ ta lại suy ra được $p$ chia hết cho $17,$ và bắt buộc $p=17.$ Bằng cách thế trở lại, ta kết luận $(p,q)=(17,17)$ là cặp số nguyên tố duy nhất thỏa yêu cầu.
+	\item Giả sử $(p,q)$ là cặp số nguyên tố sao cho tồn tại số nguyên dương $r$ thỏa mãn
+		$$p^2+15pq+q^2=r^2$$
+	là một số chính phương. Trong trường hợp $p,q$ đều khác $3,$ ta có $p^2\equiv q^2 \equiv 1 \pmod{3},$ và vì thế
+		\[p^2+15pq+q^2\equiv p^2+q^2\equiv 2\pmod{3}.\]
+	Không có bình phương số tự nhiên nào đồng dư $2$ theo modulo $3$, vậy nên trường hợp giả định trên không thể xảy ra, tức là một trong hai số $p,q$ phải bằng $3.$ Do vai trò của $p$ và $q$ tương đương nhau nên không mất tổng quát, ta giả sử $p=3$. Thế trở lại, ta được
+		\begin{align*} 
+		q^2+45q+9=r^2&\Leftrightarrow 4q^2+180q+36=4r^2\\
+			& \Leftrightarrow(2q+45)^2-1989=4r^2\\
+			&\Leftrightarrow (2q-2r+45)(2q+2r+45)=1989.
+		\end{align*}
+		Với việc $1\le 2q-2r+45<2q+2r+45,$ ta xét bảng giá trị dưới đây
+		\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c}
+			 $2q-2r+45$ & $1$ & $3$ & $9$ & $13$ & $17$ & $39$  \\
+			     \hline
+			 $2q+2r+45$ & $1989$ & $663$ & $221$ & $153$ & $117$ & $51$ \\
+			     \hline
+			 $q$ & $475$ & $144$ & $35$ & $19$ & $11$ & $0$
+		\end{tabular}
+		\end{center}
+	    Tổng kết lại, tất cả các cặp số nguyên tố thỏa mãn yêu cầu của đề bài là \[(3,11),(11,3),(3,19),(19,3).\]
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên tố $p$ nhỏ nhất sao cho $p$ viết được thành $10$ tổng có dạng
+$$p=x_1^2+y_1^2=x_{2}^{2}+2 y_{2}^{2}=x_{3}^{2}+3 y_{3}^{2}=\ldots=x_{10}^{2}+10 y_{10}^{2}.$$ 
+Trong đó, $x_1,x_2, \ldots , x_{10}$ và $y_1, y_2, \ldots y_{10}$ là các số nguyên dương. 
+\nguon{Tạp chí toán học và Tuổi trẻ số 330}
+\loigiai{
+Rõ ràng, ta phải có $p>10.$ Ta sẽ xét số dư của $p$ khi chia cho một vài số nguyên tố.
+\begin{enumerate} 
+    \item[i,] Từ ${p}={x}_{3}^{2}+3 {y}_{3}^{2}$, ta suy ra $p\equiv x^2_3\equiv 0,1 \pmod{3},$ nhưng do $p$ nguyên tố nên $p\equiv 1\pmod{3}.$
+    \item[ii,] Từ $p=x_5^2+5y_5^2,$ bằng lập luận tương tự, ta suy ra $p\equiv 1,4 \pmod{5}.$    
+    \item[iii,] Từ ${p}={x}_{7}^{2}+7 {y}_{7}^{2}$, bằng lập luận tương tự, ta suy ra $p\equiv 1,2,4 \pmod{7}.$    
+    \item[iv,] Từ ${p}={x}_{8}^{2}+8 {y}_{8}^{2}$, bằng lập luận tương tự, ta suy ra $p\equiv 1 \pmod{8}.$
+\end{enumerate}
+Tới đây, ta chia bài toán thành các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p-1$ chia hết cho cả $3,5$ và $8,$ các số nguyên tố $p$ sẽ có dạng $120k+1.$ Ta sẽ lần lượt thử từng trường hợp của $k$ thỏa mãn $p$ là số nguyên tố.
+    \begin{itemize}
+        \item Với $k=2,$ ta có $p=241$ nguyên tố. Lúc này $p$ chia $7$ dư $3,$ mâu thuẫn.
+        \item Với $k=5,$ ta có $p=601$ nguyên tố. Lúc này $p$ chia $7$ dư $6,$ mâu thuẫn.                
+        \item Với $k=10,$ ta có $p=1201$ nguyên tố. Nhờ biểu diễn
+        \begin{align*}
+            1201
+            &=25^2+24^2
+            =7^2+2\cdot 24^2
+            =1^2+3\cdot 20^2
+            =25^2+4\cdot 12^2
+            =34^2+5\cdot 3^2
+            \\&=5^2+6\cdot 14^2
+            =33^2+7\cdot 4^2
+            =7^2+8\cdot 12^2
+            =25^2+9\cdot 8^2
+            =29^2+10\cdot 6^2.
+        \end{align*}
+        ta chỉ ra $p=1201$ là số nhỏ nhất thỏa trường hợp này.
+        \end{itemize}    
+    \item Nếu $p-1$ chia hết cho cả $3$ và $8$ còn $p-4$ chia hết cho $5,$ do $p-49$ chia hết cho $120$ nên các số nguyên tố $p$ sẽ có dạng $120k+49.$ Bằng cách thử tương tự, ta nhận thấy $p=1009$ là số nguyên tố nhỏ nhất thỏa trường hợp này. Cụ thể:
+        \begin{align*}
+            1009
+            &=15^2+28^2
+            =19^2+2\cdot 18^2
+            =31^2+3\cdot 4^2
+            =15^2+4\cdot 14^2
+            =17^2+5\cdot 12^2
+            \\&=25^2+6\cdot 8^2
+            =1^2+7\cdot 12^2
+            =19^2+8\cdot 9^2
+            =28^2+9\cdot 5^2
+            =3^2+10\cdot 10^2.
+        \end{align*}
+\end{enumerate}
+Do $1009<1201,$ ta kết luận $p=1009$ là số nguyên tố nhỏ nhất thỏa yêu cầu.}
+\begin{luuy}
+\nx Bài toán gốc của bài toán này là đề thi chọn đội tuyển toán quốc gia của Ba Lan và được đăng trên \chu{Tạp chí Toán học và Tuổi trẻ số 330}. Đây là một thách thức không hề nhỏ với bạn đọc và không có bất kì đóng góp lời giải nào gửi về báo năm đấy.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $p,q,r$ thỏa mãn $p^q+q^p=r.$ 
+\loigiai{
+Giả sử tồn tại các số $p,q,r$ thỏa yêu cầu. Trong bài toán này, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $p,q$ cùng lẻ thì $p^q+q^p$ là hợp số chẵn lớn hơn $2,$ mâu thuẫn.
+    \item Nếu $q=2$ thì $p^2+2^p$ là số nguyên tố. Dễ thấy $p=3$ thỏa mãn, còn $p=2$ thì không. \\
+    Với $p\ge 5,$ do $p$ lẻ và $p$ không chia hết cho $3$ nên là
+    $$p^2+2^p\equiv 1+2\equiv 3\pmod{3}.$$
+    Do $p^2+2^p>3$ nên lúc này $p^2+2^p$ là hợp số, mâu thuẫn.
+    \item Nếu $p=2,$ ta dễ dàng tìm ra $q=3$ và $r=17.$
+\end{enumerate}
+Kết luận, các bộ $(p,q,r)$ thỏa yêu cầu là $(2,3,17)$ và $(3,2,17).$}
+\end{gbtt}
+
+\begin{gbtt} Cho $p>3$ là số nguyên tố, chứng minh rằng với mọi số tự nhiên $n$ thì ba số $p+2,2^{n}+p$ và $2^{n}+p+2$ không thể đều là số nguyên tố.
+\nguon{Chọn học sinh giỏi quốc gia Quảng Trị 2017 $-$ 2018}
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ và số nguyên tố $p$ thỏa mãn. Ta xét các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $n$ là số chẵn, ta có $2^n\equiv 1\pmod{3},$ vì thế
+        $$2^n+p\equiv p+1\pmod{3},\quad 2^n+p+2\equiv p\pmod{3}.$$
+        \item\chu{Trường hợp 2.} Nếu $n$ là số chẵn, ta có $2^n\equiv 2\pmod{3},$ vì thế        
+        $$2^n+p\equiv p+2\pmod{3},\quad 2^n+p+2\equiv p+1\pmod{3}.$$        
+    \end{itemize}
+    Trong mọi trường hợp, các số $p+2,2^n+p$ và $2^n+p+2$ không có cùng số dư khi chia cho $3.$ Cả $3$ số này đều lớn hơn $3$ nên nó không là hợp số. Giả sử sai, và ta thu được điều phải chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ để $A=2^{2^{2n+1}}+3$ là số nguyên tố.
+\loigiai{
+Với $n=0$ thì $A=2^2+3=7$ là số nguyên tố. Với $n\ge 1$, ta có 
+\[2^{2^{2 n+1}}=2^{2.2^{2 n}}=\left(2^{2^{2 n}}\right)^{2}=\left(2^{4^{n}}\right)^{2}.\]
+Vì $4^n$ chia $3$ dư $1$ nên ta có thể đặt $4^n=3k+1,$ với $n$ nguyên dương. Khi đó $A=4\cdot 8^{2k}+3.$ Ta nhận xét 
+\[8 \equiv 1
+\pmod{7}\Rightarrow8^{2 k} \equiv 1\pmod{7} \Rightarrow 4 \cdot 8^{2 k} \equiv 4\pmod{7}.\]
+Lập luận trên cho ta biết $A$ chia hết cho $7$, lại do $A>7$ nên $A$ là hợp số, mâu thuẫn. \\
+Tóm lại, $n=0$ là giá trị duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $m,n$ thỏa mãn $P=3^{3m^2+6n-61}+4$ là số nguyên tố.
+\nguon{Chọn học sinh giỏi thành phố Hà Tĩnh 2016}
+\loigiai{
+Rõ ràng $3m^2+6n-61$ cũng là số tự nhiên. Ngoài ra, do $3m^2+6n-61\equiv 2\pmod{3}$ nên ta có thể đặt $$3m^2+6n-61=3k+2,$$ với $k$ là số tự nhiên. Phép đặt này cho ta
+	$$P=3^{3k+2}+4=9 \cdot 27^k+4\equiv 9+4\equiv 0\pmod{13}.$$
+    Dựa vào nhận xét trên, ta suy ra $P$ chia hết cho $13,$ thế nên $P$ là số nguyên tố chỉ khi $P=13.$ Điều này chứng tỏ $3m^2+6n-61=2,$ hay $m^2+2n=21.$ Do đó
+    $$m^2\le 21\Rightarrow m\le \sqrt{21}\Rightarrow m\le 4.$$
+Kiểm tra trực tiếp với $m=1,2,3,4,$ ta chỉ ra có $2$ cặp số $(m,n)$ thỏa yêu cầu là $(1,10)$ và $(3,6)$.}
+\end{gbtt}
+
+\begin{gbtt}
+Tồn tại hay không số tự nhiên \(n\) thỏa mãn \(8^n+47\) là số nguyên tố?
+\nguon{Junior Balkan Mathematical Olympiad Shorlist 2020}
+\loigiai{
+    Câu trả lời phủ định. Thật vậy, ta xem xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu \(n\) là số chẵn, ta đặt \(n=2k\), trong đó \(k\) là một số nguyên dương nào đó. Lúc này
+    \[8^n+47=64^{k}+47 \equiv 1+2 \equiv 0 \pmod{3},\]
+    lại do \(8^n+47>3\) nên nó không thể là số nguyên tố.
+    \item Nếu \(n\equiv 1\pmod{4}\), ta đặt \(n=4l+1\), trong đó \(l\) là một số tự nhiên nào đó. Lúc này
+    \[8^n+47=8 \cdot\left(8^{k}\right)^{4}+47 \equiv 3+2 \equiv 0\pmod{5},\]
+    lại do \(8^n+47>5\) nên nó không thể là số nguyên tố.
+    \item Nếu \(n\equiv 3\pmod{4}\), ta đặt \(n=4m+1\), trong đó \(m\) là một số tự nhiên nào đó. Lúc này
+    \[m=8\left(64^{2 k+1}+1\right) \equiv 8\left((-1)^{2 k+1}+1\right) \equiv 0\pmod{13},\]
+    lại do \(8^n+47>13\) nên nó không thể là số nguyên tố.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt} \label{chedejbmo2}
+Tìm tất cả các số nguyên tố $p$ sao cho $5^{p}+12^{p}$ là lũy thừa với số mũ lớn hơn $1$ của một số nguyên dương.
+\loigiai{
+Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item  Nếu $p=2,$ ta có $5^p+12^p=169=13^2$ thỏa yêu cầu bài toán.
+    \item Nếu $p\ge 3,$ ta nhận thấy $p$ là số lẻ, thế nên
+    $$5^p+12^p=17\left(5^{p-1}-5^{p-2}\cdot12+5^{p-3}\cdot12^2-\ldots-5\cdot12^{p-2}+12^{p-1}\right).$$
+    Cũng do $p$ là số lẻ, ta có các nhận xét dưới đây
+    \begin{align*}
+        5^{p-1}\equiv (-12)^{p-1}\equiv 12^{p-1}&\pmod{17},\\
+        -5^{p-2}\cdot12\equiv -(-12)^{p-2}\cdot12\equiv 12^{p-1}&\pmod{17},  \\
+        \ldots \\
+        -5\cdot12^{p-2}\equiv -(-12)\cdot12^{p-2}\equiv 12^{p-1}&\pmod{17}.       
+    \end{align*}
+    Lấy tổng theo vế, ta chỉ ra
+    \[5^{p-1}-5^{p-2}\cdot12+\ldots-5\cdot12^{p-2}+12^{p-1}\equiv p\cdot12^{p-1}\pmod{17}.\tag{1}\label{3p4p.1.1}\]
+    Mặt khác, do $5^p+12^p$ chia hết cho $17$ và là một lũy thừa số mũ nguyên dương lớn hơn $1$ của một số nguyên dương,  ta cần phải có $5^p+12^p$ chia hết cho $17^2,$ kéo theo
+    \[5^{p-1}-5^{p-2}\cdot12+\ldots-5\cdot12^{p-2}+12^{p-1}\equiv p\cdot12^{p-1}\pmod{17}.\tag{2}\label{3p4p.1.2}\] 
+    Đối chiếu (\ref{3p4p.1.1}) và (\ref{3p4p.1.2}), ta chỉ ra $p\cdot12^{p-1}$ chia hết cho $17,$ thế nên $p=17.$ 
+    \\Tuy nhiên, khi thử trực tiếp, số $p=17$ này không thỏa mãn.
+\end{enumerate}
+Kết luận, $p=2$ là số nguyên tố duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Xét dãy số nguyên tố $p_1,p_2,p_3,\ldots, p_n$ thỏa mãn $p_1=5$ và với mọi $n \geq 1, p_{n+1}$ là ước nguyên tố lớn nhất của $p_{1} p_2\cdots p_n+1$ với mọi $n\ge 2.$ Chứng minh rằng $p_n\ne 7$ với mọi số nguyên dương $n.$
+
+\loigiai{
+Thử trực tiếp, ta tính toán được $p_1=5, \:p_2=3, p_3=2,\:p_4=31.$  Ta sẽ đi chứng minh $p_n\ne 2,3,5,$ với mọi $n\ge 4.$ Thật vậy, do $p_n$ là ước của 
+    $$p_{1} p_{2} p_3p_4\cdots p_{n}+1=5\cdot3\cdot2\cdot p_4p_5\cdots p_n+1$$
+nên $(p_n,2)=(p_n,3)=(p_n,5)=1,$ và lại do $p_n$ là số nguyên tố nên chúng khác $2,3$ và $5.$\\ Tiếp theo, ta giả sử tồn tại số nguyên tố $p_n=7.$ Khi phân tích số
+    $$p_{1} p_{2} p_3p_4\cdots p_{n-1}+1$$ ra thừa số nguyên tố, ta không nhận được các thừa số $2,3$ và $5,$ đồng thời $7$ là thừa số nguyên tố lớn nhất của phân tích này. Vậy nên, $p_1p_2p_3p_4\cdots p_{n-1}+1$ phải là lũy thừa của $7.$ Ta đặt
+    $$p_1p_2p_3\cdots p_{n-1}+1=7^r.$$
+    Tích $p_1p_2p_3\cdots p_{n-1}$ gồm một thừa số $5$ nên $7^r-1$ chia hết cho $5.$ Xét các trường hợp về số dư của $r$ khi chia cho $4,$ ta chỉ ra $r\equiv 0\pmod{4}.$ Nhưng lúc này $7^r-1$ chia hết cho
+    $$7^4-1=2400=2^5\cdot3\cdot5^2,$$
+    mâu thuẫn với việc tích $p_1p_2p_3p_4\cdots p_{n-1}$ chỉ chứa một thừa số $2,$ còn các thừa số kia lẻ. Như vậy, giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương \(n\) sao cho tồn tại số nguyên tố \(p\) thỏa mãn  $p^n-(p-1)^n$ là một lũy thừa của \(3\).
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2017}
+    \loigiai{
+    Giả sử tồn tại số nguyên dương \(n\) thỏa mãn 
+    \[p^{n}-(p-1)^{n}=3^{a},\tag{*}\label{jbmonuane.1}\]
+    với \(p\) là một số nguyên tố nào đó và \(a\) là một số nguyên dương.
+    \begin{enumerate}
+        \item Với \(p=2\), thế vào (\ref{jbmonuane.1}) ta được $2^{n}-1=3^{a}.$
+        Lấy modulo $3$ hai vế, ta có 
+        $$(-1)^{n}-1 \equiv 0\pmod{3}.$$
+        Bắt buộc, \(n\) phải là số chẵn. Ta đặt \(n=2s\). Lúc này, vì $2^n-1=3^a$ nên
+        $$\left(2^{s}-1\right)\left(2^{s}+1\right)=3^{a}.$$
+        Từ đây ta suy ra $2^{s}-1$ và $2^{s}+1$ đều là lũy thừa của \(3\). Hai số này không cùng chia hết cho $3$ nên một trong hai số ấy phải bằng $1,$ và ta thu được $s=1,n=2.$
+        \item Với \(p=3\), thế vào (\ref{jbmonuane.1}) ta được
+        $3^n-2^n=3^a.$
+        Lấy đồng dư modulo $3$ hai vế, ta chỉ ra $2^n$ chia hết cho $3.$ Điều này là không thể.
+        \item Với $p \geq 5$, ta có $p$ không chia hết cho $3.$ Kết hợp với (\ref{jbmonuane.1}), cả $p-1$ cũng không chia hết cho $3.$ Hai nhân xét trên và việc lấy đồng dư modulo $3$ hai vế của (\ref{jbmonuane.1}) cho ta
+        $$2^n-1\equiv 0\pmod{3}.$$
+        Ta lại tìm ra $n$ chẵn. Đặt \(n=2k\), trong đó \(k\) là một số nguyên dương. Thế vào (\ref{jbmonuane.1}), ta lần lượt suy ra
+        $$p^{2 k}-(p-1)^{2 k}=3^{a} \Rightarrow\left(p^{k}-(p-1)^{k}\right)\left(p^{k}+(p-1)^{k}\right)=3^{a}.$$
+        Nếu ta đặt $d=\left(p^{k}-(p-1)^{k}, p^{k}+(p-1)^{k}\right)$ thì $d\mid 2p^{k}.$ Tuy nhiên do cả hai số đều là lũy thừa của \(3\) nên ta phải có \(d=1\), kéo theo $$p^{k}-(p-1)^{k}=1, p^{k}+(p-1)^{k}=3^{a}.$$
+        Tới đây, ta xét các trường hợp sau
+        \begin{itemize}
+            \item \chu{Trường hợp 1.} Nếu \(k=1\) thì \(n=2\), và ta có thể chọn \(p=5\).
+            \item \chu{Trường hợp 2.} Nếu $k \geq 2$, ta đánh giá
+            $$1=p^{k}-(p-1)^{k} \geq p^{2}-(p-1)^{2}.$$
+            Đánh giá trên là đúng, do $$p^{2}\left(p^{k-2}-1\right) \geq(p-1)^{2}\left((p-1)^{k-2}-1\right).$$
+            %alo rep ib nhóm anh ơiii để t gửi
+            Vậy nên, $1\geq p^{2}-(p-1)^{2}=2 p-1 \geq 9.$ Điều này là không thể.
+        \end{itemize}
+     \end{enumerate}
+Tổng kết lại, $n=2$ là số tự nhiên duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số chính phương $n$ sao cho với mọi ước nguyên dương $a\ge 15$ của $n$ thì $a+15$ là lũy thừa của một số nguyên tố.
+\nguon{Junior Balkan Mathematical Olympiad Shortlists 2019}
+\end{gbtt}
+\nx Ta đã biết, tổng của một số lẻ và $15$ là một số chẵn. Trong khi đó, nếu lũy thừa của một số nguyên tố mang giá trị là chẵn thì bắt buộc số nguyên tố đó phải bằng $2.$ Dựa theo lập luận này, ta sẽ tìm được hướng đi tốt nhất cho bài toán.
+\loigiai{ 
+Trong bài toán này, ta xét các trường hợp sau đây.
+ \begin{enumerate}
+     \item Nếu \(n\) là một lũy thừa của \(2\), ta tìm được $n\in\{1;4;16;64\}.$ Thật vậy, ta sẽ đi chứng minh $n<2^7.$ Trong trường hợp $n\ge 2^7,$ $n$ sẽ nhận $2^7$ làm ước. Tuy nhiên
+     $$2^7+15=143=11\cdot13.$$
+     không là lũy thừa số nguyên tố nào, trái giả thiết.
+     \item Nếu $n$ nhận $3$ làm ước nguyên tố và $n$ không có ước nguyên tố lớn hơn $3,$ ta có thể biểu diễn $n=4^r9^s.$ Dựa trên các tính toán sau
+     $$2^7+15=143=11\cdot13,\quad 3^3+1=28=2\cdot14,$$
+     ta chỉ ra $r\le 3$ và $s=1.$ Thử trực tiếp, chỉ có $n=9$ thỏa mãn.
+     \item Nếu \(n\) có ước nguyên tố lẻ $p>3,$ do $n$ chính phương nên $p^2$ cũng là ước của $n$.\\
+     Mặt khác, từ $p^2\ge 25>15,$ ta suy ra tồn tại số nguyên tố $q$ sao cho
+     \[p^{2}+15=q^{m},\]
+     Với việc $p$ là số nguyên tố lẻ, ta nhận định $q^m$ là số chẵn. Theo đó, $q=2,$ và
+     \[p^{2}+15=2^{m}.\tag{*}\label{jbmo.ne.ae}\]
+     Lấy modulo $3$ hai vế (\ref{jbmo.ne.ae}), ta có
+     $1\equiv (-1)^m\pmod{3}.$
+     Bắt buộc, $m$ phải là số chẵn. Ta đặt \(m=2k\), trong đó $k$ là một số nguyên dương. Thế vào (\ref{jbmo.ne.ae}), ta chỉ ra
+     \[\left(2^{k}-p\right)\left(2^{k}+p\right)=15,\]
+     Do $\left(2^{k}+p\right)-\left(2^{k}-p\right)=2 p \geqslant 10$, ta phải có \(2^{k}-p=1\) \text {và} \(2^{k}+p=15\), kéo theo \(p=7\) và \(k=3\). Từ đây, ta có thể biểu diễn $n$ dưới dạng $$n=4^{x} \cdot 9^{y} \cdot 49^{z},$$ trong đó \(x,y,z\) là các số nguyên không âm nào đó.
+    Dựa trên các tính toán
+     $$2^7+1=143=11\cdot13,\quad 3^3+1=28=2^2\cdot7,\quad 7^3+1=2^3\cdot43.$$
+     ta chỉ ra $x\le 3,y\le 1$ và $z\le 1.$ Thử trực tiếp, ta tìm ra $n=49$ và $n=196.$
+ \end{enumerate}
+Tổng kết lại, có tất cả $7$ số nguyên dương $n$ thỏa yêu cầu, đó là
+$1,4,9,16,49,64,196.$}
+
+\section{Định lí Fermat và ứng dụng}
+
+\subsection{Lí thuyết}
+
+Trước khi đến với các dạng bài tập trong phần này, chúng ta cần làm quen với một định lí khá nổi tiếng, đó là định lí $Fermat$ nhỏ
+\begin{light}
+Với mọi số nguyên tố $p$ và số nguyên $a$ bất kì, ta có
+\[a^p\equiv a\pmod{p}.\]
+Ngoài ra, trong trường hợp $(a,p)=1,$ ta còn có
+\[a^{p-1}\equiv 1\pmod{p}.\]
+\end{light}
+\chu{Chứng minh.} Ta sẽ chứng minh định lí trên bằng phương pháp quy nạp.\\
+Thật vậy, bài toán đúng với $a=1.$ Giả sử bài toán đúng với $a=1,2,\ldots,n.$ Theo giả thiết quy nạp, ta có
+$$n^p\equiv n\pmod{p}.$$
+Mặt khác, ta nhận thấy rằng
+$$\vuong{(n+1)^p-(n+1)}-\tron{n^p-n}=a_1n+a_2n^2+\ldots+a_{p-1}n^{p-1}.$$
+Theo như kiến thức đã biết về khai triển nhị thức $Newton,$ các số $a_1,a_2,\ldots,a_{p-1}$ chia hết cho $p.$ Như vậy
+$$(n+1)^p-(n+1)\equiv n^p-n\equiv0\pmod{p}.$$
+Theo nguyên lí quy nạp, bài toán được chứng minh.
+
+\subsection{Ví dụ minh họa}
+
+\begin{bx}
+Cho $p$ là một số nguyên tố và hai số nguyên dương $x,y$. Chứng minh rằng 
+\[x y^{p}-y x^{p}\text{ chia hết cho }p.\]
+\loigiai{
+Theo giả thiết, ta có $p$ là số nguyên tố. Áp dụng định lí \textit{Fermat} nhỏ, ta có
+$$\heva{x^p\equiv x\pmod{p}\\
+y^p\equiv y\pmod{p}
+}\Rightarrow xy^p-x^py\equiv xy-xy\equiv0\pmod{p}.$$
+Bài toán đã được chứng minh.}
+\end{bx}
+
+\begin{bx} \label{bodeveus1}
+Cho $p$ là số nguyên tố có dạng $4 k+3.$ Chứng minh rằng \[p \mid \left(x^2+y^2\right)\Leftrightarrow \heva{&p\mid x\\&p\mid y.}\]
+\loigiai{
+Ở đây, tác giả xin phép chỉ trình bày chiều thuận của phần chứng minh.\\
+Ta giả sử phản chứng rằng $x$ không chia hết cho $p.$ Nhờ vào giả thiết chiều thuận là $x^2+y^2$ chia hết cho $p,$ ta suy ra $y$ cũng không chia hết cho $p.$ Mặt khác, ta có
+\begin{align*}
+  x^2\equiv -y^2\pmod{p}
+&\Rightarrow \left(x^2\right)^{2k+1}\equiv \left(-y^2\right)^{2k+1} \pmod{p}
+\\&\Rightarrow x^{4k+2}\equiv -y^{4k+2} \pmod{p}.  
+\end{align*}
+Áp dụng định lí $Fermat$ nhỏ, ta chỉ ra rằng
+$$x^{4k+2}\equiv y^{4k+2}\equiv 1\pmod{p}.$$
+Hai nhận xét trên cho ta $1\equiv -1\pmod{p},$ tức là $p=2,$ mâu thuẫn. \\
+Giả sử phản chứng là sai. Khẳng định chiều thuận được chứng minh.}
+\end{bx}
+
+\begin{bx}\label{bodeveus2}
+Cho $p$ là số nguyên tố có dạng $3k+2.$ Chứng minh rằng \[p \mid \left(x^2+xy+y^2\right)\Leftrightarrow \heva{&p\mid x\\&p\mid y.}\]
+\loigiai{
+Ở đây, tác giả xin phép chỉ trình bày chiều thuận của phần chứng minh.\\
+Ta giả sử phản chứng rằng $x$ không chia hết cho $p.$ Nhờ vào giả thiết chiều thuận là $x^2+xy+y^2$ chia hết cho $p,$ ta suy ra $y$ cũng không chia hết cho $p.$ Mặt khác, ta có
+\begin{align*}
+  x^2+xy+y^2\equiv 0\pmod{p}&\Rightarrow x^3\equiv y^3\pmod{p}
+\\&\Rightarrow x^{3k}\equiv y^{3k} \pmod{p}
+\\&\Rightarrow yx^{3k+1}\equiv xy^{3k+1} \pmod{p}.  
+\end{align*}
+Áp dụng định lí $Fermat$ nhỏ, ta chỉ ra rằng
+$$x^{3k+1}\equiv y^{3k+1}\equiv 1\pmod{p}.$$
+Hai nhận xét trên cho ta $x\equiv y\pmod{p}.$\\ Tiếp tục kết hợp với giả thiết chiều thuận $x^2+xy+y^2$ chia hết cho $p,$ ta có
+$$0\equiv x^2+xy+y^2\equiv 3x^2 \pmod{p}.$$
+Ta được $3x^2$ chia hết cho $p,$ nhưng do $x$ không chia hết cho $p$ nên bắt buộc $p=3,$ mâu thuẫn. \\
+Giả sử phản chứng là sai. Khẳng định chiều thuận được chứng minh.}
+\begin{luuy}
+\nx Các bổ đề trên cũng được sử dụng để giải quyết vấn đề quen thuộc, đó là
+\begin{enumerate}
+    \item \chu{Euler problem.} \\
+    Phương trình $4 x y-x-y=z^{2}$ không có nghiệm nguyên dương.
+    \item \chu{Lebesgue problem.} \\ 
+    Phương trình $x^{2}-y^{3}=7$ không có nghiệm nguyên dương.
+\end{enumerate}
+\end{luuy}
+\end{bx}
+\subsection{Bài tập tự luyện}
+
+\begin{btt}
+Cho $p, q$ là hai số nguyên tố phân biệt. Chứng minh rằng 
+\[p^{q-1}+q^{p-1}-1\text{ chia hết cho }pq.\]
+\end{btt}
+
+\begin{btt}
+Cho $p$ là số nguyên tố khác $2$ và $a, b$ là hai số tự nhiên lẻ sao cho $a+b$ chia hết cho $p$ và $a-b$ chia hết cho $p-1$. Chứng minh rằng $a^{b}+b^{a}$ chia hết cho $2p.$
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $n$ sao cho $a^{25}-a$ chia hết cho $n$ với mọi số nguyên $a.$
+\nguon{Bulgarian Mathematical Olympiad 1995}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số nguyên tố $p>7,$ ta có
+\[3^{p}-2^{p}-1\text{ chia hết cho }42p.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố \(p\) thỏa mãn
+\[(x+y)^{19}-x^{19}-y^{19}\text{ chia hết cho }p,\]
+với mọi số nguyên dương $x,y.$
+\nguon{Junior Balkan Mathematical Olympiad 2020}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố \(p\) sao cho tồn tại các số nguyên dương \(x,y,z\) thỏa mãn
+    $$x^{p}+y^{p}+z^{p}-x-y-z$$
+là tích của ba số nguyên tố phân biệt.
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2019}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số nguyên tố $p$ thì $p^3+\dfrac{p-1}{2}$ không phải là tích của hai số tự nhiên liên tiếp.
+\nguon{Chọn học sinh giỏi Hà Tĩnh 2014}
+\end{btt}
+
+\begin{btt}
+Với $p$ là số nguyên tố lẻ, đặt $A=23 p+3^{p} - 4.$ Chứng minh rằng
+\begin{enumerate}[a,]
+    \item $A$ không phải là bình phương bất kì số tự nhiên nào.
+    \item $A$ không phải là tích của bất kì hai số nguyên dương liên tiếp nào.
+\end{enumerate}
+\end{btt}
+
+\begin{btt}
+Cho \(a,b,c\) là các số nguyên dương, gọi \(p\) là số nguyên tố thỏa mãn đồng thời
+\begin{multicols}{3}
+\begin{enumerate}[i,]
+    \item \(p\mid \left(a^2+ab+b^2\right)\).
+    \item \(p\mid \left(a^5+b^5+c^5\right)\).
+    \item \(p\nmid \left(a+b+c\right)\).
+\end{enumerate}
+\end{multicols}
+Chứng minh rằng \(p\) là một số nguyên tố có dạng \(6k+1\), trong đó \(k\) là một số nguyên dương.
+\nguon{Chọn đội dự tuyển toán 10 Phổ thông Năng khiếu 2015}
+\end{btt}
+
+\subsection{Hướng dẫn tập tự luyện}
+
+\begin{gbtt}
+Cho $p, q$ là hai số nguyên tố phân biệt. Chứng minh rằng 
+\[p^{q-1}+q^{p-1}-1\text{ chia hết cho }pq.\]
+\loigiai{
+Từ giả thiết, ta nhận thấy $(p,q)=1.$ Áp dụng định lí $Fermat$ nhỏ, ta có
+$$
+\heva{&p\mid \tron{q^{p-1}-1} \\ &q\mid \tron{p^{q-1}-1}}
+\Rightarrow
+\heva{&p\mid \tron{p^{q-1}+q^{p-1}-1} \\ &q\mid \tron{q^{p-1}+p^{q-1}-1}}
+\Rightarrow
+pq\mid\tron{p^{q-1}+q^{p-1}-1}.
+$$
+Bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $p$ là số nguyên tố khác $2$ và $a, b$ là hai số tự nhiên lẻ sao cho $a+b$ chia hết cho $p$ và $a-b$ chia hết cho $p-1$. Chứng minh rằng $a^{b}+b^{a}$ chia hết cho $2p.$
+\loigiai{
+Áp dụng định lí \textit{Fermat} nhỏ, ta có
+$p\mid b\tron{b^{p-1}-1}.$ Ngoài ra, do $p-1$ là ước của $a-b$ nên 
+$$p\mid b\tron{b^{p-1}-1}\mid b\tron{b^{a-b}-1}\mid b^b\tron{b^{a-b}-1}.$$
+Kết hợp với đồng dư thức thu được từ giả thiết là $a\equiv-b\pmod{p},$ ta suy ra
+$$a^{b}+b^{a}\equiv -b^b+b^a\equiv b^b\tron{b^{a-b}-1}\equiv0\pmod{p}.$$
+Bài toán được chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $n$ sao cho $a^{25}-a$ chia hết cho $n$ với mọi số nguyên $a.$
+\nguon{Bulgarian Mathematical Olympiad 1995}
+\loigiai{
+Vì $n$ là ước của $a^{25}-a$ với mọi số nguyên $a$ nên $n$ là ước chung của $2^{25}-2$ và $3^{25}-3.$ Ta có $$\tron{2^{25}-2,3^{25}-3}=2\cdot3\cdot5\cdot7\cdot13.$$
+Ta sẽ chứng minh $a^{25}-a$ chia hết cho $2\cdot3\cdot5\cdot7\cdot13$ với mọi số tự nhiên $a$. Vì $2,3,5,7,13$ là các số nguyên tố nên hướng đi của ta là áp dụng định lí \textit{Fermat} nhỏ.
+\begin{itemize} 
+    \item Xét modulo $2$, ta thu được 
+    $2\mid a(a-1)\mid a\tron{a^{24}-1}.$
+    \item Xét modulo $3$, ta thu được     $3\mid a\tron{a^2-1}\mid a\tron{a^{24}-1}.$
+    \item Xét modulo $5$, ta thu được $5\mid a\tron{a^4-1}\mid a\tron{a^{24}-1}.$
+      \item Xét modulo $7$, ta thu được $7\mid a\tron{a^6-1}\mid a\tron{a^{24}-1}.$
+      \item Xét modulo $13$, ta thu được $13\mid a\tron{a^{12}-1}\mid a\tron{a^{24}-1}.$
+\end{itemize}
+Vậy các số tự nhiên $n$ cần tìm là ước nguyên dương của $2\cdot3\cdot5\cdot7\cdot13=2730.$ 
+}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số nguyên tố $p>7,$ ta có
+\[3^{p}-2^{p}-1\text{ chia hết cho }42p.\]
+\loigiai{
+Ta đặt $A=3^{p}-2^{p}-1.$ Ta chia bài toán thành các bước làm sau.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item {Chứng minh $A$ chia hết cho $p.$}\\
+    Áp dụng định lí \textit{Fermat} nhỏ, ta có $3^p\equiv3\pmod{p}$ và $2^p\equiv2\pmod{p}$. Ta suy ra
+    $$3^p-2^p-1\equiv 3-2-1\equiv 0 \pmod{p}.$$
+    \item {Chứng minh $A$ chia hết cho $2.$} Điều này là hiển nhiên, do $A$ chẵn.
+    \item {Chứng minh $A$ chia hết cho $3.$}\\
+    Vì $p>7$, do đó $p$ là số nguyên tố lẻ. Đặt $p=2k+1$ với $k$ là số nguyên dương. Phép đặt này cho ta
+    $$2^p\equiv 2^{2k+1}\equiv4^k\cdot2\equiv2\pmod{3}\Rightarrow 3^{p}-2^{p}-1\equiv0-2-1\equiv0\pmod{3}.$$
+    \item {Chứng minh $A$ chia hết cho $7.$}\\
+    Áp dụng định lí \textit{Fermat} nhỏ, ta có 
+    $3^6\equiv 1\pmod{7}$ và $2^6\equiv1\pmod{7}$.\\
+    Vì $p$ là số nguyên tố lớn hơn $7$ nên $p$ có dạng $6k+1$ hoặc $6k-1.$
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $p=6k+1$, ta có
+        $$3^{p}-2^{p}-1\equiv3^{6k+1}-2^{6k+1}-1\equiv 3-2-1\equiv0\pmod{7}.$$
+        \item\chu{Trường hợp 2.} Với $p=6k+5$, ta có
+         $$3^{p}-2^{p}-1\equiv3^{6k+5}-2^{6k+5}-1\equiv 3^5-2^5-1\equiv210\equiv0\pmod{7}.$$
+    \end{itemize}
+\end{enumerate}
+Với việc các số $2,3,7,p$ có tích bằng $42p$ và đôi một nguyên tố cùng nhau, bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố \(p\) thỏa mãn
+\[(x+y)^{19}-x^{19}-y^{19}\text{ chia hết cho }p,\]
+với mọi số nguyên dương $x,y.$
+\nguon{Junior Balkan Mathematical Olympiad 2020}
+\loigiai{
+Với $x=y=2$, ta có
+\begin{align*}
+    (2+2)^{19}-2^{19}-2^{19}&= 2^{38}-2^{20}\\&=2^{20}\tron{2^{18}-1}\\&=2^{20}\tron{2^9+1}\tron{2^3+1}\tron{2^3-1}\\&
+    =2^{20}\cdot513\cdot9\cdot7.
+\end{align*}
+Vì $p$ là ước của $(x+y)^{19}-x^{19}-y^{19}$ với mọi số nguyên dương $x,y$ nên  ta có
+$$p\mid 2^{20}\cdot513\cdot9\cdot7.$$
+Ta sẽ chứng minh $(x+y)^{19}-x^{19}-y^{19}$ chia hết cho $2,3,7,19$ với mọi $x,y$ nguyên dương.\\
+Ta dễ dàng chứng minh được nếu $x$ hoặc $y$ chia hết cho $p$ thì $(x+y)^{19}-x^{19}-y^{19}$ chia hết cho $p$. \\Ta xét trường hợp $\tron{x,p}=1$ và $\tron{y,p}=1.$ 
+\begin{enumerate}
+    \item Với $x+y$ chia hết cho $p$, áp dụng định lí \textit{Fermat} nhỏ cho modulo $3$, ta nhận được $x^2\equiv1\pmod{3}$ và $y^2\equiv 1\pmod{2}$. Từ đây, ta có
+     $$(x+y)^{19}-x^{19}-y^{19}\equiv 0^{19}-\tron{x^2}^9 x-\tron{y^2}^9 y\equiv0-x-y\equiv0\pmod{3}.$$
+    Chứng minh tương tự với modulo $2,7,19$, ta thu được $(x+y)^{19}-x^{19}-y^{19}$ chia hết cho $2,7,19.$
+    \item Với $\tron{x+y,p}=1$ , áp dụng định lí \textit{Fermat} nhỏ cho modulo $3$, ta có 
+    $$\tron{x+y}^2\equiv1\pmod{3}, \quad x^2\equiv 1\pmod{3}, \quad y^2\equiv1\pmod{3}.$$
+    Các đồng dư thức trên cho ta
+    \begin{align*}
+        (x+y)^{19}-x^{19}-y^{19}
+        &\equiv \tron{(x+y)^2}^{9}\tron{x+y}-\tron{x^2}^9x-\tron{y^2}^9 y
+        \\&\equiv x+y-x-y\\&
+        \equiv0\pmod{3}.
+    \end{align*}
+    Chứng minh tương tự với modulo $2,7,19$, ta nhận được $(x+y)^{19}-x^{19}-y^{19}$ chia hết cho $2,7,19.$
+\end{enumerate}
+Như vậy, tất cả các số nguyên tố $p$ cần tìm là $2,3,7,19.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố \(p\) sao cho tồn tại các số nguyên dương \(x,y,z\) thỏa mãn
+    $$x^{p}+y^{p}+z^{p}-x-y-z$$
+là tích của ba số nguyên tố phân biệt.
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2019}
+    \loigiai{
+    Trước tiên, ta đặt $A=x^{p}+y^{p}+z^{p}-x-y-z$. Trong bài toán này, ta xét các trường hợp sau.
+    \begin{enumerate}
+        \item  Nếu \(p=2\), ta chọn $x=y=4$ và $z=3,$ khi đó $A=30=2\cdot 3\cdot 5$ là tích ba số nguyên tố phân biệt.
+        \item Nếu \(p=3\), ta chọn $x=3,y=2$ và $z=1$, khi đó $A=30=2 \cdot 3 \cdot 5$ là tích ba số nguyên tố phân biệt.
+        \item Nếu \(p=5\), ta chọn $x=2,y=1$ và $z=1$, khi đó $A=30=2 \cdot 3 \cdot 5$ là tích ba số nguyên tố phân biệt.
+        \item Nếu $p \geqslant 7$, xét \(A\) trong modulo \(2\) và \(3\) thì ta thấy \(A\) chia hết cho cả \(2\) và \(3\). Hơn nữa, từ định lí nhỏ $Fermat$ ta có đồng dư thức sau
+        \[x^{p}+y^{p}+z^{p}-x-y-z\equiv x+y+z-x-y-z\equiv 0\pmod{p}.\]
+        Với giả sử $A$ là tích ba số nguyên tố phân biệt, ba số đó bắt buộc là $2,3$ và $p.$ Như vậy
+        \[x^{p}+y^{p}+z^{p}-x-y-z=6p.\]
+        Rõ ràng, ta không thể chọn $x=y=z=1.$ Theo đó, trong ba số \(x,y,z\), có ít nhất một số lớn hơn hoặc bằng \(2\), giả sử là $x.$ Giả sử này cho ta
+        \[6 p \geqslant x^{p}-x=x\left(x^{p-1}-1\right) \geqslant 2\left(2^{p-1}-1\right)=2^{p}-2.\]
+        Dễ kiểm tra bằng quy nạp rằng $2^{n}-2>6 n$ với mọi số tự nhiên $n \geqslant 6$. Điều vô lí này đã khẳng định rằng khi $p \geqslant 7$ thì không tồn tại \(x,y,z\) thỏa mãn $A$ là tích của ba số nguyên tố liên tiếp.  \end{enumerate}
+Kết luận, có tất cả ba số nguyên tố thỏa yêu cầu, đó là $p=2,p=3$ và $p=5.$}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số nguyên tố $p$ thì $p^3+\dfrac{p-1}{2}$ không phải là tích của hai số tự nhiên liên tiếp.
+\nguon{Chọn học sinh giỏi Hà Tĩnh 2014}
+\loigiai{
+Trong bài toán này, ta xét các trường hợp dưới đây.
+\begin{enumerate}
+	 \item Với $p=2,$ ta có $p^3+\dfrac{p-1}{2}=\dfrac{17}{2}$ không là số nguyên.
+	 \item Với $p=4k+1$, ta có $p^3+\dfrac{p-1}{2}=(4k+1)^3+2k$ là số lẻ, nên $p^3+\dfrac{p-1}{2}$ không thể là tích của hai số tự nhiên liên tiếp.
+	 \item Với $p=4k+3$, ta giả sử tồn tại số nguyên dương $x$ thỏa mãn $p^3+\dfrac{p-1}{2}=x(x+1).$ Khi đó  $$2p(2p^2+1)=(2x+1)^2+1.$$ Ta suy ra $(2x+1)^2+1$ chia hết cho $p,$ vô lí do $p=4k+3.$
+\end{enumerate}
+Nhờ các mâu thuẫn chỉ ra bên trên, bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Với $p$ là số nguyên tố lẻ, đặt $A=23 p+3^{p} - 4.$ Chứng minh rằng
+\begin{enumerate}[a,]
+    \item $A$ không phải là bình phương bất kì số tự nhiên nào.
+    \item $A$ không phải là tích của bất kì hai số nguyên dương liên tiếp nào.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item  Giả sử tồn tại số tự nhiên $x$ sao cho $23 p+3^{p}-4=x^{2}$. Theo định lí $Fermat$ nhỏ, ta có
+    $$x^2+1=23p+3^p-3\equiv 0\pmod{p}.$$
+    Ta suy ra $x^2+1$ chia hết cho $p,$ và $p$ phải có dạng $4 k+1$. Điều này kéo theo
+    $$23 p+3^{p}-4 x^2\equiv-p+(-1)^{p} \equiv 2 \pmod{4}.$$
+    Do $x^2\equiv 0,1\pmod{4},$ đây là một điều mâu thuẫn. Kết luận, $A$ không phải là bình phương bất kì số tự nhiên nào.
+    \item Giả sử tồn tại số nguyên dương $x$ sao cho $23p+3^p-4=x(x+1).$ Ta xét các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $p=3,$ ta có $A=82,$ không là tích của hai số nguyên dương liên tiếp nào.
+        \item\chu{Trường hợp 2.} Nếu $p \equiv 1\pmod{3},$ ta có
+        $$x^2+x+1\equiv 23p\equiv 23\equiv2\pmod{3}.$$
+       Đây là điều vô lí, do $x^2+x+1\equiv 0,1\pmod{3},$ với mọi số nguyên $x.$
+        \item\chu{Trường hợp 3.} Nếu $p \equiv 2\pmod{3},$ áp dụng định lí $Fermat$ nhỏ, ta có
+        $$x^2+x+1=23p+3^p-3\equiv 0\pmod{p}.$$
+        Ta nhận được $x^2+x+1$ chia hết cho $p.$\\
+        Theo như kiến thức đã học, ta có $1$ chia hết cho $p,$ mâu thuẫn.
+    \end{itemize}
+Kết luận, $A$ không phải là tích bất kì hai số nguyên dương liên tiếp nào.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Cho \(a,b,c\) là các số nguyên dương, gọi \(p\) là số nguyên tố thỏa mãn đồng thời
+\begin{multicols}{3}
+\begin{enumerate}[i,]
+    \item \(p\mid \left(a^2+ab+b^2\right)\).
+    \item \(p\mid \left(a^5+b^5+c^5\right)\).
+    \item \(p\nmid \left(a+b+c\right)\).
+\end{enumerate}
+\end{multicols}
+Chứng minh rằng \(p\) là một số nguyên tố có dạng \(6k+1\), trong đó \(k\) là một số nguyên dương.
+\nguon{Chọn đội dự tuyển toán 10 Phổ thông Năng khiếu 2015}
+\loigiai{
+Từ i, ta suy ra \(p\mid \left ( a-b \right )\left (a^2+ab+b^2 \right )=a^3-b^3\), do đó ta thu được
+\[a^3\equiv b^3\pmod{p}.\]
+Đồng thời, nếu $a$ và $b$ cùng chia hết cho $p$ thì $c$ chia hết cho $p,$ mâu thuẫn với iii. Mâu thuẫn này chứng tỏ $a$ và $b$ không đồng thời chia hết cho $p.$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu \(p=2\) thì từ i, dễ thấy \(a,b\) phải cùng chẵn. Kết hợp với ii, ta được $c$ cũng là số chẵn, nhưng điều này dẫn đến $a+b+c$ chia hết cho $p=2,$ mâu thuẫn với iii.
+    \item Nếu \(p=3\), áp dụng định lí $Fermat$ nhỏ, ta suy ra
+    \[a\equiv a^{3}\equiv b^{3}\equiv b\pmod{3}.\]
+    Kết hợp với ii, ta được \(3\mid\tron{2a^5+c^5}\), nhưng do
+    \[3\mid a^5-a=\left ( a^3-a \right )\left ( a^2+1 \right )\]
+    nên \(0\equiv 2a^5+c^5\equiv 2a+c\equiv a+b+c\pmod{3}\), mâu thuẫn với iii.
+    \item Nếu \(p>3\) và $p\equiv 2\pmod{3},$ từ i và kiến thức đã học, cả $a$ và $b$ cùng chia hết cho $p,$ mâu thuẫn.
+    \item Nếu \(p>3\) và $p\equiv 1\pmod{3},$ ta suy ra $p-1$ chia hết cho cả $3$ và $2,$ thế nên $p=6k+1$ với $k$ là một số nguyên dương nào đó. Trường hợp này là có thể xảy ra, vì chẳng hạn với $a=2,b=4,c=8,$ ta tìm được $p=7.$ 
+\end{enumerate}
+Tổng kết lại, bài toán được chứng minh.}
+\end{gbtt}

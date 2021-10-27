@@ -1,0 +1,1786 @@
+\section{Phương trình chứa ẩn ở mũ}
+
+\subsection{Phương pháp đánh giá}
+
+\subsubsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn
+\[1^n+9^n+10^n=5^n+6^n+11^n.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y,z,t$ và $n$ thỏa mãn
+\[n^x+n^y+n^z=n^t.\]
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng không tồn tại các số nguyên dương $x,y,z$ thỏa mãn
+\[x^x+y^y=z^z.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn
+\[x^{x^{x^{x}}}=\tron{19-y^x}y^{x^y}-74.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương  $$4^{y}+4^{y}+2^{xy}-2^{x^{2}}-2^{y^{2}}=16.$$
+\nguon{Cao Đình Huy}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các nghiệm nguyên dương của phương trình 
+\[x^y+y^z+z^x=2\tron{x+y+z}.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ sao cho $3^n+n^2$ là số chính phương.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $m,n$ và số nguyên tố $p$ thỏa mãn
+\[n^{2p}=2n^2+m^2+p+2.\]
+\end{btt}
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn
+\[1^n+9^n+10^n=5^n+6^n+11^n.\]
+\loigiai{
+Vì $1^n,10^n,5^n,6^n$ và $11^n$ lần lượt có chữ số tận cùng là $1,0,5,6$ và $1.$ Xét modulo $10$ cả hai vế, ta được
+\begin{align*}
+    1^n+9^n+10^n\equiv 1+9^n+0\equiv9^n+1\pmod{10},\\
+    5^n+6^n+11^n\equiv 5+6+1\equiv2\pmod{10}.
+\end{align*}
+Từ đây, ta suy ra $9^n\equiv 1\pmod{10},$ kéo theo $2\mid n.$ Thử trực tiếp, ta nhận được $n=2$ và $n=4$ là hai nghiệm của phương trình. Với mọi $n\ge 6,$ ta có
+$$n10^{n-1}\ge6\cdot10^4\cdot10^{n-5}\ge 9^5\cdot10^{n-5}\ge9^n.$$
+Xét vế phải của phương trình, ta thu được
+$$VP>11^n=(10+1)^n=10^n+n\cdot10^{n-1}+\cdots+1\ge10^n+9^n+1=VT.$$
+Điều này không thể xảy ra. Tất cả các số nguyên dương $n$ cần tìm là $n=2$ và $n=4.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y,z,t$ và $n$ thỏa mãn
+\[n^x+n^y+n^z=n^t.\]
+\loigiai{
+Chia cả hai vế của phương trình cho $n^t,$ ta được
+$$n^{x-t}+n^{y-t}+n^{z-t}=1.$$
+Vì mỗi hạng tử vế trái đều dương và bé hơn $1$ nên $x,y,z<t.$ Với $n\ge4$, ta suy ra
+$$n^{x-t}+n^{y-t}+n^{z-t}<\dfrac{3}{n}\le \dfrac{3}{4}<1.$$
+Điều này không thể xảy ra nên $n\le 3.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $n=3,$ ta có bất phương trình sau
+    $$n^{x-t}+n^{y-t}+n^{z-t}\le\dfrac{3}{3}=1.$$
+    Từ đây, ta suy ra dấu bằng của bất phương trình trên phải xảy ra. Do đó $x+1=y+1=z+1=t.$
+    \item Với $n=2,$ không mất tính tổng quát, ta giả sử $x\le y\le z.$ Từ đây, ta suy ra
+    $$3\cdot2^{z-t}\ge 2^{x-t}+2^{y-t}+2^{z-t}=1.$$
+    Từ đây, ta suy ra $2^{z-t}\ge \dfrac{1}{3}$ hay $t-z<2.$ Điều này dẫn tới $t-z=1$ hay $z=t-1.$\\ Chứng minh tương tự, ta thu được 
+    $$x=t-1,\qquad y=t-1.$$
+    \item Với $n=1,$ thử trực tiếp ta thấy không thỏa mãn phương trình.
+\end{enumerate}
+Như vậy, bộ số nguyên dương $(x,y,z,t,n)$ thỏa mãn là
+$$(x,x,x,x+1,3),\quad (x,x,x+1,x+2,2),\quad(x,x+1,x,x+2,2),\quad(x+1,x,x,x+2,2).$$
+trong đó $x$ là số nguyên dương.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng không tồn tại các số nguyên dương $x,y,z$ thỏa mãn
+\[x^x+y^y=z^z.\]
+\loigiai{
+Giả sử tồn tại các số nguyên dương $x,y,z$ thỏa mãn phương trình. Ta dễ dàng nhận thấy 
+$$z^z>x^x,\quad  z^z>y^y,$$ 
+kéo theo $z>x,y.$ Vì $x,y,z$ là các số nguyên nên $z\ge x+1$ và $z\ge y+1.$ Từ đó ta có
+$$z^z\ge\tron{x+1}^{x+1}=(x+1)\tron{x+1}^{x}\ge2\tron{x+1}^x>2x^x.$$
+Chứng minh tương tự, ta thu được $z^z>2y^y.$ Cộng theo vế hai bất phương trình, ta có 
+$$2z^z>2x^x+2y^y,$$
+hay $z^z>x^x+y^y,$ mâu thuẫn. Giả sử sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn
+\[x^{x^{x^{x}}}=\tron{19-y^x}y^{x^y}-74.\]
+\loigiai{
+Vì vế trái lớn hơn $0$ nên ta dễ dàng suy ra $y^x<19.$ Xét $y=1,$ thế trở lại phương trình, ta có
+$$x^{x^{x^{x}}}=\tron{19-1}\cdot1-74<0.$$
+Điều này không thể xảy ra. Do đó $y\ge2,$ kéo theo $x\le 4.$  Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $x=1,$ thế trở lại phương trình cho ta 
+    $$1=(19-y)y-74,$$
+    hay $y^2-19y+75=0.$ Phương trình này không có nghiệm nguyên.
+    \item Với $x\ge 2,$ kết hợp $y^x<19,$ ta nhận được các cặp số $(x,y)$ là $$(2,2),\quad (2,3),\quad (2,4),\quad (3,2),\quad (4,2).$$ Thử trực tiếp, ta thu được $(x,y)=(2,3)$ là bộ số thỏa mãn duy nhất.
+\end{enumerate}
+Như vậy, có duy nhất cặp số nguyên $(x,y)$ thỏa mãn là $(2,3).$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương  $$4^{y}+4^{y}+2^{xy}-2^{x^{2}}-2^{y^{2}}=16.$$
+\nguon{Cao Đình Huy}
+\loigiai{
+Với $x,y,z>0$, ta sẽ chứng minh bất đẳng thức
+$$2^{x^{2}}+2^{y^{2}}+2^{z^{2}}\geq 2^{xy}+2^{yz}+2^{zx}.$$
+Thật vậy, sử dụng bài toán quen thuộc $\left ( a+b+c \right )^{2}\geq 3(ab+bc+ca)$, ta có
+\begin{align*}
+    \left ( 2^{x^{2}}+2^{y^{2}}+2^{z^{2}} \right )^{2}
+    &\geq 3\left ( 2^{x^{2}+y^{2}}+2^{y^{2}+z^{2}}+2^{z^{2}+x^{2}} \right )
+    \\&\geq 3\bigg[ (2^{xy})^{2}+(2^{yz})^{2}+(2^{zx})^{2}\bigg]
+    \\&\geq 3\cdot \dfrac{(2^{xy}+2^{yz}+2^{zx})^{2}}{3}\\&=(2^{xy}+2^{yz}+2^{zx})^{2}\\&=(2^{xy}+2^{yz}+2^{zx})^{2}.
+\end{align*}
+Do đó $2^{x^{2}}+2^{y^{2}}+2^{z^{2}}\geq 2^{xy}+2^{yz}+2^{zx}.$ Khi $z=2,$ bất đẳng thức trở thành $$2^{x^{2}}+2^{y^{2}}+16\geq 2^{xy}+2^{2x}+2^{2y}.$$
+Đối chiếu với phương trình đã cho, ta nhận thấy đẳng thức phải xảy ra, tức là $x=y=2.$\\
+Đây là nghiệm nguyên dương duy nhất của phương trình.}
+\begin{luuy}
+Ta không nhất thiết cần tới điều kiện $x,y$ nguyên dương để giải bài toán vừa rồi.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các nghiệm nguyên dương của phương trình 
+\[x^y+y^z+z^x=2\tron{x+y+z}.\]
+\loigiai{
+Giả sử phương trình có các nghiệm nguyên dương $(x,y,z).$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $x,y,z$ không nhỏ hơn $2,$ ta có nhận xét.
+    $$VT=x^y+y^z+z^x\ge x^2+y^2+z^2\ge 2(x+y+z)=VP.$$
+    Dấu bằng của đánh giá trên xảy ra. Ta có $x=y=z=2.$
+    \item Nếu có ít nhất một trong ba số $x,y,z$ nhỏ hơn bằng $1$ (giả sử là $z$), phương trình trở thành
+    $$x^y=2x+y+1.$$
+    Từ đây, ta xét các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $y<4,$ ta có $y\in\{1;2;3\}.$ Ta lập bảng.
+        \begin{center}
+            \begin{tabular}{c|c|c}
+                $y$   &  Phương trình sau khi thế & $x$\\
+                \hline
+                $1$ & $x=2x+2$ & $-2$\\
+                \hline
+                $2$ & $x^2=2x+3$ & $3$ \\
+                \hline
+                $3$ & $x^3=2x+4$ & $2$
+            \end{tabular}
+        \end{center}
+        Trường hợp này cho ta hai bộ số $(x,y,z)$ thỏa mãn là $(3,2,1)$ và $(2,3,1).$
+        \item\chu{Trường hợp 2.} Với $x<4,$ ta có $x\in\{1;2;3\}.$ Ta lập bảng. 
+        \begin{center}
+            \begin{tabular}{c|c|c}
+                $x$   &  Phương trình sau khi thế & $y$\\
+                \hline
+                $1$ & $1=y+3$ & $-2$\\
+                \hline
+                $2$ & $2^y=y+5$ & $3$ \\
+                \hline
+                $3$ & $3^y=y+7$ & $2$
+            \end{tabular}
+        \end{center}        
+        Trường hợp này cho ta hai bộ số $(x,y,z)$ thỏa mãn là $(2,3,1)$ và $(3,2,1).$
+        \item \chu{Trường hợp 3.} Với $x,y\ge 4$, bằng quy nạp, ta chứng minh được
+        $$x^y>xy,\text{ với mọi }x,y\ge 4.$$
+        Chứng minh trên cho ta $x^y>xy\ge 2x+2y+2(x+y-8)>2x+y+1,$ vô lí.
+    \end{itemize}
+\end{enumerate}
+Như vậy, phương trình có $7$ nghiệm nguyên dương, gồm $(2,2,2),(1,2,3)$ và hoán vị của chúng.}
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ sao cho $3^n+n^2$ là số chính phương.
+\loigiai{
+Giả sử tồn tại số nguyên dương $m$ thỏa mãn $n^{2}+3^{n}=m^{2}.$ Ta viết lại
+$$(m-n)(m+n)=3^{n}.$$ 
+Khi đó, tồn tại số tự nhiên $k$ sao cho $m-n=3^{k}$ và $m+n=3^{n-k}.$\\
+Vì $m+n\ge m-n$ nên $k\le n-k,$ và do đó $n-2 k \geq 0.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $n=2k=0$ thì các dấu bằng phía trên phải xảy ra, tức là $m+n=m-n$ hay $n=0.$
+    \item Nếu $n-2k=1$ thì ta có
+    \begin{align*}
+        2 n=(m+n)-(m-n)=3^{n-k}-3^{k}&=3^{k}\left(3^{n-2 k}-1\right)=2\cdot3^{k}.
+    \end{align*}
+    Vậy $n=2 k+1=3^{k}.$ Hơn nữa, do $$3^{k}=(1+2)^{k}=1+2 k+\cdots+2^{k}>2 k+1$$ nên ta suy ra $k=0,1,$ và do đó $n=1$ hoặc $n=3.$
+    \item Nếu $n-2 k>1$ thì ta lần lượt suy ra
+    \begin{align*}
+        k\le n-k-2
+        \Rightarrow 3^{k} \leq 3^{n-k-2}
+        \Rightarrow 2 n&=3^{n-k}-3^{k} \\&\geq 3^{n-k}-3^{n-k-2}\\&=3^{n-k-2}\left(3^{2}-1\right)
+        \\&\ge8\cdot 3^{n-k-2}\\&\geq 8(1+2(n-k-2))\\&=16 n-16 k-24.
+    \end{align*}
+    Từ loạt đánh giá trên, ta chỉ ra $8k+12\ge 7n\ge 7(2k+2)=14k+14,$ vô lí.
+\end{enumerate}
+Như vậy, chỉ có $n=0,\ n=1$ và $n=3$ là các số tự nhiên thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $m,n$ và số nguyên tố $p$ thỏa mãn
+\[n^{2p}=2n^2+m^2+p+2.\]
+\loigiai{
+Giả sử tồn tại các số nguyên $m,n,p$ thỏa phương trình. Ta có
+$$2n^2+p+2=\left(n^p-m\right)\left(n^p+m\right)\ge n^p+m+1\ge n^p+2.$$
+Do $n^p>m^2\ge 1$ nên $n\ge 2.$ Từ đây, ta tiếp tục suy ra
+$$p+1\ge n^2\left(n^{p-2}-2\right)\ge 4\left(2^{p-2}-2\right)=2^p-8.$$
+Bằng quy nạp, ta chứng minh được $2^x>x+9,$ với mọi $x\ge 4.$ \\
+Như vậy $p\le 3,$ tức $p=2$ hoặc $p=3.$ Ta xét hai trường hợp kể trên. 
+\begin{enumerate}
+    \item Với $p=2,$ thay vào phương trình ban đầu rồi biến đổi tương đương, ta có
+    $$\left(n^2-m-1\right)\left(n^2+m-1\right)=5.$$
+    Giải phương trình ước số trên, ta thu được $n=2$ và $m=2.$
+    \item Với $p=3,$ thay vào phương trình ban đầu rồi biến đổi tương đương, ta có
+    $$(n-2)\left(n^5+2n^4+4n^3+8n^2+14n+20\right)+\left(m^2+51\right)=0.$$
+    Vế trái phương trình trên luôn lớn hơn $0.$ Trường hợp này không thể xảy ra.
+\end{enumerate}
+Tóm lại, $(m,n,p)=(2,2,2)$ là bộ số duy nhất thỏa mãn đề bài.}
+\end{gbtt}
+
+
+\subsection{Phương pháp xét tính chia hết}
+
+\subsubsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn $$x^5+x^4=7^y-1.$$
+\nguon{Belarusian National Olympiad 2007}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số nguyên dương $a$ và $b$ thì $$(36a+b)(a+36b)$$ không thể là một lũy thừa số mũ tự nhiên của $2.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ sao cho $$(x+y)(xy+1)$$ là một lũy thừa số mũ tự nhiên của $3$.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ sao cho $$\tron{a^2+b}\tron{a+b^2}$$ là một lũy thừa số mũ nguyên dương của $2.$
+\nguon{Tạp chí Pi, tháng 5 năm 2017, Kvant 301}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả bộ ba các số nguyên dương $(a,b,c)$ thỏa mãn $$\left(a^3+b\right)\left(a+b^3\right)=2^c.$$
+\nguon{Turkey Junior Balkan Mathematical Olympiad Team Selection Test 2014}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba số nguyên dương $(a,b,c)$ thỏa mãn \[\tron{a^5+b}\tron{a+b^5}=2^c.\]
+\end{btt}
+
+\begin{btt}
+Giả sử $n$ là một số nguyên dương thỏa mãn tồn tại $a, b, c$ nguyên dương sao cho 
+$$7^{n}=(a+b c)(b+a c).$$ 
+Chứng minh rằng $n$ là số chẵn.
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên \[n^x+n^y=n^z.\]
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $x$ và $y$ khác nhau sao cho
+\[x^y=y^x.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+$$x^y=y^{x-y}.$$
+\nguon{Junior Balkan Mathematical Olympiad 1998}
+\end{btt}
+
+\begin{btt}
+Phương trình sau có bao nhiêu nghiệm nguyên dương?
+\[\tron{x^y-1}\tron{z^t-1}=2^{200}.\]
+\end{btt}
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn $$x^5+x^4=7^y-1.$$
+\nguon{Belarusian National Olympiad 2007}
+\loigiai{
+Giả sử tồn tại các số nguyên dương $x,y$ thỏa mãn yêu cầu. Ta viết lại phương trình thành
+$$\tron{x^3-x+1}\tron{x^2+x+1}=7^y.$$
+Ta suy ra cả $x^3-x+1$ và $x^2+x+1$ đều là lũy thừa số mũ nguyên dương của $7.$ Ta đặt
+$$x^3-x+1=7^a,\quad x^2+x+1=7^b.$$
+Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $a\ge b$ thì $7^a$ chia hết cho $7^b,$ và
+    \begin{align*}
+        \tron{x^2+x+1}\mid\tron{x^3-x+1}
+        &\Rightarrow \tron{x^2+x+1}\mid\tron{\tron{x-2}\tron{x^2+x+1}-\tron{x-2}}
+        \\&\Rightarrow \tron{x^2+x+1}\mid\tron{x-2}.
+    \end{align*}
+    Với $x=1,x=2,$ kiểm tra trực tiếp, ta tìm được $y=2$ khi $x=2.$ Với $x\ge 3,$ ta có
+    $$x^2+x+1\le x-2\Rightarrow x^2+3\le 0.$$
+    Đây là điều không thể xảy ra.
+    \item Nếu $a<b,$ lập luận tương tự, ta chỉ ra $x^2+x+1\ge 7\tron{x^3-x+1}.$ \\
+    Không tồn tại số nguyên dương $x$ nào thỏa mãn điều này.
+\end{enumerate}
+Như vậy, cặp số $(x,y)=(2,2)$ là cặp số duy nhất thỏa yêu cầu.}
+\begin{luuy}
+\begin{enumerate}
+    \item  Bài toán trên thuộc mảng tính chất lũy thừa của một số nguyên tố. Các kĩ thuật sử dụng tính chất của chúng đã được nói rõ ở \chu{chương II}.
+    \item Ở trong các phép chia hết như $x-2$ chia hết cho $x^2+x+1$ phía trên, ta có thể tìm được $x$ mà không cần phải sử dụng bất đẳng thức.
+\end{enumerate}    
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số nguyên dương $a$ và $b$ thì $(36a+b)(a+36b)$ không thể là một lũy thừa số mũ tự nhiên của $2.$
+\loigiai{
+Không mất tính tổng quát, ta giả sử $a\ge b.$ Giả sử cho ta $36a+b\ge a+36b.$ Ta sẽ chứng minh bài toán bằng phản chứng. Nếu như $(36a+b)(a+36b)=2^c$ trong đó $c$ là số nguyên dương, ta đặt 
+$$36a+b=2^m, \:a+36b=2^n$$ 
+ở đây $m,n$ là các số tự nhiên thỏa mãn $m\ge n>0.$ Lấy hiệu theo vế, ta được
+$$35(a-b)=2^n\tron{2^{m-n}-1}.$$
+Vì $\tron{35,2^n}=1$ nên $2^n\mid (a-b)$. Trong trường hợp $a>b,$ ta nhận thấy rằng
+$$a-b\ge 2^n\Rightarrow a>2^n\Rightarrow a+36b>2^n.$$
+Điều này trái với lập luận trên của ta. Do đó $a=b$, nhưng lúc này $36a+b=37a$ là lũy thừa số mũ tự nhiên của $2,$ vô lí. Do đó giả sử sai, và bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ sao cho $$(x+y)(xy+1)$$ là một lũy thừa số mũ tự nhiên của $3$.
+\loigiai{
+Rõ ràng, $xy+1$ và $x+y$ đều là lũy thừa cơ số $3.$ \\
+Ta đặt $3^a=xy+1,\:3^b=x+y,$ với $a,b$ là các số nguyên dương. Lần lượt lấy tổng và hiệu theo vế, ta được
+\begin{align*}
+    3^b\left(3^{a-b}+1\right)&=(x+1)(y+1),\tag{1}\label{luythuadayne.1}\\
+3^b\left(3^{a-b}-1\right)&=(x-1)(y-1).\tag{2}\label{luythuadayne.2}
+\end{align*}
+
+Hai số $x+1$ và $x-1$ có hiệu bằng $2,$ thế nên trong chúng phải có một số không là bội của $3.$ 
+\begin{enumerate}
+    \item Nếu $x+1$ không chia hết cho $3,$ từ (\ref{luythuadayne.1}), ta suy ra $y+1$ chia hết cho $3^b,$ thế nên
+    $$y+1\ge 3^b=x+y.$$
+    Ta bắt buộc phải có $x=1.$ Lúc này, ta tìm ra $y=3^a-1.$
+    \item Nếu $x-1$ không chia hết cho $3,$ từ (\ref{luythuadayne.2}), ta suy ra $y-1$ chia hết cho $3^b.$ Khi $y\ge 2,$ ta có
+    $$y-1\ge 3^b=x+y.$$ 
+    Nhận xét trên là một mâu thuẫn, thế nên bắt buộc $y=1.$ Lúc này, ta tìm ra $x=3^a-1.$
+\end{enumerate}
+Kết luận, các bộ $(x,y)$ thỏa mãn đề bài có dạng $\left(3^a-1,1\right)$ và $\left(1,3^a-1\right),$ trong đó $a$ nguyên dương.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ sao cho $\tron{a^2+b}\tron{a+b^2}$ là một lũy thừa số mũ nguyên dương của $2.$
+\nguon{Tạp chí Pi, tháng 5 năm 2017, Kvant 301}
+\loigiai
+{Rõ ràng, $a^2+b$ và $a+b^2$ đều là lũy thừa cơ số $2.$ Không mất tổng quát, ta giả sử $a\ge b.$ Ta đặt
+$$2^x=a^2+b,\:2^y=a+b^2,$$ 
+trong đó $x,y$ là các số nguyên dương. Phép đặt này cho ta 
+\[2^{y}\left(2^{x-y}-1\right)=2^x-2^y=a^2+b-a-b^2=(a-b)(a+b-1).\tag{1}\label{pi.p35.1}\]
+Cũng từ $a^2+b=2^x,$ ta suy ra $a-b$ là số chẵn và $a+b-1$ là số lẻ, thế nên (\ref{pi.p35.1}) cho ta $2^y\mid (a-b).$ \\
+Tới đây, ta xét hai trường hợp.
+\begin{enumerate}
+    \item Với $x=y,$ thế ngược lại, ta tìm ra $a=b=1.$ 
+    \item Với $x> y,$ ta có $a>b.$ Ta nhận xét rằng
+    $$a-b\ge 2^y=a+b^2.$$
+    Nhận xét trên dẫn ta đến $b^2+b\ge 0,$ một điều vô lí. Trường hợp này không cho $(a,b)$ phù hợp.
+\end{enumerate}
+Kết quả, $(a,b)=(1,1)$ là cặp số duy nhất thỏa mãn yêu cầu bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Giả sử $n$ là một số nguyên dương thỏa mãn tồn tại $a, b, c$ nguyên dương sao cho 
+$$7^{n}=(a+b c)(b+a c).$$ 
+Chứng minh rằng $n$ là số chẵn.
+\loigiai{
+Với các số $n,a,b$ thỏa mãn đẳng thức đã cho, ta có thể đặt
+\[a+bc=7^p,\quad b+ac=7^q,\tag{1}\label{abcpq}\]
+trong đó $p,q$ là các số tự nhiên. Ta giả sử rằng $a\ge b,$ như thế $p\le q.$\\ Lấy tổng và hiệu theo vế trong (\ref{abcpq}) ta được
+\begin{align}
+    7^p\tron{7^{q-p}+1}&=(a+b)(c+1),\tag{2}\label{abcpq.2}\\
+    7^p\tron{7^{q-p}-1}&=(a-b)(c-1).\tag{3}\label{abcpq.3}
+\end{align}
+Hai số $c+1$ và $c-1$ có hiệu là $2,$ thế nên trong chúng phải có một số không là bội của $7.$
+\begin{enumerate}
+    \item Nếu $c+1$ không chia hết cho $7,$ từ (\ref{abcpq.2}) ta có $a+b$ chia hết cho $7^p,$ thế nên
+    $$a+b\ge 7^p=a+bc.$$
+    Chuyển vế và rút gọn, ta được $b(c-1)\le 0,$ kéo theo $c=1.$ Như thế thì
+    $$7^n=(a+bc)(b+ac)=(a+b)(b+a)=(a+b)^2.$$
+    Ta suy ra $n$ chẵn từ đây.
+    \item Nếu $c-1$ không chia hết cho $7,$ từ (\ref{abcpq.3}) ta có $a-b$ chia hết cho $7^p.$ Ta xét các trường hợp nhỏ hơn.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $a=b,$ ta có
+        $$7^n=(a+bc)(b+ac)=(b+bc)(b+bc)=(b+bc)^2.$$
+    Ta suy ra $n$ chẵn từ đây.       
+        \item \chu{Trường hợp 2.} Với $a>b,$ kết hợp với phép chia hết ở trên ta có
+        $$a-b\ge 7^q=a+bc.$$
+        Chuyển vế, ta được $b(c+1)\le 0,$ vô lí.
+    \end{itemize}
+\end{enumerate}
+Bài toán được chứng minh trong mọi trường hợp.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả bộ ba các số nguyên dương $(a,b,c)$ thỏa mãn $$\left(a^3+b\right)\left(a+b^3\right)=2^c.$$
+\nguon{Turkey Junior Balkan Mathematical Olympiad Team Selection Test 2014}
+\loigiai{
+Rõ ràng, $a^3+b$ và $a+b^3$ đều là lũy thừa cơ số $2.$ \\
+Ta đặt $2^x=a^3+b,\:2^y=a+b^3,$ với giả sử $x\ge y\ge 1.$ Lấy tổng và hiệu theo vế, ta được
+\begin{align*}
+    2^y\left(2^{x-y}+1\right)&=(a+b)\tron{a^2-ab+b^2+1},\tag{1}\label{turjeyjuni.1}\\
+2^y\left(2^{x-y}-1\right)&=(a-b)\tron{a^2+ab+b^2-1}.\tag{2}\label{turjeyjuni.2}
+\end{align*}
+
+Ta cũng không khó chỉ ra cả $a$ và $b$ đều lẻ. Tới đây, ta xét các trường hợp sau
+\begin{enumerate}
+    \item Nếu $x=y$ thì ta tìm được $(a,b,c)=(1,1,2).$
+    \item Nếu $x>y$ và $a\equiv b\pmod{4}$ thì $a\equiv b\equiv 1\pmod{4}$ hoặc $a\equiv b\equiv 3\pmod{4}.$ Khi ấy
+    $$a+b\equiv 2\pmod{4},\quad a^2-ab+b^2+1\equiv 2\pmod{4}.$$
+    Lập luận này kết hợp với (\ref{turjeyjuni.1}) cho ta $2^y=4$ hay $y=2.$ Ta có $a+b^3=4$ nên $(a,b)=(3,1),$ mâu thuẫn với điều kiện $a\equiv b\pmod{4}.$
+    \item Nếu $x>y$ và $a\not\equiv b\pmod{4}$ thì tương tự trường hợp vừa rồi, ta chỉ ra
+    $$a-b\equiv 2\pmod{4}.$$    
+    Lập luận này kết hợp với (\ref{luythuadayne.2}) cho ta $2\tron{a^2+ab+b^2-1}$ chia hết cho $2^y=a+b^3.$ Ta có
+    $$\tron{a+b^3}\mid 2b\tron{a^2+ab+b^2-1}=2\bigg[(ab-1)(a+b)+a+b^3\bigg].$$
+    Ta có $a+b^3$ là ước của $2(ab-1)(a+b),$ nhưng do $ab-1$ chia cho $4$ dư $2$ và $a+b^3$ là lũy thừa của $2$ nên $4(a+b)$ chia hết cho $a+b^3.$ Dựa trên so sánh
+    $$a+b^3\le 4(a+b)\le 4\tron{a+b^3},$$
+    ta sẽ đi xét các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $4(a+b)=a+b^3,$ ta có $a=\dfrac{b^3-4b}{3},$ và lúc này
+        $$2^y=b^3+a=b^3+\dfrac{b^3-4b}{3}=\dfrac{b(b-1)(b+1)}{3}.$$
+        Với việc tồn tại một cặp hai trong ba số $b,b-1,b+1$ là lũy thừa của $2,$ ta có $b\in\{1;2;3\}.$ Từ đây dễ dàng tìm ra $(a,b,c)=(5,3,2)$ là kết quả trong trường hợp này.
+        \item\chu{Trường hợp 2.} Nếu $4(a+b)=2\tron{a+b^3},$ ta có $a=b^3-2b,$ và lúc này  
+        $$2^y=b^3+a=b^3+b^3-2b=2b(b-1)(b+1).$$ 
+        Rõ ràng, không tồn tại số $b$ nào để cho cả $b,b-1$ và $b+1$ đều là lũy thừa của $3.$
+        \item\chu{Trường hợp 3.} Nếu $4(a+b)=3\tron{a+b^3},$ ta có $a=3b^3-4b,$ và lúc này  
+        $$2^y=b^3+a=4b^3-4b=4b(b-1)(b+1).$$ 
+        Rõ ràng, không tồn tại số $b$ nào để cho cả $b,b-1$ và $b+1$ đều là lũy thừa của $3.$     
+        \item\chu{Trường hợp 4.} Nếu $4(a+b)=4\tron{a+b^3},$ ta có $b=1.$ Ta không tìm ra $a,c$ từ đây.     
+    \end{itemize}
+\end{enumerate}
+Kết luận, tất cả các bộ $(a,b,c)$ thỏa mãn đề bài là $(1,1,2),(5,3,2)$ và $(3,5,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba số nguyên dương $(a,b,c)$ thỏa mãn \[\tron{a^5+b}\tron{a+b^5}=2^c.\]
+\loigiai{
+Không mất tính tổng quát, ta giả sử $a\ge b\ge 1.$ Điều này cho ta $a^5+b\ge a+b^5\ge 2.$\\
+Từ phương trình đã cho, ta suy ra $a,b$ cùng tính chẵn lẻ. Khi đó, tồn tại số nguyên dương $m\ge n$ thỏa mãn
+\[a^5+b=2^m,\qquad a+b^5=2^n.\tag{*}\label{1515115}\]
+Cộng theo vế hai phương trình trên, ta được
+$$a^5+b^5+a+b=2^m+2^n.$$
+Biến đổi tương đương cho ta
+\[\tron{a+b}\tron{a^4-a^3b+a^2b^2-ab^3+b^4+1}=2^n\tron{2^{m-n}+1}.\tag{**}\label{123333}\]
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $a,b$ cùng là số chẵn, ta có $a^4-a^3b+a^2b^2-ab^3+b^4+1$ là số lẻ.\\
+    Từ đây và (\ref{123333}), ta suy ra $2^n\mid (a+b).$ Lại có
+    $$0<a+b\le a+b^5=2^n.$$
+    Do đó $a+b=2^n$ hay $b=b^5.$ Điều này dẫn tới $b=1,$ mâu thuẫn với $b$ là số chẵn.
+    \item Với $a,b$ cùng là số lẻ, ta suy ra $a^4-a^3b+a^2b^2-ab^3+b^4+1$ chia $4$ dư $2.$\\
+    Từ đây và (\ref{123333}), ta suy ra $2^{n-1}\mid (a+b).$ Mặt khác, ta luôn có
+    $$0<a+b\le a+b^5=2^n.$$
+    Do đó $a+b=2^n$ hoặc $a+b=2^{n-1}.$ Ta xét tiếp tới các trường hợp nhỏ hơn sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $a+b=2^n,$ kết hợp với $a+b^5=2^n,$ ta có
+        $$a+b=a+b^5\Leftrightarrow b^5=b\Leftrightarrow b(b-1)(b+1)\tron{b^2+1}=0.$$
+        Do $b>0$ nên $b=1.$ Thế trở lại (\ref{1515115}) cho ta
+        $$a^5+1=2^m,\quad a+1=2^n.$$
+        Lấy thương theo vế hai phương trình, ta được
+        $$a^4-a^3+a^2-a+1=2^{m-n}.$$
+        Vì $a$ là số lẻ  nên $a^4-a^3+a^2-a+1=2^{m-n}$ là số lẻ. Kéo theo $m=n.$ Từ đó ta được 
+        $$a^5+1=a+1\Leftrightarrow a^5=a\Leftrightarrow a(a-1)(a+1)\tron{a^2+1}=0.$$
+        Do $a>0$ nên $a=1.$ Thay $a=b=1$ vào phương trình đã cho, ta tìm được $c=2.$
+        \item\chu{Trường hợp 2.} Với $a=b=2^{n-1},$ kết hợp với $a+b^5=2^n,$ ta có
+        $$b^5-b=2^n-2^{n-1}\Leftrightarrow b\tron{b^4-1}=2^{n-1}.$$
+        Ta có $b$ là luỹ thừa của $2.$ Do $b$ lẻ nên $b=1,$ nhưng khi đó $2^{n-1}=0,$ vô lí.
+    \end{itemize}
+\end{enumerate}
+Kết luận, có duy nhất bộ số nguyên dương thỏa mãn đề bài là $(a,b,c)=(1,1,2).$}
+\end{gbtt}
+
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[n^x+n^y=n^z.\]
+\loigiai{
+Không mất tính tổng quát, giả sử $x\le y.$ Rõ ràng $x\le y<z.$ Phương trình đã cho tương đương với
+\[1+n^{y-x}=n^{z-x}.\]
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $y-x>0,$ xét tính chia hết cho $n$ ở hai vế ta có $n=1.$ Thử lại, ta thấy vô lí.
+    \item Nếu $y=x,$ thế vào phương trình ta được $n^z=2,$ và khi đó $n=2,\, z=1.$
+\end{enumerate}
+Vậy tất cả các nghiệm của phương trình có dạng
+$$(n,x,y,z)=(2,k,k,k+1),$$ 
+trong đó $k$ là số tự nhiên tùy ý.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $x$ và $y$ khác nhau sao cho
+\[x^y=y^x.\]
+\loigiai{
+Trước hết, ta sẽ đi chứng minh bổ đề sau
+\begin{light}
+\chu{Bổ đề.} Cho các số nguyên dương $a,b,c,d$ thỏa mãn $a^c=b^d.$ \\Lúc này $c\le d$ khi và chỉ khi $a$ chia hết cho $b.$
+\end{light}
+\chu{Chứng minh.}\\ 
+\chu{Chiều thuận.} Nếu $a$ chia hết cho $b,$ ta lần lượt suy ra
+    $$a\ge b\Rightarrow a^c\ge b^c\Rightarrow b^d\ge b^c\Rightarrow d\ge c.$$
+\chu{Chiều đảo.} Nếu $c\le d,$ ta lần lượt suy ra
+$$b^c\mid b^d\Rightarrow b^c\mid a^c\Rightarrow b\mid a.$$
+Như vậy, bổ đề được chứng minh.\\
+\chu{Quay lại bài toán.}\\
+Trong bài toán này, không mất tổng quát, ta giả sử $x\ge y.$ Khi đó, theo bổ đề đã biết, $x$ chia hết cho $y.$ \\Đặt $x=ky,$ và phương trình đã cho trở thành
+$$(ky)^y=y^{ky}\Leftrightarrow (ky)^y=\tron{y^k}^y\Leftrightarrow ky=y^k\Leftrightarrow k=y^{k-1}.$$
+Bằng quy nạp, ta chứng minh được rằng
+$$y^{k-1}>k,\text{ với mọi }y\ge 2\text{ và }k\ge 3.$$
+Dựa vào lập luận trên, ta chỉ cần kiểm tra trực tiếp các cặp $(y,k)$ sau
+    $$(1,k),\ (2,1),\ (2,2),\ (2,3).$$
+Chỉ có các trường hợp $(y,k)=(1,1),(2,1),(2,2)$ là thỏa mãn $k=y^{k-1}.$ \\Thử lại, ta thu $(2,4)$ và $(4,2)$ là các cặp số thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+$$x^y=y^{x-y}.$$
+\nguon{Junior Balkan Mathematical Olympiad 1998}
+\loigiai{
+Từ bổ đề đã phát biểu ở bài toán trên, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $y\ge x-y$ hay $2y\ge x,$ ta có $y$ chia hết cho $x.$ Đặt $y=kx.$ Phương trình đã cho trở thành
+    $$x^{kx}=(kx)^{x-kx}\Leftrightarrow \tron{x^k}^x=\tron{(kx)^{1-k}}^x\Leftrightarrow x^k=(kx)^{1-k}.$$
+    Vế phải phương trình là số nguyên dương chỉ khi $k=1,$ và khi ấy $x=y.$ Thế trở lại phương trình, ta được $x^x=1.$ Trường hợp này cho ta $(x,y)=(1,1).$
+    \item Nếu $y\le x-y$ hay $2y\le x,$ ta có $x$ chia hết cho $y.$ Đặt $x=ly.$ Phương trình đã cho trở thành
+    $$\tron{ly}^y=y^{ly-y}\Leftrightarrow \tron{ly}^y=\tron{y^{l-1}}^y\Leftrightarrow ly=y^{l-1}\Leftrightarrow l=y^{l-2}.$$
+    Bằng quy nạp, ta chứng minh được rằng
+    $$y^{l-2}>l,\text{ với mọi }y\ge 2\text{ và }l\ge 5.$$
+    Dựa vào lập luận trên, ta chỉ cần kiểm tra trực tiếp các cặp $(y,l)$ sau
+    $$(1,l),\ (2,1),\ (2,2),\ (2,3), \ (2,4).$$
+    Chỉ có các trường hợp $(y,l)=(1,1),(2,4)$ là thỏa mãn $l=y^{l-2}.$ Thử lại, ta có $(x,y)=(8,2).$
+\end{enumerate}
+Như vậy, phương trình đã cho có hai nghiệm nguyên dương là $(1,1)$ và $(8,2).$}
+\end{gbtt}
+
+
+\begin{gbtt}
+Phương trình sau có bao nhiêu nghiệm nguyên dương?
+\[\tron{x^y-1}\tron{z^t-1}=2^{200}.\]
+\loigiai{
+Từ phương trình đã cho, ta suy ra $x,z$ không thể cùng chẵn. Ta đặt 
+$$x^y-1=2^m,\quad  z^t-1=2^n$$
+với $m,n$ là các số tự nhiên. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $x$ là số chẵn, ta có $2^m$ là số lẻ nên $m=0,$ từ đây ta suy ra $x=2,y=1.$\\
+    Ngoài ra, ta còn có $z^t-1=2^{200},$ kéo theo $z>1$ và $z$ lẻ số lẻ. 
+    \begin{itemize}
+        \item\chu{Trường hợp 1.1.} Với $t\ge 3$ là số lẻ, ta có 
+        $$z^t-1=\tron{z-1}\tron{z^{t-1}+\cdots+1}.$$
+        Dễ dàng chỉ ra $z^{t-1}+\cdots+1$ là số lẻ, vô lí.
+        \item\chu{Trường hợp 1.2.} Với $t$ chẵn, đặt $t=2a.$ Ta có
+        $$\tron{z^a-2^{100}}\tron{z+2^{100}}=1.$$
+        Ta suy ra $z^a-2^{100}=z+2^{100}=1,$ vô lí.
+        \item\chu{Trường hợp 1.3.} Với $t=1,$ ta nhận được $z=2^{200}+1.$
+    \end{itemize}
+    \item Nếu $z$ là số chẵn, ta làm tương tự trường hợp trên để nhận được
+    $$\tron{x,y,z,t}=\tron{2^{200}+1,1,2,1}$$
+    \item Nếu $x$ và $z$ là số lẻ, ta lại xét tiếp tới các trường hợp sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 3.1.} Nếu $y$ là số chẵn, ta có 
+        $$\tron{x^{y/2}-1}\tron{x^{y/2}+1}=2^m.$$
+        Ta suy ra cả $x^{y/2}-1$ và $x^{y/2}+1$ đều là lũy thừa của $2.$ Do đây là hai số chẵn liên tiếp nên
+        $$x^{y/2}-1=2,\quad x^{y/2}+1=4.$$
+        Từ đây ta có $x=3,y=2,$ thế trở lại thì ta có
+        $$z^t-1=2^{198}.$$
+        Đến đây, ta xử lí tương tự \chu{trường hợp 1.1} để chỉ ra $z=2^{198}+1$ và $t=1.$
+        \item \chu{Trường hợp 3.2.} Nếu $t$ là số chẵn, ta lập luận tương tự trường hợp trước để chỉ ra 
+        $$\tron{x,y,z,t}=\tron{2^{198}+1,1,3,2}.$$
+        \item \chu{Trường hợp 3.3.} Nếu $y$ và $t$ là số lẻ, ta xử lí tương tự \chu{trường hợp 1.1} để chỉ ra
+        $$\tron{x,y,z,t}=\tron{2^n+1,1,2^{200-n},1},$$
+        trong đó $n$ là số nguyên tùy ý thuộc $\{1;2;\ldots;199\}.$
+    \end{itemize}
+\end{enumerate}
+Như vậy, phương trình đã cho có $203$ nghiệm số nguyên dương.}
+\end{gbtt}
+
+\subsection{Phương pháp lựa chọn modulo}
+\subsubsection*{Ví dụ minh họa}
+\begin{bx}
+Giải phương trình nghiệm tự nhiên $2^x-5^y=1.$
+\loigiai{
+Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y).$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $x>1,$ ta có $2^x$ chia hết cho $4.$ Lúc này
+    $$5^y\equiv 2^x-1\equiv -1\pmod{4},$$
+    vô lí do $5^y=(4+1)^y\equiv 1\pmod{4}.$
+    \item Với $x=1,$ kiểm tra trực tiếp, ta tìm ra $y=0.$
+    \item Với $x=0,$ kiểm tra trực tiếp, ta không tìm được $y$ tự nhiên do lúc này $5^y=0.$
+\end{enumerate}
+Kết luận, $(x,y)=(1,0)$ là nghiệm tự nhiên duy nhất của phương trình đã cho.}
+\begin{luuy}
+Việc dự đoán được nghiệm $(x,y)=(1,0)$ trong bài toán này là vô cùng quan trọng. Dự đoán kể trên cho phép ta nghĩ đến việc sử dụng đồng dư thức $2^x\equiv 0\pmod{4}$ với $x>1$ để chứng minh rằng không tìm được $y$ ở trong trường hợp ấy.
+\end{luuy}
+\end{bx} 
+
+\begin{bx}
+Giải phương trình nghiệm tự nhiên $2^x+3=y^2.$
+\loigiai{
+Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $x \geq 2$ thì $2^x$ chia hết cho $4$, và vế trái chia $4$ dư $3$, còn  $y$ lẻ nên vế phải chia $4$ dư $1$, mâu thuẫn.
+    \item Nếu $x=1$ thì $y^2=5,$ kéo theo $y$ vô tỉ, mâu thuẫn.
+    \item Nếu $x=0,$ ta tìm được $y=2.$
+\end{enumerate}
+Kết luận, $(x,y)=(0,2)$ là nghiệm tự nhiên duy nhất của phương trình.}
+\end{bx}
+
+\begin{bx}\label{bai2mu}
+Giải phương trình nghiệm tự nhiên $3^x-2^y=1.$
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y)$.\\
+Với $y\le 1,$ bằng kiểm tra trực tiếp, ta tìm ra $(x,y)=(1,1).$\\
+Với $y>1,$ ta có $2^y$ chia hết cho $4.$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+	\item Nếu $x$ lẻ, ta đặt $x=2k+1.$ Phép đặt này cho ta 
+	$$3^x=3\cdot 9^k\equiv 3\pmod 4.$$ 
+	Căn cứ vào đây, ta suy ra $2^y=3^x-1\equiv 2\pmod 4,$ một điều vô lí.
+	\item Nếu $x$ chẵn, ta đặt $x=2k.$ Phép đặt này cho ta  $$2^y=\left(3^k-1\right)\left(3^k+1\right).$$ 
+    Nhờ vào biến đổi trên, ta nhận thấy cả $3^k-1$ và $3^k+1$ đều là lũy thừa số mũ tự nhiên của $2.$ Ta đặt
+    $$3^k-1=2^u,\quad 3^k+1=2^v,$$
+    trong đó $0\le u<v$ và $u+v=y.$ Lấy hiệu theo vế, ta thu được
+    $$2=2^v-2^u=2^u\tron{2^{v-u}-1}.$$ 
+    So sánh số mũ của $2$ ở các vế, ta tìm ra $u=1,$ kéo theo $k=1,y=3$ và $x=2.$
+\end{enumerate}
+Như vậy, phương trình đã cho có hai nghiệm là $(1,1)$ và $(2,3).$}
+\begin{luuy}
+\begin{enumerate}
+    \item Việc chứng minh $x$ là số chẵn phía trên cho phép ta tạo ra các nhân tử $3^k-1$ và $3^k+1,$ để từ đó tiến hành xét hiệu hai vế. Loạt bài toán dưới đây là một vài ví dụ điển hình.
+    \item Ngoài cách xét hiệu hai vế sau bước đặt
+        $$3^k-1=2^u,\quad 3^k+1=2^v,$$
+    chúng ta còn có thể tiến hành bài toán bằng cách khác. Cụ thể, hai số chẵn $3^k-1$ và $3^k+1$ không thể cùng chia hết cho $4,$ thế nên một trong hai số ấy bằng $2.$ Lần lượt xét các trường hợp $3^k-1=2$ và $3^k+1=2,$ ta sẽ chỉ ra $k,x,y$ thỏa yêu cầu.
+\end{enumerate}
+\end{luuy}
+\end{bx}
+
+\begin{bx} \label{bai3mu}
+Giải phương trình nghiệm tự nhiên $3^x+4^y=5^z.$
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y,z)$. Ta chia bài toán thành các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $x=0,$ phương trình đã cho trở thành 
+    \[1+4^y=5^z.\tag{*}\label{3,4,5,chau}\]
+    Ta xét tới các trường hợp nhỏ hơn sau.
+    \begin{itemize}
+        \item Với $y=0$ hoặc $y=1,$ bằng kiểm tra trực tiếp, ta tìm được $z=1$ khi $y=1.$
+        \item Với $y>1$, khi đó $4^y$ chia hết cho $8.$ Lấy đồng dư modulo $8$ hai vế của (\ref{3,4,5,chau}), ta được
+        $$1\equiv 5^z\pmod{8}.$$
+        Kết quả quen thuộc ở đây cho ta $z$ là số chẵn. Ta đặt $z=2k.$ Lúc này
+        $$1+4^y=5^{2k}\Leftrightarrow \left(5^k-2^y\right)\left(5^k+2^y\right)=1.$$
+        Bắt buộc, $5^k-2^y=5^k+2^y=1.$ Đây là điều không thể nào xảy ra.
+    \end{itemize}
+    \item Với $x\ge 0$ khi đó $3^x$ chia hết cho 3. Lấy đồng dư theo modulo $3$ hai vế phương trình đã cho, ta được
+    $$5^z\equiv 3^x+4^y\equiv 1+0\equiv 1\pmod 3.$$ 
+    Do đó, $z$ là số chẵn. Ta đặt $z=2k.$ Phương trình đã cho trở thành $$3^x=5^{2k}-4^y\Leftrightarrow 3^x=\left(5^k-2^y\right)\left(5^k+2^y\right).$$
+    Cả $5^k-2^y$ và $5^k+2^y$ đều lừa lũy thừa số mũ tự nhiên của $3.$ Chính vì thế, ta có thể đặt
+    $$5^k-2^y=3^u,\quad 5^k+2^y=3^v,$$
+    trong đó $0\le u<v$ và $u+v=x.$ Lấy hiệu theo vế, ta được
+    $$2^{y+1}=3^v-3^u=3^u\tron{3^{v-u}-1}.$$
+    So sánh số mũ của $3$ ở hai vế, ta chỉ ra $u=0,$ và lúc này
+    $$2^{y+1}=3^v-1.$$
+    Theo như lời giải của \chu{ví dụ \ref{bai2mu}}, ta có $v=1,y=0$ hoặc $v=2,y=2.$ 
+\begin{itemize}
+	\item Với $v=1$ và $y=0$, ta có $5^k=3^v-2^y=2$, mâu thuẫn.
+	\item Với $v=2$ và $y=2$, ta có $5^k=5$ nên $k=1$. Ta tìm ra $(x,y,z)=(2,2,2)$.
+\end{itemize}
+\end{enumerate}
+Như vậy, phương trình đã cho có hai nghiệm tự nhiên là $(0,1,1),(2,2,2).$}
+\end{bx}
+
+\subsubsection*{Bài tập tự luyện}
+\begin{btt}
+Giải phương trình nghiệm tự nhiên \[9^x+1=2^y.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên \[5\cdot 3^x+11=4^y.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số tự nhiên $(x,y)$ thỏa mãn $$5\cdot 3^x+11=2^y.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$2^x-7^y=1.$$
+\end{btt}
+
+\begin{btt}
+Tìm các số $x,y$ nguyên dương thỏa mãn $$3^x+29=2^y.$$
+\nguon{Chuyên Khoa học Tự nhiên 2021}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$5^x+48=y^2.$$ 
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên $$2^x-1=y^2.$$  
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số tự nhiên $x,y$ sao cho 
+\[x^{3}=1993 \cdot 3^{y}+2021.\]
+\nguon{Chuyên Toán Nghệ An 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $x,y,z$ thoả mãn
+\[3^x+5^y-2^z=\left(2z+3\right)^3.\]
+\nguon{Tạp chí Toán học và Tuổi trẻ số 510, tháng 12 năm 2019}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên 
+$$x^2y^5-2^x5^y=2015+4xy.$$
+\nguon{Saudi Arabia Mathematical Olympiad 2015}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ số nguyên $(a, b, c, d)$ sao cho
+\[a^{2}+35=5^{b}6^{c}7^{d}.\]
+\nguon{Đề thi chọn đội tuyển học sinh giỏi quốc gia 2017 $-$ 2018 Tỉnh Đắk Lắk}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$2^x-3^y=1.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$5^x-2^y=9.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$3^x-2^y=5.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$2^x-7^y=1.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên dương $\left ( m,n \right )$ thỏa mãn phương trình
+\[125\cdot 2^n-3^m=271.\]
+\nguon{Junior Balkan Mathematical Olympiad 2018 Shortlist}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$7^x+3^y=2^z.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$2^x+3^y=5^z.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$2^x+5^y=7^z.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$5^x+12^y=13^z.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y,z$ thỏa mãn $$3^x+2^y=1+2^z.$$
+\nguon{Chọn học sinh giỏi thành phố Hà Nội 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ số tự nhiên $(x,y,z)$ thỏa mãn $$2^x+3^y=z^2.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $m,n$ thỏa mãn
+\[10^n-6^m=4n^2.\]
+\nguon{Tigran Akopyan}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$2^x+7^y=z^3.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$2^xx^2=9y^2+6 y+16.$$
+\end{btt}
+
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[9^x+1=2^y.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y).$ Ta nhận thấy rằng
+$$2^y=9^x+1=(8+1)^x+1\equiv 1+1\equiv 2\pmod{8}.$$
+Chỉ có $y=1$ thỏa mãn đồng dư thức trên. \\
+Thế trở lại, ta kết luận $(x,y)=(0,1)$ là nghiệm tự nhiên của phương trình.}
+\end{gbtt} 
+
+\begin{gbtt}\label{bai1mu}
+Giải phương trình nghiệm tự nhiên 
+\[5\cdot 3^x+11=4^y.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y).$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item  Với $x>0$, ta có $3^x$ chia hết cho $3.$ Lúc này 
+    $$4^y\equiv 11+5\cdot3^x\equiv 11\equiv 2\pmod{3},$$
+    vô lí do $4^y=(3+1)^y\equiv 1\pmod{3}.$
+    \item Với $x=0,$ kiểm tra trực tiếp, ta tìm ra $y=2.$    
+\end{enumerate}
+Kết luận, $(x,y)=(0,2)$ là nghiệm tự nhiên duy nhất của phương trình đã cho.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số tự nhiên $(x,y)$ thỏa mãn  \[5\cdot 3^x+11=2^y.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y).$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $ y$ lẻ, đặt $y=2k+1,$ ở đây $k$ là số nguyên dương. Ta có
+    \[2^y=2^{2k+1}=2\cdot 4^k\equiv \pm 2\pmod 5.\]
+    Tuy nhiên, do $\ddu{5\cdot 3^x+11}{1}{5}$ nên ta suy ra $\ddu{1}{\pm2}{5},$ một điều vô lí.
+    \item Nếu $y$ chẵn, áp dụng \chu{bài \ref{bai1mu}}, ta tìm được ta tìm được $x=0,z=2$, và thế thì $y=4.$
+\end{enumerate}
+Kết luận, $(x,y)=(0,4)$ là nghiệm tự nhiên duy nhất của phương trình đã cho.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[2^x-7^y=1.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y).$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $x\ge 4$, ta có $2^x$ chia hết cho $16.$
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $y$ chẵn, ta đặt $y=2k.$ Phép đặt này cho ta $$7^y+1=7^{2k}+1=49^k+1\equiv 2\pmod{16}.$$ 
+        Căn cứ vào đây, ta suy ra $0\equiv 2^x\equiv 7^y+1\equiv 2\pmod{16},$ một điều vô lí.
+        \item\chu{Trường hợp 2.} Nếu $y$ lẻ, ta đặt $y=2k+1.$ Phép đặt này cho ta $$7^y+1=7^{2k+1}+1=7\cdot49^k+1\equiv 8\pmod{16}.$$ 
+        Căn cứ vào đây, ta suy ra $0\equiv 2^x\equiv 7^y+1\equiv 8\pmod{16},$ một điều vô lí.
+    \end{itemize}
+    \item Với $x\in\{0;1;2;3\},$ bằng kiểm tra trực tiếp, ta tìm ra $y=1$ khi $x=3$ và $y=0$ khi $x=1.$
+\end{enumerate}
+Như vậy, phương trình đã cho có hai nghiệm tự nhiên là $(1,0)$ và $(3,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số $x,y$ nguyên dương thỏa mãn  \[3^x+29=2^y.\]
+\nguon{Chuyên Khoa học Tự nhiên 2021}
+\loigiai{
+Giả sử tồn tại các số nguyên dương $x,y$ thỏa mãn yêu cầu bài toán.\\
+    Với $x=1,$ kiểm tra trực tiếp, ta nhận được $y=5.$ Với $x\ge 2,$ ta có
+    $$3^x+29\equiv 2\pmod{9}\Rightarrow 2^y\equiv 2\pmod{9}.$$
+    Xét các số dư khi chia cho $6$ của $y,$ ta nhận được $y\equiv 1\pmod{6}.$ \\Bằng cách đặt $y=6z+1$ (trong đó $z$ là số tự nhiên), ta chỉ ra
+    $$2^y=2^{6z+1}=2\cdot64^z\equiv 2\pmod{7}.$$
+    Căn cứ vào đẳng thức $3^x+29=2^y,$ ta tiếp tục suy ra
+    $$3^x+29\equiv 2\pmod{7}\Rightarrow 3^x\equiv 1\pmod{7}.$$
+    Xét các số dư khi chia cho $6$ của $x,$ ta nhận được $x\equiv 0\pmod{6}.$ \\Tiếp tục đặt $x=6t$ (trong đó $t$ là số tự nhiên), ta chỉ ra 
+    $$3^x+29=3^{6y}+29=729^t+29\equiv 6\pmod{8}.$$
+    Ta được $2^y\equiv6\pmod{8}$ từ đây, là điều không thể xảy ra. \\
+    Kết luận, $(x,y)=(1,5)$ là cặp số nguyên dương duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên  \[5^x+48=y^2.\]
+\loigiai{
+Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $x \geq 1$ thì $5^x+48$ chia cho $5$ được dư là $3,$ trong khi đó $y^2\equiv 0,1,4\pmod{5},$ mâu thuẫn.
+    \item Nếu $x=0,$ ta tìm được $y=7.$
+\end{enumerate}
+Kết luận, $(x,y)=(0,7)$ là nghiệm tự nhiên duy nhất của phương trình.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên \[2^x-1=y^2.\]
+\loigiai{
+Nếu như $x\le -1,$ ta có $y^2=2^x-1$ không phải là số nguyên, do
+$$-1<2^x-1\le 2^{-1}-1=-\dfrac{1}{2}.$$
+Nếu như $x$ là số tự nhiên, ta xét các trường hợp sau đây
+\begin{enumerate}
+    \item Nếu $x\ge 3$ thì $2^x-1$ chia cho $8$ dư $7,$ nhưng $y^2$ khi chia cho $8$ chỉ có thể dư $0,1,4,$ mâu thuẫn.
+    \item Nếu $x=2,$ ta tìm được $y=\pm \sqrt{3}$ không là số nguyên.
+    \item Nếu $x=1,$ ta tìm được $y=\pm 1.$
+    \item Nếu $x=0,$ ta tìm được $y=0.$
+\end{enumerate}
+Kết luận, phương trình đã cho có ba nghiệm nguyên là $(0,0),\ (1,-1)$ và $(1,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số tự nhiên $x,y$ sao cho 
+\[x^{3}=1993 \cdot 3^{y}+2021.\]
+\nguon{Chuyên Toán Nghệ An 2021}
+\loigiai{
+ Dựa vào tính chất đã biết $x^3\equiv 0,1,8 \pmod{9},$ ta có các đánh giá
+    $$1993\cdot 3^y+2021 \equiv 0,1,8 \pmod{9}\Rightarrow 4\cdot 3^y\equiv 3,4,5 \pmod{9}.$$
+    Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $4\cdot 3^y\equiv 3\pmod{9},$ ta có $y=1.$ Thay ngược lại, ta tìm ra $x=20.$
+    \item Nếu $4\cdot 3^y\equiv 4\pmod{9},$ ta có $y=0.$ Thay ngược lại, ta tìm ra $x=\sqrt[3]{4041}$ không là số nguyên.     
+    \item Nếu $4\cdot 3^y\equiv 5\pmod{9},$ ta không tìm được $y$ nguyên dương thỏa mãn.  
+\end{enumerate}
+Như vậy, cặp số tự nhiên $(x,y)$ duy nhất thỏa mãn là $(x,y) =(20,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $x,y,z$ thoả mãn
+\[3^x+5^y-2^z=\left(2z+3\right)^3.\]
+\nguon{Tạp chí Toán học và Tuổi trẻ số 510, tháng 12 năm 2019}
+\loigiai{
+Ta thấy $3^x,$ $5^y$ và $2z+3$ đều là những số nguyên lẻ, do đó 
+$$2^z=3^x+5^y-(2z+3)^3$$
+là số lẻ, và ta suy ra $z=0.$ Thay trở lại phương trình, ta có
+$$3^x+5^y=28.$$
+Ta có $5^y<28,$ hay là $y\le 2.$ Xét ba trường hợp sau.
+		\begin{enumerate}
+			\item Nếu $y=0$ thì $5^{y}=1$ và $3^{x}=27,$ suy ra $x=3.$
+			\item Nếu $y=1$ thì $5^{y}=5$ và $3^{x}=23,$ không có số tự nhiên $x$ nào thỏa mãn.
+			\item Nếu $y=2$ thì $5^{y}=25$ và $3^{x}=3,$ suy ra $x=1.$
+		\end{enumerate}
+Vậy có hai bộ số tự nhiên $(x,y,z)$ thỏa mãn yêu cầu bài toán là $(3,0,0)$ và $(1,2,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên 
+$$x^2y^5-2^x5^y=2015+4xy.$$
+\nguon{Saudi Arabia Mathematical Olympiad 2015}
+\loigiai{Nếu $x<0$ hoặc $y<0$ thì $x^2y^5-2015-4xy$ nguyên nhưng $2^x5^y$ không là số nguyên do
+$$0<2^x5^y\le \dfrac{1}{2}\cdot\dfrac{1}{5}=\dfrac{1}{10}.$$
+Nếu $x=0$ hoặc $y=0,$ phương trình cũng không có nghiệm. Vì thế nên $x, y$ là các số nguyên dương. Trước hết, ta có một vài nhận xét sau
+\begin{enumerate}
+    \item[i,] Vì $2^x5^y+2015+4xy$ là một số nguyên lẻ nên $x, y$ phải là các số nguyên lẻ.
+    \item[ii,] Vì khi lấy modulo $5$ hai vế phương trình đã cho, ta có
+    $$x^2y\equiv 4xy \pmod{5}$$
+    nên $x \equiv 0,4\pmod{5}$ hoặc $y \equiv 0\pmod{5}.$
+    \item[iii,] Vì khi lấy modulo $8$ hai vế phương trình đã cho, ta có
+    $$y-2^{x} \cdot 5 \equiv-1+4\Leftrightarrow y \equiv 5\left(2^{x}-1\right)\pmod 8 .$$
+    nên có hai trường hợp là $x=1$ và $y \geq 5$ hoặc $x \geq 3$ và $y \equiv 3\pmod 8.$
+\end{enumerate}
+Ta sẽ xem xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $x=1$ và $y \geq 5$ thì phương trình trở thành 
+    $$y^{5}-2 \cdot 5^{y}=2015+4y.$$ và phương trình này vô nghiệm vì vế trái âm mà vế phải dương. 
+    \\(Có thể chứng minh vế trái âm bằng phép quy nạp với $y \geq 5$).
+    \item Nếu $x=3$ thì $y \equiv 3 \pmod 8 .$ Kết hợp với nhận xét $y \equiv 0 \pmod 5,$ ta chỉ ra $y \geq 35$ và $9 \cdot y^{5}-8 \cdot 5^{y}$ là số nguyên âm nên phương trình vô nghiệm.
+    \item Nếu $x \geq 5$ và $y \neq 3$ thì $y \geq 5.$ Trong trường hợp này ta có $x^{2}<2^{x}$ và $y^{5} \leq 5^{y}$ (chứng  minh bằng phép quy nạp) vì thế nên $x^{2} y^{5}-2^{x} 5^{y}$ là số nguyên âm. Phương trình vô nghiệm.
+    \item Nếu $x \geq 7$ và $y=3$ thì vì $x \equiv 0,4\pmod 5$ nên $x \geq 9 .$ Do đó $$x^{2} \cdot 3^{5}-2^{x} 5^{3}<3^{5}\left(x^{2}-2^{x-2}\right)$$
+    là số nguyên âm. Phương trình đã cho vô nghiệm.
+    \item Nếu $x=5$ và $y=3,$ thế trở lại, ta thấy thỏa mãn.
+\end{enumerate}
+Vậy nghiệm nguyên $(x,y)$ duy nhất của phương trình là $(5,3).$}
+\begin{luuy}
+Ở trong bài toán trên, ta đã áp dụng một ý tưởng xuất hiện trong các bài trước, đó là sử dụng đồng dư dùng để chặn $x,y.$ Từ phương trình, ta dễ dàng quan sát được rằng phương trình vô nghiệm với $x,y$ đủ lớn, vì vậy phép chặn trên giúp ta giảm bớt số trường hợp cần xét. 
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ số nguyên $(a, b, c, d)$ sao cho
+\[a^{2}+35=5^{b}6^{c}7^{d}.\]
+\nguon{Đề thi chọn đội tuyển học sinh giỏi quốc gia 2017 $-$ 2018 Tỉnh Đắk Lắk}
+\loigiai{ 
+Giả sử tồn tại bộ số nguyên $(a,b,c,d)$ thỏa mãn yêu cầu. Vì $a^2+35$ là số nguyên nên
+$$5^b6^c7^d\in \mathbb{Z}.$$
+Trước hết, cả $b,c,d$ đều là số tự nhiên. Ta sẽ chứng minh rằng $b\le 1$ và $d\le 1.$ Thật vậy.
+\begin{enumerate}
+    \item[i,] Nếu $b \geq 2$ thì $25 \mid \left(a^{2}+35\right) \Rightarrow 5 \mid a \Rightarrow 25 \mid a^{2} \Rightarrow 25 \mid 35,$ vô lí.
+    \item[ii,] Nếu $d \geq 2$ thì $49 \mid \left(a^{2}+35\right) \Rightarrow 7 \mid a \Rightarrow 49 \mid a^{2}\Rightarrow 49 \mid 35,$ vô lí.
+\end{enumerate}
+Do đó $b, d \in\{0 ; 1\}.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $b=0$ và $d=1,$ thế vào phương trình ban đầu ta được
+    $$a^{2}+35=7\cdot 6^{c}.$$
+    Lấy đồng dư theo modulo $5$ hai vế, ta được
+    $$a^2+35\equiv 0,1,-1\pmod{5}, 7\cdot 6^c\equiv 2\pmod{5}.$$
+    Trường hợp này không xảy ra.
+    \item Nếu $b=1$ và $d=0,$ thế vào phương trình ban đầu ta được $$a^{2}+35=5\cdot 6^{c}.$$ 
+    Lấy đồng dư theo modulo $8$ hai vế, ta được
+    $$5\cdot 6^c=a^2+35\equiv 3,4,7\pmod{8}.$$
+    Nếu như $c\ge 3,$ đồng dư thức trên không xảy ra vì $5\cdot6^c$ chia hết cho $8.$ Vì thế $c\le 2.$ \\
+    Thử trực tiếp $c=0,1,2,$ ta không tìm được $a$ nguyên tương ứng.
+    \item Nếu $b=0$ và $d=0,$ thế vào phương trình ban đầu ta được
+    $$a^2+35=6^c.$$
+    Lấy đồng dư theo modulo $7$ hai vế, ta được
+    $$6^c\equiv -1,1\pmod{7}, a^2+35\equiv 0,1,2,4\pmod{7}.$$
+    Đối chiếu, ta chỉ ra $6^c\equiv 1\pmod{7}$ hay $c$ chẵn. Đặt $c=2k.$ Phương trình trở thành
+    $$a^2+35=6^{2k}\Leftrightarrow \left(6^{k}-|a|\right)\left(6^{k}+|a|\right)=35.$$
+    Do $0<6^k-|a|<6^k+|a|$ nên 
+    $$\heva{6^k-|a|&=5 \\ 6^k+|a|&=7}\text{  hoặc }\heva{6^k-|a|&=1 \\ 6^k+|a|&=35.}$$
+    Thử trực tiếp và thay trở lại, ta tìm ra $(a , b , c , d)=(\pm 1 , 0 , 2 , 0).$
+    \item Nếu $b=1$ và $d=1,$ thế vào phương trình ban đầu ta được \[a^{2}+35=35\cdot 6^{c}.\tag{**}\label{huydago}\]
+    Từ phương trình, ta suy ra $a$ chia hết cho $35.$ Đặt $a=35k.$ Phương trình (\ref{huydago}) trở thành
+    $$(35k)^2+35=35\cdot 6^{c}\Leftrightarrow 35k^2+1=6^c.$$
+    Lấy đồng dư theo modulo $7$ hai vế, ta được
+    $$6^c=35k^2+1\equiv 1\pmod{7}.$$
+    Như vậy $c$ chẵn. Đặt $c=2m,$ ta sẽ có
+    $$35k^2+1=36^m.$$
+    Lấy đồng dư theo modulo $8$ hai vế, ta được
+    $$36^m=35k^2+1\equiv 3k^2+1\equiv 1,4,5\pmod{8}.$$
+    Nếu như $m\ge 1$ thì $36^m$ chia hết cho $8,$ mâu thuẫn. Như vậy $m=1.$ Thế trở lại, ta tìm ra
+$$(a, b , c , d)=(0 , 1 , 0 , 1) , (\pm 35 , 1 , 2 , 1).$$
+\end{enumerate}
+Kết luận, có $5$ bộ $(a , b , c , d)$ thỏa mãn yêu cầu bài toán là
+$$(-1 , 0 , 2 , 0),\ (1 , 0 , 2 , 0),\ (0 , 1 , 0 , 1) ,\ (-35 , 1 , 2 , 1),\ (35 , 1 , 2 , 1).$$}
+\end{gbtt}
+
+\begin{gbtt}\label{bai4mu}
+Giải phương trình nghiệm nguyên dương \[2^x-3^y=1.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y)$.\\
+Lấy đồng dư theo modulo $3$ hai vế, ta thu được
+$$1\equiv 2^x-3^y\equiv (-1)^x\pmod{3}.$$
+Lập luận trên dẫn đến $x$ là số chẵn. Ta đặt $x=2k.$ Phép đặt này cho ta
+$$2^{2k}-1=3^y\Rightarrow \left(2^k-1\right)\left(2^k+1\right)=3^y.$$
+Nhờ vào biến đổi trên, cả $2^k-1$ và $2^k+1$ đều là lũy thừa số mũ tự nhiên của $3.$ Ta đặt
+    $$2^k-1=3^u,\quad 2^k+1=3^v,$$
+    trong đó $0\le u<v$ và $u+v=y.$ Lấy hiệu theo vế, ta thu được
+    $$2=3^v-3^u=3^u\tron{3^{v-u}-1}.$$ 
+So sánh số mũ của $3$ ở các vế, ta tìm ra $u=0,$ kéo theo $k=1,x=2$ và $y=1.$\\
+Như vậy, phương trình đã cho có duy nhất một nghiệm là $(x,y)=(2,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[5^x-2^y=9.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y)$.\\
+Với $y\le 2,$ bằng kiểm tra trực tiếp, ta thấy không thỏa mãn.\\
+Với $y\ge 3$, ta có $2^y$ chia hết cho $8.$
+\begin{enumerate}
+\item Nếu $x$ lẻ, ta đặt $x=2k+1.$ Khi đó, $1\equiv 5^x\equiv 5\cdot 9^k\equiv 5\pmod 8,$ mâu thuẫn.
+\item Nếu $x$ chẵn, ta đặt $x=2k.$ Khi đó, $$2^y=5^{2k}-9=\left(5^k-3\right)\left(5^k+3\right).$$ 
+Dựa vào đây, ta chỉ ra cả $5^k-3$ và $5^k+3$ đều là lũy thừa số mũ tự nhiên của $2.$ Ta đặt
+$$5^k-3=2^u,\quad 5^k+3=2^v,$$
+trong đó $0\le u<v$ và $u+v=y.$ Lấy hiệu theo vế, ta được
+$$6=2^v-2^u=2^u\tron{2^{v-u}-1}.$$
+So sánh số mũ của $2$ ở các vế, ta tìm ra $u=1.$ \\
+Với việc $u=1,$ ta tiếp tục nhận được $k=1,x=2,y=4.$
+\end{enumerate}
+Như vậy, phương trình đã cho có nghiệm duy nhất là $(x,y)=(2,4).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[3^x-2^y=5.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y)$.\\
+Với $y=1,$ ta không tìm được $x$ nguyên.\\
+Với $y>1,$ ta thực hiện bài toán theo các bước làm sau đây.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $x$ chẵn.\\
+    Do $y>1,$ ta có $2^y$ chia hết cho $4.$ Lấy đồng dư modulo $4$ hai vế phương trình ban đầu, ta được
+    $$3^x\equiv 1\pmod{4}\Rightarrow (-1)^x\equiv 1\pmod{4}.$$
+    Đồng dư thức trên cho ta biết $x$ là số chẵn.
+    \item Ta chứng minh $y$ chẵn.\\
+    Với việc $y>1,$ ta chỉ ra $x\ge 2.$ Lấy đồng dư modulo $3$ hai vế phương trình ban đầu, ta được
+    $$-2^y\equiv -1\pmod{3}\Rightarrow (-1)^y\equiv 1\pmod{3}.$$
+    Đồng dư thức trên cho ta biết $y$ là số chẵn.    
+\end{enumerate}
+Dựa vào hai chứng minh trên, ta có thể đặt $x=2u,y=2v,$ trong đó $u,v\in \mathbb{N}^*.$ Phương trình trở thành $$3^{2u}-2^{2v}=5\Leftrightarrow \left(3^u-2^v\right)\left(3^u+2^v\right)=5.$$ 
+Nhận xét được $0<3^u-2^v<3^u+2^v$ cho ta
+	$$3^u+2^v=5,\quad 3^u-2^v=1.$$
+Lần lượt lấy tổng và hiệu hai vế, ta chỉ ra $3^u=3,2^v=2,$ thế nên $u=v=1$, và $x=y=2.$\\
+Như vậy, phương trình đã cho có nghiệm nguyên dương duy nhất là $(x,y)=(2,2).$}
+\begin{luuy}
+Do $5$ chưa phải số chính phương, bài toán này không thể được hoàn thành nếu như chưa chứng minh được $y$ là số chẵn. Hướng đi chứng minh cả $x$ và $y$ là số chẵn này mở ra các cách làm mới cho loạt bài tập phương trình chứa ẩn ở mũ.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[2^x-7^y=1.\]
+\loigiai{
+Với $y=0,$ ta tìm ra $x=1.$ Với $y\ge 1,$ ta có $7^y$ chia hết cho $7.$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $x$ chia cho $3$ dư $1,$ ta đặt $x=3z+1.$\\ Lấy đồng dư theo modulo $7$ hai vế phương trình đã cho, ta được
+    $$2^{3z+1}\equiv 1\pmod{7}\Rightarrow 2\cdot8^z\equiv 1\pmod{7}\Rightarrow 2\equiv1 \pmod{7},$$
+    một điều không thể xảy ra.
+    \item Nếu $x$ chia cho $3$ dư $2,$ ta đặt $x=3z+2.$\\ Lấy đồng dư theo modulo $7$ hai vế phương trình đã cho, ta được
+    $$2^{3z+2}\equiv 1\pmod{7}\Rightarrow 4\cdot8^z\equiv 1\pmod{7}\Rightarrow 4\equiv1 \pmod{7},$$
+    một điều không thể xảy ra.
+    \item Nếu $x$ chia hết cho $3,$ ta đặt $x=3z.$ Phép đặt này cho ta
+$$2^{3z}-7^y=1\Rightarrow \tron{2^z-1}\tron{2^{2z}+2^z+1}=7^y.$$
+Lập luận trên chứng tỏ cả $2^z-1$ và $2^{2z}+2^z+1$ đều là lũy thừa của $7.$\\ Tiếp tục đặt $2^z-1=7^t,$ ta nhận thấy rằng
+$$2^{2z}+2^z+1=\tron{7^t+1}^2+\tron{7^t+1}+1=7^{2t}+3\cdot7^t+3.$$
+Số kể trên không thể chia hết cho $7$ nếu như $t\ge 1.$ Vì thế, nếu $2^{2z}+2^z+1$ là lũy thừa của $7,$ bắt buộc $t=0.$ Việc tìm ra $t$ này kéo theo $x=3,y=1.$
+\end{enumerate}
+Kết luận, phương trình đã cho có $2$ nghiệm tự nhiên $(x,y)$ là $(1,0)$ và $(3,1).$}
+\begin{luuy}
+Ngoài cách thế $2^z=7^t+1$ vào biểu thức $2^{2z}+2^z+1,$ độc giả còn có thể tiến hành bài toán theo cách xét ước chung lớn nhất của $2^z-1$ và $2^{2z}+2^z+1.$ Cách làm này sẽ được thể hiện ở một bài toán trong cùng tiểu mục phương trình chứa ẩn ở mũ.
+\end{luuy}
+\end{gbtt}
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên dương $\left ( m,n \right )$ thỏa mãn phương trình
+\[125\cdot 2^n-3^m=271.\]
+\nguon{Junior Balkan Mathematical Olympiad 2018 Shortlist}
+\loigiai{
+Trước tiên, ta xem xét phương trình trong modulo $5$ thì thu được
+\[3^m\equiv -1\pmod{5},\]
+vì thế $m=4k+2$, trong đó $k$ là một số nguyên dương nào đó.\\
+Tiếp theo, ta xét phương trình trong modulo $7$ thì thu được
+\[ 2^n+2^{2k+1}\equiv 2\pmod{7}.\]
+Đồng dư thức $2^s\equiv 1,2,4\pmod{7}$, tương ứng với $s\equiv 0,1,2\pmod{3}$. Do đó ta phải có 
+$$3\mid n,\quad 3\mid (2k+1).$$
+Đặt $m=3x,n=3y.$ Thế vào phương trình ban đầu ta được
+\[5^3\cdot 2^{3x}-3^{3y}=271.\]
+Phương trình bên trên tương đương với
+\[\left ( 5\cdot 2^x-3^y \right )\left ( 25\cdot 2^{2x}+5\cdot 2^x\cdot 3^y+3^{2y} \right )=271.\]
+Điều này dẫn đến $25\cdot 2^{2x}+5\cdot 2^x\cdot 3^y+3^{2y}\leqslant 271$, và do đó $25\cdot 2^{2x}\leqslant 271$, hay $x<2$, nghĩa là $x=1$ do $x$ là số nguyên dương. Thay trở lại, ta thu được $y=2$. Do đó ta suy ra phương trình chỉ có nghiệm duy nhất là $\left ( m,n \right )=\left ( 6,3 \right )$.}
+\end{gbtt}
+\begin{gbtt} 
+Giải phương trình nghiệm nguyên dương \[7^x+3^y=2^z.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z).$\\
+Để có thể tạo ra các nhân tử, ta sẽ chứng minh rằng $y,z$ là các số chẵn.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $y$ chẵn. \\ Ta nhận xét được $2^z\ge 7+3=10,$ nên là $z\ge 4.$ \\
+    Tiếp theo, ta xét bảng đồng dư của $7^x$ và $3^y$ theo modulo $8$ sau
+         \begin{center} \begin{tabular}{c|c|c|c|c}
+            $x$ & lẻ & lẻ & chẵn & chẵn \\
+            \hline
+            $7^x$ & $7$ & $7$ & $1$ & $1$\\
+            \hline
+            $y$ & lẻ & chẵn & lẻ & chẵn \\
+            \hline
+            $3^y$ & $3$ & $1$ & $3$ & $1$\\
+            \hline
+            $7^x+3^y$ & $2$ & $0$ & $4$ & $2$
+            \end{tabular}
+        \end{center}
+    Do $7^x+3^y=2^z$ chia hết cho $8$ nên ta được $x$ lẻ, $y$ chẵn từ bảng trên.
+    \item Ta chứng minh $z$ chẵn. \\ 
+    Xét đồng dư thức
+    $2^z\equiv 7^x+3^y\equiv 1 \pmod{3}.$ Đồng dư thức trên, rõ ràng, cho ta $z$ chẵn.
+\end{enumerate}
+Bằng các chứng minh trên, ta có thể đặt $y=2u,z=2v,$ với $u$ và $v$ nguyên dương. Phương trình trở thành
+$$7^{x}+3^{2u}=2^{2v}\Leftrightarrow 7^x=\tron{2^v-3^u}\tron{2^v+3^u}.$$
+Cả $2^v-3^y$ và $2^v+3^u$ đều là lũy thừa cơ số $7.$ Chính vì thế, ta có thể đặt $$2^v-3^u=7^m,\qquad 2^v+3^u=7^n,$$ 
+trong đó $0\le m<n$ và $m+n=x.$ Lấy hiệu theo vế, ta được
+$$2.3^u=7^n-7^m=7^m\tron{7^{n-m}-1}.$$
+Vế trái không thể là bội của $7,$ chứng tỏ $m=0.$ Từ đây, ta suy ra
+    $$2^v-3^u=1.$$
+Nghiệm nguyên dương $(v,u)=(2,1)$ ở phương trình trên là kết quả đã xuất hiện trong \chu{bài \ref{bai4mu}}. \\
+Kết luận, $(x,y,z)=(1,2,4)$ là nghiệm nguyên dương duy nhất của phương trình.}
+\end{gbtt} 
+
+\begin{gbtt}\label{phannguyen3}
+Giải phương trình nghiệm nguyên dương \[2^x+3^y=5^z.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z)$.\\
+Ta có $2^x\equiv 5^z\equiv 2^z\pmod 3$, do vậy $x$ và $z$ cùng tính chẵn lẻ. Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $x$ và $z$ cùng chẵn, ta đặt $x=2x'$. Phương trình đã cho trở thành \[4^{x'}+3^y=5^z.\] 
+    Theo như \chu{ví dụ \ref{bai3mu}}, ta tìm được $x'=y=z=2,$ thế nên $x=4,y=2,z=2.$
+    \item Nếu $x$ và $z$ cùng lẻ, ta xét tiếp tới các trường hợp nhỏ hơn sau.
+\begin{itemize}
+        \item\chu{Trường hợp 1.} Với $x\ge 3,$ ta có $2^x$ chia hết cho $8.$ Đồng thời, do $x$ lẻ nên $5^x\equiv 5\pmod{8}.$ lấy đồng dư theo modulo $8$ hai vế, ta được
+        $$3^y\equiv 5\pmod{8}.$$
+        Điều trên là không thể xảy ra với cả trường hợp $y$ chẵn và $y$ lẻ.
+        \item\chu{Trường hợp 2.} Với $x=1,$ phương trình đã cho trở thành
+        \[2+3^y=5^z.\tag{*}\label{2,3,5,chauu}\]
+        Lấy đồng dư theo modulo $5$ hai vế, ta được 
+        $$2+3^y\equiv 0\pmod{5}\Rightarrow 3^y\equiv 3\pmod{5}.$$
+        Ta nhận được $y$ lẻ, vì nếu $y$ chẵn thì $3^y=9^{\frac{y}{2}}\equiv -1,1\pmod{5}.$ 
+        \begin{itemize}
+            \item \chu{Khả năng 2.1.} Nếu $y=1,$ ta tìm ra $z=1.$
+            \item \chu{Khả năng 2.2.} Nếu $y\ge 3,$ ta có $3^y$ chia hết cho $9.$ Lấy đồng dư hai vế của (\ref{2,3,5,chauu}), ta được
+            $$2\equiv 5^z\pmod{9}.$$
+            Từ đây, bằng cách xét số dư của $z$ khi chia cho $6$ và để ý $\ddu{5^6}{1}{9}$, ta có $\ddu{z}{5}{6}.$ Mặt khác, do $\ddu{5^6}{1}{7}$ nên khi lấy đồng dư modulo $7$ hai vế của (\ref{2,3,5,chauu}), ta được
+            \[2\equiv 5^z-3^y\equiv 5^5-3^y\equiv 3-3^y\pmod 7.\] 
+            Ta suy ra $\ddu{3^y}{1}{7}$. Đến đây, ta lại xét số dư của $y$ khi chia cho $6$ với chú ý $3^6\equiv 1\pmod 7.$ Cách xét này cho ta biết $y$ chia hết cho $6,$ kéo theo $y$ là số chẵn, mâu thuẫn với nhận xét $y$ lẻ.
+        \end{itemize}
+\end{itemize}
+\end{enumerate}
+Kết luận, phương trình đã cho có $2$ nghiệm là $(4,2,2),(1,1,1).$}
+\begin{luuy}
+Việc trình bày vắn tắt ở \chu{trường hợp 2} trong phần lời giải trên là có cơ sở. Bạn đọc có thể tham khảo lời giải của câu số học trong đề \chu{chuyên Khoa học Tự nhiên 2021} để hiểu rõ hơn phương pháp.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}\label{phannguyen5/8}
+Giải phương trình nghiệm tự nhiên \[2^x+5^y=7^z.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y,z)$.
+\begin{enumerate}
+    \item Với $x=0,$ ta có $1+5^y=7^z.$
+    \begin{itemize}
+	    \item \chu{Trường hợp 1.1.} Nếu $y=0,$ ta không tìm được $z$ nguyên.
+	    \item \chu{Trường hợp 1.2.} Nếu $y>0$, lấy đồng dư theo modulo $5,$ ta có
+	    $$7^z\equiv 5^y+1\equiv 1\pmod 5.$$ Bắt buộc, $z$ là số chẵn. Đặt $z=2k,$ và phép đặt này cho ta \[5^y=7^{2k}-1=\left(7^k-1\right)\left(7^k+1\right).\]
+	    Cả $7^k-1$ và $7^k+1$ lúc này đều là lũy thừa số mũ tự nhiên của $5.$ Ta đặt
+		$$7^k-1=5^u,\quad 7^k+1=5^v.$$
+		Lấy hiệu theo vế tương tự các bài toán trước, ta chỉ ra điều vô lí trong trường hợp này.
+    \end{itemize}
+    \item Với $x=1,$ ta có $2+5^y=7^z.$	
+    \begin{itemize}
+	    \item\chu{Trường hợp 2.1.} Nếu $y\ge 2,$ ta chỉ ra $7^z\equiv 1,24,7,18\pmod{25},$ phụ thuộc vào tính chẵn lẻ của $y.$ Mặt khác, khi lấy đồng dư theo modulo $25$ ở $2+5^y=7^z,$ ta được
+	    $$7^y\equiv 2\pmod{5}.$$
+	    Các lập luận trên mâu thuẫn nhau.
+	    \item \chu{Trường hợp 2.2.} Nếu $y=1$, ta tìm được $z=1.$
+	    \item \chu{Trường hợp 2.3.} Nếu $y=0$, ta không tìm được $z$ nguyên.
+    \end{itemize}
+    \item Với $x\ge 2,$ ta có $7^z=5^y+2^x\equiv 1\pmod 4,$ kéo theo $z$ là số chẵn. Ta đặt $z=2z'.$
+    \begin{itemize}
+	    \item \chu{Trường hợp 3.1.} Với $y=0$, ta có $$2^x=\left(7^{z'}-1\right)\left(7^{z'}+1\right).$$ 
+	    Bằng cách chỉ ra các lũy thừa số mũ tự nhiên của $2$ rồi xét hiệu, ta không tìm ra được $x,z'$ nguyên trong trường hợp này.
+	    \item \chu{Trường hợp 3.2.} Với $y>0$, ta có 
+	    $$2^x\equiv 7^z\equiv 2^z\pmod 5.$$ Mặt khác, do $z$ là số chẵn nên $2^z\equiv -1,1\pmod{5},$ chứng tỏ $x$ cũng là số chẵn. \\
+	    Đặt $x=2x'$, và phép đặt này cho ta
+	    \[5^y=7^{2z'}-2^{2x'}=\left(7^{z'}-2^{x'}\right)\left(7^{z'}+2^{x'}\right).\]
+	     Bằng cách chỉ ra các lũy thừa số mũ tự nhiên của $5$ rồi xét hiệu, ta tìm được $7^{z'}-1=2^{x'}.$\\
+	     Tuy nhiên, $7^{z'}-1$ chia hết cho $3,$ và vì thế, $2^{x'}$ cũng chia hết cho $3,$ mâu thuẫn.
+\end{itemize}
+\end{enumerate}
+Kết luận, phương trình có duy nhất một nghiệm tự nhiên là $(x,y,z)=(1,1,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[5^x+12^y=13^z.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z).$\\ Ta có $5^x\equiv 13^z\equiv 1\pmod 3$, do vậy $x$ là số chẵn. Ta đặt $x=2x',$ với $x'$ là số nguyên dương.
+\begin{enumerate}
+	\item Nếu $y\ge 2$, ta có $12^y$ chia hết cho $8.$ Lấy đồng dư theo modulo $8$ hai vế, ta chỉ ra
+	$$5^z\equiv 13^z=5^x+12^y\equiv 1+0\equiv 1\pmod{8}.$$
+	Ta suy ra $z$ là số chẵn. Đặt $z=2z'$, và phép đặt này cho ta
+	$$13^z=169^{z'}\equiv -1,1\pmod{5}.$$
+	Đồng dư thức kể trên kết hợp với phương trình ban đầu cho ta
+	$$12^y\equiv -1,1\pmod{5}.$$
+	Do đó, $y$  cũng là số chẵn. Đặt $y=2y'$, và ta có 
+	\[5^x=13^{2z'}-12^{2y'}=\left(13^{z'}-12^{y'}\right)\left(13^{z'}+12^{y'}\right).\] 
+	Vì $\left(13^{z'}-12^{y'},13^{z'}+12^{y'}\right)=1$ nên $13^{z'}-12^{y'}=1$.
+	\begin{itemize}
+		\item \chu{Trường hợp 1.} Nếu $y'=1$, ta nhận được $z'=1,$ kéo theo $x=y=z=2.$
+		\item \chu{Trường hợp 2.} Nếu $y'>1$, ta nhận được $12^{y'}$ chia hết cho $8,$ thế nên 
+		$$13^{z'}\equiv 1\pmod{8}.$$
+		Đồng dư thức trên cho ta $z'$ là số chẵn. Tuy nhiên, khi $z'$ chẵn, ta có điều vô lí là $$(13+1)\mid\tron{ 13^{z'}-1}=12^{y'}\Rightarrow 7\mid 12^{y'}.$$
+	\end{itemize}
+\item Nếu $y=1$, ta có $5^x+12=13^z$, kéo theo $\ddu{13^z}{2}{5}$. Xét số dư của $z$ khi chia cho $4$ và để ý $\ddu{13^4}{1}{5}$, ta suy ra $z$ chia $4$ dư $3.$ Đặt $z=4k+3,$ và ta có
+\[	13\left(13^{4k+2}+1\right)=25\left(5^{2x'-2}+1\right).\]
+Bởi vì $(13,25)=1,$ biến đổi trên cho ta
+$$(-1)^{x'-1}\equiv 25^{x'-1}\equiv -1\pmod{13}.$$
+Dựa vào đồng dư thức trên, ta biết $x'$ là số chẵn. Tiếp tục đặt $x'=2m$ do $$\tron{13^2+1}\mid \tron{13^{4k+2}+1}$$ nên $13^{4k+2}+1$ chia hết cho $17,$ và thế thì
+\[5^{4m+2}+1\equiv 13^{4k+2}+1\equiv 0\pmod {17}\Rightarrow 8\cdot 13^m+1\equiv 0\pmod{17}.\] Bằng cách xét số dư của $m$ khi chia cho $4,$ ta thấy $8\cdot 13^m+1$ không chia hết cho $17,$ vô lí.
+\end{enumerate}
+Kết luận, phương trình đã cho có nghiệm duy nhất là $(x,y,z)=(2,2,2).$}
+\end{gbtt}
+%hello anh
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y,z$ thỏa mãn \[3^x+2^y=1+2^z.\]
+\nguon{Chọn học sinh giỏi thành phố Hà Nội 2021}
+\loigiai{Với $y=1,$ ta có bài toán sau đây.
+\begin{light}
+\begin{it}
+"Tìm tất cả các số nguyên dương $x,y,z$ thỏa mãn
+$7^x+3^y=2^z$".
+\end{it}
+\end{light}
+Bài toán cho ta kết quả $(x,y,z)=(1,1,2).$ Phần còn lại, ta tiến hành với $y\ge 2.$  \\
+Ta nhận thấy, do $3^{x}>1$ nên $2^{z}>2^{y}$, hay là $z>y\ge 2.$ Từ đây, ta đánh giá được
+$$3^x=2^z+1-2^y\equiv 1 \pmod{3}.$$
+Ta lập tức thu được $x$ chẵn. Bằng kiểm tra trực tiếp, ta nhận thấy $(x,y,z)=(2,3,4)$ thỏa mãn đề bài, thế nên ta nghĩ đến việc xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $y\ge 4,$ do $16$ là ước của cả $2^y$ và $2^z$ nên
+    $$3^x=2^z+1-2^y\equiv 1 \pmod{16}.$$
+    Do $x$ chẵn, $x$ chia $4$ có thể dư $2$ hoặc $4.$ Tuy nhiên, nếu $x=4m+2,$ ta sẽ có
+    $$3^{x}=3^{4m+2}=9\cdot 81^m \equiv 9 \pmod{16}.$$
+    Đồng dư thức này mâu thuẫn với việc $3^x\equiv 1\pmod{16},$ thế nên $x$ chia hết cho $4.$ \\
+    Đặt $x=4n,$ với $n$ nguyên dương. Ta có
+    $$2^y\left(2^{z-y}-1\right)=2^z-2^y=3^x-1=81^n-1\equiv 0 \pmod{5}.$$
+    Do $\left(2^y,5\right)=1$ nên ta suy ra $2^{z-y}\equiv 1 \pmod{5}$ từ đây. Ta đã biết $2^4\equiv 1\pmod{5},$ vì thế với $x-y \equiv a \pmod{4}$ và $2^{x-y}\equiv b \pmod{5},$ ta lập được bảng sau.
+         \begin{center}           \begin{tabular}{c|c|c|c|c}
+            $a$ & $0$ & $1$ & $2$ & $3$ \\
+            \hline
+            $b$ & $1$ & $2$ & $4$ & $8$
+        \end{tabular}
+        \end{center}
+    Bảng trên cho ta $4\mid (x-y),$ và như vậy, $3\mid 2^{x-y}-1=3^x-1.$\\ Điều này là không thể xảy ra. Trường hợp này bị loại.
+    \item Nếu $y=3,$ đặt $x=2t,$ và phép đặt này cho ta
+    $$3^{2t}=2^z-2^y+1=2^z-7.$$
+    Ta được $2^z\equiv 1\pmod{3},$ tức $z$ chẵn. Đặt $z=2a,$ ta thu được
+    $$\left(2^a-3^t\right)\left(2^a+3^t\right)=7\Rightarrow\heva{2^a-3^t&=1 \\ 2^a+3^t&=7} \Rightarrow \heva{t&=1 \\ a&=2.}$$
+    Thay ngược lại, ta tìm ra $x=2,z=4.$ 
+    \item Nếu $y=2,$ thế trở lại phương trình ban đầu, ta có
+    $$3^x+4=1+2^z \Rightarrow 3^x-3=2^z.$$
+    $2^z$ không thể chia hết cho $3,$ chứng tỏ không tồn tại $x,y,z$ trong trường hợp này.
+\end{enumerate}
+Như vậy tất cả các bộ số $(x,y,z)$ thỏa mãn đề bài là $(1,1,2)$ và $(2,3,4).$}
+\end{gbtt}
+
+\begin{gbtt}
+	Tìm tất cả các bộ số tự nhiên $(x,y,z)$ thỏa mãn \[2^x+3^y=z^2.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y,z)$.
+\begin{enumerate}
+    \item Nếu $y=0$, ta có $2^x=(z-1)(z+1).$ Lúc này, bạn đọc tự chỉ ra các lũy thừa của $2,$ lấy hiệu theo vế và tìm ra $x=z=3.$
+    \item Nếu $y>0$, ta có $z^2=2^x+3^y$ không chia hết cho 3 nên $z^2$ chia $3$ dư $1.$ Xét modulo $3$ hai vế, ta có
+    $$2^x\equiv 1\pmod{3}\Rightarrow (-1)^x\equiv 1\pmod{3},$$
+    thế nên $x$ là số chẵn. Đặt $x=2m,$ và phép đặt này cho ta
+    \[3^y=\left(z-2^m\right)\left(z+2^m\right).\]
+    Cả $z-2^m$ và $z+3^m$ đều là lũy thừa cơ số $3.$ Chính vì thế, ta có thể đặt 
+    $$z-2^m=3^u,\qquad z+2^m=3^v,$$ 
+    trong đó $0\le u<v$ và $u+v=y.$ Lấy hiệu theo vế, ta được
+    $$2^{m+1}=3^v-3^u=3^u\tron{3^{v-u}-1}.$$ 
+    So sánh số mũ của lũy thừa cơ số $2$ tại hai vế, ta chỉ ra $u=0,$ kéo theo $3^v-2^{m+1}=1$. \\
+    Theo như \chu{ví dụ \ref{bai2mu}}, ta nhận thấy $v=m+1=1$ hoặc $v=2,m+1=3.$
+\begin{itemize}
+	\item \chu{Trường hợp 1.} Với $v=m+1=1$, ta tìm ra $x=0,y=1,z=2.$
+	\item \chu{Trường hợp 2.} Với $v=2,m+1=3$, ta tìm ra $x=4,y=2,z=5.$
+\end{itemize}
+\end{enumerate}
+Như vậy, phương trình đã cho có $3$ nghiệm là $(3,0,3),(0,1,2),(4,2,5).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $m,n$ thỏa mãn
+    \[10^n-6^m=4n^2.\]
+\nguon{Tigran Akopyan}
+\loigiai{
+Giả sử tồn tại cặp $(m,n)$ thỏa yêu cầu. Nếu $n=1,$ ta có $m=1.$ Nếu $n>1,$ ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $n$ lẻ, lấy đồng dư modulo $8$ hai vế phương trình đã cho ta có
+    $$10^{n}-6^{m} \equiv-6^{m}\pmod 8,\quad 4 n^{2} \equiv 4\pmod 8.$$
+    Ta suy ra $-6^m\equiv 4\pmod{8},$ và như thế thì $m=2.$ Thế trở lại, ta có $10^n-4n^2=36,$ vô lí vì 
+    $$10^n-4n^2>36,\text{ với mọi }n\ge 3.$$
+    \item Nếu $n$ chẵn, ta đặt $n=2k.$ Phương trình đã cho trở thành
+    $$\left(10^{k}-4 k\right)\left(10^{k}+4 k\right)=6^{m}.$$
+    Với việc không tìm được $n$ khi $k=1,2,$ ta sẽ xét $k>2.$ Dễ thấy khi ấy $m\ge 4.$ Chia hai vế cho $16,$ phương trình bên trên tương đương
+    \[\left(2^{k-2} \cdot 5^{k}-k\right)\left(2^{k-2} \cdot 5^{k}+k\right)=2^{m-4} \cdot 3^{m}.\]
+    Nếu $k$ là số lẻ thì $m=4$, nhưng do $2^{k-2} \cdot 5^{k}+k \geq 2 \cdot 5^{3}+3>3^{4}$ nên dẫn đến mâu thuẫn. Do đó $k$ là số chẵn. Ta đặt $k=2^{\alpha} h$, trong đó $\alpha, h$ là các số nguyên dương và $h$ lẻ. 
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $\alpha \geq k-2$ thì $2^{k-2} \mid k$, nghĩa là $2^{k-2} \leq k$, từ đây ta tìm được các giá trị  $k$ thỏa mãn là $k=3,4.$ Thế trở lại, ta thấy mâu thuẫn.
+        \item \chu{Trường hợp 2.} Nếu $\alpha<k-2$ thì phương trình được viết lại thành
+        $$2^{2 \alpha}\left(2^{k-2-\alpha} \cdot 5^{k}-h\right)\left(2^{k-2-\alpha} \cdot 5^{k}+h\right)=2^{m-4} \cdot 3^{m}$$
+        và do tính duy nhất của phân tích ra thừa số nguyên tố nên ta có $2\alpha=m-4$, do đó từ quan hệ $k>\alpha+2$ thì ta thu được $n>2 \alpha+4=m$. Nhưng từ đánh giá này, ta thu được $$10^{n}=6^{m}+4 n^{2}<6^{n}+4 n^{2},$$ mâu thuẫn với điều kiện $n>1.$
+          \end{itemize}
+\end{enumerate}
+Kết luận, $(m,n)=(1,1)$ là cặp số duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[2^x+7^y=z^3.\]
+\loigiai{Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y,z)$.
+\begin{enumerate}
+    \item Nếu $y=0,$ phương trình đã cho trở thành
+    $$2^x=(z-1)\tron{z^2+z+1}.$$
+    Cả $z-1$ và $z^2+z+1$ đều là lũy thừa cơ số $2,$ và ngoài ra $z^2+z+1>z-1.$ Vì thế
+    $$\tron{z-1}\mid \tron{z^2+z+1}.$$
+    Bài toán quen thuộc này cho ta $z=2$ hoặc $z=4.$ Thử trực tiếp, không tìm được $x$ nguyên.
+    \item Nếu $y\ge 1,$ ta có $7^y$ chia hết cho $7.$ Vì thế
+    $$2^x\equiv z^3\pmod 7.$$
+    Do $z^3\equiv 0,1,-1\pmod{7}$ nên dễ thấy $x$ chia hết cho $3.$ Ta đặt $x=3k.$ Phép đặt này cho ta
+    \[7^y=\left(z-2^k\right)\left(z^2+2^kz+2^{2k}\right).\]
+    Cả $z-2^k$ và $z^2+2^kz+2^{2k}$ đều là lũy thừa của cơ số $7.$ Ta tiếp tục đặt	
+    $$z-2^k=7^u,\qquad z^2+2^kz+2^{2k}=7^v,$$
+    trong đó $0\le u<v$ và $u+v=y.$ 
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $u>0$, ta có $\ddu{z}{2^k}{7}$, thế nên là \[0\equiv z^2+2^kz+2^{2k}\equiv 3\cdot 2^{2k}\pmod 7,\]
+        một điều không thể xảy ra.
+        \item \chu{Trường hợp 2.} Nếu $u=0,$ ta có $z=2^k+1$. Thế vào $z^2+2^kz+2^{2k}=7^v,$ ta được
+        \[\left(2^k+1\right)^2+2^k\left(2^k+1\right)+2^{2k}=7^v\Rightarrow 3\left(4^k+2^k\right)=7^v-1.\]
+        Do $4^3\equiv 2^3\equiv 1\pmod 7$ nên từ đây ta dễ dàng suy ra $k$ chia hết cho $3,$ dẫn đến $3\left(4^k+2^k\right)$ chia hết cho $8.$ Lập luận này cho ta \[\ddu{7^v}{1}{8}.\] Với $\ddu{7^2}{1}{8}$, ta nhận xét được $v$ là số chẵn. Bây giờ, ta tiếp tục xét hai khả năng sau.
+        \begin{itemize}
+    \item \chu{Khả năng 1.} Với $k=0,$ ta tìm ra $(x,y,z)=(0,1,2).$
+	\item \chu{Khả năng 2.} Với $k$ là số nguyên dương chẵn, ta có $k$ chia hết cho $6.$ Đặt $k=6m,$ ta được
+	\[3\left(4^k+2^k\right)=3\left(2^{12m}+2^{6m}\right)\equiv 3(1+1)\equiv 6\pmod 9.\] 
+	Do đó $\ddu{7^v}{7}{9}$. Dựa theo chú ý $\ddu{7^3}{1}{9}$, ta suy ra $b\equiv 1\pmod 3$, nhưng do $v$ chẵn nên nên ta có thể đặt $v=6n+4.$ Các đồng dư thức
+	$$2^6\equiv 7^6\equiv -1\pmod{13},\quad \ddu{4^6}{1}{13}$$ 
+	cho ta một số kết quả
+	\begin{align*}
+	    3\left(4^k+2^k\right)&=3\left(4^{6m}+2^{6m}\right)\equiv 0,6\pmod{13},\\
+	    7^b-1&=7^{6n+4}-1\equiv 3,8\pmod{13}.
+	\end{align*}
+	Hai kết quả bên trên mâu thuẫn nhau.
+	\item \chu{Khả năng 3.} Với $k$ là số lẻ, ta đặt $k=6m+3$, $k$. Hoàn toàn tương tự \chu{khả năng 1}, ta chỉ ra $b$ chia hết cho $6.$ Đặt $b=6n,$ và phép đặt này cho ta
+	\begin{align*}
+	    3\left(4^k+2^k\right)&=3\left(4^{6m+3}+2^{6m+3}\right)\equiv 8,12\pmod{13},\\
+	    7^b-1&=7^{6n}-1\equiv 0,11\pmod{13}.
+	\end{align*}
+	Hai kết quả trên mâu thuẫn nhau.
+\end{itemize}
+\end{itemize}
+\end{enumerate} 
+Như vậy, phương trình đã cho có nghiệm tự nhiên duy nhất là $(x,y,z)=(0,1,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[2^xx^2=9y^2+6y+16.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y).$ Rõ ràng $x$ không chia hết cho $3.$ Lấy đồng dư theo modulo $3$ hai vế, ta được
+    $$2^xx^2\equiv (-1)^x\cdot1\equiv (-1)^x\pmod{3},\qquad 9y^2+6y+16\equiv 1\pmod{3}.$$
+    Căn cứ vào đây, ta suy ra $x$ phải là số chẵn. Bằng cách đặt $x=2z,$ phương trình đã cho trở thành
+    $$2^{2z}\cdot (2z)^2=(3y+1)^2+15\Leftrightarrow \left(2^{z+1}\cdot z-3y-1\right)\left(2^{z+1}\cdot z+3y+1\right)=15.$$
+    Ta nhận thấy rằng do $2^{z+1}\cdot z+3y+1>0$ nên $0<2^{z+1}\cdot z-3y-1<2^{z+1}\cdot z-3y-1.$ Nhận xét này giúp ta chia bài toán làm hai trường hợp.
+    \begin{enumerate}
+        \item Nếu $2^{z+1}\cdot z-3y-1=1$ và $2^{z+1}\cdot z+3y+1=15,$ lấy tổng và hiệu theo vế, ta được
+        $$2^{z+2}\cdot z=16,\qquad 6y+2=14.$$
+        Ta không tìm được $z$ từ đây, bởi vì nếu $z=0$ hoặc $z=1$ thì $2^{z+2}\cdot z<16,$ còn nếu $z\ge 2$ thì $$2^{z+2}\cdot z\ge 32>16.$$
+        \item Nếu $2^{z+1}\cdot z-3y-1=3$ và $2^{z+1}\cdot z+3y+1=5,$ bằng cách lấy tổng và hiệu theo vế tương tự, ta tìm ra $z=1$ và $y=0.$   
+    \end{enumerate}
+Kết luận, $(x,y)=(2,0)$ là nghiệm tự nhiên duy nhất của phương trình.}
+\end{gbtt}
+
+
+\subsection{Phương pháp kết hợp xét tính chia hết và xét modulo}
+
+\subsubsection*{Ví dụ minh họa}
+
+\begin{bx}
+Giải phương trình nghiệm tự nhiên $$5^x3^y=3z^2+2z-1.$$
+\nguon{Tạp chí Pi tháng 11 năm 2017}
+\loigiai{
+Biến đổi tương đương phương trình đã cho, ta được
+$$5^x3^y=3z^2+2z-1\Leftrightarrow5^x3^{y}=\tron{3z-1}\tron{z+1}.$$
+Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y,z).$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $y\ge1$, ta có $3\mid 5^x3^y=\tron{3z-1}\tron{z+1}$. Vì $\tron{3z-1,3}=1$ và $\tron{3z-1,z+3}=1$ nên 
+    $$3^y=z+1,\quad  5^x=3z-1.$$ 
+    Từ đây, ta thu được
+    $3^{y+1}=5^x+4.$ Lấy đồng dư theo modulo $5$ cả hai vế, ta có
+    $$3^{y+1}\equiv4\pmod{5}.$$
+    Bắt buộc, $y+1$ là số chẵn. Đặt $y+1=2k$ rồi thể trở lại, ta chỉ ra
+    $$3^{2k}=5^x+4\Leftrightarrow \tron{3^k-2}\tron{3^k+2}=5^x.$$
+    Biến đổi trên cho ta biết cả $3^k-2$ và $3^k+2$ đều là lũy thừa của $5.$ Tuy nhiên, hai số này không cùng chia hết cho $5,$ ép buộc một trong hai số ấy bằng $1.$ Ta nhận được $3^k-2=1,$ và ta lần lượt chỉ ra $k=1, x=1, y=2, z=2.$
+    \item Với $y=0,$ ta có $5^x=\tron{3z-1}\tron{z+1}$. Từ đây, ta suy ra $\tron{3z-1}, \tron{z+1}$ là các lũy thừa của $5$. Đặt 
+    $3z-1=5^a$, $z+1=5^b$ trong đó $a,b$ là số tự nhiên. Phép đặt này cho ta
+    $$3\cdot5^b=5^a+4.$$
+    Ta xét tiếp tới các trường hợp nhỏ hơn sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $b\ge1$, ta xét modulo $5$ cả hai vế và có
+        $$5^a+4\equiv0\pmod{5}\Rightarrow a=0\Rightarrow z=\dfrac{2}{3}.$$
+        $z$ lúc này không phải số nguyên, mâu thuẫn.
+        \item\chu{Trường hợp 2.} Với $b=0$, thế trở lại, ta được 
+        $3=5^b+4,$ mâu thuẫn.
+    \end{itemize}
+\end{enumerate}
+    Như vậy, phương trình đã cho có nghiệm tự nhiên duy nhất là $\tron{x,y,z}=\tron{1,2,2}.$} 
+\end{bx}
+
+\begin{bx}
+Giải phương trình nghiệm nguyên dương $$7^x=3\cdot2^y+1.$$
+\nguon{Chuyên Toán Hà Nam 2020}
+\loigiai{
+Với $y\le 2,$ ta tìm ra $x=1$ khi $y=2.$\\ Với $y\ge 3$, ta có $3\cdot 2^y$ chia hết cho $8$. Lấy đồng dư theo modulo $8$ hai vế phương trình ban đầu, ta có
+$$(-1)^x\equiv 7^x\equiv 3\cdot2^y+1 \equiv1\pmod{8}.$$
+Bắt buộc, $z$ là số chẵn. Ta đặt $z=2t,$ và phép đặt này cho ta
+\[3\cdot 2^y=\left(7^k-1\right)\left(7^k+1\right).\]
+Ta có các nhận xét
+\begin{enumerate}[i,]
+    \item $7^k-1$ và $7^k+1$ là hai số lẻ liên tiếp nên chúng không cùng chia hết cho $4.$
+    \item $7^k-1$ và $7^k+1$ có hiệu bằng $2$ nên chúng không cùng chia hết cho $3.$
+\end{enumerate}
+Các nhận xét trên cho phép ta xét các trường hợp sau.
+\begin{enumerate}
+        \item Với $7^k-1=6$ và $7^k+1=2^{y-1},$ ta tìm được $k=1,y=4,x=2.$
+        \item Với $7^k-1=3\cdot 2^{y-1},7^k+1=2,$  ta có $k=0,$ nhưng khi ấy $3\cdot 2^{y-1}=0,$ mâu thuẫn.
+        \item Với $7^k-1=2,7^k+1=3\cdot 2^{y-1},$ ta có $7^k=3,$ và $k$ không nguyên.
+        \item Với $7^k-1=2^{y-1},7^k+1=3\cdot 2,$ ta có $7^k=5,$ và $k$ không nguyên.
+\end{enumerate}
+Như vậy, phương trình đã cho có $2$ nghiệm nguyên dương là $(1,2)$ và $(2,4).$}
+\end{bx}
+
+\begin{bx}
+Giải phương trình nghiệm nguyên dương \[x!+1=5^y.\]
+\loigiai{
+Nếu $x\ge 5$ thì $x!$ chia hết cho $5$, do đó $5^y=x!+1$ chia $5$ dư $1$, vô lí. Nếu $x<5,$ ta lập bảng giá trị
+\begin{center}
+    \begin{tabular}{c|c|c|c|c}
+       $x$  & $4$ & $3$ & $2$ & $1$ \\
+       \hline
+        $5^y=x!+1$ & $25$ & $7$ & $3$ & $2$ \\
+       \hline
+       $y$ & $2$ & $\notin\mathbb{Z}$ & $\notin\mathbb{Z}$ & $\notin\mathbb{Z}$
+    \end{tabular}
+\end{center}
+Như vậy phương trình có nghiệm nguyên duy nhất là $(x,y)=(4,2).$}
+\end{bx}
+
+\subsubsection*{Bài tập tự luyện}
+
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$2^x5^y+25=z^2.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$2^x3^y+9=z^2.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$3^x7^y+8=z^3.$$
+\end{btt} 
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$5^x7^y+4=3^z.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$2^{x+1}3^y+5^z=7^t.$$
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $m,n,k,s$ thỏa mãn
+$$\tron{3^m-3^n}^2=2^k+2^s.$$
+Tìm giá trị lớn nhất của tích $mnks.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả nghiệm nguyên dương của phương trình $$x!+5=y^{z+1}.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$x!+5^y=7^z.$$
+\end{btt}
+
+\begin{btt}
+Tìm nghiệm nguyên dương của phương trình 
+\[1!+2!+\cdots+(x+1)!=y^{z+1}.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $p,q,r,s>1$ thỏa mãn
+$$p!+q!+r!=2^s.$$
+\nguon{Indian IMO Training Camp 2017}
+\end{btt}
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[2^x5^y+25=z^2.\]
+\loigiai{Phương trình đã cho tương đương với
+$$2^x5^y=(z-5)(z+5).$$
+Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z)$. Ta có một vài nhận xét sau đây.
+    \begin{enumerate}
+    \item[i,] $y\ge 2,$ bởi vì $z^2$ là số chính phương chia hết cho $25.$
+    \item[ii,] $x\ge 2,$ bởi vì nếu $x=1$ thì $2^x5^y+25\equiv 3\pmod{4}$ và không là số chính phương.    
+    \item[iii,] Hai số chẵn $z-5$ và $z+5$ không cùng chia hết cho $4.$
+    \item[iv,] Hai số $z-5$ và $z+5$ không cùng chia hết cho $25,$ nhưng cùng chia hết cho $5.$
+    \end{enumerate} 
+    Dựa vào các nhận xét này, ta tiếp tục chia bài toán thành các trường hợp nhỏ hơn.
+\begin{enumerate}
+    \item Với $z-5=2\cdot5^{y-1},z+5=5\cdot 2^{x-1},$ lấy hiệu theo vế, ta được
+        $$5\cdot2^{x-1}-2\cdot5^{y-1}=10\Leftrightarrow 2^{x-2}-5^{y-2}=1.$$
+        Bài toán này đã được giải quyết ở phần bài tập trước. Đáp số là $(x,y)=(3,2).$
+    \item Với $z-5=5\cdot2^{x-1},z+5=2\cdot 5^{y-1},$ lấy hiệu theo vế, ta được
+        $$5\cdot2^{x-1}-2\cdot5^{y-1}=-10\Leftrightarrow 2^{x-2}-5^{y-2}=-1.$$
+        Bài toán này đã được giải quyết ở phần bài tập trước. Đáp số là $(x,y)=(4,3).$   
+    \item Với $z-5=5\cdot2,z+5=2^{x-1}\cdot 5^{y-1},$ ta tìm ra $z=15,$ kéo theo $x=3,y=2.$
+    \item Với $z+5=5\cdot2,z-5=2^{x-1}\cdot 5^{y-1},$ ta tìm ra $z=5,$ mâu thuẫn.
+\end{enumerate}
+Kết luận, phương trình đã cho có các nghiệm nguyên dương là $(3,2,15),(4,3,45).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[2^x3^y+9=z^2.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z)$. Ta có $$(z-3)(z+3)=2^x3^y.$$
+Đặt $d=(z-3,z+3).$ Phép đặt này cho ta $d\mid (z-3)$ và $d\mid (z+3)$ nên $d\mid 6.$ Ta suy ra
+$$d\in\{1;2;3;6\}.$$ 
+Ta xét các trường hợp sau
+\begin{enumerate}
+    \item Với $d=1$, ta lại xét tới các trường hợp nhỏ hơn sau.
+      \begin{itemize}
+          \item\chu{Trường hợp 1.1.} Nếu $z-3=1$ và $z+3=2^x3^y,$ ta có $z=4$ nên $7=2^x3^y,$ vô lí.
+          \item\chu{Trường hợp 1.2.} Nếu $z-3=2^x$ và $z+3=3^y,$ ta có $y=0,\ z=-2,$ vô lí.
+          \item\chu{Trường hợp 3.} Nếu $z-3=3^y$ và $z+3=2^x,$ ta có $y=0$ vì nếu $y\ge 1$ thì
+          $$3\mid (z-3)\Rightarrow 3\mid (z+3)\Rightarrow 3\mid 2^x\Rightarrow x=0.$$
+          Với $y=0,$ ta có $z=4$ dẫn đến $2^x=7,$ vô lí.
+      \end{itemize}
+      \item Với $d=2$, ta lại xét tới các trường hợp nhỏ hơn sau.
+      \begin{itemize}
+          \item\chu{Trường hợp 2.1.} Nếu $z-3=2$ và $z+3=2^{x-1}2^y,$ ta có $z=5.$ Thể trở lại, ta được
+          $$2^{x-1}3^y=8.$$ 
+          Lần lượt xét số mũ của $2$ và $3$ ở hai vế, ta tìm ra $x=4$ và $y=0.$
+          \item\chu{Trường hợp 2.2.} Nếu $z-3=2^{x-1}$ và $z+3=2\cdot 3^y,$ lấy hiệu theo vế ta có
+          $$2^{x-1}+6=3^y.$$
+          Do vế trái không chia hết cho $3$, ta tìm ra $x=1$ nhưng lúc này $3^y=7,$ vô lí.
+          \item\chu{Trường hợp 2.3.} Nếu $z-3=2\cdot 3^y$ và $z+3=2^{x-1},$ lấy hiệu theo vế ta có
+          $$2\cdot 3^y+6=2^{x-1}.$$
+          Do vế phải không chia hết cho $3$ nên $3^y$ không chia hết cho $3.$ Ta tìm ra $(x,y,z)=(4,0,5).$
+          \item\chu{Trường hợp 2.4.}  Nếu $z-3=2^{x-1}3^y$ và $z+3=2$, ta có $z=-1,$ vô lí.
+      \end{itemize}
+      \item Với $d=3$, ta lại xét tới các trường hợp nhỏ hơn sau.
+      \begin{itemize}
+          \item\chu{Trường hợp 3.1.} Nếu $z-3=3$ và $z+3=2^x3^{y-1},$ ta tìm được $(x,y,z)=(0,3,6).$
+          \item\chu{Trường hợp 3.2.} Nếu $z-3=3\cdot 2^x$ và $z+3=3^{y-1},$ lấy hiệu theo vế ta có
+          $$3\cdot2^x+6=3^{y-1}.$$
+          Nếu $x\ge 1,$ vế trái là số chẵn nên $3^{y-1}$ chẵn, vô lí. Như vậy $x=0,$ và $y=3,\ z=6.$
+          \item\chu{Trường hợp 3.3.} Nếu $z-3=3^{y-1}$ và $z+3=3\cdot 2^x,$ lấy hiệu theo vế ta có
+          $$3^{y-1}+6=3\cdot 2^x.$$
+          Xét tính chẵn lẻ ở hai vế, ta thấy $2^x$ lẻ nên $x=0,$ nhưng khi đó $3^{y-1}=-3,$ vô lí.
+          \item\chu{Trường hợp 3.4.} Nếu $z-3=2^x3^{y-1}$ và $z+3=3$, ta có $z=0$ và $2^x3^{y-1}=-3,$ vô lí.
+     \end{itemize}
+    \item Với $d=6$, ta lại xét tới các trường hợp nhỏ hơn sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 4.1.} Nếu $z-3=6$ và $z+3=2^{x-1}3^{y-1},$ ta tìm được $z=9,$ dẫn đến $x=3,\ y=2.$
+        \item\chu{Trường hợp 4.2.} Nếu $z-3=2\cdot 3^{y-1}$ và $z+3=2^{x-1}\cdot 3,$ lấy hiệu theo vế ta có
+        $$1=2^{x-2}-3^{y-2}.$$ 
+        Do $2^{x-2}=1+3^{y-2}\equiv 2,4\pmod{8}$ nên $x\in \{3;4\}.$ Trường hợp này cho ta các bộ 
+        $$(x,y,z)=(3,2,9),\quad (x,y,z)=(4,3,21).$$
+        \item\chu{Trường hợp 4.3.} Nếu $z-3=3\cdot 2^{x-1}$ và $z+3=2\cdot 3^{y-1},$ lấy hiệu theo vế ta có 
+        $$1=3^{y-2}-2{x-2}.$$ 
+        Bằng việc xét các trường hợp nhỏ $x=2,x=3,x=4$ rồi xét tới tính chia hết cho $8,$ ta chỉ ra $y-2$ chẵn. Cách làm quen thuộc này cho ta các bộ
+        $$(x,y,z)=(3,3,15),\quad (x,y,z)=(5,4,51).$$
+         \item\chu{Trường hợp 4.4.} Nếu $z-3=2^{x-1}3^{y-1}$ và $z+3=6$, ta có $z=3,$ và $2^{x-1}3^{y-1}=0,$ vô lí.
+     \end{itemize}
+\end{enumerate}
+Tổng kết lại, phương trình đã cho có $6$ nghiệm tự nhiên là
+\[(4,0,5),\, (0,3,6),\, (3,2,9),\, (4,3,21),\, (3,3,15),\, (5,4,51).\]}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[3^x7^y+8=z^3.\]
+\loigiai{Phương trình đã cho tương đương với \[3^x7^y=(z-2)(z^2+2z+4).\]
+Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z).$ Ta có một vài nhận xét sau đây.
+\begin{enumerate}
+    \item[i,] $\tron{z-2,z^2+2z+4}\in \{1;3\},$ thế nên chỉ $1$ trong hai số $z-2$ và $z^2+2z+4$ chia hết cho $7^y.$ 
+    \item[ii,] Số $z^2+2z+4$ không thể chia hết cho $9,$ vậy nên $z-2$ chia hết cho $3^{x-1}$ (hoặc thậm chí $3^x$).
+    \item[iii,] $z-2<z^2+2z+4.$
+\end{enumerate}
+Dựa vào các nhận xét này, ta tiếp tục chia bài toán thành các trường hợp nhỏ hơn.
+\begin{enumerate}
+	\item Nếu $\tron{z-2,z^2+2z+4}=1$, ta xét $2$ trường hợp nhỏ hơn sau đây.
+	\begin{itemize}
+	    \item \chu{Trường hợp 1.} $z-2=1,\ z^2+2z+4=3^x7^y.$ Trường hợp này cho ta $z=3,$ nhưng khi đó ta không tìm thấy được $x,y$ nguyên dương tương ứng.
+	    \item \chu{Trường hợp 2.} $z-2=3^x,\ z^2+2z+4=7^y.$ Trong trường hợp này, ta có $z\equiv 2\pmod{3}$ nên
+	    $$7^y=z^2+2z+4\equiv 2^2+2\cdot2+4\equiv0\pmod{3}.$$
+	    Đây là điều không thể nào xảy ra.
+	\end{itemize}
+	\item Nếu $\tron{z-2,z^2+2z+4}=3,$ ta xét $2$ trường hợp nhỏ hơn sau đây.
+	\begin{itemize}
+	    \item \chu{Trường hợp 1. }$z-2=3^{x-1},\ z^2+2z+4=3\cdot 7^y.$ Trong trường hợp này, ta có
+	    \[3^{2x-3}+2\cdot 3^{x-1}+4=7^y.\]
+	    Lấy đồng dư theo modulo $4$ hai vế, ta được
+	    $$(-1)^y\equiv 7^y\equiv 3+2+0\equiv 1\pmod{4}.$$
+	    Theo đó, $y$ là số chẵn. Ta đặt $y=2t.$ Phép đặt này cho ta
+	    \[3^{2x-3}+2\cdot 3^{x-1}+4=7^{2z}\Rightarrow 3^{x-1}\tron{3^{x-2}+2}=\tron{7^t-2}\tron{7^t+2}.\]
+	    Do $7^z-2\equiv -1\pmod{3}$ và $7^z+2\equiv 0\pmod{3}$ nên $7^t+2$ chia hết cho $3^{x-1}.$ Đồng thời, $3^{x-2}+2$ chia hết cho $7^t-2.$ Hai lập này cho ta biết
+	    $$3^{x-2}+2\ge 7^t-2=7^z+2-4\ge 3^{x-1}-4.$$
+	    Chỉ có $x=2$ và $x=3$ mới thỏa mãn nhận xét trên. Thế ngược lại, ta lần lượt tìm ra $t=1,y=2$ và $z=11$ trong trường hợp $x=3.$
+	    \item \chu{Trường hợp 2. }$z-2=3^{x-1}7^y,\ z^2+2z+4=3.$ Trường hợp này không cho ta $z$ dương.
+	\end{itemize}
+\end{enumerate}
+Như vậy, phương trình đã cho có nghiệm nguyên dương duy nhất là $(x,y,z)=(3,2,11).$}
+\end{gbtt} 
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[5^x7^y+4=3^z.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y,z).$ Với $x=1$, ta có $7^y+4=3^z$. Ta nhận thấy 
+$$7^y+4\equiv2\pmod{3}, \qquad 3^z\equiv0,1\pmod{3}.$$
+Điều này không thể xảy ra. Ta suy ra $x\ge 1$. Lấy đồng dư theo modulo $5$ hai vế, ta có
+$$3^z-4=5^x7^y\equiv0\pmod{5}\Rightarrow3^z\equiv4\pmod{5}.$$
+Từ đây, ta tiếp tục suy ra $z=2k$ với $k$ là số tự nhiên. Thế $z=2k$ vào phương trình đã cho, ta được
+$$5^x7^y+4=3^{2k}\Rightarrow 5^x7^y=\tron{3^k-2}\tron{3^k+2}.$$
+Khoảng cách bằng $4$ giữa hai số lẻ $3^k-2,3^k+2$ chứng tỏ $\tron{3^k-2,3^k+2}=1$. \\
+Ngoài ra, ta còn có $3^k-2<3^k+2.$ Nhận xét này cho phép ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $3^k-2=1$ và $3^k+2=5^x7^y,$ ta lần lượt tìm được $k=1,x=1,y=0,z=2.$
+    \item Với $3^k-2=5^x$ và $3^k+2=7^y,$ ta có
+    $3^k+2=7^y\equiv 1\pmod{3},$ vô lí.
+    \item Với $3^k-2=7^y$ và $3^k+2=5^x,$ ta nhận thấy rằng $7^y+4=5^x.$ Ta có
+    $$5^x\equiv1\pmod{4}\Rightarrow 7^y+4\equiv1\pmod{4}\Rightarrow7^y\equiv1\pmod{4}.$$
+    Suy ra $y$ chẵn. Ta đặt $y=2y_1.$ Ta xét các trường hợp sau
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $x\ge 2$, ta có $5^y\equiv0\pmod{25}$, kéo theo $7^{2y_1}+4\equiv0\pmod{25}$.\\ Điều này không thể xảy ra.
+        \item \chu{Trường hợp 2.} Với $x=1$, ta có $3^k+2=5$ từ đây, ta tìm ra $k=1,z=2,y=0.$
+    \end{itemize}
+\end{enumerate}
+Như vậy, phương trình đã cho có nghiệm tự nhiên duy nhất là $(1,0,2)$.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[2^{x+1}3^y+5^z=7^t.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z,t).$ Ta có một vài nhận xét sau đây.
+\begin{enumerate}[i,]
+\item $z$ là số chẵn. Thật vậy, nếu $z$ là số lẻ thì $2^{x+1}3^y+5^z$ chia $3$ dư $2$, trong khi đó $7^t$ chia $3$ dư $1$, vô lí.
+\item $t$ cũng là số chẵn. Thật vậy, nếu $t$ là số lẻ thì $7^t$ chia $4$ dư $3$, mà $2^{x+1}3^y+5^z$ chia $4$ dư $1,$ vô lí.
+\end{enumerate}
+Đặt $t=2a,z=2b.$ Phép đặt này cho ta \[2^x3^y=\left(7^a-5^b\right)\left(7^a+5^b\right).\]
+Ta cũng dẫn dàng nhận xét được $\left(\dfrac{7^a-5^b}{2},\dfrac{7^a+5^b}{2}\right)=1,$ lại do $\dfrac{7^a-5^b}{2}\cdot \dfrac{7^a+5^b}{2}=2^{x-1}3^y$ nên ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $\dfrac{7^a-5^b}{2}=1$ và $\dfrac{7^a+5^b}{2}=2^{x-1}3^y,$ ta có $$7^a=2+5^b.$$ Áp dụng \chu{bài \ref{phannguyen5/8}}, ta tìm được $a=1,\ b=1.$ Lúc này $x=2,\ y=1,\ z=2,\ t=2.$
+    \item Nếu $\dfrac{7^a-5^b}{2}=2^{x-1}$ và $\dfrac{7^a+5^b}{2}=3^y,$ ta có
+    $$7^a-5^b=2^x.$$ 
+    Áp dụng \chu{bài \ref{phannguyen5/8}}, ta được $a=b=x=1.$ Khi đó $12=3^y,$ vô lí.
+    \item Nếu $\dfrac{7^a-5^b}{2}=3^y$ và $\dfrac{7^a+5^b}{2}=2^{x-1},$ ta có
+    $$5^b=2^{x-1}-3^y,\quad 7^a=3^y+2^{x-1}.$$ Vì $7^a\equiv 1\pmod 3$ nên $2^{x-1}\equiv 1\pmod 3$ nên $x-1$ chẵn và $5^b\equiv 2^{x-1}-3^y\equiv 1\pmod 3,$ điều này dẫn đến $b$ cũng là số chẵn. Ta phân tích
+    \[3^y=\left(2^{\frac{x-1}{2}}-5^{\frac{b}{2}}\right)\left(2^{\frac{x-1}{2}}+5^{\frac{b}{2}}\right).\] Vì $\left(2^{\frac{x-1}{2}}-5^{\frac{b}{2}},2^{\frac{x-1}{2}}+5^{\frac{b}{2}}\right)=1$  nên $2^{\frac{x-1}{2}}-5^{\frac{b}{2}}=1,\ 2^{\frac{x-1}{2}}+5^{\frac{b}{2}}=3^y.$ Khi đó $2^{\frac{x-1}{2}}-3^y=1.$ \\Áp dụng kết quả \chu{bài \ref{bai4mu}}, ta được $\dfrac{x-1}{2}=2,\ y=1,$ suy ra $5^b=1$ và $b=0,$ mâu thuẫn.
+    \item Nếu $\dfrac{7^a-5^b}{2}=2^{x-1}3^y$ và $\dfrac{7^a+5^b}{2}=1,$ ta có
+    $$7^a+5^b=2.$$ 
+    Ta tìm ra $a=b=0$ nên $z=t=0,$ vô lí.
+\end{enumerate}
+Kết luận, phương trình có nghiệm nguyên dương duy nhất là $(2,1,2,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $m,n,k,s$ thỏa mãn
+$$\tron{3^m-3^n}^2=2^k+2^s.$$
+Tìm giá trị lớn nhất của tích $mnks.$
+\loigiai{
+Không mất tính tổng quát, ta giả sử $m>n$ và $k>s.$ Từ đây, ta có
+$$3^{2n}\tron{3^{m-n}-1}^2=2^s\tron{2^{k-s}+1}.$$
+Vì $2^s$ là số chẵn nên ta thu được
+$$3^{2n}a=2^{k-s}+1,\quad \tron{3^{m-n}-1}^2=2^sa$$
+với $a\in\mathbb{N}.$ Vì $3^{2n}a=2^{k-s}+1$ nên $a$ là số lẻ. Kết hợp với $\tron{3^{m-n}-1}^2=2^sa,$ ta suy ra $s=2l$ và $a=b^2$ với $l,b$ là số tự nhiên. Thế trở lại, ta có
+$$3^{2n}b^2=2^{k-s}+1,\qquad 3^{m-n}=2^lb+1.$$
+Chuyển vế phương trình đầu cho ta
+$$\tron{3^nb-1}\tron{3^nb+1}=2^{k-s}.$$
+Đặt $3^nb-1=2^{\alpha}$ và $3^nb+1=2^{\beta}$ với $\alpha,\beta\in\mathbb{N}.$ Điều này chỉ ra
+$$2^{\beta}-2^{\alpha}=2.$$
+Giải phương trình trên, ta nhận được $\alpha=1$ và $\beta=2.$ Kéo theo $b=1,n=1$ và $k-s=3.$ Do đó
+$3^{m-2}=2^l+1,$
+với $s=2l.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $m-1$ là số chẵn, ta suy ra $m-1=2, l=3.$ Điều này dẫn tới $$m=3,\quad n=1,\quad s=6,\quad k=9,\quad mnks=162.$$
+    \item Với $m-1$ là số lẻ, ta suy ra $3^{m-1}$ chia $4$ dư $3.$ Do đó $l=1$ và kéo theo
+    $$ m=2, \quad s=2,\quad k=5,\quad mnks=20.$$
+\end{enumerate}
+Như vậy, giá trị lớn nhất của $mnks$ là $162.$
+}
+
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả nghiệm nguyên dương của phương trình $x!+5=y^{z+1}.$
+\loigiai{
+Nếu $x\ge 10,$ ta lần lượt suy ra
+$$5\mid x!\Rightarrow 5\mid y^{z+1}\Rightarrow 5\mid y\Rightarrow 25\mid y^{z+1}\Rightarrow 25\mid \tron{x!+5}.$$
+Đây là điều vô lí. Do đó, $x<10.$ Thử lại, phương trình có nghiệm nguyên dương duy nhất là $(4,5,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[x!+5^y=7^z.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y,z).$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $x\ge 5,$ ta có $7^z=x!+5$ chia hết cho $5,$ vô lí.
+    \item Nếu $x=1,$ ta có $x!+5^y=1+5^y$ là số chẵn, dẫn đến $7^z$ là số chẵn, vô lí.
+    \item Nếu $x=2,$ ta có $2+5^y=7^z.$ Bài toán quen thuộc này cho ta kết quả $y=z=1.$
+    \item Nếu $x=3,$ ta có $6+5^y=7^z.$ Bài toán quen thuộc này không cho ta $y,z$ nguyên.
+    \item Nếu $x=4,$ ta có $24+5^y=7^z.$ Bài toán quen thuộc này cho ta $y=z=2.$
+\end{enumerate}
+Kết luận, phương trình có $2$ nghiệm nguyên dương là $(2,1,1)$ và $(4,2,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm nghiệm nguyên dương của phương trình 
+\[1!+2!+\cdots+(x+1)!=y^{z+1}.\]
+\loigiai{
+Đặt $f(x)=1!+2!+\cdots+(x+1)!.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $z=1,$ ta có $f(x)$ là số chính phương. Nếu như $x\ge 4$ thì
+    $$VT\equiv f(3)\equiv 2\pmod{5}.$$
+    Không có số chính phương nào chia $2$ dư $5,$ thế nên $x\le 3.$ Thử trực tiếp, ta tìm ra $(x,y,z)=(2,3,1).$
+    \item Với $z\ge 2,$ ta có $z+1\ge 3.$ Từ $f(x)=y^{z+1},$ ta suy ra $y^3\mid f(x).$ Nếu $x\ge 8$ thì
+    $$VT\equiv f(7)\equiv 9\pmod{27}.$$
+    Ta có $y$ chia hết cho $3$ nhưng $y^{z+1}\equiv 9\pmod{27},$ mâu thuẫn. \\ Như vậy $x\le 7.$ Thử trực tiếp, ta không tìm được $y$ và $z$ tương ứng. 
+\end{enumerate}
+Kết luận, phương trình đã cho có nghiệm nguyên dương duy nhất là $(x,y,z)=(2,3,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $p,q,r,s>1$ thỏa mãn
+$$p!+q!+r!=2^s.$$
+\nguon{Indian IMO Training Camp 2017}
+\loigiai{
+Không mất tổng quát, ta giả sử $p\ge q\ge r.$ Nếu $r\ge 3,$ ta có
+$$2^s=p!+q!+s!\equiv 0 \pmod{3}.$$
+Đây là một điều vô lí vì $\left(2^s,3\right)=1.$ Ta có $r=2.$ Thế $r=2$ vào phương trình ban đầu, ta được
+\[p!+q!+2=2^s.\tag{*}\]
+Lấy đồng dư theo modulo $4$ hai vế, ta có
+$$p!+q!+2\equiv 0\pmod{4}.$$
+Rõ ràng, $p\ge q\ge 4$ là điều không thể xảy ra, vì lúc này, $p!+q!$ chia hết cho $4.$\\
+Mâu thuẫn trên chứng tỏ $q\le 3.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $q=3,$ thế trở lại vào (*), ta được
+    $$p!+8=2^s\Leftrightarrow p!=2^s-8.$$
+    Lấy đồng dư theo modulo $16$ hai vế, ta suy ra
+    $$p!\equiv 2^s-8\equiv 8\left(2^{s-3}-1\right)\equiv 8\pmod{16}.$$
+    Ta suy ra $p=4$ hoặc $p=5$ từ đây.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $p=4,$ ta có $2^s=4!+3!+2!=32,$ thế nên $s=5.$
+        \item\chu{Trường hợp 2.} Với $p=5,$ ta có $2^s=5!+3!+2!=128,$ thế nên $s=7.$
+    \end{itemize}
+    \item Với $q=2,$ thế trở lại vào (*), ta được
+    $$p!+4=2^s\Leftrightarrow p!=2^s-4.$$
+    Lấy đồng dư theo modulo $8$ hai vế, ta suy ra
+    $$p!\equiv 2^s-4\equiv 4\left(2^{s-2}-1\right)\equiv 4\pmod{8}.$$
+    Ta không tìm được $p$ từ đây.
+\end{enumerate}
+Tổng kết lại, có tất cả 12 bộ $(p,q,r,s)$ thỏa mãn đề bài, đó là $$(2,3,4,5),(2,3,5,7)$$ và các hoán vị theo $(p,q,r)$ của chúng.}
+\end{gbtt}

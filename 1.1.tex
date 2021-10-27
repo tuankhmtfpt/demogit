@@ -1,0 +1,2571 @@
+\chapter{Ước, bội và chia hết}
+Trong lí thuyết số, quan hệ chia hết giữa các số nguyên là một trong những quan hệ thứ tự cơ bản và quan trọng nhất. Nó là nền tảng của các quan hệ khác trong số học như quan hệ đồng dư, quan hệ ước, bội. Ta đã được làm quen với vấn đề này kể từ cấp tiểu học, thông qua các phép trong tính bảng cửu chương, hay những dấu hiệu chia hết cho $2,3,5,9.$ Tuy đơn giản song quan hệ chia hết lại có rất nhiều tính chất hay và được thể hiện dưới nhiều dạng phát biểu khác nhau trong các bài toán số học. \\ \\
+Chương I của cuốn sách tập trung xây dựng những tính chất cơ bản và thông dụng nhất của quan hệ chia hết thông qua 9 phần
+\begin{itemize}
+    \item\chu{Phần 1.} Các định nghĩa, tính chất và bài tập cơ bản.
+    \item\chu{Phần 2.} Tính chia hết của đa thức cho một số nguyên
+    \item\chu{Phần 3.} Đồng dư thức với số mũ lớn.
+    \item\chu{Phần 4.} Một số bổ đề đồng dư thức với số mũ nhỏ.
+    \item\chu{Phần 5.} Bất đẳng thức trong chia hết.
+    \item\chu{Phần 6.} Tính nguyên tố cùng nhau.
+    \item\chu{Phần 7.} Phép đặt ước chung đôi một cho ba biến số.
+    \item\chu{Phần 8.} Bài toán về các ước của một số nguyên dương.
+    \item\chu{Phần 9.} Sự tồn tại trong các bài toán chia hết, ước, bội.
+\end{itemize}
+
+\section{Các định nghĩa, tính chất và bài tập cơ bản}
+Trong phần này, tác giả xin phép chỉ trình bày lí thuyết và các ví dụ minh họa, mà không đưa ra bất cứ bài tập tự luyện nào. Chúng ta sẽ có mục bài tập tự luyện ở các phần sau.
+\subsection{Phép chia hết, phép chia có dư}
+\begin{dx}
+Cho hai số nguyên $a, b$. Nếu tồn tại số nguyên $q$ sao cho $a=bq$ thì ta nói rằng $a$ chia hết cho $b.$ Ngược lại, nếu không tồn tại số nguyên $q$ sao cho $a=bq$ thì ta nói rằng $a$ không chia hết cho $b.$
+\end{dx}
+Đối với các phép chia hết kể trên, ta có một vài kí hiệu sau đây.
+\begin{enumerate}
+    \item $a$ chia hết cho $b$ được kí hiệu là $a\vdots\: b.$
+    \item $b$ chia hết $a$ được kí hiệu là $b\mid a.$
+    \item $a$ không chia hết cho $b$ được kí hiệu là $a\not\vdots\: b.$
+    \item $b$ không chia hết $a$ được kí hiệu là $b\nmid a.$     
+\end{enumerate}
+Dưới đây là một vài ví dụ minh họa.
+\begin{enumerate}
+    \item Do $15=3\cdot 5,$ ta nói rằng "$15$ chia hết cho $3$" hoặc "$3$ chia hết $15$", và kí hiệu $15\vdots 3$ hoặc $3 \mid 15.$
+    \item Do không tồn tại số nguyên $q$ nào để cho $2q=7,$ ta nói rằng "$7$ không chia hết cho $2$" hoặc "$2$ không chia hết $7$", và kí hiệu $2\nmid 7.$
+\end{enumerate}
+
+\begin{dx}
+Cho hai số nguyên $a,d,$ trong đó $d\ne 0.$ Khi đó, tồn tại duy nhất các số nguyên $q,r$ sao cho $a=qd+r$ và $0\le r<|d|.$ Ta gọi phép chia $a$ cho $d$ là phép chia có dư, với thương là $q$ và dư là $r.$
+\end{dx}
+
+Chẳng hạn, ta nói $19$ chia cho $-5$ được thương là $-3,$ dư là $4,$ bởi vì 
+$$19=(-5)\cdot(-3)+4,\quad 0<4<|-5|.$$
+Kèm theo đó, chúng ta cũng có một vài tính chất liên quan đến phép chia hết.
+
+\begin{light}
+\chu{Các tính chất cơ bản}
+\begin{enumerate}
+    \item Mọi số nguyên khác 0 luôn chia hết cho chính nó.
+    \item Các dấu hiệu chia hết cho $2,3,5,9,10,$ chúng ta đã được học ở cấp học dưới. 
+    \item Với $a,b,c$ là các số nguyên, nếu $a$ chia hết cho $b,b$ chia hết cho $c$ thì $a$ chia hết cho $c.$
+    \item Với $a,b,c$ là các số nguyên, nếu cả $a$ và $b$ đều chia hết cho $c$ thì tổng, hiệu, tích của $a$ và $b$ cũng chia hết cho $c$ 
+    \item  Với $a,b,c,d$ là các số nguyên, nếu $a$ chia hết cho $b$ và $c$ chia hết cho $d$ thì tích $ac$ chia hết cho tích $bd$. 
+    \item Với $a,b$ là các số nguyên, nếu $a$ chia hết cho $b$ thì hoặc $a=0,$ hoặc $|a|\ge |b|.$
+\end{enumerate}
+\chu{Các tính chất nâng cao}    
+\begin{enumerate}
+    \item Tổng của $n$ số nguyên liên tiếp luôn chia hết cho $n.$
+    \item Tích của $n$ số nguyên liên tiếp luôn chia hết cho $n!.$    
+    \item Với $a,b$ là các số nguyên phân biệt và $n$ là số tự nhiên, $a^n-b^n$ chia hết cho $a-b.$
+    \item Với $a,b$ là các số nguyên và $n$ là số tự nhiên lẻ, $a^n+b^n$ chia hết cho $a+b.$    
+\end{enumerate}
+\end{light}
+
+\subsubsection*{Ví dụ minh họa}
+\begin{bx}
+Tìm tất cả các số nguyên dương
+\begin{enumerate}[a,]
+    \item Có dạng $\overline{12a56c}$, đồng thời chia hết cho $9$ và $5.$
+    \item Có dạng $\overline{a432c},$ đồng thời chia hết cho cả $2,5$ và $9.$
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Số đã cho chia hết cho $5,$ thế nên $c=0$ hoặc $c=5.$
+    \begin{itemize}
+        \item Với $c=0,$ do số đã cho chia hết cho $9$ nên tổng các chữ số của nó cũng chia hết cho $9,$ tức là
+        $$1+2+a+5+6+0=14+a=18+(a-4)$$
+        cũng chia hết cho $9$, lại do $0\le a\le 9$ nên $a=4.$
+        \item Với $c=5,$ ta thực hiện tương tự trường hợp trước để chỉ ra $a=8.$
+    \end{itemize}
+    Tổng kết lại, tất cả các số nguyên dương thỏa yêu cầu là $122560$ và $128565.$
+    \item Số đã cho chia hết cho cả $2$ và $5,$ và bắt buộc $c=0.$ Lập luận tương tự như ý a, ta chỉ ra 
+    $$a+4+3+2+0=9+a$$
+    chia hết cho $9.$ Do $0\ge a>0$ nên bắt buộc $a=9.$\\
+    Tổng kết lại, số nguyên dương duy nhất thỏa yêu cầu là $94320.$
+\end{enumerate}
+}
+\end{bx}
+
+\begin{bx}
+Tích của bốn số tự nhiên liên tiếp là $255024.$ Tìm bốn số đó.
+\loigiai{
+Tích đã cho không chia hết cho $5,$ vì thế đây là tích của bốn số tự nhiên liên tiếp không chia hết cho $5.$ Dựa vào nhận xét
+$20^3<255024<25^3,$
+ta chỉ ra bốn số cần tìm là $21,22,23,24.$
+}
+\end{bx}
+
+\begin{bx}
+Cho hai số tự nhiên $a$ và $b$ tuỳ ý có số dư trong phép chia cho $9$ theo thứ tự là $r_1$ và $r_2$. Chứng minh rằng ${r}_{1}{r}_{2}$ và $ab$ có cùng số dư trong phép chia cho $9.$
+\loigiai{
+Đặt $a=9a_1+r_1$ và $b=9b_1+r_2.$ Phép đặt này cho ta
+$$ab-r_1r_2=\tron{9a_1+r_1}\tron{9b_1+r_2}-r_1r_2=81a_1b_1+9\tron{b_1r_1+a_1r_2}.$$
+Do $81a_1b_1$ và $9\tron{b_1r_1+a_1r_2}$ đều chia hết cho $9,$ ta có $ab-r_1r_2$ chia hết cho $9.$ Từ đây, ta suy ra $ab$ và $r_1r_2$ có cùng số dư khi chia cho $9.$ Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có $17^n-2^n\ge 15.$
+\loigiai{
+Ta đã biết, với $a,b$ là các số nguyên phân biệt và $n$ là số tự nhiên, $a^n-b^n$ chia hết cho $a-b.$ Theo như tính chất kể trên, ta chỉ ra $17^n-2^n$ chia hết cho $15,$ thế nên $17^n-2^n\ge 15.$ Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx} \
+\begin{enumerate}[a,]
+    \item Cho $A=2+2^{2}+2^{3}+\ldots+2^{60}.$ Chứng minh rằng $A$ chia hết cho $3,7$ và $15.$
+    \item Cho $B=3+3^{3}+3^{5}+\ldots+3^{1991}$. Chứng minh rằng $B$ chia hết cho $13$ và $41.$
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta sẽ chia bài lời giải làm $3$ phần như sau.
+    \begin{itemize}
+        \item \chu{Chứng minh $A$ chia hết cho $3.$}\\
+        Biến đổi $A$, ta thu được
+        $$A=2\tron{1+2}+2^3\tron{1+2}+\cdots+2^{59}\tron{1+2}=2\cdot3+2^3\cdot3+\cdots2^{59}\cdot3.$$
+        Từ đây, ta suy ra $A$ chia hết cho $3.$
+         \item \chu{Chứng minh $A$ chia hết cho $7.$}\\
+        Biến đổi $A$, ta thu được
+        $$A=2\tron{1+2+2^2}+2^4\tron{1+2+2^2}+\cdots+2^{58}\tron{1+2+2^2}=2\cdot7+2^4\cdot7+\cdots+2^{58}\cdot7.$$
+        Từ đây, ta suy ra $A$ chia hết cho $7.$
+         \item \chu{Chứng minh $A$ chia hết cho $15.$}\\
+        Biến đổi $A$, ta thu được
+       $$A=2\tron{1+2+2^2+2^3}+\cdots+2^{57}\tron{1+2+2^2+2^3}=2\cdot15+2^5\cdot15+\cdots+2^{57}\cdot15.$$
+        Từ đây, ta suy ra $A$ chia hết cho $15.$
+    \end{itemize}
+    Như vậy, bài toán đã cho được chứng minh.
+    \item Ta sẽ chia bài lời giải làm $2$ phần như sau.
+    \begin{itemize}
+        \item \chu{Chứng minh $B$ chia hết cho $13.$}\\
+        Biến đổi $B$, ta thu được
+        $$B=3\tron{1+3^2+3^4}+\cdots+3^{1987}\tron{1+3^2+3^4}=3\cdot91+3^7\cdot91+\cdots+3^{1987}\cdot91.$$
+        Vì $91$ chia hết cho $13$, ta suy ra $B$ cũng chia hết cho $13.$
+         \item \chu{Chứng minh $B$ chia hết cho $7.$}\\
+        Biến đổi $B$, ta thu được
+        \begin{align*}
+            B&=3\tron{1+3^2+3^4+3^6}+3^9\tron{1+3^2+3^4+3^6}+\cdots+3^{1985}\tron{1+3^2+3^4+3^6}\\
+            &=3\cdot820+3^9\cdot820+\cdots3^{1985}\cdot820.
+        \end{align*}
+         Vì $820$ chia hết cho $41$, ta suy ra $B$ cũng chia hết cho $41.$
+    \end{itemize}
+    Như vậy, bài toán được chứng minh.
+\end{enumerate}}
+\end{bx}
+
+\begin{bx}
+Cho $a,b,c$ là các số nguyên khác $0$ thỏa mãn điều kiện
+$$\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}\right)^{2}=\frac{1}{a^{2}}+\frac{1}{b^{2}}+\frac{1}{c^{2}}.$$
+Chứng minh rằng $a^3+b^3+c^3$ chia hết cho $3.$
+\nguon{Chọn học sinh giỏi lớp 9 thành phố Thanh Hóa 2017}
+\loigiai{
+Đẳng thức ở giả thiết đã cho tương đương
+$$\left(\frac{1}{a}+\frac{1}{b}+\frac{1}{c}\right)^{2}=\frac{1}{a^{2}}+\frac{1}{b^{2}}+\frac{1}{c^{2}} \Leftrightarrow 2\left(\frac{1}{a b}+\frac{1}{b c}+\frac{1}{c a}\right)=0 \Leftrightarrow \frac{a+b+c}{a b c}=0.$$
+Vi ${a}, {b}, {c} \neq 0$ nên ${a}+{b}+{c}=0.$ Từ đây, ta lần lượt suy ra
+$$
+\begin{aligned}
+a+b=-c 
+&\Rightarrow(a+b)^{3}=(-c)^{3}\\
+&\Rightarrow a^{3}+b^{3}+3 a b(a+b)=-c^{3}\\
+&\Rightarrow a^{3}+b^{3}+c^{3}=3 a b c.
+\end{aligned}$$
+Như vậy $a^3+b^3+c^3$ chia hết cho $3.$ Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Cho $x,y,z$ là các số nguyên dương phân biệt. \\
+Chứng minh rằng: $(x-y)^{5}+(y-z)^{5}+(z-x)^{5}$ chia hết cho $5(x-y)(y-z)(z-x).$
+\loigiai{Đặt ${a}={x}-{y}, b={y}-{z}.$ Phép đặt này cho ta $z-x=a-b,$ và bài toán quy về chứng minh 
+$$5 a b(a+b)\mid \vuong{(a+b)^{5}-a^{5}-b^{5}}.$$
+Dựa theo phép đặt kể trên, ta nhận thấy rằng
+\begin{align*}
+    (a+b)^{5}-a^{5}-b^{5}&=5 a^{4} b+10 a^{3} b^{2}+10 a^{2} b^{3}+5 a b^{4}\\&=5 a b\left(a^{3}+2 a^{2} b+2 a b^{2}+b^{3}\right) \\&=5 a b\left[\left(a^{3}+b^{3}\right)+\left(2 a^{2} b+2 a b^{2}\right)\right]\\&=5 a b\left[(a+b)\left(a^{2}-a b+b^{2}\right)+2 a b(a+b)\right] \\ &=5 a b(a+b)\left(a^{2}+a b+b^{2}\right).
+\end{align*}
+Biến đổi phía trên chính là cơ sở để ta suy ra điều phải chứng minh.}
+\end{bx}
+
+\begin{bx}
+Cho số nguyên dương $n.$ Chứng minh rằng
+\begin{enumerate}[a,]
+    \item $A=2n+\underbrace{11 \ldots 1}_{n\text{ chữ số}}$ chia hết cho $3.$
+    \item $B=10^n+18n-1$ chia hết cho $27.$
+    \item  $C=10^n+72 n-1$ chia hết cho $81.$
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Tổng các chữ số của số $\underbrace{11 \ldots 1}_{n\text{ chữ số}}$ là $n.$ Theo đó, số 
+    $$A=2n+\underbrace{11 \ldots 1}_{n\text{ chữ số}}$$
+    có cùng số dư với $2n+n=3n$ khi chia cho $3.$ Do $3n$ chia hết cho $3,$ bài toán được chứng minh.
+    \item Biến đổi  $10^n+18n-1$, ta thu được 
+    $$10^n+18n-1=\tron{10^n-1}+18n=\underbrace{99\ldots9}_{n\text{ chữ số}}+18n=9\tron{2n+\underbrace{11 \ldots 1}_{n\text{ chữ số}}}.$$
+    Chứng minh hoàn toàn tương tự ý a, ta có $2n+\underbrace{11 \ldots 1}_{n\text{ chữ số}}$ chia hết cho $3.$ \\
+    Từ đây, ta suy ra $B$ chia hết cho $27.$ Bài toán được chứng minh.
+    \item Ta nhận thấy rằng
+    $$C=10^n+72n-1=\tron{10^n-1}+72n=\underbrace{99\ldots9}_{n\text{ chữ số}}+72n=9\tron{8n+\underbrace{11 \ldots 1}_{n\text{ chữ số}}}.$$
+    Số $\underbrace{11 \ldots 1}_{n\text{ chữ số}}$ có tổng các chữ số là $n,$ vì thế $8n+\underbrace{11 \ldots 1}_{n\text{ chữ số}}$ có cùng số dư với $8n+n=9n$ khi chia cho $9$. Theo đó $8n+\underbrace{11 \ldots 1}_{n\text{ chữ số}}$ chia hết cho $9,$ hay $C$ chia hết cho $81.$ Bài toán được chứng minh.
+\end{enumerate}}
+\end{bx}
+
+%nguyệt anh
+\begin{bx}
+Giả sử 3 số tự nhiên $\overline{abc},\overline{bca},\overline{cab}$ đều chia hết cho $37$. Chứng minh rằng
+$$a^{3}+b^{3}+c^{3}-3abc$$
+cũng chia hết cho $37$.
+\loigiai{
+Bạn đọc dễ dàng khai triển hai vế để đưa ra nhận xét rằng
+$$a^{3}+b^{3}+c^{3}-3abc=\overline{abc}\tron{c^{2}-ab}+\overline{bca}\tron{a^{2}-bc}+\overline{cab}\tron{b^{2}-ac}$$
+Do $\overline{abc},\overline{bca},\overline{cab}$ đều chia hết cho $37$, $a^{3}+b^{3}+c^{3}-3abc$ cũng chia hết cho $37.$ \\Bài toán được chứng minh.}
+\end{bx}
+
+\subsection{Ước, bội, ước chung, bội chung}
+\begin{dx}
+Với hai số nguyên $a,b$ thỏa mãn $a$ chia hết cho $b,$ ta nói $a$ là bội của $b,$ còn $b$ là ước của $a.$
+\end{dx}
+Chẳng hạn, do $20$ chia hết cho $5,$ ta nói $5$ là ước của $20,$ và $20$ là bội của $5.$
+
+\begin{dx}
+Ước chung của hai hay nhiều số là uớc của tất cả các số đó.
+\end{dx}
+Ví dụ, khi viết tập hợp $A$ các ước của $4$ và tập hợp $B$ các ước của $6,$ ta có
+$$
+\begin{aligned}
+A&=\{-4;-2;-1;1 ; 2 ; 4\}, \\
+B&=\{-6;-3;-2;-1;1 ; 2 ; 3 ; 6\}.
+\end{aligned}
+$$
+Các số $-2,\ -1,\ 1$ và $2$ vừa là ước của $4,$ vừa là ước của $6.$ Ta nói chúng là các ước chung của $4$ và $6.$
+
+\begin{dx}
+Bội chung của hai hay nhiếu số là bội của tất cả các số dó.
+\end{dx}
+Ví du, khi viết tập hợp $A$ các bội của $4$ và tập hợp $B$ các bội của $6,$ ta có
+\begin{align*}
+    A&=\{\ldots-24;-18;-12;-8;-4;0;4;8;12;16;20;24;\ldots\},\\
+    B&=\{\ldots;-24;-18;-12;-6;0;6;12;18;24;\ldots\}.
+\end{align*}
+Các số $\ldots,-24,-12,0,12,24, \ldots$ vừa là bội của $4$, vừa là bội của $6.$\\ Ta nói chúng là các bội chung của $4$ và $6.$
+\subsubsection*{Ví dụ minh họa}
+
+\begin{bx} \
+\begin{enumerate}[a,]
+    \item Tất cả các ước chung nguyên dương nhỏ hơn $210$ của $500$ và $350$.
+    \item Tất cả các bội chung nguyên dương nhỏ hơn $1000$ của $48$ và $84$.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Do $\tron{500, 350} = 50$, tập ước chung cần tìm chính là tập ước dương của $50$, và là 
+    $$S = \left\{{1;2; 5;10; 25; 50}\right\}.$$
+    \item Do $\vuong{48, 84} = 336$, tập bội chung cần tìm chính là tập bội dương nhỏ hơn $1000$ của $336$ và là
+    $$S = \left\{336;672\right\}.$$
+\end{enumerate}
+}
+\end{bx}
+
+\begin{bx}
+Có bao nhiêu phép chia hết có số bị chia là $784$, đồng thời thương và dư là các số tự nhiên giống nhau gồm hai chữ số?
+\loigiai{Gọi số tự nhiên $a$ là thương của phép chia, do đó $a$ cũng là số dư. Từ đây, ta thu được $784=ax+a,$ hay
+$$784 = a\tron{x+1},$$
+trong đó $x$ là số nguyên dương. Ta nhận $a$ là ước dương  có $2$ chữ số của $78,$ thế nên
+$$a\in\left\{14;16;28;49;56;98\right\}.$$ 
+Ta sẽ kiểm tra trực tiếp từng trường hợp.
+\begin{enumerate}
+    \item Với $a=14,$ phép chia thu được là $784\:\div 55=14,$ dư $14.$
+    \item Với $a=16,$ phép chia thu được là $784\:\div 48=16,$ dư $16.$    
+    \item Với $a=28,49,56,98,$ ta không thu được phép chia nào thỏa mãn.
+\end{enumerate}
+Như vậy, có tổng cộng $2$ phép chia thỏa mãn yêu cầu.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các phép chia có số bị chia là $1817,$ đồng thời có thương và dư là các số tự nhiên giống nhau.
+\loigiai{
+Gọi số tự nhiên $a$ là thương của phép chia, do đó $a$ cũng là số dư. Từ đây, ta thu được $1817 = ax + a ,$ hay
+$$1817 = a\tron{x+1},$$
+trong đó $x$ là số nguyên dương. Ta nhận thấy $a$ là ước dương của $1817,$ thế nên
+ $$a\in\left\{1;23;79\right\}.$$ Sau khi kiểm tra từng trường hợp tương tự như bài trên, ta tìm được tổng cộng hai phép chia thỏa mãn yêu cầu.}
+\end{bx}
+
+\begin{bx}
+Có bao nhiêu cách viết $275$ thành tổng của $n$ số nguyên dương liên tiếp?
+\loigiai{
+Gọi $n$ số liên tiếp đó là $a+1, a+2, \ldots, a+n$ với $a$ là số tự nhiên. Từ giả thiết, ta có
+$$\tron{2a+n+1}n = 275\cdot2 \Leftrightarrow \tron{2a+n+1}n = 550.$$
+Ta chú ý rằng $2a+b \geq n$, và ngoài ra
+$$ 550 =2 \cdot275 = 5\cdot110= 10\cdot55=11\cdot50 = 22\cdot25.$$
+Vậy có $5$ cách viết $275$ thành tổng của $n$ số nguyên dương liên tiếp.
+}
+\end{bx}
+
+\begin{bx}
+Có bao nhiêu cách viết $333$ thành tổng của $n$ số nguyên dương lẻ liên tiếp?
+\loigiai{
+Gọi $n$ số liên tiếp đó là $a+2, a+4, \ldots, a+2n$ với $a$ là số nguyên lẻ. Từ giả thiết, ta có
+$$\tron{2a+2n+2}n = 333\cdot2 \Leftrightarrow \tron{a+n+1}n = 333.$$
+Ta nhận thấy rằng $a+n+1 \geq n$, và $333 =3 \cdot11 = 9\cdot37 .$\\
+Vậy có $2$ cách viết $333$ thành tổng của $n$ số nguyên dương lẻ liên tiếp.
+}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số tự nhiên $x,y$ thỏa mãn đẳng thức
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $(2 x+1)(y-3)=10.$
+    \item $(3 x-2)(2 y-3)=1.$
+    \item $x-3=y(x+2).$
+    \item $x+6=y(x-1).$
+\end{enumerate}
+\end{multicols}
+\loigiai{\begin{enumerate}[a,]
+    \item  Do $2x+1>0$ nên $y-3>0.$ Ta lập bảng giá trị sau
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+            $2x+1$ & $1$ & $2$ & $5$ & $10$ \\
+            \hline
+            $y-3$ & $10$ & $5$ & $2$ & $1$  \\
+            \hline
+            $x$ & $0$ & $\notin \mathbb{N}$ & $2$ & $\notin \mathbb{N}$ \\
+            \hline
+            $y$ & $13$ & $8$ & $5$ & $4$ 
+        \end{tabular}
+    \end{center}
+    Như vậy, có $2$ cặp $\tron{x,y}$ tự nhiên thỏa mãn yêu cầu là $\tron{0,13}$ và $\tron{2,5}.$
+    \item Ở ý này, ta chưa biết rõ dấu của $3x-2$ và $2y-3.$ Vì thế, bảng giá trị của ta như sau
+    \begin{center}
+        \begin{tabular}{c|c|c}
+           $3x-2$  & $1$  & $-1$ \\
+           \hline
+           $2y-3$  & $1$  & $-1$ \\
+           \hline
+           $x$  & $1$  & $\notin \mathbb{N}$ \\
+           \hline
+           $y$  & $2$  & 
+        \end{tabular}
+    \end{center}%
+    Như vậy, có duy nhất cặp số tự nhiên thỏa mãn yêu cầu là $\tron{x,y}=\tron{1,2}.$
+    \item Phương trình đã cho tương đương với
+    $$x-3=y(x+2)\Leftrightarrow x+2-5=y(x+2)\Leftrightarrow (x+2)(y-1)=-5.$$
+    Ta có $y-1$ là ước của $5.$ Ta lập bảng giá trị sau
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+            $1-y$ & $1$ & $5$ & $-5$ &$-1$  \\
+            \hline
+            $y$ & $0$ & $\notin\mathbb{N}$ & $6$ &$2$\\
+            \hline
+             $x$ & $3$ &  & $\notin \mathbb{N}$ &$\notin \mathbb{N}$
+        \end{tabular}
+    \end{center}
+    Như vậy, có duy nhất một cặp số tự nhiên thỏa mãn yêu cầu là $\tron{x,y}=\tron{0,3}.$
+    \item Phương trình đã cho tương đương với
+    $$x+6=y(x-1)\Leftrightarrow x-1+7=y(x-1)\Leftrightarrow (y-1)\tron{x-1}=7.$$
+    Ta có $y-1$ là ước của $7.$ Ta lập bảng giá trị sau
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+            $1-y$ & $1$ & $7$ & $-7$ &$-1$  \\
+            \hline
+            $y$ & $0$ & $\notin\mathbb{N}$ & $8$ &$2$\\
+            \hline
+             $x$ & $\notin \mathbb{N}$ &  & $2$ &$8$
+        \end{tabular}
+    \end{center}
+     Như vậy,  có $2$ cặp $\tron{x,y}$ tự nhiên thỏa mãn yêu cầu là $\tron{8,2}, \tron{2,8}.$
+\end{enumerate}}
+
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số tự nhiên $x,y$ thỏa mãn
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $xy-6x-5y=7.$
+    \item $2xy-3x+5y=39.$
+\end{enumerate}
+\end{multicols}
+\loigiai{\begin{enumerate}[a,]
+    \item Phương trình đã cho tương đương với
+    $$x(y-6)-5y=7\Leftrightarrow x(y-6)-5(y-6)=37\Leftrightarrow (x-5)(y-6)=37.$$
+    Ta có $y-6$ là ước của $37.$ Ta lập bảng giá trị sau
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+            $y-6$ & $-37$ & $-1$ & $1$ & $37$ \\
+            \hline
+             $y$ & $\notin\mathbb{N}$ & $5$ & $7$ & $43$ \\
+            \hline
+             $x$ && $\notin\mathbb{N}$ & $42$ & $6$
+        \end{tabular}
+    \end{center}
+    Như vậy, có $2$ cặp $\tron{x,y}$ tự nhiên thỏa mãn yêu cầu là $\tron{42,7}, \tron{6,43}.$
+     \item Phương trình đã cho tương đương với
+     \begin{align*}
+     x\tron{2y-3}+5y=39&\Leftrightarrow 2x\tron{2y-3}+10y=78\\&\Leftrightarrow 2x\tron{2y-3}+5\tron{2y-3}=63\\&
+         \Leftrightarrow \tron{2x+5}\tron{2y-3}=63.
+     \end{align*}
+    Ta có $2y-3$ là ước của $63.$ Ta lập bảng giá trị sau
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c}
+            $2y-3$ & $-63$ & $-21$ & $-9$ & $-7$ & $-3$ &$-1$ & $1$ & $3$ & $7$ & $9$ & $21$ &$63$\\
+            \hline
+             $y$ & $\notin\mathbb{N}$ & $\notin\mathbb{N}$ & $\notin\mathbb{N}$ & $\notin\mathbb{N}$ & $0$ &$1$ & $2$ & $3$ & $5$ & $6$ & $12$ &$33$\\
+            \hline
+             $x$ & &  &  & & $\notin\mathbb{N}$ &$\notin\mathbb{N}$ & $29$ & $8$ & $2$ & $1$ & $\notin\mathbb{N}$ &$\notin\mathbb{N}$\\
+        \end{tabular}
+    \end{center}
+    Như vậy, có $4$ cặp $\tron{x,y}$ tự nhiên thỏa mãn yêu cầu là $\tron{1,6}, \tron{2,5},\tron{8,3}$ và $\tron{29,2}.$
+\end{enumerate}}
+\end{bx}
+
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $\dfrac{2}{x}+\dfrac{3}{y}=\dfrac{7}{2}.$
+    \item $\dfrac{7}{x+1}-\dfrac{2}{2y-1}=-\dfrac{1}{4}.$
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Nhân hai vế phương trình đã cho với $2xy,$ ta được
+    $$4y+6x=7xy\Leftrightarrow y(7x-4)=6x.$$
+    Từ đây, ta lần lượt chỉ ra
+    $$\tron{7x-4}\mid6x\Rightarrow\tron{7x-4}\mid42x=6(7x-4)+24\Rightarrow\tron{7x-4}\mid 24.$$
+    Ta dễ dàng nhận thấy $7x-4\ge0$. Ta có bảng giá trị sau
+\begin{center}
+   \begin{tabular}{c|c|c|c|c|c|c|c|c}
+        $7x-4$ & $1$ & $2$ & $3$ & $4$ & $6$ & $8$ & $12$ & $24$ \\
+        \hline
+        $x$ & $\notin\mathbb{N}$ & $\notin\mathbb{N}$ & $1$ & $\notin\mathbb{N}$ & $\notin\mathbb{N}$ & $\notin\mathbb{N}$ & $\notin\mathbb{N}$ & $4$\\
+        \hline
+        $y$ &  &  & $2$ &  &  &  &  & $1$   
+    \end{tabular}
+\end{center}
+Như vây, có $2$ cặp $(x,y)$ nguyên dương thỏa yêu cầu là $(1,2)$ và $(4,1).$
+\item Đặt $x+1=u,2y-1=v.$ Phương trình đã cho trở thành
+$$\dfrac{7}{u}-\dfrac{2}{v}=-\dfrac{1}{4}\Leftrightarrow 28v-8u=-uv\Leftrightarrow 8u=v\tron{u+28}.$$
+Các bước còn lại làm tương tự như ý trên. Kết quả, có hai cặp $(x,y)$ thỏa yêu cầu là $(3,1)$ và $(195,4).$
+\end{enumerate}
+}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên $n$ sao cho
+\begin{enumerate}[a,]
+    \item $4n+11$ chia hết cho $3n+2.$
+    \item $n^3+n^2+1$ chia hết cho $n+2.$
+    \item $2n^3+8n+1$ chia hết cho $n^2+2.$
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Từ giả thiết, ta lần lượt suy ra
+    \begin{align*}
+        (3n+2)\mid(4n+11)
+        &\Rightarrow (3n+2)\mid 3(4n+11)
+        \\&\Rightarrow (3n+2)\mid \tron{4(3n+2)+25}
+        \\&\Rightarrow (3n+2)\mid 25.
+    \end{align*}
+    Theo đó, $3n+2$ là ước nguyên của $25.$ Thử trực tiếp, ta tìm được $n=1,n=-1,n=-9.$
+    \item Từ giả thiết, ta lần lượt suy ra
+    \begin{align*}
+        (n+2)\mid\tron{n^3+n^2+1}
+        \Rightarrow (n+2)\mid \tron{(n+2)\left(n^2-n+2\right)-3}
+        \Rightarrow (n+2)\mid 3.
+    \end{align*}    
+    Theo đó, $n+2$ là ước nguyên của $3.$ Thử trực tiếp, ta tìm được $n=1,n=-1,n=-3,n=-5.$
+    \item Từ giả thiết, ta lần lượt suy ra
+    \begin{align*}
+        \tron{n^2+2}\mid\tron{2n^3+8n+1}
+        &\Rightarrow        \tron{n^2+2}\mid\tron{2n\left(n^2+2\right)+4n+1}\\&
+        \Rightarrow \tron{n^2+2}\mid\tron{4n+1}
+        \\&\Rightarrow \tron{n^2+2}\mid\tron{4n-1}\tron{4n+1}  
+        \\&\Rightarrow\tron{n^2+2}\mid\tron{16n^2+32-33} \\&
+        \Rightarrow\tron{n^2+2}\mid33.    
+    \end{align*}        
+    Theo đó, $n^2+2$ là ước của $33,$ và $n\in\{-3;3;-1;1\}.$ \\
+    Thử lại, ta thấy chỉ có $n=-3$ và $n=-1$ thỏa mãn.
+\end{enumerate}}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $n$ sao cho 
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item Phân số $A=\dfrac{n^2-19}{n+5}$ chưa tối giản.
+    \item Phân số $A=\dfrac{n^3+8n-2}{n+3}$ tối giản.
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta nhận thấy rằng
+    $$A=\dfrac{n^2-19}{n+5}=\dfrac{n^2-25+6}{n+5}=\dfrac{n^2-25}{n+5}+\dfrac{6}{n+5}=n-5+\dfrac{6}{n+5}.$$
+    Như vậy, $A$ chưa tối giản khi và chỉ khi $(6,n+5)\ne 1.$ Theo đó, $n+5$ chia hết cho $2$ hoặc $3.$
+    \begin{itemize}
+        \item Số dư của $n+5$ khi chia cho $6$ phải là một trong ba số $0,2,4,$ do $n+5$ chia hết cho $2.$ Ta suy ra số dư của $n$ khi chia cho $6$ là $1,3$ hoặc $5.$
+        \item Số dư của $n+5$ khi chia cho $6$ phải là một trong hai số $0,3,$ do $n+5$ chia hết cho $3.$ Ta suy ra số dư của $n$ khi chia cho $6$ là $1$ hoặc $4.$       
+    \end{itemize}
+    Tổng kết lại, các số $n$ thỏa yêu cầu có dạng $$6k+1,\ 6k+3,\ 6k+4,\ 6k+5,$$ trong đó $k$ là số tự nhiên nào đó.
+    \item Ta nhận thấy rằng 
+    $$A= \dfrac{n^3+8n-2}{n+3} = \dfrac{\tron{n^3+27}+\tron{8n+24}-53}{n+3}=n^2-3n+17-\dfrac{53}{n+3}.$$
+    Như vậy, $A$ tối giản khi và chỉ khi $\tron{53,n+3}= 1$. Theo đó, $n+3$ không chia hết cho $53$. Ta suy ra số dư của $n$ khi chia cho $53$ khác $53-3=50,$ và đây cũng là các số nguyên dương $n$ thỏa yêu cầu.
+\end{enumerate}}
+\end{bx}
+
+\begin{bx}
+Chứng minh rằng, số ước dương của một số nguyên dương $A$ gồm $n$ ước nguyên tố\footnote{Số nguyên tố là số chỉ có hai ước nguyên dương là 1 và chính nó.} và có phân tích tiêu chuẩn $A=p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}$ là $\left(k_1+1\right)\left(k_2+1\right)\ldots\left(k_n+1\right).$
+\loigiai{
+Một ước nguyên dương của số $A$ như đã cho sẽ có dạng
+$${p_1}^{m_1}p_2^{m_2}\ldots p_n^{m_n},$$
+trong đó, $m_1,m_2,\ldots,m_n$ lần lượt là các số nguyên dương thỏa mãn $m_i\le n_i,i=\overline{1,n}.$\\
+Có tất cả $k_1+1$ cách chọn giá trị cho $m_1,$ do $m_1\in \{0;1;2;\ldots;k_1\}.$ Bằng lập luận tương tự, ta chỉ ra số cách chọn một bộ $\tron{m_1,m_2,\ldots,m_n}$ là
+$$\tron{k_1+1}\tron{k_2+1}\ldots\tron{k_n+1}.$$
+Đây cũng chính là số ước nguyên dương của $A.$
+}
+\end{bx}
+
+\begin{bx}
+Chứng minh số nguyên dương $a$ có lẻ ước khi và chỉ khi $a$ là số chính phương \footnote{Số chính phương là bình phương của một số tự nhiên.}.
+\loigiai{
+Giả sử tồn tại số nguyên dương $a$ gồm $n$ ước nguyên tố phân biệt thỏa mãn yêu cầu bài toán. Ta đặt
+	$$a=p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}.$$
+Theo tính chất đã biết, số ước nguyên dương của $A$ chính là
+    $$\left(k_1+1\right)\left(k_2+1\right)\ldots\left(k_n+1\right).$$
+Tích bên trên là số lẻ, chứng tỏ các số $k_1,k_2,\ldots,k_n$ đều chẵn. Lần lượt đặt $$k_1=2m_1,k_2=2m_2,\ldots,k_n=2m_n.$$
+Các phép đặt như vậy sẽ cho ta
+\begin{align*}
+    a=p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}
+    =p_1^{2m_1}p_2^{2m_2}\ldots p_n^{2m_n}
+    =\left(p_1^{m_1}p_2^{m_2}\ldots p_n^{m_n}\right)^2.
+\end{align*}
+Chọn $x=p_1^{m_1}p_2^{m_2}\ldots p_n^{m_n},$ và bài toán được chứng minh.
+}
+
+\end{bx}
+
+\begin{bx}
+	Tìm số tự nhiên nhỏ nhất có
+	\begin{multicols}{2}
+		\begin{enumerate}[a,]
+			\item $9$ ước số.
+			\item $12$ ước số.
+		\end{enumerate}
+	\end{multicols}
+	\loigiai{
+		\begin{enumerate}[a,]
+			\item Giả sử tồn tại số nguyên dương $A$ gồm $n$ ước nguyên tố phân biệt thỏa mãn yêu cầu bài toán. Ta đặt
+			$$A=p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}.$$
+			Không mất tổng quát, ta giả sử $k_1\ge k_2\ge \ldots\ge k_n.$ Tổng số ước nguyên dương của $A$ là $9,$ vậy nên
+			$$\left(k_1+1\right)\left(k_2+1\right)\ldots\left(k_n+1\right)=9.$$
+			Có duy nhất một cách phân tích $9$ thành các thừa số lớn hơn $1,$ đó là $9=3\cdot3.$ Dựa vào đây, ta chia bài toán làm hai trường hợp.
+			\begin{itemize}
+			    \item \chu{Trường hợp 1.} $k_1+1=k_2+1=3,k_3+1=\ldots=k_n+1=1.$ \\
+			    Trường hợp này cho ta $k_1=k_2=2,k_3=k_4=\ldots=k_n=0,$ và ta có
+			    $$A=p_1^2p_2^2.$$
+			    Do tính nhỏ nhất của $A,$ ta chọn $p_1=2,p_2=3$ (hoặc $p_1=3,p_2=2$). Lúc này, $A=36.$
+			    \item \chu{Trường hợp 2.} $k_1+1=9,k_2+1=k_3+1=\ldots=k_n+1=1.$ \\
+			    Trường hợp này cho ta $k_1=8,k_3=k_4=\ldots=k_n=0,$ và ta có
+			    $$A=p_1^8.$$
+			    Do tính nhỏ nhất của $A,$ ta chọn $p_1=2$. Lúc này, $A=256.$
+			\end{itemize}
+			Dựa vào so sánh $36<256,$ ta tìm ra $A=36.$ Đây chính là kết quả bài toán.
+			\item Giả sử tồn tại số nguyên dương $A$ gồm $n$ ước nguyên tố phân biệt thỏa mãn yêu cầu bài toán. Ta đặt
+			$$A=p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}.$$
+			Không mất tổng quát, ta giả sử $k_1\ge k_2\ge \ldots\ge k_n.$ 
+			Bằng lập luận tương tự như câu \circEX{\textcolor{black}{1}}, ta chia bài toán thành 4 trường hợp
+			\begin{itemize}
+			    \item \chu{Trường hợp 1.} $A=p_1^2p_2p_3.$ \\
+			    Do tính nhỏ nhất của $A$ nên $p_1,p_2,p_3$ chỉ nhận các giá trị $2,3,5.$ Thử lần lượt với $p_1=2,3,5,$ còn $p_2p_3$ là tích hai giá trị còn lại, ta thu được giá trị $A$ nhỏ nhất là $A=2^2\cdot3\cdot5=60.$
+			    \item \chu{Trường hợp 2.} $A=p_1^5p_2.$ Lập luận tương tự, ta được $A=2^5\cdot3=96.$
+			    \item \chu{Trường hợp 3.} $A=p_1^3p_2^2.$ Lập luận tương tự, ta được $A=2^3\cdot3^2=72.$	\item \chu{Trường hợp 4.} $A=p_1^{11}.$ Lập luận tương tự, ta được $A=2^{11}\cdot3^2=2048.$
+	        \end{itemize}
+            So sánh kết quả thu được ở các trường hợp, ta được $A=60.$
+    \end{enumerate}   
+    Tổng kết lại, đáp số bài toán là $A=60.$
+	}	
+\end{bx}
+\begin{bx}
+Biết rằng $n$ là số nguyên dương nhận $2$ và $3$ là các ước nguyên tố thỏa mãn $2n$ có $8$ ước dương, $3n$ có $12$ ước dương. Hãy xác định số ước dương của $12n$.
+\loigiai{
+Đặt $n = 2^{x}3^{y}p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n},$ trong đó $x,y$ là $2$ số tự nhiên và $k_1, k_2,\ldots, k_n$ là các số nguyên dương. Xét số $$3n=  2^{x}3^{y+1}p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}.$$ 
+Do $3n=  2^{x}3^{y+1}p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}$ có $12$ ước dương, ta có
+$$\tron{x+1}\tron{y+2}\tron{k_1+1}\ldots\tron{k_n+1}=12.$$
+Một cách tương tự, do $2n=  2^{x+1}3^{y}p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n},$ ta có
+$$\tron{x+2}\tron{y+1}\tron{k_1+1}\ldots\tron{k_n+1}=8.$$
+Với chú ý rằng $8=2\cdot4=2\cdot2\cdot2$, ta chỉ ra $x+2 \in \left\{{2, 4}\right\},$ và đồng thời
+\[\dfrac{\tron{x+2}\tron{y+1}}{\tron{x+1}\tron{y+2} } = \dfrac{8}{12} = \dfrac{2}{3}.\tag{*} \label{na5}\]
+Ta xét các trường hợp sau đây.
+\begin{itemize}
+    \item \chu{Trường hợp 1.} Với $x+2 = 2$ hay là $x=0,$ thế trở lại (\ref{na5}), ta được
+    $$\dfrac{2\tron{y+1}}{\tron{y+2}} = \dfrac{2}{3} \Leftrightarrow 3\tron{y+1} = y +2 \Leftrightarrow 2y = -1.$$
+    Không tồn tại $y$ nguyên thỏa mãn trường hợp này.
+    \item \chu{Trường hợp 2.} Với $x+2 = 4$ hay $x=2,$ thế trở lại (\ref{na5}), ta được
+    $$\dfrac{4\tron{y+1}}{3\tron{y+2}} = \dfrac{2}{3} \Leftrightarrow 2\tron{y+1} = y +2 \Leftrightarrow y = 0.$$
+    Do đó, $x=2$ và $y=0.$
+    %em qua lấy code thôi, không sửa gì đâu
+\end{itemize}
+Kết luận, số $12n = 2^{x+2}3^{y+1}p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}$ có số ước dương là
+$$\tron{x+3}\tron{y+2}\tron{k_1+1}\ldots\tron{k_n+1}= 20.$$
+Bài toán được giải quyết.}
+\end{bx}
+
+\begin{luuy}
+Bài toán trên vẫn có cách giải quyết tương tự trong trường hợp $2$ và $3$ chưa chắc là ước nguyên tố của $n.$
+\end{luuy}
+
+\subsection{Ước chung lớn nhất và bội chung nhỏ nhất}
+\begin{dx}
+Ước chung lớn nhất của hai hay nhiều số nguyên là phần tử tự nhiên lớn nhất trong tập hợp các ước chung của các số đó.
+\end{dx} 
+Chẳng hạn, ta biết ước chung lớn nhất của $25$ và $15$ là $5,$ bởi vì
+    \begin{itemize}
+        \item Tập ước của $25$ là $\{-25;-5;-1;1;5;25\}.$
+        \item Tập ước của $15$ là $\{-15;-5;-3;-1;1;3;5;15\}.$   
+        \item Tập ước chung của $25$ và $15$ là $\{-5;-1;1;5\},$ và $5$ là phần tử lớn nhất trong này.
+    \end{itemize}
+Ta kí hiệu $(a,b,c,\ldots)$ thay cho việc gọi ước chung lớn nhất của các số $a,b,c,\ldots.$ Ngoài ra ở một số sách nước ngoài, chúng ta còn bắt gặp kí hiệu là $\gcd(a,b)$, nó bắt nguồn từ thuật ngữ trong tiếng anh "greatest common divisor $-$ gcd" (ước chung lớn nhất). Trong ví dụ trên, ta có $(15,25)=5.$ Về cách xác định ước chung lớn nhất, chúng ta tiến hành theo ba bước.
+\begin{light}
+\chu{Ba bước xác định ước chung lớn nhất}
+\begin{enumerate}
+    \item Phân tích mỗi số ra thừa số nguyên tố.
+    \item Chọn ra các thừa số nguyên tố \chu{chung}.
+    \item Lập tích các thừa số đã chọn, mỗi thừa số lấy với số mũ \chu{nhỏ nhất} của nó. Tích đó là ước chung lớn nhất cần tìm.
+\end{enumerate}
+\end{light}
+Chẳng hạn, với yêu cầu tính $(36,84,168),$ trước hết ta phân tích ba số trên ra thừa số nguyên tố
+$$36 =2^{2} \cdot 3^{2},\qquad 84 =2^{2} \cdot 3 \cdot 7,\qquad 168 =2^{3} \cdot 3 \cdot 7.$$
+Ta chọn ra các thừa số chung, đó là $2$ và $3$. Số mũ nhỏ nhất của $2$ là $2,$ còn của $3$ là $1.$ Như vậy
+$$(36,84,168)=2^{2} \cdot 3=12.$$
+Ngoài ra, chúng ta còn có một cách xác định ước chung lớn nhất khác, đó là thuật toán $Euclid.$ 
+
+Để tìm $\left( m,n \right)$ khi $m$  không chia hết cho $n$ ta thực hiện theo các bước
+    \begin{itemize}
+        \item $m=n{{q}_{1}}+{{r}_{1}},1\le {{r}_{1}}<n$ 
+        \item $n={{r}_{1}}{{q}_{2}}+{{r}_{2}},1\le {{r}_{2}}<{{r}_{1}}$ \\
+        $\ldots$
+        \item ${{r}_{k-2}}={{r}_{k-1}}{{q}_{k}}+{{r}_{k}},1\le {{r}_{k}}<{{r}_{k-1}}$ 
+        \item ${{r}_{k-1}}={{r}_{k}}{{q}_{k+1}}+{{r}_{k+1}},{{r}_{k+1}}=0$
+    \end{itemize}
+Ta thấy rằng, chuỗi đẳng thức này là hữu hạn bởi vì $n>{{r}_{1}}>{{r}_{2}}>...>{{r}_{k}}$. \\
+Như vậy ${{r}_{k}}$ là số dư cuối cùng khác 0 trong thuật toán Euclid nên $\left( m,n \right)={{r}_{k}}$.
+Hiểu đơn giản giải thuật này sẽ được mô tả ngắn gọn bằng công thức 
+\[\left( {a,b} \right) = \left( {b,a - b\cdot \bigg\lfloor {\frac{a}{b}} \bigg\rfloor }. \right)\]
+
+\begin{dx}
+Bội chung nhỏ nhất của hai hay nhiều số nguyên là phần tử nguyên dương nhỏ nhất trong tập các bội chung của các số đó.
+\end{dx} 
+Chẳng hạn, ta biết bội chung lớn nhất của $25$ và $15$ là $75,$ bởi vì
+    \begin{itemize}
+        \item Tập bội của $25$ là $\{...;-100;-75;-50;-25;0;25;50;75;100;...\}.$
+        \item Tập bội của $15$ là $\{...;-90;-75;-60;-45;-30;-15;0;15;30;45;60;75;90;...\}.$   
+        \item Tập bội chung của $25$ và $15$ là $\{\ldots;-75;0;75;\ldots\},$ và $75$ là phần tử nguyên dương trong này.
+    \end{itemize}
+Ta kí hiệu $[a,b,c,\ldots]$ thay cho việc gọi bội chung lớn nhất của các số $a,b,c,\ldots.$ Ngoài ra ở một số sách nước ngoài, chúng ta còn bắt gặp kí hiệu là $\text{lcm} (a,b)$, nó bắt nguồn từ thuật ngữ trong tiếng anh "least common multiple $-$ lcm" (bội chung nhỏ nhất). Trong ví dụ trên, ta có $[15,25]=75.$ Về cách xác định bội chung lớn nhất, chúng ta tiến hành theo ba bước.
+\begin{light}
+\chu{Ba bước xác định bội chung lớn nhất}
+\begin{enumerate}
+    \item Phân tích mỗi số ra thừa số nguyên tố,
+    \item Chọn ra các thừa số nguyên tố \chu{chung}.
+    \item Lập tích các thừa số đã chọn, mỗi thừa số lấy với số mũ \chu{lớn nhất} của nó. Tích đó là ước chung lớn nhất cần tìm.
+\end{enumerate}
+\end{light}
+Chẳng hạn, với yêu cầu tính $[8,18,30]$, trước hết ta phân tích ba số trên ra thừa số nguyên tố
+$$8 =2^{3},\qquad18 =2 \cdot 3^{2},\qquad30 =2 \cdot 3 \cdot 5.$$
+Chọn ra các thừa số nguyên tố chung và riêng, đó là $2,3,5$. Số mū lớn nhất của $2$ là $3$, số mũ lớn nhất của $3$ là $2,$ trong khi số mũ lớn nhất của $5$ là $1.$ Như vậy
+$$[8,18,30]=2^{3} \cdot 3^{2} \cdot 5=360.$$
+Đi cùng với những khái niệm và cách xác định liên quan tới ước chung lớn nhất và bội chung nhỏ nhất là một vài tính chất thú vị.
+
+\begin{light}
+\chu{Các tính chất về chia hết}
+\begin{enumerate}
+    \item Với $a,b,m$ là các số nguyên, nếu $ab$ chia hết cho $m$ và $(b,m)=1$ thì $a$ chia hết cho $m.$ Hệ quả là
+    \begin{itemize}
+        \item Nếu $a$ chia hết cho $m$ thì $(a,m)=m.$
+        \item Nếu $a^n$ chia hết cho $p$ (với $n$ là số nguyên dương lớn hơn $1$ và $p$ là số nguyên tố) thì $a$ chia hết cho $p.$
+    \end{itemize}
+    \item Với $a,m,n$ là các số nguyên, nếu $a$ chia hết cho $m$ và $n$ thì $a$ chia hết cho $(m,n).$ 
+    \item Với $a,b,m$ là các số nguyên, nếu $a$ và $b$ cùng chia hết cho $m$ thì $(a,b)$ chia hết cho $m.$    
+    \item Với $a,m,n$ là các số nguyên, nếu $a$ chia hết cho cả $m$ và $n$ thì $a$ chia hết cho $[m,n]$.  
+\end{enumerate}
+\chu{Các tính chất khác}
+\begin{enumerate}
+    \item Với mọi số nguyên $a,b$ khác $0,$ ta có $(a,1)=1$ và $[a,1]=a.$
+    \item Với mọi số nguyên $a,b$ khác $0,$ ta có $(a,b)[a,b]=ab.$    
+    \item Với mọi số nguyên $a,b$ khác $0$ và số nguyên $k,$ ta có $(a,b)=k(a,b)$ và $[a,b]=k[a,b].$
+    \item Với mọi số nguyên $a,b$ khác $0$ và số nguyên dương $n,$ ta có \[\tron{a^n,b^n}=(a,b)^n,\qquad [a^n,b^n]=[a,b]^n.\]   
+\end{enumerate}
+\end{light}
+\subsubsection*{Ví dụ minh họa}
+ 
+\begin{bx}
+Với số tự nhiên $n$ bất kì, hãy chứng minh rằng\\
+\begin{minipage}{0.45\textwidth}
+\begin{enumerate}[a,]
+    \item $(2n+1,3n+2)=1.$
+    \item $(4n+1,6n+2)=1.$
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+\begin{enumerate}
+    \setcounter{enumi}{2}
+    \item[c,] $\left(n+3,n^2-2n-14\right)=1.$
+    \item[d,] $\left(n^2+4n+5,n^3+5n^2-13\right)=1.$
+\end{enumerate}
+\end{minipage}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Đặt $\tron{2n + 1, 3n + 2}= d$, ta có
+    $$\left\{\begin{aligned}
+         &d\mid (2n + 1) \\
+         &d\mid (3n + 2 )  
+    \end{aligned}\right.
+    \Rightarrow \left\{\begin{aligned}
+         &d\mid 3\tron{2n + 1} \\
+         &d\mid 2\tron{3n + 2}   
+    \end{aligned}\right.
+    \Rightarrow d\mid 2\tron{3n + 2} - 3\tron{2n + 1} = 1.$$
+Ta thu được $(2n+1,3n+2)=1.$
+    \item Đặt $\tron{4n + 1, 6n + 2}= d$, ta có
+    $$\left\{\begin{aligned}
+         &d\mid (4n + 1) \\
+         &d\mid (6n + 2)   
+    \end{aligned}\right.
+    \Rightarrow \left\{\begin{aligned}
+         &d\mid 3\tron{4n + 1} \\
+         &d\mid 2\tron{6n + 2}   
+    \end{aligned}\right.
+    \Rightarrow d\mid 2\tron{6n + 2} - 3\tron{4n + 1} = 1.
+$$
+Ta thu được $\tron{4n + 1, 6n + 2}=1.$
+    \item Đặt $\tron{n + 3, n^2 - 2n - 14}= d$, ta có
+    \begin{align*}
+        \left\{\begin{aligned}
+         &d\mid (n + 3) \\
+         &d\mid \tron{n^2 - 2n - 14}   
+    \end{aligned}\right.
+    &\Rightarrow \left\{\begin{aligned}
+         &d\mid \tron{n^2 + 3n} \\
+         &d\mid \tron{n^2 - 2n - 14}   
+    \end{aligned}\right.
+    \\&\Rightarrow \left\{\begin{aligned}
+         &d\mid (n + 3)\\
+         &d\mid \tron{n^2 + 3n} -\tron{n^2 - 2n - 14 }  
+    \end{aligned}\right.
+    \\&\Rightarrow
+    \left\{\begin{aligned}
+         &d\mid (n + 3) \\
+         &d\mid (5n + 14)   
+    \end{aligned}\right.
+    \\&\Rightarrow d\mid 5\tron{n+3} - \tron{5n + 14} = 1.
+    \end{align*}
+Ta thu được $\tron{n + 3, n^2 - 2n - 14}=1.$
+    \item Đặt $\left(n^2+4n+5,n^3+5n^2-13\right)=d$, ta có
+    \begin{align*}
+        \left\{\begin{aligned}
+         &d\mid \tron{n^2+4n+5} \\
+         &d\mid \tron{n^3+5n^2-13}   
+    \end{aligned}\right.
+    &\Rightarrow \left\{\begin{aligned}
+         &d\mid \tron{n^3 + 4n^2+5n} \\
+         &d\mid \tron{n^3+5n^2-13}   
+    \end{aligned}\right.
+    \\&\Rightarrow \left\{\begin{aligned}
+         &d\mid \tron{n^2+4n+5}\\
+         &d\mid \tron{n^2 - 5n -13} 
+    \end{aligned}\right.
+    \\&\Rightarrow
+    \left\{\begin{aligned}
+         &d\mid \tron{n^2+4n+5} \\
+         &d\mid (9n + 18)  
+    \end{aligned}\right.
+    \\&\Rightarrow \left\{\begin{aligned}
+         &d\mid \tron{9n^2+36n+45} \\
+         &d\mid \tron{9n^2 + 18n}   
+    \end{aligned}\right.
+    \\&\Rightarrow \left\{\begin{aligned}
+         &d\mid (18n+45)\\
+         &d\mid (9n + 18) 
+    \end{aligned}\right.
+    \\&\Rightarrow \left\{\begin{aligned}
+         &d\mid (18n+45)\\
+         &d\mid (18n + 36) 
+    \end{aligned}\right.
+    \\&\Rightarrow d \mid (18n+45)-(18n+36)=9.
+    \end{align*}
+Tới đây, ta xét các trường hợp sau.    
+\begin{itemize}
+    \item \chu{Trường hợp 1.} Với $d=3$ hoặc $d=9,$ ta có $n^2+4n+5$ chia hết cho $3.$
+    \begin{itemize}
+        \item Nếu $n+2$ chia cho $3$ dư $1$ hoặc dư $2,$ ta đặt $n=3k\pm 1.$ Ta có
+        $$n^2+4n+5=(n+2)^2+1=(3k\pm 1)^2+1=9k^2\pm 6k+2.$$
+        Số kể trên chia cho $3$ dư $2,$ mâu thuẫn.
+        \item Nếu $n+2$ chia hết cho $3,$ ta có $n^2+4n+5=(n+2)^2+1$ chia cho $3$ dư $1,$ mâu thuẫn.
+    \end{itemize}
+    \item \chu{Trường hợp 2.} Với $d=1,$ bài toán được chứng minh.
+\end{itemize}
+\end{enumerate}}
+\end{bx}
+
+%bài 67b - Triết và chế thêm 1 bài tương tự theo kiểu xa+yb
+\begin{bx}
+Cho hai số $a,b$ nguyên tố cùng nhau. Chứng minh rằng
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $\tron{11a+2b, 18a+5b}$ bằng 1 hoặc 19.
+    \item $\tron{25a+7b, 17a +6b}$ bằng 1 hoặc 31.
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta đặt $\tron{11a+2b, 18a+5b}=d$. Ta có
+    $$\heva{&d\mid (11a+2b) \\ &d\mid (18a+5b)}\Rightarrow
+    \heva{&d\mid 5(11a+2b)\\ &d\mid 2(18a+5b)}\Rightarrow
+    d\mid 5(11a+2b)-2(18a+5b)\Rightarrow d\mid 19a.$$
+    Ta cũng có thể chỉ ra rằng
+    $$\heva{&d\mid (11a+2b) \\ &d\mid (18a+5b)}\Rightarrow
+    \heva{&d\mid 18(11a+2b)\\ &d\mid 11(18a+5b)}\Rightarrow
+    d\mid 18(11a+2b)-11(18a+5b)\Rightarrow d\mid 19b.$$    
+    Hai lập luận kể trên cho ta biết
+    $$\heva{&d\mid 19a \\ &d\mid 19b}\Rightarrow d\mid 19(a,b)\Rightarrow d\mid 19.$$
+    Như vậy, bài toán đã cho được chứng minh.
+    \item Ta đặt $\tron{25a+7b, 17a +6b}=d$. Ta có
+    $$\heva{&d \mid (25a+7b)\\ &d\mid (17a +6b)}\Rightarrow \heva{&d\mid 6\tron{25a+7b}\\ &d\mid 7(17a +5b)}\Rightarrow d\mid 6\tron{25a+7b}-7(17a +6b) \Rightarrow d\mid 31a.$$
+    Ta cũng có thể chỉ ra rằng
+    $$\heva{&d \mid (25a+7b)\\ &d\mid (17a +6b)}\Rightarrow \heva{&d\mid 17\tron{25a+7b}\\ &d\mid 25(17a +5b)}\Rightarrow d\mid 17\tron{25a+7b}-25(17a +6b) \Rightarrow d\mid 31b.$$
+   Hai lập luận kể trên cho ta biết
+    $$\heva{&d\mid 31a \\ &d\mid 31b}\Rightarrow d\mid 31(a,b)\Rightarrow d\mid 31.$$
+    Như vậy, bài toán đã cho được chứng minh.
+\end{enumerate}}
+\end{bx}
+
+\begin{bx}
+Với hai số tự nhiên $a,b$ bất kì thỏa mãn $(a,b)=1,$ hãy chứng minh rằng
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $(a+b,ab)=1.$
+    \item $\left(a^2+b^2,a+b\right)\in \left\{{1,2} \right\}.$
+    \item $\left(a^5-b^5,a+b\right) \in \left\{{1,2} \right\}.$
+    \item $\left(2^a-1,2^b-1\right)=1.$
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta đặt $\left(a+b,ab\right)=d.$ Phép đặt này cho ta
+    $$\heva{&d\mid (a+b)\\&d\mid ab}
+    \Rightarrow \heva{&d\mid a(a+b)\\&d\mid b(a+b)\\&d\mid ab}
+    \Rightarrow\heva{&d\mid a^2 \\ &d\mid b^2}\Rightarrow d\mid \tron{a^2,b^2}
+    \Rightarrow d\mid (a,b)^2\Rightarrow 
+    d\mid 1\Rightarrow d=1.$$
+    Bài toán được chứng minh.
+    \item  Ta đặt $\left(a^2+b^2,a+b\right)=d.$ Phép đặt này cho ta
+    \begin{align*}
+    \heva{&d\mid \tron{a^2+b^2}\\ &d\mid \tron{a+b}}
+    &\Rightarrow
+    \heva{&d\mid \tron{a^2+b^2}\\ &d\mid \tron{a+b}\tron{a-b}}    
+    \\&\Rightarrow \left\{\begin{aligned}
+         d\mid \tron{a^2 + b^2}\\
+         d\mid \tron{a^2 - b^2}
+    \end{aligned}\right.
+    \\&\Rightarrow \left\{\begin{aligned}
+         d\mid 2a^2\\
+         d\mid 2b^2
+    \end{aligned}\right.\\&
+    \Rightarrow d\mid \tron{2a^2,2b^2}
+    \\&\Rightarrow d\mid 2(a,b)^2\\&\Rightarrow
+    d\in\{1;2\}.
+    \end{align*}
+    Bài toán được chứng minh.
+   \item  Đặt $\left(a^5-b^5,a+b\right)=d,$ ta có $d\mid \tron{a^5-b^5}$ và $d\mid (a+b)$. Ngoài ra, ta còn phân tích được
+    $$a^5+b^5 = \tron{a+b}\tron{a^4 - a^3b +a^2b^2-ab^3+b^4} \Rightarrow d\mid a^5+b^5.$$
+    
+    Phân tích trên chỉ ra cho ta
+    $$\left\{\begin{aligned}
+         d\mid \tron{a^5+b^5}\\
+         d\mid \tron{a^5-b^5}
+    \end{aligned}\right.
+    \Rightarrow \left\{\begin{aligned}
+         d\mid 2a^5\\
+         d\mid 2b^5
+    \end{aligned}\right.
+    \Rightarrow d\mid \tron{2a^5,2b^5}
+    \Rightarrow d\mid 2(a,b)^5
+    \Rightarrow d\mid 2
+    \Rightarrow d\in\{1;2\}.$$
+    Bài toán được chứng minh.
+    \item Đặt $\tron{2^a -1, 2^b -1} = d,$ ta có $d\mid \tron{2^a-1}$ và $d\mid \tron{2^b-1}.$ Ngoài ra, ta còn chứng minh được
+    $$2^b-1=2^{b-a}\tron{2^a-1}+2^{b-a}-1.$$
+    Như vậy, $2^{b-a}-1$ cũng chia hết cho $d.$ Cách hạ số mũ số bị chia thành hiệu như vậy chính là thuật toán $Euclid.$ Sau hữu hạn các bước hạ, ta chỉ ra
+    $$d\mid \tron{2^{(a,b)}-1}.$$
+    Do $(a,b)=1,$ ta thu được $d=1.$ Bài toán được chứng minh.
+\end{enumerate}
+}
+\end{bx}
+
+%bài 64 Triết
+\begin{bx}
+Chứng minh nếu $a,b,c \in \mathbb{Z}$ đôi một nguyên tố cùng nhau thì \[\tron{ab+bc+ca, abc} =1.\]
+\loigiai{Dựa vào chú ý $ab+bc+ca=(b+c)a+bc,$ ta nhận thấy rằng
+$$(ab+bc+ca,a)=(a,bc).$$
+Do $(a, b)=(a, c)=1$  nên $(a, b c)=1 .$
+Một cách tương tự, ta chỉ ra 
+\[(a b+b c+c a,b)=(a b+b c+c a, c)=1.\]
+Như vậy, $(a b+b c+c a, a b c)=1.$ Bài toán được chứng minh.}
+\end{bx}
+
+%bài 71b và 72 của Triết, gộp thành 2 ý trong 1 bài
+\begin{bx}
+Hãy tính
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $[a,a+2].$
+    \item $[a,a+1,a+2].$
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta nhận thấy rằng $\tron{a, a+2} = \heva{1 &\text{ nếu $a$ lẻ}\\ 2 &\text{ nếu $a$ chẵn}.}$\\
+    Từ đây, theo tính chất đã biết, ta có 
+    $$\vuong{a, a+2}=\dfrac{a\tron{a+2}}{\tron{a,a+2}}= \heva{ a\tron{a+2} &\text{ nếu $a$ lẻ}\\ \dfrac{a\tron{a+2}}{2} &\text{ nếu $a$ chẵn}.}$$
+    \item Ta nhận thấy rằng $\tron{a\tron{a+2},a=1}= \tron{a\tron{a+1}+a, a+1}= \tron{a,a+1}= 1.$\\
+    Áp dụng ý trên, ta xét các trường hợp dưới đây.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $a$ lẻ , ta có $$\vuong{a,a+1,a+2}= \vuong{\vuong{a,a+2},a+1}=\vuong{a\tron{a+2}, a+1}=a\tron{a+1}\tron{a+2}.$$
+            \item\chu{Trường hợp 2.} Với $a$ chẵn , ta có $$\vuong{a,a+1,a+2}= \vuong{\vuong{a,a+2},a+1}=\vuong{\dfrac{a\tron{a+2}}{2}, a+1}=\dfrac{a\tron{a+1}\tron{a+2}}{2}.$$
+    \end{itemize}
+\end{enumerate}
+}
+\end{bx}
+
+\begin{bx}
+Chứng minh rằng $[1,2, \ldots, 2 n]=[n+1, n+2, \ldots, 2 n]$.
+\loigiai{Trong $k$ số nguyên liên tiếp, có một và chỉ một số chia hết cho $k$. Do đó, mỗi một số trong các số $$1, 2, 3, \ldots,2n-1, 2 n$$ 
+là ước của ít nhất một số trong các số
+$$n+1,n+2,n+3,\ldots,2n-1, 2n.$$
+Kết quả trên dẫn ta đến điều phải chứng minh.}
+\end{bx}
+
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $a,b,c$ thỏa mãn đồng thời các điều kiện
+$$(a,20)=b,\qquad (b,15)=c,\qquad (c,a)=5.$$
+\nguon{Austrian Mathematical Olympiad Regional Competition 2015}
+\loigiai{
+Theo giả thiết $\tron{a,20}=b,$ ta suy ra $b\mid 20.$ Kết hợp với $\tron{b,15}=c$, ta có
+$$c\mid \tron{20,15}\Rightarrow c\mid 5\Rightarrow c\in\left\{1,5\right\}.$$
+Thế từng giá trị của $c$ vào giả thiết $\tron{c,a}=5$, ta nhận được $c=5.$ Nhận xét này cho ta
+$$\heva{&b\mid20\\&\tron{b,15}=c}\Rightarrow b\in \left\{5,10,20\right\}.$$
+Ta xét từng trường hợp sau.
+\begin{enumerate}
+    \item Với $b=5,$ thế vào giả thiết, ta thu được $\tron{a,20}=5,$ và $a=5k,$ trong đó $\tron{k,4}=1.$
+    \item Với $b=10,$ thế vào giả thiết, ta thu được $\tron{a,20}=10,$ và $a=10k,$ trong đó $\tron{k,2}=1.$
+    \item Với $b=20$ thế vào giả thiết, ta thu được $\tron{a,20}=5,$ và $a=20k$ trong đó $k$ nguyên dương tùy ý.
+\end{enumerate}}
+\end{bx}
+
+%bài 75 Triết
+\begin{bx}
+Tìm các số nguyên dương $a, b$ thoả mãn đồng thời $(a, b)=15$ và $[a, b]=2835.$
+\loigiai{
+Từ giả thiết $(a,b)=15$, ta có thể đặt $a=15x, b=15y$ với $\left(x, y\right)=1$. Phép đặt này cho ta
+$$[a, b]=\left[15x,15y\right]=15\left[x,y\right]=15xy.$$
+Kết hợp biến đổi trên với giả thiết $[a,b]=2835,$ ta có
+$$15xy=2835\Rightarrow xy=189=3^{3} \cdot7.$$
+Vì $a, b$ có vai trò như nhau nên không mất tính tổng quát, ta giả sử $a \leq b$.\\
+Do $\left(x,y\right)=1$ nên $x=1, y=189$ hoặc $x=27, y=7.$ Kiểm tra trực tiếp từng trường hợp, ta kết luận các cặp $(15,2835),(105,405),(405,105),(2835,15)$ là các cặp số thỏa yêu cầu bìa toán.}
+\end{bx}
+
+%bài 73 Triết
+\begin{bx}
+Cho $m, n$ là hai số nguyên dương thoả mãn $(m, n)+[m, n]=m+n$ và $m>n.$ Chứng minh rằng $m$ chia hết cho $n.$
+\nguon{Saint Peterburg Mathematical Olympiad 2008}
+\loigiai{
+Với các số $m,n$ thỏa yêu cầu bài toán, ta có
+$$
+\heva{
+&(m,n)+[m,n]=m+n\\
+&(m,n)[m,n]=mn.
+}$$
+Vì thế, $\tron{m,n}$ và $\vuong{m+n}$ là nghiệm của phương trình ẩn $x$ $$x^2-\tron{m+n}x+mn=0.$$
+Ta nhận thấy $m,n$ cũng là cặp nghiệm của phương trình trên. Với việc $m\ne n,$ lập luận trên cho ta
+$$\left\{\tron{m,n}, \vuong{m,n}\right\}=\{m,n\}.$$
+Dựa trên so sánh $[m,n]>(m,n),$ ta biết được rằng $m=[m,n]$ và $n=(m,n).$ \\Do $[m,n]$ chia hết cho $(m,n),$ bài toán đã cho được chứng minh.}
+\end{bx}
+
+%bài 76 Triết và chế thêm 1 ý kiểu như a^3+b^3 hoặc tương tự
+\begin{bx}
+Tìm các số tự nhiên $a,b$ thỏa mãn 
+\begin{enumerate}[a,]
+    \item $a^{2}+b^{2}=468$ và $(a, b)+[a, b]=42.$
+    \item $a^3+b^3=1512$ và $(a, b)+[a, b]=42.$
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+\item Ta đặt $a=dx, b=dy$ với $\tron{x,y}=1$. Phép đặt này cho ta
+$$\heva{d^2\tron{x^2+y^2}&=468\\
+d\tron{1+xy}&=42
+}\Rightarrow \dfrac{x^2+y^2}{\tron{1+xy}^2}=\dfrac{13}{7^2}\Rightarrow \dfrac{x^2+y^2}{13}=\dfrac{(xy+1)^2}{7^2}.$$
+Ta tiếp tục đặt $k=\dfrac{x^2+y^2}{13}.$ Biến đổi trên kết hợp với phép đặt giúp ta chỉ ra
+$$
+x^2+y^2=13k^2,\qquad
+1+xy=7k
+$$
+Do $d\cdot7k=d\tron{1+xy}=42,$ ta có $d$ là ước của $6.$ Không mất tính tổng quát, ta giả sử $x\le y.$ \\
+Ta xét các trường hợp sau.
+\begin{itemize}
+    \item\chu{Trường hợp 1.} Với $k=1$, ta thay vào hệ phương trình trên và thu được
+    $$\heva{
+    x^2+y^2&=13\\
+    1+xy&=7
+    }\Leftrightarrow \heva{x+y&=5\\ xy&=6}
+    \Leftrightarrow \heva{x=2\\y=3.}$$
+    \item\chu{Trường hợp 2.} Với $k=2,3,6,$ bằng cách giải hệ như trên, ta không tìm được $x,y$ nguyên dương.
+\end{itemize}
+Vậy $(a,b)=(12,18)$ và  $(a,b)=(18,12)$ là các cặp số thỏa mãn yêu cầu của đề bài.
+\item Ta đặt $a=dx, b=dy$ với $\tron{x,y}=1$. Phép đặt này cho ta
+$$\heva{d^3\tron{x^3+y^3}&=1512\\
+d\tron{1+xy}&=42
+}\Rightarrow \dfrac{x^3+y^3}{\tron{1+xy}^3}=\dfrac{7}{7^3}\Rightarrow\dfrac{x^3+y^3}{7}=\dfrac{\tron{1+xy}^3}{7^3}.$$
+Ta tiếp tục đặt $k=\dfrac{x^3+y^3}{7}.$ Biến đổi trên kết hợp với phép đặt giúp ta chỉ ra
+$$x^3+y^3=7k^3,\qquad 1+xy=7k.$$
+Do $d\cdot7k=d\tron{1+xy}=42,$ ta có $d$ là ước của $6.$ Không mất tính tổng quát, ta giả sử $x\le y.$ \\
+Ta xét các trường hợp sau.
+\begin{itemize}
+    \item\chu{Trường hợp 1.} Với $k=1,2,6,$ thử trực tiếp, ta không tìm được $x,y$ thỏa yêu cầu.
+   \item\chu{Trường hợp 2.} Với $k=3$, ta thay vào hệ phương trình và thu được
+$\heva{x^3+y^3&=189\\1+xy&=21.}$\\
+Hệ trên cho ta $xy=20.$ Ngoài ra 
+$$x^3+y^3=\tron{x+y}^3-3xy\tron{x+y}=\tron{x+y}^3-60\tron{x+y}.$$
+Giải phương trình
+$\tron{x+y}^3-60\tron{x+y}=189$
+trong điều kiện $x+y>0,$ ta nhận thấy $x+y=9$.\\ Kết hợp với $xy=20$, ta thu được
+$x=4, y=5,$ và khi đó
+$$a=2x=8,\quad b=2y=10.$$
+\end{itemize}
+Như vậy, tất cả các cặp số $(a,b)$ thỏa yêu cầu bài toán là $(8,10)$ và $(10,8).$
+\end{enumerate}}
+
+
+\end{bx}
+%bài 77 Triết
+\begin{bx}
+Cho $a, b \in \mathbb{Z}$. Chứng minh rằng $(a+b,[a, b])=(a, b)$.
+\loigiai{Ta đặt $a=dx, b=dy$ với $\tron{x,y}=1$. Phép đặt này cho ta $$(a+b,[a, b])=\left(dx+dx, dxy\right)=d\left(x+y, xy\right).$$
+Dựa trên các lập luận $\tron{x+y,x}=\tron{y,x}=1$ và $\tron{x+y,y}=\tron{x,y}=1$, ta suy ra $\tron{x+y,xy}=1$. \\
+Bài toán được chứng minh.}
+\end{bx}
+
+\subsection{Đồng dư thức}
+
+\begin{dx}
+Cho số nguyên dương $m,$ Hai số nguyên $a$ và $b$ được gọi là đồng dư theo modulo $m$ nếu chúng có cùng số dư khi chia cho $m.$ Điều này tương đương với hiệu $a-b$ chia hết cho $m.$
+\end{dx}
+Ta kí hiệu $a\equiv b\pmod{m}$ trong trường hợp $a$ và $b$ đồng dư theo modulo $m$. Ngược lại, nếu như $a$ không đồng dư $b$ đồng dư theo modulo $m,$ ta kí hiệu $a\not\equiv b\pmod{m}.$ Chẳng hạn
+\begin{enumerate}
+    \item Do $17$ và $87$ có cùng số dư (là $7$) khi chia cho $10,$ ta kí hiệu $17\equiv 87\pmod{10}.$
+    \item Do $25$ và $28$ không có cùng số dư khi chia cho $11,$ ta kí hiệu $25\not\equiv 28\pmod{11}.$
+\end{enumerate}
+Tiếp theo, chúng ta hãy cùng tìm hiểu một số tính chất của phép toán đồng dư.
+\begin{light}
+\chu{Các quan hệ tương đương của đồng dư.}
+\begin{enumerate}
+    \item \chu{Quan hệ phản xạ.} Với mọi số nguyên $a$ và số nguyên $m\ne 0,$ ta luôn có $a\equiv a\pmod{m}.$
+    \item \chu{Quan hệ đối xứng.} Với mọi số nguyên $a,b$ và số nguyên $m\ne 0,$ ta có
+    $$a\equiv b\pmod{m}\Leftrightarrow b\equiv a\pmod{m}.$$
+    \item \chu{Quan hệ bắc cầu.} Với mọi số nguyên $a,b,c$ và số nguyên $m\ne 0,$ ta có
+    $$\heva{&a\equiv b\pmod{m} \\ &b\equiv c\pmod{m}}\Rightarrow a\equiv c\pmod{m}.$$
+\end{enumerate}
+\chu{Các phép toán trong đồng dư.}\\
+Phép đồng dư còn có thể cộng, trừ, nhân và nâng lên lũy thừa các đồng dư thức có cùng một modulo. Cụ thể, với giả sử
+$$a_1\equiv a_2\pmod{m},\qquad b_1\equiv b_2\pmod{m},$$
+ta có các tính chất sau đây.
+\begin{enumerate}
+    \item $a_{1}+b_{1} \equiv a_{2}+b_{2} \pmod{m}.$
+    \item $a_{1}-b_{1} \equiv a_{2}-b_{2} \pmod{m}.$
+    \item $a_{1}b_{1} \equiv a_{2}b_{2} \pmod{m}.$
+    \item $a_{1}^k \equiv a_{2}^k \pmod{m},$ trong đó $k$ là số tự nhiên tùy ý.
+\end{enumerate}
+Ngoài ra, đồng dư còn có \chu{luật giản ước}. Cụ thể, với mọi số nguyên $a,b,c,m$ khác $0,$ ta có
+$$\heva{&ac\equiv bc\pmod{m}\\&(c,m)=1}\Rightarrow a\equiv b\pmod{m}.$$
+\end{light}
+
+Dưới đây là một dạng bài tập minh họa. Loạt bài tập này có thể giải bằng kiến thức về ước, bội, tuy nhiên xử lí chúng bằng đồng dư trông đẹp hơn rất nhiều!
+
+\subsubsection*{Ví dụ minh họa}
+\begin{bx}
+Tìm số tự nhiên $n$ nhỏ nhất sao cho khi chia $n$ cho $3,4,5,6,$ ta lần lượt nhận được các số dư là $2,3,4,5.$
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ thỏa mãn yêu cầu. Ta có
+$$\left\{\begin{aligned}
+     n&\equiv 2\pmod{3} \\
+     n&\equiv 3\pmod{4} \\
+     n&\equiv 4\pmod{5} \\
+     n&\equiv 5\pmod{6}      
+\end{aligned}\right.
+\Leftrightarrow \left\{\begin{aligned}
+     2n&\equiv 4\pmod{3} \\
+     2n&\equiv 6\pmod{4} \\
+     2n&\equiv 8\pmod{5} \\
+     2n&\equiv 10\pmod{6}      
+\end{aligned}\right.
+\Leftrightarrow \left\{\begin{aligned}
+     2n+2&\equiv 0\pmod{3} \\
+     2n+2&\equiv 0\pmod{4} \\
+     2n+2&\equiv 0\pmod{5} \\
+     2n+2&\equiv 0\pmod{6}.      
+\end{aligned}\right.
+$$
+Dựa vào nhận xét trên, ta suy ra $2n+2$ là số nguyên dương nhỏ nhất chia hết cho $3,4,5,6.$ Bốn số đó đôi một nguyên tố cùng nhau, thế nên
+$$2n+2=\vuong{3,4,5,6}=3\cdot 4\cdot 5\cdot 6=360.$$
+Từ đây, ta thu được $n=179.$
+}
+\end{bx}
+\begin{bx}
+Tìm số nguyên dương $n$ nhỏ nhất, biết rằng khi chia $n$ cho $7,9,11,13$ ta nhận được các số dư tương ứng là $3,4,5,6$.
+\nguon{Chuyên Khoa học Tự nhiên 2021}
+\loigiai{Giả sử tồn tại số nguyên dương $n$ thỏa mãn yêu cầu. Ta có
+$$\left\{\begin{aligned}
+     n&\equiv 3\pmod{7} \\
+     n&\equiv 4\pmod{9} \\
+     n&\equiv 5\pmod{11} \\
+     n&\equiv 6\pmod{13}      
+\end{aligned}\right.
+\Leftrightarrow \left\{\begin{aligned}
+     2n&\equiv 6\pmod{7} \\
+     2n&\equiv 8\pmod{9} \\
+     2n&\equiv 10\pmod{11} \\
+     2n&\equiv 12\pmod{13}      
+\end{aligned}\right.
+\Leftrightarrow \left\{\begin{aligned}
+     2n+1&\equiv 0\pmod{7} \\
+     2n+1&\equiv 0\pmod{9} \\
+     2n+1&\equiv 0\pmod{11} \\
+     2n+1&\equiv 0\pmod{13}.   
+\end{aligned}\right.
+$$
+Dựa vào nhận xét trên, ta suy ra $2n+1$ là số nguyên dương nhỏ nhất chia hết cho $7,9,11,13.$ Bốn số đó đôi một nguyên tố cùng nhau, thế nên
+$$2n+1=[7,9,11,13]=7\cdot 9\cdot 11\cdot 13=9009.$$
+Từ đây, ta thu được $n=4504.$}
+\end{bx}
+
+
+\begin{bx}
+Tìm tất cả các số tự nhiên $n$ nhỏ hơn $90,$ sao cho $n$ chia $3$ được dư là $1,$ còn $n$ chia $8$ được dư là $5.$
+
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ thỏa mãn yêu cầu. Ta có
+$$\left\{\begin{aligned}
+     n&\equiv 1\pmod{3} \\
+     n&\equiv 5\pmod{8}   
+\end{aligned}\right.
+\Leftrightarrow \left\{\begin{aligned}
+     n+11&\equiv 0\pmod{3} \\
+     n+11&\equiv 0\pmod{8}. 
+\end{aligned}\right.
+$$
+Dựa vào nhận xét trên, ta suy ra $n+11$ là số nguyên dương chia hết cho $3, 8.$ Hai số đó nguyên tố cùng nhau, thế nên tồn tại số nguyên dương $k$ sao cho
+$$n+11=\vuong{3, 8}\cdot k= 3\cdot 8 \cdot k = 24k .$$
+Từ đây, ta thu được $n=24k - 11,$ lại do $n \leq 90$ nên $n \in \left\{13, 37, 61, 85\right\}.$}
+\begin{luuy}
+Số $11$ tìm thấy được ở trong phần lập luận được sinh ra từ các bước làm theo cách liệt kê sau.
+\begin{enumerate}[\sffamily \bfseries \color{tuancolor} Bước 1. ]
+    \item Các số tự nhiên chia $3$ dư $1$ là $1,\ 4,\ 7,\ 10,\ldots.$
+    \item Số tự nhiên nhỏ nhất trên dãy trên chia $8$ dư $5$ là $13.$ Ta cần cộng thêm $13$ với $11$ để được kết quả là bội chung nhỏ nhất của $3$ và $8.$
+\end{enumerate}
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số tự nhiên $n$ có ba chữ số, sao cho số dư khi chia $n$ cho $5,8,13$ lần lượt là $3,6,7.$
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ thỏa mãn yêu cầu. Ta có
+$$\left\{\begin{aligned}
+     n&\equiv 3\pmod{5} \\
+     n&\equiv 6\pmod{8} \\
+     n&\equiv 7\pmod{13}      
+\end{aligned}\right.
+\Leftrightarrow \left\{\begin{aligned}
+     n + 162&\equiv 0\pmod{5} \\
+     n + 162&\equiv 0\pmod{8} \\
+     n + 162&\equiv 0\pmod{13}.  
+\end{aligned}\right.
+$$
+Dựa vào nhận xét trên, ta suy ra $n+162$ là số nguyên dương chia hết cho $5, 8, 13.$ Ba số đó đôi một nguyên tố cùng nhau, thế nên tồn tại số nguyên dương $k$ sao cho
+$$n+162=[5,8, 13]\cdot k=5\cdot 8\cdot 13\cdot k=520k.$$
+Từ đây, ta thu được $n=520k - 162,$ lại do $n\leq 999$ nên $n \in \left\{358; 878\right\}.$}
+\begin{luuy}
+Số $162$ tìm thấy được ở trong phần lập luận được sinh ra từ các bước làm theo cách liệt kê sau.
+\begin{enumerate}[\sffamily \bfseries \color{tuancolor} Bước 1. ]
+    \item Các số tự nhiên chia $5$ dư $3$ là $3,\ 8,\ 13,\ 18,\ldots.$
+    \item Số tự nhiên nhỏ nhất trong dãy trên và chia $8$ dư $6$ là $38.$ Các số vừa chia $5$ dư $3,$ vừa chia $8$ dư $6$ là $38,\ 78,\ 118,\ 158,\ldots$
+    \item Số tự nhiên nhỏ nhất trên dãy trên chia $13$ dư $7$ là $358.$ Ta cần cộng thêm $358$ với $162$ để được kết quả là bội chung nhỏ nhất của $5,8,13.$
+\end{enumerate}
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Cho các số nguyên $x,y,z$ thỏa mãn $(x-y)(y-z)(z-x)=x+y+z.$ Chứng minh rằng $x+y+z$ chia hết cho $27.$
+\nguon{All Russian Olympiad 1993}
+\loigiai{Trong trường hợp $x+y+z$ không chia hết cho $3,$ từ $(x-y)(y-z)(z-x)=x+y+z$ ta suy ra
+$$3\nmid (x-y),\quad 3\nmid (y-z),\quad 3\nmid(z-x).$$
+Theo đó $x,y,z$ có số dư đôi một khác nhau khi chia cho $3,$ và thế thì
+$$x+y+z\equiv 0+1+2\equiv 0\pmod{3},$$
+mâu thuẫn với giả sử. Như vậy $x+y+z=(x-y)(y-z)(z-x)$ chia hết cho $3,$ và trong $x,y,z$ hiển nhiên có hai số cùng dư khi chia cho $3.$ Không mất tổng quát, ta giả sử rằng $x\equiv y\pmod 3.$ Giả sử này cho ta
+$$0\equiv x+y+z\equiv 2x+z\equiv z-x\pmod{3}.$$
+Lập luận trên chứng tỏ $z-x$ chia hết cho $3.$ Kết hợp với giả sử $x-y$ chia hết cho $3$ ở trên, ta suy ra cả $x-y,\ y-z$ và $z-x$ chia hết cho $3,$ và 
+$$27\mid (x-y)(y-z)(z-x)=x+y+z.$$
+Nhận xét vừa rồi dẫn ta đến điều phải chứng minh.
+}
+\end{bx}
+
+%nguyệt anh
+\begin{bx}
+Chứng minh rằng nếu $a,b,c$ là các số nguyên thỏa mãn $a+b+c$ chia hết cho $6$ thì $(a+b)(b+c)(c+a)-2abc$ chia hết cho $6.$
+\loigiai{
+Giả sử $a,b,c$ là các số lẻ, ta suy ra $a+b+c$ cũng là số lẻ. Điều này mâu thuẫn với giả thiết $a+b+c$ chia hết cho $6$. Do đó giả sử sai nên trong $3$ số $a,b,c$ tồn tại một số chia hết cho $2$.\\
+Xét hệ đồng dư modulo $6$, ta có 
+$$a+b+c\equiv 0\pmod{6}\Rightarrow \heva{a+b&\equiv -c\pmod{6}\\ b+c &\equiv -a \pmod{6}\\ c+a&\equiv -b \pmod 6.}$$
+Từ đây, ta suy ra
+$$(a+b)(b+c)(c+a)-2abc\equiv(-c)(-a)(-b)-2abc\equiv-3abc\equiv0\pmod{6}.$$
+Như vậy, bài toán được chứng minh.
+}
+\end{bx}
+
+\section{Tính chia hết của đa thức cho một số nguyên}
+
+Đây là dạng bài tập cơ bản của chia hết. Dạng bài tập này thường xuất hiện trong các đề thi chuyên, đề thi học sinh giỏi dưới dạng một ý nhỏ trong câu số học nhiều ý. Dưới đây là một số ví dụ minh họa.
+
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Chứng minh rằng $n\tron{2n^2+7}$ chia hết cho $3$ với mọi số nguyên $n.$
+\loigiai{
+Ta nhận thấy rằng
+$$n\tron{2n^2+7}=n\tron{2n^2-2+9}=n\tron{2n^2-2}+9n=2n(n-1)(n+1)+9n.$$
+Do $n(n-1)(n+1)$ là tích ba số nguyên liên tiếp nên nó chia hết cho $3$ (thậm chí là cho $6$). Cùng với đó, $9n$ cũng chia hết cho $3.$ Như vậy
+$2n(n-1)(n+1)+9n$
+chia hết cho $3,$ và bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Cho $a,b$ là hai số chính phương liên tiếp. Chứng minh $ab-a-b+1$ chia hết cho $192.$
+\nguon{Chuyên Tin Bình Định 2019}
+\loigiai{
+Đặt $a=(2n-1)^2,b=(2n+1)^2,$ với $n$ là số nguyên. Phép đặt này cho ta
+\begin{align*}
+    ab-a-b+1&=(a-1)(b-1)\\&=\tron{(2n-1)^2-1}\tron{(2n+1)^2-1}
+    \\&=(2n-2)(2n)(2n)(2n+2)\\&
+    =16(n-1)n^2(n+1).
+\end{align*}
+Tới đây, ta chia bài toán thành các bước làm sau.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $(n-1)n^2(n+1)$ chia hết cho $4.$\\
+    Ta nhận thấy rằng $(n-1)n$ và $n(n+1)$ là hai tích của hai số nguyên liên tiếp. Chúng đều chia hết cho $2,$ thế nên $(n-1)n\cdot n(n+1)=(n-1)n^2(n+1)$ chia hết cho $4.$
+    \item Ta chứng minh $(n-1)n^2(n+1)$ chia hết cho $3.$\\
+    Đây là điều hiển nhiên, bởi vì $(n-1)n^2(n+1)$ chia hết cho tích $(n-1)n(n+1).$
+\end{enumerate}
+Dựa theo các lập luận kể trên, ta có $ab-a-b+1$ chia hết cho $16[3,4]=192.$ Chứng minh hoàn tất.}
+\end{bx}
+
+\begin{bx}
+Cho $a$ và $b$ là các số nguyên dương thỏa mãn $a^2-ab+\dfrac{3}{2}b^2$ chia hết cho $25.$ Chứng minh rằng cả $a$ và $b$ đều chia hết cho $5.$ 
+\nguon{Chuyên Tin Bình Thuận 2021}
+\loigiai{Với các số nguyên dương $a,b$ thỏa mãn giả thiết, ta có
+$$25\mid 4\left(a^2-ab+\dfrac{3}{2}b^2\right)=(2a-b)^2+5b^2.$$
+Ta được $2a-b$ chia hết cho $25,$ tức là $2a-b$ chia hết cho $5.$ \\
+Tiếp tục sử dụng $25\mid (2a-b)^2+5b^2,$ ta nhận thấy $25$ cũng là ước của $5b^2,$ thế nên $b$ chia hết cho $5.$\\ Kết hợp với $5\mid (2a-b),$ ta có điều phải chứng minh là $a$ và $b$ cùng chia hết cho $5.$}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho số tự nhiên $n.$ Chứng minh $n^4-14n^3+71 n^2-154n+120$ chia hết cho $24.$
+\end{btt}
+
+\begin{btt}
+Với mọi số tự nhiên $n$ lẻ hãy chứng minh rằng $n^{3}+3 n^{2}-n-3$ chia hết cho $48.$
+\end{btt}
+
+\begin{btt}
+Cho $a,b,c$ là các số nguyên thỏa mãn $a+b+20c=c^3.$ Chứng minh rằng $a^3+b^3+c^3$ chia hết cho $6.$
+\nguon{Chuyên Toán Lâm Đồng 2021}
+\end{btt}
+
+
+\begin{btt}
+Chứng minh với mọi số nguyên lẻ $n$ thì $n^8-n^6-n^4+n^2$ chia hết cho $5760.$
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta có $n^2+n+16$ không chia hết cho $49.$
+\nguon{Chuyên Toán Hà Nội 2021}
+\end{btt}
+
+\begin{btt}
+Chứng minh biểu thức $S = {n^3}{\left( {n + 2} \right)^2} + \left( {n + 1} \right)\left( {{n^2} - 5n + 1} \right) - 2n - 1$ chia hết cho $120$ với $n$ là số nguyên.
+\nguon{Chuyên Toán Bình Phước 2017 $-$ 2018}
+\end{btt}
+
+\begin{btt}
+ Cho $x,y$ là hai số nguyên thỏa mãn $x>y>0.$
+\begin{enumerate}[a,]
+     \item Chứng minh rằng nếu $x^3-y^3$ chia hết cho $3$ thì $x^3-y^3$ chia hết cho $9.$
+     \item Tìm tất cả các số nguyên dương $k$ sao cho $x^k-y^k$ chia hết cho $9$ với mọi cặp số nguyên $x,y$ thỏa mãn $xy$ không chia hết cho $9.$
+ \end{enumerate}
+\end{btt}
+
+\begin{btt}
+Cho $x, y$ là các số nguyên sao cho $x^2-2xy-y$ và $xy-2y^2-x$ đều chia hết cho 5. Chứng minh rằng $2x^2+y^2+2x+y$ cũng chia hết cho $5.$
+\nguon{Chuyên Khoa học Tự nhiên Hà Nội 2018 $-$ 2019}
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên $m,n.$ Chứng minh rằng nếu $5(m+n)^2+mn$ chia hết cho $441$ thì $mn$ chia hết cho $441.$
+\nguon{Chuyên Toán Trung học thực hành Đại học Sư phạm thành phố Hồ Chí Minh 2013}
+\end{btt}
+
+\begin{btt}
+Cho $n$ là số nguyên dương tùy ý. Với mỗi số nguyên dương $k,$ đặt $${{S}_{k}}={{1}^{k}}+{{2}^{k}}+\cdots+{{n}^{k}}.$$
+Chứng minh rằng ${{S}_{2019}}$ chia hết cho ${{S}_{1}}$.
+\nguon{Chuyên Toán Thanh Hóa 2019}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho số tự nhiên $n.$ Chứng minh $n^4-14n^3+71 n^2-154n+120$ chia hết cho $24.$
+\loigiai{
+Số đã cho được phân tích nhân tử thành
+$$n^4-14n^3+71 n^2-154n+120=(n-2)(n-3)(n-4)(n-5).$$
+Đây là tích bốn số nguyên liên tiếp, và nó chia hết cho $4!=24.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Với mọi số tự nhiên $n$ lẻ hãy chứng minh rằng $n^{3}+3 n^{2}-n-3$ chia hết cho $48.$
+\loigiai{
+Đặt $n=2m+1.$ Phép đặt này cho ta
+    $$n^3+3n^2-n-3=(n+3)(n-1)(n+1)=(2m+4)(2m)(2m+2)=8m(m+1)(m+2).$$
+Do $m(m+1)(m+2)$ là tích ba số nguyên liên tiếp, nó chia hết cho $3!=6.$\\
+Như vậy, số đã cho chia hết cho $8\cdot6=48.$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a,b,c$ là các số nguyên thỏa mãn $a+b+20c=c^3.$ Chứng minh rằng $a^3+b^3+c^3$ chia hết cho $6.$
+\nguon{Chuyên Toán Lâm Đồng 2021}
+\loigiai{
+Ta nhận thấy rằng
+\begin{align*}
+    a^3+b^3+c^3
+    &=a^3+b^3+2c^3-(a+b+20c)
+    \\&=(a^3-a)+(b^3-b)+2(c^3-c)-18c
+    \\&=a(a-1)(a+1)+b(b-1)(b+1)+2c(c-1)(c+1)-18c.
+\end{align*}
+Các tích dạng $x^3-x=x(x-1)(x+1)$ chia hết cho $6$ do đây là tích ba số nguyên liên tiếp, và $18c$ cũng chia hết cho $6.$ Từ đây, ta suy ra điều phải chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh với mọi số nguyên lẻ $n$ thì $n^8-n^6-n^4+n^2$ chia hết cho $5760.$
+\loigiai{Đặt $n=2k+1.$ Biểu thức đã cho được phân tích nhân tử thành
+\begin{align*}
+    n^8-n^6-n^4+n^2
+    &=n^2(n-1)^2(n+1)^2\left(n^{2}+1\right)
+    \\&=(2k+1)^2(2k)^2(2k+2)^2\tron{(2k+1)^2+1}
+    \\&=32(2k+1)^2k^2(k+1)^2\tron{k^2+k+1}.
+\end{align*}
+Tới đây, ta chia bài toán thành các bước làm sau.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $A=(2k+1)^2k^2(k+1)^2\tron{k^2+k+1}$ chia hết cho $4.$\\
+    Ta nhận thấy rằng $k(k+1)$ là tích của hai số nguyên liên tiếp. Tích này chẵn, do đó $k^2(k+1)^2$ chia hết cho $4.$ Ta có $A$ chia hết cho $4$ từ đây. 
+    \item Ta chứng minh $A=(2k+1)^2k^2(k+1)^2\tron{k^2+k+1}$ chia hết cho $9.$
+    \begin{itemize}
+        \item Nếu $k$ chia hết cho $3,$ ta có $k^2$ chia hết cho $9,$ suy ra $A$ cũng chia hết cho $9.$
+        \item Nếu $k$ chia $3$ dư $1,$ ta có $(2k+1)^2$ chia hết cho $9,$ suy ra $A$ cũng chia hết cho $9.$  
+        \item Nếu $k$ chia $3$ dư $2,$ ta có $(k+2)^2$ chia hết cho $9,$ suy ra $A$ cũng chia hết cho $9.$                
+    \end{itemize}
+    \item Ta chứng minh $A=(2k+1)^2k^2(k+1)^2\tron{k^2+k+1}$ chia hết cho $5.$\\
+    Việc này không khó, với hướng đi là xét số dư của $k$ khi chia cho $5$ rồi chỉ ra một trong bốn thừa số $2k+1,\ k,\ k+1,\ k^2+k+1$ chia hết cho $5.$    
+\end{enumerate}
+Dựa theo các lập luận kể trên, ta có $n^8-n^6-n^4+n^2$ chia hết cho $32[4,9,5]=5760.$\\ Như vậy, toàn bộ bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta có $n^2+n+16$ không chia hết cho $49.$
+\nguon{Chuyên Toán Hà Nội 2021}
+\loigiai{
+Giả sử tồn tại số tự nhiên $n$ thỏa mãn $49\mid \left(n^2+n+16\right).$ Giả sử này cho ta
+    \begin{align*}
+    49\mid 4\tron{n^2+n+16}
+    &\Rightarrow
+    49 \mid \vuong{(2n+1)^2+63}
+    \\&\Rightarrow 7\mid\vuong{(2n+1)^2+63}
+    \\&\Rightarrow
+    7\mid (2n+1)^2
+    \\&\Rightarrow
+    7\mid (2n+1)
+    \\&\Rightarrow
+    49\mid (2n+1)^2.
+    \end{align*}
+Tiếp tục kết hợp điều này với $49 \mid \vuong{(2n+1)^2+63},$ ta có $63$ chia hết cho $49,$ một điều vô lí. \\
+Như vậy, giả sử phản chứng là sai, và bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh biểu thức $S = {n^3}{\left( {n + 2} \right)^2} + \left( {n + 1} \right)\left( {{n^2} - 5n + 1} \right) - 2n - 1$ chia hết cho $120$ với $n$ là số nguyên.
+\nguon{Chuyên Toán Bình Phước 2017 $-$ 2018}
+\loigiai{
+Ta thấy rằng $120 = 3\cdot5\cdot8.$ Ta chia bài toán thành các bước làm sau
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $S$ chia hết cho $3.$ Biến đổi $S$ ta được
+    \[\begin{aligned}
+  S &= {n^5} + 5{n^4} + 5{n^3} - 5{n^2} - 6n \\
+   &= {n^5} - {n^3} + 6{n^3} + 5\left( {{n^4} - {n^2}} \right) - 6n \\
+   &= {n^2}\left( {n - 1} \right)n\left( {n + 1} \right) + 6{n^3} + 5n\left( {n - 1} \right)n\left( {n + 1} \right) - 6n. 
+\end{aligned}\]
+    Do $3\mid\left( {n - 1} \right)n\left( {n + 1} \right)$ nên ta suy ra $S$ chia hết cho $3.$
+    \item Ta chứng minh $S$ chia hết cho $5.$ Biến đổi $S$ ta được
+$$S = {n^5} + 5{n^4} + 5{n^3} - 5{n^2} - 6n = {n^5} - n + 5\left( {{n^4} + {n^3} - {n^2} - n} \right).$$
+    Công việc còn lại chỉ là chứng minh $n^5-n$ chia hết cho $5.$ Thật vậy
+    \[\begin{aligned}
+  {n^5} - n &= n\left( {n - 1} \right)\left( {n + 1} \right)\left( {{n^2} + 1} \right) \\
+   &= n\left( {n - 1} \right)\left( {n + 1} \right)\left( {{n^2} - 4 + 5} \right) \\
+   &= n\left( {n - 1} \right)\left( {n + 1} \right)\left( {{n^2} - 4} \right) + 5n\left( {n - 1} \right)\left( {n + 1} \right) \\
+   &= \left( {n - 2} \right)\left( {n - 1} \right)n\left( {n + 1} \right)\left( {n + 2} \right) + 5n\left( {n - 1} \right)\left( {n + 1} \right).
+\end{aligned}\]
+    Nói tóm lại, $S$ chia hết cho $5.$
+    \item Ta chứng minh $S$ chia hết cho $8.$ Biến đổi $S$ ta được
+    $$S = {n^5} + 5{n^4} + 5{n^3} - 5{n^2} - 6n = 4{n^3}\left( {n + 1} \right) + n\left( {n + 1} \right)\left( {{n^3} + n - 6} \right).$$
+    Tới đây, ta xét các trường hợp sau.
+\begin{itemize}
+    \item\chu{Trường hợp 1.} Nếu $n$ là số chẵn, ta đặt $n= 2k.$ Ta có
+    $$S = 32{k^5} + 80{k^4} + 40{k^3} - 8{k^2} - 12k\left( {k + 1} \right).$$
+    Từ đó suy ra $S$ chia hết cho $8$.
+    \item\chu{Trường hợp 2.} Nếu $n$ là số lẻ, ta đặt $n = 2k + 1.$  Ta có
+    $$S = 4{n^3}\left( {n + 1} \right) + n\left( {n + 1} \right)\left( {{n^3} + n - 6} \right).$$
+    Ta có $4{n^3}\left( {n + 1} \right) = 8{\left( {2k + 1} \right)^3}\left( {k + 1} \right)$ chia hết cho 8. Lại có $$n\left( {n + 1} \right)\left( {{n^3} + n - 6} \right) = \left( {2k + 1} \right)\left( {2k + 2} \right)\left( {8{k^3} + 12{k^2} + 8k - 4} \right)$$ chia hết cho 8.
+    Do đó $S$ chia hết cho 8.
+\end{itemize}
+\end{enumerate}
+Như vậy với mọi số nguyên $n,$ số $S$ chia hết cho $[3,5,8]=120.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+ Cho $x,y$ là hai số nguyên thỏa mãn $x>y>0.$
+\begin{enumerate}[a,]
+     \item Chứng minh rằng nếu $x^3-y^3$ chia hết cho $3$ thì $x^3-y^3$ chia hết cho $9.$
+     \item Tìm tất cả các số nguyên dương $k$ sao cho $x^k-y^k$ chia hết cho $9$ với mọi cặp số nguyên $x,y$ thỏa mãn $xy$ không chia hết cho $9.$
+ \end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Trước hết, ta nhận thấy ${{x}^{3}}-{{y}^{3}}={{\left( x-y \right)}^{3}}-3xy\left( x-y \right)$. Do các số
+    \[{{x}^{3}}-{{y}^{3}},\quad 3xy\left( x-y \right)\] 
+    chia hết cho $3$ nên suy ra $(x-y)^3$ chia hết cho $3,$ kéo theo $3\mid (x-y).$ Như vậy
+    \[{{x}^{3}}-{{y}^{3}}={{\left( x-y \right)}^{3}}-3xy\left( x-y \right)\] chia hết cho $9,$ do cả $(x-y)^3$ và $3(x-y)$ đều chia hết cho $9.$
+    \item Nếu $x$ không chia hết cho $3$ thì $(x-1)(x+1)=x^2-1$ chia hết cho $3,$ suy ra 
+    $$x^6-1=\tron{x^2-1}\tron{x^4+x^2+1}$$
+    chia hết cho $3.$ Chứng minh tương tự, $y^3-1$ cũng chia hết cho $3.$ Áp dụng kết quả câu a, ta có
+    \[9\mid\tron{x^6-1},\quad 9\mid\tron{y^6-1}.\] 
+    Đặt $k=6a+r,$ trong đó $0\le r\le 5.$ Ta sẽ có 
+    \[{{x}^{k}}-{{y}^{k}}={{x}^{6a+r}}-{{y}^{6a+r}}={{x}^{r}}\left( {{x}^{6a}}-1 \right)+{{y}^{r}}\left( {{y}^{6a}}-1 \right)+\left( {{x}^{r}}-{{y}^{r}} \right).\]
+    Như vậy, $x^k-y^k$ chia hết cho $9$ khi và chỉ khi $x^r-y^r$ chia hết cho $9.$ Ta sẽ chứng minh $r=0.$ Thật vậy, nếu $r\ne 0,$ ta chọn $x=3,y=1,$ và khi đó $x^r-y^r$ không chia hết cho $9.$ Tóm lại, các số $k$ cần tìm là bội của $6.$
+\end{enumerate}
+}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $x, y$ là các số nguyên sao cho $x^2-2xy-y$ và $xy-2y^2-x$ đều chia hết cho 5. Chứng minh rằng $2x^2+y^2+2x+y$ cũng chia hết cho $5.$
+\nguon{Chuyên Khoa học Tự nhiên Hà Nội 2018 $-$ 2019}
+\loigiai{
+Trước tiên ta có số sau đây chia hết cho $5.$ $$\left( {{x}^{2}}-2{x}y-y \right)+\left( xy-2{{y}^{2}}-x \right)={{x}^{2}}-2{{y}^{2}}-xy-x-y=\left( x+y \right)\left( x-2y+1 \right).$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $x+y$ chia hết cho $5,$ ta có $x\equiv -y\pmod{5}.$ Kết hợp với giả thiết, ta được
+    $$0\equiv x^2-2xy-y\equiv (-y)^2-2(-y)y-y\equiv 3y^2-y=y(3y-1)\pmod{5}.$$
+    Ta lại xét các trường hợp nhỏ hơn sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $5\mid y,$ do $5\mid (x+y)$ nên $5\mid x.$ Từ đó
+        $$5\mid \tron{2x^2+y^2+2x+y}.$$
+        \item \chu{Trường hợp 2.} Nếu $5\mid (3y-1),$ ta có 
+        $$5\mid 2(3y-1)=(y-2)+5y$$ nên $y\equiv 2\pmod{5}.$ Do $5\mid (x+y)$ nên $x\equiv -2\pmod{5}.$ Từ đó
+        $$2x^2+y^2+2x+y\equiv 2\cdot(-2)^2+2^2+2\cdot(-2)+2=10\equiv 0\pmod{5}.$$
+    \end{itemize}
+    \item Nếu $x-2y+1$ chia hết cho $5,$ ta có $x\equiv 2y-1\pmod{5}.$ Kết hợp với giả thiết, ta được
+    $$x^2-2xy-y\equiv (2y-1)^2-2(2y-1)y-y=1-3y\equiv 2y+1\pmod{5}.$$
+    Từ đó, ta có $5\mid 3(2y+1)=5y+(y+3)$ hay $y\equiv 2\pmod{5}$ và $y\equiv 3\pmod{5}.$ Như vậy
+        $$2x^2+y^2+2x+y\equiv 2\cdot3^2+2^2+2\cdot3+2=30\equiv 0\pmod{5}.$$    
+\end{enumerate}
+Bài toán được chứng minh trong mọi trường hợp.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên $m,n.$ Chứng minh rằng nếu $5(m+n)^2+mn$ chia hết cho $441$ thì $mn$ chia hết cho $441.$
+\nguon{Chuyên Toán Trung học thực hành Đại học Sư phạm thành phố Hồ Chí Minh 2013}
+\loigiai{
+Từ giả thiết, ta có $4\tron{5(m+n)^2+mn}$ chia hết cho $441,$ và vì thế
+\begin{align*}
+    4\tron{5(m+n)^2+mn}
+    &=20(m+n)^2+4mn \\&=20(m+n)^{2}+\left[(m+n)^2-(m-n)^2\right]
+    \\&=21(m+n)^2-(m-n)^2.
+\end{align*}
+chia hết cho $21,$ thế nên $(m-n)^2$ cũng là bội của $21.$ Ta lần lượt suy ra
+\begin{align*}
+    21\mid (m-n)^2
+    &\Rightarrow \heva{3\mid (m-n)^2 \\ 7\mid (m-n)^2}
+    \\&\Rightarrow \heva{3\mid (m-n) \\ 7\mid (m-n)}
+    \\&\Rightarrow \heva{9&\mid (m-n)^2 \\ 49&\mid (m-n)^2} 
+    \\&\Rightarrow [9,49]\mid (m-n)^2
+    \\&\Rightarrow 441\mid (m-n)^2.
+\end{align*}
+Từ lập luận này kết hợp với đẳng thức
+$$4\tron{5(m+n)^2+mn}=21(m+n)^2-(m-n)^2$$
+ta chỉ ra $21(m+n)^2$ chia hết cho $441.$ Bằng lập luận tương tự, ta có $m+n$ chia hết cho cả $3$ và $7.$ Như vậy
+\begin{align*}
+\heva{&3\mid (m+n) \\ &7\mid (m+n) \\ &3\mid (m-n) \\ &7\mid (m-n)}
+&\Rightarrow \heva{&[3,7]\mid (m+n) \\ &[3,7]\mid (m-n)}
+\\&\Rightarrow \heva{&21\mid (m+n) \\ &21\mid (m-n)}
+\\&\Rightarrow \heva{&21\mid \bigg((m+n)+(m-n)\bigg)\\&21\mid \bigg((m+n)-(m-n)\bigg)}
+\\&\Rightarrow \heva{&21\mid 2m\\&21\mid 2n}
+\\&\Rightarrow \heva{&21\mid m\\&21\mid n}
+\\&\Rightarrow 441\mid mn.
+\end{align*}
+Bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $n$ là số nguyên dương tùy ý. Với mỗi số nguyên dương $k,$ đặt $${{S}_{k}}={{1}^{k}}+{{2}^{k}}+\cdots+{{n}^{k}}.$$
+Chứng minh rằng ${{S}_{2019}}$ chia hết cho ${{S}_{1}}$.
+\nguon{Chuyên Toán Thanh Hóa 2019}
+\loigiai{
+Ta tính được $S_1=\dfrac{n(n+1)}{2}.$ Ta sẽ chứng minh kết quả tổng quát
+$$n(n+1)\mid 2S_k,\text{ với }k\text{ là số nguyên dương lẻ}.$$
+Trước hết, từ nhận xét
+ $2{{S}_{k}}=2\left( {{1}^{k}}+{{2}^{k}}+\cdots+{{n}^{k}} \right)$
+ta có $2S_k$ chia hết cho $(n+1).$ Tiếp theo, từ nhận xét $$2{{S}_{k}}=2{{n}^{k}}+\left[ {{1}^{k}}+{{\left( n-1 \right)}^{k}} \right]+\cdots+\left[ {{\left( n-1 \right)}^{k}}+{{1}^{k}} \right],$$
+ta có $2S_k$ chia hết cho $n.$ Như vậy, cả kết quả tổng quát và bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+\section{Đồng dư thức với số mũ lớn}
+\subsection*{Ví dụ minh họa}
+\begin{bx}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có \[5^{n+2}+26\cdot5^{n}+8^{2 n+1}\text{ chia hết cho } 59.\]
+\loigiai{
+Xét trong hệ đồng dư modulo $59,$ ta có
+$$5^{n+2}+26\cdot5^{n}+8^{2n+1}=51\cdot 5^n+8\cdot 64^n\equiv 51\cdot 5^n+8\cdot 5^n=59\cdot 5^n\equiv 0\pmod{59}.$$
+Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Xác định tất cả các số tự nhiên $n$ sao cho $2^n-3$ chia hết cho $7.$
+\loigiai{
+Trong bài toán này, ta sẽ xét các số dư của $n$ khi chia cho $3.$ Cụ thể
+\begin{enumerate}
+    \item Nếu $n$ chia hết cho $3,$ ta đặt $n=3k,$ với $k$ là số tự nhiên. Ta có.
+    $$2^{3k}-1=8^k-1\equiv 1-1\equiv 0\pmod{7}.$$
+    \item Nếu $n$ chia cho $3$ dư $1,$ ta đặt $n=3k+1,$ với $k$ là số tự nhiên. Ta có.
+    $$2^{3k+1}-1=2\cdot8^k-1\equiv 2-1\equiv 1\pmod{7}.$$
+    \item Nếu $n$ chia cho $3$ dư $2,$ ta đặt $n=3k+2,$ với $k$ là số nguyên dương. Ta có.
+    $$2^{3k+2}-1=4\cdot8^k-1\equiv 4-1\equiv 3\pmod{7}.$$
+\end{enumerate}
+Theo trên, ta kết luận rằng tất cả các số tự nhiên $n$ chia cho  $3$ dư $2$ đều thỏa yêu cầu bài toán.}
+    \begin{luuy}
+\chu{Nhận xét.} Cơ sở của việc chọn modulo $3$ để xét cho $2^n$ nhằm tìm ra dạng của nó là nhờ vào hai định lí sau
+    \begin{enumerate}
+        \item Cho số nguyên dương $a$ và số nguyên tố $p,$ khi đó nếu $(a,p)=1$ thì $$a^{p-1}\equiv 1\pmod{p}.$$
+        \item Cho các số nguyên dương $a,b$ nguyên tố cùng nhau. Khi đó, tồn tại số nguyên dương $n$ sao cho $a^n\equiv1\pmod{b}.$
+    \end{enumerate}
+    Số nguyên dương $n$ nhỏ nhất ở trong định lí thứ hai chính là modulo ta cần xét. Đặc biết, trong định lí thứ hai, nếu $b=p$ là một số nguyên tố, ta còn có thể chỉ ra $n$ là ước của $p-1.$
+    \end{luuy}
+\end{bx}
+
+\begin{bx}
+Tìm số dư trong phép chia $5^{182}$ cho $7.$
+\end{bx}
+\nx Dựa vào việc tìm được số nguyên dương $n$ nhỏ nhất thỏa mãn $5^n\equiv 1\pmod{7}$ là $n=6,$ ta sẽ xuất phát bài toán này từ đồng dư thức
+\[5^6\equiv 1\pmod{7}.\]
+\loigiai{
+Ta nhận thấy rằng
+$5^{6}=15625=7\cdot2232+1 \equiv 1\pmod{7}.$\\
+Căn cứ vào nhận xét trên, ta chỉ ra
+$$5^{182}=\left(5^6\right)^{30}\cdot25\equiv 1\cdot 25\equiv 4\pmod{7}.$$
+Như vậy, số dư của $5^{182}$ khi chia cho $7$ là $4.$}
+
+\begin{bx}
+Tìm chữ số tận cùng của $ 7^{969}.$
+\loigiai{
+Xét trong hệ đồng dư modulo $10,$ ta có
+    \begin{align*} 
+        7^2 \equiv -1 \pmod{10} &\Rightarrow 7^4 \equiv 1 \pmod{10}
+        \\&\Rightarrow 7^{968} \equiv 1 \pmod{10}\\&
+        \Rightarrow 7^{969} \equiv 7 \pmod{10}.
+    \end{align*}
+    Vậy $7^{969}$ có tận cùng là $7.$}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có
+\[12^n+4^n-7^n-9^n\text{ chia hết cho } 15.\]
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có
+\[2005^n+60^n-1897^n-168^n \text{ chia hết cho } 2004.\]
+\nguon{Chuyên Toán Lai Châu 2021}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có \[5^{2 n-1} \cdot 2^{n+1}+3^{n+1} \cdot 2^{2 n-1} \text{ chia hết cho } 38.\]
+\end{btt}
+
+\begin{btt}
+Với mỗi số nguyên dương $n$, ta đặt $$a_{n}=2^{2 n+1}-2^{n+1}+1, \quad b_{n}=2^{2 n+1}+2^{n+1}+1.$$ 
+Chứng minh rằng với mọi $n$ thì $a_{n} b_{n}$ chia hết cho $5$ và $a_{n}+b_{n}$ không chia hết cho $5.$
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2003}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng $4^n-2019n-1$ chia hết cho $9$ với mọi số tự nhiên $n.$
+\nguon{Chuyên Toán Quảng Ninh 2019}
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên dương $n$ nhỏ nhất sao cho
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $5^n$ chia $7$ dư $1.$
+    \item $11^n$ chia $13$ dư $1.$
+    \item $2021^n$ chia $31$ dư $1.$
+    \item $14^n$ chia $11$ dư $5.$
+    \item $1048^n$ chia $23$ dư $4.$
+    \item $227^n+194^n$ chia $11$ dư $8.$
+\end{enumerate}
+\end{multicols}
+\end{btt}
+
+\begin{btt}
+Tìm số dư trong các phép chia sau
+\begin{multicols}{2}
+    \begin{enumerate}[a,]
+        \item $3^{123}$ khi chia cho $7$.
+        \item $7^{2021}$ khi chia cho $11$.
+        \item $8^{227}$ khi chia cho $31$.
+        \item $227^{111}$ khi chia cho $8$.
+    \end{enumerate}
+\end{multicols}
+\end{btt}
+
+\begin{btt}\
+\begin{enumerate}[a,] 
+    \item Tìm tất cả các số nguyên dương $n$ sao cho $2^{n}n+3^{n}$ chia hết cho $5.$
+    \item Tìm tất cả các số nguyên dương $n$ sao cho $2^{n}n+3^{n}$ chia hết cho $25.$
+\end{enumerate} 
+\nguon{Chuyên Toán Phổ thông Năng khiếu 1997}
+\end{btt}
+
+\begin{btt}
+Tìm số dư trong các phép chia sau
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $87^{32^{47}}$ khi chia cho $19$.
+    \item $9^{8^7} + 5^{6^7}$ khi chia cho $13$.
+\end{enumerate}
+\end{multicols}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng $2020^{2021^{2022}} + 2036$ chia hết cho $52$.
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng $92^{183^{139}} + 183^{139^{92}} + 139^{92^{183}}$ chia hết cho $138$.
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có
+\[2^{3^{4n+1}}+3^{2^{4n+1}}+5\text{ chia hết cho }22.\]
+\end{btt}
+
+\begin{btt}
+Tìm chữ số tận cùng của $4^{2021} + 7^{2022} + 9^{2023}.$
+\end{btt}
+
+\begin{btt}
+Tìm hai chữ số tận cùng của các số sau
+\begin{multicols}{3}
+    \begin{enumerate}[a,]
+    \item $6^{2021}$.
+    \item $69^{2022}.$
+    \item $15^{15^{15^{15}}}$.
+\end{enumerate}
+\end{multicols}
+\end{btt}
+
+\begin{btt}
+Tìm ba chữ số tận cùng của $A=3\cdot9\cdot15\ldots2025$.
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có
+\[12^n+4^n-7^n-9^n\text{ chia hết cho } 15.\]
+\loigiai{
+Đặt $A=12^n+4^n-7^n-9^n.$ Ta sẽ chứng minh $A$ chia hết cho $3$ và $5.$ Thậy vậy
+\begin{itemize}
+    \item $A=(3\cdot4)^n+(3+1)^n-(3\cdot2+1)^n-(3\cdot3)^n\equiv 0+1-1-0\equiv 0\pmod{3}.$
+    \item $A=(5\cdot2+2)^n+4^n-(5+2)^n-(5+4)^n\equiv 2^n+4^n-2^n-4^n\equiv 0\pmod{5}.$    
+\end{itemize}
+Dựa vào các nhận xét trên, ta suy ra $A$ chia hết cho $[3,5]=15.$ Như vậy, bài toán được chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có
+\[2005^n+60^n-1897^n-168^n \text{ chia hết cho } 2004.\]
+\nguon{Chuyên Toán Lai Châu 2021}
+\loigiai{
+Đặt $A=2005^n+60^n-1897^n-168^n.$ Ta sẽ chứng minh $A$ chia hết cho $3,4$ và $167.$ Thật vậy
+\begin{itemize}
+    \item $A=(3\cdot668+1)^n+(3\cdot20)^n-(3\cdot632+1)^n-(3\cdot56)^n\equiv 1+0-1-0\equiv0\pmod{3}.$
+    \item $A=(4\cdot501+1)^n+(4\cdot15)^n-(4\cdot474+1)^n-(4\cdot42)^n\equiv 1+0-1-0\equiv0\pmod{4}.$
+    \item $A=(12\cdot167+1)^n+60^n-(11\cdot167+60)^n-(167+1)^n\equiv0\pmod{167}.$
+\end{itemize}
+Dựa vào các nhận xét trên, ta suy ra $A$ chia hết cho $[3,4,167]=2004.$ Bài toán được chứng minh.}
+\end{gbtt} 
+
+\begin{gbtt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có \[5^{2 n-1} \cdot 2^{n+1}+3^{n+1} \cdot 2^{2 n-1} \text{ chia hết cho } 38.\]
+\loigiai{
+Đặt $A=5^{2 n-1} \cdot 2^{n+1}+3^{n+1} \cdot 2^{2 n-1}.$ Ta sẽ chứng minh $A$ chia hết cho $2$ và $19.$ Thật vậy
+\begin{itemize}
+    \item $A=2^{n+1}\tron{5^{2 n-1}+3^{n+1} \cdot 2^{n-2}}\equiv0\pmod{2}.$
+    \item $A=2^{n+1}\tron{25^{n-2}\cdot5^3+3^{n+1} \cdot 2^{n-2}}=2^{n+1}\tron{6^{n-2}\cdot125+6^{n-2}\cdot3^3}=2^{n+1}\cdot6^{n-2}\cdot152\equiv0\pmod{19}.$
+\end{itemize}
+Dựa vào các nhận xét trên, ta suy ra $A$ chia hết cho $[2,19]=38.$ Bài toán được chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Với mỗi số nguyên dương $n$, ta đặt $$a_{n}=2^{2 n+1}-2^{n+1}+1, \quad b_{n}=2^{2 n+1}+2^{n+1}+1.$$ 
+Chứng minh rằng với mọi $n$ thì $a_{n} b_{n}$ chia hết cho $5$ và $a_{n}+b_{n}$ không chia hết cho $5.$
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2003}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Biến đổi $a_nb_n$, ta thu được
+    $$\tron{2^{2 n+1}-2^{n+1}+1}\tron{2^{2 n+1}+2^{n+1}+1}=\tron{2^{2 n+1}+1}^2-\tron{2^{n+1}}^2=2^{4n+2}+1.$$
+    Xét hệ đồng dư modulo $5$, ta có 
+    $$a_nb_n=2^{4n+2}+1\equiv16^n\cdot4+1\equiv4+1\equiv0\pmod{5}.$$
+    \item Biến đổi $a_n+b_n$, ta thu được
+    $$\tron{2^{2 n+1}-2^{n+1}+1}+\tron{2^{2 n+1}+2^{n+1}+1}= 2^{2n+2}+2= 4^{n+1}+2.$$
+    Ta luôn có $4^a\equiv-1\pmod{5}$ và $4^a\equiv1\pmod{5}$ với $a$ là số tự nhiên. Do đó, ta thu được
+    $$a_n+b_n=4^{n+1}+2\equiv3\pmod{5}.$$
+    $$a_n+b_n=4^{n+1}+2\equiv1\pmod{5}.$$
+\end{enumerate}
+Như vậy, bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng $4^n-2019n-1$ chia hết cho $9$ với mọi số tự nhiên $n.$
+\nguon{Chuyên Toán Quảng Ninh 2019}
+\loigiai{
+Xét trong modulo $9$, ta luôn có
+$$4^n-2019n-1\equiv4^n-3n-1\pmod{9}.$$
+Từ đây, ta xét các số dư của $n$ khi chia cho $3$. Ta có
+\begin{enumerate}
+    \item Nếu $n$ chia hết cho $3$, ta đặt $n=3k$ với $k$ là số tự nhiên. Ta nhận được
+    $$4^{3k}-9k-1=64^k-9k-1\equiv1-0-1\equiv0\pmod{9}.$$
+    \item Nếu $n$ chia cho $3$ dư $1$, ta đặt $n=3k+1$ với $k$ là số tự nhiên. Ta nhận được
+    $$4^{3k+1}-3\tron{3k+1}-1=64^k\cdot4-9k-4\equiv4-0-4\equiv0\pmod{9}.$$
+     \item Nếu $n$ chia cho $3$ dư $2$, ta đặt $n=3k+2$ với $k$ là số tự nhiên. Ta nhận được
+    $$4^{3k+2}-3\tron{3k+2}-1=64^k\cdot4^2-9k-7\equiv16-0-7\equiv0\pmod{9}.$$
+\end{enumerate}
+Như vậy, $4^n-2019n-1$ chia hết cho $9$ với mọi số tự nhiên $n.$}
+\end{gbtt}
+
+\begin{gbtt}\label{cap.so.na}
+Tìm số nguyên dương $n$ nhỏ nhất sao cho
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $5^n$ chia $7$ dư $1.$
+    \item $11^n$ chia $13$ dư $1.$
+    \item $2021^n$ chia $31$ dư $1.$
+    \item $14^n$ chia $11$ dư $5.$
+    \item $1048^n$ chia $23$ dư $4.$
+    \item $227^n+194^n$ chia $11$ dư $8.$
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Từ nhận xét ở ví dụ 2, số nguyên dương $n$ cần tìm phải là ước của $7-1=6.$\\
+    Theo đó, ta cần phải xét các trường hợp sau đây.
+    \begin{itemize}
+        \item Nếu $n=1,$ ta có
+        $5^n=5^1 \equiv 5 \pmod{7},$ không thỏa.
+        \item Nếu $n=2,$ ta có
+        $5^n=5^2 \equiv 4 \pmod{7},$ không thỏa.
+        \item Nếu $n=3,$ ta có
+        $5^n=5^3 \equiv 6 \pmod{7},$ không thỏa.
+    \end{itemize}
+    Vậy $n=6$ là số nhỏ nhất để $5^n$ chia $7$ dư $1.$
+    \item Từ nhận xét ở ví dụ 2, số nguyên dương $n$ cần tìm phải là ước của $13-1=12.$ \\Theo đó, ta cần phải xét các trường hợp sau đây.
+    \begin{itemize}
+        \item Nếu $n=1,$ ta có
+        $11^n=11^1 \equiv 11 \pmod{13},$ không thỏa.
+        \item Nếu $n=2,$ ta có
+        $11^n=11^2 \equiv 4 \pmod{13},$ không thỏa.
+        \item Nếu $n=3,$ ta có
+        $11^n=11^3 \equiv 4\cdot11 \equiv 5 \pmod{13},$ không thỏa.
+        \item Nếu $n=4,$ ta có
+        $11^n=11^4 \equiv 5\cdot11 \cdot3 \pmod{13},$ không thỏa.
+        \item Nếu $n=6,$ ta có
+        $11^n=11^6 \equiv 3\cdot11 \equiv 6 \pmod{13},$ thỏa yêu cầu.
+    \end{itemize}
+    Vậy $n=6$ là số nhỏ nhất để $11^n$ chia $13$ dư $1.$
+    \item Từ nhận xét ở ví dụ 2, số nguyên dương $n$ cần tìm phải là ước của $31-1=30.$ \\Theo đó, ta cần phải xét các trường hợp sau đây.
+    \begin{itemize}
+        \item Nếu $n=1,$ ta có
+        $2021^n=2021^1 \equiv 6 \pmod{31},$ không thỏa.
+        \item Nếu $n=2,$ ta có
+        $2021^n=2021^2 \equiv 6^2 \equiv 5 \pmod{31},$ không thỏa.
+        \item Nếu $n=3,$ ta có
+        $2021^n=2021^3 \equiv 6^3 \equiv 5\cdot6 \equiv 30 \pmod{31},$ không thỏa.
+        \item Nếu $n=5,$ ta có
+        $2021^n=2021^5 \equiv 6^5 \equiv 5\cdot30 \equiv 26 \pmod{31},$ không thỏa.
+        \item Nếu $n=6,$ ta có
+        $2021^n=2021^6 \equiv 6^6 \equiv 26\cdot6 \equiv 1 \pmod{31},$ thỏa yêu cầu.
+    \end{itemize}
+    Vậy $n=6$ là số nhỏ nhất để $2021^n$ chia $31$ dư $1.$
+    \item Ta biết được rằng $11^5\equiv 1\pmod{11}.$\\ Như vậy, nếu gọi $r$ là số dư của phép chia $n$ cho $5$ và đặt $n=5k+r,$ ta có
+    $$14^{5k+r}=14^r\cdot\tron{14^5}^r\equiv 14^r\pmod{11}.$$
+    Như vậy, số nguyên dương $n$ nhỏ nhất cần tìm chính là một trong những số dư của phép chia $n$ cho $5.$
+    \begin{itemize}
+        \item Nếu $n=1,$ ta có
+        $14^n=14^1 \equiv 3 \pmod{11},$ không thỏa.
+        \item Nếu $n=2,$ ta có
+        $14^n=14^2 \equiv 3^2 \equiv 9 \pmod{11},$ không thỏa.
+        \item Nếu $n=3,$ ta nhận được
+        $14^n=14^3  \equiv 9\cdot3 \equiv 5 \pmod{17},$ thỏa yêu cầu. 
+    \end{itemize}
+    Vậy $n=3$ là số nhỏ nhất để $14^n$ chia $11$ dư $5.$
+    \item Tương tự ý trên, số nguyên dương $n$ nhỏ nhất cần tìm chính là một trong những số dư của phép chia $n$ cho $11.$
+    \begin{itemize} 
+        \item Nếu $n=1,$ ta có
+        $1048^n=1048^1 \equiv 13 \pmod{23},$ không thỏa.
+        \item Nếu $n=2,$ ta có
+        $1048^n=1048^2 \equiv 13^2 \equiv 8 \pmod{23},$ không thỏa.
+        \item Nếu $n=3,$ ta có
+        $1048^n=1048^3  \equiv 8\cdot13 \equiv 12 \pmod{23},$ không thỏa.
+         \item Nếu $n=4,$ ta có
+        $1048^n=1048^4 \equiv 12\cdot13 \equiv 18 \pmod{23},$ không thỏa.
+        \item Nếu $n=5,$ ta có
+        $1048^n=1048^5 \equiv 18\cdot13 \equiv 4 \pmod{23},$ thỏa yêu cầu.
+    \end{itemize}
+    Vậy $n=5$ là số nhỏ nhất để $1048^n$ chia $23$ dư $4.$
+    \item Ta nhận thấy rằng
+    $$227^n + 194^n=(220+7)^n+(187+7)^n \equiv 7^n + 7^n \equiv 2\cdot7^n \pmod{11}.$$
+    Tương tự ý vừa rồi, số nguyên dương $n$ nhỏ nhất cần tìm chính là một trong những số dư của phép chia $n$ cho $10.$
+    \begin{itemize} 
+        \item Nếu $n=1,$ ta có
+        $7^n=7^1 \equiv 7 \pmod{11},$ không thỏa.
+        \item Nếu $n=2,$ ta có
+        $7^n=7^2 \equiv 5 \pmod{11},$ không thỏa.
+        \item Nếu $n=3,$ ta có
+        $7^n=7^3  \equiv 2  \pmod{11},$ không thỏa.
+        \item Nếu $n=4,$ ta có
+        $7^n=7^4 \equiv 2\cdot7 \equiv 3 \pmod{11},$ không thỏa.
+        \item Nếu $n=5,$ ta có
+        $7^n=7^5 \equiv 3\cdot7 \equiv 10 \pmod{11}.$
+        \item Nếu $n=6,$ ta có
+        $7^n=7^6  \equiv 4  \pmod{11},$ thỏa yêu cầu.
+        \end{itemize}
+        Vậy $n=6$ là số nhỏ nhất để $227^n+194^n$ chia $11$ dư $8.$
+\end{enumerate}
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số dư trong các phép chia sau
+\begin{multicols}{2}
+    \begin{enumerate}[a,]
+        \item $3^{123}$ khi chia cho $7$.
+        \item $7^{2021}$ khi chia cho $11$.
+        \item $8^{227}$ khi chia cho $31$.
+        \item $227^{111}$ khi chia cho $8$.
+    \end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta có $3^3 \equiv -1 \pmod{7} \Rightarrow \tron{3^3}^{41} \equiv 3^{123} \equiv \tron{-1}^{41} \equiv -1 \equiv 6 \pmod{7}.$
+    \item Ta có $7^{10} \equiv 1 \pmod{11}
+        \Rightarrow \tron{7^{10}}^{202} \equiv 7^{2020} \equiv 1  \pmod{11}
+        \Rightarrow 7^{2021} \equiv 1\cdot 7 \equiv 7 \pmod{11}.$
+    \item Ta có
+    $8^5 \equiv 4\cdot8 \equiv 32 \equiv 1 \pmod{31}\Rightarrow 8^{225} \equiv 1 \pmod{31}\Rightarrow 8^{227} \equiv 8^2 \equiv2 \pmod{31}.$
+    \item Do $227\equiv 3\pmod{8}$ nên $227^{111} \equiv 3^{111} \pmod{8}.$ Ta nhận thấy rằng
+    $$3^2 \equiv 1 \pmod{8} \Rightarrow 3^{110} \equiv 1 \pmod{8}\Rightarrow 3^{111} \equiv 3 \pmod{8}.$$
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}\
+\begin{enumerate}[a,] 
+    \item Tìm tất cả các số nguyên dương $n$ sao cho $2^{n}n+3^{n}$ chia hết cho $5.$
+    \item Tìm tất cả các số nguyên dương $n$ sao cho $2^{n}n+3^{n}$ chia hết cho $25.$
+\end{enumerate} 
+\nguon{Chuyên Toán Phổ thông Năng khiếu 1997}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Xét hệ đồng dư modulo $5$, ta có 
+    $$2^{n}n+3^{n}\equiv 2^{n}n+\tron{-2}^{n}\pmod{5}.$$
+    Ta xét các trường hợp sau đây của $n$.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $n$ chẵn, đặt $n=2x$, và ta nhận được 
+        $$ 2^{2x}\cdot2x+\tron{-2}^{2x}=2^{2x}\cdot2x+2^{2x}=2^{2x}(2x+1)\equiv0 \pmod{5}.$$
+        Vì $(2,5)=1$ nên $2x+1$ chia hết cho $5$. Từ đây, ta suy ra  
+        $$2x=5y-1\Rightarrow 2\tron{x-2}=5\tron{y-1}\Rightarrow 5\mid \tron{x-2}\Rightarrow x=5k+2\Rightarrow n=10k+4.$$
+       \item \chu{Trường hợp 2.} Với $n$ lẻ, đặt $n=2x+1$, và ta nhận được 
+        $$ 2^{2x+1}\cdot(2x+1)+\tron{-2}^{2x+1}=2^{2x+1}\cdot(2x+1)-2^{2x+1}=2^{2x+1}\cdot2x\equiv0 \pmod{5}.$$
+        Vì $(2,5)=1$ nên $2x$ chia hết cho $5$. Từ đây, ta suy ra $x=5k,$ và $n=10k+1.$
+    \end{itemize}
+    Như vậy, các số nguyên dương $n$ thỏa mãn đề bài là $n=10k+1$ hoặc $n=10k+4$ với $k$ là số tự nhiên. 
+    \item Áp dụng kết quả ở câu a, ta thu được $n=10k+1$ hoặc $n=10k+4.$ Ta có nhận xét sau
+    $$2^{10}\equiv -1\pmod{25},\qquad 3^{10}\equiv-1 \pmod{10}.$$
+    Từ đây, ta xét $2$ trường hợp.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $n=10k+1$ kết hợp với nhận xét, ta có
+        \begin{align*}
+            2^{10k+1}\tron{10k+1}+3^{10k+1}&\equiv \tron{-1}^k\tron{20k+2}+\tron{-1}^k3\\&\equiv \tron{-1}^k\tron{20k+5}\\&
+            \equiv0\pmod{25}.
+        \end{align*}
+        Từ đây, ta suy ra $20k+5$ chia hết cho $25.$ Đặt $20k+5=25t$, ta thu được
+        $$4k+1=5t\Rightarrow4(k-1)=5(t-1).$$
+        Vì $\tron{4,5}=1$, ta lần lượt suy ra $$5\mid \tron{k-1}\Rightarrow k=5k+1 \Rightarrow n=50k+11.$$
+         \item \chu{Trường hợp 2.} Với $n=10k+4$ kết hợp với nhận xét, ta có
+         \begin{align*}
+             2^{10k+4}\tron{10k+4}+3^{10k+4}&\equiv \tron{-1}^k\tron{160k+64}+\tron{-1}^k81\\&\equiv \tron{-1}^k\tron{160k+145}\\&
+             \equiv0\pmod{25}.
+         \end{align*}
+        Từ đây, ta suy ra $160k+145$ chia hết cho $25.$ Đặt $160k+145=25t$, ta thu được
+        $$32k-96=5t-125\Rightarrow32(k-3)=5(t-25).$$
+        Vì $\tron{32,5}=1$, ta lần lượt suy ra $$5\mid \tron{k-3}\Rightarrow k=5k+3 \Rightarrow n=50k+34.$$
+    \end{itemize}
+     Như vậy, các số nguyên dương $n$ thỏa mãn là $n=50k+11$ hoặc $n=50k+34$ với $k$ là số tự nhiên. 
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số dư trong các phép chia sau
+\begin{multicols}{2}
+\begin{enumerate}[a,]
+    \item $87^{32^{47}}$ khi chia cho $19.$
+    \item $9^{8^7} + 5^{6^7}$ khi chia cho $13.$
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+\item Với việc $87\equiv 11\pmod{19},$ ta có
+    $$87 \equiv 11 \pmod{19} \Rightarrow 87^{32^{47}} \equiv 11^{32^{47}} \pmod{19}.$$
+    Ta xét số dư của $32^{47}$ cho $3$. Thật vậy
+    $$32 \equiv -1 \pmod{3} \Rightarrow 32^{47} \equiv -1 \equiv 2 \pmod{3}.$$
+    Theo đó, ta có thể đặt $32^{47} = 3k + 2$ với $k$ là số nguyên dương. Phép đặt này cho ta
+    $$11^{32^{47}} \equiv 11^{3k+2} \equiv 121\cdot\tron{11^3}^k\equiv 7\pmod{19}.$$
+    Kết luận, số dư của $87^{32^{47}}$ khi chia cho $19$ là $7.$
+    \item Ta xét lần lượt số dư của các số hạng khi chia cho $13.$\\
+     Từ $8^7 \equiv (-1)^7 \equiv 2 \pmod{3},$ ta có thể đặt $8^7=3k+2,$ với $k$ nguyên dương. Phép đặt cho ta
+        $$9^{8^7} \equiv 9^{3k+2} \equiv 9^{3k} \cdot 9^2 \equiv 9^2 \equiv 3 \pmod{13}.$$
+    Rõ ràng, $6^7$ chia hết cho $4.$ Ta đặt $6^7 = 4l$ với $l$ là số nguyên dương. Phép đặt này cho ta
+        $$5^{6^7} \equiv 5^{4l} \equiv 1 \pmod{13}.$$
+    Từ các lập luận trên, ta chỉ ra $9^{8^7} + 5^{6^7}\equiv 3+1\equiv 4\pmod{13}.$ Số đã cho chia $13$ dư $4.$
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng $2020^{2021^{2022}} + 2036$ chia hết cho $52$.
+\loigiai{Trong bài toán này, do $52=4\cdot13,$ ta sẽ lần lượt đi tìm số dư của $A$ trong phép chia nó cho $4$ và cho $13.$\\
+Ta có $A$ chia hết cho $4,$ thật vậy, điều này xảy ra là vì $2020$ và $2036$ đều chia hết cho $4.$ \\
+Tiếp theo, ta tìm số dư của $A$ khi chia cho $13.$ Ta có 
+        $$2021 \equiv 1 \pmod{4} \Rightarrow 2021^{2022} \equiv 1 \pmod{4}.$$
+        Như vậy, ta có thể đặt $2021^{2022} = 4k + 1 $ với $k$ là số nguyên dương. Phép đặt này cho ta
+        \begin{align*}
+        2020^{2021^{2022}} + 2036 
+        &\equiv 5^{2021^{2022}} + 8
+        \\&\equiv 5^{2021^{2022}}+8 
+        \\&\equiv 5^{4k+1}+8
+        \\&\equiv 5^{4k}\cdot5+8 
+        \\&\equiv1\cdot5+8 
+        \\&\equiv 0 \pmod{13}
+    \end{align*}
+Số $A$ kể trên chia hết cho cả $4$ và $13,$ lại do $[4,13]=52$ nên bài toán được chứng minh.}    
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng $92^{183^{139}} + 183^{139^{92}} + 139^{92^{183}}$ chia hết cho $138$.
+\loigiai{
+ Trong bài toán này, do $52=2\cdot3\cdot23,$ ta sẽ lần lượt đi tìm số dư của $B$ trong phép chia nó cho $2,3$ và $23.$\\
+Đầu tiên, $B$ chia hết cho $2$ vì rõ ràng $B$ là số chẵn.\\
+Thứ hai, từ những đồng dư thức
+        $$92\equiv -1\pmod{3},\quad 183\equiv 0\pmod{3},\quad 139\equiv 1\pmod{3},$$
+        ta chỉ ra được rằng
+        $$92^{183^{139}} + 183^{139^{92}} + 139^{92^{183}} \equiv 1^{183^{139}}  +(-1)^{92^{183}}\equiv 0 \pmod{3}.$$
+ Cuối cùng, từ những đồng dư thức
+        $$92\equiv 0\pmod{23},\quad 183\equiv -1\pmod{23},\quad 139\equiv 1\pmod{23},$$
+        ta chỉ ra được rằng
+        $$92^{183^{139}} + 183^{139^{92}} + 139^{92^{183}} \equiv (-1)^{139^{92}} + 1^{92^{183}}\equiv 0 \pmod{23}.$$
+    Số $B$ kể trên chia hết cho cả $2,3$ và $23,$ lại do $[2,3,23]=138$ nên bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số tự nhiên $n,$ ta luôn có
+\[2^{3^{4n+1}}+3^{2^{4n+1}}+5\text{ chia hết cho }22.\]
+\loigiai{
+Do $22=2\cdot11$ nên ta sẽ chứng minh lần lượt $2^{3^{4n+1}}+3^{2^{4n+1}}+5$ chia hết cho 
+$2$ và $11$.\\
+Đầu tiên, ta dễ dàng chứng minh được $2^{3^{4n+1}}+3^{2^{4n+1}}+5$ chia hết cho $2$ vì rõ ràng nó là số chẵn. \\
+Tiếp theo, xét trong hệ đồng dư modulo $11$, ta luôn có 
+    $$2^{10}\equiv1\pmod{11}, \qquad 3^{5}\equiv 1\pmod{11}.$$
+    Mặt khác, ta có các nhận xét sau
+    $$\heva{3^{4n+1}\equiv81^n\cdot3\equiv3&\pmod{10}\\ 2^{4n+1}\equiv16^n\cdot2\equiv2&\pmod{5}.}$$
+    Từ đây, ta đặt $3^{4n+1}=10x+3$ và $2^{4n+1}=5y+2$. Thay trở lại biểu thức đã cho, ta thu được
+    $$2^{3^{4n+1}}+3^{2^{4n+1}}+5=2^{10x+3}+3^{5y+2}=\tron{2^{10}}^k\cdot8+\tron{3^{5}}^k\cdot9+5\equiv22\equiv0\pmod{11}.$$
+Như vậy $2^{3^{4n+1}}+3^{2^{4n+1}}+5$ chia hết cho cả $2$ và $11$, lại do $\vuong{2,11}=22$ nên bài toán được chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm chữ số tận cùng của $4^{2021} + 7^{2022} + 9^{2023}.$
+\loigiai{Trong bài này, ta sẽ tìm chữ số tận cùng của từng số hạng.
+    \begin{itemize}
+        \item $4^2 \equiv 6 \pmod{10} \Rightarrow (4^2)^{1010} \equiv 6 \pmod{10} \Rightarrow 4^{2021} \equiv 4^1\equiv4\pmod{10}.$
+    \item $7^4 \equiv 1 \pmod{10} \Rightarrow (7^4)^{505} \equiv 1 \pmod{10} \Rightarrow 7^{2022} \equiv 9\pmod{10}.$
+    \item $9^2 \equiv 1 \pmod{10} \Rightarrow (9^2)^{1011} \equiv 1 \pmod{10} \Rightarrow 9^{2023} \equiv 9\pmod{10}.$
+    \end{itemize}
+    Dựa vào các lập luận trên, ta chỉ ra $4^{2021} + 7^{2022} + 9^{2023} \equiv 4 + 9 + 9\equiv2\pmod{10}.$ \\
+    Như vậy, số đã cho có chữ số tận cùng là $2.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm hai chữ số tận cùng của các số sau
+\begin{multicols}{3}
+    \begin{enumerate}[a,]
+    \item $6^{2021}$.
+    \item $69^{2022}.$
+    \item $15^{15^{15^{15}}}$.
+\end{enumerate}
+\end{multicols}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Dễ dàng chứng minh được $6^{2021}$ chia hết cho $4.$\\ 
+    Ngoài ra, khi xét trong hệ đồng dư modulo $25,$ ta có
+        $$6^5\equiv 1 \pmod{25} \Rightarrow 6^{2020} \equiv 1 \pmod{25} \Rightarrow 6^{2021} \equiv 6 \pmod{25}.$$
+    Theo đó, ta có thể đặt $6^{2021} = 25n + 6=4m$ với $m,n$ là các số nguyên dương. Phép đặt này cho ta
+    \begin{align*}
+        4m = 25n + 6 
+        \Rightarrow 4m + 44 = 25n + 50
+        \Rightarrow 4\tron{m + 11} = 25\tron{n + 2}.
+    \end{align*}
+    Vì $\tron{25,4} = 1$ nên $\tron{n + 2}$ chia hết cho $4$, và ta lần lượt suy ra
+    $$n\equiv 2\pmod{4}\Rightarrow 25n\equiv 50\pmod{100}\Rightarrow 25n+6\equiv 56\pmod{100}.$$
+    Như vậy, số $6^{2021}$ có hai chữ số tận cùng là $56.$
+    \item Dễ dàng chứng minh được $69^{2022}$ chia cho $4$ dư $1.$\\
+    Ngoài ra, khi xét trong hệ đồng dư modulo $25$, ta nhận thấy rằng
+    $$69^{2002} \equiv 14^{2002}=(14^5)^{400}\cdot14^2\equiv 14^2\equiv21\pmod{25}.$$
+    Ta có thể đặt $69^{2002} = 25n + 21=4m+1$ với $m,n$ là các số nguyên dương. Ta có
+    \begin{align*}
+        4m + 1 = 25n + 21\Rightarrow 4m - 20 = 25n\Rightarrow 4(m - 5) = 25n.
+    \end{align*}
+    Vì  $\tron{4, 25} = 1$ nên $n$ chia hết cho $4$, và ta lần lượt suy ra
+    $$n\equiv 0\pmod{4}\Rightarrow 25n\equiv 0\pmod{100}\Rightarrow 25n+21\equiv 21\pmod{100}.$$
+    Như vậy, số $69^{2022}$ có hai chữ số tận cùng là $21.$
+    \item Khi xét trong hệ đồng dư modulo $4$, ta nhận thấy rằng
+    $$15\equiv -1 \pmod{4} \Rightarrow 15^{15^{15^{15}}} \equiv - 1 \pmod{4}. $$
+    Ngoài ra, khi xét trong hệ đồng dư modulo $25$, ta nhận thấy rằng
+    $$15^2 \equiv 0 \pmod{25} \Rightarrow 15^{15^{15^{15}}} \equiv 0 \pmod{25}.$$
+    Như vậy, ta có thể đặt $15^{15^{15^{15}}}  = 25n=4m+1,$ trong đó $m,n$ là các số nguyên dương. Ta có
+    \begin{align*}
+        4m - 1 = 25n
+        \Rightarrow 4m - 76 &= 25n - 7
+        \Rightarrow 4\tron{m - 19} = 25\tron{n - 3}.
+    \end{align*}
+    Vì $\tron{4, 25} = 1$ nên $\tron{n - 3}$ chia hết cho $4$, và ta lần lượt suy ra
+    $$n\equiv 3\pmod{4}\Rightarrow 25n\equiv 75\pmod{4}.$$
+    Như vậy, số $15^{15^{15^{15}}}$ có hai chữ số tận cùng là $75.$
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm ba chữ số tận cùng của $A=3\cdot9\cdot15\cdots2025$.
+\loigiai{
+Trong bài toán này, ta sẽ xét số dư của $A$ khi chia cho $8$ và khi chia cho $125.$
+\begin{enumerate}
+    \item Trong $A$ chứa các thừa số là $15,45,75.$ Tích ba thừa số là bội của $5$ này chia hết cho $125,$ kéo theo $A$ cũng chia hết cho $125.$
+    \item Ta xét số dư khi chia cho $8$ của tích một cặp hai số có dạng $(12n+3,12n+9)$ trong $A.$ Ta có 
+    $$\tron{12n + 3}\tron{12n + 9} = 144n^2 + 144n + 27 \equiv 3 \pmod{8}.$$
+    Bằng cách này, khi xét $A$ trong hệ đồng dư modulo $8,$ ta được
+    $$A\equiv (3\cdot9)(15\cdot21)\ldots(2019\cdot2025)\equiv 3\cdot3\ldots3=3^{169}\pmod{8}.$$
+\end{enumerate}
+Dựa vào hai lập luận kể trên, ta có thể đặt $A=125m=8n+3,$ trong đó $m,n$ là các số nguyên dương. Phép đặt này cho ta
+\begin{align*}
+    125m= 8n + 3
+   \Rightarrow 125m + 125= 8n + 128
+   \Rightarrow 125\tron{m + 1}= 8\tron{n + 16}.
+\end{align*}
+Vì $\tron{8, 125} = 1$ nên $\tron{m + 1}$ chia hết cho $8$. Ta lần lượt suy ra
+$$m\equiv 7\pmod{8}\Rightarrow 125m\equiv 875\pmod{1000}.$$
+Như vậy, ba chữ số tận cùng của tích $A=3\cdot9\cdot15\ldots2025$ là $875.$}
+\end{gbtt}
+
+\section{Một số bổ đề đồng dư thức với số mũ nhỏ}
+
+%chỗ này để viết lời nói đầu
+
+\subsection*{Mở đầu}
+
+Trước khi nói đến lí thuyết, ta sẽ xem xét một vài ví dụ.
+
+\begin{bx}
+Cho số nguyên $n$. Chứng minh rằng số dư của phép chia $n^2$ cho $3$ không thể bằng $2.$
+\loigiai{
+Mọi số nguyên $n$ bất kì chỉ có thể biểu diễn dưới một trong hai dạng, hoặc là $n=3k,$ hoặc là $n=3k\pm 1.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Với $n=3k,$ ta có $n^2=(3k)^2=9k^2$ chia hết cho $3.$
+    \item Với $n=3k\pm 1,$ ta có $n^2=(3k\pm 1)^2=9k^2\pm 6k+1$ chia cho $3$ dư $1.$
+\end{enumerate}
+Dựa theo các lập luận trên, ta chỉ ra $n^2\equiv 0,1\pmod{3},$ tức $n^2$ không thể nhận số dư là $2$ khi chia cho $3.$ Bài toán được chứng minh.
+}
+\begin{luuy}
+Ngoài cách làm kể trên, ta có thể thực hiện xét bảng đồng dư theo modulo $3$ cho $n$ và $n^2$ như sau
+\begin{center}
+    \begin{tabular}{c|c|c}
+        $n$ &  $0$ & $\pm 1$\\
+        \hline
+        $n^2$ & $0$ & $1$
+    \end{tabular}
+\end{center}
+Cơ sở để xây dựng bảng đồng dư trên chính là các lập luận
+\begin{enumerate}
+    \item $n\equiv 0\pmod{3}\Rightarrow n^2\equiv 0\pmod{3}.$
+    \item $n\equiv \pm 1\pmod{3}\Rightarrow  n^2\equiv (\pm 1)^2\equiv 1\pmod{3}.$
+\end{enumerate}
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Cho số nguyên $n.$ Tìm tất cả các số dư có thể của $n^2$ khi đem chia cho $7.$
+\loigiai{
+Trong bài toán này, ta xét bảng đồng dư theo modulo $7$ như sau
+\begin{center}
+    \begin{tabular}{c|c|c|c|c}
+        $n$ &  $0$ & $\pm 1$ & $\pm 2$ & $\pm 3$\\
+        \hline
+        $n^2$ & $0$ & $1$ & $4$ & $2$
+    \end{tabular}
+\end{center}
+Như vậy, $n^2\equiv 0,1,2,4\pmod{7}.$ Nói cách khác, các số dư có thể của $n^2$ khi chia cho $7$ là $0,1,2$ và $4.$}
+\end{bx}
+
+\begin{bx}
+Cho $n$ là một số nguyên. Tìm tất cả các số dư có thể của $n^3$ khi đem chia cho $9.$
+\loigiai{
+Trong bài toán này, ta xét bảng đồng dư theo modulo $9$ như sau
+\begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+        $n$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$\\
+        \hline
+        $n^3$ & $0$ & $1$ & $8$ & $0$ & $1$ & $8$ & $0$ & $1$ & $8$
+    \end{tabular}
+\end{center}
+Như vậy, $n^3\equiv 0,1,8\pmod{9}.$ Nói cách khác, các số dư có thể của $n^3$ khi chia cho $9$ là $0,1,8.$}
+\end{bx}
+
+Bằng cách làm tương tự các bài toán vừa rồi, ta thu được một vài kết quả đồng dư sau.
+
+\subsection*{Lí thuyết}
+
+Với mọi số nguyên $n,$ ta có
+
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $n^2\equiv 0,1\pmod{3}.$
+    \item $n^2\equiv 0,1\pmod{4}.$
+    \item $n^2\equiv 0,1,4\pmod{5}.$   
+    \item $n^2\equiv 0,1,2,4\pmod{7}.$    
+    \item $n^2\equiv 0,1,4\pmod{8}.$    
+    \item $n^3\equiv 0,1,-1\pmod{7}.$ 
+    \item $n^3\equiv 0,1,-1\pmod{9}.$    
+    \item $n^4\equiv 0,1\pmod{5}.$    
+    \item $n^4\equiv 0,1\pmod{16}.$    
+    \item $n^5\equiv 0,1\pmod{11}.$         
+\end{enumerate}
+\end{multicols}
+
+Lí thuyết trên trải dài trên cả cuốn sách. Các bổ đề về đồng dư này giúp chúng ta thuận lợi hơn trong các bài toán xét số dư. Dưới đây là một vài ví dụ minh họa.
+
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Cho $n$ là số nguyên dương nguyên tố cùng nhau với $10.$
+\\Chứng minh rằng $n^4-1$ chia hết cho $40.$
+\nguon{Chuyên Toán Hà Nội}
+\loigiai{
+Ta thực hiện các bước làm sau đối với bài toán này.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Chứng minh $n^4-1$ chia hết cho $5.$\\
+    Ta đã biết $n^2\equiv 0,1,-1\pmod{5},$ nhưng do $(n,5)=1$ nên 
+    $$n^2\equiv -1,1\pmod{5}.$$
+    Lấy bình phương hai vế, ta thu được $n^4\equiv 1\pmod{5},$ tức là $n^4-1$ chia hết cho $5.$
+    \item Chứng minh $n^4-1$ chia hết cho $8.$ \\  
+    Ta đã biết $n^2\equiv 0,1,4\pmod{8},$ nhưng do $(n,2)=1$ nên 
+    $$n^2\equiv 1\pmod{8}.$$
+    Lấy bình phương hai vế, ta thu được $n^4\equiv 1\pmod{8},$ tức là $n^4-1$ chia hết cho $8.$  
+\end{enumerate}
+Hai nhận xét trên cho ta biết $n$ chia hết cho $[5,8]=40.$ Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}\label{fermatcuamu.7}
+Chứng minh rằng với mọi số nguyên dương $n,$ ta có $n^7-n$ chia hết cho $42.$
+\loigiai{
+Ta chia bài toán trên thành các bước làm sau.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $n^7-n$ chia hết cho $6.$ \\
+    Ta có $n^7-n=n(n-1)(n+1)\left(n^2-n+1\right)\left(n^2+n+1\right).$\\
+    Với nhận xét thu được là $n^7-n$ chia hết cho $n(n-1)(n+1)$ là tích ba số tự nhiên liên tiếp, ta chỉ ra $n^7-n$ chia hết cho $6.$
+    \item Ta chứng minh $n^7-n$ chia hết cho $7.$\\
+    Ta có $n^7-n=n\left(n^3-1\right)\left(n^3+1\right).$\\
+    Ta đã biết, $n^3\equiv -1,0,1\pmod{7}.$ Ta xét các trường hợp trên.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $n^3\equiv -1\pmod{7},$ ta có $n^3+1$ chia hết cho $7.$
+        \item \chu{Trường hợp 2.} Nếu $n^3\equiv 1\pmod{7},$ ta có $n^3-1$ chia hết cho $7.$     
+        \item \chu{Trường hợp 3.} Nếu $n^3\equiv 0\pmod{7},$ do $7$ là số nguyên tố nên $n$ chia hết cho $7.$ 
+    \end{itemize}
+\end{enumerate}
+Dựa theo các bước làm trên, ta có $n^7-n$ chia hết cho $[6,7]=42.$ Chứng minh hoàn tất.}
+\begin{luuy}
+Bài toán trên có thể được giải quyết bằng phương pháp quy nạp ở phần phụ lục, hoặc phương pháp phân tích đa thức thành nhân tử đã học ở mục trước. Tuy nhiên, bổ đề về đồng dư cho ta những cách nhìn mới hơn về bài toán. Cách chứng minh y hệt cho ta một vài kết quả tương tự, chẳng hạn như
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $n^3\equiv n\pmod{6}.$
+    \item $n^5\equiv n\pmod{30}.$
+\end{enumerate}
+\end{multicols}
+Tổng quát cho bài toán ở trên chính là định lí $Fermat$ nhỏ:
+\begin{quote}
+\it
+"Với mọi số nguyên dương $a$ và số nguyên tố $p,$ ta có
+$a^p\equiv a\pmod{p}$".
+\end{quote}
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Cho các số nguyên $x,y,z$ thỏa mãn 
+\[\dfrac{x^2-1}{2}=\dfrac{y^2-1}{3}=z.\]
+Chứng minh rằng $z$ chia hết cho $40.$
+\nguon{Chuyên Khoa học Tự nhiên 2016}
+\loigiai{
+Với các số $x,y,z$ thỏa mãn giả thiết, ta có
+$$2z+1=x^2,\quad 3z+1=y^2.$$
+Trong bài toán này, ta sẽ chứng minh rằng $z$ chia hết cho cả $5$ và $8.$
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $z$ chia hết cho $8.$\\
+    Từ giả thiết, ta nhận thấy $x^2-1$ chia hết cho $2,$ vậy nên $x$ là số lẻ. Ta có
+    $$x^2\equiv 1\pmod{4}\Rightarrow 2z+1\equiv 1\pmod{4}\Rightarrow z\equiv 0\pmod{2}.$$
+    Lập luận trên cho ta $z$ là số chẵn, kéo theo $y$ là số lẻ. Ta đã biết 
+    $$x^2\equiv 0,1,4\pmod{8},\quad y^2\equiv 0,1,4\pmod{8}.$$
+    Do $x,y$ là hai số lẻ, ta có $x^2-y^2\equiv 1-1\equiv 0\pmod{8},$ và như vậy, $z$ chia hết cho $8.$
+    \item Ta chứng minh $z$ chia hết cho $5.$ \\
+    Cộng theo vế hai đẳng thức $2z+1=x^2$ và $3z+1=y^2,$ ta nhận thấy
+    $$5z+2=x^2+y^2.$$
+    Ta suy ra $x^2+y^2\equiv 2\pmod{5}.$ Mặt khác, ta xét bảng đồng dư modulo $5$ sau đây
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c|c|c|c}
+            $x^2$ & $0$ & $0$ & $0$ & $1$ & $1$ & $1$ & $4$ & $4$ & $4$ \\
+            \hline
+            $y$ & $0$ & $1$ & $4$ & $0$ & $1$ & $4$& $0$ & $1$ & $4$ \\
+            \hline 
+            $x^2+y^2$ & $0$ & $1$ & $4$ & $1$ & $2$ & $0$ & $4$ & $0$ & $3$
+        \end{tabular}
+    \end{center}
+    Bảng trên cho ta biết, chỉ trường hợp $x^2\equiv y^2\equiv 1\pmod{5}$ là có thể xảy ra. Như vậy
+    $$x^2-y^2\equiv 0\pmod{5}\Rightarrow z\equiv 0\pmod{5}.$$
+    Ta thu được $z$ chia hết cho $5$ từ đây.
+\end{enumerate}
+Hai nhận xét trên cho ta biết $z$ chia hết cho $[5,8]=40.$ Bài toán được chứng minh.}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ thỏa mãn $A=n\left(n^2+1\right)\left(n^2+4\right)$ chia hết cho $120.$
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $x,y,z$ thỏa mãn 
+\[x^2+y^2=z^2.\]
+Chứng minh rằng $xyz$ chia hết cho $60.$
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên $x,y,z$ thỏa mãn $x^2+y^2+z^2=2xyz.$ \\Chứng minh rằng $xyz$ chia hết cho $24.$
+\nguon{Chuyên Toán Vĩnh Phúc 2021}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $n>2.$ Chứng minh rằng
+\begin{enumerate}[a,]
+    \item $A=n^3-3n^2+2n$ chia hết cho $6.$
+    \item $B=n^{A+1}-1$ chia hết cho $7.$
+\end{enumerate}
+\nguon{Chuyên Toán Tuyên Quang 2021}
+\end{btt}
+
+\begin{btt}
+Cho ba số nguyên dương $a,b,c$ thỏa mãn $a^3+b^3+c^3$ chia hết cho $14.$ Chứng minh rằng $abc$ cũng chia hết cho $14.$
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2019}
+\end{btt}
+
+\begin{btt}
+Cho $a,b$ là các số nguyên dương. Ta đặt
+$$M=a^2+ab+b^2.$$
+Biết rằng chữ số hàng đơn vị của $M$ là $0.$ Tìm chữ số hàng chục của $M$.
+\nguon{Chuyên Toán Hồ Chí Minh 2014}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba số nguyên $(a, b, c)$ sao cho số $$\dfrac{(a-b)(b-c)(c-a)}{2}+2$$ là một lũy thừa đúng của $2018^{2019}.$
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2016}
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên $a_1,a_2,\ldots,a_n$. Ta đặt 
+$$A=a_1+a_2+\ldots+a_n,\qquad B=a_1^3+a_2^3+\ldots+a_n^3.$$ 
+Chứng minh rằng $A$ chia hết cho $6$ khi và chỉ khi $B$ chia hết cho $6.$
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số nguyên dương $n$, ta luôn có
+$$\left[(27 n+5)^{7}+10\right]^{7}+\left[(10 n+27)^{7}+5\right]^{7}+\left[(5 n+10)^{7}+27\right]^{7}.$$
+chia hết cho $42.$
+\nguon{Chuyên Khoa học Tự nhiên 2019}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ thỏa mãn $A=n\left(n^2+1\right)\left(n^2+4\right)$ chia hết cho $120.$
+\loigiai{
+Ta sẽ tìm điều kiện của $n$ sao cho $A$ chia hết cho $3,5$ và $8.$
+\begin{enumerate}[a,]
+    \item Xét trong hệ đồng dư modulo $3,$ ta có
+    $$A\equiv n\left(n^2+1\right)^2\pmod{3}.$$
+    Ta đã biết $n^2+1\equiv 1,2\pmod{3}.$ Kết quả trên cho ta $\left(n^2+1,3\right)=1,$ và vì thế, $n$ chia hết cho $3.$
+    \item Xét trong hệ đồng dư modulo $5,$ ta có
+    \begin{align*}
+    A&=n\left[(n-2)(n+2)+5\right]\left[(n-1)(n+1)+5\right]\\&\equiv n(n-2)(n+2)(n-1)(n+1) \pmod{5}.
+    \end{align*}
+    Bên trên là tích của $5$ số nguyên liên tiếp, và vì thế, $A$ chia hết cho $5.$ 
+    \item Xét trong hệ đồng dư modulo $8,$ ta nhận thấy
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $n$ lẻ, ta có $n\left(n^2+4\right)$ lẻ, còn $$n^2+1\equiv 2\pmod{4},$$ thế nên $A\equiv 2,6\pmod{8},$ và $A$ không chia hết cho $8.$
+        \item\chu{Trường hợp 2.} Với $n$ chẵn, ta có $n\left(n^2+4\right)$ chia hết cho $8$, thế nên $A$ chia hết cho $8$.
+    \end{itemize}
+\end{enumerate}
+Kết hợp các nhận xét bên trên, ta kết luận tất cả các số tự nhiên $n$ cần tìm là các bội tự nhiên của $6.$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $x,y,z$ thỏa mãn 
+\[x^2+y^2=z^2.\]
+Chứng minh rằng $xyz$ chia hết cho $60.$
+\loigiai{
+Trong bài toán này, ta sẽ chứng minh rằng $xyz$ chia hết cho cả $3,4$ và $5$.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $xyz$ chia hết cho $3.$\\
+    Giả sử $x,y,z$ không chia hết cho $3$. Ta luôn có với $a$ là số nguyên dương thì $a^2\equiv0,1\pmod{3}$.\\ Kết hợp nhận xét trên và điều giả sử, ta nhận được
+    $$x^2\equiv1\pmod{3},\quad y^2\equiv 1\pmod{3}, \quad z^2\equiv1\pmod{3}.$$
+    Thế vào giả thiết, ta thu được
+    $$z^2=x^2+y^2\equiv 1+1\equiv2\pmod{3}.$$
+    Điều này mâu thuẫn với điều ta đã chứng minh phía trên. \\Do đó, giả sử sai nên trong $x,y,z$ có một số chia hết cho $3$ hay $xyz$ chia hết cho $3$.
+    \item Ta chứng minh $xyz$ chia hết cho $4.$\\
+    Giả sử $x,y,z$ không chia hết cho $4$. Ta luôn có với $a$ là số nguyên dương thì $a^2\equiv0,1\pmod{4}$.\\
+    Kết hợp nhận xét trên và điều giả sử, ta nhận được
+    $$x^2\equiv1\pmod{4},\quad y^2\equiv 1\pmod{4}, \quad z^2\equiv1\pmod{4}.$$
+    Thế vào giả thiết, ta thu được
+    $$z^2=x^2+y^2\equiv 1+1\equiv2\pmod{4}.$$
+    Điều này mâu thuẫn với điều ta đã chứng minh phía trên.\\ Do đó, giả sử sai nên trong $x,y,z$ có một số chia hết cho $4$ hay $xyz$ chia hết cho $4$.
+    \item Ta chứng minh $xyz$ chia hết cho $5.$\\
+    Giả sử $x,y,z$ không chia hết cho $5$. Ta luôn có với $a$ là số nguyên dương thì $a^2\equiv0,1,4\pmod{5}$.\\
+    Kết hợp nhận xét trên và điều giả sử, ta nhận được
+    $$x^2\equiv1,4\pmod{5},\quad y^2\equiv 1,4\pmod{5}, \quad z^2\equiv1,4\pmod{5}.$$
+    Ta xét bảng đồng dư modulo $5$ sau đây
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+            $x^2$ & $1$ & $1$ & $4$ & $4$  \\
+            \hline
+            $y^2$ & $1$ & $4$ & $1$ & $4$\\
+            \hline           $z^2$ & $2$ & $0$ & $0$ & $3$\\
+        \end{tabular}
+    \end{center}
+    Điều này mâu thuẫn với điều ta đã chứng minh phía trên. \\Do đó, giả sử sai nên trong $x,y,z$ có một số chia hết cho $5$ hay $xyz$ chia hết cho $5$.
+\end{enumerate}
+Ba nhận xét trên cho ta biết $xyz$ chia hết cho $\vuong{3,4,5}=60$. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên $x,y,z$ thỏa mãn $x^2+y^2+z^2=2xyz.$ \\Chứng minh rằng $xyz$ chia hết cho $24.$
+\nguon{Chuyên Toán Vĩnh Phúc 2021}
+\loigiai{
+Ta thực hiện các bước làm sau đối với bài toán này.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $xyz$ chia hết cho $8.$ \\
+    Từ giả thiết, ta suy ra $x^2+y^2+z^2$ là số chẵn, thế nên trong $x,y,z$ có $1$ hoặc $3$ số chẵn. Không mất tính tổng quát, ta xét các trường hợp sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $x$ là số chẵn, $y,z$ là số lẻ, ta có
+        \[xyz\equiv 0\pmod{4}.\tag{1}\label{vp1}\]
+        Ta cũng biết rằng một số chẵn dạng $a^2$ khi chia cho $8$ được dư là $0$ hoặc $4,$ trong khi số dư của một số lẻ dạng $a^2$ là $1.$ Lập luận này chỉ ra cho ta
+        \[x^2+y^2+z^2\equiv 2,6\pmod{8}.\tag{2}\label{vp2}\]
+        Đối chiếu (\ref{vp1}) và (\ref{vp2}), ta nhận thấy điều mâu thuẫn. Trường hợp này không tồn tại.
+        \item \chu{Trường hợp 2.} Nếu $x,y,z$ đều là số chẵn, hiển nhiên $xyz$ chia hết cho $8.$
+    \end{itemize}    
+    \item Ta chứng minh $xyz$ chia hết cho $3.$ \\
+    Giả sử phản chứng rằng $x,y,z$ không chia hết cho $3,$ lúc này
+    $$x^2+y^2+z^2\equiv 1+1+1\equiv 0\pmod{3}.$$
+    Suy ra $xyz$ chia hết cho $3,$ tức một trong ba số $x,y,z$ chia hết cho $3,$ mâu thuẫn với giả sử.\\ Giả sử sai, và một trong ba số $x,y,z$ chia hết cho $3.$     
+\end{enumerate}
+Như vậy, $xyz$ chia hết cho $[3,8]=24.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt} Cho số nguyên dương $n>2.$ Chứng minh rằng
+\begin{enumerate}[a,]
+    \item $A=n^3-3n^2+2n$ chia hết cho $6.$
+    \item $B=n^{A+1}-1$ chia hết cho $7.$
+\end{enumerate}
+\nguon{Chuyên Toán Tuyên Quang 2021}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta viết lại biểu thức $A$ như sau: $$A=n\left(n^2-3n+2\right)=n(n-1)(n-2).$$ 
+    Ta có $A$ là tích ba số nguyên dương liên tiếp, và vì thế, $A$ chia hết cho $6.$
+    \item Theo như kết quả trên, ta có thể đặt $A=6m,$ với $m$ là số nguyên dương. Ta xét các trường hợp sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $n$ chia hết cho $7,$ hiển nhiên $B$ cũng chia hết cho $7.$
+        \item \chu{Trường hợp 2.} Nếu $n$ không chia hết cho $7,$ ta suy ra $n^3\equiv 1,-1\pmod{7},$ và khi ấy
+        \begin{align*}
+            n^6\equiv 1\pmod{7}
+            &\Rightarrow n^{6m}\equiv 1\pmod{7}\\&\Rightarrow n^{6m+1}\equiv n\pmod{7}\\&
+            \Rightarrow 7\mid\left(n^{A+1}-n\right).
+        \end{align*}
+    \end{itemize}  
+    Như vậy, bài toán được chứng minh trong mọi trường hợp.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Cho ba số nguyên dương $a,b,c$ thỏa mãn $a^3+b^3+c^3$ chia hết cho $14.$ Chứng minh rằng $abc$ cũng chia hết cho $14.$
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2019}
+\loigiai{
+Ta chia bài toán thành các bước làm sau đây.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Ta chứng minh $abc$ chẵn. \\
+    Nếu cả $a,b,c$ cùng lẻ thì $a^3+b^3+c^3$ lẻ và không thể chia hết cho $14,$ mâu thuẫn.\\ Do vậy một trong ba số $a,b,c$ chẵn, và tích $abc$ cũng vậy.
+    \item Ta chứng minh $abc$ chia hết cho $7$. \\
+    Phản chứng, giả sử $abc$ không chia hết cho $7.$ Lúc này
+    $$a^3,\ b^3,\ c^3\equiv -1,1\pmod{7}.$$
+    Ta suy ra $a^3+b^3+c^3\equiv -3,-1,1,3\pmod{7},$ trái giả thiết. Phản chứng là sai, và $7\mid abc.$
+\end{enumerate}
+Như vậy, $abc$ chia hết cho $[2,7]=14.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a,b$ là các số nguyên dương. Ta đặt
+$$M=a^2+ab+b^2.$$
+Biết rằng chữ số hàng đơn vị của $M$ là $0.$ Tìm chữ số hàng chục của $M$.
+\nguon{Chuyên Toán Hồ Chí Minh 2014}
+\loigiai{
+Ta dự đoán rằng $M$ chia hết cho $100.$ Ta tiến hành bài toán theo các bước làm sau.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Chứng minh $M$ chia hết cho $4.$ \\
+    Trong bước này, trước hết ta sẽ lập bảng đồng thư theo modulo $2$ của $M.$
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+           $a$  & lẻ & lẻ & chẵn & chẵn \\
+           \hline
+            $b$ & lẻ & chẵn & lẻ & chẵn \\
+            \hline
+            $a^2+ab+b^2$ & lẻ & lẻ & lẻ & chẵn
+        \end{tabular}
+    \end{center}
+    Do $M$ có tận cùng là $0$ nên $M$ chẵn. Dựa vào bảng, ta chỉ ra cả $a$ và $b$ đều chẵn. Vì thế
+    $$4\mid a^2,\quad 4\mid b^2,\quad 4\mid ab.$$
+    Ta suy ra $M$ chia hết cho $4$ từ đây.
+    \item Chứng minh $M$ chia hết cho $25.$\\
+    Do $M$ có tận cùng là $0$ nên 
+    $$4M=4\tron{a^2+ab+b^2}=(2a+b)^2+3b^2$$
+    chia hết cho $5.$ Từ đây, ta lập được bảng đồng dư theo modulo $5$
+    \begin{center}
+        \begin{tabular}{c|c|c|c}
+           $b^2$  &  $0$ & $1$ & $4$\\
+           \hline
+            $3b^2$ &  $0$ & $3$ & $2$\\
+            \hline
+            $(2a+b)^2$ &  $0$ & $2$ & $3$\\
+        \end{tabular}
+    \end{center}
+    Do một số chính phương không thể chia $5$ dư $2$ hoặc $3$ nên từ bảng trên, ta có
+    $$(2a+b)^2\equiv 0\pmod{5}.$$
+    Ta suy ra $2a+b$ chia hết cho $5.$ Kết hợp với $5\mid M,$ ta được $5\mid 3b^2$ hay $5\mid b,$ kéo theo $5\mid a.$ Vậy
+    $$25\mid a^2,\quad 25\mid ab,\quad 25\mid b^2.$$
+    Ta suy ra $M$ chia hết cho $25$ từ đây.
+\end{enumerate}
+Các kết quả trên cho ta biết $M$ chia hết cho $[4,25]=100.$ Chữ số hàng chục của $M$ là $0.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba số nguyên $(a, b, c)$ sao cho số $$\dfrac{(a-b)(b-c)(c-a)}{2}+2$$ là một lũy thừa đúng của $2018^{2019}.$
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2016}
+\loigiai{
+Già sử $a, b, c$ là các số nguyên và $n$ là một số nguyên dương sao cho
+$$
+(a-b)(b-c)(c-a)+4=2\cdot 2018^{2019 n}.
+$$
+Đặt $a-b=-x,b-c=-y.$ Ta có
+\[x y(x+y)+4=2\cdot2018^{2019 n}.\tag{1}\label{2018^2019}\]
+Với $n \geq 1,$ vế phải của (\ref{2018^2019}) chia hết cho $7,$ vì thế
+\[x y(x+y)+4 \equiv 0\pmod{7}.\tag{2}\label{2018^2019.1}\]
+Dựa theo hằng đẳng thức $(x+y)^3-x^3-y^3=3xy(x+y),$ ta chỉ ra được rằng
+$$(x+y)^{3}-x^{3}-y^{3}\equiv 2\pmod{7}.$$
+Với mọi số nguyên dương $k,$ ta luôn có $k^3\equiv -1,0,1\pmod{7},$ vì thế nếu $$(x+y)^{3}-x^{3}-y^{3} \equiv 2\pmod{7}$$ thì trong ba số $x+y,\ x,\ y,$ nhất thiết phải có một số chia hết cho $7,$ và lúc này
+$$xy(x+y)\equiv 0\pmod{7}.$$
+Lập luận trên mâu thuẫn với (\ref{2018^2019.1}). Giả sử $n\ge 1$ là sai, và ta chỉ phải xét trường hợp $n=0.$ Khi đó
+$$x y(x+y)+4=2 \Leftrightarrow x y(x+y)=-2.$$
+Tới đây, ta lập bảng giá trị sau đây
+\begin{center}
+    \begin{tabular}{c|c|c|c|c}
+        $xy$ & $2$ & $1$ & $-1$ & $-2$\\
+        \hline
+        $x+y$ & $1$ & $2$ & $-2$ & $-1$\\
+        \hline
+        $(x,y)$ & $\notin\mathbb{Z}^2$ & $(1,1)$ & $\notin\mathbb{Z}^2$ & $(2,-1)$ hoặc $(1,-2)$
+    \end{tabular}
+\end{center}
+Như vậy, tất cả các bộ ba số thỏa mãn yêu cầu bài toán là $(a, b, c)=(k+2, k+1, k)$ cùng các hoán vị, trong đó $k$ là một số nguyên bất kì.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên $a_1,a_2,\ldots,a_n$. Ta đặt 
+$$A=a_1+a_2+\ldots+a_n,\qquad B=a_1^3+a_2^3+\ldots+a_n^3.$$ 
+Chứng minh rằng $A$ chia hết cho $6$ khi và chỉ khi $B$ chia hết cho $6.$
+
+\loigiai{Với mọi số nguyên $x$, ta có $x^3-x=(x-1)x(x+1)$ chia hết cho $3!=6$ do đây là tích $3$ số nguyên liên tiếp. Nhận xét này giúp ta suy ra
+\begin{align*}
+A-B
+=\left(a_1^3-a_1\right)+\left(a_2^3-a_2\right)+\ldots+\left(a_n^3-a_n\right)   
+\end{align*}
+chia hết cho $6,$ và bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số nguyên dương $n$, ta luôn có
+$$\left[(27 n+5)^{7}+10\right]^{7}+\left[(10 n+27)^{7}+5\right]^{7}+\left[(5 n+10)^{7}+27\right]^{7}.$$
+chia hết cho $42.$
+\nguon{Chuyên Khoa học Tự nhiên 2019}
+\loigiai{
+Ta đặt $A=\left[(27 n+5)^{7}+10\right]^{7}+\left[(10 n+27)^{7}+5\right]^{7}+\left[(5 n+10)^{7}+27\right]^{7}.$ \\Theo như kết quả ở \chu{ví dụ \ref{fermatcuamu.7}}, ta nhận thấy rằng
+\begin{align*}
+A
+&\equiv
+(27n+5+10)^7+(10n+27+5)^7+(5n+10+27)^7
+\\&\equiv 
+27n+5+10+10n+27+5+5n+10+27
+\\&\equiv 42n+42\\&\equiv 0\pmod{42}.
+\end{align*}
+Như vậy, bài toán đã cho được chứng minh.}
+\end{gbtt}

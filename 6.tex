@@ -1,0 +1,1042 @@
+\chapter{Bất đẳng thức trong số học}
+
+Bất đẳng thức là một dạng toán khó trong phân môn Đại số. Ta đã biết đến các bất đẳng thức đại số nổi tiếng như bất đẳng thức $AM-GM$ hay bất đẳng thức $Cauchy-Schwarz.$ Ở chương này, chúng ta sẽ cùng tìm hiểu về một số dạng toán và phương pháp để chứng minh các bất đẳng thức trong Số học.
+\\ \\
+Chương VI được chia thành 3 phần.
+\begin{itemize}
+    \item\chu{Phần 1.} Bất đẳng thức đối xứng nhiều biến.
+    \item\chu{Phần 2.} Bất đẳng thức và phương pháp xét modulo.
+    \item\chu{Phần 3.} Bất đẳng thức liên quan đến ước và bội.
+\end{itemize}
+
+\section{Bất đẳng thức đối xứng nhiều biến}
+\subsection*{Ví dụ minh hoạ}
+
+\begin{bx}
+Cho các số nguyên dương $x,y$ thỏa mãn $x+y=99.$ Tìm giá trị lớn nhất và giá trị nhỏ nhất của tích $xy.$
+\end{bx}
+\nx{\\Nếu bài toán trên cho $x,y$ là các số thực không âm, bằng kiến thức đã học về bất đẳng thức, ta chỉ ra được
+$$xy\ge 0,\quad xy\le\dfrac{(x+y)^2}{4}=\dfrac{99^2}{4}.$$
+Với $x,y$ là các số nguyên dương, dấu bằng xảy ra ở cả hai chiều lớn và nhỏ nhất sẽ tiệm cận nhất với dấu bằng trong trường hợp số thực. Thông qua thử một vài trường hợp, ta dự đoán
+\begin{itemize}
+    \item[i,] $\min xy = 98,$ đạt tại $(x,y)=(1,98)$ hoặc $(x,y)=(98,1).$
+    \item[ii,] $\max xy = 2450,$ đạt tại $(x,y)=(44,45)$ hoặc $(x,y)=(45,44).$    
+\end{itemize}
+Ta sẽ chứng minh các nhận định trên.}
+\loigiai{
+Nhờ giả thiết $x\ge 1,y\ge 1,$ ta có $(x-1)(y-1)\ge 0.$ Từ đó ta suy ra
+$$xy\ge x+y-1=99-1=98.$$
+Tiếp theo, ta sẽ đi chứng minh rằng $xy\le 2352,$ tức đi chứng minh $x(99-x)\le 2352.$ Bằng phân tích nhân tử, ta nhận thấy bất đẳng thức này tương đương với
+$$(x-49)(x-50)\ge 0.$$
+Bất đẳng thức trên đúng $(x-49)(x-50)$ là tích hai số tự nhiên liên tiếp. Ta kết luận
+\begin{itemize}
+    \item[i,] Giá trị nhỏ nhất của $xy$ là $98,$ đạt tại $(x,y)=(1,98)$ hoặc $(x,y)=(98,1).$
+    \item[ii,] Giá trị lớn nhất của $xy$ là $2450,$ đạt tại $(x,y)=(44,45)$ hoặc $(x,y)=(45,44).$    
+\end{itemize}}
+
+\begin{bx}
+Cho $45$ số nguyên dương $a_1,a_2,\cdots,a_{45}$  thỏa mãn điều kiện 
+$$a^3_1+a^3_2+\cdots+a^3_{45}\le 10^6.$$
+Chứng minh ta luôn tìm được ít nhất $2$ số bằng nhau trong $45$ số trên.
+\loigiai{
+Ta giả sử phản chứng rằng, $45$ số nguyên dương trên phân biệt. Không mất tính tổng quát, ta giả sử thêm
+$$a_1\le a_2\le \cdots \le a_{45}.$$
+Tính phân biệt của $45$ số nguyên dương kể trên cho ta
+$$a_1\ge 1,\,a_2\ge 2,\,a_3\ge 3,\ldots,a_{44}\ge 44, \,a_{45}\ge 45.$$
+Dựa vào lập luận trên, ta chỉ ra
+\begin{align*}
+    a^3_1+a^3_2+\cdots+a^3_{45}
+    &\ge 1^3+2^3+\cdots+45^3
+    \\&\ge \dfrac{45(45+1)(2\cdot 45+1)}{6}
+    \\&\ge 1071225.
+\end{align*}
+Điều này mâu thuẫn với giả thiết. Giả sử tất cả các số phân biệt là sai, và ta có điều phải chứng minh.}
+\end{bx}
+
+\begin{bx}
+Cho các số nguyên dương $a,b,c,d$ thỏa mãn $a>b>c>d$ và $ab=cd.$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng tồn tại các số nguyên dương $x,y,z,t$ sao cho $$a=xt,b=yz,c=xz,d=yt.$$
+    \item Chứng minh rằng giữa $a$ và $d$ có ít nhất một số chính phương.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta đặt $x=(a,c).$ Lúc này, tồn tại các số nguyên dương $t,z$ thỏa mãn $$(t,z)=1,a=xt,c=xz.$$ Kết hợp với $ab=cd,$ phép đặt này cho ta
+    $xt.b=xz.d,$
+    hay là 
+    $bx=dz.$ \\
+    Ta nhận thấy $t\mid dz,$ nhưng do $(t,z)=1$ nên $t\mid d.$ Tiếp tục đặt $d=yt,$ ta được $b=yz.$ Bằng các cách đặt như vậy, ta chỉ ra được sự tồn tại của các số nguyên dương $x,y,z,t$ sao cho $$a=xt,b=yz,c=xz,d=yt.$$
+    Ta có điều phải chứng minh.
+    \item
+    Để giải quyết bài toán, ta sẽ chứng minh rằng
+    $\sqrt{d}-\sqrt{a}>1.$\\
+    Với cách đặt như câu a, bất đẳng thức trên trở thành
+    \[\sqrt{xt}-\sqrt{yz}>1.\tag{*}\]
+    Nếu như $y=z,$ hiển nhiên giữa $a$ và $d$ có một số chính phương (là $b=yz=y^2$).\\
+    Đối với trường hợp $y\ne z,$ ta sẽ tìm cách so sánh $x,y,z,t.$ Thật vậy
+    $$
+    \heva{&a>d \\ &a>c}
+    \Rightarrow \heva{&xt>yt \\ &xt>xz}
+    \Rightarrow \heva{&x>y \\ &t>z}
+    \Rightarrow \heva{&x\ge y+1 \\ &t\ge z+1.}
+    $$
+    Để chứng minh (*), ta sẽ phải chứng minh
+    \[\sqrt{(y+1)(z+1)}-\sqrt{yz}>1.\tag{**}\]
+    Bất đẳng thức (**) tương đương với
+    \begin{align*}
+        \sqrt{(y+1)(z+1)}>\sqrt{yz}+1
+        &\Leftrightarrow (y+1)(z+1)>yz+1+2\sqrt{yz}
+        \\&\Leftrightarrow yz+y+z+1>yz+1+2\sqrt{yz}
+        \\&\Leftrightarrow y+z>2\sqrt{yz}
+        \\&\Leftrightarrow \left(\sqrt{y}-\sqrt{z}\right)^2>0.
+    \end{align*}
+    Do $y\ne z,$ ta nhận được $\left(\sqrt{y}-\sqrt{z}\right)^2>0$ đúng. Bài toán được chứng minh.
+\end{enumerate}
+}
+\begin{luuy}
+Việc xét hiệu $\sqrt{a}-\sqrt{d}$ để chứng minh giữa $a$ và $d$ không chứa số chính phương nào là chìa khóa của bài toán. Đối với bài toán tương tự, bạn đọc có thể tham khảo phần bài tập tự luyện.
+\end{luuy}
+\end{bx}
+\subsection*{Bài tập tự luyện}
+\begin{btt}
+Cho các số nguyên dương $x,y,z$ thỏa mãn $x+y+z=169.$ Tìm giá trị lớn nhất và giá trị nhỏ nhất của tích $xyz.$
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $x,y,z$ thỏa mãn $x+y+z=53.$ Tìm giá trị lớn nhất và giá trị nhỏ nhất của biểu thức $P=xy+yz+zx.$
+\end{btt}
+
+\begin{btt}
+Cho các số tự nhiên $x,y,z$ thỏa mãn $x+y+z=40.$ Tìm giá trị lớn nhất của biểu thức $P=xy^2+yz^2+zx^2.$
+\end{btt}
+
+\begin{btt}
+Cho $55$ số nguyên dương $a_1,a_2,\ldots,a_{55}$  thỏa mãn điều kiện 
+$$a_1\tron{a_1-1}\tron{a_1+1}+a_2\tron{a_2-1}\tron{a_2+1}+\cdots+a_{55}\tron{a_{55}-1}\tron{a_{55}+1}\le 2\cdot 10^6.$$
+Chứng minh ta luôn tìm được ít nhất $2$ số bằng nhau trong $55$ số trên.
+\end{btt}
+
+\begin{btt}
+Cho $100$ số nguyên dương $a_1,a_2,\ldots,a_{100}$ thỏa mãn điều kiện
+$$\dfrac{1}{a_1}+\dfrac{1}{a_2}+\cdots+\dfrac{1}{a_{100}}\ge 15.$$
+Chứng minh rằng có ít nhất ba số bằng nhau trong $100$ số trên.
+\end{btt}
+
+\begin{btt}
+Tìm các bộ số tự nhiên $ {{a}_{1}},{{a}_{2}},\ldots,{{a}_{2014}}$ thỏa mãn điều kiện sau.
+$${{a}_{1}}+{{a}_{2}}+{{a}_{3}}+\cdots+{{a}_{2014}}\ge {{2014}^{2}},\quad
+  a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+\cdots+a_{2014}^{2}\le {{2014}^{3}}+1.$$
+\nguon{Đề thi vào lớp 10 thành phố Hà Nội 2014 $-$ 2015}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ sao cho tồn tại dãy số $x_1,x_2,\ldots,x_n$ thỏa mãn 
+\[{{x}_{1}}+{{x}_{2}}+\cdots +{{x}_{n}}=5n-4\quad \text{ và }\quad \dfrac{1}{{{x}_{1}}}+\dfrac{1}{{{x}_{2}}}+\cdots +\dfrac{1}{{{x}_{n}}}=1.\]
+\end{btt}
+
+\begin{btt}
+Cho $k$ và $n_{l}<n_{2}<\cdots<n_{k}$ là các số nguyên dương lẻ. Chứng minh rằng
+\[n_{1}^{2}-n_{2}^{2}+n_{3}^{2}-n_{4}^{2}+\cdots+n_{k}^{2} \geq 2 k^{2}-1.\]
+\end{btt}
+
+\begin{btt}
+Cho $n$ là số tự nhiên $n \geq 2$ và $n$ số nguyên $x_{1}, x_{2}, \ldots, x_{n}$ thỏa mãn điều kiện $$x_{1}^{2}+x_{2}^{2}+\ldots+x_{n}^{2}+n^{3} \leq(2 n-1)\left(x_{1}+x_{2}+\cdots+x_{n}\right)+n^{2} .$$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng các số $x_{i}$ $(i=1,2,\ldots, {n})$ đều là các số nguyên dương.
+    \item  Chứng minh rằng $S=x_{1}+x_{2}+\cdots+x_{n}+n+1$ không là số chính phương.
+\end{enumerate}
+\end{btt}
+
+\begin{btt}
+Cho dãy vô hạn các số nguyên dương $1<n_{1}<\cdots<n_{k}<\cdots$ thỏa mãn không có hai số nào là hai số nguyên dương liên tiếp. Chứng minh rằng, với mỗi $m$ nguyên dương cho trước, giữa hai số $n_{1}+\cdots+n_{m}$ và $n_{1}+\cdots+n_{m+1}$ luôn có ít nhất một số chính phương.
+\nguon{Titu Andresscu}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho các số nguyên dương $x,y,z$ thỏa mãn $x+y+z=169.$ Tìm giá trị lớn nhất và giá trị nhỏ nhất của tích $xyz.$
+\loigiai{
+Không mất tính tổng quát, ta giả sử $x\le y\le z.$ \\
+Nhờ giả thiết $x\ge 1,y\ge 1,$ ta chỉ ra
+$(x-1)(y-1)\ge 0.$ Một cách tương đương, ta có
+$$xy\ge x+y-1.$$
+Nhân hai vế bất đẳng thức cho $z,$ ta được
+$$xyz\ge (x+y-1)z=(168-z)z.$$
+Ta dự đoán dấu bằng ở chiều giá trị nhỏ nhất là $(x,y,z)=(1,1,167),$ vậy nên ta chỉ cần chứng minh thêm
+$$(168-z)z\ge 167.$$
+Khai triển rồi phân tích nhân tử, bất đẳng thức trên tương đương với
+$$(z-1)(z-167)\le 0.$$
+Bất đẳng thức trên đúng do
+$$z-1\ge 0,\quad z-167\le z+(x-1)+(y-1)-169\le 0.$$ 
+Tiếp theo, ta sẽ đi tìm giá trị lớn nhất của $xyz.$ Ta dự đoán dấu bằng ở chiều giá trị lớn nhất là $$(x,y,z)=(56,56,57),$$ vậy nên ta nghĩ đến việc áp dụng bất đẳng thức $AM-GM$ như sau
+$$xyz\le \dfrac{z(x+y)^2}{4}=\dfrac{z(169-z)^2}{4}.$$
+Để kết thúc bài toán, ta chỉ cần chứng minh
+$$z(169-z)^2\le 178752.$$
+Khai triển rồi chuyển vế, ta thấy bất đẳng thức trên tương đương
+$$(z-57)(719z+12544)\ge 0.$$
+Bất đẳng thức trên đúng do $z\ge \dfrac{168}{3}.$ Cuối cùng, ta kết luận.
+\begin{itemize}
+    \item[i,] Giá trị nhỏ nhất của $xyz$ là $167,$ đạt tại $(x,y,z)=(1,1,167)$ và các hoán vị.
+    \item[ii,] Giá trị lớn nhất của $xyz$ là $178752,$ đạt tại $(x,y,z)=(56,56,57)$ và các hoán vị.    
+\end{itemize}
+}
+\begin{luuy}
+Bài toán tương tự của dạng này đã xuất hiện trong đề thi vào chuyên Phổ thông Năng khiếu $2016$
+\begin{quote}
+\it 
+Cho $x,y,z$ là các số tự nhiên thỏa mãn $x+y+z=2017.$ Tìm giá trị lớn nhất của $xyz.$
+\end{quote}
+\end{luuy}
+\end{gbtt} 
+
+\begin{gbtt} \label{ineq1}
+Cho các số nguyên dương $x,y,z$ thỏa mãn $x+y+z=53.$ Tìm giá trị lớn nhất và giá trị nhỏ nhất của biểu thức $P=xy+yz+zx.$
+\loigiai{
+Không mất tính tổng quát, ta giả sử $x\ge y\ge z.$ Rõ ràng $x,y,z$ không đồng thời bằng nhau, và ta nhận thấy
+$$z\le 17,\quad x\ge 18.$$
+Tương tự như các bài tập trước, ta chỉ ra
+$yz\ge y+z-1.$ Đánh giá trên cho ta
+$$P\ge x(y+z)+(y+z)-1=x(53-x)+52-x.$$
+Ta dự đoán dấu bằng xảy ra tại $(x,y,z)=(51,1,1).$ Vì lẽ đó, ta sẽ đi chứng minh 
+$$x(53-x)+52-x\ge 103$$
+Chuyển vế và phân tích, bất đẳng thức trên tương đương với
+$$(x-51)(x-1)\le 0.$$
+Bất đẳng thức hiển nhiên đúng, do
+$$x-1\ge 0,\quad x-51=x-(x+y+z-2)=(1-y)+(1-z)\le 0.$$
+Tiếp theo, ta sẽ đi tìm giá trị lớn nhất của $P.$ Áp dụng bất đẳng thức Cauchy, ta có
+$$xy+yz+zx\le \dfrac{(x+y)^2}{4}+z(x+y)=\dfrac{(53-z)^2}{4}+z(53-z).$$
+Để kết thúc bài toán, ta cần chứng minh
+$$\dfrac{(53-z)^2}{4}+z(53-z)\le 936.$$
+Chuyển vế và phân tích, bất đẳng thức trên tương đương với
+$$(x-17)(3x-55)\ge 0.$$
+Bất đẳng thức trên đúng do $x\ge 18.$ Cuối cùng, ta có kết luận.
+\begin{itemize}
+    \item[i,] Giá trị nhỏ nhất của $P$ là $103,$ đạt tại $(x,y,z)=(1,1,51)$ và các hoán vị.
+    \item[ii,] Giá trị lớn nhất của $P$ là $936,$ đạt tại $(x,y,z)=(18,18,17)$ và các hoán vị.    
+\end{itemize}
+}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số tự nhiên $x,y,z$ thỏa mãn $x+y+z=40.$ Tìm giá trị lớn nhất của biểu thức $P=xy^2+yz^2+zx^2.$
+\loigiai{
+Không mất tính tổng quát, ta giả sử $y$ là số nằm giữa $x$ và $z.$ Giả sử này giúp ta lần lượt suy ra
+\begin{align*}
+    (y-x)(y-z)\le 0
+    &\Rightarrow x(y-x)(y-z)\le 0
+    \\&\Rightarrow xy^2+zx^2\le x^2y+xyz
+    \\&\Rightarrow xy^2+yz^2+zx^2\le y\left(x^2+xz+z^2\right)
+    \\&\Rightarrow xy^2+yz^2+zx^2\le y\left(x+z\right)^2
+    \\&\Rightarrow xy^2+yz^2+zx^2\le y\left(40-y\right)^2.
+\end{align*}
+Tiếp theo, ta sẽ chứng minh rằng
+$y\left(40-y\right)^2\le 9477.$ Bất đẳng thức này tương đương với
+$$(y-13)\left(y^2-67y+729\right)\ge 0,$$
+luôn đúng do $y^2-67y+729$ đổi dấu khi đi qua $y=13.$ \\
+Dấu bằng xảy ra chẳng hạn tại $(x,y,z)=(0,13,27).$ Như vậy, $\max{P}=9477.$
+}
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Cho $55$ số nguyên dương $a_1,a_2,\ldots,a_{55}$  thỏa mãn điều kiện 
+$$a_1\tron{a_1-1}\tron{a_1+1}+a_2\tron{a_2-1}\tron{a_2+1}+\cdots+a_{55}\tron{a_{55}-1}\tron{a_{55}+1}\le 2\cdot 10^6.$$
+Chứng minh ta luôn tìm được ít nhất $2$ số bằng nhau trong $55$ số trên.
+\loigiai{
+Ta sẽ chứng minh bài toán bằng phản chứng. Giả sử không tồn tại $2$ số bằng nhau trong $55$ số trên.\\
+Không mất tính tổng quát, ta giả sử
+$1\le a_1< a_2< \cdots <a_{55}.$
+Từ đây, ta suy ra
+\begin{align*}
+    &a_1\tron{a_1-1}\tron{a_1+1}+a_2\tron{a_2-1}\tron{a_2+1}+\cdots+a_{55}\tron{a_{55}-1}\tron{a_{55}+1}\\
+    \ge \,&1\tron{1-1}\tron{1+1}+2\tron{2-1}\tron{2+1}+\cdots+55\tron{55-1}\tron{55+1}\\
+    \ge \,&0 + 1\cdot2\cdot3+2\cdot3\cdot4+\cdots+54\cdot55\cdot56\\
+    \ge \,&\dfrac{1}{4}\vuong{1\cdot2\cdot3\cdot\tron{4-1}+2\cdot3\cdot4\tron{5-1}+\cdots+54\cdot55\cdot56\cdot\tron{57-53}}\\
+    \ge \,&\dfrac{1}{4}\tron{-6+1\cdot2\cdot3\cdot4-1\cdot2\cdot3\cdot4+2\cdot3\cdot4\cdot5-\cdots-53\cdot54\cdot55\cdot56+54\cdot55\cdot56\cdot57}\\
+    \ge \,&\dfrac{1}{4}\tron{54\cdot55\cdot56\cdot57-6}
+    \\>&\,2\cdot10^6.
+\end{align*}
+Điều này mâu thuẫn với giả thiết. Giả sử sai nên tồn tại ít nhất hai số bằng nhau  trong $55$ số trên.
+}
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Cho $100$ số nguyên dương $a_1,a_2,\ldots,a_{100}$ thỏa mãn điều kiện
+$$\dfrac{1}{a_1}+\dfrac{1}{a_2}+\cdots+\dfrac{1}{a_{100}}\ge 15.$$
+Chứng minh rằng có ít nhất ba số bằng nhau trong $100$ số trên.
+\loigiai{
+Ta sẽ chứng minh bài toán bằng phản chứng. Giả sử không tồn tại $3$ số bằng nhau trong $100$ số trên.\\
+Không mất tính tổng quát, ta giả sử $a_1\le a_2<a_3\le a_4<\cdots < a_{99}\le a_{100}.$ Từ đây, ta suy ra
+\begin{align*}
+    \dfrac{1}{a_1}+\dfrac{1}{a_2}+\cdots+\dfrac{1}{a_{100}}&\le 2\tron{ \dfrac{1}{a_1}+\dfrac{1}{a_2}+\cdots+\dfrac{1}{a_{50}}}\\
+    &\le 2\tron{\dfrac{1}{1}+\dfrac{1}{2}+\cdots+\dfrac{1}{50}}.
+\end{align*}
+Ta sẽ chứng minh rằng
+$1+\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{49}+\dfrac{1}{50}<\dfrac{15}{2}.$
+Thật vậy
+\begin{align*}
+    1+\dfrac{1}{2}+\cdots+\dfrac{1}{50}
+    &=\tron{1+\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{4}}+\tron{\dfrac{1}{5}+\cdots+\dfrac{1}{8}}+\cdots+\tron{\dfrac{1}{33}+\cdots+\dfrac{1}{64}}+\tron{\dfrac{1}{65}+\cdots+\dfrac{1}{100}}
+    \\&<\dfrac{25}{12}+4\cdot\dfrac{1}{4}+8\cdot \dfrac{1}{8}+\cdots+32\cdot\dfrac{1}{32}+36\cdot\dfrac{1}{64}
+    \\&<\dfrac{25}{12}+1+1+\cdots+1+\dfrac{9}{16}
+    \\&<\dfrac{319}{48}
+    \\&<\dfrac{7}{2}.
+\end{align*}
+Các lập luận trên cho ta điều mâu thuẫn với giả thiết. Giả sử sai, và ta có điều phải chứng minh.}
+\end{gbtt}
+
+
+
+\begin{gbtt}
+Tìm các bộ số tự nhiên $ {{a}_{1}},{{a}_{2}},\ldots,{{a}_{2014}}$ thỏa mãn điều kiện sau.
+$${{a}_{1}}+{{a}_{2}}+{{a}_{3}}+\cdots+{{a}_{2014}}\ge {{2014}^{2}},\quad
+  a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+\cdots+a_{2014}^{2}\le {{2014}^{3}}+1.$$
+\nguon{Đề thi vào lớp 10 thành phố Hà Nội 2014 $-$ 2015}
+\loigiai{
+Ta viết lại hệ điều kiện đã cho thành
+\begin{align}
+    -2\cdot 2014\left( {{a}_{1}}+{{a}_{2}}+{{a}_{3}}+\cdots+{{a}_{2014}} \right)&\le -{{2\cdot 2014\cdot 2014}^{2}}, \tag{1}\label{pt1hn14}\\
+    a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+\cdots+a_{2014}^{2}&\le {{2014}^{3}}+1. \tag{2}\label{pt2hn14}
+\end{align}
+Lấy (\ref{pt2hn14}) cộng theo vế với (\ref{pt1hn14}) ta được
+\begin{align*}
+    &a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+\cdots+a_{2014}^{2}-2\cdot2014\left( {{a}_{1}}+{{a}_{2}}+{{a}_{3}}+\cdots+{{a}_{2014}} \right)\le {{2014}^{3}}+1-{{2\cdot2014\cdot2014}^{2}} \\ 
+  \Leftrightarrow \:&a_{1}^{2}+a_{2}^{2}+a_{3}^{2}+\cdots
+  +a_{2014}^{2}-2.2014\left( {{a}_{1}}+{{a}_{2}}+{{a}_{3}}+\cdots+{{a}_{2014}} \right)+{{2014.2014}^{2}}\le 1 \\ 
+ \Leftrightarrow \:&{{\left( {{a}_{1}}-2014 \right)}^{2}}+{{\left( {{a}_{2}}-2014 \right)}^{2}}+\cdots+{{\left( {{a}_{2014}}-2014 \right)}^{2}}\le 1. 
+\end{align*}
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item  Nếu ${{\left( {{a}_{1}}-2014 \right)}^{2}}+{{\left( {{a}_{2}}-2014 \right)}^{2}}+\cdots+{{\left( {{a}_{2014}}-2014 \right)}^{2}}=1,$ do \[{{a}_{1}},{{a}_{2}},\ldots,{{a}_{2014}}\in \mathbb{N}, \qquad {{\left( {{a}_{1}}-2014 \right)}^{2}}, {{\left( {{a}_{2}}-2014 \right)}^{2}},\ldots,{{\left( {{a}_{2014}}-2014 \right)}^{2}}\ge 0.\] 
+    nên trong $2014$ số chính phương
+    \[{{\left( {{a}_{1}}-2014 \right)}^{2}},\: {{\left( {{a}_{2}}-2014 \right)}^{2}},\ldots,{{\left( {{a}_{2014}}-2014 \right)}^{2}}\] 
+    có đúng một số nhận giá trị là $1$ và các số còn lại nhận giá trị là $0$. Không mất tổng quát, giả sử 
+\[\heva{ & {{\left( {{a}_{1}}-2014 \right)}^{2}}=1 \\ 
+ & {{\left( {{a}_{2}}-2014 \right)}^{2}}=\cdots={{\left( {{a}_{2014}}-2014 \right)}^{2}}=0 .}\]
+Từ hệ ở trên ta suy ra một trong hai trường hợp sau xay ra
+\begin{align*}
+    {{a}_{1}}=2013&,\quad{{a}_{2}}={{a}_{3}}=\cdots={{a}_{2014}}=2014, \\ 
+     a_1=2015&,\quad {a}_{2}={{a}_{3}}=\cdots={{a}_{2014}}=2014. 
+\end{align*}
+Thử lại các trường hợp trên ta thấy không thỏa mãn.
+\item Nếu ${{\left( {{a}_{1}}-2014 \right)}^{2}}+\tron{a_2-2014}^2+\cdots+{{\left( {{a}_{2014}}-2014 \right)}^{2}}=0$, ta có 
+$${{\left( {{a}_{1}}-2014 \right)}^{2}}={{\left( {{a}_{2}}-2014 \right)}^{2}}=\cdots={{\left( {{a}_{2014}}-2014 \right)}^{2}}=0.$$
+Do đó ${{a}_{1}}={{a}_{2}}={{a}_{3}}=\cdots={{a}_{2014}}=2014$. Thử lại ta thấy thỏa mãn yêu cầu bài toán.
+\end{enumerate}
+Như vây, bộ số tự nhiên thỏa mãn yêu cầu bài toán là \[\left( {{a}_{1}},{{a}_{2}},\ldots,{{a}_{2014}} \right)=\left( 2014,2014,\ldots,2014 \right).\]}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ sao cho tồn tại dãy số $x_1,x_2,\ldots,x_n$ thỏa mãn 
+\[{{x}_{1}}+{{x}_{2}}+\cdots +{{x}_{n}}=5n-4\quad \text{ và }\quad \dfrac{1}{{{x}_{1}}}+\dfrac{1}{{{x}_{2}}}+\cdots +\dfrac{1}{{{x}_{n}}}=1.\]
+\loigiai{
+Không mất tính tổng quát ta giả sử ${{x}_{1}}\le {{x}_{2}}\le \cdots \le {{x}_{n}}.$ Theo bất đẳng thức $AM-GM$ ta có
+$$5n-4=\left( {{x}_{1}}+{{x}_{2}}+\cdots +{{x}_{n}} \right)\left( \dfrac{1}{{{x}_{1}}}+\dfrac{1}{{{x}_{2}}}+\cdots +\dfrac{1}{{{x}_{n}}} \right)\ge n\sqrt[n]{{{x}_{1}}\cdots{{x}_{n}}}\cdot n\sqrt[n]{\dfrac{1}{{{x}_{1}}\cdots{{x}_{n}}}}={{n}^{2}}.$$
+Do đó ta được ${{n}^{2}}-5n+4\le 0,$ hay 
+$n\in \left\{ 1;2;3;4 \right\}.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $n=1,$ ta có $x_1=1.$
+    \item Với $n=2,$ ta có $x_1+x_2=6$ và $\dfrac{1}{x_1}+\dfrac{1}{x_2}=1$ hay $$\heva{x_1+x_2&=6\\x_1x_2&=6.}$$
+    Hệ này không có nghiệm nguyên.
+    \item  Với $n=3,$ ta có $x_1+x_2+x_3=11$ và $\dfrac{1}{x_1}+\dfrac{1}{x_2}+\dfrac{1}{x_3}=1.$ Ta thấy có $\tron{x_1,x_2,x_3}=(2,3,6)$ thỏa mãn.
+    \item Với $n=4$ thì bất đẳng thức trên xảy ra dấu bằng nên $x_1=x_2=x_3=x_4=4.$
+\end{enumerate}
+Như vậy $n=1,n=3,n=4$ là tất cả các giá trị của $n$ thỏa mãn đề bài.}
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Cho $k$ và $n_{l}<n_{2}<\cdots<n_{k}$ là các số nguyên dương lẻ. Chứng minh rằng
+\[n_{1}^{2}-n_{2}^{2}+n_{3}^{2}-n_{4}^{2}+\cdots+n_{k}^{2} \geq 2 k^{2}-1.\]
+\loigiai{
+Biến đổi vế trái của bất đẳng thức, ta có
+\begin{align*}
+    n_{1}^{2}-n_{2}^{2}+n_{3}^{2}-n_{4}^{2}+\cdots+n_{k}^{2}
+    &=n_{1}^{2}+\tron{n^2_3-n^2_2}+\tron{n^2_5-n^2_4}+\cdots+\tron{n^2_{k}-n^2_{k-1}}
+    \\&=n^2_1+\tron{n_3-n_2}\tron{n_3+n_2}+\cdots+\tron{n_{k}-n_{k-1}}\tron{n_{k}+n_{k-1}}.
+\end{align*}
+Vì $n_{l}<n_{2}<\cdots<n_{k}$ là các số nguyên dương lẻ nên 
+$$n_3-n_2\ge 2,\, n_5-n_4\ge 2,\ldots,\, n_k-n{k-1}\ge 2.$$
+Từ nhận xét trên, ta suy ra
+\begin{align*}
+    n^2_1+\tron{n_3-n_2}\tron{n_3+n_2}+\cdots+\tron{n_{k}-n_{k-1}}\tron{n_{k}+n_{k-1}}&\ge n^2_1 +2\tron{n_2+n_3+\cdots n_{k}}\\&\ge 1+2\vuong{3+5+\cdots+\tron{2k-1}}\\&=2\vuong{1+3+\cdots+\tron{2k-1}}-1\\&=2k^2-1.
+\end{align*}
+Dấu bằng xảy ra khi và chỉ khi $n_1=1,n_2=3,\ldots,n_k=2k+1.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $n$ là số tự nhiên $n \geq 2$ và $n$ số nguyên $x_{1}, x_{2}, \ldots, x_{n}$ thỏa mãn điều kiện $$x_{1}^{2}+x_{2}^{2}+\ldots+x_{n}^{2}+n^{3} \leq(2 n-1)\left(x_{1}+x_{2}+\cdots+x_{n}\right)+n^{2} .$$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng các số $x_{i}$ $(i=1,2,\ldots, {n})$ đều là các số nguyên dương.
+    \item  Chứng minh rằng $S=x_{1}+x_{2}+\cdots+x_{n}+n+1$ không là số chính phương.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Từ giả thiết, ta có
+    \begin{align*}
+        &\quad{\:}\left[x_{n}^{2}-(2 n-1) x_{n}+n^{2}-n\right]+\ldots+\left[x_{n}^{2}-(2 n-1) x_{n}+n^{2}-n\right] \leq 0
+        \\&\Leftrightarrow\left(x_{1}-n\right)\left(x_{1}-n+1\right)+\ldots+\left(x_{n}-n\right)\left(x_{n+1}-n+1\right) \leq 0.
+    \end{align*}
+Mặt khác, với mọi $i$ nguyên dương, ta có tích $\left(x_{i}-n\right)\left[x_{i}-(n-1)\right]$ là tích của hai số nguyên liên tiếp nên nó không âm. Đánh giá này giúp ta suy ra
+$$\left(x_{1}-n\right)\left(x_{1}-n+1\right)+\ldots+\ldots+\left(x_{n}-n\right)\left(x_{n+1}-n+1\right) \ge 0.$$
+Đối chiếu các đánh giá, ta được
+$$\left(x_{1}-n\right)\left(x_{1}-n+1\right)+\ldots+\ldots+\left(x_{n}-n\right)\left(x_{n+1}-n+1\right) = 0.$$
+
+Dấu bằng xảy ra chỉ khi mỗi số $x_i$ bằng $n$ hoặc $n-1.$ Bài toán được chứng minh.
+    \item Dựa vào kết quả $x_{i} \in\{n ; n-1\}$ với mọi $i\in \left[1;n\right]$ ở câu a, ta có
+     $$n(n-1) \leq x_{1}+x_{2}+\ldots+x_{n} \leq n^{2}.$$
+    Cộng thêm $n+1$ vào mỗi vế, ta được
+    $$n^2+1\le S\le n^2+n+1.$$
+    Tuy nhiên, do $n^2+1>n^2$ và $n^2+n+1<(n+1)^2$ nên
+    $$n^2<S<(n+1)^2.$$
+    Theo bổ đề, $S$ không phải số chính phương. Bài toán được chứng minh.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Cho dãy vô hạn các số nguyên dương $1<n_{1}<\cdots<n_{k}<\cdots$ thỏa mãn không có hai số nào là hai số nguyên dương liên tiếp. Chứng minh rằng, với mỗi $m$ nguyên dương cho trước, giữa hai số $n_{1}+\cdots+n_{m}$ và $n_{1}+\cdots+n_{m+1}$ luôn có ít nhất một số chính phương.
+\nguon{Titu Andresscu}
+\loigiai{Để giải quyết bài toán, ta sẽ chứng minh rằng
+$$\sqrt{n_{1}+n_{2}+\cdots+n_{m+1}}-\sqrt{n_{1}+n_{2}+\cdots+n_{m}}>1.$$
+Bằng cách nhân liên hợp, bất đẳng thức trên tương đương với
+\[n_{m+1}>\sqrt{n_{1}+n_{2}+\cdots+n_{m+1}}+\sqrt{n_{1}+n_{2}+\cdots+n_{m}}. \tag{*}\]
+Áp dụng bất đẳng thức $Cauchy - Schwarz$ cho hai số, ta có
+$$VP^2(*)< 2\left(2 n_{1}+2 n_{2}+\cdots+2 n_{m}+n_{m+1}\right).$$
+Chú ý rằng, bất đẳng thức trên không xảy ra dấu bằng. Để chứng minh được (*), ta chỉ cần chỉ ra
+\[n_{m+1}^{2} \geqslant 2\left(2 n_{1}+2 n_{2}+\cdots+2 n_{m}+n_{m+1}\right). \tag{**}\]
+Từ giả thiết, ta có $n_{1} \leqslant n_{2}-2, \leqslant n_{2} \leqslant n_{3}-2, \ldots, n_{m} \leqslant n_{m+1}-2,$ vậy nên
+$$n_{1} \leqslant n_{m+1}-2 m, n_{2} \leqslant n_{m+1}-2(m-1), \ldots, n_{m} \leqslant n_{m+1}-2.$$
+Từ đây ta suy ra
+\begin{align*}
+   VP(**)
+   &\le  2\left[2\left(n_{m+1}-2 m+n_{m+1}-2(m-1)+\cdots+n_{m+1}-2\right)+n_{m+1}\right]
+   \\&\le  2(2 m+1) n_{m+1}-4 m(m+1).
+\end{align*}
+Ta sẽ chứng minh rằng $n_{m+1}^{2} \geqslant 2(2 m+1) n_{m+1}-4 m(m+1).$ Bất đẳng thức ở trên tương đương với
+$$
+\left(n_{m+1}-2 m-1\right)^{2} \geqslant 1.
+$$
+Vì $n_{m+1}\ge n_1+2m\ge 2m+2,$ nên bất đẳng thức trên là đúng. Bài toán được chứng minh.}
+\end{gbtt}
+
+\section{Bất đẳng thức liên quan đến ước và bội}
+
+\subsection*{Lí thuyết}
+
+Trước khi đi tìm hiểu phần này, chúng ta sẽ nhắc lại một vài kiến thức đã học ở các chương trước.
+
+\begin{enumerate}
+    \item Cho $n$ số nguyên dương $a_1,a_2,\ldots,a_n.$ Đặt $d=\tron{a_1,a_2,\ldots,a_n}.$ Khi đó ta có thể viết
+    $$a_1=db_1,\quad a_2=db_2,\ldots,a_n=db_n,$$
+    trong đó $b_1,b_2,\ldots,b_n$ là các số nguyên dương nguyên tố cùng nhau.
+    \item Cho hai số nguyên dương $a,b.$ Khi đó nếu $a$ chia hết cho $b$ thì $a\ge b.$
+\end{enumerate}
+
+Ngoài hai bổ đề trên, một số tính chất khác về tính chia hết liên quan đến ước, bội chung cũng được đề cập ở trong phần này.
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho $43$ số nguyên dương có tổng bằng $2021$. Gọi $ d $ là ước chung lớn nhất của các số đó. Tìm giá trị lớn nhất của $d.$
+\end{btt}
+
+\begin{btt}
+Cho $30$ số nguyên dương phân biệt có tổng bằng $2016$. Gọi $ d $ là ước chung lớn nhất của các số đó. Tìm giá trị lớn nhất của $ d$.
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $a,b$ thỏa mãn $\dfrac{a+1}{b}+\dfrac{b+1}{a}$ cũng là một số nguyên dương. Chứng minh rằng 
+$(a,b)\le \sqrt{a+b}.$
+\end{btt}
+
+\begin{btt}
+Cho các số thực dương $x,y,z$ thỏa mãn $\dfrac{x+1}{y}+\dfrac{y+1}{z}+\dfrac{z+1}{x}$ là một số nguyên. Chứng minh rằng $(x,y,z)\leq \sqrt[3]{x y+y z+z x}.$
+\nguon{Baltic Way 2018}
+\end{btt}
+
+\begin{btt}
+Cho $a,b$ là các số nguyên dương. Chứng minh rằng
+$$\min \{(a, b+1);(a+1, b)\} \leq \dfrac{\sqrt{4 a+4 b+5}-1}{2}.$$
+\nguon{Japan Junior Mathematical Olympiad Finals 2019}
+\end{btt}
+
+\begin{btt}
+Cho $a,b$ là hai số nguyên phân biệt khác $0$ thỏa mãn $ab(a+b)$ chia hết cho $a^{2}+a b+b^{2}$. Chứng minh rằng $|a-b|>\sqrt[3]{a b}$.
+\end{btt}
+
+\begin{btt}
+Chứng minh với mọi số nguyên dương $m > n$ thì ta có bất đẳng thức
+\[\left[ {m,n} \right] + \left[ {m + 1,n + 1} \right] > \dfrac{{2mn}}{{\sqrt {m - n} }}.\]
+\nguon{Saint Peterburg Mathematical Olympiad 2001}
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên dương $m,n$ phân biệt. Chứng minh rằng
+$$(m, n)+(m+1, n+1)+(m+2, n+2) \leq 2|m-n|+1.$$
+\nguon{India National Olympiad 2019}
+\end{btt}
+
+\begin{btt}
+Cho $a_{0}<a_{1}<a_{2}<\ldots<a_{n}$ là các số nguyên dương. Chứng minh rằng
+$$\dfrac{1}{\left[a_{0}, a_{1}\right]}+\dfrac{1}{\left[a_{1}, a_{2}\right]}+\ldots+\dfrac{1}{\left[a_{n-1}, a_{n}\right]} \leqslant 1-\dfrac{1}{2^{n}}.$$
+\nguon{Kvant}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+\begin{gbtt}
+Cho $43$ số nguyên dương có tổng bằng $2021$. Gọi $ d $ là ước chung lớn nhất của các số đó. Tìm giá trị lớn nhất của $d.$
+\loigiai{
+Giả sử $43$ số tự nhiên đã cho là $a_1\le a_2\le \cdots\le a_{43}.$ Ta nhận thấy rằng
+$$43 a_{1} \leq a_{1}+a_{2}+a_{3}+\cdots \cdots+a_{43}=2021.$$
+Nhận xét trên cho ta ${a}_{1} \leq47.$ Do $d$ là ước của $a_1,$ ta có $d\le 47.$\\
+Ứng với $d=47,$ ta có bộ số dưới đây thỏa mãn yêu cầu bài toán
+		$$a_1=a_2=\cdots=a_{43}=47.$$
+	Như vậy, giá trị lớn nhất của $d$ là $47.$}
+\end{gbtt}
+
+\begin{gbtt}
+	Cho $30$ số nguyên dương phân biệt có tổng bằng $2016$. Gọi $ d $ là ước chung lớn nhất của các số đó. Tìm giá trị lớn nhất của $ d$.
+	\loigiai{
+		Giả sử $30$ số tự nhiên đã cho là $ a_1,a_2,a_3,\ldots ,a_{30}.$ \\
+		Với mỗi $i=\overline{1,30},$ ta đặt $a_i=dk_i,$ ở đây $k_i$ là các số nguyên dương phân biệt. Phép đặt này cho ta $$d\left(k_1+k_2+k_3+\cdots+k_{30}\right)=2016.$$
+		Nhờ vào điều kiện các $k_i$ dương, ta suy ra
+		$$2016=d\left(k_1+k_2+k_3+\cdots+k_{30}\right)\ge d\left(1+2+\cdots+30\right)=\dfrac{30\cdot31d}{2}=465d.$$
+		Ta được $2016\ge 465d.$ Giải bất phương trình trên, ta nhận thấy $d\le 4.$ \\
+		Ứng với $d=4,$ ta có bộ số dưới đây thỏa mãn yêu cầu bài toán:
+		$$a_1=4,\: a_2=8,\:a_3=12,\cdots,\:a_{28}=112,\:a_{29}=116,\:a_{30}=276.$$
+	Như vậy, giá trị lớn nhất của $d$ là $4.$
+	}
+	\begin{luuy}
+	Một cách tổng quát, với $k$ số nguyên dương $a_1,a_2,\cdots,a_k$ có tổng bằng $n$, ta có
+$$\max{\left(a_1,a_2,\cdots,a_k\right)}
+=\max\limits_{d\in\mathbb{N}}
+\left\{
+d \text{ là ước của } n\mid d\le\dfrac{2n}{k(k+1)}
+\right\},
+$$
+với $\left(a_1,a_2,\cdots,a_k\right)$ là ước chung lớn nhất của $k$ số đã cho.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $a,b$ thỏa mãn $\dfrac{a+1}{b}+\dfrac{b+1}{a}$ cũng là một số nguyên dương. Chứng minh rằng 
+$(a,b)\le \sqrt{a+b}.$
+\nguon{Spanish Mathematical Olympiad 1996}
+\loigiai{
+Đặt $d=(a,b),$ lúc này tồn tại các số nguyên dương $m,n$ sao cho
+$a=md, b=nd,(m, n)=1.$
+Ta có
+$$\dfrac{a+1}{b}+\dfrac{b+1}{a}=\dfrac{\left(m^{2}+n^{2}\right) d+(m+n)}{m n d}.$$
+Do $\dfrac{a+1}{b}+\dfrac{b+1}{a}$ là số nguyên, ta thu được $d\mid (m+n),$ và như vậy, $d\le m+n.$ Từ đây, ta có
+$$\sqrt{a+b}=\sqrt{d(m+n)}\ge d.$$
+Dấu bằng xảy ra chẳng hạn tại $a=4,b=12.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số thực dương $x,y,z$ thỏa mãn $\dfrac{x+1}{y}+\dfrac{y+1}{z}+\dfrac{z+1}{x}$ là một số nguyên. Chứng minh rằng $(x,y,z)\leq \sqrt[3]{x y+y z+z x}.$
+\nguon{Baltic Way 2018}
+\loigiai{
+Ta đặt $d=\tron{x,y,z}$. Lúc này, tồn tại các số nguyên dương $m,n,p$ sao cho
+$$x=md,\quad y=nd, \quad z=pd, \quad \tron{m,n,p}=1.$$
+Phép đặt này cho ta 
+$$\dfrac{x+1}{y}+\dfrac{y+1}{z}+\dfrac{z+1}{x}= \dfrac{d\tron{m^2p+n^2m+p^2n}+ \tron{mp+nm+pn}}{mnpd}.$$
+Do $\dfrac{x+1}{y}+\dfrac{y+1}{z}+\dfrac{z+1}{x}$ là số nguyên, ta thu được $d\mid \tron{mp+nm+pn}$.\\
+Vì $d\mid \tron{mp+nm+pn}$ nên $d\le mp+nm+pn$. Từ đây, ta có
+$$\sqrt[3]{{xy+yz+zx}}=\sqrt[3]{{d^2\tron{mn+np+pm}}} \ge d.$$
+Dấu bằng xảy ra chẳng hạn tại $z=11, y=22, z=33$. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a,b$ là các số nguyên dương. Chứng minh rằng
+$$\min \{(a, b+1);(a+1, b)\} \leq \dfrac{\sqrt{4 a+4 b+5}-1}{2}.$$
+\nguon{Japan Junior Mathematical Olympiad Finals 2019}
+\loigiai{
+Đặt $d_1=(a, b+1)$ và $d_2=(a+1, b)$. Từ đây, ta suy ra
+$d_{1}$ và $d_{2}$ là ước của $a+b+1.$\\
+Ta dễ dàng chỉ ra $\tron{d_1,d_2}=1$, kéo theo $\left|d_{1}-d_{2}\right| \ge 1$ và
+$$
+d_{1} d_{2} \mid (a+b+1)
+$$
+Do đó, $d_{1} d_{2} \leq a+b+1$. Không mất tính tổng quát, ta giả sử $d_{2} \geq d_{1}+1$,  dẫn đến
+$$
+d_{1}\left(d_{1}+1\right) \leq d_{1} d_{2} \leq a+b+1.
+$$
+Từ đây, ta suy ra $d_{1} \leq \dfrac{-1+\sqrt{4 a+4 b+5}}{2}.$ Ta xét trường hợp dấu bằng đẳng thức xảy ra. Ta có 
+$$\tron{a,b+1}=d,\quad (a+1,b)=d+1,\quad a+b+1=d(d+1).$$
+Xét trong hệ đồng dư modulo $d,d+1$ cho ta 
+$$a\equiv d\pmod{d},\qquad a\equiv -1\pmod{d+1}.$$
+Từ nhận xét trên, ta chỉ ra $a\equiv d\pmod{d\tron{d+1}}.$ Tương tự, ta thu được
+$$b\equiv -d-1\pmod{d\tron{d+1}}.$$
+Điều này cho ta $a\ge d$ và $b\ge d^2-1.$ Vì $a+b+1=d\tron{d+1}$, dẫn đến $\tron{a,b}=\tron{d,d^2-1}.$\\
+Dấu bằng xảy ra chẳng hạn khi $a=2,b=3.$ Bất
+đẳng thức được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a,b$ là hai số nguyên phân biệt khác $0$ thỏa mãn $ab(a+b)$ chia hết cho $a^{2}+a b+b^{2}$. Chứng minh rằng $|a-b|>\sqrt[3]{a b}$.
+\nguon{Rusia Mathematical Olympiad 2001}
+\loigiai{
+Đặt $d=(a,b),$ đồng thời đặt thêm $a=dx,\ b=dy.$ Khi đó $(x,y)=1$ và 
+$$\dfrac{a b(a+b)}{a^{2}+a b+b^{2}}=\dfrac{d x y(x+y)}{x^{2}+x y+y^{2}}.$$
+Từ giả thiết, ta suy ra $dxy(x+y)$ chia hết cho $x^2+x y+y^2.$ Trước hết, ta đi chứng minh.
+\[\left(x,x^2+x y+y^2\right)=\left(y,x^2+x y+y^2\right)=\left(x+y,x^2+x y+y^2\right)=1.\tag{*}\label{usineq}\]
+Ta nhận thấy rằng
+$\left(x,x^2+x y+y^2\right)=\left(x,y^2\right).$
+Do $(x,y)=1,$ hai số $x$ và $y^2$ không có ước nguyên tố chung, thế nên $\left(x,x^2+x y+y^2\right)=\left(x,y^2\right)=1.$ Một cách tương tự, ta có
+$$\left(x,x^2+x y+y^2\right)=\left(y,x^2+x y+y^2\right)=1.$$
+Để hoàn tất chứng minh (\ref{usineq}), ta đặt $\left(x+y,x^2+xy+y^2\right)=d.$ Phép đặt này cho ta
+\begin{align*}
+    \heva{&d\mid (x+y) \\ &d\mid\left(x^2+xy+y^2\right)}&\Rightarrow \heva{&d\mid\left(x^2+xy+y^2-y(x+y)\right) \\ &d\mid\left(x^2+xy+y^2-x(x+y)\right)}\\&\Rightarrow \heva{&d\mid x^2\\ &d\mid y^2}
+    \\&\Rightarrow d\mid \left(x^2,y^2\right)=1.
+\end{align*}
+Kết hợp chứng minh ở (\ref{usineq}) và  $dxy(x+y)$ chia hết cho $x^2+x y+y^2,$ ta chỉ ra $\left(x^{2}+x y+y^{2}\right)\mid d,$ thế nên $$d \geqslant x^{2}+x y+y^{2}.$$ 
+Dựa vào nhận xét trên, ta có đánh giá
+\begin{align*}
+    |a-b|^{3}=d^{3}|x-y|^{3}&=d^{3}|x-y|\left(x^{2}+x y+y^{2}\right)\\&\geqslant d^{2}\left(x^{2}+x y+y^{2}\right)\\&\ge a^2+ab+b^2\\&>ab.
+\end{align*}
+Như vậy, bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh với mọi số nguyên dương $m > n$ thì ta có bất đẳng thức
+\[\left[ {m,n} \right] + \left[ {m + 1,n + 1} \right] > \dfrac{{2mn}}{{\sqrt {m - n} }}.\]
+\nguon{Saint Peterburg Mathematical Olympiad 2001}
+\loigiai{
+Biến đổi vế trái bất đẳng thức, ta được
+\begin{align*}
+    \left[ {m,n} \right] + \left[ {m + 1,n + 1} \right]
+&=\dfrac{{mn}}{{\left( {m,n} \right)}} + \dfrac{{\left( {m + 1} \right)\left( {n + 1} \right)}}{{\left( {m + 1,n + 1} \right)}}
+\\&=\dfrac{{mn}}{{\left( {m-n,n} \right)}} + \dfrac{{\left( {m+1} \right)\left( {n + 1} \right)}}{{\left( {m-n,n + 1} \right)}}.
+\end{align*}
+Từ giả thiết, ta có thể đặt $m=n+k,$ ở đây $k$ là số nguyên dương. \\Bằng phép đặt này, bất đẳng thức cần chứng minh trở thành
+\[\dfrac{mn}{(k,n)}+\dfrac{(m+1)(n+1)}{(k,n+1)}\ge \dfrac{2mn}{\sqrt{k}}.\tag{*}\label{usineq2}\]
+Áp dụng bất đẳng thức $AM-GM,$ ta có
+$$VT(\ref{usineq2})>\dfrac{mn}{(k,n)}+\dfrac{m}{(k,n+1)}\ge\dfrac{2mn}{\sqrt{(k,n)(k,n+1)}}.$$
+Để kết thúc bài toán bằng việc suy ra $(k,n)(k,n+1)\le k$, ta sẽ đi chứng minh
+$$(k,n)(k,n+1)\mid k.$$
+Thật vậy, ta có các đánh giá sau
+\begin{itemize}
+    \item[i,] $(n,n+1)=1\Rightarrow ((k,n),(k,n+1))=1.$
+    \item[ii,] $(k,n)\mid k,\quad (k,n+1)\mid k.$
+\end{itemize}
+Các đánh giá trên cho ta hay, $(k,n)(k,n+1)\mid k.$ Và theo đó, toàn bộ bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên dương $m,n$ phân biệt. Chứng minh rằng
+$$(m, n)+(m+1, n+1)+(m+2, n+2) \leq 2|m-n|+1.$$
+\nguon{India National Olympiad 2019}
+\loigiai{
+Không mất tính tổng quát, ta giả sử $m>n$. Đặt $k=m-n$, bất đẳng thức cần chứng minh trở thành
+$$\tron{m,k}+\tron{m+1,k}+\tron{m+2,k}\le 2k+1.$$
+Với $k=1,\ k=2,$ bài toán trở nên đơn giản.\\
+Với $k>2,$ chỉ tối đa một ước chung ở vế trái bằng $k.$ Như vậy
+$$\tron{m,k}+\tron{m+1,k}+\tron{m+2,k}\le k+\dfrac{k}{2}+\dfrac{k}{2}=2k<2k+1.$$
+Bất đẳng thức cũng được chứng minh trong trường hợp $k>2$ này.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a_{0}<a_{1}<a_{2}<\ldots<a_{n}$ là các số nguyên dương. Chứng minh rằng
+$$\dfrac{1}{\left[a_{0}, a_{1}\right]}+\dfrac{1}{\left[a_{1}, a_{2}\right]}+\ldots+\dfrac{1}{\left[a_{n-1}, a_{n}\right]} \leqslant 1-\dfrac{1}{2^{n}}$$
+\nguon{Kvant}
+\loigiai{
+Trong bài toán này, ta xét hai trường hợp.
+\begin{enumerate}
+    \item Nếu $a_{n}\le 2^{n},$ ta nhận xét rằng với hai số nguyên dương $x,y$ bất kì, ta có
+    $$[x,y](x,y)=xy.$$
+    Áp dụng đẳng thức trên, ta chỉ ra
+    $$\dfrac{1}{\left[a_{i-1}, a_{i}\right]}=\dfrac{\left(a_{i-1}, a_{i}\right)}{a_{i-1} a_{i}} \leqslant \dfrac{a_{i}-a_{i-1}}{a_{i-1} a_{i}}=\dfrac{1}{a_{i-1}}-\dfrac{1}{a_{i}}.$$
+    Cho $i$ chạy từ $1$ đến $n$ rồi cộng theo vế các bất đẳng thức, ta được
+    $$\dfrac{1}{\left[a_{0}, a_{1}\right]}+\dfrac{1}{\left[a_{1}, a_{2}\right]}+\ldots+\dfrac{1}{\left[a_{n-1}, a_{n}\right]} \leqslant \dfrac{1}{a_{0}}-\dfrac{1}{a_{n}} \leqslant 1-\dfrac{1}{2^{n}},$$
+    và bài toán được chứng minh trong trường hợp trên.
+    \item Nếu $a_{n}> 2^{n},$ ta sẽ chứng minh bài toán trong trường hợp này bằng quy nạp. \\
+    Với $n=1,$ ta có $\left[a_{0}, a_{1}\right] \geqslant[1,2]=2,$ do đó
+    $$\dfrac{1}{\left[a_{0}, a_{1}\right]} \leqslant \dfrac{1}{2}=1-\dfrac{1}{2}.$$
+    Giả sử bất đẳng thức cần chứng minh đúng tới $n=k.$ Giả sử này cho ta
+    $$\dfrac{1}{\left[a_{0}, a_{1}\right]}+\dfrac{1}{\left[a_{1}, a_{2}\right]}+\ldots+\dfrac{1}{\left[a_{k-1}, a_{k}\right]} \leqslant 1-\dfrac{1}{2^{k}}.$$
+    Cộng hai vế bất đẳng thức trên với $\dfrac{1}{\left[a_{k-1}, a_{k}\right]},$ ta được
+    $$\dfrac{1}{\left[a_{0}, a_{1}\right]}+\dfrac{1}{\left[a_{1}, a_{2}\right]}+\ldots+\dfrac{1}{\left[a_{k}, a_{k+1}\right]} \leqslant 1-\dfrac{1}{2^{k}}+\dfrac{1}{\left[a_{k}, a_{k+1}\right]}.$$    
+    Bằng đánh giá
+    $\dfrac{1}{\left[a_{k}, a_{k+1}\right]}\le \dfrac{1}{a_{k+1}}<\dfrac{1}{2^{k+1}},$
+    ta chỉ ra
+    $$\dfrac{1}{\left[a_{0}, a_{1}\right]}+\dfrac{1}{\left[a_{1}, a_{2}\right]}+\ldots+\dfrac{1}{\left[a_{k}, a_{k+1}\right]} \leqslant 1-\dfrac{1}{2^{k}}+\dfrac{1}{2^{k+1}}=1-\dfrac{1}{2^{k+1}}.$$
+    Theo nguyên lí quy nạp, bài toán cũng được chứng minh trong trường hợp này.
+\end{enumerate}
+Dấu bằng xảy ra tại
+$a_i=2^i,i=\overline{1,n}.$
+Toàn bộ bài toán được chứng minh.}
+\end{gbtt}
+
+\section{Bất đẳng thức và phương pháp xét modulo}
+
+
+Có rất nhiều phương trình, chẳng hạn $x^2-6^y=1$ tuy có vô hạn nghiệm trên tập hợp số thực nhưng lại vô nghiệm trong tập hợp số nguyên dương. Những tính chất số học đã hạn chế khá đáng kể tập giá trị của rất nhiều biểu thức. Chẳng hạn, ta có thể chứng minh được $x^2-6^y\ge3$ trong trường họp $x^2-6^y>0$ và $x,y$ nguyên dương. Điều này đã mở ra một hướng tiếp cận mới và ngày càng phổ biến trong số học, là sử dụng bất đẳng thức số học.
+\\ \\
+Trước tiên, ta sẽ đi tìm hiểu ví dụ đã nêu ở phần đặt vấn đề.
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Cho các số nguyên dương $x,y$ phân biệt thỏa mãn $x^2>6^y.$ Tìm giá trị nhỏ nhất của biểu thức $P=x^2-6^y.$
+\loigiai{
+Với dự đoán $\min\limits_{x,y\in\mathbb{N}^*,\,x^2>6^y}\tron{x^2-6^y}=3$ như đã đặt vấn đề, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $x^2=6^y+1,$ lấy đồng dư theo modulo $5$ hai vế ta có $x^2\equiv 1+1\equiv2\pmod{5},$ vô lí.
+    \item Nếu $x^2=6^y+2,$ lấy đồng dư theo modulo $5$ hai vế ta có $x^2\equiv 1+2\equiv3\pmod{5},$ vô lí.
+    \item Nếu $x^2=6^y+3,$ ta thấy có cặp $(x,y)=(3,1)$ thỏa mãn.
+\end{enumerate}
+Như vậy $\min P=3,$ đạt được chẳng hạn tại $x=3$ và $y=1.$}
+\begin{luuy}
+Thông qua ví dụ mở đầu bên trên, chúng ta đã hình dung được một cách chứng minh $\min A=m,$ với $A$ là một biểu thức số học cho trước. Một số bài tập tự luyện dưới đây minh họa rõ hơn cho phương pháp này.
+\end{luuy}
+\end{bx}
+
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho $x,y$ là hai số nguyên dương thỏa mãn ${{x}^{2}}+{{y}^{2}}+10$ chia hết cho $xy.$
+\begin{enumerate}[a,]
+ \item Chứng minh rằng $x$ và $y$ là hai số lẻ và nguyên tố cùng nhau.
+   \item Chứng minh rằng $k=\dfrac{{{x}^{2}}+{{y}^{2}}+10}{xy}$ chia hết cho $4$ và $k\ge 12.$
+\end{enumerate}
+ \nguon{Chuyên Toán Phổ thông Năng khiếu}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $n.$ Gọi $d$ là một ước nguyên dương của $2^n+15.$ Tìm giá trị nhỏ nhất của $d,$ biết $d$ có thể được biểu diễn dưới dạng $3x^2-4xy+3y^2,$ trong đó $x,y$ là các số nguyên.
+\end{btt}
+
+\begin{btt}
+Cho $x,y$ là các số nguyên không đồng thời bằng $0.$ Tìm giá trị nhỏ nhất của biểu thức
+\[F=\left|5x^2+11xy-5y^2\right|.\]
+\nguon{Chọn học sinh giỏi Toán 9 Hà Tĩnh 2017 $-$ 2018}
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên tố $p$ nhỏ nhất sao cho tồn tại số nguyên dương $n$ thỏa mãn $x^2+5x+23$ chia hết cho $p.$
+\nguon{Brazilian Math Olympiad 2003}
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên dương $p$ và $q$ thỏa mãn $\sqrt{11}-\dfrac{p}{q}>0$. Chứng minh rằng
+$$\sqrt{11}-\dfrac{p}{q}> \dfrac{1}{2p q}.$$
+\nguon{Baltic Way 2018}
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên dương $a$ và $b$ thỏa mãn điều kiện $a\sqrt{3} >b \sqrt{7}.$ Chứng minh rằng  \[a\sqrt{3}-b\sqrt{7} >\dfrac{1}{a+b}.\]
+\nguon{Tạp chí Pi, tháng 5 năm 2017}
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên dương $m$ và $n$ thỏa mãn $\sqrt{11}-\dfrac{m}{n}>0$. Chứng minh rằng
+$$\sqrt{11}-\dfrac{m}{n} \geq \dfrac{3\tron{\sqrt{11}-3}}{m n}.$$
+\nguon{Chuyên Toán Hà Nội 2020}
+\end{btt}
+
+\begin{btt}
+Cho $x, y$ là các số tự nhiên khác $0.$ Tìm giá trị nhỏ nhất của biểu thức \[A=\left| 36^{2x}-5^y \right|.\]
+\nguon{Chuyên Toán Thanh Hóa 2014}
+\end{btt}
+
+\begin{btt}
+Cho $m,n$ là các số nguyên dương. Tìm giá trị nhỏ nhất của biểu thức $$A=\Big|2^m-181^n\Big|.$$ 
+\nguon{Middle European Mathematical Olympiad 2017}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho $x,y$ là hai số nguyên dương thỏa mãn ${{x}^{2}}+{{y}^{2}}+10$ chia hết cho $xy.$
+\begin{enumerate}[a,]
+ \item Chứng minh rằng $x$ và $y$ là hai số lẻ và nguyên tố cùng nhau.
+   \item Chứng minh rằng $k=\dfrac{{{x}^{2}}+{{y}^{2}}+10}{xy}$ chia hết cho $4$ và $k\ge 12.$
+\end{enumerate}
+ \nguon{Chuyên Toán Phổ thông Năng khiếu}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta giả sử phản chứng rằng $x$ chẵn. Khi đó $x^2+y^2+10$ là số chẵn, kéo theo $y$ chẵn. Ta có
+    $$x^2+y^2+10\equiv 2\pmod{4},\quad xy\equiv 0\pmod{4}.$$
+    Suy ra $x^2+y^2+10$ không chia hết cho $xy,$ vô lí. Như vậy giả sử phản chứng là sai, và ta có $xy$ lẻ.\\
+    Tiếp theo, ta đặt $d=\left( x,y \right)$ và  $x=d{{x}_{0}},\: y=d{{y}_{0}}$ trong đó $\tron{x_0,y_0}=1$. 
+    Từ đó ta có
+    $${{x}^{2}}+{{y}^{2}}+10={{d}^{2}}x_{0}^{2}+{{d}^{2}}y_{0}^{2}+10$$
+    chia hết cho ${{d}^{2}}{{x}_{0}}{{y}_{0}}$ nên suy ra $d^2\mid 10,$ kéo theo $d=1$ hay $x$ và $y$ nguyên tố cùng nhau.
+    \item Đặt $x=2m+1,y=2n+1$ với $m,n$ là số tự nhiên. Khi đó ta có \[k=\dfrac{4\left( {{m}^{2}}+{{n}^{2}}+m+n+3 \right)}{\left( 2m+1 \right)\left( 2n+1 \right)}.\]
+    Do $\tron{4,(2m+1)(2n+1)}=1$ và $k$ là số tự nhiên nên
+    $$(2m+1)(2n+1)\mid\tron{m^2+n^2+m+n+3}.$$
+    Ta suy ra $k$ chia hết cho $4$ từ đây. Tiếp theo, ta sẽ chứng minh $k\ge 12.$ Giả sử $k<12.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $k=4,$ ta có $x^2+y^2+10=4xy,$ hay là
+        $$(x-2y)^2+10=3y^2.$$
+        Lấy đồng dư theo modulo $3$ hai vế, ta có $(x-2y)^2\equiv 2\pmod{3},$ vô lí.
+        \item \chu{Trường hợp 2.} Nếu $k=8,$ ta có $x^2+y^2+10=8xy,$ hay là
+        $$(x-4y)^2+10=15y^2.$$
+        Lấy đồng dư theo modulo $3$ hai vế, ta có $(x-4y)^2\equiv 2\pmod{3},$ vô lí.        
+    \end{itemize}
+    Giả sử sai, và ta có $k\ge 12.$ Dấu bằng xảy ra chẳng hạn tai $x=y=1.$ Bất đẳng thức được chứng minh.
+\end{enumerate} }
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Cho số nguyên dương $n.$ Gọi $d$ là một ước nguyên dương của $2^n+15.$ Tìm giá trị nhỏ nhất của $d,$ biết $d$ có thể được biểu diễn dưới dạng $3x^2-4xy+3y^2,$ trong đó $x,y$ là các số nguyên.
+\loigiai{
+Ta dễ dàng chỉ ra $2^n+15$ không chia hết cho $2,3,5$ nên $d$ cũng không chia hết cho $2,3,5.$ Ta sẽ tìm $d$ bằng cách loại dần đi các trường hợp nhỏ.
+\begin{enumerate}
+    \item Với $d=1,$ thế trở lại giả thiết cho ta
+    $$3x^2-4xy+3y^2=1,$$
+    hay $(3x-2y)^2+5y^2=3.$ Vì $x,y$ nguyên nên $\tron{3x-2y}^2=3,$ vô lí. 
+        \item Với $d=7,$ ta suy ra $2^n+15$ chia hết cho $7$ hay $2^n$ chia $7$ dư $6.$\\
+        Xét bảng đồng dư modulo $7$ đưới đây, ta có
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c|c}
+            $n$ & $0$&$1$ & $2$ & $3$ &$4$&$5$&$6$  \\
+            \hline
+              $2^n$ & $1$&$2$ & $4$ & $1$ &$2$&$4$&$1$  \\
+        \end{tabular}
+    \end{center}
+    Không có số nguyên dương $n$ thỏa mãn.
+    \item Với $d=11,$ ta có $(3x-2y)^2+5y^2=33.$ Từ đây, ta suy ra
+    $$5y^2\le 33,$$
+    dẫn đến $y^2\in\left\{0,1,4\right\}. $ Kéo theo $\tron{3x-2y}^2\in\left\{33;28;13\right\},$ vô lí.
+    \item Với $d=13,$ ta có 
+    $(3x-2y)^2+5y^2=39.$ Chứng minh tương tự, không có số nguyên $x,y$ thỏa mãn.
+    \item Với $d=17,$ ta có $(3x-2y)^2+5y^2=51.$ Chứng minh tương tự, không có số nguyên $x,y$ thỏa mãn.
+    \item Với $d=19,$ ta có $(3x-2y)^2+5y^2=57.$ Chứng minh tương tự, không có số nguyên $x,y$ thỏa mãn.
+    \item Với $d=23,$ ta có $(3x-2y)^2+5y^2=69.$ Từ đây, ta nhận được trường hợp thỏa mãn là
+    $$x=-2,\quad y=1.$$
+    Chọn $n=3,$ ta thu được $2^n+15=23$ chia hết cho $d=23.$
+\end{enumerate}
+Như vậy, số nguyên $d$ nhỏ nhất là $23.$
+}
+\end{gbtt}
+
+
+\begin{gbtt}
+Cho $x,y$ là các số nguyên không đồng thời bằng $0.$ Tìm giá trị nhỏ nhất của biểu thức
+\[F=\left|5x^2+11xy-5y^2\right|.\]
+\nguon{Chọn học sinh giỏi Toán 9 Hà Tĩnh 2017 $-$ 2018}
+\loigiai{
+Gọi giá trị nhỏ nhất cần tìm là $m,$ đồng thời đặt
+$$f\tron{x;y}=\left|5x^2+11xy-5y^2\right|.$$
+Ta chia bài toán thành các bước làm sau.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Chứng minh $m$ là số lẻ và $m\le 5.$ \\
+    Đầu tiên, do $f\tron{1;0}=5$ nên $m\le 5.$ Hơn nữa, ta còn có
+    $$f\tron{2x;2y}=4f\tron{x;y}.$$
+    Ta suy ra giá trị nhỏ nhất của $F$ không đạt được khi $x,y$ cùng chẵn, và vì thế $m$ lẻ.
+    \item Chứng minh $m\ne 1.$ \\
+    Nếu $m=1,$ tồn tại các số nguyên $x,y$ sao cho
+    $$\left|5x^2+11xy-5y^2\right|=1.$$
+    Biến đổi tương đương, ta được
+    \begin{align*}
+         \left|5x^2+11xy-5y^2\right|=1
+         &\Leftrightarrow 100 x^{2}+220 x y-100 y^{2}=\pm 20 
+         \\&\Leftrightarrow(10 x+11 y)^{2}-221 y^{2}=\pm 20
+         \\&\Leftrightarrow(10 {x}+11 {y})^{2} \pm 20=221 {y}^{2}.
+    \end{align*}
+    Do $221y^2$ chia hết cho $13$ nên khi lấy đồng dư modulo $13$ hai vế, ta được
+    $$(10x+11y)^2\equiv 6,7\pmod{13}.$$
+    Đây là điều không thể xảy ra. Thật vậy, ta quan sát bảng đồng dư modulo $13$ dưới đây.
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c|c}
+           $A$  & $0$ & $\pm 1$ & $\pm 2$ & $\pm 3$ & $\pm 4$ & $\pm 5$ & $\pm 6$ \\
+           \hline
+            $A^2$ & $0$ & $1$ & $4$ & $9$ & $5$ & $3$ & $3$
+        \end{tabular}
+    \end{center}
+    Không có số chính phương nào chia $13$ dư $6$ hoặc $7.$ Như vậy $m\ne 1.$
+    \item Chứng minh $m\ne 3.$\\
+        Nếu $m=3,$ tồn tại các số nguyên $x,y$ sao cho
+    $$\left|5x^2+11xy-5y^2\right|=3.$$
+    Một các tương tự, biến đổi tương đương ta thu được
+    $$(10 x+11 y)^{2} \pm 60=221 y^{2}.$$
+    Căn cứ vào bảng đồng dư đã xét ở bước 2, ta thấy trường hợp $m=3$ cũng không xảy ra.
+\end{enumerate}
+Thông qua các bước làm trên, ta kết luận $\min F=5,$ đạt được chẳng hạn khi $x=1$ và $y=0.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên tố $p$ nhỏ nhất sao cho tồn tại số nguyên dương $n$ thỏa mãn $x^2+5x+23$ chia hết cho $p.$
+\nguon{Brazilian Math Olympiad 2003}
+\loigiai{
+Ta sẽ tìm giá trị của $p$ thông qua thử một vài giá trị nhỏ. Trước hết, ta viết
+$$4\tron{x^2+5x+23}=(2x+5)^2+67.$$
+Đặt $2x+5=A.$ Ta lần lượt xét biểu thức trên trong các modulo của $p.$
+\begin{enumerate}
+    \item Nếu $p=3,$ ta có $A^2+67$ chia hết cho $3,$ vô lí do
+    $$A^2+67\equiv 1,2\pmod{3}.$$
+    \item Nếu $p=5,$ ta có $A^2+67$ chia hết cho $5,$ vô lí do 
+    $$A^2+67\equiv 2,3,1\pmod{5}.$$
+    \item Nếu $p=7,$ ta có $A^2+67$ chia hết cho $7,$ vô lí do 
+    $$A^2+67\equiv 4,5,6,1\pmod{7}.$$
+    \item Nếu $p=11,$ ta có $A^2+67$ chia hết cho $11.$ Ta lập bảng đồng dư modulo $11$
+    \begin{center}
+            \begin{tabular}{c|c|c|c|c|c|c}
+            $A$ & $0$ & $\pm 1$ & $\pm 2$ & $\pm 3$ & $\pm 4$ & $\pm 5$ \\
+            \hline
+            $A^2$ & $0$ & $1$ & $4$ & $9$ & $5$ & $3$ \\
+            \hline
+            $A^2+67$ & $1$ & $2$ & $5$ & $10$ & $6$ & $4$             
+            \end{tabular}
+        \end{center}
+        Ta có $A^2+67$ không chia hết cho $11$ với mọi $A,$ mâu thuẫn.
+    \item Nếu $p=13,$ ta có $A^2+67$ chia hết cho $13.$ Ta lập bảng đồng dư modulo $13$
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c|c|c|c}
+           $A$  & $0$ & $\pm 1$ & $\pm 2$ & $\pm 3$ & $\pm 4$ & $\pm 5$ & $\pm 6$ \\
+           \hline
+            $A^2$ & $0$ & $1$ & $4$ & $9$ & $5$ & $3$ & $3$ \\
+            \hline 
+            $A^2+67$ & $2$ & $3$ & $6$ & $11$ & $7$ & $5$ & $5$
+        \end{tabular}
+    \end{center}    
+    Ta có $A^2+67$ không chia hết cho $13$ với mọi $A,$ mâu thuẫn.
+    \item Nếu $p=17,$ ta chỉ ra với $x=31$ hay $A=67$ thì $x^2+5x+23$ chia hết cho $17.$   
+\end{enumerate}
+Kết luận, $p=17$ là số nguyên tố cần tìm.}
+\end{gbtt}
+
+
+
+\begin{gbtt}
+Cho hai số nguyên dương $p$ và $q$ thỏa mãn $\sqrt{11}-\dfrac{p}{q}>0$. Chứng minh rằng
+$$\sqrt{11}-\dfrac{p}{q}> \dfrac{1}{2p q}.$$
+\nguon{Baltic Way 2018}
+\loigiai{Bất đẳng thức cần chứng minh tương đương với
+$$q\sqrt{11}-p\ge \dfrac{1}{2p}.$$
+Ta sẽ chứng minh rằng $11q^2-p^2\ge 2.$ Từ giả thiết $\sqrt{11}-\dfrac{p}{q}>0$, ta có $11q^2>p^2$, hay là $11q^2-p^2 \geq 1$. \\Ta xét bảng đồng dư theo modulo $11$ sau
+  \begin{center}
+            \begin{tabular}{c|c|c|c|c|c|c}
+            $q$ & $0$ & $\pm 1$ & $\pm 2$ & $\pm 3$ & $\pm 4$ & $\pm 5$ \\
+            \hline
+            $q^2$ & $0$ & $1$ & $4$ & $9$ & $5$ & $3$ \\
+            \hline
+            $11q^2-p^2$ & $0$ & $10$ & $7$ & $2$ & $6$ & $8$
+            \end{tabular}
+        \end{center}
+    Căn cứ vào dòng cuối cùng của bảng, ta suy ra $11q^2-p^2\not\equiv 1\pmod{11},$ và vì thế $11q^2-p^2\ge 2.$\\
+    Từ đây, ta suy ra
+    $$q\sqrt{11}-p=\dfrac{11q^2-p^2}{q\sqrt{11}+p}\ge\dfrac{2}{q\sqrt{11}+p}>\dfrac{2}{p}.$$
+    Vế trái lớn hơn vế phải. Bất đẳng thức được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên dương $a$ và $b$ thỏa mãn điều kiện $a\sqrt{3} >b \sqrt{7}.$ Chứng minh rằng  \[a\sqrt{3}-b\sqrt{7} >\dfrac{1}{a+b}.\]
+\nguon{Tạp chí Pi, tháng 5 năm 2017}
+\loigiai{
+Ta sẽ chứng minh rằng $3a^2-7b^2\ge 3.$ Từ giả thiết $a\sqrt{3}>b\sqrt{7}$, ta có $3a^2>7b^2$, hay là $3a^2-7b^2 \geq 1$.\\ Ta xét bảng đồng dư theo modulo $7$ sau
+  \begin{center}
+            \begin{tabular}{c|c|c|c|c}
+            $a$ & $0$ & $\pm 1$ & $\pm 2$ & $\pm 3$\\
+            \hline
+            $3a^2$ & $0$ & $3$ & $5$ & $6$\\
+            \hline
+            $3a^2-7b^2$ & $0$ & $3$ & $5$ & $6$
+            \end{tabular}
+        \end{center}
+    Căn cứ vào dòng cuối cùng của bảng, ta suy ra $3a^2-7b^2\not\equiv 1,2\pmod{7}.$ Kết hợp với  $3a^2-7b^2 \geq 1,$ ta thu được $3a^2-7b^2\ge 3.$
+    Tiếp theo, biến đổi vế trái bất đẳng thức cần chứng minh, ta có
+$$a\sqrt{3} -b\sqrt{7} = \dfrac{3a^2-7b^2}{a\sqrt{3}+b\sqrt{7}} \geq \dfrac{3}{a\sqrt{3}+b\sqrt{7}} 
+=\dfrac{1}{a\dfrac{\sqrt{3}}{3} + b\dfrac{\sqrt{7}}{3}} > \dfrac{1}{a+b}.$$
+Tổng kết loại, bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên dương $m$ và $n$ thỏa mãn $\sqrt{11}-\dfrac{m}{n}>0$. Chứng minh rằng
+$$\sqrt{11}-\dfrac{m}{n} \geq \dfrac{3\tron{\sqrt{11}-3}}{m n}.$$
+\nguon{Chuyên Toán Hà Nội 2020}
+\loigiai{Bất đẳng thức cần chứng minh tương đương với
+\[\sqrt{11} n-m \geq \dfrac{3\left(\sqrt{11}-3\right)}{m}\Leftrightarrow 11 n^{2} \geq m^{2}+6\left(\sqrt{11}-3\right)+\dfrac{9\left(\sqrt{11}-3\right)^{2}}{m^{2}}.\tag{*}\]
+Đến đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $m=1,$ bất đẳng thức được chứng minh do
+    $$VP(*)=1+6\left(\sqrt{11}-3\right)+9\left(\sqrt{11}-3\right)^{2}<11 \leq 11 n^{2}.$$
+    \item Với $m=2,$ bất đẳng thức được chứng minh do 
+    $$VP(*)=4+6\left(\sqrt{11}-3\right)+\dfrac{9\left(\sqrt{11}-3\right)^{2}}{4}<11 \leq 11 n^{2}.$$
+    \item Với $m=3,$ ta có đánh giá sau cho vế phải của (*)
+    $$VP(*) \leq m^{2}+6\left(\sqrt{11}-3\right)+\dfrac{9\left(\sqrt{11}-3\right)^{2}}{9}=m^{2}+2.$$
+    Ta sẽ chứng minh rằng $11n^2\ge m^2+2.$ Thật vậy, từ giả thiết ta suy ra $11 n^{2}-m^{2}>0$ và do đó $$11 n^{2}-m^{2} \geq 1.$$ Ta xét bảng đồng dư theo modulo $11$ sau
+        \begin{center}
+           \begin{tabular}{c|c|c|c|c|c|c}
+            $m$ & $0$ & $\pm 1$ & $\pm 2$ & $\pm 3$ & $\pm 4$ & $\pm 5$ \\
+            \hline
+            $m^2$ & $0$ & $1$ & $4$ & $9$ & $5$ & $3$ \\
+            \hline
+            $11n^2-m^2$ & $0$ & $10$ & $7$ & $2$ & $6$ & $8$ 
+            \end{tabular}
+        \end{center}
+   Căn cứ vào dòng cuối cùng của bảng, ta suy ra $11n^2-m^2\not\equiv 1 \pmod{11}.$ \\Kết hợp với chứng minh $11n^2-m^2\ge 1$ ở trên, ta được $11n^2-m^2=2.$ 
+\end{enumerate}
+Dấu bằng xảy ra khi và chỉ khi $n=1,m=3.$ Bất đẳng thức đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $x, y$ là các số tự nhiên khác $0.$ Tìm giá trị nhỏ nhất của biểu thức \[A=\left| 36^{2x}-5^y \right|.\]
+\nguon{Chuyên Toán Thanh Hóa 2014}
+\loigiai{
+Đặt $k=2x$ nên $k$ là số chẵn. Ta đi tìm giá trị nhỏ nhất của 
+$$A=\left| {{36}^{k}}-{{5}^{y}} \right|.$$
+Dễ thấy $A=11$ khi  $k=2,y=2$ hay $x=1,y=2$. Ta chứng minh $\min A=11.$\\ 
+Thật vậy, do $A=\left| {{36}^{k}}-{{5}^{y}} \right|$ nên ta suy ra
+\begin{center}
+    $A={{36}^{k}}-{{5}^{y}}$ hoặc $A={{5}^{y}}-{{36}^{k}}.$ 
+\end{center}
+Giả sử $\min A<11.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Xét trường hợp $A={{36}^{k}}-{{5}^{y}}$. Khi đó ta thấy $A$ luôn có chữ số tận cùng là $1.$\\
+    Nếu $A<11$ và $A$ có chữ số tận cùng là 1 thì $A=1,$ kéo theo  ${{36}^{k}}-{{5}^{y}}=1.$
+\begin{itemize}
+    \item\chu{Trường hợp 1.} Nếu $y$ là số chẵn, ta có \[{{36}^{k}}\equiv 0\pmod{3},\qquad {{5}^{y}}\equiv 1 \pmod{3}.\] Từ đây, ta suy ra $1={{36}^{k}}-{{5}^{y}}\equiv 0-1\equiv 2\pmod {3},$ vô lí.
+    \item\chu{Trường hợp 2.} Nếu $y$ là số lẻ, ta có \[{{36}^{k}}\equiv 0\pmod{4},\qquad {{5}^{y}}\equiv 1\pmod{4}.\] Từ đây, ta suy ra $1={{36}^{k}}-{{5}^{y}}\equiv0-1 \equiv 3\pmod{4},$ vô lí.
+\end{itemize}
+\item Xét trường hợp $A={{5}^{y}}-{{36}^{k}}$. Ta thấy $A={{5}^{y}}-{{36}^{k}}$ có chữ số tận cùng là $9.$\\
+Nếu $A<11$ và $A$ có chữ số tận cùng là $9$ thì $A=9,$ kéo theo
+\[{{5}^{y}}-{{36}^{k}}=9.\]
+Ta suy ra $5^y$ chia hết cho $3$, vô lí.
+\end{enumerate}
+Vậy giá trị nhỏ nhất của $A$ là $11,$ đạt được khi $x=1,y=2$.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $m,n$ là các số nguyên dương. Tìm giá trị nhỏ nhất của biểu thức $$A=\Big|2^m-181^n\Big|.$$ 
+\nguon{Middle European Mathematical Olympiad 2017}
+\loigiai{
+Đầu tiên, dễ thấy $A$ lẻ. Ta sẽ đi tìm giá trị nhỏ nhất của $A$ bằng cách loại dần các giá trị nguyên đủ nhỏ.
+\begin{enumerate}
+    \item Nếu $2^m-181^n=-1,$ lấy đồng dư theo modulo $3$ ta được
+    $$2^m =181^n-1 \equiv 0 \pmod{3}.$$
+    Ta suy ra $2^m$ chia hết cho $3,$ vô lí.
+    \item Nếu $2^m-181^n=1,$ lấy đồng dư theo modulo $4$ ta được
+    $$2^m =181^n+1 \equiv 2 \pmod{4}.$$
+    Điều này là không thể xảy ra với $m\ge 2.$ Đối với $m=1,$ ta có $181^n=1,$ kéo theo $n=0,$ vô lí.
+    \item Nếu $2^m-181^n=-3,$ lấy đồng dư theo modulo $4$ ta được
+    $$2^m=181^n-3 \equiv 2 \pmod{4}.$$
+    Điều này là không thể xảy ra với $m\ge 2.$ Đối với $m=1,$ ta có $181^n=5,$ vô lí.
+    \item Nếu $2^m-181^n=3,$ trước hết ta nhận thấy do
+    $$2^m \equiv 1, 2, 4, 8 \pmod{15},\quad 81^n+3 \equiv 4 \pmod{15}$$ 
+    nên $2^m \equiv 4 \pmod{15}$. Xét các số dư của $m$ khi chia cho $4,$ ta có $m\equiv 2\pmod{4}.$ 
+    \\Đặt $m=4k+2.$ Phép đặt này cho ta
+    		\begin{align*}
+			 2^m=181^n+3
+			& \Rightarrow 2^{4k+2} \equiv (-1)^n+3 \pmod{13}\\
+			&\Rightarrow 4 \cdot 16^k \equiv (-1)^n+3 \pmod{13}\\
+			&\Rightarrow 4 \cdot 3^k \equiv (-1)^n+3 \pmod{13}.
+		\end{align*}
+			Ta có $(-1)^n+3 \equiv 2, 4 \pmod{13}$ và $4 \cdot 3^k \equiv 4, 12, 10 \pmod{13}$. Do đó $(-1)^n+3 \equiv 4 \pmod{13}$, suy ra $n$ phải chẵn hay $n=2q$, trong đó $q$ là số nguyên dương. Như vậy
+		\[
+		\begin{aligned}
+		A &=\left|2^m-181^n\right|\\&=\left|2^{4k+2}-181^{2q}\right|\\& =\left|\left(2^{2k+1}-181^q\right)\left(2^{2k+1}+181^q\right)\right| \\&\ge 183.
+		\end{aligned}
+		\]	
+		Dấu bằng của bất đẳng thức trên thậm chí không xảy ra. Ta có $A>183$ trong trường hợp này.
+		\item Nếu $2^m-181^n=\pm 5,$ lấy đồng dư theo modulo $15$ hai vế ta được
+		$$2^m\equiv 5,10\pmod{15}.$$
+		Khi xét các số dư của $m$ khi chia cho $4,$ ta nhận thấy $2^m\equiv 1,2,4,8\pmod{15},$ mâu thuẫn.
+		\item Nếu $2^m-181^n=\pm 7,$ ta chỉ ra $m=15$ và $n=2$ thoả mãn.
+\end{enumerate}
+Như vậy $\min A=7,$ đạt được tại $m=15$ và $n=2.$}
+\end{gbtt}

@@ -1,0 +1,1409 @@
+\section{Ước chung lớn nhất và tính chất lũy thừa}
+
+\subsection*{Lí thuyết}
+\begin{light}
+\chu{Bổ đề.} Cho $a,b,c$ là các số nguyên dương. Khi đó
+    \begin{enumerate}
+        \item  Nếu $a^{2}=bc$ và $(b,c)=1$  thì $b, c$ là các số chính phương.  
+        \item  Nếu $a^{3}=bc$ và $(b,c)=1$  thì $b, c$ là các số lập phương.  
+        \item  Nếu $a^{2}=bc$ và $(b,c)=d$  thì $b, c$ đều bằng $d$ lần một số chính phương.
+    \end{enumerate}
+    Tổng quát hơn, với mọi số tự nhiên $a,b,c,n$ khác $0,$ nếu $a^n=bc$ và $(b,c)=1$ thì $b$ và $c$ đều bằng một lũy thừa số mũ $n.$
+\end{light}
+Dưới đây, tác giả xin phép trình bày phần chứng minh cho bổ đề thứ nhất. Các bổ đề còn lại, ta chứng minh tương tự. \\
+\chu{Chứng minh.} Ta xét hai phân tích tiêu chuẩn sau của $b$ và $c$
+$$b=p_1^{b_1}p_2^{b_2}\ldots p_m^{b_m},\quad c=q_1^{c_1}q_2^{c_2}\ldots q_m^{c_m}.$$
+Rõ ràng các số dạng $p_i$ khác các số dạng $c_j.$ Phân tích tiêu chuẩn của $a^2$ chỉ chứa các thừa số nguyên tố $p_1,p_2,\ldots,p_n,q_1,q_2,\ldots,q_m.$ Điều này chứng tỏ số mũ của các thừa số ấy phải chẵn. Do đó, cả $b$ và $c$ đều là số chính phương.
+
+\subsection*{Ví dụ minh họa}
+\begin{bx}
+Cho hai số nguyên dương $x,y$ thỏa mãn $2x^2+x=3y^2+y.$ Chứng minh rằng $x-y$ và $2x+2y+1$ đều là số chính phương.
+\loigiai{Với các số $x,y$ thỏa mãn giả thiết, ta có
+\begin{align*}
+    2x^2+x=3y^2+y 
+    &\Rightarrow 2x^2-2y^2+x-y=y^2 \\&\Rightarrow 2(x-y)(x+y)+(x-y)=y^2 \\&\Rightarrow (x-y)(2x+2y+1)=y^2.
+\end{align*}
+Hai số $x-y$ và $2x+2y+1$ không đồng thời bằng $0,$ nên ta có thể đặt $d=(x-y,2x+2y+1).$\\
+Do $y^2=(x-y)(2x+2y+1)$ nên $y^2$ chia hết cho $d^2,$ tức $y$ chia hết cho $d.$ Khi đó 
+$$\heva{&d\mid (x-y) \\ &d \mid (2x+2y+1) \\ &d\mid y}\Rightarrow \heva{&d\mid x \\ &d \mid (2x+2y+1) \\ &d\mid y} \Rightarrow \heva{&d\mid x \\ &d \mid 1 \\ &d\mid y}\Rightarrow d=1.$$
+Ta suy ra $x-y$ và $2x+2y+1$ đều là các số chính phương. Bài toán được chứng minh.}
+\begin{luuy}
+Hướng đi tách đẳng thức hoặc phương trình đã cho thành \chu{một vế nhân tử} và \chu{một vế chính phương} rồi tiến hành xét ước chung là hướng đi thường thấy trong các bài toán dạng này.
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Cho các số nguyên dương $a,b,c$ thỏa mãn $\dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{c}.$ Chứng minh rằng $a^2+b^2+c^2$ là số chính phương.
+\loigiai{Nếu $(a,b,c)=D,$ ta đặt 
+$a=Dx,b=Dy,c=Dz.$
+Đẳng thức ở giả thiết trở thành $$\dfrac{1}{x}+\dfrac{1}{y}=\dfrac{1}{z}.$$ Trong khi đó, ta chỉ cần đi chứng minh $x^2+y^2+z^2$ là số chính phương. Do đó, ta chỉ cần xét bài toán này trong trường hợp $(a,b,c)=1.$ Rõ ràng $a>c$ và $b>c.$ Đẳng thức đã cho tương đương với
+$$(a-c)(b-c)=c^2.$$
+Ta đặt $d=(a-c,b-c),$ khi đó
+$$\heva {&d\mid (a-c) \\ &d\mid (b-c)  \\ &d\mid c}
+\Rightarrow \heva{&d\mid a \\ &d\mid b   \\ &d\mid c }\Rightarrow d\mid (a,b,c)\Rightarrow d=1.$$
+Áp dụng phần lí thuyết đã học với chú ý $a-c>0$ và $b-c>0$, ta suy ra $a-c,b-c$ là các số chính phương. Ta đặt $a-c=x^2,b-c=y^2,$ ở đây $x,y$ là các số nguyên dương. Phép đặt này cho ta $$c=xy,\ a=x^2+xy,\ b=y^2+xy,$$ 
+vậy nên $a^2+b^2+c^2=\left(x^2+xy+y^2\right)^2.$ Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Tìm các số nguyên dương $n$ thỏa mãn $A=4n^3+2n^2-7n-5$ là một số chính phương.
+\nguon{Chuyên Toán Thái Nguyên 2021}
+\loigiai{
+Giả sử $A$ là số chính phương. Xét phân tích
+$$A=(n+1)\left(4n^2-2n-5\right).$$
+Ta đặt $d=\left(n+1,4n^2-2n-5\right).$ Phép đặt này cho ta 
+$$\heva{&d\mid (n+1) \\ &d \mid \left(4n^2-2n-5\right)}
+\Rightarrow \heva{&d\mid (n+1) \\ &d \mid \left[2(n+1)(2n-3)+1\right]} 
+\Rightarrow d=1.$$
+Tích của hai số dương nguyên tố cùng nhau $n+1$ và $4n^2-2n-5$ là một số chính phương, vậy nên cả $2$ số này chính phương. Tới đây, ta đánh giá
+$$(2n-2)^2<4n^2-2n-5<(2n)^2.$$
+Do $4n^2-2n-5$ chính phương, đánh giá trên cho ta
+$$4n^2-2n-5=(2n-1)^2\Leftrightarrow 4n^2-2n-5=4n^2-4n+1\Leftrightarrow n=3.$$
+Thử với $n=3,$ ta được $A$ chính phương. Đây là giá trị duy nhất của $n$ thỏa mãn đề bài.
+}
+\end{bx} %thainguyen
+
+\begin{bx}
+Cho $n$ là số tự nhiên lẻ sao cho $\dfrac{n^2-1}{3}$ là tích của hai số tự nhiên liên tiếp. Chứng minh rằng $n$ là tổng của hai số chính phương liên tiếp.
+\loigiai{Từ giả thiết, ta có thể đặt $n=2a+1,$ đồng thời đặt $n^2-1=3b(b+1),$ với $a,b$ là các số nguyên dương. Hai phép đặt này cho ta
+\begin{align*}
+    (2a+1)^2-1=3b(b+1)
+    &\Rightarrow 4a^2+4a=3b(b+1)
+    \\&\Rightarrow 16a^2+16a=3\left(4b^2+4b\right)
+    \\&\Rightarrow 16a^2+16a+3=3\left(4b^2+4b+1\right)
+    \\&\Rightarrow
+    (4a+1)(4a+3)=3(2b+1)^2.
+    \tag{*}
+\end{align*}
+Do $3$ là số nguyên tố nên $3\mid (4a+1)$ hoặc $3\mid (4a+3).$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $4a+1$ chia hết cho $3,$ ta viết lại (*) thành
+    $$(2b+1)^2=\left(\dfrac{4a+1}{3}\right)(4a+3).$$
+    Do $4a+3$ và $4a+1$ là hai số lẻ liên tiếp nên chúng nguyên tố cùng nhau. Từ đó, ta có $$\left(4a+3,\dfrac{4a+1}{3}\right)=1.$$ Theo lí thuyết đã học, $4a+3$ là số chính phương. Tuy nhiên, do $3\mid (4a+1)$ nên 
+    $$a\equiv 2\pmod{3}\Rightarrow 4a+3\equiv 2\pmod{3}.$$
+    Không có số chính phương nào đồng dư $2$ theo modulo $3.$ Trường hợp này không xảy ra.
+    \item Nếu $4a+3$ chia hết cho $3,$ ta viết lại (*) thành
+    $$(2b+1)^2=\left(\dfrac{4a+3}{3}\right)(4a+1).$$
+    Bằng lập luận tương tự, ta chỉ ra cả $\dfrac{4a+3}{3}$ và $4a+1$ là các số chính phương. Thậm chí, $4a+1$ còn là số chính phương lẻ. Đặt $4a+1=(2x+1)^2,$ với $x$ nguyên dương. Phép đặt này cho ta
+    $$4a=4x^2+4x\Rightarrow a=x^2+x\Rightarrow n=2a+1=2x^2+2x+1=x^2+(x+1)^2$$ 
+    $n$ đã được biểu diễn thành tổng của hai số chính phương liên tiếp. Chứng minh hoàn tất.
+\end{enumerate}}
+\end{bx}
+
+\begin{bx}
+Chứng minh rằng không tồn tại các số $a, b$ nguyên dương thỏa mãn đồng thời hai điều kiện 
+\begin{enumerate}
+    \item[i,] $a b, a+b$ đều là các số chính phương.
+    \item[ii,] $16 a-9 b$ là số nguyên tố.
+\end{enumerate}
+\nguon{Junior Balkan Mathematical Olympiad Shortlists 2014}     
+\loigiai{Giả sử tồn tại các số nguyên dương $a,b$ thỏa mãn đề bài. 
+Đặt $(a, b)=d,$ khi đó tồn tại các số nguyên dương $x,y$ sao cho $\left(x, y\right)=1$ và $a=dx, b=dy.$
+Ta có $d\left(16x-9y\right)=p$ là số nguyên tố. Xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $d=1,$ ta có thể đặt $a=u^2, b=v^2.$ Phép đặt này cho ta
+    $$p=16u^2-9v^2=(4 u-3 v)(4 u+3 v).$$ 
+    Do $1\le 4u-3v<4u+3v$ nên ta lần lượt suy ra
+    $$\heva{4u-3v=1 \\ 4u+3v=p}\Rightarrow \heva{p=8u-1 \\ p=6v+1}\Rightarrow \heva{&p\equiv 7,15,23 &\pmod{24} \\ &p\equiv 1,7,13,19 &\pmod{24}.}$$
+    Đối chiếu hai dòng trong hệ, ta có $p$ chia $24$ dư $7.$ Đặt $p=24t+7$, khi đó $$u^2+v^2=(3 t+1)^{2}+(4 t+1)^{2}=25 t^{2}+14 t+2$$ là số chính phương. Tuy nhiên điều này không thể xảy ra vì
+    $$
+    (5 t+1)^{2}<25 t^{2}+14 t+2<(5 t+2)^{2}.
+    $$
+    \item Nếu $16x-9y=1,$ ta nhận được các đồng dư thức sau
+    $$16x\equiv 1\pmod{9}\Rightarrow 64x \equiv 4\pmod{9}\Rightarrow x\equiv 4\pmod{9}.$$
+    Đến đây, ta có thể đặt $x=t+4$ với $t$ nguyên dương. Ta suy ra $y=16 t+7,$ vậy nên
+    $$
+    a b=d^2xy=d^{2}(9 t+4)(16 t+7)=d^{2}\left(144 t^{2}+127 t+28\right).
+    $$
+Tuy nhiên, điều này không thể xảy ra là vì
+$$
+(12 t+5)^{2}<144 t^{2}+127 t+28<(12 t+6)^{2}.
+$$
+\end{enumerate}
+Trong mọi trường hợp, giả sử phản chứng đều sai. Chứng minh hoàn tất.}
+\end{bx}
+
+\begin{bx}
+Tìm các số nguyên dương $n$ sao cho tồn tại số nguyên dương $x$ thỏa mãn $4x^n+(x+1)^2$ là số chính phương.
+\nguon{Tạp chí Kvant}
+\loigiai{
+Từ giả thiết, ta có thể đặt $4 x^{n}+(x+1)^{2}=y^{2},$ với $y$ nguyên dương. Phép  đặt này cho ta
+\[(y-x-1)(y+x+1)=4x^n.\tag{1}\]
+Hai số $x-y-1$ và $y+x+1$ có tổng và tích chẵn nên chúng đều là số chẵn. Như vậy, ta nghĩ đến chuyện chia cả hai vế của (1) cho $4$ như sau
+$$\left(\dfrac{y-x-1}{2}\right)\left(\dfrac{y+x+1}{2}\right)=x^n.$$
+Đặt $d=\left(\dfrac{y-x-1}{2},\dfrac{y+x+1}{2}\right).$ Phép đặt này cho ta
+$$
+\heva{&d\mid \dfrac{y-x-1}{2} \\ &d\mid \dfrac{y+x+1}{2} \\ &d\mid x^n}
+\Rightarrow \heva{&d\mid (x+1) \\ &d\mid x^n}
+\Rightarrow d=1.
+$$
+Theo đó, cả $\dfrac{y-x-1}{2}$ và $\dfrac{y+x+1}{2}$ đều là một lũy thừa mũ $n.$ Ta tiếp tục đặt 
+\begin{align*}
+    y-x-1=2u^n,
+    \quad y+x+1=2v^n.
+\end{align*}
+Trừ theo vế phương trình trên rồi chia chúng cho $2,$ ta được
+\[ x+1=u^n-v^n.\tag{2}\]
+Mặt khác, khi đối chiếu với (1), phép đặt này cho ta 
+\[2u^n\cdot 2v^n=4x^n\Rightarrow uv=x.\tag{3}\]
+Kết hợp (2) và (3), ta có
+$uv+1=u^n-v^n.$
+Ta nhận thấy rằng, khi $n$ đủ lớn, hiệu $u^n-v^n$ sẽ lớn hơn $uv+1.$ Chính vì lẽ đó, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $n\ge 3,$ ta nhận xét được rằng
+    \begin{align*}
+        uv+1&=v^{n}-u^{n}
+        =(v-u)\left(v^{n-1}+v^{n-2} u+\ldots+u^{n-1}\right) \\&\ge v^{n-1}+v^{n-2} u+\ldots+u^{n-1}
+        \\&\ge v^{n-1}+v^{n-2}u+u^{n-1}
+        \\&\ge v^2+uv+u^2.
+    \end{align*}
+    Ta thu được $1\ge u^2+v^2.$ Đây là điều không thể xảy ra.
+    \item Với $n=2,$ ta nhận thấy có ít nhất một trường hợp thỏa mãn là $x=2,y=5.$
+    \item Với $n=1,$ ta có 
+    $uv+1=u-v<u<uv.$ Điều này không thể xảy ra.
+\end{enumerate}
+Như vậy, $n=2$ là giá trị duy nhất của $n$ thỏa mãn đề bài.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên tố $p$ thoả mãn $\dfrac{2^{p-1}-1}{p}$ là số chính phương.
+\nguon{Thailand Mathematical Olympiad 2006}
+\loigiai{Ta thấy $p=2$ không thoả đề, thế nên $p$ lẻ. Ta đặt $p=2k+1.$ Ta có $$\dfrac{2^{p-1}-1}{p}=\dfrac{\left(2^{k}-1\right)\left(2^{k}+1\right)}{p}.$$
+Hai nhân tử $\left(2^{k}-1\right)$ và $\left(2^{k}+1\right)$ trong phân tích trên là hai số lẻ liên tiếp, thế nên chúng có ước chung lớn nhất bằng $1.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $\dfrac{2^k+1}{p}$ và $2^k-1$ là số chính phương, với $k=0,k=1,$ ta thấy $p=3$ thỏa mãn đề bài. Với $k\ge 2,$ ta có 
+        $$2^k-1=4.2^{k-2}=1\equiv 3 \pmod{4}.$$
+        Do $2^k-1$ là số chính phương, đồng dư thức $2^k-1\equiv 3 \pmod{4}$ không xảy ra. \\
+        Trường hợp này không thỏa mãn.
+    \item Với $\dfrac{2^{k}-1}{p}$ và $2^{k}+ 1$ là các số chính phương, ta đặt $2^{k}+1=x^{2},$ khi đó 
+    $$2^k=(x-1)(x+1)\Rightarrow \heva{x - 1=2^a &\\ x+1=2^b}\Rightarrow 2=2^a\left(2^{b-a}-1\right)\Rightarrow \heva{a&=1 \\b&=2.}$$
+    Ta lần lượt tìm được $x=3,k=3,p=7$ từ đây.
+\end{enumerate}
+Tóm lại $p=3$ và $p=7$ là tất cả các số nguyên tố cần tìm.}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho $a,b,c$ là các số nguyên dương đôi một nguyên tố cùng nhau và thỏa mãn
+$$a^2+b^2+c^2=(a-b)^2+(b-c)^2+(c-a)^2.$$
+Chứng minh rằng $a,b,c$ và $ab+bc+ca$ đều là các số chính phương.
+\nguon{Titu Andresscu}
+\end{btt}
+
+\begin{btt}
+Cho $a$ và $b$ là các số nguyên sao cho tồn tại hai số nguyên liên tiếp $c$ và $d$ thỏa
+mãn điều kiện $a-b=a^2c-b^2d.$ Chứng minh rằng $|a-b|$ là một số chính phương.
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $m,n$ thỏa mãn $(m,n)=1$ và $m-n$ là một số lẻ. Chứng minh rằng $(m+3n)(5m+7n)$ không thể là số chính phương.
+\nguon{Thi thử vào chuyên Phổ thông Năng khiếu 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ để $\left(n^2+1\right)\left(5 n^2+9\right)$ là một số chính phương.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $m,n$ thỏa mãn $$m(m+1)(m+2)=n^2.$$
+\nguon{Chuyên Hà Tĩnh 2021}
+\end{btt}
+
+
+\begin{btt}
+Giả sử $n$ là số tự nhiên thỏa mãn điều kiện $n(n+1)+7$ không chia hết cho $7.$ Chứng minh rằng $4n^3-5n-1$ không là số chính phương.
+\end{btt} %thaibinh
+
+\begin{btt}
+Tìm tất cả các số nguyên $x,y$ thỏa mãn $$x^4+2x^2=y^3.$$
+\nguon{Chuyên Khoa học Tự nhiên 2016}
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên dương $n$ nhỏ nhất để $\dfrac{4n^2+7n+3}{3}$ là số chính phương.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $a\ne 1$ sao cho $\dfrac{a^6-1}{a-1}$ là số chính phương.
+\nguon{Olympic Chuyên Khoa học Tự nhiên 2018}
+\end{btt}
+
+\begin{btt}
+Giả sử tồn tại hai số nguyên dương $x,y$ với $x>1$ và thỏa mãn điều kiện $$2x^{2}-1=y^{15}.$$ Chứng minh rằng $x$ chia hết cho $15.$
+\nguon{Chuyên Toán Thanh Hóa 2020}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng không tồn tại các số nguyên dương $m,n$ nào thỏa mãn
+\[\tron{n+1}^3+\tron{n+2}^3+\cdots+(2n)^3=m^2.\]
+\end{btt}
+
+\begin{btt}
+Cho số tự nhiên $n$ và số nguyên tố $p$ sao cho $a=\dfrac{2n+2}{p}$ và $b=\dfrac{4n^2+2n+1}{p}$ là các số nguyên. Chứng minh rằng $a$ và $b$ không đồng thời là các số chính phương.
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2021}
+\end{btt}
+
+\begin{btt}
+Cho ba số tự nhiên $a, b, c$ thỏa mãn $a-b$ là số nguyên tố và $3 c^{2}=c(a+b)+a b .$  Chứng minh rằng $8 c+1$ là số chính phương. 
+\nguon{Chọn học sinh giỏi chuyên Khoa học Tự nhiên 2018}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $n$ thỏa mãn $A=2+2 \sqrt{28 n^{2}+1}$ là số nguyên dương. Chứng minh rằng $A$ là số chính phương.
+\nguon{Chuyên Bắc Ninh}
+\end{btt}
+
+\begin{btt}
+Tìm số tự nhiên $n$ sao cho $36^n-6$ là tích của ít nhất hai số tự nhiên liên tiếp.
+\nguon{Junior Balkan Mathematical Olympiad 2010}
+\end{btt}
+
+\begin{btt} \label{bdscp2}
+Cho hai số nguyên dương $x, y$ thỏa mãn $x^{2}-4y+1$ chia hết cho $(x-2 y)(2 y-1)$. Chứng minh rằng $|x-2 y|$ là số chính phương.
+\nguon{Korean Mathematical Olympiad 2014}
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên dương $m, n$ và số nguyên tố $p$ thỏa mãn
+$p=\dfrac{m+n}{2}+3 \sqrt{m n}.$ Chứng minh rằng $p+4 m$ và $p+4 n$ là các số chính phương.
+\nguon{Vietnam Mathematical Young Talent Search 2019}
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên dương $x,y$ phân biệt và số nguyên tố $p$ thỏa mãn $x+y\ne p.$ Chứng minh rằng $xy(p-x)(p-y)$ không thể là số chính phương.
+\nguon{Poland Mathematical Olympiad}
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $x,y$ thỏa mãn $x>y$ và $$(x-y, xy+1)=(x+y, xy-1)=1.$$
+Chứng minh rằng $(x+y)^{2}+(x y-1)^{2}$ không phải là số chính phương.
+\nguon{Iran Mathematical Olympiad 2010}
+\end{btt}
+
+\begin{btt}
+Cho tập hợp $\mathcal{X}$ gồm các số nguyên có dạng $a^2+2b^2$ với $a,b$ là các số nguyên và $b\ne 0.$ Chứng minh rằng nếu $p$ là số nguyên tố và nếu $p^2\in\mathcal{X}$ thì $p\in\mathcal{X}.$
+\nguon{Group "Hướng tới Olympic Toán Việt Nam"}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $a$ thỏa mãn với mọi số nguyên dương $n,$ ta có $5\left(a^n+4\right)$ là số chính phương.
+
+\end{btt}
+
+
+\begin{btt}
+Tìm các số nguyên tố $p$ sao cho $\dfrac{3^{p-1}-1}{p}$ là số chính phương.
+\nguon{Saudi Arabia Junior Balkan Mathematical Olympiad Team Selection Test}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $p$ sao cho $\dfrac{7^{p-1}-1}{p}$ là số chính phương.
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho $a,b,c$ là các số nguyên dương đôi một nguyên tố cùng nhau và thỏa mãn
+$$a^2+b^2+c^2=(a-b)^2+(b-c)^2+(c-a)^2.$$
+Chứng minh rằng $a,b,c$ và $ab+bc+ca$ đều là các số chính phương.
+\nguon{Titu Andresscu}
+\loigiai{Đẳng thức đã cho tương đương với
+$$a^2+b^2+c^2=2ab+2bc+2ca\Leftrightarrow \left(a+b-c\right)^2=4ab\Leftrightarrow \left(\dfrac{a+b-c}{2}\right)^2=ab.$$
+Ta đặt $d=(a,b).$ Phép đặt này cho ta
+$$\heva{&d\mid a  \\ &d\mid b  \\ &d\mid (a+b-c)}\Rightarrow \heva{&d\mid a  \\ &d\mid b  \\ &d\mid c}\Rightarrow  d=1.$$
+Ta thu được $a,b$ là các số chính phương. Đặt $a=x^2,b=y^2,$ ở đây $x,y$ nguyên dương. Ta có
+$$\left(\dfrac{x^2+y^2-c}{2}\right)^2=x^2y^2\Rightarrow x^2+y^2-c=2xy\Rightarrow c=\left(x-y\right)^2.$$
+Như vậy $c$ là số chính phương. Cuối cùng, ta nhận xét $$ab+bc+ca=x^2y^2+x^2(x-y)^2+y^2(x-y)^2=\left(x^2-xy+y^2\right)^2.$$ 
+Cả $a,b,c$ và $ab+bc+ca$ đều là số chính phương. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a$ và $b$ là các số nguyên sao cho tồn tại hai số nguyên liên tiếp $c$ và $d$ thỏa mãn điều kiện $a-b=a^2c-b^2d.$ Chứng minh rằng $|a-b|$ là một số chính phương.
+\loigiai{
+Từ giả thiết, ta có $d=c\pm 1.$ Ta nhận thấy rằng
+    \begin{align*}
+    a-b=a^{2} c-b^{2} d &\Rightarrow a-b=a^{2} c-b^{2}(c\pm 1) 
+    \\&\Rightarrow  a-b=c\left(a^{2}-b^{2}\right)\pm b^{2}
+    \\&\Rightarrow  a-b=c(a-b)(a+b)\pm b^{2} 
+    \\&\Rightarrow (a-b)(ca+cb+1)=\pm b^{2}
+    \\&\Rightarrow |a-b||ca+cb+1|=b^{2}.    
+    \end{align*}
+    Ta đặt $d=\left(|a-b|,|ca+cb+1|\right).$ Ta sẽ chứng minh $d=1.$ Thật vậy, ta có
+    $$\heva{&d\mid(a-b) \\ & d\mid\left(ca+cb+1\right) \\
+    &d\mid b}\Rightarrow \heva{&d\mid a \\&d\mid \left(ca+cb+1\right) \\ &d\mid b}\Rightarrow \heva{d\mid a \\d\mid 1 \\ d\mid b}\Rightarrow d=1.$$
+    Ta suy ra $|a-b|$ là số chính phương. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $m,n$ thỏa mãn $(m,n)=1$ và $m-n$ là một số lẻ. Chứng minh rằng $(m+3n)(5m+7n)$ không thể là số chính phương.
+\nguon{Thi thử vào chuyên Phổ thông Năng khiếu 2021}
+\loigiai{
+Giả sử rằng $(m+3n)(5m+7n)$ là số chính phương. Đặt $d=(m+3n,5m+7n).$ Do $d$ lẻ, ta có
+$$d=(m+3n,5m+7n-5(m+3n))=(m+3n,-8n)=(m+3n,n)=(m,n)=1.$$
+Lúc này, cả $m+3n$ và $5m+7n$ là số chính phương lẻ. Vì thế
+$$m+3n\equiv 5m+7n\equiv 1\pmod{8}\Rightarrow 4(m+n)\equiv 0\pmod{8}.$$
+Điều này trái giả thiết $m-n$ là số lẻ. Giả sử sai. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ để $\left(n^2+1\right)\left(5 n^2+9\right)$ là một số chính phương.
+\loigiai{
+Ta đặt $\left(n^{2}+1,5 n^{2}+9\right)=d.$ Phép đặt này cho ta
+$$\heva{&d\mid \left(n^2+1\right) \\ &d\mid \left(5n^2+9\right)}\Rightarrow d\mid \bigg(5\left(n^2+1\right)-\left(5n^2+9\right)\bigg)\Rightarrow d\mid 4\Rightarrow d\in\{1;2;4\}.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $d=1$ hoặc $d=4,$ ta có $n^{2}+1,5 n^{2}+9$ đều là số chính phương. Bằng cách đánh giá
+    $$n^{2}<n^{2}+1 \leq(n+1)^{2},$$ 
+    ta chỉ ra $n^{2}+1$ là số chính phương khi và chỉ khi $n^{2}+1=(n+1)^{2},$ hay $n=0$. \\Thay ngược lại, ta thấy $n=0$ thỏa mãn đề bài.
+    \item Với $d=2,$  ta có $n^2+1$ và $5n^2+9$ đều bằng $2$ lần một số chính phương. Ta đặt
+    $$n^2+1=2x^2,\quad 5n^2+9=2y^2,$$
+    ở đây $x,y$ là các số nguyên dương. \\
+    Từ $n^2+1=2x^2,$ ta được $n$ lẻ, và như vậy, $n^2\equiv 1 \pmod{8}.$ Đồng dư thức này cho phép ta đánh giá
+    $$2y^2=5n^2+9\equiv 5+9 \equiv 6 \pmod{8}\Rightarrow y^2\equiv 3 \pmod{4}.$$
+    Không có số chính phương này đồng dư $3$ theo modulo $4.$ Trường hơp này không xảy ra.
+\end{enumerate}
+Như vậy, $n=0$ là giá trị duy nhất của $n$ thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}Tìm tất cả các số nguyên $m,n$ thỏa mãn $$m(m+1)(m+2)=n^2.$$
+\nguon{Chuyên Hà Tĩnh 2021}
+\loigiai{
+Giả sử tồn tại các số nguyên $m,n$ thỏa mãn đề bài. Hai số $m+1$ và $m(m+2)$ không thể đồng thời bằng $0,$ chứng tỏ chúng tồn tại ước chung lớn nhất. Ta đặt $d=\left(n+1,n(n+2)\right).$ Phép đặt này cho ta
+$$\heva{&d\mid (m+1) \\ &d\mid m(m+2)}\Rightarrow \heva{&d\mid (m+1) \\ &d\mid \left[(m+1)^2-1\right]}\Rightarrow d\mid 1\Rightarrow d=1.$$
+Như vậy, $\left(m+1,m(m+2)\right)=1.$ Lại do $|m+1||m(m+2)|=n^2$ nên cả $|m+1|$ và $|m(m+2)|$ đều là số chính phương. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $m=-1,$ ta tìm được $n=0.$
+    \item Với $m\ne -1,$ do $m$ là số nguyên nên $m(m+2)\ge 0.$ Lúc này, $|m(m+2)|=m(m+2)$ là số chính phương.
+    Tiếp tục đặt $m(m+2)=x^2,$ với $x$ là số nguyên dương, ta được
+    \begin{align*}
+        m(m+2)=x^2
+        &\Rightarrow m^2+2m+1=x^2+1
+        \\&\Rightarrow (m+1)^2-x^2=1
+        \\&\Rightarrow (m+1-x)(m+1+x)=1.
+    \end{align*}
+    Đến đây, ta xét các trường hợp sau.
+    \begin{itemize}
+        \item Với $m+1-x=m+1+x=1,$ ta có $m=0$ và $x=0,$ kéo theo $n=0.$ 
+        \item Với $m+1-x=m+1+x=-1,$ ta có $m=-1$ và $x=0,$ kéo theo $n=0.$
+    \end{itemize}
+\end{enumerate}
+Kết quả, có ba cặp số nguyên $(m,n)$ thỏa mãn đề bài là $(-2,0),(-1,0)$ và $(0,0).$}
+\begin{luuy}
+Sai lầm của một vài bạn gặp phải khi giải bài toán ở trên là quên mất việc xét dấu của $m+1$ và $m(m+2),$ từ đó bỏ sót cặp $(0,0).$
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Giả sử $n$ là số tự nhiên thỏa mãn điều kiện $n(n+1)+7$ không chia hết cho $7.$ Chứng minh rằng $4n^3-5n-1$ không là số chính phương.
+\nguon{Chuyên Toán Thái Bình 2021}
+\loigiai{
+Từ giả thiết $n(n+1)+7$ không chia hết cho $7,$ ta suy ra $n+1$ không chia hết cho $7.$
+Ta còn có
+$$4n^3-5n-1=(n+1)\left(4n^2-4n-1\right).$$
+Giả sử $4n^3-5n-1$ là số chính phương. Đặt $d=\left(n+1,4n^2-4n-1\right),$ lúc này
+$$\heva{&d\mid (n+1) \\ &d\mid \left(4n^2-4n-1\right)}
+\Rightarrow \heva{&d\mid (n+1) \\ &d\mid \left[4n(n+1)-8(n+1)+7\right]}\Rightarrow d\mid 7.$$
+Do $n+1$ không là bội của $7$ nên $d=1,$ và $4n^2-4n-1$ chính phương. Đây là điều không thể xảy ra, vì
+$$4n^2-4n-1\equiv 3\pmod{4}.$$
+Giả sử phản chứng là sai, và ta có điều phải chứng minh.
+}
+\end{gbtt} %thaibinh
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $x,y$ thỏa mãn $$x^4+2x^2=y^3.$$
+\nguon{Chuyên Khoa học Tự nhiên 2016}
+\loigiai{Phương trình đã cho tương đương với
+\[x^4+2x^2+1=y^3+1\Leftrightarrow\left(x^2+1\right)^2=(y+1)\left(y^2-y+1\right).\tag{*}\]
+Ta nhận thấy $y+1$ và $y^2-y+1$ không đồng thời bằng $0,$ thế nên ta có thể đặt $$d=\left(y+1,y^2-y+1\right).$$ 
+Phép đặt bên trên cho ta
+\begin{align*}
+\heva{&d\mid (y+1) \\ &d\mid \left(y^2-y+1\right)}
+&\Rightarrow \heva{&y\equiv -1 &\pmod{d} \\ &y^2-y+1\equiv 0 &\pmod{d}}
+\\&\Rightarrow (-1)^2+1+1\equiv 0\pmod{d}
+\\&\Rightarrow d\mid 3.    
+\end{align*}
+Ta có $d=1$ hoặc $d=3.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Với $d=1,$ ta chỉ ra $y^2-y+1$ là số chính phương. Ta đặt $y^2-y+1=z^2.$ Phép đặt này cho ta
+    \begin{align*}
+        4y^2-4y+4=(2z)^2
+        &\Rightarrow (2y-1)^2+3=(2z)^2
+        \\&\Rightarrow (2z-2y+1)(2z+2y-1)=3.
+    \end{align*}
+    Giải phương trình ước số trên, ta tìm được $y=0$ và $y=1.$ \\
+    Thử trực tiếp, ta thu được duy nhất một nghiệm $(0,0)$ trong trường hợp này.
+    \item Với $d=3,$ ta có $3\mid (y+1)$ và $3\mid \left(y^2-y+1\right).$ Suy luận này kết hợp với (*) giúp ta chỉ ra
+    $$9\mid \left(x^2+1\right)^2 \Rightarrow 3\mid \left(x^2+1\right).$$
+    Không có số chính phương nào chia cho $3$ dư $0$ hoặc $1.$ Trường hợp này không xảy ra.
+\end{enumerate}
+Như vậy, $(x,y)=(0,0)$ là cặp số duy nhất thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên dương $n$ nhỏ nhất để $\dfrac{4n^2+7n+3}{3}$ là số chính phương.
+\loigiai{
+Từ giả thiết, ta có thể đặt $3m^2=4n^2+7n+3=(n+1)(4n+3),$ với $m$ nguyên dương. \\
+Rõ ràng hoặc $n+1,$ hoặc $4n+3$ là bội của $3$. Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $n+1$ chia hết cho $3,$ ta viết lại phép đặt thành
+    $$\left(\dfrac{n+1}{3}\right)(4n+3)=m^2.$$
+    Đặt $d=\left(\dfrac{n+1}{3},4n+3\right).$ Phép đặt này cho ta
+    $$\heva{&d\mid \dfrac{n+1}{3} \\ &d\mid (4n+3)}\Rightarrow \heva{&d\mid (n+1) \\&d\mid (4n+3)}\Rightarrow \heva{&d\mid (4n+4)\\&d\mid (4n+3)}\Rightarrow d\mid 1\Rightarrow d=1. $$
+    Theo như bổ đề, $\dfrac{n+1}{3}$ và $4n+3$ đều là số chính phương. Ta đặt $\dfrac{n+1}{3}=u^2,4n+3=v^2,$ với $u,v$ là các số nguyên dương. Phép đặt này cho ta
+    $$v^2=4n+3\equiv 3\pmod{4}.$$
+    Không có số chính phương nào đồng dư $3$ theo modulo $4.$ Trường hợp này không xảy ra.
+    \item Nếu $4n+3$ chia hết cho $3,$ bằng lập luận tương tự như trường hợp trước, ta có thể đặt 
+    \begin{align*}
+        n+1&=x^2,\tag{1}\\
+        4n+3&=3y^2.\tag{2}
+    \end{align*}
+    Lấy $4\cdot (1)-(2)$ theo vế, ta được
+    $$4x^2-3y^2=1\Leftrightarrow 3y^2=(2x-1)(2x+1).$$
+    Do $2x-1$ và $2x+1$ là hai số nguyên dương lẻ liên tiếp nên chúng nguyên tố cùng nhau. Từ đó, ta tiếp tục chia trường hợp này thành các trường hợp nhỏ hơn như sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $3\mid (2x-1),$ ta viết lại
+        $$y^2=\left(\dfrac{2x-1}{3}\right)(2x+1).$$
+        Do $\left(\dfrac{2x-1}{3},2x+1\right)=1$ nên theo bổ đề, cả $\dfrac{2x-1}{3}$ và $2x+1$ đều là số chính phương. \\
+        Ta đặt $2x-1=3a^2,2x+1=b^2.$ Phép đặt này cho ta
+        $$b^2=3a^2+2\Rightarrow b^2\equiv 2 \pmod{3}.$$
+        Không có số chính phương nào đồng dư $2$ theo modulo $3.$ Khả năng này không xảy ra.
+        \item \chu{Trường hợp 2.} Nếu $2x+1$ chia hết cho $3,$ bằng cách làm tương tự trường hợp trên, ta đặt
+        $$2x-1=c^2,2x+1=3b^2,$$ ở đây $b$ và $c>1$ là các số nguyên dương. Phép đặt này cho ta
+        \[ c^2+2=3b^2.\tag{3}\]
+        Do $n$ nhỏ nhất, ta có thể thử với từng giá trị nhỏ nhất của $b$ và $c.$ Cụ thể, khi lần lượt thử trực tiếp với $b=1,2,\ldots$ ta tìm ra nghiệm nhỏ nhất của $(3)$ là $(b,c)=(3,5).$ Ta có $n=168$ từ đây.
+    \end{itemize}
+\end{enumerate}
+Như vậy, $n=168$ là số cần tìm.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $a\ne 1$ sao cho $\dfrac{a^6-1}{a-1}$ là số chính phương.
+\nguon{Olympic Chuyên Khoa học Tự nhiên 2018}
+\loigiai{
+Giả sử tồn tại số nguyên thỏa mãn yêu cầu. Theo đó, $\dfrac{a^6-1}{a-1}=\tron{a^2+a+1}\tron{a^3+1}$ là số chính phương.
+Đặt $\tron{a^2-a+1,a^3+1}=d$, phép đặt này cho ta
+$$\heva{&d\mid \tron{a^2-a+1}\\ &d\mid \tron{a^3+1}}\Rightarrow \heva{d\mid \tron{a^3-1}\\ d\mid \tron{a^3+1}}\Rightarrow\heva{&d\mid 2a^3\\&d\mid 2\tron{a^3+1}}\Rightarrow d\mid 2.$$
+Ta nhận được $d$ là ước của $2.$ Tuy nhiên, do $$a^2-a+1=a(a-1)+1$$
+là số lẻ nên $d=1.$ Theo đó, cả $a^2-a+1$ và $a^3+1$ đều là số chính phương. \\
+Ta đặt $a^2+a+1=y^2,$ với $y$ là số tự nhiên. Ta nhận được
+$$a^2+a+1=y^2\Rightarrow 4a^2+4a+4=4y^2\Rightarrow\tron{2y-2a-1}\tron{2y+2a+1}=3.$$
+Tới đây, ta lập bảng giá trị
+\begin{center}
+    \begin{tabular}{c|c|c|c|c}
+      $2y-2a-1$   & $-1$ & $1$ & $-3$ & $3$\\
+      \hline
+      $2y+2a+1$   & $-3$ & $3$ & $-1$ & $1$\\
+      \hline
+      $a$         & $-1$ & $0$ & $0$ & $-1$\\
+      \hline
+      $a^3+1$     & $0$  & $1$ & $1$ & $0$
+    \end{tabular}
+\end{center}
+Kết quả, các số nguyên $a$ thỏa mãn yêu cầu bài toán là $a=0$ và $a=-1.$}
+\end{gbtt}
+
+\begin{gbtt}
+Giả sử tồn tại hai số nguyên dương $x,y$ với $x>1$ và thỏa mãn điều kiện $$2x^2-1=y^{15}.$$ Chứng minh rằng $x$ chia hết cho $15.$
+\nguon{Chuyên Toán Thanh Hóa 2020}
+\loigiai{
+Muốn chứng minh $x$ chia hết cho $15,$ ta chia bài toán thành các bước làm như sau.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Chứng minh $x$ chia hết cho $3.$ \\
+    Ta chứng minh được $y$ lẻ. Đẳng thức đã cho tương đương với
+    $$x^{2}=\left(\dfrac{y^5+1}{2}\right)\left(y^{10}-y^{5}+1\right).$$
+    Ta đặt $d=\left(\dfrac{y^5+1}{2}, y^{10}-y^{5}+1\right)$. Do $y^5\equiv -1\pmod{d},$ ta chỉ ra
+    $$y^{10}-y^{5}+1 \equiv 1+1+1\equiv 3\pmod{d}.$$
+    Vì $y^{10}-y^5+1\equiv 0\pmod{d}$ nên ta có $0\equiv 3\pmod{d},$ thế thì $d=1$ hoặc $d=3.$
+    \begin{itemize}
+        \item Với $d=1$, ta suy ra $y^{10}-y^5+1$ là số chính phương. Nhờ vào đánh giá
+        $$\left(y^{4}-1\right)^2<y^{10}-y^5+1\le y^{10},$$
+        ta chỉ ra được rằng $y^{10}-y^5+1= y^{10},$ hay $y=1.$ Lúc này, ta có $x=1,$ mâu thuẫn.
+        \item Với $d=3,$ cả $\dfrac{y^5+1}{2}$ và $y^{10}-y^5+1$ chia hết cho $3$ nên $2x^2$ chia hết cho $3,$ và $x$ cũng vậy.
+    \end{itemize}        
+    \item Chứng minh $x$ chia hết cho $5.$ \\
+    Ta chứng minh được $y$ lẻ. Đẳng thức đã cho tương đương với
+    $$x^{2}=\left(\dfrac{y^3+1}{2}\right)\left(y^{12}-y^{9}+y^6-y^3+1\right).$$
+    Ta đặt $d'=\left(\dfrac{y^3+1}{2}, y^{12}-y^{9}+y^6-y^3+1\right)$. Do $y^3\equiv -1\pmod{d'},$ ta chỉ ra
+    $$y^{12}-y^{9}+y^6-y^3+1 \equiv 1+1+1+1+1\equiv 5\pmod{d'}.$$
+    Vì $y^{12}-y^{9}+y^6-y^3+1\equiv 0\pmod{d'}$ nên ta có $0\equiv 5\pmod{d'},$ thế thì $d'=1$ hoặc $d'=5.$
+    \begin{itemize}
+        \item Với $d'=1$, ta suy ra $y^{12}-y^{9}+y^6-y^3+1$ là số chính phương. Nhờ vào đánh giá
+        $$\left(y^{6}-1\right)^2<y^{12}-y^{9}+y^6-y^3+1\le y^{12},$$
+        ta chỉ ra được rằng $y^{12}-y^{9}+y^6-y^3+1= y^{12},$ hay $y=1.$ Lúc này, ta có $x=1,$ mâu thuẫn với giả thiết ban đầu là $x>1.$
+        \item Với $d=5,$ cả hai số $y^3+1$ và $y^{12}-y^{9}+y^6-y^3+1$ chia hết cho $5$ nên $2x^2$ chia hết cho $5,$ và $x$ cũng chia hết cho $5.$
+    \end{itemize}
+\end{enumerate}
+Cuối cùng, ta suy ra $x$ chia hết cho $[3,5]=15.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng không tồn tại các số nguyên dương $m,n$ nào thỏa mãn
+\[\tron{n+1}^3+\tron{n+2}^3+\cdots+(2n)^3=m^2.\]
+\loigiai{
+Ta đã biết $1^3+2^3+\ldots+n^3=\tron{\dfrac{n(n+1)}{2}}^2.$ Như vậy
+\begin{align*}
+    \tron{n+1}^3+\tron{n+2}^3+\ldots+(2n)^3
+    &=\tron{n(2n+1)}^2-\tron{\dfrac{n(n+1)}{2}}^2
+    \\&=\tron{n(2n+1)-\dfrac{n(n+1)}{2}}\tron{n(2n+1)+\dfrac{n(n+1)}{2}}
+    \\&=\dfrac{n^2(3n+1)(5n+3)}{4}.
+\end{align*}
+Ta giả sử tồn tại các số nguyên dương $m,n$ thỏa mãn đẳng thức đã cho. Khi đó
+$$n^2(3n+1)(5n+3)=4m^2.$$
+Ta có $m$ chia hết cho $n.$ Đặt $m=nk,$ thế thì
+$$(3n+1)(5n+3)=4k^2.$$
+Bây giờ, ta đặt $d=(3n+1,5n+3).$ Ta sẽ có
+\begin{align*}
+    \heva{d\mid (3n+1) \\ d\mid (5n+3)}
+    \Rightarrow \heva{d\mid (15n+5) \\ d\mid (15n+9)}
+    \Rightarrow d\mid (15n+9)-(15n+5)=4
+    \Rightarrow d\in\{1;2;4\}.
+\end{align*}
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $d=1$ hoặc $d=4,$ ta có $5n+3$ là số chính phương chia $5$ dư $3,$ vô lí.
+    \item Với $d=2,$ ta có $3n+1$ bằng hai lần một số chính phương. Đặt $3n+1=2x^2,$ thế thì
+    $$2x^2\equiv 1\pmod{3}\Rightarrow 4x^2\equiv 2\pmod{3}\Rightarrow x^2\equiv 2\pmod{3}.$$
+    Không có số chính phương nào chia $3$ dư $2.$ Trường hợp này không xảy ra.
+\end{enumerate}
+Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số tự nhiên $n$ và số nguyên tố $p$ sao cho $a=\dfrac{2n+2}{p}$ và $b=\dfrac{4n^2+2n+1}{p}$ là các số nguyên. Chứng minh rằng $a$ và $b$ không đồng thời là các số chính phương.
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2021}
+\loigiai{
+Ta nhận thấy $p$ là số lẻ, vậy nên
+    $$\heva{&p\mid (2n+2)\\ &p\mid\left(4n^2+2n+1\right)}
+    \Rightarrow \heva{&p\mid (n+1)\\ &p\mid\left(4n^2+2n+1\right)}
+    \Rightarrow \heva{&p\mid (n+1)\\ &p\mid\left[(4n-2)(n+1)+3\right]}\Rightarrow p=3.$$
+    Ta giả sử $a,b$ là số chính phương, khi đó $ab$ cũng là số chính phương. Đặt $ab=m^2,$ ta được
+    \begin{align*}
+    m^2=\dfrac{2n+2}{3}\cdot \dfrac{4n^2+2n+1}{3}
+    &\Leftrightarrow 9m^2=(2n+2)\left(4n^2+2n+1\right)
+    \\&\Leftrightarrow 9m^2=(2n+1)^3+1
+    \\&\Leftrightarrow (3m-1)(3m+1)=(2n+1)^3. 
+    \end{align*}
+    Nhận xét $m$ chẵn chỉ ra cho ta $(3m+1,3m-1)=1.$ Theo đó, tồn tại các số nguyên dương $x,y$ sao cho
+    $$3m+1=x^3,\quad 3m-1=y^3.$$
+    Trừ theo vế hai đẳng thức trên, ta nhận thấy rằng
+    $$(x-y)(x^2+xy+y^2)=2\Rightarrow \left[\begin{array}{ll}
+         \heva{&x-y=1 \\ &x^2+xy+y^2=2 }  \\
+         \heva{&x-y=2 \\ &x^2+xy+y^2=1 } 
+    \end{array}\right.\Rightarrow \heva{&x=1 \\ &y=-1.}$$
+    Các số $x,y$ không thể âm, thế nên $y=-1$ là vô lí. Giả sử phản chứng là sai. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho ba số tự nhiên $a, b, c$ thỏa mãn $a-b$ là số nguyên tố và $3 c^{2}=c(a+b)+a b .$  Chứng minh rằng $8 c+1$ là số chính phương. 
+\nguon{Chọn học sinh giỏi chuyên Khoa học Tự nhiên 2018}
+\loigiai{
+Với các số $a,b,c$ đã cho, ta có
+\[4c^{2}=c^{2}+a b+b c+c a=(c+a)(b+c)\tag{*}\]
+Ta đặt $(a+c, b+c)=d$, khi đó $d$ là ước của $(a+c)-(b+c)=a-b.$
+Do $a-b$ là số nguyên tố nên ta suy $d=1$ hoặc $d=a-b$. Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $d=a-b,$ cả $a+c$ và $b+c$ bằng $a-b$ lần một số chính phương. Ta đặt $$c+a=(a-b)x^2,c+b=(a-b)y^2,$$ trong đó $x$ và $y$ là các số tự nhiên. Lấy hiệu theo vế, ta được
+    $$a-b=(a-b)\left(x^2-y^2\right)\Rightarrow (x-y)(x+y)=1\Rightarrow \heva{x&=1 \\ y&=0.}$$
+    Ta thu được $c+b=0,$ tức $c=b=0.$ Lúc này, $8c+1=1$ là số chính phương. 
+    \item Nếu $d=1,$ cả $c+a$ và $b+c$ là số chính phương. Ta đặt $c+a=m^2,c+b=n^2,$ trong đó $m$ và $n$ là các số tự nhiên. Lấy hiệu theo vế, ta được
+    $$a-b=m^2-m^2= (m-n)(m+n)\Rightarrow m-n=1\Rightarrow m=n+1.$$
+    Kết hợp $m=n+1$ với (*), ta có
+    $$4 c^{2}=(c+a)(b+c)=m^{2} n^{2}=n^{2}(n+1)^{2}.$$
+    Ta suy ra $2c=n(n+1),$ và như vậy, $8c+1=4 n(n+1)+1=(2n+1)^2$ là số chính phương.
+\end{enumerate}
+Trong cả hai trường hợp, $8c+1$ đều là số chính phương. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên dương $n$ thỏa mãn $A=2+2 \sqrt{28 n^{2}+1}$ là số nguyên dương. Chứng minh rằng $A$ là số chính phương.
+\nguon{Chuyên Bắc Ninh}
+\loigiai{Ta chứng minh được $\sqrt{28n^2+1}$ là số nguyên dương. Ngoài ra, do $28n^2+1$ lẻ nên $\sqrt{28n^2+1}$ cũng là một số lẻ. Ta đặt $28n^2+1=(2m+1)^2,$ ở đây $m$ là số nguyên dương. Phép đặt trên cho ta
+\[28n^2+1=4m^2+4m+1\Rightarrow 28n^2=4m^2+4m\Rightarrow 7n^2=m(m+1).\tag{*}\]
+Do $7$ là số nguyên tố nên $7\mid m$ hoặc $7\mid (m+1).$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $m+1$ chia hết cho $7,$ ta viết lại (*) thành
+    $$n^2=\left(\dfrac{m+1}{7}\right)m.$$
+    Do $\left(m,\dfrac{m+1}{7}\right)=1,$ ta suy ra $m$ là số chính phương. Đây là điều vô lí vì $m\equiv 6\pmod{7}.$
+    \item Nếu $m$ chia hết cho $7,$ ta viết lại (*) thành
+    $$n^2=\dfrac{m}{7}(m+1),$$
+    Do $\left(m+1,\dfrac{m}{7}\right)=1,$ ta suy ra $m+1$ là số chính phương. Đặt $m+1=x^2,$ với $x$ là số nguyên dương. Do $28n^2+1=(2m+1)^2$ nên phép đặt này cho ta
+    $$\sqrt{28n^2+1}=2m+1=2x^2-1.$$
+    Bằng cách này, ta có $A=2+2\sqrt{28n^2+1}=4x^2$ là số chính phương. 
+\end{enumerate}
+Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số tự nhiên $n$ sao cho $36^n-6$ là tích của ít nhất hai số tự nhiên liên tiếp.
+\nguon{Junior Balkan Mathematical Olympiad 2010}
+\loigiai{
+Do $36^n-6$ chia cho $4$ dư $2,$ số này không thể là tích của nhiều hơn $4$ số tự nhiên liên tiếp. Dựa vào đây, ta chia bài toán làm các trường hợp như sau.
+\begin{enumerate}
+    \item Nếu $36^n-6$ là tích hai số tự nhiên liên tiếp, ta đặt $36^n-6=m(m+1),$ trong đó $m$ là số nguyên dương. Phép đặt này cho ta
+    \begin{align*}
+        36^n=m^2+m+6&\Leftrightarrow 4\cdot 36^n=(2m+1)^2+23\\&\Leftrightarrow \left(2\cdot6^n-2m-1\right)\left(2\cdot6^n+2m+1\right)=23.
+    \end{align*}
+    Do $0<6^n-2m-1<6^n+2m+1,$ ta nhận được $$2\cdot6^n-2m-1=1,\qquad 2\cdot6^n+2m+1=23.$$
+    Lấy tổng theo vế, ta có $4\cdot 6^n=24,$ và do đó $n=1.$
+    \item Nếu $36^n-6$ là tích ba số tự nhiên liên tiếp, ta đặt $36^n-6=x(x+1)(x+2),$ trong đó $x$ là số nguyên dương. Phép đặt này cho ta
+        $$36^n=x(x+1)(x+2)+6\Leftrightarrow  (6^n)^2=(x+3)\left(x^2+2\right).$$
+    Ta tiếp tục đặt $d=\left(x+3,x^2+2\right).$ Lúc này
+    $$
+    \heva{
+    &d\mid (x+3)\\
+    &d\mid \left(x^2+2\right)\\
+    &d\mid 36^n
+    }
+    \Rightarrow
+    \heva{
+    &d\mid (x+3)\\
+    &d\mid (x-3)(x+3)+11\\
+    &d\mid 36^n
+    }
+    \Rightarrow
+    \heva{
+    &d\mid 11\\
+    &d\mid 36^n
+    }    
+    \Rightarrow d=1.
+    $$
+    Ta có $x^2+2$ là số chính phương. Đây là điều không thể xảy ra, do $x^2+2\equiv 2,3\pmod{4}.$
+\end{enumerate}
+Tổng kết lại, $n=1$ là số nguyên dương duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt} \label{bdscp2}
+Cho hai số nguyên dương $x, y$ thỏa mãn $x^{2}-4y+1$ chia hết cho $(x-2 y)(2 y-1)$. Chứng minh rằng $|x-2 y|$ là số chính phương.
+\nguon{Korean Mathematical Olympiad 2014}
+\loigiai{Từ giả thiết, ta chỉ ra tồn tại số nguyên $z$ sao cho
+$$x^2-4y^2+4y^2-4y+1=z(x-2y)(2y-1),$$
+$$(2y-1)^2=(x-2y)\left[z(2y-1)-(x+2y)\right].$$
+Đặt $d=(x-2y,z(2y-1)-(x+2y)).$ Ta lần lượt suy ra được
+$$\heva{&d\mid (x-2y) \\ &d\mid \left[z(2y-1)-(x+2y)\right] \\&d\mid (2y-1)} 
+\Rightarrow \heva{&d\mid (x-2y) \\ &d\mid (x+2y) \\ &d\mid (2y-1)}
+\Rightarrow \heva{&d\mid 4y \\ &d\mid (2y-1)}
+\Rightarrow d=1.$$
+Theo đó, $|x-2y|$ là số chính phương. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên dương $m, n$ và số nguyên tố $p$ thỏa mãn
+$p=\dfrac{m+n}{2}+3 \sqrt{m n}.$ Chứng minh rằng $p+4 m$ và $p+4 n$ là các số chính phương.
+\nguon{Vietnam Mathematical Young Talent Search 2019}
+\loigiai{Với các số nguyên dương $p,m,n$ đã cho, ta có
+$\left(\dfrac{2p-m-n}{6}\right)^2=mn.$
+Ta đặt $d=(m,n),$ thế thì
+$$\heva{&d\mid m  \\ &d\mid n  \\ &d\mid (2p-m-n)} 
+\Rightarrow d\mid 2p\Rightarrow d\in\{1;2;p;2p\}.$$
+Đến đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $d=1,$ cả $m$ và $n$ là số chính phương. Đặt $m=x^2$ và $n=y^2,$ với $x,y$ nguyên dương, và như vậy
+    $$p=\dfrac{x^2+6xy+y^2}{2}.$$
+    Do $d=1$ nên $x,y$ khác tính chẵn lẻ. Chứng minh được $x,y$ cùng lẻ giúp ta chỉ ra $x^2+y^2$ và $6xy$ đều chia $4$ dư $2,$ vậy nên $p$ chia hết cho $2,$ hay là $p=2.$ Điều này không thể xảy ra.
+    \item Với $d$ là bội của $p,$ do  $p\mid m$ và $p\mid n$ nên ta có $m\ge p$ và $n\ge p,$ và vì vậy
+    $$p=\dfrac{m+n}{2}+3\sqrt{mn}\ge \dfrac{p+p}{2}+3\sqrt{p^2}=4p.$$
+    Mâu thuẫn xuất hiện trong đánh giá vừa rồi. Trường hợp này không xảy ra.
+    \item Với $d=2,$ ta có thể đặt $m=2x^2$ và $n=2y^2,$ với $x,y$ nguyên dương. Theo đó
+    $$p=\dfrac{m+n}{2}+3\sqrt{mn}=\dfrac{2x^2+2y^2}{2}+6xy= x^2+6xy+y^2.$$
+    Cộng các vế thêm $4m,$ ta sẽ có
+    $$p+4m=x^2+6xy+y^2+8x^2=\left(3x+y\right)^2$$
+    là số chính phương. Chứng minh tương tự, $p+4n$ cũng là số chính phương.
+\end{enumerate}
+ Bài toán kết thúc.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên dương $x,y$ phân biệt và số nguyên tố $p$ thỏa mãn $x+y\ne p.$ Chứng minh rằng $xy(p-x)(p-y)$ không thể là số chính phương.
+\nguon{Poland Mathematical Olympiad}
+\loigiai{
+Ta giả sử $xy(p-x)(p-y)$ là bình phương một số tự nhiên. Ta đặt $(x(p-y),y(p-x))=d.$ Khi đó, do tích hai số nguyên tố cùng nhau
+$$\left(\dfrac{x(p-y)}{d}\right)\left(\dfrac{y(p-x)}{d}\right)$$ là bình phương một số tự nhiên nên cả $\dfrac{x(p-y)}{d}$ và $\dfrac{y(p-x)}{d}$ đều là các số chính phương. Ta đặt
+$$x(p-y)=dz^2,\qquad y(p-x)=dt^2,$$
+trong đó, $z$ và $t$ là các số nguyên dương. Lấy hiệu theo vế, ta được
+\begin{align*}
+    d\tron{z^2-t^2}=x(p-y)-y(p-x)&\Rightarrow d(z-t)(z+t)=xp-xy-yp+xy\\&\Rightarrow d(z-t)(z+t)=p(x-y).
+\end{align*}
+Do $z\ne t$ nên $p$ là ước của $d(z-t)(z+t).$ Ta xét các trường hợp sau.  
+\begin{enumerate}
+    \item Nếu $d$ chia hết cho $p,$ ta có $p\mid x(p-y)$ và $p\mid y(p-x).$ Điều này là vô lí do bốn số $x,p-y,y,p-x$ đôi một phân biệt. 
+    \item Nếu $z-t$ chia hết cho $p,$ áp dụng bất đẳng thức $AM-GM,$ ta có
+    $$0<z-t<z=\sqrt{\dfrac{x(p-y)}{d}}\le \sqrt{x(p-y)}\le \dfrac{x+p-y}{2}<p.$$
+    Do $p\mid(z-t),$ nhận xét trên dẫn đến mâu thuẫn.
+    \item Nếu $z+t$ chia hết cho $p,$ áp dụng bất đẳng thức $AM-GM,$ ta có
+    \begin{align*}
+        0<z+t=\sqrt{\dfrac{x(p-y)}{d}}+\sqrt{\dfrac{y(p-x)}{d}}
+        &\le \sqrt{x(p-y)}+\sqrt{y(p-x)}
+        \\&\le \dfrac{x+p-y}{2}+\dfrac{y+p-x}{2}\\&=p.
+    \end{align*}
+    Do $p\mid (z+t),$ dấu bằng phải xảy ra, tức là $d=1,x+y=p.$ Điều này mâu thuẫn với giả thiết.
+\end{enumerate}
+Tóm lại, giả sử ban đầu là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $x,y$ thỏa mãn $x>y$ và $$(x-y, xy+1)=(x+y, xy-1)=1.$$
+Chứng minh rằng $(x+y)^{2}+(x y-1)^{2}$ không phải là số chính phương.
+\nguon{Iran Mathematical Olympiad 2010}
+\loigiai{Giả sử tồn tại các số nguyên dương $x,y$ thỏa mãn đề bài. \\
+Dựa theo định thức $Brahmagupta-Fibonacci,$ ta có phân tích 
+\begin{align*}
+    \left(x^2+1\right)\left(y^2+1\right)
+    =(x-y)^2+(xy+1)^2
+    =(x+y)^2+(xy-1)^2.
+    \tag{*}
+\end{align*}
+Nếu $x^2+1$ và $y^2+1$ không nguyên tố cùng nhau, ta giả sử chúng có một ước nguyên tố chung là $p.$
+Giả sử này cho ta $p^2\mid\left(x^2+1\right)\left(y^2+1\right),$ và đồng thời
+$$\heva{&p\mid \left(x^2+1\right) \\&p\mid \left(y^2+1\right) }\Rightarrow p\mid (x-y)(x+y) \Rightarrow 
+\hoac{
+     p&\mid (x-y)  \\
+     p&\mid (x+y).}$$
+Đến đây, ta xét hai trường hợp.
+\begin{enumerate}
+    \item Với $p\mid (x-y),$ ta có $p^2\mid (x-y)^2.$ Kết hợp với (*), ta thu được $p^2\mid (xy+1)^2,$ tức là $p\mid (xy+1).$ Lúc này $p$ là một ước chung của $x-y$ và $xy+1,$ trái giả thiết hai số này nguyên tố cùng nhau.
+    \item Với $p\mid (x+y),$ ta lập luận tương tự trường hợp trên để đi đến kết quả mâu thuẫn với giả thiết.    
+\end{enumerate}
+Như vậy, $x^2+1$ và $y^2+1$ phải nguyên tố cùng nhau. Theo đó, cả $x^2+1$ và $y^2+1$ đều là số chính phương. Tuy nhiên, thông qua các đánh giá
+\begin{align*}
+    x^{2}<x^{2}+1<(x+1)^2,
+    \qquad y^2<y^2+1<(y+1)^2,
+\end{align*}
+hai số trên không thể là chính phương, mâu thuẫn với lập luận trước đó. \\
+Giả sử phản chứng ban đầu là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho tập hợp $\mathcal{X}$ gồm các số nguyên có dạng $a^2+2b^2$ với $a,b$ là các số nguyên và $b\ne 0.$ Chứng minh rằng nếu $p$ là số nguyên tố và nếu $p^2\in\mathcal{X}$ thì $p\in\mathcal{X}.$
+\nguon{Group "Hướng tới Olympic Toán Việt Nam"}
+\loigiai{
+Vì $p^2\in\mathcal{X}$ nên tồn tại hai số nguyên $a,b$ thỏa mãn $b\ne 0$ và $p^2=a^2+2b^2.$ Bằng cách thử trực tiếp, ta thấy ngay $p\ne 2$, do đó $p$ là số lẻ, suy ra $a$ cũng là số lẻ. Ta có
+$$p^2=a^2+2b^2\Rightarrow 1\equiv 1+2b^2\pmod{8}\Rightarrow 2b^2\equiv 0\pmod{8}.$$
+Ta được $b$ là số chẵn. Quay trở lại bài toán, với $p$ là số nguyên tố thỏa mãn $p^2\in\mathcal{X},$ ta có
+$$(p-a)(p+a)=2b^2\Leftrightarrow \tron{\dfrac{p-a}{2}}\tron{\dfrac{p+a}{2}}=\dfrac{b^2}{2}.$$
+Đặt $d=\tron{\dfrac{p-a}{2},\dfrac{p+a}{2}}.$ Phép đặt này cho ta
+\[\heva{&d\mid \dfrac{1}{2}\tron{p-a}\\&d\mid \dfrac{1}{2}\tron{p+a}}\Rightarrow\heva{&d\mid p\\&d\mid a}\Rightarrow d\mid (p,a).\]
+Với việc chứng minh được $p>a,$ bắt buộc $(p,a)=1,$ và $d=1.$ Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p-a$ chia hết cho $4,$ ta xét phân tích
+    $$\tron{\dfrac{p-a}{4}}\tron{\dfrac{p+a}{2}}=\tron{\dfrac{b}{2}}^2.$$
+    Do $\tron{\dfrac{p-a}{4},\dfrac{p+a}{2}}=1$ nên cả hai số $\dfrac{p-a}{4},\dfrac{p+a}{2}$ đều là số chính phương. Ta đặt
+    $$p-a=4m^2,\qquad p+a=2n^2.$$
+    Lấy tổng theo vế, phép đặt này cho ta
+    $$2p=4m^2+2n^2\Rightarrow p=2m^2+n^2\Rightarrow p\in\mathcal{X}.$$
+    \item Nếu $p+a$ chia hết cho $4,$ bài toán được tiến hành tương tự.
+\end{enumerate}
+Như vậy, bài toán đã cho được chứng minh trong mọi trường hợp.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $a$ thỏa mãn với mọi số nguyên dương $n,$ ta có $5\left(a^n+4\right)$ là số chính phương.
+
+\loigiai{
+\begin{enumerate}
+    \item Cho $n=1,$ ta chỉ ra $5(a+4)$ là số chính phương. Số này chia hết cho $25,$ kéo theo $$a\equiv 1\pmod{5}.$$
+    Ngoài ra, do $5(a+4)$ là số chính phương nên $a\ge -4.$ Thử trực tiếp với $a=-3,-2,-1,0$ ta thấy không thỏa.
+    \item Cho $n=4,$ ta chỉ ra $5\left(a^4+4\right)$ là số chính phương, thế nên $a\ne -4,$ đồng thời
+    $$\dfrac{a^4+4}{5}=\dfrac{\left(a^2-2a+2\right)\left(a^2+2a+2\right)}{5}$$
+    cũng là số chính phương. Ngoài ra, do nhận xét được rằng $a^2+2a+2$ chia hết cho $5$ từ $$a\equiv 1\pmod{5},$$ ta nghĩ đến việc đặt
+    $$d=\left(a^2-2a+2,\dfrac{a^2+2a+2}{5}\right).$$
+    Phép đặt này cho ta
+    $$
+    \heva{
+    &d\mid \left(a^2-2a+2\right) \\
+    &d\mid \left(a^2+2a+2\right)
+    }
+    \Rightarrow
+    \heva{    
+    &d\mid 4a \\
+    &d\mid 2\left(a^2+2\right)
+    }    
+    \Rightarrow
+    \heva{    
+    &d\mid 4a \\
+    &d\mid \left(4a^2+8\right)
+    }      
+    \Rightarrow d\mid8.
+    $$
+    Ta nhận thấy $d$ là lũy thừa của $2$ (với số mũ không vượt quá $3$). Tuy nhiên, do $$a^2-2a+2=(a-1)^2+1\equiv 1,2\pmod{4}$$
+    nên $d=1$ hoặc $d=2,$ và điều này phụ thuộc vào tính chẵn lẻ của $a.$ Kết quả là
+    \begin{itemize}
+        \item Nếu $a$ lẻ, ta có $d=1,$ và $a^2-2a+2$ là số chính phương. Ta đặt
+        $$a^2-2a+2=m^2,$$
+        với $m$ là số nguyên dương. Phép đặt này cho ta
+        $$(a-1)^2+1=m^2\Rightarrow (a-m-1)(a+m-1)=-1\Rightarrow a=m=1.$$
+        \item Nếu $a$ chẵn, ta có $d=2,$ và $\dfrac{a^2+2a+2}{10}$ là số chính phương.
+    \end{itemize}
+    \item Cho $n=8$ và chỉ xét trường hợp $a$ là số chẵn, ta chỉ ra $\dfrac{a^4+2a^2+2}{10}$ là số chính phương với cách làm tương tự khi cho $n=4.$ Vì lẽ đó
+    $$\left(a^4+2a^2+2\right)\left(a^2+2a+2\right)$$
+    cũng là số chính phương. Các chứng minh ở phần đầu lời giải cho ta $a\ge 1,$ vì vậy ta có nhận xét
+    $$\left(a^3+a^2+\dfrac{3a}{2}\right)^2<\left(a^4+2a^2+2\right)\left(a^2+2a+2\right)<\left(a^3+a^2+\dfrac{3a}{2}+2\right)^2.$$
+    Ta suy ra $\left(a^4+2a^2+2\right)\left(a^2+2a+2\right)=\left(a^3+a^2+\dfrac{3a}{2}+1\right)^2.$ Ta không tìm được $a$ nguyên.
+\end{enumerate}
+Kết luận, $a=1$ là số nguyên duy nhất thỏa yêu cầu bài toán.}
+\begin{luuy}
+\nx{
+\begin{enumerate}
+    \item Mấu chốt của bài toán là tìm ra phân tích $a^4+4=\left(a^2-2a+2\right)\left(a^2+2a+2\right).$ Phân tích này mở ra cho ta hướng đi áp dụng phần lí thuyết đã học.
+    \item Khi chỉ ra $\dfrac{a^2+2a+2}{10}$ là số chính phương, nhiều bạn không biết hướng giải quyết tiếp theo. Sử dụng phương pháp kẹp số chính phương là cách làm tốt nhất để vượt qua khúc mắc này. Nhằm phục vụ cho việc kẹp, các bước chặn $a$ đã được thể hiện ở phần đầu lời giải.
+\end{enumerate}}
+\end{luuy}
+\end{gbtt}
+
+
+\begin{gbtt}
+Tìm các số nguyên tố $p$ sao cho $\dfrac{3^{p-1}-1}{p}$ là số chính phương.
+\nguon{Saudi Arabia Junior Balkan Mathematical Olympiad Team Selection Test}
+\loigiai{Ta thấy $p=2$ có thoả đề. Phần còn lại của bài toán, ta chỉ xét $p$ lẻ. Ta đặt $p=2k+1.$ Ta có $$\dfrac{3^{p-1}-1}{p}=\dfrac{\left(3^{k}-1\right)\left(3^{k}+1\right)}{p}.$$ 
+Hai nhân tử $3^k-1$ và $3^k+1$ trong phân tích trên là hai số chẵn liên tiếp, thế nên chúng có ước chung lớn nhất bằng $2.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $\dfrac{3^k-1}{2p}$ và $\dfrac{3^k+1}{2}$ là số chính phương, ta đặt $3^{k}+1=2v^{2}.$ Ta lần lượt nhận xét được
+    $$3^k+1 \equiv 4\pmod{3}\Rightarrow 2v^2= 4 \pmod{3} \Rightarrow v^2 \equiv 2 \pmod{3}.$$
+    Ta thu được mâu thuẫn. Trường hợp này không thỏa mãn.
+    \item Nếu $\dfrac{3^k+1}{2p}$ và $\dfrac{3^k-1}{2}$ là số chính phương, ta đặt $3^{k}-1=2 x^{2}, 3^{k}+1=2 p y^{2}$. \begin{itemize}
+        \item \chu{Trường hợp 1. }Với $k$ lẻ, ta có 
+        $$2py^2\equiv 3^k + 1\equiv 3+1 = 4 \pmod{8} \Rightarrow py^2\equiv 2 \pmod{4}.$$
+        Do $p$ lẻ nên ta được $y^2$ chẵn từ đây, tức $y^2$ chia hết cho $4,$ vô lí do $py^2\equiv 2 \pmod{4}.$
+        \item \chu{Trường hợp 2. }Với $k$ chẵn, ta đặt $k=2q.$ Phép đặt này cho ta  $$\left(3^{q}-1\right)\left(3^{q}+1\right)=2 x^{2}.$$ 
+        Ta dễ dàng chứng minh $\left(3^{q}-1,3^{q}+1\right)=2.$ Bằng lập luận theo modulo $3$ tương tự các trường hợp trước, ta chỉ ra $\dfrac{3^q+1}{2}$ không là số chính phương. Như vậy, ta có $3^{q}+1$ là số chính phương.\\ 
+        Ta đặt $3^{q}+1=z^{2},$ khi đó tồn tại hai số tự nhiên $a,b$ sao cho 
+        $$3^{q}=(z-1)(z+1)\Rightarrow \heva{z - 1&=3^a &\\ z+1&=3^b}\Rightarrow 2=3^a\left(3^{b-a}-1\right)\Rightarrow \heva{a&=0 \\ b&=2.}$$
+    Thế ngược lại, ta lần lượt thu được $q=1,k=2,p=5.$
+    \end{itemize}
+\end{enumerate}
+Tóm lại $p=2$ và $p=5$ là tất cả các số nguyên tố cần tìm.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $p$ sao cho $\dfrac{7^{p-1}-1}{p}$ là số chính phương.
+\nguon{Định hướng bồi dưỡng học sinh năng khiếu Toán $-$ Tập 3}
+\loigiai{
+Bằng cách tiến hành tương tự các bài trước, ta chỉ ra $p=2k+1,$ đồng thời xét hai trường hợp như sau.
+\begin{enumerate}
+    \item Nếu $\dfrac{7^k-1}{2}$ và $\dfrac{7^k+1}{2p}$ là số chính phương, ta đặt $7^k-1=2v^{2}.$ Ta lần lượt suy ra
+    \begin{align*}
+        7^k-1 \equiv -1 \pmod{7}&\Rightarrow 2v^2 \equiv -1 \pmod{7}\\&\Rightarrow 8v^2 \equiv -4 \pmod{7}\\&\Rightarrow v^2 \equiv 3 \pmod{7}.
+    \end{align*}
+    Do $v^2$ chia $7$ chỉ có thể dư $0,1,2$ hoặc $4$, đồng dư thức $v^2\equiv 3\pmod{7}$ không xảy ra. Trường hợp này không thỏa mãn.
+    \item Nếu $\dfrac{7^k+1}{2}$ và $\dfrac{7^k-1}{2p}$ là số chính phương, ta đặt $7^k+1=2 x^2, 7^k-1=2py^2.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1. }Với $k=3z+1,$ ta có 
+        $$2py^2=7^k-1=7^{3z+1}-1=7\cdot343^z-1\equiv 7-1=6 \pmod{9}.$$
+        Ta suy ra $3\mid 2py^2$ từ đây. Rõ ràng, nếu $y$ là bội của $3,$ $2py^2$ sẽ chia hết cho $9,$ mâu thuẫn với $2py^2\equiv 6 \pmod{9}$. Điều này chứng tỏ $p=3.$ Thay ngược lại, ta thấy thỏa mãn. 
+        \item \chu{Trường hợp 2. }Với $k=3z+2,$ ta có 
+        $$2py^2=7^k-1=7^{3z+2}-1=49.343^z-1\equiv 4-1=3 \pmod{9}.$$
+        Lập luận tương tự khả năng trên, ta loại trừ khả năng này.
+        \item \chu{Trường hợp 3. }Với $k=3z,$ ta viết
+        $$x^2=\dfrac{7^{3z}+1}{2}=\dfrac{7^z+1}{2}\left(7^{2z}-7^z+1\right).$$
+        Ta suy ra $7^{2z}-7^z+1$ là số chính phương. Thế nhưng, điều này không xảy ra do
+        $$\left(7^z-1\right)^2< 7^{2z}-7^z+1<\left(7^z\right)^2.$$
+    \end{itemize}
+\end{enumerate}
+Tóm lại, $p=3$ là số nguyên tố duy nhất thỏa mãn đề bài.}
+\end{gbtt}
+
+\section{Căn thức trong số học}
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn $\sqrt{\dfrac{4 n-2}{n+5}}$ là số hữu tỉ.
+\nguon{Chuyên Tin Hà Nội 2015 $-$ 2016}
+\loigiai{
+Với số tự nhiên $n$ bất kì thỏa mãn đề bài, ta có
+$$
+\sqrt{\dfrac{4 n-2}{n+5}}=\dfrac{\sqrt{(4 n-2)(n+5)}}{n+5} \in \mathbb{Q}.
+$$
+Ta được $\sqrt{(4 n-2)(n+5)}$ là số hữu tỉ, và $(4 n-2)(n+5)$ là bình phương một số hữu tỉ. Ta đặt
+$$(4n-2)(n+5)=A\text{ và }A=\dfrac{p^2}{q^2},\text{ trong đó }(p,q)=1.$$
+Do $A$ là số tự nhiên nên $q^2\mid p^2,$ lại do $(p,q)=1$ nên $q=1.$ Như vậy $A$ là số chính phương. Ta nhận xét
+$$(2 n+1)^{2}<(4 n-2)(n+5)<(2 n+5)^{2}.$$
+Do $(4 n-2)(n+5)$ chẵn nên $(4 n-2)(n+5)$ nhận một trong các giá trị $(2 n+2)^{2}$ và $(2 n+4)^{2}$.
+\begin{enumerate}
+    \item Với $(4 n-2)(n+5)=(2 n+2)^{2}$, ta có $10 n=14$ hay $n=\dfrac{7}{5},$ trái điều kiện $n$ nguyên dương.
+    \item Với $(4 n-2)(n+5)=(2 n+4)^{2}$, ta có $n=13.$
+\end{enumerate}
+Như vậy, có duy nhất một số nguyên dương $n$ thỏa mãn là $n=13$.}
+\begin{luuy}
+Trong bài toán trên, ta đã rút ra được một bổ đề quan trọng
+\begin{quote}
+    \it Nếu số tự nhiên $A$ là bình phương một số hữu tỉ thì $A$ là số chính phương.
+\end{quote}
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Cho $150$ số thực $x_{1}, x_{2}, \ldots, x_{150},$ trong đó mỗi số trong chúng nhận một trong hai giá trị  $\sqrt{2}+1$ hoặc $\sqrt{2}-1.$ 
+Ta xét tổng 
+$$S=x_{1} x_{2}+x_{3} x_{4}+x_{5} x_{6}+\ldots+x_{149} x_{150}.$$
+Hỏi ta có thể chọn ra $150$ số thực như trên sao cho $S=121$ được không?
+\nguon{Argentina Team Selection Tests 2005}
+\loigiai{
+Mỗi tích có dạng $x_{2i-1}x_{2i}$ như trên nhận một trong ba giá trị, đó là
+$$\tron{\sqrt{2}-1}^2=3-2\sqrt{2},\quad\tron{\sqrt{2}+1}^2=3+2\sqrt{2},\quad\tron{\sqrt{2}-1}\tron{\sqrt{2}+1}=1.$$
+Ta gọi số tích bằng $3-2\sqrt{2},3+2\sqrt{2}$ và $1$ lần lượt bằng $x,y,z.$ Trong trường hợp $S=121,$ ta có
+    $$\tron{3-2\sqrt{2}}x+\tron{3-2\sqrt{2}}y+z=121\Rightarrow 3x+3y+z+\sqrt{2}\tron{y-z}=121.$$
+Nếu như $y\ne z,$ vế trái là số vô tỉ, vô lí. Do đó $y=z,$ và $6y+z=121.$ \\
+Vậy chỉ cần $x=y=20$ và $z=1$ là $S=121.$ Câu trả lời cho bài toán là khẳng định.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số thực $a$ sao cho $a+\sqrt{5}$ và $a^{2}+\sqrt{5}$ đều là số hữu tỉ.
+\nguon{Vietnam Mathematical Young Talent Search 2019}
+\loigiai{Giả sử tồn tại số $a$ thỏa mãn đề bài. Từ giả thiết, ta đặt $a+\sqrt{5}=x,$ ở đây $x$ là số hữu tỉ. Khi đó
+$$a^2+\sqrt{5}=\left(x-\sqrt{5}\right)^2+5=x^2+5+(1-2x)\sqrt{5}.$$
+Vì $a^2+5$ là số hữu tỉ nên ta được $(1-2x)\sqrt{5}$ cũng là số hữu tỉ. Ta bắt buộc phải có $x=\dfrac{1}{2},$ bởi lẽ nếu $1-2x\ne 0$ thì $(1-2x)\sqrt{5}$ là số vô tỉ. Nhận xét trên cho ta đáp số bài toán là $a=\dfrac{1-2\sqrt{5}}{2}.$}
+\end{bx}
+
+\begin{bx} Tìm tất cả các số thực $x$ thỏa mãn trong các số $$x-\sqrt{2},\quad x^2+2\sqrt{2},\quad x+\dfrac{1}{x},\quad x-\dfrac{1}{x}$$ có đúng một số không nguyên. 
+\nguon{Chuyên Đại học Sư Phạm Hà Nội 2018}
+\loigiai{Không thể xảy ra trường hợp cả $x+\dfrac{1}{x}$ và $x-\dfrac{1}{x}$ đều là số nguyên, bởi vì khi đó
+$$x+\dfrac{1}{x}+x-\dfrac{1}{x}=2x$$
+là số hữu tỉ, và $x$ hữu tỉ, vô lí. Như vậy, một trong hai số 
+$$x+\dfrac{1}{x},\quad x-\dfrac{1}{x}$$ 
+phải không nguyên, đồng thời cả hai số $x-\sqrt{2}$ và $x^2+2\sqrt{2}$ đều nguyên. \\
+Do $x-\sqrt{2}$ nguyên nên ta có thể đặt $x-\sqrt{2}=a$, với $a$ là số nguyên. Khi đó vì 
+$$x^2+2\sqrt{2}=\left(a+\sqrt{2}\right)^2+2\sqrt{2}=a^2+2+2\sqrt{2}(a+1)$$
+là số nguyên nên $a=-1.$ Ta cần thử lại. Với $x=-1+\sqrt{2},$ ta có
+\begin{align*}
+    x+\dfrac{1}{x}&=-1+\sqrt{2}+\dfrac{1}{-1+\sqrt{2}}=2\sqrt{2}\notin\mathbb{Z},\\
+	x-\dfrac{1}{x}&=-1+\sqrt{2}-\dfrac{1}{-1+\sqrt{2}}=-2\in\mathbb{Z}.
+\end{align*}	
+Như vậy, số thực $x$ thỏa yêu cầu bài toán là $x=-1+\sqrt{2}.$}
+\end{bx}
+
+\begin{bx} Tìm tất cả các số nguyên dương $n$ thỏa mãn $$\sqrt{n+2}+\sqrt{n+\sqrt{n+2}}$$ là một số nguyên dương. 
+\nguon{Chuyên Toán Hà Nội 2019}
+\loigiai{Đặt $\sqrt{n+2}+\sqrt{n+\sqrt{n+2}}=a$, ở đây $a$ là số nguyên dương. Ta có các biến đổi 
+\begin{align*}
+\sqrt{n+\sqrt{n+2}}=a-\sqrt{n+2} &\Rightarrow n+\sqrt{n+2}=a^2+n+2-2a\sqrt{n+2} \\&\Rightarrow (2a+1)\sqrt{n+2}=a^2+2
+\\&\Rightarrow \sqrt{n+2}=\dfrac{a^2+2}{2a+1}.    
+\end{align*}
+Ta được $n+2$ là số chính phương. Tiếp tục đặt $n+2=x^2$ với $x$ nguyên dương, ta sẽ có $$\sqrt{n+2}+\sqrt{n+\sqrt{n+2}}=x+\sqrt{x^2+x-2}$$
+là số nguyên dương, thế nên $x^2+x-2$ cũng nguyên dương. Bằng tính toán trực tiếp, ta chỉ ra được $$(x-1)^2<x^2+x-2<(x+1)^2.$$ Như vậy, $x^2+x-2=x^2,$ tức $x=2.$ Ta được $n=2,$ và đây là giá trị duy nhất của $n$ thỏa mãn đề bài.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $a,b,c$ thỏa mãn đồng thời hai điều kiện
+\begin{enumerate}[i,]
+    \item $\dfrac{a+b\sqrt{3}}{b+c\sqrt{3}}$ là số hữu tỉ.
+    \item $a^2+b^2+c^2$ là số nguyên tố.
+\end{enumerate}
+\loigiai{Rõ ràng $b-c\sqrt{3}\ne 0,$ và ta có
+\begin{align*}
+    \dfrac{a+b\sqrt{3}}{b+c\sqrt{3}}
+    &=\dfrac{\left(a+b\sqrt{3}\right)\left(b-c\sqrt{3}\right)}{\left(b-c\sqrt{3}\right)\left(b+c\sqrt{3}\right)}\\&
+    =\dfrac{ab-3bc+\left(b^2-ca\right)\sqrt{3}}{b^2-3c^2}
+    \\&
+    =\dfrac{ab-3bc}{b^2-3c^2}+\dfrac{\left(b^2-ca\right)\sqrt{3}}{b^2-3c^2}.
+\end{align*}
+Cả  $\dfrac{a+b\sqrt{3}}{b+c\sqrt{3}}$ và $\dfrac{ab+3bc}{b^2-3c^2}$ đều là số hữu tỉ, thế nên $\dfrac{\left(b^2-ca\right)\sqrt{3}}{b^2-3c^2}$ hữu tỉ, tức là $b^2=ca.$ Ta có
+$$a^2+b^2+c^2=a^2+2ac+c^2-b^2=(a+c)^2-b^2=(a+c-b)(a+b+c).$$
+Do $a^2+b^2+c^2$ là số nguyên tố và $0<a+c-b<a+b+c,$ ta suy ra $a+c-b=1.$ \\
+Kết hợp hai hệ thức $b=a+c-1$ và $b^2=ca,$ ta được
+\begin{align*}
+   (a+c-1)^2=ca
+   &\Leftrightarrow a^2+ac+c^2-2a-2c+1=0
+   \\&\Leftrightarrow a^2+(c-2)a+c^2-2c+1=0. 
+\end{align*}
+Coi đây là một phương trình bậc hai ẩn $a$ và tham số $c,$ khi đó
+$$\Delta=(c-2)^2-4\left(c^2-2c+1\right)=(c-2)^2-4(c-1)^2=(4-3c)c$$
+phải là số chính phương. Với việc $\Delta\ge 0,$ ta có $c=1.$\\ Bằng cách thay ngược lại, ta tìm ra $(a,b,c)=(1,1,1)$ là bộ số duy nhất thỏa mãn đề bài.}
+\end{bx}
+
+\begin{bx} 
+Cho $a,b$ là hai số hữu tỉ. \\Chứng minh rằng nếu $a\sqrt{2}+b\sqrt{3}$ là số hữu tỉ thì $a=b=0.$
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2021}
+\loigiai{
+Từ giả thiết, ta có thể đặt $a\sqrt{2}+b\sqrt{3}=c,$ với $c$ là số hữu tỉ. Bình phương hai vế, ta được
+$$2a^2+3b^2+2ab\sqrt{6}=c^2\Leftrightarrow 2a^2+3b^2-c^2=2ab\sqrt{6}.$$
+Trong trường hợp $ab\ne 0,$ chia cả hai vế cho $ab,$ ta suy ra
+$$\sqrt{6}=\dfrac{2a^2+3b^2-c^2}{2ab}.$$
+Lập luận trên chứng tỏ $\sqrt{6}$ là số hữu tỉ, mâu thuẫn. Như vậy, ta thu được $ab=0.$
+\begin{itemize}
+    \item Nếu $a=0,$ ta suy ra $b\sqrt{3}$ là số hữu tỉ, thế nên $b=0.$
+    \item Nếu $b=0,$ ta suy ra $a\sqrt{2}$ là số hữu tỉ, thế nên $a=0.$
+\end{itemize}
+Bài toán được chứng minh.}
+
+\begin{it}
+Tác giả xin phép tổng quát và mở rộng bổ đề được sử dụng trong bài toán trên.
+\end{it}
+
+\begin{light}
+Với các số tự nhiên $a,b,$ ta có các khẳng định sau.
+\begin{enumerate}
+    \item Nếu $\sqrt{a}+\sqrt{b}$ là số hữu tỉ thì $a,b$ là các số chính phương.
+    \item Nếu $\sqrt{a}-\sqrt{b}$ là số hữu tỉ thì hoặc $a,b$ là các số chính phương, hoặc $a=b.$
+    \item Nếu $\sqrt{a}$ là số hữu tỉ thì $a$ là số chính phương.  
+\end{enumerate}    
+Tương tự, với các số hữu tỉ không âm $a,b,$ ta có các khẳng định sau.
+\begin{enumerate}
+    \item Nếu $\sqrt{a}+\sqrt{b}$ là số hữu tỉ thì $a,b$ là bình phương các số hữu tỉ.
+    \item Nếu $\sqrt{a}-\sqrt{b}$ là số hữu tỉ thì hoặc $a,b$ là bình phương các số hữu tỉ, hoặc $a=b.$
+    \item Nếu $\sqrt{a}$ là số hữu tỉ thì $a$ là bình phương một số hữu tỉ.     \end{enumerate}
+\end{light}
+\end{bx} %csp
+
+\begin{it}
+Đối với một số khẳng định tương tự dạng căn bậc cao hơn và phần chứng minh chúng, mời bạn đọc tự nghiên cứu.
+\end{it}
+
+\begin{bx}
+Chứng minh không tồn tại số tự nhiên $n$ sao cho $\sqrt{n-1}+\sqrt{n+1}$ là số hữu tỉ.
+\nguon{Chuyên Toán Phổ thông Năng khiếu 1996}
+\loigiai{
+Giả sử tồn tại số tự nhiên $n$ sao cho $\sqrt{n-1}+\sqrt{n+1}$
+là số hữu tỉ. Theo như bổ đề đã phát biểu, hai số $n-1$ và $n+1$ đều là số chính phương. Ta đặt $n-1=x^2,$ với $x$ là số tự nhiên. Ta có
+$$n+1=x^2+2\equiv 2,3\pmod{4}.$$
+Không có số chính phương nào đồng dư $2$ hoặc $3$ theo modulo $4.$\\ Giả sử sai, và bài toán đã cho được chứng minh.}
+\end{bx}
+
+\begin{bx} \label{can1}
+Chứng minh rằng với mọi số nguyên dương $n,$ ta luôn có 
+$$\left(3+\sqrt{7}\right)^n+\left(3-\sqrt{7}\right)^n$$
+là một số nguyên dương.
+\loigiai{Ta sẽ chứng minh bài toán trên bằng quy nạp. Để đơn giản hóa việc quy nạp, ta đặt $$a=3+\sqrt{7},\quad b=3-\sqrt{7}.$$ Phép đặt này cho ta $a+b=6$ và $ab=-2.$ Đồng thời, ta đặt thêm
+$$a_n=a^n+b^n.$$
+Với $n=1,n=2$ bài toán được chứng minh do $a_1=6$ và $a_2=32.$ \\
+Với $n\ge 3,$ ta sẽ xây dựng một hệ thức giữa $a_{n+2},a_{n+1},a_{n}.$ Thật vậy, ta có
+\begin{align*}
+    (a+b)\left(a^{n-1}+b^{n-1}\right)
+    &=a^n+b^n+ab^{n-1}+ba^{n-1}
+    \\&=a^n+b^n+ab\left(a^{n-2}+b^{n-2}\right).
+\end{align*}
+Ta dễ dàng tính toán được $a+b=6,ab=-2,$ thế nên là
+$$6a_{n-1}=a_n-2a_{n-2}\Rightarrow a_n=6a_{n-1}+2a_{n-2}.$$
+Hệ thức trên chứng tỏ $a_n$ nguyên dương với mọi $n\ge 2.$ Bài toán được chứng minh.
+}
+\end{bx}
+
+\begin{bx}\label{can2}
+Cho số nguyên $a$ và số nguyên dương $b.$ Chứng minh rằng ứng với mỗi số tự nhiên $n,$ tồn tại các số nguyên $x_n$ và $y_n$ sao cho
+\begin{align*}
+    &\left(a+\sqrt{b}\right)^n=x_n+y_n\sqrt{b},
+    \\&\left(a-\sqrt{b}\right)^n=x_n-y_n\sqrt{b}.
+\end{align*}
+\loigiai{Ta chứng minh bài toán trên bằng phương pháp quy nạp. \\
+Thật vậy, bài toán dễ dàng chứng minh với $n=1,n=2.$\\
+Đối với $n\ge 2,$ tương tự \chu{ví dụ \ref{can1}}, ta sẽ xây dựng một hệ thức liên hệ giữa các đại lượng liên quan. Ta có
+\begin{align*}
+    \left(a+\sqrt{b}\right)^{n+1}
+    &=\left(a+\sqrt{b}\right)\left(a+\sqrt{b}\right)^{n}\\&
+    =\left(a+\sqrt{b}\right)\left(x_n+y_n\sqrt{b}\right)
+    \\&=ax_n+by_n+\left(ay_n+bx_n\right)\sqrt{b}.
+\end{align*}
+Một cách tương tự, ta cũng chỉ ra
+  $$\left(a-\sqrt{b}\right)^{n+1}
+  =ax_n+by_n-\left(ay_n+bx_n\right)\sqrt{b}.$$
+Ta chọn $x_{n+1}=ax_n+by_n$ và $y_{n+1}=ay_n+bx_n,$ khi đó bài toán được chứng minh theo quy nạp.}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+\begin{btt}
+Tìm số nguyên dương $n$ để $\sqrt{\dfrac{n-23}{n+89}}$ là một số hữu tỉ dương.
+\nguon{Chuyên Toán Nghệ An 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số thực $x$ sao cho trong bốn số
+$$x^2+4\sqrt{3},\quad x^2-\dfrac{4}{x},\quad x^2+\dfrac{4}{x},\quad x^4+56\sqrt{3},$$ 
+có đúng một số không phải số nguyên.
+\nguon{Tạp chí Pi tháng 7 năm 2017}
+\end{btt}
+
+\begin{btt}
+Cho số thực $x$ khác $0$ thỏa mãn cả hai số $x+\dfrac{2}{x}$ và $x^3$ đều là số hữu tỉ. Chứng minh rằng $x$ cũng là số hữu tỉ.
+\nguon{Chuyên Toán Hà Nội 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn đồng thời hai điều kiện
+\begin{enumerate}
+    \item[i,] $\sqrt{7\sqrt{n+4}-5\sqrt{n}}+\sqrt{7\sqrt{n+4}+5\sqrt{n}}$ là số nguyên dương.
+    \item[ii,] $3n-13$ là số nguyên tố.
+\end{enumerate}
+
+\end{btt}
+
+\begin{btt}
+Tìm tất cả bộ ba số nguyên dương $(x,y,z)$ thỏa mãn
+$$\sqrt{\dfrac{2005}{x+y}}+\sqrt{\dfrac{2005}{y+z}}+\sqrt{\dfrac{2005}{z+x}}$$
+là một số nguyên dương
+\nguon{Bulgarian Mathematical Olympiad 2005}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ thỏa mãn $\sqrt[3]{7+\sqrt{n}}+\sqrt[3]{7-\sqrt{n}}$
+là một số nguyên dương.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ sao cho $$\sqrt{x^3-3x^2y+11x-3y}+\sqrt[3]{8y^3+3y^2+49}$$
+là một số hữu tỉ dương.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn đồng thời hai điều kiện
+\begin{itemize}
+    \item[i,] $\sqrt[3]{n-2}+\sqrt[3]{10n-3}$ là một số nguyên dương.
+    \item[ii,] $2n+13$ là một số nguyên tố.
+\end{itemize}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng với mọi số nguyên dương $n$, tồn tại số nguyên dương $m$ sao cho
+$$\left(\sqrt{2}-1\right)^n=\sqrt{m+1}-\sqrt{m}.$$
+\nguon{Chọn đội tuyển chuyên Nguyễn Du, Đắk Lắk 2020}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng tồn tại các số nguyên $a,b,c$ sao cho
+$$0<\left|a+b\sqrt{2}+c\sqrt{3}\right|<\dfrac{1}{1000}.$$
+\nguon{Chuyên Toán Hà Nội 2016}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm số nguyên dương $n$ để $\sqrt{\dfrac{n-23}{n+89}}$ là một số hữu tỉ dương.
+\nguon{Chuyên Toán Nghệ An 2021}
+\loigiai{
+Dễ thấy $n>23.$ Ta có thể đặt  $\dfrac{n-23}{n+89} = \left(\dfrac{a}{b} \right)^2,$ trong đó $a,b\in \mathbb{N}^*,(a,b)=1,a<b.$\\ Do $\tron{a^2,b^2}=1$ nên tồn tại số nguyên dương $k$ sao cho
+$$n-23=a^2k,\quad n+89=b^2k.$$
+Trừ tương ứng vế, ta suy ra $(b+a)(b-a)k=112.$ Ta sẽ lập bảng giá trị dựa trên các đánh giá
+    \begin{itemize}
+        \item[i,] $b+a$ và $b-a$ đều là ước dương của $112.$
+        \item[ii,] $b+a$ và $b-a$ cùng tính chẵn lẻ.
+        \item[iii,] $b+a>b-a>0.$
+    \end{itemize}
+Bảng giá trị của chúng ta như sau
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+$b+a$ & $b-a$ & $k$ & $b$ & $a$& $n = a^2k+23$ \\ 
+\hline
+$28$&$4$ & $1$&$16$ &$12$ & loại vì $(a,b)>1$\\ 
+$56$& $2$ &$1$ &$29$ &$27$ & $752$\\
+$14$&$8$ & $1$&$11$ &$3$ & $32$\\ 
+$14$& $4$ &$2$ &$9$ &$5$ & $73$\\
+$28$&$2$ & $2$&$15$ &$13$ & $361$\\ 
+$8$&$2$ & $7$ &$5$ &$3$ & $86$\\
+$14$&$2$ & $4$&$8$ &$6$ & loại vì $(a,b)>1$\\ 
+$4$&$2$ & $14$&$3$ &$1$ & $37$\\ 
+$7$&$1$ & $16$&$4$ &$3$ & $167$
+\end{tabular}
+\end{center}
+Kết quả, có $7$ giá trị của $n$ thỏa mãn đề bài, gồm $$n=32,\ n=37,\ n=73,\ n=86,\ n=167,\ n=361,\ n=752.$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số thực $x$ sao cho trong bốn số
+$$x^2+4\sqrt{3},\quad x^2-\dfrac{4}{x},\quad x^2+\dfrac{4}{x},\quad x^4+56\sqrt{3},$$ 
+có đúng một số không phải số nguyên.
+\nguon{Tạp chí Pi tháng 7 năm 2017}
+\loigiai{
+Không thể xảy ra trường hợp cả $x^2-\dfrac{4}{x}$ và $x^2+\dfrac{4}{x}$ đều là số nguyên, vì khi đó
+$$x^2+\dfrac{4}{x}-x^2+\dfrac{1}{x}=\dfrac{8}{x}$$
+là số hữu tỉ, thế nên $x$ cũng là số hữu tỉ, vô lí. Như vậy, ít nhất một trong hai số
+$$x^2-\dfrac{4}{x},\quad x^2+\dfrac{4}{x}$$
+không nguyên, đồng thời
+$x^2+4\sqrt{3}$ và $x^4+56\sqrt{3}$ là số nguyên. Đặt $x^2+4\sqrt{3}=a.$ Do
+$$x^4+56\sqrt{3}=\left(a-4\sqrt{3}\right)^2+56\sqrt{3}= \left(a^2+48\right)+(56-8a)\sqrt{3}$$
+là số nguyên nên $a=7.$ Thay ngược lại, ta có
+$$x^2+4\sqrt{3}=7
+\Rightarrow x^2=7-4\sqrt{3}
+\Rightarrow x^2=\left(2-\sqrt{3}\right)^2
+\Rightarrow
+\hoac{&x=2-\sqrt{3} \\ &x=\sqrt{3}-2.}
+$$
+Sau khi kiểm tra, ta kết luận đây là hai giá trị của $x$ thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số thực $x$ khác $0$ thỏa mãn cả hai số $x+\dfrac{2}{x}$ và $x^3$ đều là số hữu tỉ. Chứng minh rằng $x$ cũng là số hữu tỉ.
+\nguon{Chuyên Toán Hà Nội 2021}
+\loigiai{Từ giả thiết thứ nhất, ta có thế đặt $x+\dfrac{2}{x}=a,$ với $a$ là số hữu tỉ. Phép đặt này cho ta
+    $$x^2-ax+2=0\Leftrightarrow \left(x-\dfrac{a}{2}\right)^2=\dfrac{a^2-8}{4}\Leftrightarrow x=\dfrac{a\pm \sqrt{a^2-8}}{2}.$$
+    Kết hợp biến đổi vừa rồi giả thiết $x^3$ hữu tỉ, ta suy ra
+    $$x^3=\left(\dfrac{a\pm \sqrt{a^2-8}}{2}\right)^3=\dfrac{1}{2}\left[\left(a^3-6a\right)+\left(a^2-2\right)\sqrt{a^2-8}\right]\in \mathbb{Q}.$$
+    Nếu như $\sqrt{a^2-8}$ là số vô tỉ, ta bắt buộc phải có $a^2-2=0,$ tức là $a=\pm \sqrt{2}.$ Điều này mâu thuẫn với điều kiện phép đặt là $a$ hữu tỉ. Như vậy, $\sqrt{a^2-8}$ là số hữu tỉ. Dựa vào $x=\dfrac{a\pm \sqrt{a^2-8}}{2},$ ta thu được điều phải chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn đồng thời hai điều kiện
+\begin{enumerate}
+    \item[i,] $\sqrt{7\sqrt{n+4}-5\sqrt{n}}+\sqrt{7\sqrt{n+4}+5\sqrt{n}}$ là số nguyên dương.
+    \item[ii,] $3n-13$ là số nguyên tố.
+\end{enumerate}
+
+\loigiai{Với số nguyên dương $n$ thỏa mãn đề bài, ta chứng minh được
+$$\left(\sqrt{7\sqrt{n+4}-5\sqrt{n}}+\sqrt{7\sqrt{n+4}+5\sqrt{n}}\right)^2=14\sqrt{n+4}+4\sqrt{6n+49}\in\mathbb{N^*}.$$
+Theo như tính chất đã phát biểu, ta thu được $n+4$ và $6n+49$ là số chính phương. \\
+Ta đặt $n+4=x^2,6n+49=y^2,$ ở đây $x,y$ là các số nguyên dương. Ta sẽ chọn $a,b$ sao cho
+$$ax^2+by^2=a(6n+49)+b(n+4)=3n-13.$$
+Giải hệ $\heva{& 6a+b=3 \\& 49a+4b=-13},$ ta được $a=-1,b=9.$ Bây giờ, ta xét phân tích
+$$3n-13=9x^2-y^2=\left(3x+y\right)\left(3x-y\right).$$
+Do $3n-13$ là số nguyên tố nên trong $3x+y,3x-y$ phải có một số bằng $1,$ nhưng vì $0<3x-y<3x+y$ nên $3x-y=1.$ Kết hợp với phép đặt $n+4=x^2,6n+49=y^2,$ ta thu được hệ nghiệm nguyên dương
+$$\heva{& 3x-y=1\\& 6x^2-y^2+25=0 }\Leftrightarrow \heva{& y=3x-1 \\& 6x^2-(3x-1)^2+25=0 } \Leftrightarrow \heva{& x=4 \\& y=13.} $$
+Thay ngược lại, ta tìm được $n=12.$ Đây chính là giá trị duy nhất của $n$ thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả bộ ba số nguyên dương $(x,y,z)$ thỏa mãn
+$$\sqrt{\dfrac{2005}{x+y}}+\sqrt{\dfrac{2005}{y+z}}+\sqrt{\dfrac{2005}{z+x}}$$
+là một số nguyên dương
+\nguon{Bulgarian Mathematical Olympiad 2005}
+\loigiai{Từ giả thiết, ta có thể đặt $A=\dfrac{2005}{x+y},\:B=\dfrac{2005}{y+z},\:C=\dfrac{2005}{z+x},\:D=\sqrt{A}+\sqrt{B}+\sqrt{C},$ ở đây $A,B,C$ là số hữu tỉ, còn $D$ là số nguyên dương. Phép đặt này cho ta
+\begin{align*}
+    D=\sqrt{A}+\sqrt{B}+\sqrt{C} &\Rightarrow D-\sqrt{A}=\sqrt{B}+\sqrt{C} \\&\Rightarrow D^2+A-2D\sqrt{A}=B+C+2\sqrt{BC} \\&\Rightarrow D^2+A-B-C=2D\sqrt{A}+2\sqrt{BC}.
+\end{align*}
+Ta suy ra $A$ là bình phương số hữu tỉ. Tiếp tục đặt $\dfrac{2005}{x+y}=\dfrac{m^2}{a^2},$ ở đây $(a,m)=1,$ ta sẽ có
+$$2005a^2=m^2\left(x+y\right).$$
+Ta có $m^2\mid2005a^2,$ tuy nhiên, do $(a,m)=1$ nên $m^2\mid2005,$ hay là $m=1.$\\
+Thay ngược lại, ta được $x+y=2005a^2.$ Chứng minh tương tự, ta suy ra rằng ta có thể đặt $$y+z=2005b^2,\quad z+x=2005c^2.$$
+Kết hợp với giả thiết, ta suy ra 
+$$\sqrt{\dfrac{2005}{x+y}}+\sqrt{\dfrac{2005}{y+z}}+\sqrt{\dfrac{2005}{z+x}}=\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\in \mathbb{N^*}.$$
+Dễ thấy $a+b+c=2(x+y+z)$ là số chẵn, và đồng thời, điều kiện $a,b,c$ nguyên dương cho ta $$\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\le 1+1+1=3.$$ 
+Không mất tính tổng quát, ta giả sử $a\le b\le c.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}=3,$ ta lập tức thu được $a=b=c=1,$ và thế thì $a+b+c=3$ là số lẻ, vô lí.
+    \item Nếu $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}=2,$ ta có đánh giá
+    $$2=\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\le \dfrac{1}{a}+\dfrac{1}{a}+\dfrac{1}{a}=\dfrac{3}{a}.$$
+    Đánh giá trên cho ta $a\le \dfrac{3}{2},$ tức $a=1.$ Thay ngược lại, ta được
+    $$\dfrac{1}{b}+\dfrac{1}{c}=1\Leftrightarrow b+c=bc\Leftrightarrow (b-1)(c-1)=1.$$
+    Ta suy ra $b=2,c=2,$ và $a+b+c=5$ là số lẻ. Trường hợp này không xảy ra. 
+    \item Nếu $\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}=1,$ ta có đánh giá
+    $$1=\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\le \dfrac{1}{a}+\dfrac{1}{a}+\dfrac{1}{a}=\dfrac{3}{a}.$$
+    Đánh giá trên cho ta $a\le 3,$ tức $a=1,a=2$ hoặc là $a=3.$
+    \begin{itemize}
+        \item Với $a=1,$ ta có $\dfrac{1}{b}+\dfrac{1}{c}=0.$ Phương trình này vô nghiệm nguyên.
+        \item Với $a=2,$ ta có $$\dfrac{1}{b}+\dfrac{1}{c}=\dfrac{1}{2}
+        \Leftrightarrow 2b+2c=bc
+        \Leftrightarrow (b-2)(c-2)=4
+        \Leftrightarrow \hoac
+             {&b=3,c=6  \\
+             &b=4,c=4.} $$
+        Tuy nhiên, do $a+b+c$ chẵn nên ta chỉ có thể chọn $b=c=4.$ Thay ngược lại, ta tìm ra $$(x,y,z)=(2005\cdot 2,2005\cdot 2,2005\cdot 14).$$
+        \item Với $a=3,$ do $a\le b\le c$ nên là
+        $$1=\dfrac{1}{a}+\dfrac{1}{b}+\dfrac{1}{c}\ge\dfrac{1}{a}+\dfrac{1}{a}+\dfrac{1}{a}=\dfrac{3}{a}=1.$$
+        Dấu bằng ở đánh giá trên phải xảy ra, tức $b=c=3.$ Lúc này, $a+b+c=9$ là số lẻ, vô lí.
+    \end{itemize}
+\end{enumerate}
+Tóm lại, các bộ số $(x,y,z)$ cần tìm là $(2005\cdot 2,2005\cdot 2,2005\cdot 14)$ và các hoán vị.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ thỏa mãn $\sqrt[3]{7+\sqrt{n}}+\sqrt[3]{7-\sqrt{n}}$
+là một số nguyên dương.
+\loigiai{Đặt $A=\sqrt[3]{7+\sqrt{n}}+\sqrt[3]{7-\sqrt{n}}.$ Ta có
+\begin{align*}
+    A^3
+    &=14+3\sqrt[3]{\left(7+\sqrt{n}\right)\left(7-\sqrt{n}\right)}\left(\sqrt[3]{7+\sqrt{n}}+\sqrt[3]{7-\sqrt{n}}\right)
+    \\&=14+3A\sqrt[3]{49-n}.
+\end{align*}
+Do $A>0,$ ta có $\dfrac{A^3-14}{3A}=\sqrt[3]{49-n}.$ Kết hợp với giả thiết $n\ge 0,$ ta lần lượt suy ra
+\begin{align*}
+    \dfrac{A^3-14}{3A}=\sqrt[3]{49-n}\le \sqrt[3]{49}<4\Rightarrow A^3-12A<14\Rightarrow A\left(A^2-12\right)<14.
+\end{align*}
+Nếu như $A\ge 4,$ ta có
+$A\left(A^2-12\right)\ge 4\left(4^2-12\right)=16>14,$
+mâu thuẫn với lập luận $$A\left(A^2-12\right)<14.$$ 
+Mâu thuẫn này chứng tỏ $A\in \{1;2;3\}.$ Thử với trường trường hợp, ta thấy chỉ có $n=50$ thỏa mãn.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ sao cho $$\sqrt{x^3-3x^2y+11x-3y}+\sqrt[3]{8y^3+3y^2+49}$$
+là một số hữu tỉ dương.
+
+\loigiai{Từ giả thiết, ta có thể đặt $A=x^3-3x^2y+11x-3y,B=8y^3+3y^2+49$ và $C=\sqrt{A}+\sqrt[3]{B},$ ở đây $A,B$ là các số nguyên dương, còn $C$ là số hữu tỉ dương. Phép đặt này cho ta
+\begin{align*}
+    \sqrt{A}+\sqrt[3]{B}=C
+    \Rightarrow \sqrt[3]{B}=C-\sqrt{A}
+    &\Rightarrow B=\left(C-\sqrt{A}\right)^3
+    \\&\Rightarrow B=C^3+3CA^2-\sqrt{A}\left(3C^2+A^2\right)
+    \\&\Rightarrow \sqrt{A}\left(3C^2+A^2\right)=C^3+3CA^2-B.
+\end{align*}
+Do $B>0$ nên $A$ và $C$ không đồng thời bằng $0.$ Ta được
+$$\sqrt{A}=\dfrac{C^3+3CA^2-B}{3C^2+A^2}.$$
+Theo bổ đề, $A$ là một số  chính phương, và như vậy, $B$ là một số lập phương. Nhờ vào nhận xét
+$$8y^3<8y^3+3y^2+49<(2y+3)^3,$$
+nên ta suy ra $8y^3+3y^2+49$ bằng $(2y+1)^3$ hoặc $(2y+2)^3.$\\ Thử với từng trường hợp, ta được $y=2$ khi $8y^3+3y^2+49=(2y+1)^3.$ Tiếp theo, ta có 
+$$x^3-3x^2y+11x-3y=x^3-6x^2+11x-6=(x-1)(x-2)(x-3)$$
+là một số chính phương. Ta đặt $d=\left((x-1)(x-3),(x-2)\right),$ và phép đặt này cho ta
+$$\heva{&d\mid (x-2)\\ &d\mid (x-1)(x-3)}\Rightarrow \heva{&d\mid (x-2)\\ &d\mid \left[(x-2)^2-1\right]}\Rightarrow d\mid 1\Rightarrow d=1.$$
+Ta nhận được $|(x-1)(x-3)|$ và $|x-2|$ là các số chính phương.\\
+Để có thể phá dấu trị tuyệt đối, ta chia bài toán thành các trường hợp sau.
+\begin{enumerate}
+    \item Với $x=2,$ thử lại ta thấy thỏa mãn.
+    \item Với $x\ne 2,$ do $x$ là số nguyên nên $x\ge 3$ hoặc $x\le 1,$ và do đó $|(x-1)(x-3)|=(x-1)(x-3).$ Vì
+    $$(x-3)^2\le (x-1)(x-3)\le(x-3)^2,$$
+    ta có thể suy ra được $(x-1)(x-3)$ bằng $(x-3)^2,(x-2)^2$ hoặc $(x-1)^2.$ \\
+    Chia trường hợp để giải, ta chỉ ra $x=3,x=1$ thỏa mãn.
+\end{enumerate}
+Như vậy, có tất cả $3$ cặp $(x,y)$ thỏa mãn đề bài, gồm $(1,2),(2,2)$ và $(3,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn đồng thời hai điều kiện
+\begin{itemize}
+    \item[i,] $\sqrt[3]{n-2}+\sqrt[3]{10n-3}$ là một số nguyên dương.
+    \item[ii,] $2n+13$ là một số nguyên tố.
+\end{itemize}
+\loigiai{Ta đặt $a^3=n-2,b^3=10n-3.$ Phép đặt này cho ta
+$$a^3+b^3=(a+b)\left(a^2-ab+b^2\right)=(a+b)^3-3ab(a+b)\in \mathbb{N^*}.$$
+Do $a+b$ và $a^3+b^3$ là các số nguyên dương nên ta suy ra được $ab$ là số nguyên dương từ đây. Mặt khác
+$$a^3-b^3=(a-b)\left(a^2+ab+b^2\right)=(a-b)\left[(a+b)^2-ab\right]\in \mathbb{N^*}.$$
+Do $a^3-b^3$ và $(a+b)^2-ab$ là các số nguyên dương nên ta suy ra $a-b$ là số nguyên dương từ đây. Cả $a-b,a+b$ là nguyên dương, chứng tỏ $2a$ và $2b$ đều là số nguyên dương. Ta đặt
+$$2a=A,\quad 2b=B.$$
+Khi đó ta có $a^3=\dfrac{A^3}{8}$ và $b^3=\dfrac{B^3}{8}$ là số nguyên dương, thế nên $A,B$ chẵn, và kéo theo $a$ và $b$ nguyên dương. Ta cũng nhận thấy rằng
+\begin{align*}
+    2n+13=(10n-3)-8(n-2)
+    =b^3-8a^3=(b-2a)\left(b^2+2ab+4a^2\right).
+\end{align*}
+Nhờ giả thiết $2n+13$ là một số nguyên tố và lập luận $0<b-2a<b<b^2+2ab+4a^2,$ ta có $b-2a=1.$ Từ đây, ta thu được hệ
+\begin{align*}
+    \heva{&b-2a=1 \\ &b^3-10a^3=17}
+    \Leftrightarrow \heva{&b=2a+1 \\ &(2a+1)^3-10a^3=17}
+   \Leftrightarrow \heva{&b=2a+1  \\ &(a-1)\left(a^2-5a-8\right)=0.}
+\end{align*}
+Không có số nguyên $a$ nào thỏa mãn $a^2-5a-8$ nên bắt buộc $a=1,$ và khi đó $b=3.$ \\
+Từ đây, ta tính được $n=3.$ Đây là giá trị duy nhất của $n$ thỏa mãn đề bài. }
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng với mọi số nguyên dương $n$, tồn tại số nguyên dương $m$ sao cho
+$$\left(\sqrt{2}-1\right)^n=\sqrt{m+1}-\sqrt{m}.$$
+\nguon{Chọn đội tuyển chuyên Nguyễn Du, Đắk Lắk 2020}
+\loigiai{
+Với mỗi số tự nhiên $n,$ theo như \chu{ví dụ \ref{can2}}, tồn tại các số nguyên $A_n$ và $B_n$ sao cho
+$$\left(-1+\sqrt{2}\right)^n=A_n+B_n\sqrt{2},\quad \left(-1-\sqrt{2}\right)^n=A_n-B_n\sqrt{2}.$$
+Lấy tích theo vế, ta được
+$(-1)^n=A_n^2-2B_n^2.$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $n$ chẵn thì từ $\left(-1-\sqrt{2}\right)^n=A_n-B_n\sqrt{2}$ ta có $A_n>0$ và $B_n<0.$ Ngoài ra
+    $$A_n^2-2B_n^2=1.$$
+    Kết hợp hai dữ kiện vừa rồi, ta có
+    $$\left(\sqrt{2}-1\right)^n=A_n+B_n\sqrt{2}=|A_n|-\sqrt{2B_n^2}=\sqrt{A_n^2}-\sqrt{A_n^2-1}.$$
+    Số $m$ trong trường hợp này thỏa mãn $m=A_n^2.$
+    \item Nếu $n$ lẻ thì từ $\left(-1-\sqrt{2}\right)^n=A_n-B_n\sqrt{2}$ ta có $A_n<0$ và $B_n>0.$ Ngoài ra
+    $$A_n^2-2B_n^2=-1.$$
+    Kết hợp hai dữ kiện vừa rồi, ta có
+    $$\left(\sqrt{2}-1\right)^n=A_n+B_n\sqrt{2}=-|A_n|+\sqrt{2B_n^2}=-\sqrt{A_n^2}+\sqrt{A_n^2+1}.$$
+    Số $m$ trong trường hợp này thỏa mãn $m=A_n^2+1.$    
+\end{enumerate}
+Bài toán đã cho được chứng minh trong mọi trường hợp.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng tồn tại các số nguyên $a,b,c$ sao cho
+$$0<\left|a+b\sqrt{2}+c\sqrt{3}\right|<\dfrac{1}{1000}.$$
+\nguon{Chuyên Toán Hà Nội 2016}
+\loigiai{
+Ta chọn $c=0.$ Lúc này, ta cần chọn $a,b$ sao cho
+\[0<\left|a+b\sqrt{2}\right|<\dfrac{1}{1000}.\tag{*}\]
+Bằng trực quan, ta thấy số $\left(\sqrt{2}-1\right)^n$ càng gần tới $0$ khi $n$ càng lớn.\\ Do $\sqrt{2}-1<\dfrac{1}{2},$ và $2^{10}>1000,$ ta nghĩ đến việc xét số 
+$$\left(\sqrt{2}-1\right)^{10}<\left(\dfrac{1}{2}\right)^{10}=\dfrac{1}{1024}<\dfrac{1}{1000}.$$
+Mặt khác, theo như \chu{ví dụ \ref{can2}}, ta chỉ ra tồn tại hai số nguyên $x,y$ sao cho
+$$\left(\sqrt{2}-1\right)^{10}=x+y\sqrt{2}.$$
+Chọn $a=x,b=y,$ khi đó (*) thỏa mãn. Bài toán được chứng minh.}
+\end{gbtt}

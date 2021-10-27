@@ -1,0 +1,1097 @@
+\section{Phương pháp kẹp lũy thừa trong phương trình nghiệm nguyên}
+Trong mục này, ta sẽ ôn lại một kiến thức đa học ở \chu{chương III}.
+\subsection*{Lí thuyết}
+ Giữa hai lũy thừa số mũ $n$ liên tiếp, không tồn tại một lũy thừa cơ số $n$ nào. Hệ quả, với mọi số nguyên $a$ 
+    \begin{enumerate}
+        \item Không có số chính phương nào nằm giữa $a^2$ và $\left(a+1\right)^2.$
+        \item Số chính phương duy nhất nằm giữa $a^2$ và $\left(a+2\right)^2$ là $\left(a+1\right)^2.$    
+        \item Có $k-1$ số chính phương nằm giữa $a^2$ và $\left(a+k\right)^2,$ bao gồm \[\left(a+1\right)^2,\left(a+2\right)^2,\ldots,\left(a+k-1\right)^2.\]         
+    \end{enumerate}
+    Về các kết quả tương tự với số mũ khác, mời bạn đọc tự nghiên cứu và phát biểu.
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên
+$$x^2+3x+4=y^2.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên
+$$x^2-5x=y^2-2y-5.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+$$x^3+2x^2+3x+1=y^3.$$
+\end{btt}
+%nguyệt anh
+\begin{btt}
+Giải phương trình nghiệm nguyên $$y^{3}-2 x-2=x(x+1)^2.$$
+\nguon{Chuyên Toán Hưng Yên 2017}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+$$x^2+x=y^4+y^3+y^2.$$
+\end{btt}
+
+\begin{btt} 
+Tìm các số nguyên dương $x,y$ thỏa mãn
+$$y^4+2y^3-3=x^2-3x.$$
+\nguon{Chuyên Toán Hải Phòng 2021}
+\end{btt} %haiphong
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+$$\min \left\{x^{4}+8 y;\  8 x+y^{4}\right\}=(x+y)^{2}.$$
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương 
+\[a^2+b+3=\left ( b^2-c^2 \right )^2.\]
+\nguon{Japan Mathematical Olympiad Final 2019}
+\end{btt}
+
+\begin{btt}
+Giải hệ phương trình sau trên tập số nguyên
+$$\heva{y^3&=x+1 \\ z^3&=x^2-x+2.}$$ 
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+\[4y^2+28y+17=7^x.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số tự nhiên $x,y$ thỏa mãn
+\[2017^x=y^6-32y+1.\]
+\nguon{Austrian Mathematical Olympiad 2017}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên
+$$y^4+6y^3+3y^2-10y+81=3^x.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên 
+$$5^x=y^4+4y+1.$$
+\nguon{Tạp chí Toán học và Tuổi trẻ số 440}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên
+$$x^3+6x+7=3^y.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+$$5^x+8x+15=16y^2+16y.$$
+\end{btt}
+
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên
+\[x^2+3x+4=y^2.\]
+\loigiai{
+Với mọi số tự nhiên $x,$ ta có nhận xét
+$$(x+1)^2<x^2+3x+4\le (x+2)^2.$$
+Do $x^2+3x+4$ là số chính phương, bắt buộc $x^2+3x+4=(x+2)^2,$ vậy nên $x=0.$ \\Kiểm tra trực tiếp, ta kết luận $(x,y)=(0,2)$ là nghiệm tự nhiên duy nhất của phương trình.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên
+\[x^2-5x=y^2-2y-5.\]
+\loigiai{
+Phương trình đã cho tương đương với $$x^2-5x+6=(y-1)^2.$$
+    Với mọi số tự nhiên $x\ge 4,$ ta có nhận xét
+    $$(x-3)^2< x^2-5x+6< (x-2)^2.$$
+    Do $x^2-5x+6$ là số chính phương, mọi $x\ge 4$ đều không thỏa mãn. Kiểm tra trực tiếp với $x=0,1,2,3,$ ta kết luận $(x,y)=(2,1)$ và $(x,y)=(3,1)$ là hai nghiệm tự nhiên của phương trình.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+\[x^3+2x^2+3x+1=y^3.\]
+\loigiai{
+Dựa trên một số nhận xét
+\begin{align*}
+    y^3&=\tron{x^3+3x^2+3x+1}-x^2\\&=(x+1)^3-x^2 \\&\leq (x+1)^3,\\
+    y^3&=x^3+2x^2+3x+1\\&=(x^3-3x^2+3x-1)+5x^2+2\\&=(x-1)^3+5x^2+2\\& > (x-1)^3,
+\end{align*}
+ta chỉ ra $y=x$ hoặc $y=x+1.$
+    \begin{enumerate}
+        \item Với $y=x$, phương trình đã cho trở thành
+        $$x^3=x^3+2x^2+3x+1 \Leftrightarrow 2x^2+3x+1=0\Leftrightarrow (x+1)(2x+1)=0.$$
+        Trường hợp này cho ta $x=y=-1.$
+        \item Với $y=x+1$, phương trình đã cho trở thành 
+        $$(x+1)^3=x^3+2x^2+3x+1 \Leftrightarrow x^2=0\Leftrightarrow x=0.$$
+        Trường hợp này cho ta $x=0$ và $y=1.$
+    \end{enumerate}
+Kết luận, tất cả các cặp $(x,y)$ thỏa mãn đẳng thức là $(-1,-1)$ và $(0,1).$}
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Giải phương trình nghiệm nguyên $y^{3}-2 x-2=x(x+1)^2.$
+\nguon{Chuyên Toán Hưng Yên 2017}
+\loigiai{
+Phương trình đã cho tương đương với
+$$y^{3}-2 x-2=x(x+1)^2\Leftrightarrow y^3=x^3+2x^2+3x+2.$$
+Với mọi số nguyên $x,$ ta luôn có
+$$x^3<x^3+2x^2+3x+2<x^3+6x^2+12x+8.$$
+Ta chỉ ra $x^3+2x^2+3x+2=x^3+3x^2+3x+1$, vậy nên $x=1$ hoặc $x=-1$.\\
+Thế ngược lại, ta kết luận phương trình đã cho có $2$ nghiệm nguyên $(x,y)$ là $(1,2),(-1,0).$
+}
+\end{gbtt}
+
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+\[x^2+x=y^4+y^3+y^2.\]
+\loigiai{
+Phương trình đã cho tương đương với 
+$$4x^2+4x=4y^4+4y^3+4y^2\Leftrightarrow (2x+1)^2=4y^4+4y^3+4y^2+1.$$
+Ta có các đánh giá sau.
+    \begin{align*}
+        \tron{4y^4+4y^3+4y^2+1}-(2y^2+y)^2&=3y^2+1>0,\\
+        (2y^2+y+2)^2-\tron{4y^4+4y^3+4y^2+1}&=5y^2+4y+3>0.
+    \end{align*}
+Các đánh giá theo hiệu trên cho ta $$(2y^2+y)^2<4y^4+4y^3+4y^2+1<(2y^2+y+2)^2.$$
+Do $4y^4+4y^3+4y^2+1$ là số chính phương nên  $$4y^4+4y^3+4y^2+1=(2y^2+y+1)^2.$$ Ta tìm ra $y=0$ hoặc $y=-2.$
+    \begin{enumerate}
+        \item Với $y=0,$ ta có $(2x+1)^2=1,$ hay là $x=0$ hoặc $x=-1.$
+        \item Với $y=-2,$ ta có $(2x+1)^2=49,$ hay là $x=3$ hoặc $x=-4.$
+    \end{enumerate}
+    Kết luận, phương trình có tất cả $4$ nghiệm nguyên $(x,y)$ là $(0,0),(3,-2),(-1,0),(-4,-2).$}
+\end{gbtt}
+
+\begin{gbtt} 
+Tìm các số nguyên dương $x,y$ thỏa mãn
+$y^4+2y^3-3=x^2-3x.$
+\nguon{Chuyên Toán Hải Phòng 2021}
+\loigiai{
+Phương trình đã cho tương đương với
+$$4y^4+8y^3-12=4x^2-12x\Leftrightarrow 4y^4+8y^3-3=(2x-3)^2.$$
+Tới đây, ta xét các hiệu
+\begin{align*}
+    \tron{4y^4+8y^3-3}-\tron{2y^2+2y-1}^2&=4(y-1)\ge 0,\\
+    \tron{2y^2+2y}^2-\tron{4y^4+8y^3-3}&=4y^2+3>0.
+\end{align*}
+Các đánh giá theo hiệu bên trên cho ta biết
+$$\tron{2y^2+2y-1}^2\le 4y^4+8y^3-3< \tron{2y^2+2y}^2.$$
+Do $4y^4+8y^3-3$ là số chính phương, ta bắt buộc phải có $4y^4+8y^3-3=\tron{2y^2+2y-1}^2,$ tức $y=1.$ \\
+Ta tìm ra $x=3$ từ đây. Kết luận, $(x,y)=(1,3)$ là cặp số duy nhất thỏa mãn đề bài.
+}
+\end{gbtt} %haiphong
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+$$\min \left\{x^{4}+8 y;\  8 x+y^{4}\right\}=(x+y)^{2}.$$
+\nguon{Titu Andreescu}
+\loigiai{Do đổi chỗ $x$ và $y$ không làm thay đổi dữ kiện bài toán nên không mất tính tổng quát, ta có thể giả sử $$8 x+y^{4}=(x+y)^{2}.$$ Ta viết lại phương trình thành
+$$(x+y-4)^{2}=y^{4}-8 y+16.$$
+Do đó $y^{4}-8 y+16$ phải là số chính phương. Nếu $y \geq 3$, ta nhận xét được
+$$\left(y^{2}-1\right)^{2}<y^4-8y+16<\tron{y^2}^2.$$
+Theo kiến thức đã học, $y^4-8y+16$ không là số chính phương lúc này. Chính vì thế, ta có $y\in\{1;2\}.$ Thử lại, ta kết luận phương trình đã cho có các nghiệm nguyên dương là
+$$(x, y)=(6,2), \quad(x, y)=(6,1), \quad(x, y)=(1,6), \quad(x, y)=(2,6).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương 
+\[a^2+b+3=\left ( b^2-c^2 \right )^2.\]
+\nguon{Japan Mathematical Olympiad Final 2019}
+\loigiai{
+Dễ thấy $b\ne c.$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $b< a,$ ta có đánh giá
+    $$a^2<a^2+b+3<a^2+a+2\le (a+1)^2.$$
+    Do $a^2+b+3$ là số chính phương nên dấu bằng trong đánh giá trên phải xảy ra. \\Ta tìm ra $a=1$ từ đây, nhưng khi đó $b<1,$ vô lí.
+    \item Nếu $b>a,$ ta có đánh giá
+    $$a^2+b+3=\left ( b^2-c^2 \right )^2=(b-c)^2(b+c)^2\ge (b+c)^2\ge (b+1)^2=b^2+2b+1.$$
+    Từ đánh giá trên, ta suy ra
+    $$a^2\ge b^2+b-2\ge (a+1)^2+(a+1)-2=a^2+3a.$$
+    Ta thu được mâu thuẫn.
+    \item Nếu $b=a,$ thế trở lại phương trình, ta được
+    $$a^2+a+3=\tron{a^2-c^2}^2.$$
+    Ta có $a^2+a+3$ là số chính phương. Bằng nhận xét
+    $$a^2<a^2+a+3<(a+2)^2$$
+    ta chỉ ra $a^2+a+3=(a+1)^2$ hay $a=2.$ Thế trở lại, ta được $b=2$ và $c=1.$
+\end{enumerate}
+Như vậy phương trình đã cho có duy nhất một nghiệm nguyên dương là $(a,b,c)=(2,2,1).$}
+\end{gbtt}
+%Châu
+\begin{gbtt}
+Giải hệ phương trình sau trên tập số nguyên
+\[\heva{y^3&=x+1 \\ z^3&=x^2-x+2.}\]
+\loigiai{
+Nhân lần lượt theo vế, ta thu được
+$$y^3z^3=\tron{x+1}\tron{x^2-x+2},$$
+hay là $(yz)^3=x^3+x+2.$ Với mọi số nguyên $x$, ta luôn có
+    $$x^3-3x^2+3x-1<x^3+x+2<x^3+6x^2+12x+8.$$
+Ta thu được $x^3+x+2$ có thể bằng $x^3$ hoặc $\tron{x+1}^3$. Ta xét hai trường hợp sau.
+\begin{enumerate}
+       \item Với $x^3+x+2=x^3,$ ta có $x=-2.$ Thế trở lại, ta được $(x,y,z)=(-2,-1,2).$
+         \item Với $x^3+x+2=(x+1)^3,$ ta có $x=-1.$ Thế trở lại, ta không tìm được $z$ nguyên
+\end{enumerate}
+    Như vậy, phương trình đã cho có nghiệm nguyên duy nhất là $(-2,-1,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+\[4y^2+28y+17=7^x.\]
+\loigiai{
+Giả sử tồn phương trình có nghiệm nguyên dương $x,y$ thỏa mãn.
+Biến đổi phương trình đã cho, ta có
+$$4y(y+7)+17=7^x.$$
+Vì $y,(y+7)$ khác tính chẵn lẻ nên $2\mid y(y+7)$ kéo theo $8\mid 4y(y+7).$\\
+Xét trong hệ đồng dư modulo $8$, ta nhận được
+$$7^x=4y(y+7)+17\equiv0+17\equiv1\pmod{8}.$$
+Vì $7^x$ chia $8$ dư $1$ nên $x$ chia hết cho $2$. Đặt $x=2a$, thế trở lại phương trình, ta nhận được
+$$4y^2+28y+17=\tron{7^a}^2.$$
+Với mọi số nguyên dương $y$, ta luôn có
+$$(2y+5)^2\le4y^2+28y+17<(2y+7)^2. $$
+Do $4y^2+28y+17=\tron{7^x}^2$ là số chính phương nên $4y^2+28y+17$ bằng $(2y+5)^2$ hoặc $(2y+6)^2,$ và thế thì $y=1, \ x=2$. Phương trình đã cho có nghiệm nguyên dương duy nhất là $(x,y)=(2,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số tự nhiên $x,y$ thỏa mãn
+\[2017^x=y^6-32y+1.\]
+\nguon{Austrian Mathematical Olympiad 2017}
+\loigiai{Đầu tiên, ta có $y$ là số chẵn, thế nên
+$$\heva{&64\mid y^6 \\ &64\mid 32y}\Rightarrow 64\mid \tron{y^6-32y}\Rightarrow 64\mid\tron{2017^x-1}.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $x$ lẻ, ta đặt $x=2k+1.$ Ta có
+        $$2017^x=2017^{2k+1}\equiv 33^{2k+1}=33\cdot1089^k\equiv 33\pmod{64}.$$
+        Điều này mâu thuẫn với lập luận $2017^x-1$ chia hết cho $64$ ở trên.
+    \item Nếu $x$ chẵn, ta có $2017^x$ là số chính phương. \\Với $y=0$ hoặc $y=2,$ thử trực tiếp, ta tìm ra $x=0.$ Với $y\ge 4,$ ta có các nhận xét
+        \begin{align*}
+           y^6-32y+1&<y^6=\tron{y^3}^2,\\ y^6-32y+1-\tron{y^3-1}^2&=2y^3-32y=2y\tron{y-4}\tron{y+4}\ge 0.
+        \end{align*}
+        Nhận xét trên kết hợp với chú ý $y^6-32y+1$ là số chính phương cho ta $$y^6-32y+1=\tron{y^3-1}^2.$$ Ta tìm ra $y=4$ từ đây, nhưng không tìm ngược lại được $x$ nguyên.
+\end{enumerate}
+    Tổng kết lại, có $2$ cặp số tự nhiên $(x,y)$ thỏa mãn đề bài là $(0,0)$ và $(0,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên
+\[y^4+6y^3+3y^2-10y+81=3^x.\]
+\loigiai{
+Giả sử tồn phương trình có nghiệm tự nhiên $x,y$ thỏa mãn. Ta có
+$$y(y-1)(y+2)(y+5)+81=3^x.$$
+Lấy đồng dư theo modulo $4$ cho vế trái, ta chỉ ra
+$$y(y-1)(y+2)(y+5)+81\equiv y(y-1)(y-2)(y-3)+1\equiv 1\pmod{4}.$$
+Do vậy, $3^x$ chia $4$ dư $1$. Xét tính chẵn lẻ của $x,$ ta chỉ ra $x$ chẵn. Đặt $x=2a,$ ta nhận được
+$$y^4+6y^3+3y^2-10y+81=\tron{3^a}^2.$$
+Với $y=0$ và $y=1,$ ta có $3^x=81$. Từ đây, ta suy ra $(x,y)=(4,0),(4,1).$ Với $y\ge2,$ ta xét các hiệu sau
+\begin{align*}
+\tron{y^2+3y+2}^2-\tron{y^4+6y^3+3y^2-10y+81}&=10y^2+22y-77>0,\\
+\tron{y^4+6y^3+3y^2-10y+81}-\tron{y^2+3y-3}^2&=8y+72>0.
+\end{align*}
+Các đánh giá theo hiệu bên trên cho ta biết
+$$\tron{y^2+3y-3}^2<y^4+6y^3+3y^2-10y+81<\tron{y^2+3y+2}^2.$$
+Do $y^4+6y^3+3y^2-10y+81$ là số chính phương, ta thu được các trường hợp sau.
+\begin{enumerate}
+    \item Với $y^4+6y^3+3y^2-10y+81=\tron{y^2+3y-2}^2,$ ta có
+    $$2y^2-2y-77=0.$$
+    Phương trình trên không có nghiệm tự nhiên.
+    \item Với $y^4+6y^3+3y^2-10y+81=\tron{y^2+3y-1}^2,$ ta có
+    $$4y^2+4y-80=0\Leftrightarrow 4(y-4)(y+5)=0.$$
+    Ta tìm được $y=4,$ kéo theo $x=6.$
+    \item Với $y^4+6y^3+3y^2-10y+81=\tron{y^2+3y}^2,$ ta có
+    $$6y^2+10y-81=0.$$
+    Phương trình trên không có nghiệm tự nhiên.    
+    \item Với $y^4+6y^3+3y^2-10y+81=\tron{y^2+3y+1}^2,$ ta có
+    $$8y^2+16y-80=0.$$
+    Phương trình trên không có nghiệm tự nhiên.        
+\end{enumerate}
+Như vậy, phương trình đã cho có các nghiệm tự nhiên là $$(4,0),\quad (4,1),\quad (6,4).$$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên 
+$$5^x=y^4+4y+1.$$
+\nguon{Tạp chí Toán học và Tuổi trẻ số 440}
+\loigiai{
+Ta sẽ đi chứng minh $x$ chẵn. Thật vậy, nếu như $x$ là số lẻ, ta có 
+$$y^{4}+4y=5^x-1\equiv 2-1\equiv 1\pmod{3}.$$
+Song, từ việc xét các số dư của $y$ khi chia cho $3,$ ta lập được bảng đồng dư
+\begin{center}
+    \begin{tabular}{c|c|c|c}
+      $y$   & $0$ & $1$ & $2$ \\
+      \hline
+        $y^4+4y$ & $0$ & $2$ & $0$  
+    \end{tabular}
+\end{center}
+Dựa vào bảng, ta chỉ ra điều mâu thuẫn. Ta có $x$ chẵn. Đặt $x = 2k.$ Phương trình đã cho trở thành
+$$\tron{5^k}^2=y^{4}+4y+1.$$
+Mặt khác, với $y\ge 3,$ ta lại nhận xét được
+\begin{align*}
+    y^4+4y+1-y^4&=4y+1>0,\\
+    \tron{y^2+1}^2-\tron{y^4+4y+1}&=2y^2-4y=2y(y-2)>0.
+\end{align*}
+Như vậy $y^4+4y+1$ không là số chính phương với mọi $y\ge 2.$ Với $y=0$ và $y=1,$ kiểm tra trực tiếp rồi thử lại, ta kết luận phương trình đã cho có hai nghiệm tự nhiên là $(0,0)$ và $(2,2).$}
+\end{gbtt}
+
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên
+\[x^3+6x+7=3^y.\]
+\loigiai{
+Giả sử phương trình đã cho tồn tại nghiệm tự nhiên $(x,y)$ thỏa mãn. \\
+Xét bảng đồng dư modulo $13$, ta có
+\begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c|c|c|c|c|c|c|c}
+        $x$ &  $0$&  $1$&  $2$&  $3$&  $4$&  $5$&  $6$&  $-6$&  $-5$&  $-4$&  $-3$&   $-2$&  $-1$ \\
+        \hline
+        $x^3+6x+7$&$7$&$1$  &$1$&$0$&$4$&$6$&$12$&$2$&$8$&$10$&$1$&$0$&$0$                    
+    \end{tabular}
+\end{center}
+Ta có nhận xét sau.
+\begin{enumerate}
+    \item Với $y=3k,$ ta luôn có $3^y\equiv27^k\equiv1\pmod{13}.$
+     \item Với $y=3k+1,$ ta luôn có $3^y\equiv27^k\cdot3\equiv3\pmod{13}.$
+      \item Với $y=3k,$ ta luôn có $3^y\equiv27^k\cdot9\equiv9\pmod{13}.$
+\end{enumerate}
+Từ những nhận xét trên kết hợp với $x^3+6x+7=3^y$, ta thu được $3^y\equiv1\pmod{13}$ kéo theo $y=3k.$ \\Thế trở lại phương trình, ta nhận được
+$$x^3+6x+7=\tron{3^k}^3.$$
+Với mọi số tự nhiên $x$, ta nhận thấy
+$$x^3<x^3+6x+7<\tron{x+2}^3.$$
+Ta suy ra $x^3+6x+7=(x+1)^3.$ Giải phương trình, ta thu được $x=2$ là nghiệm tự nhiên thỏa mãn, kéo theo $y=3.$ Phương trình đã cho có duy nhất một nghiệm tự nhiên là $(x,y)=(2,3).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+\[5^x+8x+15=16y^2+16y.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm nguyên dương $(x,y)$ thỏa mãn. Xét trong hệ modulo $8.$
+\begin{enumerate}
+    \item Với $x=2k$, ta có $5^x+8x+15\equiv1+15\equiv0\pmod{8}.$
+     \item Với $x=2k+1$, ta có $5^x+8x+15\equiv5+8+15\equiv4\pmod{8}.$
+\end{enumerate}
+Lại có $16y^2+16y\equiv0\pmod{8}.$ Từ đây, ta suy ra $x=2k.$ Thế trở lại phương trình, ta nhận được
+$$\tron{5^k}^2+16k+19=\tron{4y+2}^2.$$
+Với mọi số nguyên dương $k>2,$ ta luôn có
+$$\tron{5^k}^2<\tron{5^k}^2+16k+19<\tron{5^k+1}^2.$$
+Do vậy, không tồn tại $k$ thỏa mãn. Chỉ có $k=1$ hoặc $k=2.$ Thế trở lại, ta tìm được $y=6.$\\ Phương trình đã cho có duy nhất nghiệm nguyên dương $(x,y)$ là $(4,6).$}
+\end{gbtt}
+
+
+\section{Phép gọi ước chung}
+Phép gọi ước chung được dùng chủ yếu trong hai trường hợp sau đây.
+\begin{enumerate}
+    \item Liên hệ giữa sự chênh lệch bậc và tính nguyên tố cùng nhau.
+    \item Áp dụng bổ đề về ước chung lớn nhất (xem \chu{chương III}).
+\end{enumerate}
+Một số tài liệu còn sử dụng phương pháp lùi vô hạn thay thế cho phép gọi ước chung cho phần nửa đầu của mục này. Bạn đọc có thể tham khảo phương pháp ấy trên các tài liệu số học khác.
+\subsection*{Ví dụ minh họa}
+
+\begin{bx} \label{baimodaugcd}
+Giải phương trình nghiệm nguyên $x^3+2y^3=4z^3.$
+\loigiai{
+Ta nhận thấy phương trình có nghiệm $(x,y,z)=(0,0,0).$ \\ Nếu như $x\ne 0,$ ba số $x,y,z$ tồn tại ước chung, gọi là $d.$ Ta đặt
+$$x=dx_1,y=dy_1,z=dz_1.$$
+Một cách hiển nhiên, $(x_1,y_1,z_1)=1.$ Ngoài ra, do $d\ne 0,$ phương trình đã cho trở thành
+\[x^3_1+2y^3_1=4z^3_1.\tag{1}\label{lvh1}\]
+Rõ ràng $x_1$ chia hết cho $2.$ Đặt $x_1 = 2x_2$ với $x_1$ là số nguyên. Thế vào (\ref{lvh1}), ta được
+\[8x^3_2+2y^3_1=4z^3_1\Leftrightarrow 4x^3_2+y^3_1=2z^3_1.\tag{2}\label{lvh2}\]
+Rõ ràng $y_1$ chia hết cho $2.$ Tiếp tục đặt $y_1 = 2y_2$ với $y_1$ là số nguyên. Thế vào (\ref{lvh2}), ta được
+\[4x^3_2+8y^3_2=2z^3_1\Leftrightarrow 2x^3_2+4y^3_2=z^3_1.\]
+Ta tiếp tục nhận được $z_1$ chia hết cho $3.$ Cả $x_1,y_1$ và $z_1$ đều chia hết cho $2,$ chứng tỏ $(x_1,y_1,z_1)\ge 2,$ mâu thuẫn với điều kiện $(x_1,y_1,z_1)=1.$ Trường hợp $x,y,z$ không đồng thời bằng $0$ không xảy ra. Nghiệm nguyên duy nhất của phương trình là $(x,y,z)=(0,0,0).$}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các bộ số nguyên dương $(x,y)$ thỏa mãn $$x^3-y^3=95\left(x^2+y^2\right).$$ 
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2016}
+\loigiai{Nhờ điều kiện $x,y>0,$ ta có thể đặt $d=(x,y).$ Lúc này, tồn tại các số nguyên dương $a,b$ thỏa mãn $(a,b)=1,x=da,y=db.$ Phương trình đã cho trở thành
+$$d({a - b})\left( {{a^2} + ab + {b^2}}\right) = 95\left({a^2} + {b^2}\right).$$ 
+Từ điều kiện $(a,b) = 1,$ ta dễ dàng chứng minh $\left(a^2+ab+b^2\right)=\left(ab,a^2+b^2\right)= 1.$ Chứng minh này cho ta biết $95$ chia hết cho ${a^2} + ab + {b^2}.$ Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $a^2+ab+b^2$ là bội của $5,$ cả $a$ và $b$ đều chia hết cho $5$. Vì lẽ đó, $(a,b)\ge 5,$ mâu thuẫn với điều kiện $(a,b)=1.$
+    \item Nếu $a^2+ab+b^2=1,$ ta có $1=a^2+ab+b^2\ge 1+1+1=3,$ mâu thuẫn.
+    \item Nếu $a^2+ab+b^2=19,$ ta có
+    $$19=a^2+ab+b^2\ge a^2+1+1,$$
+    thế nên $a\le 4.$ Thử với $a=1,2,3,4,$ ta tìm ra $(a,b)=(3,2)$ hoặc $(a,b)=(2,3),$ nhưng do $a>b$ nên $a=3,b=2.$ Thay ngược lại, ta tính được $d=65,$ kéo theo $x=195,y=130.$
+\end{enumerate}
+Kết luận, có duy nhất một cặp số $(x,y)$ thỏa mãn đề bài là $(195,130).$}
+\end{bx}
+
+\begin{bx}
+Tìm các số nguyên $x,y$ thỏa mãn $x\left(x^2+x+1\right) = 4y\left(y+1 \right).$
+\loigiai{
+Phương trình đã cho tương đương
+$$x^3+x^2+x+1= \left( {2y + 1} \right)^2 \Leftrightarrow \left(x^2+1 \right)\left(x+1 \right) =\left( 2y+1\right)^2.$$ 
+Ta nhận thấy $x^2+1\ne 0,$ thế nên giữa $x^2+1$ và $x+1$ tồn tại ước chung. Đặt $\left(x^2+1,x+1\right)=d,$ và phép đặt này cho ta 
+\begin{align*}
+    \heva{&d\mid \left(x^2+1\right) \\ &d\mid (x+1)}
+    &\Rightarrow 
+    \heva{&x^2+1\equiv 0\pmod{d} \\ &x\equiv -1\pmod{d}}
+    \\&\Rightarrow
+    (-1)^2+1\equiv 0\pmod{d}\\&
+    \Rightarrow 
+    d\mid 2.
+\end{align*}
+Nhận xét này cho ta $d=1$ hoặc $d=2.$ \begin{enumerate}
+    \item Với $d=1,$ theo bổ đề, ta chỉ ra $x^2+1$ là số chính phương, kéo theo $x=0.$ Ta tìm ra $y=0$ hoặc $y=-1$ từ đây.
+    \item Với $d=2,$ cả $x^2+1$ và $x+1$ đều chia hết cho $2,$ thế nên $(2y+1)^2=\left(x^2+1 \right)\left(x+1 \right)$ chia hết cho $4,$ mâu thuẫn.
+\end{enumerate}
+Như vậy, $(x,y)=(0,-1)$ và $(x,y)=(0,0)$ là hai cặp số thỏa mãn đề bài.}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt} Giải phương trình nghiệm nguyên $$x^2+y^2=3z^2.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $x,y,z$ thỏa mãn $$4x^2+4xy+3y^2=5z^2.$$
+\end{btt}
+
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên $(m,n)$ sao cho $$6(m+1)(n-1), \quad (m-1)(n+1)+6,\quad (m+2)(n-2)$$
+là các số lập phương.
+\end{btt}
+
+\begin{btt}
+Giải hệ phương trình nghiệm tự nhiên
+$$\heva{&2\left({x}^{2}+{y}^{2}-3 {x}+2 {y}\right)-1=z^2 \\ &5\left({x}^{2}+{y}^{2}+4 {x}+2 {y}+3\right)=t^2.}$$
+\nguon{Chuyên Toán Nam Định 2020}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên $$x^2 + y^2 = 6\tron{z^2 + t^2}.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+$$x^2+y^2+z^2=x^2y^2.$$
+\end{btt}
+
+\begin{btt} 
+Giải phương trình nghiệm nguyên
+$$x^2+y^2+z^2=2xyz.$$
+\end{btt}
+
+\begin{btt}
+  Với $k$ là số nguyên dương, chứng minh rằng không tồn tại các số nguyên $a, b, c$ khác 0 sao cho \[a+b+c=0,\quad ab+bc+ca+{{2}^{k}}=0.\]
+\nguon{Chuyên Toán Phổ thông Năng khiếu}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên không âm $a, b, c, d, n$ thỏa mãn
+\[a^{2}+b^{2}+c^{2}+d^{2}=7 \cdot 4^{n}.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+\[x^2(x+y)=y^2(x-y)^2.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+\[2x^3=y^3\tron{3x+y+2}.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $a,b$ thỏa mãn $$a^3+b^3=a^2+6ab+b^2.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ số nguyên $(m, n)$ thỏa mãn phương trình sau
+\[m^5-n^5=16mn.\]
+\nguon{Junior Balkan Mathematical Olympiad}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+    $$x^{6}-y^{6}=2016 x y^{2}.$$
+\nguon{Adrian Andreescu}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $x,y$ thỏa mãn $$54x^3-1=y^3.$$
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên $x,y$ thỏa mãn $$x^4- 2y^2 = 1.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+    $$2x^2-y^{14}=1.$$
+\nguon{Nairi Sedrakyan}
+\end{btt}
+
+%nguyệt anh
+\begin{btt}
+Giải phương trình nghiệm nguyên \[x^4+4x^3+8x^2+8x+3=y^3.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên
+\[x^4+4x^3+7x^2+6x+3=y^3.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $x,y$ và số nguyên tố $p$ thỏa mãn \[\dfrac{x^4+x^2+1}{p}=y^4.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên $$9^x=2y^2+1.$$
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $x,y,z$ thoả mãn điều kiện 
+$$x^3-y^3=z^2,$$
+trong đó $y$ là số nguyên tố và $(z,3)=(x,y)=1.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ và hai số nguyên dương $a, b$ sao cho $p^a+p^b$ là số chính phương.
+\nguon{Tạp chí Toán học và Tuổi trẻ số 507, tháng 9 năm 2019}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt} Giải phương trình nghiệm nguyên $x^2+y^2=3z^2.$
+\loigiai{
+Ta nhận thấy phương trình có nghiệm $(0,0,0).$\\ Nếu như $x\ne 0,$ ba số $x,y,z$ tồn tại ước chung, gọi là $d.$ Ta đặt
+$$x=dx_1,y=dy_1,z=dz_1.$$
+Một cách hiển nhiên, $(x_1,y_1,z_1)=1.$ Ngoài ra, do $d\ne 0,$ phương trình đã cho trở thành
+\[x^2_1+y^2_1=3z^2_1.\tag{*}\label{lvh3}\]
+Ta đã biết, với mọi số nguyên $a,b,$ nếu $a^2+b^2$ chia hết cho $3$ thì $a$ và $b$ cũng chia hết cho $3.$ Theo đó, cả $x_1$ và $y_1$ đều chia hết cho $3.$ Thực hiện đặt $x_1=3x_2$ và $y_1=3y_2$ rồi thế vào (\ref{lvh3}), ta được
+$$9x^2_2+9y^2_2=3z^2_1\Leftrightarrow 3x^2_2+3y^2_2=z^2_1.$$
+Rõ ràng, $z_1$ chia hết cho $3.$ Cả $x_1,y_1$ và $z_1$ đều chia hết cho $3,$ chứng tỏ $(x_1,y_1,z_1)\ge 3,$ mâu thuẫn với điều kiện $(x_1,y_1,z_1)=1.$ Trường hợp $x,y,z$ không đồng thời bằng $0$ không xảy ra. Nghiệm nguyên duy nhất của phương trình là $(0,0,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $x,y,z$ thỏa mãn $4x^2+4xy+3y^2=5z^2.$
+\loigiai{Ta nhận thấy $x=y=z=0$ thỏa mãn đề bài. \\ 
+Đối với trường hợp $x,y,z$ không đồng thời bằng $0$, ta đặt $d=(x,y,z),$ khi đó tồn tại các số nguyên $m,n,p$ sao cho $(m,n,p)=1$ và $x=dm,y=dn,z=dp.$ Phép đặt này cho ta 
+$$4\left(dm\right)^2+4dm\cdot dn+3\left(dn\right)^2=5(dp)^2.$$
+Chia cả hai vế cho $d^2,$ ta được
+$$4m^2+4mn+3n^2=5p^2\Leftrightarrow (2m+n)^2+2n^2=5p^2.$$
+Ta đã biết, một số chính phương chỉ có thể đồng dư $0,1,4$ theo modulo $5.$ Do $$(2m+n)^2+2n^2\equiv 0 \pmod{5},$$ ta xét bảng đồng dư theo modulo $5$ sau
+        \begin{center}
+            \begin{tabular}{c|c|c|c}
+            $(2m+n)^2$ & $0$ & $1$ & $4$\\
+            \hline
+            $2n^2$ & $0$ & $4$ & $1$\\
+            \hline
+            $4n^2$& $0$ & $3$ & $2$
+            \end{tabular}
+        \end{center}
+Một số chính phương không thể đồng dư $2$ hoặc $3$ theo modulo $5,$ thế nên đối chiếu với bảng, ta được $n^2\equiv 0 \pmod{5},$ hay $n^2$ chia hết cho $5.$ Ta lần lượt suy ra
+$$\heva{&5\mid n^2 \\ &5\mid (2m+n)^2}\Rightarrow \heva{&5\mid n \\ &5\mid (2m+n)}\Rightarrow \heva{&25\mid n^2 \\ &25\mid (2m+n)^2}\Rightarrow 25\mid 5p^2 \Rightarrow 5\mid p^2 \Rightarrow 5\mid p.$$
+Cả $m,n,p$ đều chia hết cho $5,$ chứng tỏ $(m,n,p)\ge 5,$ mâu thuẫn với điều kiện phép đặt. Trường hợp $x,y,z$ không đồng thời bằng $0$ không xảy ra. Nghiệm nguyên duy nhất của phương trình là $(0,0,0).$}
+\end{gbtt}
+
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên $(m,n)$ sao cho $$6(m+1)(n-1), \quad (m-1)(n+1)+6,\quad (m+2)(n-2)$$
+là các số lập phương.
+\loigiai{
+Đặt $a^3=6(m+1)(n-1), b^3=(m-1)(n+1)+6$ và $c^3=(m+2)(n-2).$ Ta dễ dàng chỉ ra
+$$a^3=2b^3+4c^3.$$
+Áp dụng kết quả của \chu{ví dụ \ref{baimodaugcd}}, ta tìm ra $a=b=c=0.$ Các cặp $(m,n)$ thỏa mãn yêu cầu bài toán là
+$$(m,n)=(-1,2),\quad (m,n)=(-2,1).$$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải hệ phương trình nghiệm tự nhiên
+$$\heva{&2\left({x}^{2}+{y}^{2}-3 {x}+2 {y}\right)-1=z^2 \\ &5\left({x}^{2}+{y}^{2}+4 {x}+2 {y}+3\right)=t^2.}$$
+\nguon{Chuyên Toán Nam Định 2020}
+\loigiai{
+Cộng theo vế hai phương trình trong hệ đã cho, ta nhận được
+$$7\tron{x+1}^2+7\tron{y+1}^2=z^2+t^2.$$
+Ta nhận thấy $x=y=-1,z=t=0$ không thỏa mãn. Trong trường hợp $(x,y,z,t)\ne (-1,-1,0,0)$ ta đặt $\tron{x+1,y+1,z,t}=d.$ Lúc này, tồn tại các số tự nhiên $x_1,y_1,z_1,t_1$ nguyên tố cùng nhau sao cho
+$$7x_1^2+7y_1^2=z_1^2+t_1^2.$$
+Lấy đồng dư modulo $7$ hai vế, ta được
+$z_1^2+t_1^2\equiv0\pmod{7}.$ Ta đã biết 
+$$z_1^2\equiv 0,1,2,4\pmod{4}.$$
+Dựa trên chứng minh này, ta lập được bảng đồng dư sau.
+\begin{center}
+    \begin{tabular}{c|c|c|c|c}
+        $z_1^2$ &  $0$ & $1$ & $2$ & $4$ \\
+        \hline
+        $t_1^2$ &  $0$ & $6$ & $5$&$3$
+    \end{tabular}
+\end{center}
+Theo như bảng đồng dư, chỉ có trường hợp $z_1^2\equiv t_1^2\equiv 0\pmod{7}$ là thỏa mãn. Ta lần lượt suy ra
+\begin{align*}
+    z_1\equiv t_1\equiv 0\pmod{7}&\Rightarrow z_1^2\equiv t_1^2\equiv 0\pmod{49}\\&\Rightarrow z_1^2+t_1^2\equiv 0\pmod{49}\\&\Rightarrow 7x_1^2+7y_1^2\equiv 0\pmod{49}\\&\Rightarrow x_1^2+y_1^2\equiv 0\pmod{7}.
+\end{align*}
+Lập luận tương tự, ta có cả $x_1$ và $y_1$ chia hết cho $7,$ thế nên là 
+$$\tron{x_1,y_1,z_1,t_1}\ge 7.$$
+Điều này mâu thuẫn với điều kiện $\tron{x_1,y_1,z,t}=1.$ Giả sử là sai. Hệ đã cho không có nghiệm nguyên.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên 
+\[x^2 + y^2 = 6\tron{z^2 + t^2}.\]
+\loigiai{
+Ta nhận thấy phương trình có nghiệm $(0,0,0,0).$ Nếu như $x\ne 0,$ bốn số $x,y,z,t$ tồn tại ước chung $d.$ Đặt
+$$x=dx_1,y=dy_1,z=dz_1,t=dt_1.$$
+Một cách hiển nhiên, $(x_1,y_1,z_1,t_1)=1.$ Ngoài ra, do $d\ne 0,$ phương trình đã cho trở thành
+\[x^2_1+y^2_1=6z^2_1+6t^2_1.\tag{1}\label{lvh4}\]
+Dựa vào (\ref{lvh4}), ta nhận ra $x_1^2 + y_1^2$ chia hết cho $3,$ thế nên cả $x_1$ và $y_1$ đều chia hết cho $3.$ Ta đặt $x_1 = 3x_2$, $y_1 = 3y_2$ với $y_2,y_2$ là các số nguyên. Thế vào (\ref{lvh4}) rồi chia hai vế phương trình cho $3$, ta được
+\[9x^2_2+9y^2_2=6z^2_1+6t^2_1\Leftrightarrow 3x^2_2+3y^2_2=2z^2_1+2t^2_1.\tag{2}\label{lvh5}\]
+Do $(2,3)=1$ nên dựa vào (\ref{lvh5}), ta nhận ra $z_1^2 + t_1^2$ chia hết cho $3,$ thế nên cả $z_1$ và $t_1$ đều chia hết cho $3.$ Bốn số $x_1,y_1,z_1$ và $t_1$ đều chia hết cho $3,$ chứng tỏ $(x_1,y_1,z_1,t_1)\ge 3,$ mâu thuẫn với điều kiện $(x_1,y_1,z_1,t_1)=1.$ \\
+Tổng kết lại, phương trình có nghiệm nguyên duy nhất là $(x,y,z,t)=(0,0,0,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+\[x^2+y^2+z^2=x^2y^2.\]
+\loigiai{
+Ta nhận thấy $(x,y,z)=(0,0,0)$ là một nghiệm phương trình. \\Ngược lại, nếu một trong ba số $x,y,z$ khác $0,$ ta đặt
+$$(x,y,z)=d,\quad x=dm,\quad y=dn,\quad z=dp,$$
+trong đó $(m,n,p)=1.$ Do $d\ne 0$ nên phương trình đã cho trở thành
+\[m^2+n^2+p^2=d^2m^2n^2.\tag{*}\label{luivohan123}\]
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu cả ba số $m,n,p$ đều chẵn thì $(m,n,p)>2,$ mâu thuẫn.
+    \item Nếu $m$ và $n$ cùng chẵn, còn $p$ lẻ thì vế trái của (\ref{luivohan123}) lẻ, trong khi vế phải chẵn, mâu thuẫn.
+    \item Nếu $m$ và $n$ khác tính chẵn lẻ, ta nhận thấy
+    $$m^2+n^2+p^2\equiv \heva{1\pmod{4},&\text{ với }p\text{ chẵn} \\ 2\pmod{4},&\text{ với }p\text{ lẻ}.}$$
+    còn $d^2m^2n^2$ chia hết cho $4,$ mâu thuẫn.
+    \end{enumerate}    
+Tổng kết lại, phương trình có nghiệm nguyên duy nhất là $(x,y,z)=(0,0,0).$}
+\end{gbtt}
+
+\begin{gbtt} Giải phương trình nghiệm nguyên
+\[x^2 + y^2 + z^2 = 2xyz.\]
+\loigiai{
+Nếu như phương trình có nghiệm, $x^2 + y^2 + z^2$ phải là số chẵn. Theo đó, trong ba số $x,y,z,$ hoặc có đúng $1$ số chẵn, hoặc cả $3$ số cùng chẵn. Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu trong ba số $x$, $y$, $z$ có một số chẵn, hai số lẻ, không mất tổng quát, ta giả sử $x$ chẵn, $y$ và $z$ lẻ. Theo như kiến thức đã học, ta có
+    $$x^2+y^2+z^2\equiv 0+1+1\equiv 2\pmod{4}.$$
+    Tuy nhiên, bởi vì $x$ chẵn nên $2xyz$ chia hết cho $4,$ mâu thuẫn.
+    \item Nếu cả ba số $x,y,z$ đều chẵn, ta nhận thấy $(0,0,0)$ thỏa mãn đề bài. Ngược lại, nếu trong $x,y,z$ có một số khác $0,$ ta đặt $x = 2dx_1$, $y = 2dy_1$, $z = 2dz_1,$ trong đó
+    $$d=\left(\dfrac{x}{2},\dfrac{y}{2},\dfrac{z}{2}\right).$$
+    Ta nhận thấy $(x_1,y_1,z_1)=1.$ Ngoài ra, phép đặt trên cho ta
+    $$x_1^2 + y_1^2 + z_1^2 = 4dx_1y_1z_1.$$
+    Lập luận tương tự các bài toán trước, ta có cả ba số $x_1,y_1$ và $z_1$ đều chẵn, mâu thuẫn với điều kiện $(x_1,y_1,z_1)=1.$	Trường hợp này không xảy ra.
+    \end{enumerate}    
+Tổng kết lại, phương trình có nghiệm nguyên duy nhất là $(x,y,z)=(0,0,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+    Với $k$ là số nguyên dương, chứng minh rằng không tồn tại các số nguyên $a, b, c$ khác 0 sao cho \[a+b+c=0,\quad ab+bc+ca+{{2}^{k}}=0.\]
+\nguon{Chuyên Toán Phổ thông Năng khiếu}
+ \loigiai{
+Đặt $d=\tron{a,b,c}$ và $a=dx,b=dy$ và $c=dz$ trong đó $\tron{x,y,z}=1.$ Thế trở lại giả thiết cho ta
+\begin{align}
+    d\tron{x+y+z}&=0, \tag{1}\label{ptnk16.1}\\
+    d^2\tron{xy+yz+zx}&=-2^k.\tag{2}\label{ptnk16.2}
+\end{align}
+Từ (\ref{ptnk16.1}) ta suy ra $z=-x-y.$ Thế vào (\ref{ptnk16.2}) ta được
+$$d^2\tron{x^2+xy+y^2}=2^k.$$
+Cũng vì $z=-x-y$ nên từ $(x,y,z)=1$ ta có $(x,y)=1.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $x,y$ không cùng tính chẵn lẻ hoặc cùng lẻ, ta có $x^2+xy+y^2$ là số lẻ và là ước dương của $2^k.$\\ Do đó $x^2+xy+y^2=1.$ Biến đổi tương đương cho ta $$\tron{2x+y}^2+3y^2=4.$$
+    Vì $x,y$ là các số nguyên nên ta suy ra $3y^2=3$ và $\tron{2x+y}^2=1.$ Từ đây, ta có bảng sau.
+    \begin{center}
+        \begin{tabular}{c|c|c|c|c}
+        $y$ &  $1$ & $-1$ &  $1$ & $-1$\\
+        \hline
+        $2x+y$ & $1$ &$-1$& $-1$ &$1$\\
+        \hline
+        $x$ & $0$& $0$ & $-1$ & $1$ \\
+        \hline
+        $z=-x-y$ & $-1$ & $1$ & $0$ & $0$
+    \end{tabular}
+    \end{center}
+Các giá trị của $x,y,z$ vừa thu được mâu thuẫn với điều kiện $xyz\ne 0.$
+    \item Với $x,y$ cùng là số chẵn, ta có $\tron{x,y}\ge 2,$ mâu thuẫn.
+\end{enumerate}
+Bài toán được chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên không âm $a, b, c, d, n$ thỏa mãn
+\[a^{2}+b^{2}+c^{2}+d^{2}=7 \cdot 4^{n}.\]
+\loigiai{
+Với $n=0,$ ta tìm ra $(a,b,c,d)$ là các hoán vị của $(2,1,1,1).$ 
+Với $n\ge 1,$ ta có $a^{2}+b^{2}+c^{2}+d^{2}$ chia hết cho $4.$ Điều này dẫn tới $a,b,c,d$ cùng tính chẵn lẻ. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $a,b,c,d$ là số lẻ, ta đặt $$a=2a'+1,b=2b+1,c=2c'+1, d=2d'+1.$$
+    Thế trở lại phương trình ban đầu, ta có
+    $$4a'\tron{a'+1}+4b'\tron{b'+1}+4c'\tron{c'+1}+4d'\tron{d'+1}=4\tron{7\cdot 4^{n-1}-1}.$$
+    Dễ dàng chỉ ra $VT$ chia hết cho $8$ nên ta suy ra $7\cdot4^{n-1}-1$ chia hết cho $2.$ Từ đây ta có $n=1.$ Thế $n=1$ trở lại phương trình ban đầu, ta được
+    $$a^2+b^2+c^2+d^2=28.$$
+    Phương trình này có hai nghiệm nguyên dương không kể thứ tự là 
+    $$(3,3,3,1),\quad (1,1,1,5).$$
+    \item Nếu $a,b,c,d$ là số chẵn, ta đặt $\tron{a,b,c,d}=x.$ Khi đó tồn tại các số tự nhiên $a_1,b_1,c_1,d_1$ sao cho $$a=xa_1,\:b=xb_1,\:c=xc_1,\:d=xd_1,\:\tron{a,b,c,d}=1.$$ 
+    Phương trình đã cho trở thành
+$$x^2\tron{a^2_1+b^2_1+c^2_1+d^2_1}=7\cdot4^n.$$
+    Tới đây, ta xét các trường hợp sau.
+        \begin{itemize}
+            \item\chu{Trường hợp 1.} Nếu trong $a_1,b_1,c_1,d_1$ có $3$ số lẻ và $1$ số chẵn (giả sử là $d_1$), ta có
+            $$a_1^2+b_1^2+c_1^2+d_1^2\equiv 3,7\pmod{8}.$$
+           Như vậy $a_1^2+b_1^2+c_1^2+d_1^2$ phải là ước của $7.$ Ta suy ra 
+           $$\tron{a_1,b_1,c_1,d_1}=\tron{1,1,1,2}\text{ và }x^2=4^n.$$ 
+           Bộ số chưa kể thứ tự thu được trong trường hợp này là
+            $$\tron{a_1,b_1,c_1,d_1}=\tron{2^n,2^n,2^n,2^{n+1}}.$$
+            \item\chu{Trường hợp 2.} Nếu trong $a_1,b_1,c_1,d_1$ có $3$ số chẵn và $1$ số lẻ, ta có 
+            $$a_1^2+b_1^2+c_1^2+d_1^2\equiv 3,7\pmod{8}.$$
+            Tới đây, ta lập luận tương tự trường hợp trước để chỉ ra sự không thoả mãn.
+            \item\chu{Trường hợp 3.} Nếu $a_1,b_1,c_1,d_1$ đều lẻ, ta sẽ có
+            $$a_1^2+b_1^2+c_1^2+d_1^2\equiv 4\pmod{8}.$$
+            Từ đó $4^n\equiv 4\pmod{8}.$ Do $x$ là luỹ thừa của $2$ nên từ phương trình ta có $x=2^{n-1},$ đồng thời
+            $$a_1^2+b_1^2+c_1^2+d_1^2=28.$$
+        Phương trình này có hai nghiệm nguyên dương không kể thứ tự là 
+    $$(3,3,3,1),\quad (1,1,1,5).$$
+          \end{itemize} 
+\end{enumerate}
+Tổng kết lại, các bộ số nguyên không âm $(a,b,c,d)$ thỏa mãn là $$\tron{2^n,2^n,2^n,2^{n+1}},\:\tron{3\cdot2^n,3\cdot2^n,3\cdot2^n,2^n},\:\tron{2^n,2^n,2^n,5\cdot2^n}$$ và toàn bộ các hoán vị của chúng.
+}
+\end{gbtt}
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+\[x^2(x+y)=y^2(x-y)^2.\]
+\loigiai{
+Đầu tiên, ta quan sát thấy $(x,y)=(0,0)$ là một nghiệm của phương trình. Với ít nhất một trong hai số $x,y$ khác $0$, ta đặt $(x,y)=d$, khi đó tồn tại hai số $a,b$ nguyên thỏa mãn
+$$(a,b)=1,\quad x=da,\quad y=db.$$ 
+Phương trình đã cho trở thành
+\[(da)^2(da+db)=(db)^2(da-db)^2\Leftrightarrow a^2(a+b)=db^2(a-b)^2.\tag{*}\label{stolecualam}\]
+Ta suy ra $a^2(a+b)$ chia hết cho $b^2,$ nhưng do $(a,b)=1$ nên $a+b$ chia hết cho $b^2,$ và $a$ chia hết cho $b.$ Lại do $(a,b)=1$ nên $b=1$ hoặc $b=-1.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Với $b=1,$ thế vào phương trình (\ref{stolecualam}) ta được
+    $$a^2(a+1)=d(a-1)^2.$$
+    Ta suy ra $a^2(a+1)$ chia hết cho $a-1,$ và thế thì $a\in \{-1;0;2;3\}.$ Lần lượt thế trở lại rồi kiểm tra trực tiếp, ta tìm được $(x,y)=(27,9)$ và $(x,y)=(24,12).$
+    \item Với $b=-1,$ thế vào phương trình (\ref{stolecualam}) ta được
+    $$a^2(a-1)=d(a+1)^2.$$    
+    Ta suy ra $a^2(a-1)$ chia hết cho $a+1,$ và thế thì $a\in \{1;0;-2;-3\}.$ Lần lượt thế trở lại rồi kiểm tra trực tiếp, ta không tìm được cặp $(x,y)$ nào thỏa mãn.
+\end{enumerate}
+Kết luận, phương trình đã cho có hai nghiệm nguyên $(x,y)$ là $(27,9)$ và $(24,12).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+\[2x^3=y^3\tron{3x+y+2}.\]
+\loigiai{
+Đầu tiên, ta quan sát thấy $(x,y)=(0,0)$ là một nghiệm của phương trình. Với ít nhất một trong hai số $x,y$ khác $0$, ta đặt $(x,y)=d$, khi đó tồn tại hai số $a,b$ nguyên thỏa mãn
+$$(a,b)=1,\quad x=da,\quad y=db.$$ 
+Phương trình đã cho trở thành
+\[2d^3a^3=d^3b^3\tron{3da+db+2}\Leftrightarrow 2a^3=b^3\tron{3da+db+2}.\tag{*}\label{baidatche}\]
+Vì $\tron{a,b}=1$ nên $b^3\mid 2$. Từ đây, ta suy ra $b=\pm1.$ Ta xét $2$ trường hợp sau.
+\begin{enumerate}
+    \item Với $b=1$, thế vào phương trình (\ref{baidatche}) ta được
+    $$2\tron{a^3-1}=d\tron{3a+1}.$$
+Ta nhận thấy $(3a+1)\mid 2\tron{a^3-1}.$ Ta dễ dàng tìm ra $3a+1$ là ước của $56.$ Lần lượt thử từng trường hợp, ta thu được $5$ cặp $(a,d)$ tương ứng là
+$$(0,-2),(-1,2),(-3,7),(-5,18),(-19,245).$$
+Thế trở lại, ta được các bộ số $(x,y)$ là $$(0,-2), (-2,2), (-21,7), (-90,18),(-4655,245).$$
+\item Với $b=-1$, thế vào phương trình (\ref{baidatche}) ta được
+$$2\tron{a^3+1}=-d(3a-1).$$
+Tính tương tự \chu{trường hợp 1}, ta tìm được $5$ bộ số nguyên $(x,y)$ thỏa mãn là
+$$(-2,2),\ (0,-2), \ (0,0),\ (4,2),\ (468,52).$$
+\end{enumerate}
+Như vậy, phương trình đã cho có $8$ nghiệm nguyên $(x,y)$ thỏa mãn là 
+$$(0,0),\ (0,-2),\ (-2,2), \ (-21,7),\ (-90,18),\ (-4655,245),\ (4,2),\ (468,52).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $a,b$ thỏa mãn $a^3+b^3=a^2+6ab+b^2.$
+\loigiai{
+Đầu tiên, ta quan sát thấy bộ $(a,b)=(0,0)$ thỏa mãn đề bài bài toán.\\
+Với ít nhất một trong hai số $a,b$ khác $0,$ ta đặt $d=(a,b),$ khi đó tồn tại hai số $x,y$ nguyên dương thỏa mãn $(x,y)=1$ sao cho $a=dx,b=dy.$ Phép đặt này cho ta
+\[d^3\left(x^3+y^3\right)=d^3x^2+6d^2xy+d^2y^2.\tag{*}\label{datd.lechbac.1}\]
+Do $d^2\ne 0$ nên một cách tương đương, ta có
+$$d(x+y)\left(x^2-xy+y^2\right)=x^2+6xy+y^2.$$
+Ta suy ra $x^2+6xy+y^2$ chia hết cho $x^2-xy+y^2,$ thế nên $7xy$ cũng chia hết cho $x^2-xy+y^2.$ Áp dụng kết quả $\left(xy,x^2-xy+y^2\right)=1$ quen thuộc, ta suy ra $x^2-xy+y^2$ là ước của $7.$ Tới đây, ta xét hai trường hợp sau.
+\begin{enumerate}
+    \item Với $x^2-xy+y^2=1,$ ta biến đổi phương trình trên tương đương về thành 
+    $$\left(x-\dfrac{y}{2}\right)^2+\dfrac{3y^2}{4}=1.$$
+    Dựa theo chú ý $\dfrac{3y^2}{4}\le 1,$ ta có $y=0$ hoặc $y=1.$ 
+    \begin{itemize}
+        \item \chu{Trường hợp 1. }Với $y=0,$ ta có $x=1.$ Thế vào (\ref{datd.lechbac.1}), ta được $d=1,$ và khi đó $(a,b)=(1,0).$
+        \item \chu{Trường hợp 2. }Với $y=0,$ ta có $x=1.$ Bằng lập luận tương tự, ta chỉ ra $(a,b)=(0,1).$
+    \end{itemize}
+    \item Với $x^2-xy+y^2=7,$ bằng cách chỉ ra $\dfrac{3y^2}{4}\le 7$ tương tự, ta có $y\in \{1;2;3\}.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $y=1,$ ta có $x=3.$ Thế vào (\ref{datd.lechbac.1}), ta được $d=1,$ và khi đó $(a,b)=(3,1).$
+        \item \chu{Trường hợp 2.} Với $y=3,$ ta có $x=1.$ Bằng lập luận tương tự, ta chỉ ra $(a,b)=(1,3).$ 
+        \item \chu{Trường hợp 3. }Với $y=2,$ ta không tìm được $x$ thỏa mãn.
+    \end{itemize}
+\end{enumerate} 
+Kết luận, có tất cả $4$ bộ $(a,b)$ thỏa mãn đề bài, đó là $(0,1),(1,0),(1,3)$ và $(3,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ số nguyên $(m, n)$ thỏa mãn phương trình sau
+\[m^5-n^5=16mn.\]
+\nguon{Junior Balkan Mathematical Olympiad}
+\loigiai{
+Giả sử tồn tại các số nguyên $m,n$ thỏa phương trình. Trong bài toán này, ta xét các trường hợp sau đây.
+    \begin{enumerate}
+        \item Nếu một trong hai giá trị \(m,n\) bằng \(0\) thì giá trị còn lại cũng bằng \(0\), khi đó bộ $(m, n)=(0,0)$ là một nghiệm của bài toán.
+        \item Nếu $m n \neq 0$, ta đặt $d=(m, n),m=d a, n=d b,$ trong đó $(a, b)=1$. Thế trở lại, ta được
+        \[d^{3} a^{5}-d^{3} b^{5}=16ab.\]
+        Vì thế, từ phương trình trên ta thu được $a\mid d^{3} b^{5}$ và do đó $a\mid d^{3}.$ Tương tự thì ta cũng có $b\mid d^{3},$ mà do $(a, b)=1$ nên ta thu được $ab\mid d^{3}.$ Đặt $d^{3}=a b r.$ Thay vào phương trình ban đầu ta thu được
+        \[a b r a^{5}-a b r b^{5}=16ab \Rightarrow r\left(a^{5}-b^{5}\right)=16.\]
+        Do đó ta phải có \(a^5-b^5\) là ước của \(16\), nghĩa là
+        \[a^{5}-b^{5}=\left \{ \pm 1;\pm 2; \pm 4; \pm 8; \pm 16 \right \}.\]
+        Giá trị nhỏ nhất của $\left|a^{5}-b^{5}\right|$ là \(1\) hoặc \(2\). Thật vậy, ta xem xét các trường hợp
+        \begin{itemize}
+            \item\chu{Trường hợp 1.} Nếu $\left|a^{5}-b^{5}\right|=1$ thì $a=\pm 1$ và $b=0$ hoặc $a=0$ và $b=\pm 1,$ mâu thuẫn.  
+            \item\chu{Trường hợp 2.} Nếu $\left|a^{5}-b^{5}\right|=2$ thì $a=1$ và $b=-1$ hoặc $a=-1$ và $b=1$. Khi đó, $r=-8$ và $d^{3}=-8$ hay \(d=-2\), kéo theo $(m, n)=(-2,2)$.
+            \item\chu{Trường hợp 3.} Nếu $\left|a^{5}-b^{5}\right|>2,$ không mất tổng quát, giả sử $a>b.$ Nếu như $b\ne \pm1$ thì
+            $$\left|a^{5}-b^{5}\right|\ge (b+1)^{5}-b^{5}=\left|5 b^{4}+10b^{3}+10b^{2}+5 b+1\right| \geq 31,$$
+            mâu thuẫn. Do đó $b=\pm 1.$ Thử lại, ta không tìm được $a.$
+        \end{itemize}
+    \end{enumerate}
+  Do đó tất cả các bộ số nguyên thỏa mãn đề bài là $(m, n)=(0,0),(-2,2)$.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+    $$x^{6}-y^{6}=2016 x y^{2}.$$
+\nguon{Adrian Andreescu}
+\loigiai{
+Trước tiên ta đặt $(x, y)=d,$ khi đó tồn tại các số nguyên dương $u,v$ nguyên tố cùng nhau sao cho $x=k u$ và $y=k v.$ Thế trở lại phương trình rồi rút gọn, ta được
+    $$ k^{3}\left(u^{6}-v^{6}\right)=2016 u v^{2}.$$
+Lấy đồng dư modulo $u$ hai vế của phương trình kết hợp điều kiện $(u,v)=1,$ ta có
+    $$-k^{3} v^{6} \equiv 0 \pmod{u}\Rightarrow u\mid k^3v^6\Rightarrow \Rightarrow u \mid k^{3}.$$
+Lấy đồng dư modulo $v^2$ hai vế của phương trình kết hợp điều kiện $(u,v)=1,$ ta có
+    $$-k^{3} u^{6} \equiv 0 \pmod{v^2}\Rightarrow v^2\mid k^3u^6 \Rightarrow v^{2} \mid k^{3}.$$
+Với việc $\left(u, v^{2}\right)=1$, ta chỉ ra $u v^{2} \mid k^{3}$. Đối chiếu lại phương trình, ta nhận thấy $u^6-v^6$ là ước của $2016.$ Nhờ chú ý thêm $u>v,$ ta xét các trường hợp sau.
+    \begin{enumerate}
+        \item Nếu $u\geq 4,$ ta có $u^{6}-v^{6} \geq 4^{6}-3^{6}=3367>2016,$ mâu thuẫn do $\tron{u^6-v^6}\mid 2016.$
+        \item Nếu $1\leq v<u\leq 3,$ ta chỉ cần kiểm tra điều kiện bài toán với $(u,v)=(3,1),\ (3,2),\ (2,1).$
+        \begin{itemize}
+            \item\chu{Trường hợp 1.} Với $\left ( u,v \right )=\left ( 3,1 \right),$ ta có $u^6-v^6=3^6-1=728$ không là ước của $2016.$
+            \item\chu{Trường hợp 2.} Với $\left ( u,v \right )=\left ( 3,2 \right ),$ ta có $u^6-v^6=3^6-2^6=665$ không là ước của $2016.$
+            \item\chu{Trường hợp 3.} Với $\left ( u,v \right )=\left ( 2,1 \right ),$ ta có $u^6-v^6=2^6-1=63$ là ước của $2016$ và khi ấy $$k^3=\dfrac{2016}{63}\cdot 2\cdot 1=64\Rightarrow k=4.$$
+        \end{itemize}
+    \end{enumerate}
+Như vậy, phương trình đã cho có duy nhất một nghiệm nguyên dương là $(x,y)=(8,4).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $x,y$ thỏa mãn $54x^3-1=y^3.$
+\loigiai{
+Xét phép biến đổi hệ quả của phương trình đã cho
+\begin{align*}
+    216{x^3}\left( {54{x^3} - 1} \right) = 216{x^3}{y^3} 
+    &\Rightarrow {\left( {6{x^3} - 1} \right)^2} = {\left( {6xy} \right)^3} + 1
+    \\&\Rightarrow 
+    {\left( {6{x^3} - 1} \right)^2} = (6xy+1)\left(36x^2y^2-6xy+1\right).
+\end{align*}
+Đặt $z = 18{x^3},t = 6xy,$ phương trình trở thành
+$${\left(6z-1\right)^2} = (t+1)\left(t^2-t+1\right).$$
+Tương tự như bài vừa rồi, ta chỉ ra $\left(t^2-t+1,t+1\right)\in\{1;3\}.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Với $d=1,$ theo bổ đề, ta chỉ ra $t+1$ và $t^2-t+1$ đều là các số chính phương. Tương tự bài trước, ta có $t=0$ hoặc $t=1.$ Thử trực tiếp, ta tìm ra $(x,y)=(0,-1).$
+    \item Với $d=3,$ ta được $3\mid (t+1)$ và $3\mid \left(t^2-t+1\right).$ Tương tự bài trước, ta nhận được mâu thuẫn.
+\end{enumerate}
+Kết luận, phương trình có nghiệm nguyên duy nhất là $(x,y)=(0,-1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên $x,y$ thỏa mãn 
+\[x^4- 2y^2 = 1.\]
+\loigiai{
+Không mất tính tổng quát, ta giả sử  $x,y \geqslant 0$ .\\
+Rõ ràng $x$ là số lẻ. Đặt $x=2k+1,$ và phép đặt này cho ta
+$$\left( {4{k^2} + 4k} \right)\left( {4{k^2} + 4k + 2} \right) = 2{y^2} \Leftrightarrow 4\left( {{k^2} + k} \right)\left( {2{k^2} + 2k + 1} \right) = {y^2}.$$
+Với chú ý $\left( {{k^2} + k,2{k^2} + 2k + 1} \right) = 1$ và $2{k^2} + 2k + 1\ge 0,$ ta  suy ra $${k^2} + k,\quad 2{k^2} + 2k + 1$$ là hai số chính phương. Đặt $k^2+k=m^2, $ với $m$ là số nguyên dương. Ta có
+$${k^2} + k = {m^2} \Leftrightarrow 4{k^2} + 4k + 1 = 4{m^2} + 1 \Leftrightarrow \left( {2k + 1 - 2m} \right)\left( {2k + 1 + 2m} \right) = 1.$$ 
+Biến đổi trên cho ta $2k+1-2m=2k+1+2m=1,$ thế nên $m=k=0.$\\ Ta tìm ra $(x,y)=(1,0)$ và $(x,y)=(-1,0)$ là các cặp số thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+    $$2x^2-y^{14}=1.$$
+\nguon{Nairi Sedrakyan}
+\loigiai{
+Phương trình đã cho tương đương với
+    $$x^2=\tron{\dfrac{y^2+1}{2}}\left(\left(y^{2}\right)^{6}-\left(y^{2}\right)^{5}+\cdots-y^{2}+1\right).$$
+Rõ ràng $y$ lẻ. Đặt $d=\tron{\dfrac{y^2+1}{2},\left(y^{2}\right)^{6}-\left(y^{2}\right)^{5}+\cdots-y^{2}+1}.$ Do $y^2\equiv -1\pmod{d}$ nên là
+$$\left(y^{2}\right)^{6}-\left(y^{2}\right)^{5}+\cdots-y^{2}+1\equiv 1-1+1-1+1-1+1\equiv 1\pmod{d}.$$
+Như vậy $d=1.$ Theo kiến thức đã học, tồn tại các số nguyên dương $a,b$ sao cho
+$$y^2+1=2a^2,\quad \left(y^{2}\right)^{6}-\left(y^{2}\right)^{5}+\cdots-y^{2}+1=b^2.$$
+Đến đây, ta đặt $t=y^2.$ Khi đó, với $t\geq 4$ thì ta có các đánh giá dưới đây
+\begin{align*}
+(16b)^{2} &=\left(16 t^{3}-8 t^{2}+6 t-5\right)^{2}+140 t^{2}-196 t+231 \\
+&>\left(16 t^{3}-8 t^{2}+6 t-5\right)^{2},\\
+(16 b)^{2} &=\left(16 t^{3}-8 t^{2}+6 t-4\right)^{2}-\left(32 t^{3}-156 t^{2}+208 t-240\right) \\
+&>\left(16 t^{3}-8 t^{2}+6 t-4\right)^{2}.
+\end{align*}
+Cuối cùng, ta chỉ cần kiểm tra các giá trị $t=1,2,3 $, nhưng do $t=y^{2}$ là số chính phương nên chỉ có duy nhất $t=1$ thỏa mãn. Các nghiệm nguyên của phương trình sẽ là
+$$(-1,-1),\quad (-1,1),\quad (1,-1),\quad (1,1).$$}
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Giải phương trình nghiệm nguyên \[x^4+4x^3+8x^2+8x+3=y^3.\]
+\loigiai{Cộng thêm $1$ vào hai vế, phương trình đã cho tương đương với
+    $$\tron{x^2+2x+2}^2=\tron{y+1}\tron{y^2-y+1}.$$
+Đặt $d=\tron{y+1,y^2-y+1}.$ Phép đặt này cho ta
+\begin{align*}
+\heva{&d\mid\tron{y+1}\\&d\mid \tron{y^2-y+1}\\&d\mid \tron{x^2+2x+2}}
+&\Rightarrow 
+\heva{&y\equiv -1\pmod{d}\\& y^2-y+1\equiv 0\pmod{d}\\&d\mid \tron{x^2+2x+2}}
+\\&\Rightarrow 
+\heva{&(-1)^2+1+1\equiv 0\pmod{d}\\&d\mid \vuong{(x+1)^2+1}}
+\\&\Rightarrow
+\heva{&d\mid 3\\&d\mid \vuong{(x+1)^2+1}}
+\\&\Rightarrow d=1.
+\end{align*}
+Theo như bổ đề đã học, ta có $y^2-y+1$ là số chính phương. Ta đặt $y^2-y+1=n^2,$ với $n$ tự nhiên.\\
+Phép đặt này cho ta
+$$4y^2-4y+4=4n^2\Rightarrow (2y-1)^2+3=(2n)^2\Rightarrow (2n-2y+1)(2n+2y-1)=3.$$
+Tới đây, ta lập được bảng giá trị sau
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+        $2n-2y+1$     &  $3$ & $1$ &$-1$ &$-3$\\
+        \hline
+        $2n+2y-1$     &  $1$ & $3$ &$-3$ &$-1$\\
+        \hline
+         $y$     &  $0$ & $3$&  $0$ & $3$\\
+          \hline
+         $x$     &  $-1$ & $\notin \mathbb{N}$&  $-1$ &  $\notin \mathbb{N}$\\
+        
+            \end{tabular}
+        \end{center}
+    Như vậy, phương trình đã cho có nghiệm tự nhiên duy nhất là $(-1,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên
+\[x^4+4x^3+7x^2+6x+3=y^3.\]
+\loigiai{
+Phương trình đã cho tương đương với
+    $$\tron{x^2+3x+3}\tron{x^2+x+1}=y^3.$$
+Ta đặt $\tron{x^2+3x+3,x^2+x+1}=d.$ Do $x^2+x+1=x(x+1)+1$ nên $d$ lẻ. Ngoài ra
+$$\heva{&d\mid\tron{x^2+3x+3}\\&d\mid \tron{x^2+x+1}}
+\Rightarrow
+\heva{&d\mid(2x+2)\\&d\mid \tron{x^2+x+1}}
+\Rightarrow
+\heva{&d\mid(x+1)\\&d\mid \tron{x^2+x+1}}
+\Rightarrow d\mid 1\Rightarrow d=1.
+$$
+Theo bổ đề đã học, cả $x^2+3x+3$ và $x^2+x+1$ đều là số lập phương. Ta đặt $$x^2+3x+3=m^3,\quad x^2+x+1=n^3.$$ 
+Lấy hiệu theo vế, ta được
+$$m^3-n^3=2x+2\Rightarrow(m-n)\tron{m^2+mn+n^2}=2x+2\Rightarrow m^2+mn+n^2<2x+2.$$
+Tuy nhiên, ta lại có
+    $$m^2+mn+n^2>m^2+n^2=\sqrt[3]{\tron{x^2+3x+3}^2}+\sqrt[3]{\tron{x^2+x+1}^2}\ge (x+1)+(x+1)=2x+2.$$
+Hai lập luận trên mâu thuẫn nhau. Kết luận, phương trình đã cho không có nghiệm tự nhiên.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $x,y$ và số nguyên tố $p$ thỏa mãn \[\dfrac{x^4+x^2+1}{p}=y^4.\]
+\loigiai{Nếu thay $x$ bởi $-x,$ kết quả bài toán vẫn không bị ảnh hưởng. Hơn nữa, $x=0$ không thỏa mãn đề bài, do vậy ta chỉ cần xét bài toán trên với $x$ nguyên dương. Ta phân tích
+$$\dfrac{x^4+x^2+1}{p}=\dfrac{\left(x^2+1\right)^2-x^2}{p}=\dfrac{\left(x^2+x+1\right)\left(x^2-x+1\right)}{p}.$$
+Đặt $d=\left(x^2+x+1,x^2-x+1\right).$ Phép đặt này cho ta
+$$\heva{&d\mid \left(x^2+x+1\right) \\ &d\mid \left(x^2-x+1\right)}\Rightarrow\heva{&d\mid 2x \\ &d\mid \left(x^2-x+1\right)}\Rightarrow \heva{&d\mid 2x \\ &d\mid \left(4x^2-4x+4\right)}\Rightarrow d\mid 4.$$
+Do $x^2+x+1=x(x+1)+1$ là số lẻ nên $d$ cũng lẻ. Kết hợp với $d\mid 4,$ ta được $d=1.$\\
+Đến đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p$ là ước của $x^2-x+1,$ ta có
+    $$\left(\dfrac{x^2-x+1}{p}\right)(x^2+x+1)=y^4.$$
+    Lập luận được $\left(x^2-x+1,x^2+x+1\right)=1$ ở trên cho ta $$\left(\dfrac{x^2-x+1}{p},x^2+x+1\right)=1.$$ Ta được
+    $x^2+x+1$ chính phương. Nhờ vào đánh giá
+    $$x^2<x^2+x+1<(x+1)^2,$$
+    ta loại trừ được trường hợp kể trên. 
+    \item Nếu $p$ là ước của $x^2+x+1,$ bằng cách làm tương tự trường hợp trên, ta chỉ ra
+    $x^2-x+1$ chính phương. Nhờ vào đánh giá
+    $$(x-1)^2<x^2-x+1\le x^2,$$
+    ta tìm ra được $x=1.$ Thay ngược lại, ta dễ dàng chỉ ra $p=3$ và $y=\pm 1.$
+\end{enumerate}
+Như vậy, có $4$ bộ $(x,y,p)$ thỏa mãn đề bài,  gồm
+$(1,1,3),(1,-1,3),(-1,1,3),(-1-1,3).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên $9^x=2y^2+1.$
+\loigiai{
+Trong trường hợp phương trình đã cho có nghiệm $(x,y),$ ta nhận thấy rằng $x\ge 0,$ bởi vì nếu $x<0$ thì $y$ không là số nguyên. Ngoài ra 
+$$\left(3^x-1\right)\left(3^x+1\right)=2y^2.$$
+Trong hai số chẵn liên tiếp $3^x-1$ và $3^x+1,$ chắc chẵn có một số chia hết cho $4,$ và số còn lại chia cho $4$ được dư là $2.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $x$ chẵn, $3^x-1$ chia hết cho $4,$ còn $3^x+1\equiv 2\pmod{4},$ thế nên dựa vào đẳng thức
+    $$\left(\dfrac{3^x-1}{4}\right)\left(\dfrac{3^x+1}{2}\right)=\left(\dfrac{y}{2}\right)^2,$$
+    ta chỉ ra $\dfrac{3^x-1}{4}$ là số chính phương, hay $3^x-1$ là số chính phương. Do
+    $$\left(3^{\frac{x}{2}}-1\right)^2\le 3^x-1<\left(3^{\frac{x}{2}}\right)^2$$
+    nên bắt buộc $\left(3^{\frac{x}{2}}-1\right)^2= 3^x-1,$ hay $x=0.$ Thay ngược lại, ta tìm được $y=0.$
+    \item Nếu $x$ lẻ, $3^x+1$ chia hết cho $4,$ còn $3^x-1\equiv 2\pmod{4},$ thế nên dựa vào đẳng thức
+    $$\left(\dfrac{3^x+1}{4}\right)\left(\dfrac{3^x-1}{2}\right)=\left(\dfrac{y}{2}\right)^2,$$ 
+    ta chỉ ra $\dfrac{3^x+1}{4}$ là số chính phương. Đặt $3^x+1=4z^2,$ với $z$ nguyên dương. Phép đặt này cho ta
+    $$3^x=(2z-1)(2z+1).$$
+    Cả $2z-1$ và $2z+1$ lúc này đều là lũy thừa số mũ tự nhiên của $3.$\\ Tiếp tục đặt $2z-1=3^u,2z+1=3^v,$ với $u,v$ là các số tự nhiên, ta được
+    $$2=(2z+1)-(2z-1)=3^v-3^u=3^u\left(3^{v-u}-1\right).$$
+    Số mũ của $3$ trong phân tích của hai số $2$ và $3^u\left(3^{v-u}-1\right)$ lần lượt là $0$ và $u,$ thế nên $u=0.$\\ Ta lần lượt tìm ra $z=1,x=1,y=\pm 2.$
+\end{enumerate}
+Kết luận, phương trình đã cho có $3$ nghiệm nguyên, đó là $(0,0),(1,-2)$ và $(1,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $x,y,z$ thoả mãn điều kiện 
+$$x^3-y^3=z^2,$$
+trong đó $y$ là số nguyên tố và $(z,3)=(x,y)=1.$
+\loigiai{
+Giả sử tồn tại các số $x,y,z$ thỏa mãn đề bài. Phương trình đã cho tương đương với
+$$(x-y)\tron{x^2+xy+y^2}=z^2.$$
+Đặt $d=\tron{x-y,x^2+xy+y^2}.$ Phép đặt này cho ta
+\begin{align*}
+\heva{&d\mid (x-y) \\ &d\mid \tron{x^2+xy+y^2} \\ &d\mid z}
+&\Rightarrow \heva{&x\equiv y\pmod{d} \\ &x^2+xy+y^2\equiv 0\pmod{d}\\ &d\mid z}
+\\&\Rightarrow \heva{&d\mid 3x^2 \\ &d\mid 3y^2\\ &d\mid z}
+\\&\Rightarrow \heva{&d\mid 3(x,y)^2\\ &d\mid z}
+\\&\Rightarrow \heva{&d\mid 3\\ &d\mid z}
+\\&\Rightarrow d=1.    
+\end{align*}
+Ta suy ra $x-y$ và $x^2+xy+y^2$ là số chính phương từ đây. Ta đặt \[x^2+xy+y^2=t^2,\quad x-y=k^2\] với $k,t\in \mathbb{N}.$ Phép đặt này cho ta
+$$3{{y}^{2}}=4{{t}^{2}}-4{{x}^{2}}-{4xy}-{{y}^{2}}=\left( 2t+2x+y \right)\left( 2t-2x-y \right).$$
+Do $y$ là số nguyên tố và $2t+2x+y>2t+2y+y>3y,$ ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $2t+2x+y=3y^2$ và $2t-2x-y=1,$ ta có
+    \[3y^2-1=2(2x-y)=4k^2+2y.\] Từ đây ta suy ra $(y-1)(3y+1)=4k^2.$ Dễ thấy $(y-1,3y+1)\in\{1;2;4\}.$
+    \begin{itemize}
+        \item Nếu $(y-1,3y+1)=2$, khi đó ta phải có $$3y+1=2a^2$$ với $a\in\mathbb{Z}$ nào đó. Dẫn đến $a^2+1$ chia hết cho $3,$ không thể xảy ra.
+        \item Nếu $(y-1,3y+1)=1$ hoặc $4$, khi đó ta phải có $3y+1=a^2$ với $a\in\mathbb{Z}$. Dẫn đến \[y=\dfrac{(a-1)(a+1)}{3}. \]
+        Lại do $y$ là số nguyên tố nên $\dfrac{a+1}{3}=1$ hoặc $\dfrac{a-1}{3}=1.$ Ta tìm được $$y=5,\, k=4,\, x=9.$$ Thay vào ta thấy không có $z$ thỏa mãn.
+    \end{itemize}
+    \item Với $2t+2x+y=y^2$ và $2t-2x-y=3,$ lấy hiệu theo vế ta có
+    \[y^2-3=2\left(2x+y\right).\tag{*}\label{bdscpp}\]
+    Phương trình (\ref{bdscpp}) trở thành
+    $$y^2-3=2\tron{2k^2+3y}\Leftrightarrow{{\left( y-3 \right)}^{2}}-4{{k}^{2}}=12\Leftrightarrow \left( y-3+2k \right)\left( y-3-2k \right)=12.$$
+    Từ đó tìm được $y=7$, thay vào ta có $x=8,z=13$.
+\end{enumerate}
+Như vậy, có duy nhất bộ $\left( x,y,z \right)=\left( 8,7,13 \right)$ thỏa mãn yêu cầu bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ và hai số nguyên dương $a, b$ sao cho $p^a+p^b$ là số chính phương.
+\nguon{Tạp chí Toán học và Tuổi trẻ số 507, tháng 9 năm 2019}
+\loigiai{
+Giả sử $p^a+p^b=c^2$. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $a=b,$ ta có $c^2=2p^a.$ Ta suy ra $4\mid c^2,$ kéo theo $p=2.$ Ngoài ra, $a$ phải là số lẻ.
+    \item Nếu $a\ne b,$ không mất tổng quát, ta giả sử $a>b.$ Ta có
+    $$c^2=p^a+p^b = p^b\tron{p^{a-b}+1}.$$
+    Do $\tron{p^b,p^{a-b}+1}=1$ nên cả $p^b$ và $p^{a-b}+1$ là số chính phương. Ta đặt
+    $$p^b=x^2,\quad p^{a-b}+1=y^2.$$
+    Từ $p^{a-b}+1=y^2,$ ta có $p^{a-b}=(y-1)(y+1).$ Cả $y-1$ và $y+1$ đều là luỹ thừa của $p.$ Ta đặt
+    $$y+1=p^v,\: y-1=p^u,\text{ trong đó }u>v\ge 0.$$
+    Lấy hiệu theo vế, ta được $p^v\tron{p^{u-v}-1}=2.$ Từ đây ta suy ra $p^v=2$ hoặc $p^v=1.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $p^v=2,$ ta có $p=2,v=1,$ đồng thời $u-v=1.$ Ta lần lượt tìm ra $$u=2,\quad a=2k+3,\quad b=2k.$$
+        \item \chu{Trường hợp 2.} Nếu $p^v=1,$ ta có $v=0,$ đồng thời $p^{u-v}=3.$ Ta lần lượt tìm ra $$p=3,\quad u=1,\quad a=2k+1,\quad b=2k.$$        
+    \end{itemize}
+\end{enumerate}
+Như vậy, các bộ ba số $(p,a,b)$ cần tìm là 
+$$(2,2k-1,2k-1),\:\: (2,2k+3,2k),\:\: (2,2k,2k+3),\:\: (3,2k+1,2k),\:\: (3,2k,2k+1),$$
+trong đó $k$ là một số nguyên dương tuỳ ý.}
+\end{gbtt}
+
+
+

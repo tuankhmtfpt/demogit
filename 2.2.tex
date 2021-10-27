@@ -1,0 +1,1378 @@
+\section{Số nguyên tố và tính nguyên tố cùng nhau}
+
+\begin{it}
+Tính chia hết của một tích cho một số nguyên tố là một tính chất đặc biệt của số nguyên tố. Trong các bài toán ấy, chúng ta sẽ đưa những đẳng thức hoặc phương trình đã cho về dạng phân tích $AB=pC$ với $p$ là số nguyên tố, rồi sau đó xét tới các trường hợp $A$ chia hết cho $p$ và $B$ chia hết cho $p.$ Dưới đây là một vài ví dụ minh họa.
+\end{it}
+
+\subsection{Một vài ví dụ mở đầu}
+
+\begin{bx}
+Cho $a$, $b$ là các số tự nhiên lớn hơn $2$ và $p$ là số tự nhiên thỏa mãn $\dfrac{1}{p} = \dfrac{1}{a^2} + \dfrac{1}{b^2}$. Chứng minh $p$ là  hợp số.
+\nguon{Chọn học sinh giỏi lớp 9 Hà Nội 2011}
+\loigiai{
+Giả sử phản chứng rằng $p$ là số nguyên tố.\\
+Với các số tự nhiên $a,b,p$ thỏa mãn đề bài, ta có $a^2b^2=p\left(a^2+b^2\right)$, thế nên
+\[p \mid a^2b^2 \Rightarrow \hoac{& p \mid a^2\\& p \mid b^2 }\Rightarrow \hoac{& p \mid a\\& p \mid b}\Rightarrow p^2\mid a^2b^2=p\left(a^2+b^2\right)\Rightarrow p\mid \left(a^2+b^2\right).\label{homnayvuiquahihi}\]
+Trong các suy luận kể trên, ta cũng chứng minh được $a$ hoặc $b$ chia hết cho $p.$ Kết hợp với việc $a^2+b^2$ chia hết cho $p,$ ta suy ra cả $a$ và $b$ chia hết cho $p,$ thế nên 
+ $$\dfrac{1}{p}
+ \le \dfrac{1}{a^2}+\dfrac{1}{b^2}\leqslant \dfrac{2}{p^2}\Rightarrow \dfrac{1}{p}\leqslant \dfrac{2}{p^2}\Rightarrow p\leqslant 2.$$
+Ngoài ra, do $a,b$ đều là các số tự nhiên lơn hơn $2$ nên
+$$\dfrac{1}{p}=\dfrac{1}{a^2}+\dfrac{1}{b^2}<\dfrac{1}{4}+\dfrac{1}{4}=\dfrac{1}{2}.$$
+Hai lập luận trên mâu thuẫn nhau. Giả sử sai nên bắt buộc $p$ là hợp số.}
+\end{bx}
+
+\begin{bx}
+Cho các số nguyên dương $a, b, c, d$ thỏa mãn $a^2+b^2+ab=c^2+d^2+cd.$ Chứng
+minh rằng $a+b+c+d$ là hợp số.
+\loigiai{Biến đổi tương đương giả thiết, ta có
+\begin{align*}
+    a^{2}+b^{2}+a b=c^{2}+d^{2}+c d 
+    &\Leftrightarrow(a+b)^{2}-a b=(c+d)^{2}-c d
+    \\&\Leftrightarrow(a+b)^{2}-(c+d)^{2}=a b-c d \\&\Leftrightarrow(a+b+c+d)(a+b-c-d)=a b-c d.
+\end{align*}
+Phản chứng, ta giả sử ${a}+{b}+{c}+{d}$ là số nguyên tố. Đặt ${a}+{b}+{c}+{d}={p}$, ta nhận thấy rằng $p$ là ước của
+$$ab-cd+cp=ab-cd+ca+cb+c^2+cd=(a+c)(b+c).$$
+Tuy nhiên, do $0<{c}+{a}, {c}+{b}<{p}$ nên $({c}+{a}, {p})=({b}+{c}, {p})=1$. Lập luận này chứng tỏ $p$ không là ước của $({a}+{c})({b}+{c})$, mâu thuẫn. Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{bx} 
+
+\begin{bx}
+Cho $\overline{a b c}$ là số nguyên tố. Chứng minh rằng $b^{2}-4 a c$ không phải là số chính phương.
+\nguon{Titu Andreescu}
+\loigiai{
+Giả sử phản chứng rằng, tồn tại số nguyên dương $k$ sao cho $b^2-4ac=k^2.$ Giả sử này cho ta
+\begin{align*}
+    4a\cdot \overline{a b c}&=400 a^{2}+40 a b+4 a c\\&=400 a^{2}+40 a b+b^{2}-k^{2}\\&=(20 a+b+k)(20 a+b-k)
+\end{align*}
+Do $\overline{a b c}$ là số nguyên tố, một trong hai số $20a+b+k$ và $20a+b-k$ chia hết cho $\overline{abc}.$\\
+Tuy nhiên, điều này không xảy ra vì
+$$0<20a+b-k<20a+b+k<20a+b+b<100a+10b+c<\overline{abc}.$$
+Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx} \label{tieuzuongcuoc}
+Cho số tự nhiên $n\ge 2$ và số nguyên tố $p$ thỏa mãn $p-1$ chia hết cho $n$ và $n^3-1$ chia hết cho $p.$ Chứng minh rằng $n+p$ là số chính phương.
+\nguon{Chuyên Tin Thanh Hóa 2021}
+\loigiai{
+Để giải bài toán này, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item  Nếu $n-1$ chia hết cho $p,$ ta đặt $n=lp+1,$ với $l$ là số tự nhiên. Kết hợp giả thiết $n\mid (p-1),$ ta có
+        $$(lp+1)\mid (p-1)\Rightarrow p-1\ge lp+1\Rightarrow (l-1)p\le -2\Rightarrow l=0,p=2.$$
+        Với $l=0,p=2,$ ta tìm ra $n=1,$ trái giả thiết $n\ge 2.$
+    \item Nếu $n^2+n+1$ chia hết cho $p,$ do giả thiết $n\mid (p-1),$ ta có thể đặt $p=kn+1,$  thế thì
+        $$n^2+n+1=n^2+n-kn+kn+1=n(n-k+1)+kn+1$$
+        là bội của $kn+1.$ Do $(n,kn+1)=1$ nên $(kn+1)\mid(n-k+1).$ Bằng dãy đánh giá
+        $$-kn-1\le-k-1<n-k+1\le n\le kn<kn+1,$$
+        ta chỉ ra $k=n+1,$ tức là $p=n^2+n+1.$
+        Như vậy, $n+p=(n+1)^2$ là số chính phương.
+\end{enumerate}
+Chứng minh hoàn tất.}
+\end{bx}
+
+\subsubsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho $p$ là số nguyên tố và các số nguyên dương $a,b$ thỏa mãn
+$$\dfrac{a}{b}=\dfrac{1}{1}+\dfrac{1}{2}+\ldots+\dfrac{1}{p-1}.$$
+Chứng minh rằng $a$ chia hết cho $p.$
+\nguon{Mở rộng của định lí Wolstenholme}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng không thể biểu diễn bất kì một số nguyên tố nào thành tổng bình phương của hai số tự nhiên theo các cách khác nhau.
+\end{btt}
+
+\begin{btt}
+Cho số tự nhiên $n\ge 2$ và số nguyên tố $p.$ Chứng minh rằng nếu $p-1$ chia hết cho $n$ và $n^6-1$ chia hết cho $p$ thì ít nhất một trong hai số $p-n$ và $p+n$ là số chính phương.
+\end{btt}
+
+\subsubsection*{Hướng dẫn tập tự luyện}
+
+\begin{gbtt}
+Cho $p$ là số nguyên tố lẻ và các số nguyên dương $a,b$ thỏa mãn
+$$\dfrac{a}{b}=\dfrac{1}{1}+\dfrac{1}{2}+\cdots+\dfrac{1}{p-1}.$$
+Chứng minh rằng $a$ chia hết cho $p.$
+\nguon{Mở rộng của định lí Wolstenholme}
+\loigiai{
+Từ đẳng thức đã cho, ta có
+\begin{align*}
+    \dfrac{a}{b}
+    &=\left(\dfrac{1}{1}+\dfrac{1}{p-1}\right)+\left(\dfrac{1}{2}+\dfrac{1}{p-2}\right)+\left(\dfrac{1}{3}+\dfrac{1}{p-3}\right)+\cdots+\left(\dfrac{1}{\dfrac{p-1}{2}}+\dfrac{1}{\dfrac{p+1}{2}}\right)
+    \\&=p\left(\dfrac{1}{1\cdot (p-1)}+\dfrac{1}{2\cdot(p-2)}+\cdots+\dfrac{1}{\dfrac{p-1}{2} \cdot\dfrac{p+1}{2}}\right).
+\end{align*}
+Như vậy, tồn tại số nguyên dương $c$ thỏa mãn $$\dfrac{a}{b}=\dfrac{pc}{1\cdot2\cdot3 \cdots (p-1)}.$$ 
+Đẳng thức kể trên tương đương với
+$$\tron{1\cdot 2\cdot 3\cdots (p-1)}a=pcb.$$
+Do $p$ là số nguyên tố nên $p$ không là ước của $1\cdot 2\cdot 3\cdots (p-1),$ điều này chứng tỏ $a$ chia hết cho $p.$ \\
+Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng không thể biểu diễn bất kì một số nguyên tố lẻ nào thành tổng bình phương của hai số tự nhiên theo các cách khác nhau.
+\loigiai{
+Giả sử phản chứng rằng tồn tại các số nguyên dương $a,b,c,d$ sao cho
+$$p=a^2+b^2=c^2+d^2,$$
+trong đó $a<c<d<b.$ Từ phép đặt kể trên, ta có
+\begin{align*}
+    p^2=\tron{a^2+b^2}\tron{c^2+d^2}
+    &=(ac+bd)^2+(ad-bc)^2
+    \\&=(ad+bc)^2+(ac-bd)^2.
+    \tag{*}\label{huykhai.stole}
+\end{align*}
+Ngoài ra, ta còn có
+$$(ac+bd)(ad+bc)=\tron{a^2+b^2}cd+\tron{c^2+d^2}ab=p(ab+cd).$$
+Như vậy, một trong hai số $ac+bd$ hoặc $ad+bc$ chia hết cho $p.$ Không mất tổng quát, giả sử $ac+bd$ chia hết cho $p.$ Kết hợp với (\ref{huykhai.stole}), ta được $ad=bc.$ Điều này vô lí do $a<c <d<b.$ Giả sử sai khi đó bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}\label{bodejbmo}
+Cho số tự nhiên $n\ge 2$ và số nguyên tố $p.$ Chứng minh rằng nếu $p-1$ chia hết cho $n$ và $n^6-1$ chia hết cho $p$ thì ít nhất một trong hai số $p-n$ và $p+n$ là số chính phương.
+\loigiai{
+Từ giả thiết $p\mid \tron{n^6-1}$, ta chỉ ra $p$ là ước của một trong bốn số $n-1,\ n+1,\ n^2+n+1,\ n^2-n+1.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item  Nếu $n-1$ chia hết cho $p,$ ta đặt $n=lp+1,$ với $l$ là số tự nhiên. Kết hợp giả thiết $n\mid (p-1),$ ta có
+        $$(lp+1)\mid (p-1)\Rightarrow p-1\ge lp+1\Rightarrow (l-1)p\le -2\Rightarrow l=0,\ p=2.$$
+        Với $l=0,p=2,$ ta tìm ra $n=1,$ trái giả thiết $n\ge 2.$
+    \item  Nếu $n+1$ chia hết cho $p,$ ta đặt $n=ap-1,$ với $a$ là số tự nhiên. Kết hợp giả thiết $n\mid (p-1),$ ta có
+        $$(ap-1)\mid (p-1)\Rightarrow p-1\ge ap-1\Rightarrow (a-1)p\le0.$$
+    Ta suy ra $a=1$ và $n=p-1,$ khi đó $p-1=n$ là số chính phương.   
+    \item Nếu $n^2+n+1$ chia hết cho $p,$ do giả thiết $n\mid (p-1),$ ta có thể đặt $p=kn+1,$  thế thì
+        $$n^2+n+1=n^2+n-kn+kn+1=n(n-k+1)+kn+1$$
+        là bội của $kn+1.$ Do $(n,kn+1)=1$ nên $(kn+1)\mid(n-k+1).$ Bằng dãy đánh giá
+        $$-kn-1\le-k-1<n-k+1\le n\le kn<kn+1,$$
+        ta chỉ ra $k=n+1,$ tức là $p=n^2+n+1.$
+        Như vậy, $n+p=(n+1)^2$ là số chính phương.
+    \item Nếu $n^2-n+1$ chia hết cho $p,$ do giả thiết $n\mid (p-1),$ ta có thể đặt $p=kn+1,$ thế thì
+        $$n^2-n+1=n^2-n-kn+kn+1=n(n-k-1)+kn+1$$
+        là bội của $kn+1.$ Do $(n,kn+1)=1$ nên $(kn+1)\mid(n-k-1).$ Bằng dãy đánh giá
+        $$-kn-1\le-k-1<n-k-1< n\le kn<kn+1,$$
+        ta chỉ ra $k=n-1,$ tức là $p=n^2-n+1.$
+        Như vậy, $p-n=(n-1)^2$ là số chính phương.    
+\end{enumerate}
+Tóm lại, bài toán được chứng minh trong mọi trường hợp.}
+\end{gbtt}
+
+
+\subsection{Về một bổ đề với hợp số}
+
+Dưới đây là một bổ đề rất đẹp về hợp số và có nhiều ứng dụng
+\begin{light}
+Cho $a,b,c,d$ là $4$ số nguyên dương thỏa mãn $ab=cd$. Khi đó
+$a+b+c+d$ là một hợp số.
+\end{light} 
+\cm{
+\begin{enumerate}[\bfseries \sffamily \color{tuancolor} Cách 1.]
+    \item Giả sử $a+b+c+d=p$ là một số nguyên tố. Khi đó, từ giả thiết, ta có
+$$cp=a c+b c+c^{2}+c d=a c+b c+c^{2}+a b=(a+c)(b+c).$$
+Ta suy ra $p$ là ước của một trong hai số $a+c$ và $b+c$. Tuy nhiên, điều này không thể xảy ra, do 
+$$0<a+c<p,\quad 0<b+c<p.$$
+Giả sử phản chứng là sai nên bài toán được chứng minh. 
+    \item Ta đặt $x=(a,c).$ Lúc này, tồn tại các số nguyên dương $t,z$ thỏa mãn $$(t,z)=1,a=xt,c=xz.$$ Kết hợp với $ab=cd,$ phép đặt này cho ta
+    $xt.b=xz.d,$
+    hay là 
+    $bx=dz.$ \\
+    Ta nhận thấy $t\mid dz,$ nhưng do $(t,z)=1$ nên $t\mid d.$ Tiếp tục đặt $d=yt,$ ta được $b=yz.$ Bằng các cách đặt như vậy, ta chỉ ra được sự tồn tại của các số nguyên dương $x,y,z,t$ sao cho $$a=xt,b=yz,c=xz,d=yt.$$
+    Theo đó $a+b+c+d=xy+yz+xz+yt=(x+t)(y+z)$ là hợp số. Chứng minh hoàn tất.
+\end{enumerate}}
+\begin{light}
+Bạn đọc có thể tham khảo một vài ứng dụng của bổ đề, nằm ở các bài toán phần tự luyện.
+\end{light}
+
+\subsubsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho $a,b,c,d$ là $4$ số nguyên dương thỏa mãn $ab=cd.$ Chứng minh rằng
+$$a^n+b^n+c^n+d^n$$ là hợp số.
+\end{btt}
+
+\begin{btt}
+Cho $6$ số nguyên dương $a,b,c,d,e,f$ thỏa mãn $abc=def.$ 
+Chứng minh rằng $$a\tron{b^2+c^2}+d\tron{e^2+f^2}$$ là hợp số.
+\nguon{Tạp chí Toán học và Tuổi trẻ số 346}
+\end{btt}
+
+\begin{btt}
+Cho $a,b,c$ là các số nguyên dương. Chứng minh rằng $a+b+2\sqrt{ab+c^{2}}$ không phải là một số nguyên tố.
+\nguon{Chuyên Toán Hà Nội 2017}
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $a,b,c$ thỏa mãn $a^2 - bc$ là số chính phương. Chứng minh rằng $2a + b + c$ là một hợp số.
+\nguon{Eye Level Math Olympiad 2019}
+\end{btt}
+
+\begin{btt}
+Tìm các số tự nhiên $a,b$ thỏa mãn $a^3+3=b^2$ và $a^2+2(a+b)$ là một số nguyên tố.
+\nguon{Chọn đội tuyển Khoa học Tự nhiên 2019}
+\end{btt}
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho $a,b,c,d$ là $4$ số nguyên dương thỏa mãn $ab=cd.$ Chứng minh rằng
+$$a^n+b^n+c^n+d^n$$ là hợp số.
+\loigiai{
+Theo như kết quả đã biết, ta nhận thấy tồn tại các số nguyên dương $x,y,z,t$ sao cho
+$$a=xt,\ b=yz,\ c=xz,\ d=yt.$$
+Sự tồn tại này cho ta biết
+$$a^n+b^n+c^n+d^n=x^nt^n+y^nz^n+x^nz^n+y^nt^n=\left(x^n+t^n\right)\left(y^n+z^n\right).$$
+Do $x^n+t^n\ge x+y\ge 2$ và $y^n+z^n\ge y+z\ge 2$ nên số bên trên là hợp số. Bài toán được chứng minh.}
+\end{gbtt} 
+
+\begin{gbtt}
+Cho $6$ số nguyên dương $a,b,c,d,e,f$ thỏa mãn $abc=def.$ 
+Chứng minh rằng $$a\tron{b^2+c^2}+d\tron{e^2+f^2}$$ là hợp số.
+\nguon{Tạp chí Toán học và Tuổi trẻ số 346}
+\loigiai{Từ giả thiết, ta có $\left(a b^{2}\right)\left(a c^{2}\right)=\left(d e^{2}\right)\left(d f^{2}\right).$ Theo như kết quả đã biết, ta suy ra $$ab^2+ac^2+de^2+df^2=a\left(b^2+c^2\right)+d\left(e^2+f^2\right)$$ là hợp số. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a,b,c$ là các số nguyên dương. Chứng minh rằng $a+b+2\sqrt{ab+c^{2}}$ không phải là một số nguyên tố.
+\nguon{Chuyên Toán Hà Nội 2017}
+\loigiai{Đặt $a b+c^{2}=d^{2}$ với $d$ là số nguyên dương. Phép đặt này cho ta
+$$ab=(d-c)(d+c).$$
+Theo kết quả đã biết thì $a+b+d-c+d+c=a+b+2d$ là hợp số. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $a,b,c$ thỏa mãn $a^2 - bc$ là số chính phương. Chứng minh rằng $2a + b + c$ là một hợp số.
+\nguon{Eye Level Math Olympiad 2019}
+\loigiai{
+Từ giả thiết, ta có thể đặt $a^2-bc=x^2,$ trong đó $x$ là một số tự nhiên. Ta có
+$$bc=(a-x)(a+x).$$
+Do cả $b,c,x-a,x+a$ đều nguyên dương nên theo bổ đề đã học, số $$b+c+(a-x)+(a+x)=b+c+2a$$ là hợp số. Bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số tự nhiên $a,b$ thỏa mãn $a^3+3=b^2$ và $a^2+2(a+b)$ là một số nguyên tố.
+\nguon{Chọn đội tuyển Khoa học Tự nhiên 2019}
+\loigiai{
+Từ điều kiện $a^3+3=b^2,$ ta có
+$$a^3-1=b^2-4\Leftrightarrow (a-1)\left(a^2+a+1\right)=(b-2)(b+2).$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $a\ge 2,$ ta có $b-2>0,$ và lúc này
+    $$a-1+a^2+a+1+b-2+b+2=a^2+2a+2b$$
+    là hợp số, mâu thuẫn.
+    \item Nếu $a=1,$ ta có $b=2.$ Lúc này, $a^2+2(a+b)=7$ là số nguyên tố.
+    \item Nếu $a=0,$ ta không tìm được $b$ tự nhiên.
+\end{enumerate}
+Kết luận, $(a,b)=(1,2)$ là cặp số duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\subsection{Đồng dư thức với modulo nguyên tố}
+
+\subsubsection*{Ví dụ minh họa}
+
+\begin{bx}
+Tìm tất cả các số nguyên tố $p$ có dạng $p=a^2+b^2+c^2$ với $a,b,c$ nguyên dương thỏa mãn $a^4+b^4+c^4$ chia hết cho $p.$
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2012}
+\loigiai{
+Không mất tính tổng quát, ta giả sử $c=\max\{a;b;c\}.$ Với các số $a,b,c,p$ thỏa mãn yêu cầu, ta có
+\begin{align*}
+    a^4+b^4+c^4\equiv 0\pmod{p}
+    &\Rightarrow a^4+b^4+\tron{-a^2-b^2}^2\equiv 0\pmod{p}
+    \\&\Rightarrow 2a^4+2b^4+2a^2b^2\equiv 0\pmod{p}
+    \\&\Rightarrow 2\tron{a^2-ab+b^2}\tron{a^2+ab+b^2}\equiv 0\pmod{p}
+    \\&\Rightarrow p\mid 2\tron{a^2-ab+b^2}\tron{a^2+ab+b^2}
+\end{align*}
+Phần còn lại của bài toán, ta chia làm ba trường hợp sau.
+\begin{enumerate}
+    \item Nếu $2$ chia hết cho $p,$ ta có $p\le 2,$ vô lí.
+    \item Nếu $a^2-ab+b^2$ chia hết cho $p,$ ta có
+    $$a^2-ab+b^2\ge a^2+b^2+c^2>a^2-ab+b^2,$$
+    đây là điều không thể xảy ra.
+    \item Nếu $a^2+ab+b^2$ chia hết cho $p,$ do $c=\max\{a;b;c\},$ ta có 
+    $$a^2+ab+b^2\ge a^2+b^2+c^2\ge a^2+b^2+ab.$$
+    Dấu bằng trong đánh giá trên phải xảy ra, tức là $a=b=c.$\\
+    Lúc này $p=3a^2$ là số nguyên tố nên $a=1,p=3.$
+\end{enumerate}
+Như vậy, $p=3$ là số nguyên tố duy nhất thỏa yêu cầu bài toán.}
+\end{bx}
+
+\begin{bx}
+Cho $p$ là một số nguyên tố lẻ, còn $a,b$ và $c$ là các số nguyên dương phân biệt thỏa mãn
+$$ab+1\equiv bc+1\equiv ca+1\equiv 0\pmod{p}.$$
+Chứng minh rằng với mọi bộ số $(a,b,c,p)$ như vậy, ta luôn có
+\[p+2 \leq \frac{a+b+c}{3}.\]
+\nguon{Dutch Mathematical Olympiad 2014}
+\loigiai{Xét hiệu theo vế các đồng dư thức trong giả thiết, ta thu được
+\[\heva{ab+1-ca-1\equiv0\pmod{p}\\ca+1-bc-1\equiv0\pmod{p}}
+\Rightarrow
+\heva{a\tron{b-c}\equiv 0\pmod{p}\\ c\tron{a-b}\equiv0\pmod{p}.}\tag{1}\label{dutch1}\]
+Ngoài ra, từ giả thiết, ta còn nhận thấy rằng
+\[\tron{b,p}=\tron{c,p}=1.\tag{2}\label{dutch2}\]
+Kết hợp (\ref{dutch1}) và (\ref{dutch2}), ta thu được 
+$p\mid \tron{b-c}, \: p\mid \tron{a-b},$ và do $a,b,c$ phân biệt nên
+$$p\le |b-c|,\qquad p\le |a-b|.$$
+Không mất tính tổng quát, ta giả sử $a\ge b\ge c.$ Giả sử bên trên giúp ta chỉ ra
+$$p\le b-c, \qquad p\le a-b.$$
+Vì $b\ge 1$ nên $b-c\ge p+1$ và $a-b\ge p+1$. Các đánh giá theo hiệu ấy cho ta biết
+$$b\ge c+p+1\ge p+2,\qquad a\ge b+p+1\ge p+3,$$
+vậy nên $a+b+c\ge 3p+6.$
+Đẳng thức xảy ra khi và chỉ khi $(a,b,c)=(1,p+1,2p+1)$ và các hoán vị. Bài toán được chứng minh.}
+\end{bx}
+
+\subsubsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho các số tự nhiên $m, n$ thỏa mãn $m+n+1$ là một số nguyên tố và là ước của $2\left(m^2+n^2\right)-1$. Chứng minh rằng $m=n.$
+\nguon{Switzerland Final Round 2010}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương ${m}$ và ${n}$ sao cho ${p}={m}^{2}+{n}^{2}$ là số nguyên tố và
+${m}^{3}+{n}^{3}-4$ chia hết cho ${p}$
+\nguon{Olympic 30/4 khối 10 năm 2013}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $s\ge 4$ sao cho tồn tại các số nguyên dương $a,b,c,d$ thỏa mãn $s=a+b+c+d$ và $abc+bcd+cda+bad$ chia hết cho $s.$
+\end{btt}
+
+\begin{btt}
+Cho số nguyên tố $p>7$ và các số nguyên dương $a,b,c,d$ phân biệt, nhỏ hơn $p-1$ thỏa mãn $a+d-b-c,ab-c-d,cd-a-b$ đều chia hết cho $p.$ Tìm số dư của $ac+bd$ khi chia cho $p.$
+\nguon{Trường thu Trung du Bắc Bộ 2018}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên tố $p$ và ba  nguyên dương $x, y, z$ mãn $x<y<z<p$ Chứng minh rằng nếu $x^{3} \equiv y^{3} \equiv z^{3} \pmod{p}$ thì $x^2+y^2+z^2$ chia hết cho $x+y+z.$
+\nguon{Duyên hải Bắc Bộ 2016}
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $a,b,c,d,e$ phân biệt và số nguyên tố $p$ thỏa mãn các số
+$$abc+1,bcd+1,cde+1,dea+1,eab+1$$
+đều chia hết cho $p.$ Chứng minh rằng
+\[a+b+c+d+e\ge 10p+5.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $m,n$ và số nguyên tố $p$ thỏa mãn $$\left(m^3+n\right)\left(m+n^3\right)=p^3.$$
+\nguon{Turkish Team Selection Test 2017}
+\end{btt}
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho các số tự nhiên $m, n$ thỏa mãn $m+n+1$ là một số nguyên tố và là ước của $2\left(m^2+n^2\right)-1$. Chứng minh rằng $m=n.$
+\nguon{Switzerland Final Round 2010}
+\loigiai{
+Với các số nguyên dương $m,n$ thỏa yêu cầu, ta có
+\begin{align*}
+    2m^2+2n^2-1\equiv 0\pmod{m+n+1}
+    &\Rightarrow 2m^2+2\tron{-m-1}^2-1
+    \equiv 0\pmod{m+n+1}
+    \\&\Rightarrow (2m+1)^2\equiv 0\pmod{m+n+1}   
+    \\&\Rightarrow (m+n+1)\mid\tron{2m+1}^2.
+\end{align*}
+Do $m+n+1$ là số nguyên tố nên $m+n+1$ cũng là ước của $2m+1.$ Dựa vào so sánh
+$$2m+1<2(m+n)<2(m+n+1),$$
+ta chỉ ra $2m+1=m+n+1,$ tức là $m=n.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương ${m}$ và ${n}$ sao cho ${p}={m}^{2}+{n}^{2}$ là số nguyên tố và
+${m}^{3}+{n}^{3}-4$ chia hết cho ${p}$
+\nguon{Olympic 30/4 khối 10 năm 2013}
+\loigiai{
+Đặt $m+n=S,mn=P,m^2+n^2=p.$ Với các số nguyên dương $m,n$ thỏa yêu cầu, ta có
+\begin{align*}
+    \tron{S^2-2P}\mid\tron{S^3-3SP-4}
+    &\Rightarrow S^3\equiv 3SP+4\pmod{S^2-2P}
+    \\&\Rightarrow 2S^3\equiv 6SP+8\pmod{S^2-2P}
+    \\&\Rightarrow 2S^3\equiv 3S^3+8\pmod{S^2-2P} 
+    \\&\Rightarrow S^3+8\equiv0\pmod{S^2-2P}      
+    \\&\Rightarrow (S+2)\tron{S^2-2S+4}\equiv0\pmod{S^2-2P}        
+    \\&\Rightarrow \tron{S^2-2P}\mid(S+2)\tron{S^2-2S+4}.
+    \\&\Rightarrow p\mid ({m}+{n}+2)\left[{m}^{2}+{n}^{2}+2 {mn}-2({m}+{n})+4\right]    
+\end{align*}
+Phần còn lại của bài toán, ta chia làm hai trường hợp sau.
+\begin{enumerate}
+    \item Nếu $m+n+2$ chia hết cho $p$, ta có 
+    $$m+n+2\ge m^2+n^2\Rightarrow m(m-1)+n(n-1)\le 2.$$
+    Với cú ý rằng ${m}$ và ${n}$ là các số nguyên dương, ta có
+$${m}({m}-1)+{n}({n}-1) \leq 2 \Rightarrow \hoac{
+m(m-1)+n(n-1)=2  \\
+m(m-1)+n(n-1)=1  \\
+m(m-1)+n(n-1)=0 }
+\Rightarrow \hoac{
+{m}=1,\: {n}=2 \\
+{m}=2,\: {n}=1 \\
+{m}=1,\: {n}=1.}$$
+    \item Nếu $p \mid \left[{m}^{2}+{n}^{2}+2 {mn}-2({m}+{n})+4\right],$ ta có 
+    $$\left({m}^{2}+{n}^{2}\right) \mid [2mn-2(m+n)+4].$$
+    Tới đây, ta nhận thấy rằng
+    $2mn-2m-2n+4\ge (m+n)^2-2mn,$
+    và thế thì
+    $$-2m-2n+4\ge (m+n)^2-4mn=(m-n)^2\ge 0.$$
+    Bằng cách chặn $m$ và $n$ như trên, ta chỉ ra
+    $$\heva{({m}+{n})^{2}=4 {mn} \\ 2({m}+{n})=4} \Rightarrow \heva{{m}=1 \\ {n}=1.}$$
+\end{enumerate}
+Kiểm tra trực tiếp, ta thấy tất cả các cặp số $(m,n)$ cần tìm là $(1,1),(1,2)$ và $(2,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $s\ge 4$ sao cho tồn tại các số nguyên dương $a,b,c,d$ thỏa mãn $s=a+b+c+d$ và $abc+bcd+cda+bad$ chia hết cho $s.$
+\loigiai{Trước hết, tất cả các hợp số đều thỏa yêu cầu. Thật vậy, nếu $s$ là hợp số, ta viết $s=xy$ và chọn
+$$a=1,\quad b=x-1,\quad c=y-1,\quad d=(x-1)(y-1).$$ Khi đó,  $abc+bcd+cda+bad$ chia hết cho $s$ vì
+$$a b c+a b d+a c d+b c d=x y(x-1)(y-1).$$
+Bây giờ, ta sẽ chứng minh tất cả các hợp số đều không thỏa yêu cầu.\\ Giả sử $s$ là hợp số, thế thì do $d\equiv -a-b-c\pmod{s}$ nên là
+\begin{align*}
+0 & \equiv a b c-(a+b+c)(a b+b c+ca) \pmod{s} \\
+& \equiv-\left(a^{2} b+a b^{2}+c^{2}a+ca^{2}+b^{2} c+b c^{2}+2 a b c\right) \pmod{s} \\
+& \equiv-(a+b)(b+c)(c+a) \pmod{s}.
+\end{align*}
+Do $s$ nguyên tố nên một trong $a+b,\ b+c$ và $c+a$ chia hết cho $s,$ nhưng điều này vô lí do cả $3$ số này đều nhỏ hơn $s.$ Như vậy, tất cả các số $s$ thỏa yêu cầu là hợp số.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên tố $p>7$ và các số nguyên dương $a,b,c,d$ phân biệt, nhỏ hơn $p-1$ thỏa mãn $a+d-b-c,\ ab-c-d,\ cd-a-b$ đều chia hết cho $p.$ Tìm số dư của $ac+bd$ khi chia cho $p.$
+\nguon{Trường thu Trung du Bắc Bộ 2018}
+\loigiai{
+Từ giả thiết, ta chỉ ra các đồng dư thức dưới đây
+\begin{align}
+    a+d\equiv b+c&\pmod{p},\tag{1}\label{bai1.hung.1}\\
+ab\equiv c+d&\pmod{p},\tag{2}\label{bai1.hung.2}\\
+cd\equiv a+b&\pmod{p}.\tag{3}\label{bai1.hung.3}
+\end{align}
+Lấy hiệu theo vế của (\ref{bai1.hung.2}) và (\ref{bai1.hung.3}), ta được
+\[ab-cd\equiv c+d-a-b\pmod{p}.\]
+Chuyển vế rồi cộng thêm $1,$ đồng dư thức kể trên tương đương với
+\[(a+1)(b+1)\equiv (c+1)(d+1)\pmod{p}.\tag{4}\label{bai1.hung.4}\]
+Ta đặt $x=a+1,y=b+1,z=c+1,t=d+1.$ Phép đặt này kết hợp (\ref{bai1.hung.1}) và (\ref{bai1.hung.4}) cho ta
+$$x-y\equiv z-t \pmod{p},\quad xy\equiv zt\pmod{p}.$$
+Áp dụng phép thế đồng dư $t\equiv z+y-x\pmod{p}$ vào $xy\equiv zt\pmod{p},$ ta được
+$$xy\equiv z(z+y-x)\pmod{p}\Rightarrow (x-z)(y+z)\equiv 0\pmod{p}.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $y-z$ chia hết cho $p,$ ta có
+    $p\le y-z=b-c<b<p-1,$ vô lí.
+    \item Nếu $y+z$ chia hết cho $p,$ ta có $p\le y+z< 2p,$ và vì thế 
+    $$p=y+z=b+c+2.$$
+    Tương tự, ta cũng chỉ ra $p=a+d+2.$ Kết hợp $p=b+c+2=a+d+2$ với (\ref{bai1.hung.2}), ta được
+    $$ab\equiv (p-b-2)+(p-a-2)\pmod{p}\Rightarrow ab+a+b+4\equiv 0\pmod{p}.$$
+    Như vậy
+    \begin{align*}
+        ac+bd&=a(p-b-2)+b(p-a-2)\\&\equiv -a(b+2)-b(a+2)\\&\equiv-2ab-2a-2b\\&\equiv 8 \pmod{p}.
+    \end{align*}
+\end{enumerate}
+Kết luận, số dư của phép chia $ac+bd$ cho $p$ là $8.$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên tố $p$ và ba  nguyên dương $x, y, z$ mãn $x<y<z<p$. Chứng minh rằng nếu $x^{3} \equiv y^{3} \equiv z^{3} \pmod{p}$ thì $x^2+y^2+z^2$ chia hết cho $x+y+z.$
+\nguon{Duyên hải Bắc Bộ 2016}
+\loigiai{Từ giả thiết $x^{3} \equiv y^{3} \equiv z^{3} \pmod{p},$  ta có 
+\[\heva{&p\mid \left(y^3-x^3\right)\\ &p\mid \left(z^3-y^3\right)}
+\Rightarrow
+\heva{&p\mid \left(y-x\right)\left(x^2+xy+y^2\right)\\ &p\mid (z-y)\left(y^2+yz+z^2\right).}\]
+Dựa theo so sánh $0<y-x<y<p$ và $0<z-y<z<p,$ ta suy ra $(y-x,p)=(z-y,p)=1.$ Từ đây,
+\[
+\begin{aligned}
+\heva{&p\mid \left(x^2+xy+y^2\right)\\ &p\mid \left(y^2+yz+z^2\right)}
+&\Rightarrow
+p\mid \left(x^2+xy+y^2\right)- \left(y^2+yz+z^2\right)
+\\&\Rightarrow
+p\mid (x-z)(x+y+z). \end{aligned}
+\label{dhbb15.2}\]
+Dựa theo so sánh $0<z-x<z<p,$ ta suy ra $(z-x,p)=1.$ Ta lại suy ra $p\mid (x+y+z).$ Tuy nhiên, do
+$$0<x+y+z<p+p+p<3p$$
+nên $x+y+z=p$ hoặc $x+y+z=2p.$
+Ngoài ra, việc kết hợp $x+y+z$ chia hết cho $p$ và $x^2+xy+y^2$ chia hết cho $p$ còn cho ta
+\[\begin{aligned}
+\heva{&(x+y)^2\equiv xy \pmod{p} \\ &x+y\equiv -z\pmod{p}}
+&\Rightarrow 
+\heva{&z^2\equiv xy \pmod{p} \\ &x^2+xy+y^2\equiv 0\pmod{p}}
+\\&\Rightarrow
+p\mid \left(x^2+y^2+z^2\right).
+\end{aligned}\]
+Ta xét hai trường hợp sau đây
+\begin{enumerate}
+    \item Nếu ${x}+{y}+{z}={p},$ ta có ngay $x^2+y^2+z^2$ chia hết cho $x+y+z.$
+    \item Nếu ${x}+{y}+{z}=2p,$ ta có $x^2+y^2+z^2$ chia hết cho $\dfrac{x+y+z}{2}.$ \\
+    Ta sẽ chứng minh $p\ne 2.$ Thật vậy, nếu $p=2,$ ta có $x<y<z<2,$ mâu thuẫn điều kiện $x,y,z$ nguyên dương. Như vậy, $p$ phải là số nguyên tố lẻ và $x^2+y^2+z^2$ chia hết cho $x+y+z.$
+\end{enumerate}
+Tổng kết lại, bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $a,b,c,d,e$ phân biệt và số nguyên tố $p$ thỏa mãn các số
+$$abc+1,bcd+1,cde+1,dea+1,eab+1$$
+đều chia hết cho $p.$ Chứng minh rằng
+\[a+b+c+d+e\ge 10p+5.\]
+\loigiai{
+Do cả $abc+1$ và $bcd+1$ cùng chia hết cho $p$ nên
+$$p\mid\tron{abc+1-bcd-1}=bc\tron{a-d}.$$
+Nếu $b$ hoặc $c$ chia hết cho $p$ thì $1$ chia hết cho $p.$ Điều này không thể xảy ra. Do đó, $p$ phải là ước của $a-d.$ Chứng minh hoàn toàn tương tự, ta có
+$$p\mid\tron{b-e},\quad p\mid\tron{c-a},\quad p\mid \tron{d-b}.$$
+Nói cách khác, các số $a,b,c,d,e$ có cùng số dư khi chia cho $q.$ Đặt $$a=q_1p+r,\quad b=q_2p+r,\ldots,\quad e=q_5p+r,$$ trong đó $q_1,q_2,\quad\ldots,q_5$ là số tự nhiên đôi một khác nhau và $r\in \left\{1;2;\ldots;p-1\right\}.$ Từ đây, ta suy ra
+$$a+b+c+d+e=q_1+q_2+\ldots+q_5+5r\ge 0p+p+2p+3p+4p+5=10p+5.$$
+Dấu bằng xảy ra chẳng hạn tại
+$$(a,b,c,d,e)=(p+1,2p+1,3p+1,4p+1,5p+1).$$
+Bất đẳng thức đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $m,n$ và số nguyên tố $p$ thỏa mãn $$\left(m^3+n\right)\left(m+n^3\right)=p^3.$$
+\nguon{Turkish Team Selection Test 2017}
+\loigiai{
+Không mất tính tổng quát, ta giả sử $m\ge n.$ Giả sử này cho ta
+$2\le m+n^3<m^3+n.$\\
+Cả $m+n^3$ và $m^3+n$ đều là lũy thừa cơ số $p,$ vậy nên
+\begin{align}
+m+n^3&=p,\tag{1}\label{turkey17.1}\\
+m^3+n&=p^2.\tag{2}\label{turkey17.2}
+\end{align}
+
+Ta dễ thấy $p>m\ge n$ và $p>n^3.$ Ngoài ra, từ (\ref{turkey17.1}), ta có $m\equiv -n^3\pmod{p}.$ Kết hợp với (\ref{turkey17.2}), ta chỉ ra
+$$n\equiv -m^3\equiv -\left(-n^3\right)^3=n^9\pmod{p}.$$
+Thực hiện chuyển vế rồi phân tích nhân tử, ta thu được
+$$p\mid \left(-n^9+n\right)=-n(n-1)(n+1)\left(n^2+1\right)\left(n^4+1\right).$$
+Nếu $n=1,$ thử lại, ta chỉ ra $(m,n,p)=(2,1,3).$ Nếu $n\ge 2,$ ta xét các trường hợp đưới dây.
+\begin{enumerate}
+    \item Với $p\mid n,$ ta có $p\le n<p,$ mâu thuẫn.
+    \item Với $p\mid (n-1),$ ta có $p\le n-1<p-1,$ mâu thuẫn.
+    \item Với $p\mid (n+1),$ ta có $n+1\ge p>n^3>n+1,$ mâu thuẫn.
+    \item Với $p\mid \left(n^2+1\right),$ ta có $n+1\ge p>n^3>n^2+1,$ mâu thuẫn.
+    \item Với $p\mid \left(n^4+1\right),$ kết hợp với (\ref{turkey17.1}), ta có
+    $$p\mid n\left(m+n^3\right)-\left(n^4+1\right)=mn.$$
+    Bắt buộc, $mn\ge p.$ Tuy nhiên, lấy tích theo vế của (\ref{turkey17.1}) và (\ref{turkey17.2}), ta nhận thấy rằng
+    $$p^3=\left(m+n^3\right)\left(m^3+n\right)>n^3m^3.$$
+    Lấy căn bậc ba, ta suy ra $p>mn,$ mâu thuẫn.
+\end{enumerate}
+Tổng kết lại, có hai bộ $(m,n,p)$ thỏa yêu cầu bài toán, đó là $(1,2,3)$ và $(2,1,3).$}
+\begin{luuy}
+Trong bài toán trên, ta đã sử dụng phép thế đồng dư từ $m\equiv -n^3\pmod{p}$ vào $m^3\equiv -n\pmod{p}.$ Nhờ phép thế này, ta chỉ ra được 
+$$p\mid \left(n^9-n\right).$$
+Hướng đi phân tích nhân tử $n^9-n$ ở phía sau giúp ta xét các trường hợp về bội của $p.$
+\end{luuy}
+\end{gbtt}
+
+\subsection{Ứng dụng trong tìm số nguyên tố thỏa mãn phương trình cho trước}
+
+\subsubsection*{Ví dụ minh họa}
+
+\begin{bx}
+Tìm tất cả các số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn
+\[n^3-3n+3=(p-1)^2.\]
+\loigiai{
+Giả sử tồn tại số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn yêu cầu. Giả sử này cho ta
+$$n^3-3n+2=p^2-2p\Rightarrow (n-1)^2(n+2)=p(p-2).$$
+Do $p$ là số nguyên tố, một trong hai số $n-1$ và $n+2$ chia hết cho $p,$ và như vậy
+$$\hoac{&n-1\ge p \\ &n+2\ge p}\Rightarrow n\ge p-2.$$
+Nhận xét trên kết hợp với đẳng thức $(n-1)^2(n+2)=p(p-2)$ chỉ ra
+$$p(p-2)=(n-1)^2(n+2)\ge (p-3)^2p.$$
+Rút gọn, ta được $(p-3)^2\le p-2,$ và bất đẳng thức này đổi dấu khi $p\ge 3.$ Như vậy, ta có $p=2,$ và kéo theo $n=1.$ Kết luận, $(n,p)=(1,2)$ là cặp số duy nhất thỏa mãn yêu cầu.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên tố $p,q,r$ thỏa mãn
+\[p(p+1)+q(q+1)=r(r+1).\]
+\nguon{Kazakhstan Mathematical Olympiad 2007}
+\loigiai{
+Ta giả sử tồn tại các số $p,q,r$ thỏa yêu cầu, trong đó $p\ge q.$ Ta dễ dàng nhận được $r>p,$ đồng thời
+\begin{align*}
+    r(r+1)&\le 2p(p+1)<2p(2p+1)\Rightarrow r<2p.
+\end{align*}
+Ngoài ra, phương trình đã cho tương đương
+\[(r-q)(r+q+1)=p(p+1).\tag{*}\] 
+Do $p$ nguyên tố nên đến đây, ta xét hai trường hợp.
+\begin{enumerate}
+    \item Nếu $p$ là ước của $r-q,$ do $0<r-q<r<2p$ nên ta lần lượt suy ra
+    $$r-q=p\Rightarrow r+q+1=p+1\Rightarrow r+q=p.$$
+    Điều này mâu thuẫn với việc $p<r.$
+    \item Nếu $p$ là ước của $r+q+1,$ do $p<r+q+1<3p+1$ nên $r+q+1=2p$ hoặc $r+q+1=3p.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $r+q+1=3p,$ dấu bằng trong đánh giá đầu tiên ở phần lời giải phải xảy ra, tức là $r=2p-1$ và $p=q.$ Thế ngược lại (*), ta có
+        $$2p(p+1)=(2p-1)2p.$$
+        Ta tìm được $p=2$ từ đây. Trường hợp này cho ta bộ $(p,q,r)=(2,2,3).$
+        \item \chu{Trường hợp 2.} Nếu $r+q+1=2p,$ thế trở lại (*) ta được
+        $$2(r-q)=p+1\Rightarrow r=\dfrac{p+2q+1}{2}.$$
+        Với việc $r=2p-q-1$ và $r=\dfrac{p+2q+1}{2},$ ta nhận thấy rằng $3p=4q+3.$ Lúc này, $4q$ chia hết cho $3,$ lại vì $q$ nguyên tố nên $q=3.$ Kiểm tra lại, ta tìm được $q=5,$ nhưng khi ấy $r=6$
+    \end{itemize}
+\end{enumerate}
+Như vậy $(p,q,r)=(2,2,3)$ là bộ số duy nhất thỏa mãn đề bài.}
+\begin{luuy}
+\begin{enumerate}
+    \item Cách chuyển vế để biến đổi tương đương phương trình chính là mấu chốt của bài toán. Tất cả các bài tập dạng này đều được giải quyết theo cách chuyển phương trình về dạng một vế là tích một vài thừa số, vế còn lại lộ ra ước nguyên tố; rồi sau đó xét các trường hợp riêng lẻ.
+    \item Bài toán này hoàn toàn có thể giải với $r$ không nhất thiết là số nguyên tố.
+\end{enumerate}
+\end{luuy}
+\end{bx}
+
+\subsubsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn
+\[n^4=2p^2+3p-4.\]
+\end{btt}
+
+\begin{btt}
+Cho số nguyên tố $p$. Tìm hai số nguyên không âm phân biệt $a,b$ thỏa mãn \[a^4-b^4=p\left(a^3-b^3\right).\]
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2019}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn $$p\left(p^3+1\right)=q\left(q+2p-1\right).$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn $$p^3-q^5=(p+q)^2.$$
+\nguon{Saudi Arabia JBMO Training Test 2017}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ và số nguyên dương $x, y$ thoả mãn
+\[\heva{p-1=2x(x+2) \\ p^2-1=2y(y+2).}\]
+\nguon{Chuyên Toán Hà Nội 2015}
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương lẻ $a, b, c$. Biết rằng $a-2$ không là số số chính phương, đồng thời
+$$a^{2}+a+3=3\left(b^{2}+b+3\right)\left(c^{2}+c+3\right).$$
+Chứng minh rằng trong hai số $b^{2}+b+3$ và $c^{2}+c+3$, có ít nhất một số là hợp số.
+\nguon{Baltic Way Mathematical Olympiad 2020}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên tố $p$ và số nguyên dương $n.$ Chứng minh rằng không tồn tại các số nguyên dương $x,y$ thỏa mãn
+\[\dfrac{x^2+x}{y^2+y}=p^{2n}.\]
+\nguon{Cao Đình Huy}
+\end{btt}
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn
+\[n^4=2p^2+3p-4.\]
+\loigiai{
+Giả sử tồn tại các số nguyên $p,n$ thỏa yêu cầu. Ta viết lại
+\[\tron{n^2-2n+2}\tron{n^2+2n+2}=p(2p+3)\tag{*}\label{sinnoinguytanh}.\]
+Do $p$ là số nguyên tố nên một trong hai số $n^2-2n+2$ và $n^2+2n+2$ chia hết cho $p.$
+\begin{enumerate}
+    \item Nếu $n^2-2n+2$ chia hết cho $p,$ ta lại tiếp tục xét các trường hợp nhỏ hơn.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $n^2-2n+2\ge 2p,$ hiển nhiên $n^2+2n+2>2p.$ Kết hợp với (\ref{sinnoinguytanh}), ta sẽ có
+        $$p(2p+3)>2p\cdot2p=p(4p).$$
+        Ta suy ra $2p+3>4p$ hay $2p<3$ từ đây. Không có số nguyên tố nào như vậy.
+        \item \chu{Trường hợp 2.} Nếu $n^2-2n+2=p,$ thế trở lại (\ref{sinnoinguytanh}) ta có
+        $$\tron{n^2-2n+2}\tron{n^2+2n+2}=\tron{n^2-2n+2}\tron{2n^2-4n+7}.$$
+        Ta tìm được $n=5$ và $n=1$ từ đây. Chỉ trường hợp $n=5$ cho ta $p$ nguyên tố, cụ thể là $p=17.$
+    \end{itemize}        
+    \item Nếu $n^2+2n+2$ chia hết cho $p,$ ta lại tiếp tục xét các trường hợp nhỏ hơn.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $n^2+2n+2\ge 2p,$ kết hợp với (\ref{sinnoinguytanh}), ta sẽ có
+        $$2\tron{n^2-2n+2}<2p+3.$$
+        Đánh giá bất đẳng thức trên cho ta
+        $$2\tron{n^2-2n+2}<2p+3\le n^2+2n+2+3.$$
+        Chỉ có $n=1,2,3,4,5,6$ thỏa mãn bất đẳng thức trên. Không trường hợp nào cho đáp số.
+        \item \chu{Trường hợp 2.} Nếu $n^2+2n+2=p,$ thế trở lại (\ref{sinnoinguytanh}) ta có
+        $$\tron{n^2-2n+2}\tron{n^2+2n+2}=\tron{n^2+2n+2}\tron{2n^2+4n+7}.$$
+        Ta tìm được $n=-5$ và $n=-11$ từ đây, không thỏa $n$ tự nhiên.     
+    \end{itemize}
+\end{enumerate}
+Kết luận, cặp số $(p,n)$ thỏa yêu cầu là $(17,5).$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên tố $p$. Tìm hai số nguyên không âm phân biệt $a,b$ thỏa mãn \[a^4-b^4=p\left(a^3-b^3\right).\]
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2019}
+\loigiai{
+Đặt $(a,b)=d,$ khi đó tồn tại các số nguyên dương $x,y$ sao cho $(x,y)=1,a=dx,b=dy.$ Ta có
+$$d^4\left(x^4-y^4\right)=pd^3\left(x^3-y^3\right).$$
+Do $a\ne b$ nên $x\ne y.$ Thực hiện chia cả hai vế phương trình cho $x-y,$ ta được
+\[d(x+y)\left(x^2+y^2\right)=p\left(x^2+xy+y^2\right).\tag{*}\label{huyngu}\]
+Ta sẽ đi chứng minh các nhận xét sau đây.
+\begin{enumerate}
+    \item[i,] $\left(x+y,x^2+xy+y^2\right)=1$. Thật vậy, đặt $m=\left(x+y,x^2+xy+y^2\right)=1,$ ta có
+    \begin{align*}
+    \heva{&m\mid (x+y) \\ &d\mid (x+y)^2-\left(x^2+xy+y^2\right)}
+    &\Rightarrow 
+    \heva{&m\mid (x+y) \\ &d\mid xy}
+    \\&\Rightarrow
+    \heva{&m\mid (x+y)x-xy \\ &d\mid (x+y)y-xy}  
+    \\&\Rightarrow
+    \heva{&m\mid x^2 \\ &d\mid y^2}\\&\Rightarrow m=1.   
+    \end{align*}
+    \item[ii,] $\left(x^2+y^2,x^2+xy+y^2\right)=1$. Thật vậy, đặt $n=\left(x^2+y^2,x^2+xy+y^2\right),$ ta có
+    \begin{align*}
+    \heva{&n\mid \left(x^2+y^2\right) \\ &n\mid \left(x^2+xy+y^2\right)}
+    &\Rightarrow 
+    \heva{&n\mid \left(x^2+y^2\right) \\ &n\mid xy}
+    \\&\Rightarrow
+    \heva{&n\mid (x-y)^2 \\ &n\mid (x+y)^2}  
+   \\& \Rightarrow
+    n\mid (x+y,x-y)^2\\&\Rightarrow n\in\{1;2\}.   
+    \end{align*}    
+    Tuy nhiên, nếu như $n=2$ thì $x^2+y^2$ và $x^2+xy+y^2$ cùng chẵn nên $x,y$ cũng cùng chẵn, mâu thuẫn với $(x,y)=1.$ Do vậy $n=1.$
+\end{enumerate}
+Dựa vào các nhận xét trên và (\ref{huyngu}), ta chỉ ra $d$ chia hết cho $x^2+xy+y^2.$ Đặt $d=z\left(x^2+xy+y^2\right),$ trong đó $z$ là một số nguyên dương. Thực hiện vào (\ref{huyngu}), ta có
+$$z(x+y)\left(x^2+y^2\right)=p.$$
+Theo đó, trong hai số $x+y$ và $x^2+xy+y^2,$ phải có ít nhất một số bằng $1.$ Lập luận này cho ta $(x,y)=(1,0)$ hoặc $(x,y)=(0,1),$ và ngoài ra $z=p.$ Các cặp $(a,b)$ thỏa yêu cầu là $(0,p)$ và $(p,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn $p\left(p^3+1\right)=q\left(q+2p-1\right).$
+\loigiai{
+Xét tính chia hết cho $q$ ở hai vế, ta có $q(q-1)$ chia hết cho $p.$ Xét tính chia hết cho $p$ ở hai vế, ta có $p\tron{p+1}\tron{p^2-p+1}$ chia hết cho $q.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $q\mid p,$ ta suy ra $p=q.$ Thế trở lại đề bài, ta thu được
+    $$p\tron{p^3+1}=p\tron{3p-1}.$$
+    Giải phương trình trên, ta thấy không có số nguyên tố $p$ thỏa mãn.
+    \item Với $q\mid \tron{p+1}$ và $p\ne q,$ từ $q(q-1)$ chia hết cho $p$ ta suy ra $p\mid (q-1).$ Ta có
+    $$\heva{q\mid\tron{p+1}\\p\mid (q-1)}\Rightarrow \heva{p+1\ge q\\q-1\ge p}\Rightarrow p+1\ge q\ge p+1\Rightarrow q=p+1.$$
+    Thế trở lại phương trình ban đầu, ta tìm ra $(p,q)=(2,3).$
+    \item Với $q\mid \tron{p^2-p+1}$ và $p\ne q,$ ta cũng suy ra $p\mid (q-1).$ 
+    Theo như \chu{bài \ref{bodejbmo}}, ta chỉ ra $q=p^2-p+1.$ Thế trở lại phương trình ban đầu, ta thấy thỏa mãn.
+\end{enumerate}
+Như vậy, các cặp số $(p,q)$ thỏa yêu cầu là $\tron{p,p^2-p+1},$ trong đó $p^2-p+1$ là một số nguyên tố.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn $p^3-q^5=(p+q)^2.$
+\nguon{Saudi Arabia JBMO Training Test 2017}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thỏa mãn đề bài. Ta xét hai trường hợp sau đây
+\begin{enumerate}
+    \item Với $p=q,$ ta có
+    $$p^3-p^5=4p^2\Rightarrow p^5-p^3+4p^2=0\Rightarrow p^3\left(p^2-1\right)+4p^2=0.$$
+    Vế trái lớn hơn $0,$ mâu thuẫn.
+    \item Với $p\ne q,$ ta biến đổi
+        \begin{align*}
+        p^3-q^5=p^2+2pq+q^2&\Rightarrow p^3-p^2=q^5+q^2+2pq\\&\Rightarrow p^2(p-1)=q\left(q^4+q+2p\right).
+        \end{align*}
+    Tới đây, ta thực hiện xét tính chia hết cho $q$ và $p$ ở cả hai vế. Cụ thể
+    \begin{itemize}
+        \item Vế phải chia hết cho $q$ và $(p,q)=1,$ chứng tỏ $p-1$ chia hết cho $q.$
+        \item Vế trái chia hết cho $p$ và $(p,q)=1,$ chứng tỏ $p$ là ước của 
+        $$ q^4+q+2p=q(q+1)\left(q^2-q+1\right)+2p.$$
+        Một cách tương đương, $q(q+1)\left(q^2-q+1\right)$ chia hết cho $p.$
+    \end{itemize}
+    Ta sẽ tiếp tục chia bài toán thành các trường hợp nhỏ hơn dựa theo nhận xét thứ hai.
+    \begin{itemize}
+        \item \chu{Trường hợp 1. }Nếu $q$ chia hết cho $p,p-1$ chia hết cho $q,$ ta có $p-1\ge q\ge p,$ mâu thuẫn.
+        \item \chu{Trường hợp 2. } Nếu $q+1$ chia hết cho $p$ và $p-1$ chia hết cho $q,$ ta có $$p\ge q+1\ge p.$$ 
+        Ta suy ra $p=q+1.$ Hai số $p$ và $q$ lúc này khác tính chẵn lẻ, nên bắt buộc $q=2$ và $p=3.$ Thử lại, ta thấy không thỏa $p^3-q^5=(p+q)^2.$
+        \item \chu{Trường hợp 3. }Nếu $q^2-q+1$ chia hết cho $p$ và $p-1$ chia hết cho $q,$ áp dụng phần nhận xét ở sau \chu{bài \ref{tieuzuongcuoc}}, ta chỉ ra $p=q^2-q+1.$ Thế ngược lại phương trình ban đầu, ta có
+        $$\left(q^2-q+1\right)^3-q^5=\left(q^2+1\right)^2\Rightarrow q(q-3)\left(q^2+1\right)\left(q^2-q+1\right)=0.$$
+        Do $q$ là số nguyên tố, ta có $q=3,$ và thế thì $p=q^2-q+1=7.$
+    \end{itemize}
+\end{enumerate}
+Kết luận, $(p,q)=(7,3)$ là cặp số nguyên tố duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ và số nguyên dương $x, y$ thoả mãn
+\[\heva{p-1=2x(x+2) \\ p^2-1=2y(y+2).}\]
+\nguon{Chuyên Toán Hà Nội 2015}
+\loigiai{
+Lấy hiệu theo vế, ta được
+$$p(p-1)=2y^2+4y-2x^2-4x=2(y-x)(y+x+2).$$
+Ngoài ra, ta còn thu được so sánh $x<y<p$ từ giả thiết. Thật vậy, nếu $y\ge p,$ ta có
+$$p^2-1=2y(y+2)\ge 2p(p+2),$$
+một điều mâu thuẫn. Dựa vào các chứng minh trên, ta chia bài toán làm các trường hợp sau.
+\begin{enumerate}
+    \item Nếu ${p} \mid 2,$ ta có $p=2,$ nhưng khi đó $2x^2+4x=1,$ mâu thuẫn.
+    \item Nếu $p \mid y-x$ ta có $p\le y-x<y<p$, mâu thuẫn.
+    \item Nếu $p \mid {x}+{y}+2$, ta có 
+    $$p\le (x-y)+2y+2\le -1+2(p-1)+2=2p-1<2p,$$ 
+    thế nên $x+y+2=p.$ Ta thu được hệ sau
+    \begin{align*}
+    \heva{
+    p&=x+y+2\\
+    p-1&=2y-2x\\
+    p-1&=2x^2+4x
+    }
+    &\Rightarrow
+    \heva{
+    x+y+1&=2y-2x\\    
+    p&=x+y+2\\
+    p-1&=2x^2+4x
+    }
+    \\&\Rightarrow
+    \heva{
+    y&=3x+1\\
+    p&=4x+3\\
+    4x+2&=2x^2+4x
+    }
+    \\&\Rightarrow 
+    \heva{
+    x&=1\\
+    y&=4\\
+    p&=7.
+    }    
+    \end{align*}
+\end{enumerate}
+Như vậy, $(x,y,p)=(1,4,7)$ là bộ số duy nhất thỏa yêu cầu.}
+\end{gbtt} 
+
+\begin{gbtt}
+Cho các số nguyên dương lẻ $a, b, c$. Biết rằng $a-2$ không là số số chính phương, đồng thời
+$$a^{2}+a+3=3\left(b^{2}+b+3\right)\left(c^{2}+c+3\right).$$
+Chứng minh rằng trong hai số $b^{2}+b+3$ và $c^{2}+c+3$, có ít nhất một số là hợp số.
+\nguon{Baltic Way Mathematical Olympiad 2020}
+\loigiai{
+Ta giả sử phản chứng rằng $b^2+b+3$ và $c^2+c+3$ là hai số nguyên tố. \\
+Đồng thời, không mất tính tổng quát ta giả sử $b \geq c$. 
+\begin{enumerate}
+    \item Với $b=1,b=3,b=5,b=7$ hoặc $b=9$, ta nhận thấy chỉ trường hợp $b=1$ và $b=7$ cho ta $$b^2+b+3$$ là số nguyên tố.
+    \begin{itemize}
+        \item Nếu như $b=1,$ ta có $c\le b=1$ nên $c=1,$ và khi thay trực tiếp, ta không tìm được $a.$
+        \item Nếu như $b=7,$ ta có $c\le 7$ nên $c=1$ hoặc $c=7.$ Thử trực tiếp, ta cũng không tìm được $a.$
+    \end{itemize}
+    \item Với $b\ge 11,$ ta sẽ so sánh $a,b$ và $c.$ Thật vậy
+    $$a^2+a+3=3\left(b^2+b+3\right)\left(c^2+c+3\right)>4\left(b^2+b+3\right)>(2b)^2+2b+3.$$
+    Do đó, $a>2b,$ và đồng thời, vì $b\ge 11$ nên là
+    $$a^2+a+3=3\left(b^2+b+3\right)\left(c^2+c+3\right)<3\left(b^2+b+3\right)^2<4b^4+2b^2+3.$$
+    Hai so sánh trên cho ta $3b^2>a>2b\ge 2c$. Ngoài ra, khi trừ hai vế đẳng thức ban đầu đi $b^2+b+3,$ ta được đẳng thức tương đương là
+    \[(a-b)\left(a+b+1\right)=\left(b^2+b+3\right)\left(3c^2+3c+8\right).\tag{*}\label{xbinhcong1luon}\]
+    Tương tự như bài trước, ta chia phần còn lại của bài này ra làm hai trường hợp.
+    \begin{itemize}
+    \item \chu{Trường hợp 1. }Nếu $a-b$ chia hết cho $b^2+b+3$, ta có 
+    $$b^2+b+3\le a-b<2b^2-b-1<2b^2+2b+6.$$
+    Bắt buộc, ta phải có $a-b=b^2+b+3,$ và khi đó $a-2=(b+1)^2$ là số chính phương, mâu thuẫn.
+    \item \chu{Trường hợp 2. }Nếu $a+b+1$ chia hết cho $b^2+b+3$, ta có $$b^2+b+3\le a+b+1<2b^2+b+1<2b^2+2b+6.$$
+    Bắt buộc, ta phải có $a+b+1=b^2+b+3,$ và khi đó $a-2=(b-1)^2$ là số chính phương, mâu thuẫn.
+\end{itemize}    
+\end{enumerate}
+Mâu thuẫn xảy ra trong tất cả trường hợp trên. Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên tố $p$ và số nguyên dương $n.$ Chứng minh rằng không tồn tại các số nguyên dương $x,y$ thỏa mãn
+\[\dfrac{x^2+x}{y^2+y}=p^{2n}.\]
+\nguon{Cao Đình Huy}
+\loigiai{
+Ta sẽ chứng minh bài toán này bằng phản chứng. Ta giả sử tồn tại các số nguyên dương $x,y,$ thỏa mãn yêu cầu bài toán. Theo đó
+\[x^2+x=\tron{y^2+y}p^{2n} \Rightarrow x\tron{x+1}= y\tron{y+1}p^{2n}.\tag{1}\label{snt1}\]
+Dựa vào (\ref{snt1}), ta chỉ ra $p^{2n}$ là ước của $x\tron{x+1}.$ Do $(x,x+1)=1$ nên $p^{2n}$ là ước của $x$ hoặc $x+1.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $p^{2n}\mid x,$ ta đặt $x=p^{2n}k$ trong đó $k$ là số nguyên dương. Thế vào (\ref{snt1}), ta được
+    \[p^{2n}k\tron{p^{2n}k+1}=y\tron{y+1}p^{2n}\Rightarrow p^{2n}k^2+k=y^2+y\Rightarrow \tron{p^nk-y}\tron{p^nk+y}=y-k.\tag{2}\label{snt2}\]
+    Ta tiếp tục chia bài toán thành các trường hợp nhỏ hơn.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $y=k$, từ (\ref{snt2}) ta có 
+        $$\tron{p^nk-y}\tron{p^nk+y}=0\Rightarrow p^nk=y \Rightarrow p^n=1\Rightarrow n=0.$$ 
+        Điều này mâu thuẫn với giả thiết.
+        \item \chu{Trường hợp 2.} Với $y> k$, ta có $$\tron{p^nk-y}\tron{p^nk+y}> 0\Rightarrow\tron{p^nk-y}>0\Rightarrow\tron{p^nk-y}\geq1.$$
+        Kết hợp với (\ref{snt2}), ta suy ra
+        $$y-k \ge p^nk+y\Rightarrow0> k\tron{p^n+1}\Rightarrow0\ge p^n+1.$$
+        Điều này mâu thuẫn với giả thiết.
+        \item \chu{Trường hợp 3.} Với $y< k$, ta có $y<p^nk,$ thế nên $$\tron{p^nk-y}\tron{p^nk+y}>0>y-k.$$
+        Đánh giá trên mâu thuẫn với (\ref{snt2}).
+    \end{itemize}
+    \item Nếu  $p^{2n}\mid x+1,$ ta đặt $x+1=p^{2n}$ với $k$ là số nguyên dương. Thế vào (\ref{snt1}), ta được 
+    \[\tron{p^{2 n}k-1}p^{2n}k=p^{2n}y\tron{y+1}\Rightarrow p^{2n}k^2-k=y^2+y=\tron{p^nk-y}\tron{p^nk+y}=y+k.\tag{3}\label{snt3}\]
+    Ta tiếp tục chia bài toán thành các trường hợp nhỏ hơn.    
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $p^nk\le y,$ từ (\ref{snt3}), ta có
+        $$y+k=\tron{p^nk-y}\tron{p^nk+y}\le0.$$
+        Điều này mâu thuẫn với giả thiết.
+        \item \chu{Trường hợp 2.} Với $p^nk> y,$ từ (\ref{snt3}), ta có
+        $$p^nk+y\le k+y\Rightarrow p^n\le 1.$$
+        Điều này mâu thuẫn với giả thiết.
+    \end{itemize}
+\end{enumerate}
+Mâu thuẫn chỉ ra trong tất cả các trường hợp chứng tỏ giả sử phản chứng là sai. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\subsection{Tính chia hết cho lũy thừa một số nguyên tố}
+
+\subsubsection*{Ví dụ minh họa}
+
+\begin{bx}
+Tìm các số nguyên dương $x,y$ và số nguyên tố $p$ thỏa $2^xp^2+27=y^3.$
+\loigiai{
+Phương trình đã cho tương đương với
+$$2^xp^2=(y-3)\left(y^2+3y+9\right).$$
+Với mục tiêu là xác định dạng của $y-3$ và $y^2+3y+9$, ta có các đánh giá sau
+\begin{enumerate}
+    \item[i,] $y^2+3y+9$ là số lẻ, thế nên $\left(2^x, y^2+3y+9\right)=1.$
+    \item[ii,] Với $p\ne 3$, ta có $\left(y-3,y^2+3y+9\right)=1.$ Còn với $p=3,$ ta có $y^3$ chia hết cho $9$ nhưng không chia hết cho $27,$ mâu thuẫn.
+    \item[iii,] $1<y-3<y^2+3y+9.$ 
+\end{enumerate}
+Ba đánh giá trên cho ta $y-3=2^x$ và  $y^2+3y+9=p^2.$
+Kết hợp hai nhận xét vừa rồi, ta có
+\begin{align*}
+    \left(2^x+3\right)^2+3\cdot\left(2^x+3\right)+9=p^2
+    &\Rightarrow 2^{2x}+15\cdot 2^x+27=p^2.
+\end{align*}
+Nếu $x\ge 2,$ do $2^{2x}$ và $2^x$ đều chia hết cho $4,$ ta nhận thấy
+$$p^2=2^{2x}+15\cdot 2^x+27\equiv 3\pmod{4}.$$
+Không có bình phương số nào đồng dư $3$ theo modulo $4,$ thế nên bắt buộc $x=1.$\\
+Thử trực tiếp, ta nhận được $(p,x,y)=(7,1,5)$ là bộ số duy nhất thỏa mãn đề bài.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên tố $p$ và số nguyên dương $n$ thỏa mãn
+\[n^8-p^5=n^2+p^2.\]
+\nguon{Zhautykov}
+\loigiai{
+Giả sử tồn tại số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn yêu cầu. Giả sử này cho ta
+\[n^2(n-1)(n+1)\tron{n^2-n+1}\tron{n^2+n+1}=p^2\tron{p^3+1}.\tag{*}\label{8522}\]
+Do $p$ là số nguyên tố, ta sẽ xét $3$ trường hợp sau đây.
+\begin{enumerate}
+    \item Một trong ba số $n,n-1,n+1$ chia hết cho $p.$\\
+    Trong trường hợp này, ta có $n\ge p-1.$ Kết hợp với (\ref{8522}), ta được
+    $$p^2\tron{p^3+1}\ge \tron{p-1}^2\tron{p-2}p\tron{p^2-3p+3}\tron{p^2-p+1}.$$
+    Một cách tương đương, ta có
+    $$p(p+1)\ge (p-1)^2\tron{p-2}\tron{p^2-3p+3}.$$
+    Bất đẳng thức trên đổi chiều với $p\ge 4,$ thế nên ta có $p\le 3.$ \\
+    Thử trực tiếp với $p=2,3$ và thay trở lại (\ref{8522}), ta thu được $n=2$ tại $p=3.$
+    \item Cả hai số $n^2-n+1$ và $n^2+n+1$ chia hết cho $p.$ Trong trường hợp này, ta có
+    $$
+    \heva{&p\mid\tron{n^2-n+1}\\&p\mid\tron{n^2+n+1}}
+    \Rightarrow
+    \heva{&p\mid2\tron{n^2+1}\\&p\mid2n}
+    \Rightarrow
+    p\mid 2\tron{n^2+1,n}
+    \Rightarrow
+    p\mid 2\Rightarrow p=2.
+    $$
+    Thế $p=2$ vào (\ref{8522}), ta không tìm được $n$ nguyên dương.
+    \item Một trong hai số $n^2-n+1$ và $n^2+n+1$ chia hết cho $p^2.$ Trong trường hợp này, ta có
+    $$
+    \hoac{&p^2\le n^2-n+1 \\ &p^2\le n^2+n+1}
+    \Rightarrow
+    p^2\le n^2+n+1
+    \Rightarrow
+    p^2<(n+1)^2
+    \Rightarrow
+    p<n+1.
+    $$
+    Ta nhận thấy rằng $n>p-1.$ Xử lí tương tự \chu{trường hợp 1}, ta không tìm được $p$ nguyên tố và $n$ nguyên dương tương ứng.
+\end{enumerate}
+Kết luận, $(n,p)=(2,3)$ là cặp số duy nhất thỏa yêu cầu bài toán.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên tố $p$ và số tự nhiên $x,y$ thỏa mãn $p^x=y^4+4.$
+\nguon{Indian National Mathematical Olympiad 2008}
+\loigiai{
+Với các số $p,x,y$ thỏa yêu cầu, ta có
+$$p^x=\left(y^2-2y+2\right)\left(y^2+2y+2\right).$$
+Ta suy ra cả $y^2-2y+2$ và $y^2+2y+2$ đều là lũy thừa của $p.$ Đặt $$y^2-2y+2=p^m,\quad y^2+2y+2=p^n,$$ với $m,n$ là các số tự nhiên. Ta có nhận xét
+\begin{align*}
+    y^2+2y+2>y^2-2y+2&\Rightarrow n>m\\&\Rightarrow p^n>p^m\\&\Rightarrow p^m\mid p^n\\&\Rightarrow \left(y^2-2y+2\right)\mid \left(y^2+2y+2\right).
+\end{align*}
+Với việc quy phép chia hết về một biến, ta lại tiếp tục suy ra
+\begin{align*}
+    \left(y^2-2y+2\right)\mid \left(y^2+2y+2\right)
+    &\Rightarrow
+    \left(y^2-2y+2\right)\mid 4y
+    \\&\Rightarrow
+    4y\ge y^2-2y+2
+    \\&\Rightarrow 
+    y^2-6y+2\le 0
+    \\&\Rightarrow (y-3)^2\le 7
+    \\&\Rightarrow y\le 5.
+\end{align*}
+Theo đó, $y$ chỉ có thể nhận tối đa $6$ giá trị là $0,1,2,3,4,5.$ Ta lập bảng sau đây.
+\begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c}
+       $y$ & $0$ & $1$ & $2$ & $3$ & $4$ & $5$  \\
+       \hline
+       $p^x=y^4+4$  & $4$ & $5$ & $20$ & $85$ & $260$ & $629$   \\
+       \hline 
+       $(p,x)$ & $(2,2)$ & $(5,1)$ & $\not\in\mathbb{N}^2$ & $\not\in\mathbb{N}^2$ & $\not\in\mathbb{N}^2$ & $\not\in\mathbb{N}^2$
+    \end{tabular}
+\end{center}
+Kết luận, có hai bộ $(p,x,y)$ thỏa yêu cầu, đó là $(2,2,0)$ và $(5,1,0).$}
+\end{bx}
+
+\begin{bx}
+Tìm các cặp số nguyên dương $a,b$ phân biệt thỏa mãn $b^2+a$ vừa là lũy thừa một số nguyên tố, vừa là ước của $a^2+b.$
+\nguon{Saint Patersburg 2001}
+\loigiai{
+Giả sử tồn tại cặp số nguyên dương $(a,b)$ thỏa mãn đề bài. Ta đặt $b^2+a=p^n.$ Theo giả thiết, ta có 
+$$p^n=\tron{b^2+a}\mid \tron{a^2+b}.$$
+Giả thiết kể trên cho ta biết $a\equiv -b^2\pmod{p^n},$ và thế thì
+$$0\equiv a^2+b\equiv b^4+b\equiv b\tron{b+1}\tron{b^2-b+1}\pmod{p^n}.$$
+Với việc $\tron{b,b+1}=\tron{b,b^2-b+1}=1,$ ta suy ra hoặc $b,$ hoặc $\tron{b+1}\tron{b^2-b+1}$ chia hết cho $p^n.$ Song, nếu $b$ chia hết cho $p^n$ thì $b\ge p^n=b^2+a,$ mâu thuẫn. Còn nếu  $\tron{b+1}\tron{b^2-b+1}$ chia hết cho $p^n$ thì vì cả hai số $b+1$ và $b^2-b+1$ đều nhỏ hơn $p^n=b^2+a$ nên ta có
+$$\heva{&p\mid (b+1) \\ &p\mid\tron{b^2-b+1}}
+\Rightarrow 
+\heva{&p\mid (b+1) \\ &p\mid\tron{(b+1)(b-2)+3}}
+\Rightarrow p=3.$$
+Ta có $b+1$ chia hết cho $3.$ Đặt $b=3k-1.$ Phép đặt này cho ta
+$$b^2-b+1=(3k-1)^2-(3k-1)+1=9k^2-9k+3.$$
+Điều này chứng tỏ $b^2-b+1$ chia hết cho $3$ nhưng không chia hết cho $9.$ Do tích $(b+1)\tron{b^2-b+1}$ chia hết cho $3^n$ nên $b+1$ chia hết cho $3^{n-1}.$ Ta suy ra
+$$b+1\ge 3^{n-1}\Rightarrow 3(b+1)\ge 3^n=b^2+a\ge b^2+1\Rightarrow (b-1)(b-2)\le 0.$$
+Giải bất phương trình trên, ta được $b=2$ hoặc $b=1.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Với $b=1,$ từ $a^2+b$ chia hết cho $b^2+a$ ta có $a+1$ là ước của $a^2+1=(a-1)(a+1)+2.$ Ta tìm được $a=1$ từ đây.
+    \item Với $b=2,$ từ $a^2+b$ chia hết cho $b^2+a$ ta có $a+4$ là ước của $a^2+2=(a-4)(a+4)+18.$ Ta tìm được $a=14,a=5$ và $a=2$ từ đây.
+\end{enumerate}
+Thử lại từng trường hợp, ta kết luận rằng chỉ có cặp $(a,b)=(5,2)$ thỏa yêu cầu bài toán.}
+\end{bx}
+
+\subsubsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm số nguyên dương $m$ số nguyên tố $p, q$ sao cho $2^{m}p^{2}+1=q^5.$
+\nguon{Finland Finish National High School Mathematics Competition 2013}
+\end{btt}
+
+\begin{btt}
+Tồn tại không các số nguyên tố $p,q$ thỏa mãn $p^2\left(p^3-1\right)=q(q+1)?$
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2012}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $p,q$ thỏa mãn $q^3+1$ chia hết cho $p^2$ và $p^6-1$ chia hết cho $q^2.$
+\nguon{Bulgarian National Mathematical Olympiad 2014}
+\end{btt}
+
+\begin{btt}
+Tìm các số tự nhiên $n$ sao cho $n^5-4n^4+16n^2-9n-7$ có đúng một ước nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba $\left( p,y,n \right)$ nguyên dương thoả mãn $n+1$ không chia hết cho số nguyên tố $p,$ đồng thời $p^n+1=y^{n+1}.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q,r$ và số tự nhiên $n$ thỏa mãn
+$$p^2=q^2+r^n.$$
+\nguon{Olympic Toán học Bắc Trung Bộ 2020}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên tố $p$ và số nguyên dương $n$ thỏa mãn $p^2$ là ước của 
+$$\tron{1^2+1}\tron{2^2+1}\ldots\tron{n^2+1}.$$
+Chứng minh rằng $p<2n.$
+\nguon{China Western Mathematical Olympiad 2017}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $a, b$ sao cho $\dfrac{a^2(b-a)}{b+a}$ là bình phương một số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $x,y$ thỏa mãn $\dfrac{x y^{3}}{x+y}$ là lập phương một số nguyên tố.
+\nguon{Thai Mathematical Olympiad 2013}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ và các số nguyên dương $x,y,n$ thỏa mãn
+\[p^n=x^3+y^3.\]
+\nguon{Hungary, 2020}
+\end{btt}
+
+\begin{btt}
+Tìm các cặp số nguyên dương $a,b$ thỏa mãn $a^3+b$ vừa là lũy thừa một số nguyên tố lẻ, vừa là ước của $a+b^3.$
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên dương $a,b$ phân biệt và lớn hơn $1$ thỏa mãn $b^2+a-1$ là ước của $a^2+b-1.$ Chứng minh rằng $b^2+a-1$ không thể có nhiều hơn một ước nguyên tố.
+\nguon{Saint Patersburg 2001}
+\end{btt}
+
+\subsubsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm số nguyên dương $m$ số nguyên tố $p, q$ sao cho $2^{m}p^{2}+1=q^5.$
+\nguon{Finland Finish National High School Mathematics Competition 2013}
+\loigiai{Phương trình đã cho tương đương
+$$2^{m}p^{2}=(q-1)\left(q^{4}+q^{3}+q^{2}+q+1\right).$$
+Với mục tiêu là xác định dạng của $q-1$ và $q^{4}+q^{3}+q^{2}+q+1,$ ta có các đánh giá sau
+\begin{enumerate}
+    \item[i,] $q$ là số lẻ, thế nên $\left(2^{m}, q^{4}+q^{3}+q^{2}+q+1\right)=1.$
+    \item[ii,] Với $q\ne 5$, ta có $\left(q-1,q^{4}+q^{3}+q^{2}+q+1\right)=1.$ Còn với $q=5,$ ta không tìm được $m$ và $p.$
+    \item[iii,] $1<q-1<q^4+q^3+q^2+q+1.$ 
+\end{enumerate}
+Ba đánh giá trên cho ta
+$q-1=2^m$ và $q^4+q^3+q^2+q+1=p^2.$
+Kết hợp hai nhận xét vừa rồi, ta có
+\begin{align*}
+    q^4+q^3+q^2+q=p^2-1
+    &\Rightarrow \left(q^2+q\right)\left(q^2+1\right)=(p-1)(p+1)
+    \\&\Rightarrow \left(\left(2^m+1\right)^2+\left(2^m+1\right)\right)\left(\left(2^m+1\right)^2+1\right)=(p-1)(p+1)
+    \\&\Rightarrow \left(2^{2 m}+3\cdot 2^{m}+2\right)\left(2^{2 m}+2^{m+1}+2\right)=(p-1)(p+1).
+\end{align*}
+Nếu $m \geq 3$, do $2^m$ chia hết cho $8$ nên ta nhận thấy
+$$2^{2m}+3\cdot 2^m+2\equiv 2\pmod{8},\quad2^{2 m}+2^{m+1}+2\equiv 2\pmod{8},$$
+và khi đó $(p-1)(p+1)$ chia cho $8$ dư $4,$ mâu thuẫn với việc tích hai số chẵn liên tiếp $(p-1)(p+1)$ bắt buộc phải chia hết cho $8.$ Trường hợp trên không xảy ra, chứng tỏ $m=1$ hoặc $m=2.$ Kiểm tra trực tiếp, ta nhận thấy $(p,q,m)=(11,3,1)$ là bộ số duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tồn tại không các số nguyên tố $p,q$ thỏa mãn $p^2\left(p^3-1\right)=q(q+1)?$
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2012}
+\loigiai{
+Câu trả lời là phủ định. Thật vậy, ta giả sử phản chứng rằng, tồn tại các số nguyên tố $p,q$ thỏa mãn
+\[p^2\left(p^3-1\right)=q(q+1).\tag{*}\label{jbmosl2.012}\]
+Nếu như $p=q,$ ta có
+$$p^2\left(p^3-1\right)=p(p+1)\Rightarrow p^5-2p^2-p=0\Rightarrow p\left(p^4-2p-1\right)=0.$$
+Do $p^4-2p-1=p\left(p^3-2\right)\ge p\left(2^3-2\right)-1=6p-1>0$ nên trường hợp $p=q$ không xảy ra, do vậy $p\ne q.$  Tới đây, ta thực hiện xét tính chia hết cho $q$ và $p$ ở cả hai vế. Cụ thể
+\begin{itemize}
+    \item[i,] Vế phải của (\ref{jbmosl2.012}) chia hết cho $q$ và $(p,q)=1,$ chứng tỏ $p^3-1=(p-1)\left(p^2+p+1\right)$ chia hết cho $q.$
+    \item[ii,] Vế trái của (\ref{jbmosl2.012}) chia hết cho $p^2$ và $\left(p^2,q\right)=1,$ chứng tỏ $q+1$ chia hết cho $p^2.$
+\end{itemize}
+Ta sẽ tiếp tục chia bài toán thành các trường hợp nhỏ hơn dựa theo nhận xét thứ nhất.
+\begin{enumerate}
+    \item Nếu $p-1$ chia hết cho $q$ và $q+1$ chia hết cho $p$ (chính xác là $p^2$), ta có $p-1\ge q\ge p-1,$ thế nên $q=p-1.$ Thế trở lại (\ref{jbmosl2.012}), ta có
+    $$p^2\left(p^3-1\right)=p(p-1)\Rightarrow p\left(p^2+p+1\right)=1.$$
+    Ta không chỉ ra được $p$ nguyên tố từ đây.
+    \item Nếu $p^2+p+1$ chia hết cho $q$ và $q+1$ chia hết cho $p^2,$ ta đặt $q+1=kp^2$ với $k$ là số nguyên dương. Từ $p^2+p+1$ chia hết cho $q$ và phép đặt, ta có
+    $$p^2+p+1\ge q\ge kp^2-1.$$
+    Bằng phản chứng, ta chỉ ra $k\ge 2$ không thỏa, thế nên bắt buộc $k=1.$ Với $k=1,$ ta có 
+    $$q=p^2-q=(p-1)(p+1).$$
+    Do $q$ là số nguyên tố và $1\le p-1\le p+1$ nên $p-1=1$ và $p+1=q,$ hay là $p=2,q=3.$ \\
+    Thế trở lại (\ref{jbmosl2.012}), ta thấy không thỏa.
+\end{enumerate}
+Như vậy, giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $p,q$ thỏa mãn $q^3+1$ chia hết cho $p^2$ và $p^6-1$ chia hết cho $q^2.$
+\nguon{Bulgarian National Mathematical Olympiad 2014}
+\loigiai{
+\begin{enumerate}
+    \item Với $p,q\le 3,$ ta tìm ra các bộ $(p,q)=(2,3)$ và $(p,q)=(3,2)$ thoả yêu cầu.
+    \item Với $p,q \geq 5$, ta có các nhận xét
+    \begin{enumerate}[i,]
+        \item[i,] $q^2\mid p^6-1=\tron{p-1}\tron{p+1}\tron{ p^2-p+1}\tron{p^2+p+1}.$
+        \item[ii,] Các số $p-1,p+1,p^2-p+1,p^2+p+1$ đôi một nguyên tố cùng nhau.
+    \end{enumerate}
+    Hai nhận xét trên cho ta biết $q^2$ là ước của một trong các số $p-1, p+1, p^2-p+1, p^2+p+1$.\\
+    Ta xét các trường hợp kể trên.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} $q^2$ là ước của $p-1$ hoặc $p+1.$ Trong trường hợp này, ta có
+        $$\heva{&\hoac{&q^2\mid (p-1) \\ &q^2\mid (p+1)}\\&p^2\mid\tron{q^3+1}}\Rightarrow \heva{&q^2\le p+1 \\ &p^2\le q^3+1}\Rightarrow \tron{q^2-1}^2\le q^3+1\Rightarrow p^2(p-2)(p+1)\le 0.$$
+        Điều này không thể xảy ra.
+        \item \chu{Trường hợp 2.} $q^2$ là ước của  $p^2-p+1$ hoặc $p^2+p+1.$ Rõ ràng $q^2\le p^2+p+1.$ Ngoài ra, dựa vào giả thiết $q^3+1$ chia hết cho $p^2,$ ta tiếp tục chia trường hợp này thành các khả năng nhỏ hơn.
+        \begin{itemize}
+            \item \chu{Khả năng 1.} Nếu $q+1$ chia hết cho $p,$ ta đặt $q+1=kp.$ Phép đặt này cho ta
+            $$(kp)^2\le p^2-p+1\Rightarrow \tron{k^2-1}p^2+p\le 1\Rightarrow k<0,$$
+            mâu thuẫn với việc $p,q$ dương.
+            \item \chu{Khả năng 2.} Nếu $q^2+q+1$ chia hết cho $p^2,$ ta đặt $q^2+q+1=lp^2.$ Phép đặt này cho ta $(q+1)^2>lp^2,$ thế nên $q+1>p\sqrt{l}.$ Kết hợp với $q^2\le p^2+p+1,$ ta có      
+            $$p^2+p+1\ge q^2>\tron{p\sqrt{l}-1}^2.$$
+            Chỉ có $l=1$ hoặc $l=2$ thỏa mãn đánh giá trên. \\
+            Bạn đọc tự tìm cách thế ngược lại để thấy được điều mâu thuẫn.
+        \end{itemize}
+    \end{itemize}
+Kết luận, các cặp số nguyên tố thỏa yêu cầu là $(p,q)=(2,3)$ và $(p,q)=(3,2).$
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số tự nhiên $n$ sao cho $n^5-4n^4+16n^2-9n-7$ có đúng một ước nguyên tố.
+\loigiai{
+Ta nhận thấy $n=0$ và $n=1$ thỏa mãn. Với $n\ge 2,$ do $n^5-4n^4+16n^2-9n-7>0$ nên ta có thể đặt
+$$n^5-4n^4+16n^2-9n-7=p^x,$$
+trong đó $p$ nguyên tố và $x$ nguyên dương. Với các số $p,x,y$ như vậy, ta có
+$$p^x=\left(n^2-5n+7\right)\left(n^3+n^2-2n-1\right).$$
+Ta suy ra cả $n^2-5n+7$ và $n^3+n^2-2n-1$ đều là lũy thừa của $p.$ Đặt $$n^2-5n+7=p^a,\quad n^3+n^2-2n-1=p^b,$$ với $a,b$ là các số tự nhiên. Ta dễ dàng chứng minh được $b>a$ và $n^3+n^2-2n-1$ chia hết cho $n^2-5n+7.$ Ta lần lượt suy ra
+\begin{align*}
+    \left(n^2-5n+7\right)\mid \left(n^3+n^2-2n-1\right)
+    &\Rightarrow
+    \left(n^2-5n+7\right)\mid \bigg((n+6)\tron{n^2-5n+7}+21n-43\bigg)
+    \\&\Rightarrow 
+    n^2-5n+7\le 21n-43
+    \\&\Rightarrow (n-13)^2\le 119   \\& \Rightarrow 13-\sqrt{119}\le n\le 13+\sqrt{119}.
+\end{align*}
+Theo đó, $n$ nhận các giá trị từ $3$ cho đến $23.$ \\
+Thử từng trường hợp, ta kết luận $n=0,\ n=1,\ n=2,\ n=3$ là tất cả các giá trị của $n$ thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba $\left( p,y,n \right)$ nguyên dương thoả mãn $n+1$ không chia hết cho số nguyên tố $p,$ đồng thời $p^n+1=y^{n+1}.$
+\loigiai{
+Phương trình đã cho tương đương với
+$$(y-1)\left({y^n} + {y^{n - 1}} +\ldots+ y + 1\right)=p^n.$$
+Giả sử $p$ là ước nguyên tố chung của $y-1$ và ${y^n} + {y^{n - 1}} +\ldots+ y + 1.$ Do $y\equiv 1\pmod{p},$ ta có
+$${y^n} + {y^{n - 1}} +\ldots+ y + 1\equiv 1+1+\ldots+1\equiv n+1\pmod{p}.$$
+Nhờ vào giả thiết $n+1$ không chia hết cho $p,$ ta chỉ ra giả sử trên là sai. Theo đó, $y-1$ không thể là lũy thừa cơ số $p,$ và bắt buộc $y=2.$ Thế trở lại $y=2,$ ta có
+$$p^n+1=2^{n+1}.$$
+Tới đây, ta chia bài toán thành trường hợp sau.
+\begin{enumerate}
+    \item Với $p=2,$ kiểm tra trưc tiếp, ta không tìm ra được $n$ nguyên dương.
+    \item Với $p=3,$ kiểm tra trực tiếp, ta tìm ra $n=1.$ 
+    \item Với $p\ge 5,$ ta có
+    $2\cdot2^n=2^{n+1}=p^n+1\ge 5^n+1,$ đây là điều vô lí.
+\end{enumerate}
+Tổng kết lại, $(p,y,n)=(3,2,1)$ là bộ số duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q,r$ và số tự nhiên $n$ thỏa mãn
+$$p^2=q^2+r^n.$$
+\nguon{Olympic Toán học Bắc Trung Bộ 2020}
+\loigiai{
+Đầu tiên, nếu cả ba số $p,q,r$ đều lẻ, hai vế phương trình khác tính chẵn lẻ, mâu thuẫn. Do vậy, trong các số $p,q,r$ phải có một số bằng $2.$ Giả sử tồn tại các số $p,q,r,n$ thỏa yêu cầu.
+\begin{enumerate}
+    \item Với $p=2,$ ta có $q^2+r^n=4.$ Ta không tìm được $q$ và $r$ từ đây, do $$q^2+r^n\ge 2^2+2=6>4.$$
+    \item Với $q=2,$ ta có
+    $r^n=(p-q)(p+q)=(p-2)(p+2).$
+    Ta suy ra cả $p-2$ và $p+2$ đều là lũy thừa của $r.$ Nếu hai số này có ước chung là $r,$ ta nhận thấy
+    $$r\mid (p+2)-(p-2)=4,$$
+    kéo theo $r=2,$ và lúc này $p$ là số nguyên tố chẵn, vô lí. Ta suy ra $p-2=1,$ và dễ dàng tìm được $p=3,r=7,n=1$ trong trường hợp này.
+    \item Với $r=2,$ ta có $(p-q)(p+q)=r^n=2^n.$ Ta nhận thấy cả $p-q$ và $p+q$ đều là lũy thừa của $2.$ Ta đặt $p-q=2^x,p+q=2^y,$ với $x,y$ là các số tự nhiên. Phép đặt này cho ta
+    $$
+    \heva{&p-q=2^x \\ &p+q=2^y}
+    \Rightarrow \heva{&p=\dfrac{2^x+2^y}{2} \\ &q=\dfrac{2^y-2^x}{2}}
+    \Rightarrow \heva{&p=\dfrac{2^x\left(2^{y-x}+1\right)}{2} \\ &q=\dfrac{2^x\left(2^{y-x}-1\right)}{2}.}   
+    $$
+    Do $p,q$ là các số nguyên tố lẻ, ta bắt buộc phải có $x=1,$ vậy nên
+    $$p=2^{y-x}+1,\qquad q=2^{y-x}-1.$$
+    Trong ba số tự nhiên liên tiếp $p,\dfrac{p+q}{2}$ và $q,$ số $\dfrac{p+q}{2}$ không chia hết cho $3,$ thế nên hoặc $p=3,$ hoặc $q=3.$
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $q=3,$ ta có $p=q+2=5,$ và ta còn tìm được thêm $n=4.$
+        \item\chu{Trường hợp 2.} Nếu $p=3,$ ta có $q=p-2=1,$ mâu thuẫn.     
+    \end{itemize}
+\end{enumerate}
+Kết luận, các bộ $(n,p,q,r)$ thỏa yêu cầu bao gồm $(1,3,2,7)$ và $(4,5,3,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên tố $p$ và số nguyên dương $n$ thỏa mãn $p^2$ là ước của 
+$$\tron{1^2+1}\tron{2^2+1}\ldots\tron{n^2+1}.$$
+Chứng minh rằng $p<2n.$
+\nguon{China Western Mathematical Olympiad 2017}
+\loigiai{
+Ta giả sử phản chứng rằng $p\ge 2n.$
+Đầu tiên, với mọi số nguyên dương $a\in \vuong{1;n},$ ta có $a^2+1$ không chia hết cho $p^2.$ Điều này xảy ra là do
+$$a^2+1\le n^2+1<4n^2\le p^2.$$
+Tích của $n$ số $1^2+1,2^2+1,\ldots,n^2+1$ chia hết cho $p^2,$ trong đó không có số nào chia hết cho $p^2.$ Vậy nên, tồn tại hai số $a,b\in\vuong{1;n}$ thỏa mãn $a^2+1$ và $b^2+1$ cùng chia hết cho $p$. Xét hiệu của $a^2+1$ và $ b^2+1$, ta có
+$$p\mid \tron{a^2+1-b^2-1}=(a-b)(a+b).$$
+Do $p$ là số nguyên tố, $p$ bắt buộc là ước của $1$ trong $2$ số $a-b$ và $a+b.$  Như vậy
+$$\hoac{&p\le a-b \\ &p\le a+b}\Rightarrow p\le a+b \le n-1+n= 2n-1.$$
+Điều này mâu thuẫn với giả sử $p\ge 2n$. Giả sử phản chứng sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $a, b$ sao cho $\dfrac{a^2(b-a)}{b+a}$ là bình phương một số nguyên tố.
+\loigiai{
+Từ giả thiết, ta có thể đặt $a^2(b-a)=p^2(b+a)$ với $p$ là số nguyên tố. Đặt $(a,b)=d,$ khi đó tồn tại các số nguyên dương $x,y$ sao cho $(x,y)=1,a=dx,b=dy.$ Phép đặt này cho ta
+\[d^2x^2(y-x)=p^2(x+y).\tag{*}\label{bainayhay}\]
+Nhờ vào việc chứng minh được $\left(x+y,x^2\right)=1$ kết hợp với $p^2(x+y)$ chia hết cho $x^2,$ ta suy ra $p^2$ chia hết cho $x^2.$ Tới đây, ta chia bài toán làm các trường hợp sau.
+\begin{enumerate}
+    \item Với $x=p,$ thế trở lại (\ref{bainayhay}) rồi rút gọn ta có
+    \[d^2(y-p)=p+y.\tag{**}\label{bainayrachay}\]
+    Dựa vào (\ref{bainayrachay}), ta suy ra $p+y$ chia hết cho $y-p.$ Hơn thế nữa, do $(p+y,p-y)$ nhận một trong các giá trị $1,2,p,2p$ nên $y-p$ cũng nhận một trong các giá trị ấy. Ta xét các trường hợp kể trên.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $y-p=1$ hay $y=p+1,$ thế vào (\ref{bainayrachay}), ta được
+        $$d^2=2p+1\Rightarrow 2p=(d-1)(d+1).$$
+        Do $d-1$ và $d+1$ cùng tính chẵn lẻ, $2p$ chia hết cho $4,$ hoặc là số lẻ, vô lí.
+        \item\chu{Trường hợp 2.} Với $y-p=2$ hay $y=p+2,$ thế vào (\ref{bainayrachay}), ta được
+        $$2d^2=2p+2\Rightarrow p=(d-1)(d+1).$$
+        Do $0<d-1<d+1,$ ta bắt buộc có $d-1=1,d+1=p.$ Theo đó, $d=2$ và $p=3.$ Thay trở lại vào (\ref{bainayrachay}), ta được $y=5,$ còn $x=p=3.$ Cùng với đó, $a=dx=6$ và $b=dy=10.$
+        \item\chu{Trường hợp 3.} Với $y-p=p$ hay $y=2p,$ thế vào (\ref{bainayrachay}), ta được
+        $$d^2\cdot p=3p\Rightarrow d^2=3,$$
+        mâu thuẫn với điều kiện $d$ nguyên dương.
+        \item \chu{Trường hợp 4.} Với $y-p=2p$ hay $y=3p,$ thế vào (\ref{bainayrachay}), ta được
+        $$d^2\cdot 2p=4p\Rightarrow d^2=2,$$
+        mâu thuẫn với điều kiện $d$ nguyên dương.
+    \end{itemize}
+    \item Với $x=1,$ thế trở lại (\ref{bainayhay}) ta có
+    $$d^2(y-1)^2=p^2(y+1)(y-1).$$
+    Theo đó, $(y+1)(y-1)$ là số chính phương. Đặt $(y-1)(y+1)=z^2$ với $z$ nguyên dương, thế thì
+    $$y^2-1=z^2\Rightarrow (y-z)(y+z)=1\Rightarrow y=1,z=0.$$
+    Tuy nhiên, với $y=1,$ rõ ràng $d^2(y-1)=0<p^2(y+1),$ mâu thuẫn.
+\end{enumerate}
+Tổng kết lại, $(a,b)=(6,10)$ là cặp số nguyên dương duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $x,y$ thỏa mãn $\dfrac{x y^{3}}{x+y}$ là lập phương một số nguyên tố.
+\nguon{Thai Mathematical Olympiad 2013}
+\loigiai{
+Giả sử tồn tại cặp $(x,y)$ thỏa yêu cầu bài toán. Từ giả thiết, ta có thể đặt $$xy^3=p^3\tron{x+y},$$ 
+trong đó $p$ là số nguyên tố. Đặt $\tron{x,y}=d$, khi đó tồn tại số nguyên dương $u,v$ sao cho $$\tron{u,v}=1, x=du, y=dv.$$ Phép đặt này cho ta
+\[du\cdot d^3v^3=p^3d\tron{u+v}\Rightarrow d^3uv^3=p^3\tron{u+v}.\tag{*}\label{thai.13}\]
+Nhờ vào việc chứng minh được $\tron{v^3,u+v}=1$ kết hợp với $p^3\tron{u+v}$ chia hết cho $v^3$, ta suy ra $p^3$ chia hết cho $v^3$. Tới đây, ta chia bài toán làm các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $v=p$, thế vào (\ref{thai.13}), ta có $d^3u=u+p$.\\
+    Đẳng thức trên cho ta biết $u\mid (u+p),$ kéo theo $u\mid p.$ Do đó, $u\in\left\{1,p\right\}.$ 
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $u=1,$ kết hợp với $d^3u=u+p$, ta nhận thấy
+        $$d^3=1+p\Rightarrow p= \tron{d-1}\tron{d^2+d+1}.$$
+        Do hai số $d-1<d^2+d+1$ có tích bằng một số nguyên tố, ta có $d-1=1,$ hay là $d=2.$ Dựa vào kết quả này, ta lần lượt chỉ ra $p=7,v=7,u=1,x=14,y=2.$
+        \item \chu{Trường hợp 2.} Nếu $u=p$, kết hợp với $d^3u=u+p$, ta nhận thấy
+        $$d^3p=2p\Rightarrow d^3=2.$$
+        Không có số nguyên $d$ thỏa mãn trong trường hợp này.
+    \end{itemize}
+    \item Nếu $v=1$, thế vào (\ref{thai.13}), ta có 
+    $$d^3u=p^3\tron{u+1}\Rightarrow d^3u^3=p^3\tron{u+1}u^2.$$
+    Ta chỉ ra $\tron{u+1}u^2$ phải là lập phương của một số.
+    Ta đặt $\tron{u+1}u^2=w^3$ với $w$ nguyên dương, phép đặt này cho ta $u^3+u^2=w^3$. Lại có
+    $$u^3\le u^3+u^2=w^3<\tron{u+1}^3=u^3+3u^2+3u+1.$$
+    Do đó, $w^3=u^3$ khi và chỉ khi $u^3= u^3+u^2$, thế nên $u=0,$ mâu thuẫn.
+\end{enumerate}
+Như vậy, $\tron{x,y}=\tron{14,2}$ là cặp số nguyên dương duy nhất thỏa yêu cầu.}
+\begin{luuy}
+Suy luận "$\tron{u+1}u^2=w^3\Rightarrow u=0$" trong bài toán trên là ứng dụng của \chu{phương pháp kẹp lũy thừa}. Bạn đọc có thể nghiên cứu kĩ hơn phương pháp này ở \chu{chương III}.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ và các số nguyên dương $x,y,n$ thỏa mãn
+\[p^n=x^3+y^3.\]
+\nguon{Hungary, 2020}
+\loigiai{
+Trong bài toán này, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với ${p}=2$, ta chỉ ra ${n}=1$ và ${x}={y}=1$ thỏa mãn đẳng thức.
+    \item Với ${p}=3$, ta chỉ ra ${n}=2,x=1$ và $y=2$ thỏa mãn đẳng thức.
+    \item Với ${p}>3$, giả sử tồn tại bộ $(x,y,n)$ thỏa đẳng thức. Trong số các bộ ấy, ta xét bộ $(x,y,n)$ có giá trị của $n$ nhỏ nhất. Đầu tiên, ta nhận thấy rằng
+    $$(x+y)\left(x^2-xy+y^2\right)=p^n.$$
+    Do $p>3$ nên $(x,y)\ne (1,1),$ kéo theo $2< x+y\le x^2-xy+y^2.$ Bằng lập luận này, khi đặt $$x^2-xy+y^2=p^k,\:x+y=p^l,$$ ta suy ra $k>l\ge 2.$ Ta có
+    \begin{align*}
+    \heva{&p\mid (x+y) \\ &p\mid \left(x^2-xy+y^2\right)}
+    &\Rightarrow 
+    \heva{&p\mid (x+y) \\ &p\mid \left(x^2+2xy+y^2-3xy\right)}
+    \\&\Rightarrow 
+    \heva{&p\mid (x+y) \\ &p\mid 3xy}
+   \\& \Rightarrow 
+    \heva{&p\mid (x+y) \\ &p\mid xy}
+    \\&\Rightarrow 
+    \heva{&p\mid x \\ &p\mid y.}
+    \end{align*}
+    Bằng lập luận trên và biến đổi 
+    $${p}^{{n}-3}=\left(\dfrac{{x}}{{p}}\right)^{3}+\left(\dfrac{{y}}{{p}}\right)^{3},$$
+    ta chỉ ra còn có bộ $\left(\dfrac{x}{p},\dfrac{y}{p},n-3\right)$ ngoài bộ $(x,y,n)$ thỏa mãn, mâu thuẫn với tính nhỏ nhất của $n.$
+\end{enumerate}
+Tổng kết lại, tất các số nguyên tố $p$ thỏa mãn yêu cầu bài toán là ${p}=2$ và ${p}=3.$}
+\begin{luuy}
+Ngoài cách gọi ra bộ có $n$ nhỏ nhất, bạn đọc có thể tiến hành bài toán theo cách bình thường theo các bước:
+\begin{enumerate}
+    \item Chứng minh cả $x$ và $y$ đều chia hết cho $p.$
+    \item Áp dụng phép lùi vô hạn, chỉ ra tất cả các bộ
+    $\left(\dfrac{x}{p^k},\dfrac{y}{p^k},n-3k\right)$
+    đều thỏa mãn đẳng thức, nhưng do số mũ của $p$ trong phân tích của $x$ là hữu hạn nên điều này vô lí.
+\end{enumerate}
+\end{luuy}
+\end{gbtt} 
+
+\begin{gbtt}
+Tìm các cặp số nguyên dương $a,b$ thỏa mãn $a^3+b$ vừa là lũy thừa một số nguyên tố lẻ, vừa là ước của $a+b^3.$
+\loigiai{
+Ta giả sử $a^3+b$ là lũy thừa một số nguyên tố. Ta đặt $a^3+b=p^n.$ Theo giả thiết, ta có
+$$p^n=\tron{a^3+b}\mid \tron{b^3+a}.$$
+Giả thiết kể trên cho ta biết $b\equiv \tron{-a}^3 \pmod{p^n},$ và thế thì
+$$0\equiv b^3+a\equiv\tron{-a}^3+a\equiv a\tron{1-a^4}\tron{1+a^4}\pmod{p^n}.$$
+Do $p>2,$ các số $a,\ 1+a^4$ và $1-a^4$ đôi một nguyên tố cùng nhau. Điều này dẫn đến chỉ duy nhất một trong $3$ số ấy chia hết cho $p^n.$ Lại có $a<a^3+b=p^n$ nên $p^n\mid \tron{1+a^4}$ hoặc $p^n\mid \tron{a^4-1}.$ Ta xét các trường hợp sau.
+    \begin{enumerate}
+        \item Nếu $p^n\mid \tron{a^4-1},$ ta có $p^n\mid\tron{a-1}\tron{a+1}\tron{a^2+1}.$ Vì $3$ số này đôi một nguyên tố cùng nhau nên chỉ có $1$ số chia hết cho $p^n.$ Thế nhưng, do
+        $$0\le a-1<a+1<a^2+1<a^3+b=p^n$$
+        nên bắt buộc $a=1,$ và $b=p^n-1.$ Thử lại thấy thỏa mãn.
+        \item Nếu $p^n\mid\tron{a^4+1},$ ta có nhận xét
+        $$p^n\mid a\tron{a^3+b}-\tron{a^4+1}=ab-1.$$
+        Nhận xét này giúp ta chỉ ra $ab-1\ge p^n=a^3+1,$ nhưng mâu thuẫn.
+    \end{enumerate}
+Như vậy, các cặp $(a,b)$ thỏa mãn có dạng $\tron{1,p^n-1},$ trong đó $p$ nguyên tố và $n$ nguyên dương tùy ý.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên dương $a,b$ phân biệt và lớn hơn $1$ thỏa mãn $b^2+a-1$ là ước của $a^2+b-1.$ Chứng minh rằng $b^2+a-1$ không thể có nhiều hơn một ước nguyên tố.
+\nguon{Saint Patersburg 2001}
+\loigiai{
+Ta giả sử $b^2+a-1$ là lũy thừa một số nguyên tố. Ta đặt $b^2+a-1=p^n.$ Theo giả thiết, ta có 
+$$p^n=\tron{b^2+a-1}\mid \tron{a^2+b-1}.$$
+Giả thiết kể trên cho ta biết $a\equiv 1-b^2\pmod{p^n},$ và thế thì
+$$0\equiv a^2+b-1\equiv \tron{1-b^2}^2+b-1= b\tron{b+1}\tron{b^2+b-1}\pmod{p^n}.$$
+Do ba số $b,b+1$ và $b^2+b-1$ đôi một nguyên tố cùng nhau nên chỉ một trong chúng được phép chia hết cho $p^n=b^2+a-1.$ Nhờ vào nhận xét
+$$b-1<b<b^2+a-1,$$
+ta thấy chỉ trường hợp $b^2+a-1$ là ước của $b^2+b-1$ xảy ra, thế nên $b\ge a.$\\ Mặt khác, vì $b^2+a-1$ là ước của $a^2+b-1$ nên
+$$0\le \tron{a^2+b-1}-\tron{b^2+a-1}=(a-b)(a+b-1).$$
+Ta suy ra $a\ge b,$ kết hợp với $b\ge a$ thì $a=b.$ Điều này mâu thuẫn với giả thiết $a,b$ phân biệt. \\
+Giả sử phản chứng ban đầu là sai. Bài toán được chứng minh.}
+\end{gbtt}
