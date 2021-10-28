@@ -1,0 +1,236 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[left=1.75cm, right=1.75cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[utf8]{vietnam}
+\usepackage[many]{tcolorbox}
+\usepackage[final]{pdfpages}
+\usepackage[titles]{tocloft}
+\usepackage[solcolor]{ex_test}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{fontawesome,amsmath,amssymb,amsfonts,enumerate,currfile}
+\usepackage{tikz}
+\usetikzlibrary{lindenmayersystems}
+\usetikzlibrary[shadings]
+\usepackage{esvect}
+\usepackage{pifont}
+\allowdisplaybreaks
+\usepackage{titletoc}
+\usepackage{verbatim}
+\usepackage{titlesec}
+\usepackage{titledot}
+\usepackage{mathptmx}
+%\usepackage{background}
+%\usetikzlibrary{backgrounds}
+%\backgroundsetup{contents={\scshape\fontfamily{cmr}\selectfont\LaTeX\, by Mathpiad},angle=90,scale=3.75,color=gray!30!white, placement = bottom}
+\renewcommand{\baselinestretch}{1}
+\renewcommand{\loigiaiEX}{\sffamily\textbf{Lời giải.}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\renewcommand{\thesection}{\arabic{section}}
+\def\qedEX{\ensuremath{\square}}
+\renewcommand{\labelenumi}{\alph{enumi})}
+\def\sao{\color{black}\small\faCheckCircleO}
+\renewcommand\labelitemi{\faGenderless}
+\renewcommand\labelitemii{$\bullet$}
+\renewcommand{\labelenumi}{\circled{\small\fontfamily{lmss}\bfseries\selectfont\theenumi}}
+\colorlet{tuancolor}{black}
+%\colorlet{tuancolor}{blue!60!black}
+\renewcommand{\ge }{\geqslant}
+\renewcommand{\geq }{\geqslant}
+\renewcommand{\le }{\leqslant}
+\renewcommand{\leq }{\leqslant}
+\newcommand{\suy}{\Rightarrow}
+\newcommand{\tud}{\Leftrightarrow}
+\newcommand{\hoac}[1]{\left[\begin{aligned}#1\end{aligned}\right.}
+\newcommand{\heva}[1]{\left\{\begin{aligned}#1\end{aligned}\right.}
+\newcommand{\plogo}{\fbox{$\mathcal{PL}$}}
+\newcommand{\credha}[2]{#1,\begin{it} #2 \end{it}}
+\newcommand{\credhai}[2]{#1,\begin{it} #2. \end{it}}
+\newcommand{\credba}[3]{#1,\begin{it} #2, \end{it}#3.}
+\newcommand{\credbon}[4]{#1,\begin{it} #2, \end{it}#3, #4.}
+\newtheorem{bai}{\sffamily Bài}
+\newcommand{\chu}[1]{{\color{tuancolor}\sffamily{\bfseries #1}}}
+\newcommand{\nguon}[1]{
+\begin{flushright}
+\bfseries\sffamily #1
+\end{flushright}}
+\newcommand{\tron}[1]{\left(\di #1 \right)}
+\newcommand{\vuong}[1]{\left[ #1 \right]}
+\newcommand{\ddu}[3]{ #1\equiv #2\pmod{#3}}
+\def\db{\dbinom}
+\def\cm{\textbf{\color{tuancolor}\sffamily Chứng minh. }}
+\def\nx{\textbf{\color{tuancolor}\sffamily Nhận xét. }}
+\def\lx{\textbf{\color{tuancolor}\sffamily Lưu ý. }}
+\def\di{\displaystyle}
+\def\bode{\textbf{\color{tuancolor}\sffamily Bổ đề. }}
+\def\vr{\textbf{\color{tuancolor}\sffamily Ví dụ. }}
+\def\hq{\textbf{\color{tuancolor}\sffamily Hệ quả. }}
+\def\tc{\textbf{\color{tuancolor}\sffamily Tính chất. }}
+\def\dn{\textbf{\color{tuancolor}\sffamily Định nghĩa. }}
+\def\vec{\vv}
+\def\overrightarrow{\vv}
+\DeclareSymbolFont{symbolsC}{U}{txsyc}{m}{n}
+\DeclareMathSymbol{\varparallel}{\mathrel}{symbolsC}{9}
+\DeclareMathSymbol{\parallel}{\mathrel}{symbolsC}{9}
+\colorlet{tcbcol@back}{tcbcolback}
+\colorlet{tcbcol@frame}{tcbcolframe}
+\newtcolorbox{luuy}[1][]{enhanced,breakable,
+	before skip=2mm,after skip=3mm,
+	boxrule=0pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
+	colback=gray!10!white,
+	colframe=white,
+	sharp corners,rounded corners=southeast,arc is angular,arc=3mm,
+	underlay={%
+		\path[fill=tcbcol@back!80!white] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+		\path[draw=tcbcol@frame,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+		\path[fill=tuancolor,draw=none] (interior.south west) rectangle node[white]{\huge\bfseries !}
+		([xshift=4mm]interior.north west);
+	},
+	drop fuzzy shadow, #1}
+\newtheorem{kq}{\color{tuancolor}\sffamily Hệ quả}
+\newtheorem{btt}{\color{tuancolor}\sffamily Bài}[section]
+\newtheorem{tx}{\color{tuancolor}\sffamily Tính chất}[section]
+\newtheorem{bx}{\color{tuancolor}\sffamily Ví dụ}
+\def\beginboxbx{\begin{tcolorbox}[colframe=gray!15!white,colback=gray!15!white,boxrule=0pt,arc=0.75mm, coltitle=white,breakable]}
+\def\endboxbx{\end{tcolorbox}}
+\AtBeginEnvironment{bx}{
+\beginboxbx
+	\renewcommand{\loigiai}[1]{
+	\renewcommand{\immini}[2]{
+	\setbox\imbox=\vbox{\hbox{##2}}
+	\widthimmini=\wd\imbox
+	\IMleftright{##1}{##2}
+	}
+	\endboxbx
+	\begin{onlysolution}
+	#1
+	\end{onlysolution}
+	\def\endboxbx{}
+	}
+}
+\AtEndEnvironment{bx}{\endboxbx}
+\newtheorem{bd}{\color{tuancolor}\sffamily Bổ đề}
+\newtheorem{dx}{\color{tuancolor}\sffamily Định nghĩa}
+\newtheorem{gbtt}{\color{tuancolor}\sffamily Bài}[section]
+\AtBeginEnvironment{gbtt}{
+\beginboxbx
+	\renewcommand{\loigiai}[1]{
+	\renewcommand{\immini}[2]{
+	\setbox\imbox=\vbox{\hbox{##2}}
+	\widthimmini=\wd\imbox
+	\IMleftright{##1}{##2}
+	}
+	\endboxbx
+	\begin{onlysolution}
+	#1
+	\end{onlysolution}
+	\def\endboxbx{}
+	}
+}
+\AtEndEnvironment{gbtt}{\endboxbx}
+\def\beginboxdx{\begin{tcolorbox}
+[enhanced jigsaw,breakable,
+ colback=gray!15!white,boxrule=0pt,frame hidden,
+ borderline west={1.5mm}{-2mm}{tuancolor}]}
+\def\endboxdx{\end{tcolorbox}}
+\AtBeginEnvironment{dx}{\beginboxdx}
+\AtEndEnvironment{dx}{\endboxdx}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{2}
+\newcounter{CircLabel}
+\newcommand*\CircLabel{
+	\refstepcounter{CircLabel}
+	\hskip1em\llap{\alph{CircLabel})}}
+\setlistsEX{label=\CircLabel}
+\AtBeginEnvironment{listEX}{\setcounter{CircLabel}{0}}
+\AtBeginEnvironment{enumEX}{\setcounter{CircLabel}{0}}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+\fancyhead[CE]{\footnotesize\fontfamily{iwona}\selectfont \MakeUppercase{\leftmark}}
+\fancyhead[CO]{\footnotesize\fontfamily{iwona}\selectfont \MakeUppercase{\rightmark}}
+\cfoot{\sffamily\circEX{\thepage}}
+\newtheorem{vd}{Bài}
+\setlength{\parindent}{0pt}
+\newtheorem{dl}{\sffamily Định lý}
+\newenvironment{light}{\begin{tcolorbox}[colback=gray!20!white,boxrule=0pt,arc=0mm, colframe=gray!20!white,breakable]}{\end{tcolorbox}}
+\titleformat{\section}
+   {\fontfamily{cmss}\selectfont \Large\bfseries\color{tuancolor}}{\thesection.}{0.25em}{
+   \setcounter{bx}{0}
+   \setcounter{dx}{0}
+   }
+\titleformat{\subsection}
+   {\fontfamily{cmss}\selectfont \large\bfseries\color{tuancolor}}{\thesubsection.}{0.25em}{
+   \setcounter{bx}{0}
+   \setcounter{dx}{0}
+   }
+\titleformat{\subsubsection}
+   {\fontfamily{cmss}\selectfont \large\bfseries\color{tuancolor}}{\thesubsubsection.}{0.25em}{
+   }
+\titleformat{\chapter}[display]
+  {\centering\sffamily\huge\bfseries\color{tuancolor}}{\chaptertitlename \,\thechapter}{10pt}{\Huge}
+\titlespacing*{\chapter}
+  {0pt}{20pt}{30pt}
+\hypersetup{
+     linkcolor=tuancolor,
+     filecolor=tuancolor,
+     citecolor = black,      
+     urlcolor=tuancolor,
+     pdftitle={FileSach},
+     pdfpagemode=FullScreen,
+     }
+\renewcommand\cftchapfont{\normalfont}
+\renewcommand\cftchappagefont{\normalfont}
+\AtBeginDocument{\renewcommand\contentsname{Mục lục}}
+\contentsmargin[1cm]{0cm}
+\titlecontents{chapter}[0em]{\vskip12pt\bfseries\sffamily}
+{\thecontentslabel\enspace}
+{\hspace{1.05em}}
+{ \hfill\contentspage}[\vskip 6pt]
+\titlecontents{section}[1em]{\sffamily}
+{\thecontentslabel\enspace}
+{}
+{\titlerule*[1pc]{.}\quad\contentspage}[\vskip 4pt]
+\titlecontents{subsection}[2.7em]{\sffamily}
+{\thecontentslabel\enspace}
+{}
+{\titlerule*[1pc]{.}\quad\contentspage}[\vskip 3pt]
+\AtBeginDocument{\renewcommand{\contentsname}{\hfill\sffamily Mục lục \hfill}}
+\definecolor{mathpiad}{HTML}{EE4B9C}
+\definecolor{mathpiad2}{HTML}{58575A}
+\DeclareMathOperator*{\SumInt}{
+\mathchoice
+  {\ooalign{\color{mathpiad}$\displaystyle\sum$\cr\hidewidth$\color{mathpiad2}\displaystyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.14\height}{\scalebox{.7}{$\textstyle\sum$}}\cr\hidewidth$\textstyle\int$\hidewidth\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+  {\ooalign{\raisebox{.2\height}{\scalebox{.6}{$\scriptstyle\sum$}}\cr$\scriptstyle\int$\cr}}
+}
+\newcommand*{\Scale}[2][4]{\scalebox{#1}{$#2$}}
+\begin{document}
+\input{titlepage}
+\input{0. Lời nói đầu}
+\newpage
+\thispagestyle{empty}
+\setcounter{page}{0}
+\tableofcontents
+\input{1.1} %ước, bội, chia hết và phép toán đồng dư
+\input{1.2} %cắt từ input 1 ra
+\input{2.1} %số nguyên tố
+\input{2.2} %tính nguyên tố cùng nhau
+\input{3.1} %số chính phương - biến đổi + xét mod + kẹp
+\input{3.2} %số chính phương - bổ đề gcd + căn thức
+\input{4} 	%đa thức nguyên
+\input{5.1} %pt ước số + tách tổng bình phương
+\input{5.2} %đánh giá + xét mod + cô lập
+\input{5.3} %dùng delta + pt nghiệm nguyên tố
+\input{5.4} %kẹp + đặt gcd
+\input{5.5} %pt chứa ẩn ở mũ
+\input{5.6} %pt chứa căn thức + cấu tạo số
+\input{6} 	%bất đẳng thức số học
+\input{7} 	%hàm phần nguyên, phần lẻ
+\input{8} 	%lời kết, tài liệu tham khảo
+\input{0.Quy nạp} 
+
+
+\end{document}

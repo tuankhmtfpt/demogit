@@ -1,0 +1,1267 @@
+\section{Phương trình nghiệm nguyên quy về dạng bậc hai}
+
+\subsection*{Lí thuyết}
+
+Trong mục này, chúng ta sẽ ôn tập lại một bổ đề quan trọng đã học ở \chu{chương III}.
+\begin{light}
+\chu{Bổ đề.} Cho phương trình $ax^2+bx+c=0$ với $a,b,c$ là các số nguyên và $a\ne 0.$ Phương trình có nghiệm nguyên chỉ khi $\Delta$ là số chính phương.
+\end{light}
+Song, chiều ngược lại là không đúng, vì chẳng hạn, phương trình
+    $$12x^2+7x+1=0$$
+có $\Delta=1$ là số chính phương, thế nhưng hai nghiệm $x=\dfrac{-1}{3}$ và $x=\dfrac{-1}{4}$ của nó đều không nguyên. \\
+Tác giả đã minh họa bổ đề bằng các ví dụ trong chương trước đó. Vì thế, chương này sẽ củng cố các lí thuyết và phương pháp ấy dưới dạng bài tập tự luyện.
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+\[x^2+3y^2+4xy+4y+2x-3=0.\]
+\end{btt}
+
+\begin{btt}
+Cho phương trình $x^2-mx+m+2=0.$ Tìm tất cả các giá trị của $m$ để phương trình đã cho có các nghiệm nguyên.
+\nguon{Chuyên Toán Bình Định 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên $(x,y)$ thỏa mãn
+    $$x^2+2y^2-2xy-2x-4y+6=0.$$
+\nguon{Chuyên Toán Thanh Hóa 2021}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+\[x^2-y^2=xy+8.\]
+\nguon{Chuyên Toán Bình Dương 2018}
+\end{btt}
+
+\begin{btt}
+Cho $p$ là số nguyên tố sao cho tồn tại các số nguyên dương $x,y$ thỏa mãn
+    $$x^3+y^3-p=6xy-8.$$
+Tìm giá trị lớn nhất của $p.$
+\nguon{Chuyên Toán Lào Cai 2021}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+$$(mn+8)^{3}+(m+n+5)^{3}=(m-1)^{2}(n-1)^{2}.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên dương $(m, n)$ và số nguyên tố $p$ thỏa mãn đồng thời
+$$m+n=2019,\quad \dfrac{4}{m+3}+\dfrac{4}{n+3}=\dfrac{1}{p}.$$
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+\[2x(xy-2y-3)=(x+y)(3x+y).\]
+\nguon{Đề nghị Olympic 30/4 năm 2018}
+\end{btt}
+
+\begin{btt}
+Tìm các số tự nhiên $x,y$ thỏa mãn phương trình
+\[y^3-2y^2x+x^2+y^2+4x+3y+3=0.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương \[\tron{x^2-y}\tron{x+y^2}=(x+y)^3.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên $\left ( a,b \right )$ thỏa mãn
+\[\left [ b^2+11\left ( a-b \right ) \right ]^2=a^3b.\]
+\nguon{Hong Kong Mathematical Olympiads 2014}
+\end{btt}
+
+\begin{btt}
+Giải hệ phương trình nghiệm nguyên
+\[\heva{
+\left(x^{2}+1\right)\left(y^{2}+1\right)+\dfrac{z^{2}}{10}&=2010 \\
+(x+y)(x y-1)+14 z&=1985.}\]
+\nguon{Titu Andreescu}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+\[x^2+3y^2+4xy+4y+2x-3=0.\]
+\loigiai{
+Phương trình đã cho tương đương với
+\[3y^2+(4x+4)y+\tron{x^2+2x-3}=0.\tag{*}\label{baimodaub2}\]
+Coi đây là một phương trình bậc hai theo ẩn $y.$ Ta tính được
+$$\Delta'_y=(2x+2)^2-3\tron{x^2+2x-3}=x^2+2x+13.$$
+ Phương trình có nghiệm nguyên chỉ khi $\Delta'_y$ là số chính phương. Ta đặt $z^2=x^2+2x+13,$ ở đây $z$ là số tự nhiên. Biến đổi tương đương phép đặt cho ta
+ $$(x+1-z)(x+1+z)=-12.$$
+Do $x+1-z<x+1+z$ và $x+1-z,x+1+z$ cùng tính chẵn lẻ, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $x+1-z=-6$ và $x+1+z=2$ thì $x=-3.$ Thế vào (\ref{baimodaub2}), ta được $y=0.$ 
+    \item Nếu $x+1-z=-2$ và $x+1+z=6$ thì $x=1.$ Thế vào (\ref{baimodaub2}), ta được $y=0.$ 
+\end{enumerate}
+Kết luận, phương trình đã cho có $2$ nghiệm nguyên là $(-3,0)$ và $(1,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho phương trình $x^2-mx+m+2=0.$ Tìm tất cả các giá trị của $m$ để phương trình đã cho có các nghiệm nguyên.
+\nguon{Chuyên Toán Bình Định 2021}
+\loigiai{Giả sử phương trình đã cho có 2 nghiệm nguyên $x_1,x_2$, áp dụng định lí $Viete$, ta có $x_1+x_2=m$, suy ra $m$ là số nguyên. Do phương trình đã cho có nghiệm nguyên nên 
+$$\Delta =m^2-4(m+2)=(m-2)^2-12$$ phải là số chính phương. Đặt $(m-2)^2-12=a^2$ với $a\in\mathbb N$. Phép đặt này cho ta $$(m-2-a)(m-2+a)=12.$$ Với chú ý $m-2-a<m-2+a$ và $m-2-a\equiv m-2+a\pmod{2}$, ta có bảng sau
+    \begin{center}
+            \begin{tabular}{c|c|c}
+            $m-2-a$ & $-6$ & $2$   \\
+            \hline
+            $m-2+a$ & $-2$ & $6$ \\
+            \hline
+            $m$ & $-2$ & $6$  \\
+            \end{tabular}
+        \end{center}
+Từ đây, ta sẽ đi xem xét các trường hợp trên bảng
+\begin{enumerate}
+    \item Với $m=-2$, phương trình $x^2+2x=0$ có 2 nghiệm là 0 và $-2$, thỏa mãn.
+    \item Với $m=6$, phương trình $x^2-6x+8=0$ có 2 nghiệm là 2 và 4, thỏa mãn.
+\end{enumerate}
+    Vậy các giá trị của $m$ thỏa mãn yêu cầu đề bài là $m=2,m=4.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên $(x,y)$ thỏa mãn
+    $$x^2+2y^2-2xy-2x-4y+6=0.$$
+\nguon{Chuyên Toán Thanh Hóa 2021}
+\loigiai{Phương trình đã cho tương đương 
+    $$2y^2-(2x+4)y+\left(x^2-2x+6\right)=0.$$
+    Coi đây là một phương trình bậc hai theo ẩn $y.$ Ta tính được
+    $${\Delta}^{'}_y=(x+2)^2-2\left(x^2-2x+6\right)=-x^2+8x-8.$$
+    Phương trình có nghiệm chỉ khi $\Delta'_y$ là số chính phương, và khi ấy $$x^2-8x+8\le 0.$$ Giải bất phương trình nghiệm nguyên này, ta được $2\le x\le 6.$  \\
+    Thử với từng trường hợp, ta kết luận phương trình đã cho có $4$ nghiệm nguyên phân biệt là 
+    $$(2,1),(2,3),(6,3),(6,5).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+\[x^2-y^2=xy+8.\]
+\nguon{Chuyên Toán Bình Dương 2018}
+\loigiai{
+Phương trình đã cho tương đương với
+$$x^2-xy-\tron{y^2+8}=0.$$
+Coi đây là phương trình bậc hai theo ẩn $x.$ Ta tính được
+$$\Delta_x=y^2+4\tron{y^2+8}=5y^2+32.$$
+Phương trình có nghiệm nguyên chỉ khi $\Delta$ là số chính phương. Tuy nhiên, điều này không thể xảy ra do
+$$5y^2+32\equiv 2\pmod{5}.$$
+Như vậy, phương trình đã cho không có nghiệm nguyên dương.}
+\end{gbtt}
+
+
+\begin{gbtt}
+Cho $p$ là số nguyên tố sao cho tồn tại các số nguyên dương $x,y$ thỏa mãn
+    $$x^3+y^3-p=6xy-8.$$
+Tìm giá trị lớn nhất của $p.$
+\nguon{Chuyên Toán Lào Cai 2021}
+\loigiai{
+Với các số $x,y,p$ thỏa mãn giả thiết, ta có
+    $$x^3+y^3+2^3-3x\cdot y\cdot 2=p\Leftrightarrow (x+y+2)\left(x^2+y^2+4-xy-2x-2y\right)=p.$$
+    Do $x,y$ nguyên dương nên ta được $x+y+2\ge 2$ từ lập luận trên, và như vậy
+    \begin{align}
+        x+y+2&=p, \label{laokai1}\tag{1}\\
+        x^2+y^2+4-xy-2x-2y&=1. \label{laokai2}\tag{2}
+    \end{align}
+Từ (\ref{laokai1}), ta có $y=p-x-2.$ Thế vào (\ref{laokai2}) rồi biến đổi tương đương, ta được
+\begin{align*}
+3x^2+(6-3p)x+\left(p^2-6p+11\right)=0.   
+\end{align*}
+Coi phương trình trên là một phương trình bậc hai ẩn $x.$ Ta cần có $\Delta_x$ là số chính phương. Ta tính được
+$$\Delta_x=(6-3p)^2-4.3.\left(p^2-6p+11\right)=-3p^2+36p-96.$$
+Ta dễ thu được $4\le p\le 8$ từ $\Delta\ge 0.$ Với yêu cầu chọn $p$ là số nguyên tố lớn nhất, ta chọn $p=7.$ \\
+Thử với $p=7,$ ta tìm được $(x,y)=(2,3)$ và $(x,y)=(3,2).$ \\
+Kết quả, $p=7$ là số nguyên tố thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+$$(mn+8)^{3}+(m+n+5)^{3}=(m-1)^{2}(n-1)^{2}.$$
+\nguon{Titu Andreescu}
+\loigiai{Trước hết $mn+8=x$ và $-(m+n+5)=y$ thì phương trình đã cho trở thành
+$$x^{3}-y^{3}=(x+y-2)^{2}.$$
+Từ phép đặt thì ta có $x\geq y$, nếu $x=y$ thì $x+y=2$, dẫn đến nghiệm của phương trình là $(x,y)=(1,1)$. Đối với trong trường hợp $x-y=d>0$, ta thu được
+$$d\left[(y+d)^{2}+(y+d) y+y^{2}\right]=[2 y+(d-2)]^{2}.$$
+Phương trình kể trên tương đương
+\[(3 d-4) y^{2}+\left(3 d^{2}-4 d+8\right) y+\left(d^{3}-d^{2}+4 d-4\right)=0.\tag{*}\label{copy.delta}\]
+Do $3d-4\ne 0$ nên ta có thể coi (\ref{copy.delta}) là một phương trình bậc hai theo ẩn $y.$ Ta sẽ có 
+$$\Delta_y=\left(3 d^{2}-4 d+8\right)^{2}-4(3 d-4)\left(d^{3}-d^{2}+4 d-4\right)=-3 d^{4}+4 d^{3}+48 d.$$
+Với việc $\Delta_y$ phải là số chính phương, ta sẽ có 
+$$\Delta_y \geqslant 0\Rightarrow \left ( 3d-4 \right )d^2\leqslant 48\Rightarrow d<4\Rightarrow d\in\left \{ 1;2;3 \right \}.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $d=1$ thì $\Delta_y=49,$ và phương trình (\ref{copy.delta})  trở thành $-y^{2}+7 y=0.$ Trường hợp này cho ta 
+    $$(x,y)=(1,0),\quad (x,y)=(8,7).$$
+    \item Nếu $d=2$ thì $\Delta_y=80$ không là số chính phương nên trường hợp này loại.
+    \item Nếu $d=3$ thì $\Delta_y=9,$ và phương trình (\ref{copy.delta})  trở thành $5 y^{2}+23 y+26=0.$ Trường hợp này cho ta 
+    $$(x, y)=(1,-2).$$
+\end{enumerate}
+Thế trở lại các kết quả về $(x,y)$ vào phép đặt, ta kết luận phương trình đã cho có $4$ nghiệm nguyên là $$(1,-7),\ (-7,1),\ (0,-12),\ (-12,0).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên dương $(m, n)$ và số nguyên tố $p$ thỏa mãn đồng thời
+$$m+n=2019,\quad \dfrac{4}{m+3}+\dfrac{4}{n+3}=\dfrac{1}{p}.$$
+\nguon{Titu Andreescu}
+\loigiai{
+Trước tiên ta đặt $u=m+3, v=n+3$ khi đó thì $u+v=2025$ và tồn tại số nguyên tố $p$ thỏa mãn $$uv=4p(u+v)=4\cdot 2025p.$$ Khi đó, $u,v$ là nghiệm của phương trình bậc hai ẩn $z$
+    $$z^{2}-2025 z+4\cdot 2025 p=0.$$
+Với việc đây là phương trình bậc hai ẩn $z,$ ta tính được
+$$\Delta_z=2025^2-4\cdot4\cdot 2025 p=45^2\tron{2025-16p}.$$
+Theo bổ đề đã học, ta có $2025-16p$ là số chính phương. Đặt $2025-16p=w^2,$ ta thu được
+$$\tron{45-w}\tron{45+w}=16p.$$
+Ta có các nhận xét sau đây.
+\begin{enumerate}
+    \item[i,] Hai số $45-w$ và $45+w$ không đồng thời chia hết cho $4,$ vì đây là hai số chẵn có tổng (bằng $90$) chia cho $4$ dư $2.$
+    \item[ii,] Do $w>0$ nên $45+w>16.$
+\end{enumerate}
+Từ các nhận xét trên, ta có $45+w=2p$ hoặc $45+w=8p,$ tương ứng với đó là $w=45-8=37$ và $w=45-2=43.$ Kiểm tra từng trường hợp rồi thế trở lại, ta tìm được các bộ $(m,n,p)$ thỏa yêu cầu là
+$$\tron{1977,42,11},\quad \tron{42,1977,11},\quad \tron{1842,177,41},\quad \tron{177,1842,11}.$$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+\[2x(xy-2y-3)=(x+y)(3x+y).\]
+\nguon{Đề nghị Olympic 30/4 năm 2018}
+\loigiai{Phương trình đã cho tương đương với
+\[(3-2y)x^2+2(4 y+3)x+y^2=0.\]
+Do $3-2y\ne 0$ với mọi $y$ nguyên nên ta có thể coi đây là phương trình bậc hai theo ẩn $x.$ Ta tính được
+\[\Delta'_y=(2 y+1)(y+3)^{2}.\]
+Phương trình có nghiệm nguyên chỉ khi $\Delta'_y$ là số chính phương. Do $(y+3)^2$ là số chính phương dương nên $2y+1$ là số chính phương. Đặt $2y+1=(2k+1)^2,$ ta có $y=2k^2+2k.$ Áp dụng công thức nghiệm của phương trình bậc hai, ta thấy
+$$x=\dfrac{4y+3\pm (2k+1)(y+3)}{2y-3}=\dfrac{8k^2+8k+3\pm \tron{2k+1}\tron{2k^2+2k+3}}{4k^2+4k-3}.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $x=\dfrac{8k^2+8k+3- \tron{2k+1}\tron{2k^2+2k+3}}{4k^2+4k-3}$ thì $8k^2+8k+3>\tron{2k+1}\tron{2k^2+2k+3},$ hay là
+    $$2k^2(2k-1)<0.$$
+    Đây là điều không thể xảy ra do $k$ nguyên dương.
+    \item Nếu $x=\dfrac{8k^2+8k+3+ \tron{2k+1}\tron{2k^2+2k+3}}{4k^2+4k-3},$ ta tiếp tục biến đổi để được
+    $$x=\dfrac{4k^3+14k^2+16k+6}{4k^2+4k-3}=\dfrac{2k+5}{2}+\dfrac{9}{2k-1}.$$
+    Do $x\in \mathbb{N}^*$ nên $9$ chia hết cho $2k-1.$ Ta tìm ra $k=1,\ k=2,\ k=5$ từ đây. Kiểm tra trực tiếp, ta có
+    \[(x , y) \in\{(8 , 4);(6 , 12);(8 , 60)\}.\]
+\end{enumerate}
+Kết luận, phương trình đã cho có $3$ nghiệm nguyên dương là $(6,12),\ (8,4)$ và $(8,60).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số tự nhiên $x,y$ thỏa mãn phương trình
+\[y^3-2y^2x+x^2+y^2+4x+3y+3=0.\]
+\loigiai{
+Phương trình đã cho tương đương với
+\[x^2-2(y^2-2)x+y^3+y^2+3y+3=0.\]
+Coi đây là phương trình bậc hai ẩn $x.$ Ta tính được
+$$\Delta'_x=\tron{y^2-2}^2-\tron{y^3+y^2+3y+3}=y^4-y^3-5y^2-3y+1.$$
+Phương trình có nghiệm nguyên chỉ khi $\Delta'_x$ là số chính phương. Với $y\ge 10,$ ta có
+\begin{align*}
+    4\tron{y^4-y^3-5y^2-3y+1}-(2y^2-y-6)^2&=3y^2-24y-32\\&\ge 30y-24y-32\\&\ge 6y-32\\&\ge 60-32\\&>0,\\
+    (2y^2-y-5)^2-4\tron{y^4-y^3-5y^2-3y+1}&=-y^2-22y-21<0.
+\end{align*}
+Như vậy, với mọi $y\ge 10$ ta có
+$$(2y^2-y-6)^2<4\tron{y^4-y^3-5y^2-3y+1}<(2y^2-y-5)^2.$$
+Khi ấy, theo kiến thức đã học, $y^4-y^3-5y^2-3y+1$ không thể là số chính phương. Ngược lại, với $y=1,2,\ldots,9,$ bằng cách thử trực tiếp rồi đối chiếu, ta kết luận có 3 bộ số tự nhiên thỏa mãn yêu cầu đề bài là $$(x,y)=(4,5),\quad (x,y)=(6,3),\quad (x,y)=(8,3).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[\tron{x^2-y}\tron{x+y^2}=(x+y)^3.\]
+\loigiai{
+Do điều kiện $x,y>0,$ phương trình đã cho tương đương với
+\begin{align*}
+x^2y^2+x^3-y^3-xy=x^3+3x^2y+3xy^2+y^3
+&\Leftrightarrow x^2y^2-3x^2y-3xy^2-2y^3=0
+\\&\Leftrightarrow -y\left[2y^2+x(3-x)y+x(3x+1)\right]=0
+\\&\Leftrightarrow 2y^2+x(3-y)y+x(3x+1)=0.
+\end{align*}
+Coi đây là một phương trình bậc hai với ẩn  $y.$ Ta tính được
+$$\Delta_y=x^2(3-x)^2-8x(3x+1)=x\left(x^3-6x^2-15x-8\right)=x(x+1)^2(x-8).$$
+Do $(x+1)^2\neq0$ nên $\Delta_y$ là số chính phương chỉ khi $x(x-8)$ là số chính phương. \\
+Đặt $x(x-8)=a^2,$ với $a$ là số tự nhiên. Phép đặt này cho ta
+$$x^2-8x=a^2\Leftrightarrow(x-4)^2=a^2+16 \Leftrightarrow (x-4+a)(x-4-a)=16.$$
+Ta thấy $x-4+a$ và $x-4-a$ cùng chẵn và $x-4+a \geq x-4-a$, thế nên ta lập được bảng giá trị sau
+\begin{center}
+\begin{tabular}{l|c|c|c|c}
+$x-4+a$ & $-2$ & $-4$ & $4$ & $8$\\
+\hline
+$x-4-a$ & $-8$ & $-4$ & $4$ & $2$\\
+\hline
+$x-4$ & $-5$ & $-4$ & 4 & $5$\\
+\hline
+$x$ & $-1$ & $0$ & $8$ & $9$\\
+\hline
+$y$ &  &  & $10$ & $6$ và $21$
+\end{tabular}
+\end{center}
+Đối chiếu điều kiện $x,y$ nguyên dương, phương trình đã cho có ba nghiệm là $(8,10),(9,6)$ và $(9,21).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên $\left ( a,b \right )$ thỏa mãn
+\[\left [ b^2+11\left ( a-b \right ) \right ]^2=a^3b.\]
+\nguon{Hong Kong Mathematical Olympiads 2014}
+\loigiai{
+Bằng khai triển trực tiếp, phương trình đã cho tương đương với
+\[\tron{a-b}\tron{ba^2+\left ( b^2-121 \right )a+\left ( b^3-22b^2+121b \right )}=0.\]
+Nếu $a=b,$ ta thấy thỏa. Nếu $a\ne b,$ phương trình kể trên tương đương
+\[ba^2+\left ( b^2-121 \right )a+\left ( b^3-22b^2+121b \right )=0.\]
+Coi đây là phương trình bậc hai theo ẩn $a.$ Ta tính được
+\begin{align*}
+    \Delta_a&=\left ( b^2-121 \right )^2-4b\left ( b^3-22b^2+121b \right )=-\left ( b-11 \right )^3\left ( 3b+11 \right ).
+\end{align*}
+Phương trình có nghiệm nguyên chỉ khi $\Delta_a\ge 0,$ và thế thì
+\begin{align*}
+    \Delta_a\geqslant 0\Rightarrow-\left ( b-11 \right )^3\left ( 3b+11 \right )\geqslant 0\Rightarrow -3\leqslant b\leqslant 11.
+\end{align*}
+Bằng việc thử trực tiếp các giá trị của \(b\), ta tìm ra \(\left ( a,b \right )=\left ( 0,11 \right )\). \\
+Tất cả các cặp $(a,b)$ thỏa yêu cầu là $\left ( a,b \right )=\left ( 0,11 \right )$ và $(a,b)=\left ( k,k \right ),$ với $k$ là một số nguyên tùy ý.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải hệ phương trình nghiệm nguyên
+\[\heva{
+\left(x^{2}+1\right)\left(y^{2}+1\right)+\dfrac{z^{2}}{10}&=2010 \\
+(x+y)(x y-1)+14 z&=1985.}\]
+\nguon{Titu Andreescu}
+\loigiai{
+Trước tiên, ta lưu ý rằng, tồn tại số $k\in\mathbb{Z}$ sao cho $z=10k$, bởi vì $\dfrac{z^{2}}{10}=2010-\left(x^{2}+1\right)\left(y^{2}+1\right)\in\mathbb{Z}$. Tiếp theo, ta đặt $p=x+y$ và $q=x y-1,$ và khi đó hệ phương trình trở thành
+$$\heva{
+ p ^ { 2 } + q ^ { 2 } + 1 0 k ^ { 2 } &= 2 0 1 0  \\
+ p q + 1 4 0 k &= 1 9 8 5 }
+\Leftrightarrow \heva{
+p^{2}+q^{2}&=2010-10 k^{2} \\
+p q&=1985-140 k.}$$
+Ta có nhận xét sau đây
+$$0\ge (p-q)^{2}=2010-10 k^{2}-2(1985-140 k)=-10(k-14)^{2}.$$ 
+Bắt buộc, ta phải có $k=14.$ Thế trở lại hệ, ta được
+$$\heva{p^{2}+q^{2}=50 \\ p q=25} \Leftrightarrow p=q=5.$$
+từ đó thì ta thu được giá trị của $x$ và $y$ như sau
+    $$\heva{x+y=5 \\ x y=6} \Leftrightarrow (x,y)=(3,2) \text{ hoặc } (x,y)=(2,3).$$
+Kết luận, phương trình đã cho có hai nghiệm nguyên là $(2,3,140)$ và $(3,2,140).$
+}
+\end{gbtt}
+
+\section{Phương trình với nghiệm nguyên tố}
+
+Trong cuốn sách này, các phương trình nghiệm nguyên tố đã được chúng ta nghiên cứu ở \chu{chương II}. Vì thế, mục tương tự ở trong \chu{chương V} sẽ ôn tập lại cho các bạn các kiến thức xung quanh dạng phương trình ấy.
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho dãy số tự nhiên $2,6,30,210,\ldots$ được xác định như sau: 
+\begin{it}
+Số hạng thứ $k$ bằng tích của $k$ số nguyên tố đầu tiên. 
+\end{it}
+Biết rằng có hai số hạng của dãy số đó có hiệu bằng $30000$. Tìm hai số hạng đó.
+\nguon{Chuyên Toán Thanh Hóa 2016}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên tố $(p, q)$ thỏa mãn \[7pq^2+p=q^3+43p^3+1.\]
+\nguon{Dutch Mathematical Olympiad 2015}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q,r$ sao cho $pqr=p+q+r+200.$
+\nguon{Tạp chí Toán học và Tuổi trẻ}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả số nguyên tố $p,q,r$ thỏa mãn 
+\[(p+1)(q+2)(r+3)=4pqr.\]
+\end{btt} 
+
+\begin{btt}
+Tìm tất cả bộ ba số nguyên tố $(p,q,r)$ thỏa mãn \[\dfrac{1}{p-1}+\dfrac{1}{q}+\dfrac{1}{r+1}=\dfrac{1}{2}.\]
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $ p,q,r$ thỏa mãn đồng thời các điều kiện
+\[r>q>p\ge 5,\quad 2p^2-r^2\ge 49,\quad 2q^2-r^2\le 193.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba số nguyên tố $a, b, c$ đôi một phân biệt thỏa mãn điều kiện
+\[20abc<30(ab+bc+ca)<21abc.\]
+\end{btt} 
+
+\begin{btt}
+Tìm số nguyên tố $p$ sao cho tồn tại các số nguyên dương $x,y$ thỏa mãn
+\[x\left(y^2-p\right)+y\left(x^2-p\right)=5p.\]
+\end{btt}
+
+\begin{btt}
+Cho $p$ là số nguyên tố lẻ. Tìm tất cả các số nguyên dương $n$ để $\sqrt{n^{2}-np}$ là số nguyên dương.
+\nguon{Spanish Mathematical Olympiad 1997}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ và số nguyên dương $m$ thỏa mãn \[p^{3}+m(p+2)=m^{2}+p+1.\]
+\nguon{Dutch Mathematical Olympiad 2012}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $x,y,z$ thỏa mãn  \[x^y+1=z.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba số nguyên tố $\left ( p,q,r \right )$ thỏa mãn
+    $$p^{2}+2 q^{2}+r^{2}=3pqr.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $x, y$ và số nguyên tố $p$ thỏa mãn
+\[x^2-3xy+p^2y^2=12p.\]
+\nguon{France Junior Balkan Mathematical Olympiad Team Selection Test 2017}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên tố $a,b,c,d,e$ sao cho \[a^4+b^4+c^4+d^4+e^4=abcde.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương \(a,b,c\) và số nguyên tố \(p\) thỏa mãn phương trình
+\[73 p^{2}+6=9 a^{2}+17 b^{2}+17 c^{2}.\]
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2020}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả bộ ba các số nguyên tố $(p,q,r)$ thỏa mãn \[3p^4-5q^4-4r^2=26.\]
+\nguon{Junior Balkan Mathematical Olympiad 2014}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ và $q$ thỏa mãn 
+$$\dfrac{p^{3}-2017}{q^{3}-345}=q^{3}.$$
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Tìm các nghiệm nguyên dương của phương trình 
+$$x(x+3)+y(y+3)=z(z+3).$$ trong đó $x$ và $y$ là nghiệm nguyên tố.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ sao cho $p^2+q^3$ và $q^2+p^3$ đều là số chính phương.
+\nguon{Baltic Way 2011}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ sao cho $p+q$ và $p+4q$ đều là số chính phương.
+\nguon{Chuyên Toán Quảng Nam 2019}
+\end{btt}
+
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ thỏa mãn $9p+1$ là số chính phương.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ sao cho $2p^2+27$ là số lập phương.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn \[n^3=(p+1)^2.\]
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên tố $p,q$ thỏa mãn $p+q^2$ là số chính phương. Chứng minh rằng
+\begin{enumerate}[a,]
+    \item $p=2q+1.$
+    \item $p^2+q^{2021}$ không phải là số chính phương.
+\end{enumerate}
+\nguon{Chuyên Toán Quảng Ngãi 2021}    
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn
+\[(p-2)\tron{p^2+p+2}=(q-3)(q+2).\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn \[p^5+p^3+2=q^2-q.\]
+\nguon{Argentina Cono Sur Team Selection Test 2014}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn
+\[q^3+2q^2=6p^4+17p^3+60p^2+8q.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn
+\[p^8+7p^6=3q^2+11q.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ và số nguyên tố $p$ thỏa mãn
+\[3p^2\tron{p+11}=n^3+n^2-2n.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ và số nguyên tố $p$ thỏa mãn
+\[n^5+p^4=p^8+n.\]
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $x, y, z$ sao cho $x^{2}+1, y^{2}+1$ đều là các số nguyên tố và
+$$\left(x^{2}+1\right)\left(y^{2}+1\right)=z^{2}+1.$$
+\nguon{Tạp chí Toán Tuổi thơ, ngày 20 tháng 5 năm 2020}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên tố $(p,q)$ thỏa mãn 
+\[p+q=2(p-q)^2.\]
+\nguon{Chuyên Đại học Vinh 2016}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q,r$ và số tự nhiên $n$ thỏa mãn
+\[p^3=q^3+9r^n.\]
+
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho dãy số tự nhiên $2,6,30,210,\ldots$ được xác định như sau: 
+\begin{it}
+Số hạng thứ $k$ bằng tích của $k$ số nguyên tố đầu tiên. 
+\end{it}
+Biết rằng có hai số hạng của dãy số đó có hiệu bằng $30000$. Tìm hai số hạng đó.
+\nguon{Chuyên Toán Thanh Hóa 2016}
+\loigiai{
+Xét dãy số có dạng $2,2\cdot3,2\cdot3\cdot5,\ldots.$ Giả sử hai số có hiệu bằng $30000$ là
+\[a=2\cdot3\cdot5\cdots{{p}_{n}}, \qquad b=2\cdot3\cdot5\cdots{{p}_{m}}\] 
+với $p_n$ và $p_m$ là các số nguyên tố, ở đây $n<m.$ Lấy hiệu ta có
+\[2\cdot3\cdot5\cdots{{p}_{m}}-2\cdot3\cdot5\cdots{{p}_{n}}=30000. \]
+Đẳng thức trên tương đương với
+$$2\cdot3\cdot5\cdot{{p}_{n}}\left( {{p}_{n+1}}\cdot{{p}_{n+2}}\cdots{{p}_{m}}-1 \right)=30000.$$
+Ta nhận thấy $30000$ chia hết cho $p_n.$ Do
+$30000=2^4\cdot 3\cdot 5^4$
+và $p_n$ lẻ nên $p_n=3$ hoặc $p_n=5.$
+\begin{enumerate}
+    \item  Nếu $p_n=3,$ ta có $a=6$ còn $b=30006,$ và $b$ không là tích các số nguyên tố đầu tiên, mâu thuẫn.
+    \item Nếu $p_n=5,$ ta có $a=30$ còn $b=30030.$ Thử lại, ta thấy
+\[a=2\cdot3\cdot5,\qquad b=2\cdot3\cdot5\cdot7\cdot11\cdot13.\]
+\end{enumerate}
+Như vậy, hai số hạng thỏa mãn yêu cầu là $30$ và $30030.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên tố $(p, q)$ thỏa mãn \[7pq^2+p=q^3+43p^3+1.\]
+\nguon{Dutch Mathematical Olympiad 2015}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $(p,q)$ thỏa mãn yêu cầu. Dễ thấy nếu $p,q$ là số lẻ, ta suy ra $7 p q^{2}+p$ là số chẵn, trong khi $q^{3}+43 p^{3}+1$ là số lẻ. Điều này không thể xảy ra, do đó trong $2$ số $p,q$ có một số chẵn. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $p=2$, thay vào phương trình đã cho, ta có
+    $$7\cdot2q^{2}+2=q^{3}+43\cdot2^{3}+1 \Rightarrow q^3-14q^2+343=0.$$
+    Giải phương trình trên, ta thu được $q=7$ là số nguyên duy nhất thỏa mãn.
+    \item Với $q=2$, thay vào phương trình đã cho, ta có
+    $$7p\cdot2^{2}+p=2^{3}+43p^3+1 \Rightarrow 43p^3-29p+9=0.$$
+    Giải phương trình trên, ta nhận thấy không có số nguyên tố $p$ thỏa mãn.
+\end{enumerate}
+Như vậy, $\tron{p,q}=\tron{2,7}$ là cặp số nguyên tố duy nhất thỏa mãn yêu cầu bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q,r$ sao cho $pqr=p+q+r+200.$
+\nguon{Tạp chí Toán học và Tuổi trẻ}
+\loigiai{
+Không mất tính tổng quát, giả sử ${p} \leq {q} \leq {r}$. Phương trình đã cho được viết lại thành\
+\[({rq}-1)({p}-1)+({r}-1)({q}-1)=202. \tag{*}\label{thtt200}\]
+Nếu $p$ lẻ thì $q, r$ cũng lẻ, và khi đó đó $4$ là ước của $({rq}-1)({p}-1)+({r}-1)({q}-1)$, nhưng $202$ không chia hết
+cho $4$, vô lí. Vậy ${p}=2,$ và phương trình $(\ref{thtt200})$ trở thành $$2 {rq}-{r}-{q}=202 \Leftrightarrow 4 {rq}-2 {r}-2 {q}+1=405 \Leftrightarrow(2 {q}-1)(2 {r}-1)=5 \cdot 3^{4}.$$
+Do $3 \leq 2 {q}-1 \leq 2 {r}-1$ nên $9 \leq(2 {q}-1)^{2} \leq(2 {q}-1)(2 {r}-1)=405,$ và ta tiếp tục suy ra $3 \leq 2 {q}-1 \leq 20$.\\
+Ta được $2 {q}-1 \in\{3 ; 5 ; 9 ; 15\}.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $2 {q}-1=3$ thì ${r}=68$ không là số nguyên tố.
+    \item Nếu $2 {q}-1=5$ thì ${q}=3$ và ${r}=41$ đều là số nguyên tố.
+    \item Nếu $2 {q}-1=9$ thì ${q}=5$ và ${r}=23$ đều là số nguyên tố.
+    \item Nếu $2 {q}-1=15$ thì ${q}=8$ không là số nguyên tố.
+\end{enumerate}
+Vậy tất cả các bộ ba số nguyên tố cần tìm là $(2,5,23)$ và $(2,3,41)$ và các hoán vị.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả số nguyên tố $p,q,r$ thỏa mãn 
+\[(p+1)(q+2)(r+3)=4pqr.\]
+\loigiai{
+Giả sử $p,q,r$ là các số nguyên tố thỏa yêu cầu. Ta xét các trường hợp sau đây
+\begin{enumerate}
+    \item Nếu $r=2$, ta nhận thấy $5(p+1)(q+2)=8pq.$
+    Do $(5,8)=1$ và $5$ là ước nguyên tố của $pq,$ ta chỉ ra $p=5$ hoặc $q=5.$ Thử trực tiếp, ta nhận được $(p,q,r)=(7,5,2).$
+    \item Nếu ${r}=3$, ta nhận thấy $$({p}+1)({q}+2)=2 {pq}\Leftrightarrow pq-2p-q-2=0\Leftrightarrow (p-1)(q-2)=4.$$
+    Do $q$ là các số nguyên tố, ta có $q-2\ne 2$ và $q-2\ne 4.$ Lập luận này cho ta $$\left\{\begin{aligned}{p}-1=4 \\ {q}-2=1\end{aligned} \Rightarrow\left\{\begin{aligned}{p}&=5 \\ {q}&=3.\end{aligned}\right.\right.$$ 
+    Bộ số thu được trong trường hợp này là $(p,q,r)=(5,3,3).$
+    \item Nếu ${r}>3$, ta nhận thấy $$4 {pqr}=({p}+1)({q}+2)({r}+3)<2 {r}({p}+1)({p}+2).$$
+    Ta suy ra
+    $2 {pq}<({p}+1)({q}+2)$ từ đây, hay là $$({p}-1)({q}-2)<4.$$
+    Do đó ${p}-1<4$ và  ${q}-2<4$ và ${p}$ là số nguyên tố nên ${p}=2$ hoặc ${p}=3.$
+\begin{itemize}
+    \item\chu{Trường hợp 1.} Với ${p}=2$, ta có $3(q+2)(r+3)=8 {qr}.$ Do $(3,8)=1$ nên $3$ phải là ước nguyên tố của $qr$, lại do $r>3$ nên ta suy ra $q=3$. Thế ngược lại, ta tìm được $r=5.$
+    \item\chu{Trường hợp 2.} Với ${p}=3,$ ta có $$({q}+2)({r}+3)=3 {qr}\Leftrightarrow 2 q r-3 q-2 r=6 \Leftrightarrow(q-1)(2 r-3)=9.$$
+    Do ${r}>3$ nên $2 {r}-3>3$. Ta suy ra $$\left\{\begin{aligned}2 {r}-3=9 \\ {q}-1=1\end{aligned} \Rightarrow\left\{\begin{aligned} r&=6 \\ q&=2. \end{aligned}\right.\right.$$
+    Lúc này, $r=6$ không là số nguyên tố, không thỏa điều kiện bài toán.
+\end{itemize}
+\end{enumerate}
+Kết luận, có ba bộ $(p,q,r)$ thỏa mãn, đó là $(7,5,2),(5.3,3)$ và $(2,3,5)$.}
+\end{gbtt} 
+
+\begin{gbtt}
+Tìm tất cả bộ ba số nguyên tố $(p,q,r)$ thỏa mãn \[\dfrac{1}{p-1}+\dfrac{1}{q}+\dfrac{1}{r+1}=\dfrac{1}{2}.\]
+\nguon{Titu Andreescu}
+\loigiai{
+Trong bài toán này, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p\le 3,$ phương trình đã cho không có nghiệm.
+    \item Nếu $p=5,$ thế vào phương trình ban đầu ta có
+    $$\dfrac{1}{4}+\dfrac{1}{q}+\dfrac{1}{r+1}=\dfrac{1}{2}\Leftrightarrow (q-4)(r-3)=16.$$
+    Ta tìm được $q=5$ và $r=19.$
+    \item Nếu $p=7,$ thế vào phương trình ban đầu ta có
+    $$\dfrac{1}{6}+\dfrac{1}{q}+\dfrac{1}{r+1}=\dfrac{1}{2}\Leftrightarrow (q-3)(r-2)=9.$$
+    Ta không tìm được $q,r$ nguyên tố thỏa mãn phương trình trên.
+    \item Nếu $p\ge 11,$ ta xét các trường hợp nhỏ hơn sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $q=3,$ thế vào phương trình ban đầu ta có
+        $$(p-7)(r-5)=36.$$
+        Ta tìm được $p=13$ và $r=11.$
+        \item \chu{Trường hợp 2.} Nếu $q=5,$ thế vào phương trình ban đầu ta có
+        $$\dfrac{1}{p-1}+\dfrac{1}{5}+\dfrac{1}{r+1}=\dfrac{1}{2}\Leftrightarrow r(3p-7)=13p+3.$$
+        Ta không tìm ra cặp $(p,r)$ nguyên tố nào từ đây.
+        \item \chu{Trường hợp 3.} Nếu $q\ge 7,$ ta buộc phải có $r=2$ vì nếu $r\ge 3$ thì
+                \[\dfrac{1}{p-1}+\dfrac{1}{q}+\dfrac{1}{r+1}\le\dfrac{1}{10}+\dfrac{1}{7}+\dfrac{1}{4}<\dfrac{1}{2},\]
+            mâu thuẫn. Với $r=2,$ phương trình đã cho trở thành
+            $$(p-7)(q-6)=36.$$
+            Ta tìm ra $p=43$ và $r=7$ từ đây.
+    \end{itemize}
+\end{enumerate} 
+Kết luận, tất cả bộ $(p,q,r)$ thỏa mãn là \[(5,5,19),\quad (13,3,11),\quad (43,7,2).\]}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $ p,q,r$ thỏa mãn đồng thời các điều kiện
+\[r>q>p\ge 5,\quad 2p^2-r^2\ge 49,\quad 2q^2-r^2\le 193.\]
+\loigiai{
+Hai điều kiện thứ hai và thứ ba cho ta
+$$2 q^{2}-193 \leq r^{2} \leq 2 p^{2}-49.$$
+Do đó $q^{2}-p^{2} \leq 72$. Mặt khác, từ điều kiện thứ nhất, ta chỉ ra ${r} \geq 11$, và vì thế
+$$2 {p}^{2} \geq 49+121=170\Rightarrow {p} \geq 11.$$
+Vì $(q-p)(q+p) \leq 72$ nên $q-p=2$ hoặc $q-p \geq 4$. Ta xét hai trường hợp kể trên.
+\begin{enumerate}
+   \item Với ${q}-{p}=2$ và ${q}+{p} \leq 36$, ta có ${p}=11,{q}=13$ hoặc ${p}=17,{q}=19$.
+\begin{itemize}
+    \item\chu{Trường hợp 1.} Nếu ${p}=11,{q}=13$ thì $145 \leq {r}^{2} \leq 193$, suy ra ${r}=13={q},$ mâu thuẫn.
+    \item\chu{Trường hợp 2.} Nếu ${p}=17,{q}=19$ thì $529 \leq {r}^{2} \leq 529$, suy ra ${r}=23.$
+\end{itemize}
+\item Với $q-p \geq 4$ và $q+p \leq 18$, ta có
+$11\le p\le 18,$ thế nên $p=11,14,17.$ Đối chiếu với $q+p\le 18$ rồi xét các trường hợp riêng lẻ của $q,$ ta thấy không thỏa.
+\end{enumerate}
+Kết luận, các số nguyên tố cần tìm là ${p}=17,{q}=19$ và ${r}=23.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba số nguyên tố $a, b, c$ đôi một phân biệt thỏa mãn điều kiện
+\[20abc<30(ab+bc+ca)<21abc.\]
+\loigiai{
+Giả sử tồn tại các số nguyên tố $a,b,c$ thỏa mãn đề bài. Chia bất phương trình đã cho $30abc,$ ta được
+$$\dfrac{2}{3}<\dfrac{1}{{a}}+\dfrac{1}{{b}}+\dfrac{1}{{c}}<\dfrac{7}{10} .$$
+Không mất tính tổng quát, ta giả sử ${a}>{b}>{c}>1$. Theo đó
+$$\dfrac{2}{3}<\dfrac{1}{{a}}+\dfrac{1}{{b}}+\dfrac{1}{{c}}<\dfrac{3}{c}.$$
+Nhận xét trên cho ta $\dfrac{2}{3}<\dfrac{3}{c}$ hay $2c<9.$ Vì $c$ là số nguyên tố, $c=2$ hoặc $c=3.$
+\begin{enumerate}
+    \item Với ${c}=2,$ ta lần lượt suy ra $$\dfrac{2}{3}<\dfrac{1}{2}+\dfrac{1}{{a}}+\dfrac{1}{{b}}<\dfrac{7}{10} \Rightarrow \dfrac{1}{6}<\dfrac{1}{{a}}+\dfrac{1}{{b}}<\dfrac{1}{5} \Rightarrow \dfrac{1}{6}<\dfrac{2}{{b}}<\dfrac{2}{5}.$$ Nhận xét trên cho ta ${b} \in\{7 ; 11\}$.
+    \begin{itemize}
+    \item\chu{Trường hợp 1.} Với ${b}=7$, từ $\dfrac{1}{6}<\dfrac{1}{{a}}+\dfrac{1}{{b}}<\dfrac{1}{5}$ ta suy ra $\dfrac{1}{42}<\dfrac{1}{{a}}<\dfrac{2}{35}.$ Do $a>b$ nên
+    $$a\in \{19;23;29;31;37;41\}.$$
+    \item\chu{Trường hợp 2.} Với $b=11,$ từ $\dfrac{1}{6}<\dfrac{1}{a}+\dfrac{1}{b}<\dfrac{1}{5}$ ta suy ra $\dfrac{5}{66}<\dfrac{1}{a}<\dfrac{6}{55}.$ Do $a>b$ nên $a=13.$
+    \end{itemize}
+    \item Với $c=3,$ ta lần lượt suy ra $$\dfrac{2}{3}<\dfrac{1}{3}+\dfrac{1}{{a}}+\dfrac{1}{{b}}<\dfrac{7}{10} \Rightarrow \dfrac{1}{3}<\dfrac{1}{{a}}+\dfrac{1}{{b}}<\dfrac{11}{30} \Rightarrow \dfrac{1}{3}<\dfrac{2}{{b}}<\dfrac{11}{30}.$$
+    Nhận xét trên kết hợp với việc $b>c$ cho ta ${b}=5.$ Ta tiếp tục thu được $$\dfrac{1}{3}<\dfrac{1}{{a}}+\dfrac{1}{{5}}<\dfrac{11}{30}\Rightarrow 6<{a}<\dfrac{15}{2} \Rightarrow {a}=7.$$
+\end{enumerate}
+Vậy có các bộ ba số nguyên tố khác nhau $(a,b,c)$ thoả mãn là $$(19 , 7 , 2),(23 , 7 , 2),(29 , 7 , 2),(31 , 7 , 2),(37 , 7 , 2),(41 , 7 , 2),(13 , 11 , 2),(7 , 5 , 3)$$ và các hoán vị của
+nó.}
+\end{gbtt} 
+
+\begin{gbtt}
+Tìm số nguyên tố $p$ sao cho tồn tại các số nguyên dương $x,y$ thỏa mãn
+\[x\left(y^2-p\right)+y\left(x^2-p\right)=5p.\]
+\loigiai{
+Với các số $x,y,p$ thỏa mãn đề bài, ta có
+\begin{align*}
+   xy^2+x^2y-px-py=5p\Rightarrow (xy-p)(x+y)=5p.
+\end{align*}
+Không mất tổng quát, ta giả sử $x\ge y.$ Rõ ràng, $xy-p$ và $x+y$ là các ước số dương của $5p.$ \\
+Dựa vào lập luận này, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $x+y=1,$ ta không tìm được $x,y$ nguyên dương.
+    \item Nếu $x+y=5,$ ta thử trực tiếp $(x,y)=(3,2),(4,1)$ để chỉ ra $p=3$ và $p=2.$
+    \item Nếu $x+y=p$ và $xy-p=5,$ ta có
+    $$xy=x+y+5\Rightarrow xy-x-y-5=0\Rightarrow (x-1)(y-1)=6.$$
+    Do $x-1\ge y-1\ge 1,$ phương trình ước số trên cho ta $x=4,y=3$ hoặc $x=7,y=2.$\\
+    Theo đó, ta chỉ tìm ra $p=7$ khi mà $x=4,y=3.$
+    \item Nếu $x+y=5p$ và $xy-p=1,$ ta có
+    $$5xy=x+y+5\Rightarrow (5x-1)(5y-1)=26.$$
+    Trong trường hợp này, ta không chỉ ra được sự tồn tại của $x,y$ nguyên dương.
+\end{enumerate}
+Như vậy, có tất cả ba số nguyên tố thỏa yêu cầu, đó là $p=2,p=3$ và $p=7.$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $p$ là số nguyên tố lẻ. Tìm tất cả các số nguyên dương $n$ để $\sqrt{n^{2}-np}$ là số nguyên dương.
+\nguon{Spanish Mathematical Olympiad 1997}
+\loigiai{
+Từ giả thiết ta thu được $n^2-np$ là bình phương một số tự nhiên, ta có thể đặt $n^2-np=m^2,$ với $m$ nguyên dương. Phép đặt này cho ta 
+\begin{align*}
+n^{2}-n p=m^{2} 
+&\Rightarrow 4n^2-4np=4m^2
+\\&\Rightarrow(2 n-p)^{2}-4 m^{2}=p^{2} \\&\Rightarrow(2 n-p-2 m)(2 n-p+2 m)=p^2.
+\end{align*}
+Do $0<2 n-p-2 m<2 n-p+2 m$ và $p$ là số nguyên tố nên ta suy ra 
+$$\heva{&2n-p-2m=1 \\ &2n-p+2m=p^2}\Rightarrow 4n-2p=p^2+1\Rightarrow n=\dfrac{(p+1)^2}{4}.$$
+Thử trực tiếp với số $n=\dfrac{(p+1)^2}{4}$, ta có
+$$n^2-np=\left[\dfrac{(p+1)^{2}}{4}\right]^2-\dfrac{p(p+1)^{2}}{4}=\left(\dfrac{p^2-1}{4}\right)^2.$$
+Do $p$ lẻ nên $\dfrac{p^2-1}{4}=\dfrac{(p-1)(p+1)}{4}=\dfrac{p-1}{2}\cdot\dfrac{p+1}{2}$ nguyên dương. \\Như vậy, số $n=\dfrac{(p+1)^2}{4}$ là số cần tìm.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ và số nguyên dương $m$ thỏa mãn \[p^{3}+m(p+2)=m^{2}+p+1.\]
+\nguon{Dutch Mathematical Olympiad 2012}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p$ và số nguyên dương $m$ thỏa mãn yêu cầu bài toán. Ta có
+$$p^3=m^2-m(p+2)+p+1\Rightarrow p^3=(m-1)(m-p-1).$$
+Do $p$ là số nguyên tố và $m-1>m-p-1,$ chỉ có hai khả năng sau đây xảy ra.
+\begin{enumerate}
+    \item Với $m-p-1=1$ và $m-1=p^3,$ ta có hệ
+    $$
+    \heva{&m=p+2 \\ &m=p^3+1}
+    \Rightarrow
+    p+2=p^3+1 
+    \Rightarrow
+    p^2(p-1)=1.
+    $$
+    Ta không tìm được $p$ nguyên dương từ đây.
+    \item Với $m-p-1=p$ và $m-1=p^2,$ ta có hệ
+    $$
+    \heva{m&=2p+1 \\ m&=p^2+1}
+    \Rightarrow
+    \heva{m&=2p+1 \\ 2p+1&=p^2+1}
+    \Rightarrow
+    \heva{p&=2 \\ m&=5.}
+    $$
+\end{enumerate}
+Như vậy, cặp $(m,p)=(5,2)$ là cặp số duy nhất thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $x,y,z$ thỏa mãn  \[x^y+1=z.\]
+\loigiai{
+Do $x,y$ là các số nguyên tố nên $x \geqslant 2,y \geqslant 2$. Suy ra ${x^y} + 1 \geqslant 5$ hay $z \geqslant 5$. Điều này dẫn đến $z$ là số lẻ, suy ra ${x^y}$ chẵn. Vì thế ta có $x = 2$. Đến đây, ta xét hai trường hợp
+\begin{enumerate}
+    \item Nếu $y$ lẻ thì 
+    ${x^y} + 1 = {2^y} + {1^y} = \left( {2 + 1} \right)\left( {{2^{y - 1}} - {2^{y - 2}} + {2^{y - 3}} -  \cdots } \right).$
+    Suy ra $$3\mid\tron{{x^y} + 1} = z.$$ Điều này là không thể vì $z$ là số nguyên tố lớn hơn hoặc bằng 5.
+    \item Nếu $y$  chẵn thì $y=2$, suy ra $z=5$.
+\end{enumerate}
+Tóm lại, phương trình đã cho có nghiệm duy nhất là $\left( {x,y,z} \right) = \left( {2,2,5} \right)$.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba số nguyên tố $\left ( p,q,r \right )$ thỏa mãn
+    $$p^{2}+2 q^{2}+r^{2}=3pqr.$$
+\nguon{Adrian Andreescu}
+    \loigiai{
+    Nếu cả $p$ và $r$ đều không chia hết cho $3$ thì $p^{2}+2 q^{2}+r^{2} \equiv 1+2 q^{2}+1 \equiv 2,1\pmod 3$, điều này là không thể. Giả sử $r=3$ thì $p^{2}+2 q^{2}=9(pq-1)$, thì ta sẽ xem xét hai trường hợp sau.
+    \begin{enumerate}
+        \item Nếu $q$ là số lẻ thì $p^{2}+2 q^{2}$ và $9(p q-1)$ đối lập nhau về tính chẵn lẻ, nên vô lí.
+        \item Nếu $q=2$ thì ta suy ra được $0=p^{2}-18 p+17=(p-1)(p-17),$ hay $p=17$.
+    \end{enumerate}
+Do tính đối xứng của $p$ và $r,$ ta kết luận các bộ $(p,q,r)$ thỏa mãn là $(p, q, r)=(17,2,3)$ và $(3,2,17)$.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $x, y$ và số nguyên tố $p$ thỏa mãn
+\[x^2-3xy+p^2y^2=12p.\]
+\nguon{France Junior Balkan Mathematical Olympiad Team Selection Test 2017}
+\loigiai{
+Lấy đồng dư hai vế phương trình theo modulo $3,$ ta được
+$$x^2+p^2y^2\equiv 0 \pmod{3}.$$
+Dựa vào tính chất đã biết, ta có
+$$\heva{&3\mid x \\ &3\mid py}\Rightarrow \heva{&9 \mid x^2 \\ &9\mid 3xy \\ &9\mid p^2y^2}\Rightarrow 9\mid 12p\Rightarrow 3\mid p\Rightarrow p=3.$$
+Thay $p=3$ vào phương trình ban đầu, ta được
+\[x^2-3xy+9y^2=36.\tag{*}\label{movedto5.1}\]
+Ta có nhận xét rằng $$36=x^2-3xy+9y^2=x^2-3xy+\dfrac{9y^2}{4}+\dfrac{27y^2}{4}=\left(x-\dfrac{3y}{2}\right)^2+\dfrac{27y^2}{4}\ge \dfrac{27y^2}{4}.$$
+Nhận xét này cho ta $144\ge 27y^2,$ thế nên $|y|\le \sqrt{\dfrac{144}{27}}<3.$ Ta chỉ ra $y\in \{0;\pm 1;\pm 2\}$ từ đây.\\
+Ta lập được bảng giá trị tương ứng như sau.
+\begin{center}
+    \begin{tabular}{c|c|c}
+        $y$ &  (\ref{movedto5.1}) sau khi thế & $x$\\
+        \hline
+        $-2$ & $\quad x^2+6x+36=36\quad$ & $0$ và $6$\\
+        $-1$ & $\quad x^2+3x+9=36\quad $ & $\notin \mathbb{Z}$\\
+        $0$ & $\quad x^2=36\quad $ & $-6$ và $6$\\
+        $1$ & $\quad x^2-3x+9=36\quad $ & $\notin \mathbb{Z}$\\
+        $2$ & $\quad x^2-6x+36=36\quad $ & $0$ và $6$
+    \end{tabular}
+\end{center}
+Như vậy, có tổng cộng $6$ bộ $(x,y,p)$ thỏa mãn đề bài, đó là
+$$(-6,-2,3),\, (0,2,3),\, (-6,0,3),\,(6,0,3),\,(0,2,3),\,(6,2,3).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên tố $a,b,c,d,e$ sao cho \[a^4+b^4+c^4+d^4+e^4=abcde.\]
+\loigiai{
+Ta đã biết, với $p$ là một số nguyên tố khác $5,$ ta có $p^2\equiv -1,1\pmod{5}$, thế nên $p^4\equiv 1\pmod{5}.$\\
+Gọi $a$ số các số $5$ ở vế trái. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $a=0$ thì $VT\equiv 1+1+\cdots+1\equiv 5\equiv 0\pmod{5},$ còn vế phải không chia hết cho $5,$ mâu thuẫn.
+    \item Nếu $a=5$ thì $a=b=c=d=e=5.$ Thử lại, ta thấy thỏa mãn.
+    \item Nếu $1\le a\le 4$ thì vế phải chia hết cho $5$ và
+    $$VT\equiv 5-a\pmod{5}.$$
+    Bắt buộc, $5-a\equiv 0\pmod{5},$ vô lí do $1\le a\le 4.$
+\end{enumerate}
+Kết luận, bộ số nguyên tố duy nhất thoả mãn đề bài là $(a,b,c,d,e)=(5,5,5,5,5).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương \(a,b,c\) và số nguyên tố \(p\) thỏa mãn phương trình
+\[73 p^{2}+6=9 a^{2}+17 b^{2}+17 c^{2}.\]
+\nguon{Junior Balkan Mathematical Olympiad Shortlist 2020}
+\loigiai{
+Trong bài toán này, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $p\ge 3,$ ta có $p$ là số lẻ, vậy nên $p^2\equiv 1\pmod{8}.$ Lấy đồng dư theo modulo $8$ hai vế, ta được
+    \[7\equiv a^{2}+b^{2}+c^{2}\pmod{8}.\]
+    Trong đồng dư thức kể trên, các số $a,b,c$ có vai trò tương tự nhau. \\
+    Lập bảng đồng dư cho $a^2,b^2,c^2$ theo modulo $8,$ ta có
+    \begin{center}
+        \begin{tabular}{c|c|c|c}
+           $  a^2  $  & $  b^2  $ & $  c^2  $ & $  a^2+b^2+c^2  $\\
+            \hline
+            0 & 0 & 0 & 0\\
+            0 & 0 & 1 & 1\\
+            0 & 0 & 4 & 1\\          
+            0 & 1 & 1 & 2\\
+            0 & 1 & 4 & 5\\
+            0 & 4 & 4 & 0\\
+            1 & 1 & 1 & 3\\
+            1 & 1 & 4 & 6\\
+            1 & 4 & 4 & 1         
+        \end{tabular}
+    \end{center}
+    Đối chiểu bảng đồng dư với đồng dư thức kể trên, ta thấy mâu thuẫn.
+    \item Nếu $p=2,$ thế vào phương trình đã cho ta được
+    $$9a^2+17b^2+17c^2=289.$$
+    Với giả sử $b\ge c,$ điều này dẫn đến $b^{2}+c^{2} \leqslant 17,$ nhưng nó chỉ xảy ra khi 
+    \[(b, c)\in\{(4,1);(3,2);(3,1);(2,2);(2,1);(1,1)\}.\]
+    Kiểm tra trực tiếp, ta thấy chỉ có duy nhất \(\left ( b,c \right )=\left ( 4,1 \right )\) thỏa mãn, từ đó ta thu được \(a=1\).  
+\end{enumerate}
+Do tính đối xứng của \(b,c\) nên ta thu được các nghiệm của $(1,1,4,2)$ và $(1,4,1,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả bộ ba các số nguyên tố $(p,q,r)$ thỏa mãn $$3p^4-5q^4-4r^2=26.$$
+\nguon{Junior Balkan Mathematical Olympiad 2014}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q,r$ thỏa yêu cầu. Nếu $q\ne 3$ và $r\ne 3,$ ta có
+$$26=3p^4-5q^4-4r^2\equiv 0-5-4\equiv -9\equiv 0\pmod{3}.$$
+Đồng dư thức trên cho ta $26$ chia hết cho $3,$ vô lí. Như vậy một trong hai số $q$ và $r$ bằng $3.$ \\
+Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $q=3,$ phương trình đã cho trở thành
+    $$3p^4-4r^2=431.$$
+    Nếu $p=5,$ ta có $r=19.$ Còn nếu $p\ne 5,$ ta có
+    $$431=3p^4-4r^2\equiv 3-4r^2\pmod{5}.$$
+    Chuyển vế, ta được $r^2\equiv 3\pmod{5}.$ Đây là điều vô lí.
+    \item Nếu $r=3,$ phương trình đã cho trở thành
+    $$3p^4-5p^4=62.$$
+    Bằng cách xét modulo $5$ hai vế tương tự trường hợp trên, ta cũng chỉ ra điều vô lí.
+\end{enumerate}
+Kết luận, bộ ba số nguyên tố duy nhất thỏa yêu cầu là $(p,q,r)=(5,3,19).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ và $q$ thỏa mãn 
+$$\dfrac{p^{3}-2017}{q^{3}-345}=q^{3}.$$
+\nguon{Titu Andreescu}
+\loigiai{
+Phương trình đã cho tương đương với
+    $$p^{3}-2017=q^{6}-345 q^{3}.$$
+Lấy đồng dư theo modulo $7$ hai vế phương trình trên, ta được
+$$p^{3}-1 \equiv q^{6}-2 q^{3}\pmod{7} \Rightarrow p^{3} \equiv\left(q^{3}-1\right)^{2}\pmod{7}.$$
+Do $q^{3} \equiv 0,1,6\pmod 7$ nên $\left(q^{3}-1\right)^{2} \equiv 0,1,4\pmod 7.$ Kết hợp với đồng dư thức bên trên, ta có $$\left(q^{3}-1\right)^{2} \equiv 0,1\pmod 7.$$ 
+Tới đây, ta xem xét các trường hợp sau.
+    \begin{enumerate}
+        \item Nếu $\left(q^{3}-1\right)^{2} \equiv 0\pmod 7$ thì kéo theo $p^{3} \equiv 0\pmod 7$, nghĩa là $p=7$. Thế trở lại, ta được 
+        $$q^{6}-345 q^{3}+1674=0.$$ 
+        Phương trình này không có nghiệm nguyên.
+        \item Nếu $\left(q^{3}-1\right)^{2} \equiv 1\pmod 7$ thì kéo theo $q^{3} \equiv 0\pmod 7$, nghĩa là $q=7$. Thế trở lại, ta được $$p^{3}-2017=-686.$$ 
+        Nghiệm nguyên tố của phương trình trên là $p=11.$
+    \end{enumerate}
+Như vậy, cặp số nguyên tố duy nhất thỏa yêu cầu là $(p,q)=(11,7).$}
+\end{gbtt}
+\begin{gbtt}
+Tìm các nghiệm nguyên dương của phương trình 
+$$x(x+3)+y(y+3)=z(z+3).$$ trong đó $x$ và $y$ là nghiệm nguyên tố.
+\loigiai{
+Lấy đồng dư theo modulo $3$ hai vế, ta được
+$$x^2+y^2\equiv z^2\pmod{3}.$$
+Ta sẽ chứng minh rằng $x$ hoặc $y$ bằng $3.$ Thật vậy, nếu như $xy$ không chia hết cho $3,$ ta có
+$$z^2\equiv x^2+y^2\equiv 1+1\equiv 2\pmod{3}.$$
+Không có số chính phương nào chia $3$ dư $2.$ Giả sử sai, và thế thì $x$ hoặc $y$ bằng $3.$  Không giảm tính tổng quát có thể giả sử $x = 3$. Thay vào phương trình đã cho ta thu được
+\[ 18 + {y^2} + 3y = {z^2} + 3z \Leftrightarrow \left( {z - y} \right)\left( {z + y + 3} \right) = 18.\]
+Ta có các nhận xét sau đây.
+\begin{enumerate}
+    \item[i,] $z-y$ và $z+y+3$ khác tính chẵn lẻ do chúng có tổng lẻ.
+    \item[ii,] $0<z-y<z+y+3.$
+\end{enumerate}
+Dựa vào hai nhận xét trên, ta lập bảng giá trị.
+\begin{center}
+    \begin{tabular}{c|c|c}
+       $z-y$  & $1$ & $2$ \\
+       \hline
+        $z+y+3$ & $18$ & $9$ \\
+       \hline
+       $y$ & $7$ & $2$ \\
+       \hline
+       $z$ & $8$ & $4$
+    \end{tabular}
+\end{center}
+Do tính đối xứng của $x$ và $y$ nên ta tìm được $4$ nghiệm của phương trình đã cho là
+$$\left( {3,7,8} \right),\:\left( {7,3,8} \right),\:\left( {3,2,4} \right),\:\left( {2,3,4} \right).$$}
+\end{gbtt}
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ sao cho $p^2+q^3$ và $q^2+p^3$ đều là số chính phương.
+\nguon{Baltic Way 2011}
+\loigiai{
+Giả sử tồn tại số nguyên tố $p,q$ thỏa mãn. Ta đặt $p^2+q^3=a^2.$ Phép đặt này cho ta
+\[q^3=\tron{a-p}\tron{a+p}.\]
+Tới đây, ta chia bài toán làm các trường hợp sau.
+\begin{enumerate}
+    \item Với $q=2,$ ta có $\tron{a-p}\tron{a+p}=8.$ Ta lập bảng giá trị sau đây
+    \begin{center}
+        \begin{tabular}{c|c|c}
+        $a-p$ & $1$ & $2$ \\
+        \hline
+        $a+p $ & $8$ & $4$ \\
+        \hline
+        $p$   & $\notin \mathbb{N}$ & $1$ 
+        \end{tabular}
+    \end{center}
+    Bảng giá trị trên không cho ta $p$ nguyên tố. Trường hợp này không xảy ra.
+    \item Với $q>2,$ ta xét các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $p=q,$  ta thế vào $p^2+q^3=a^2$ và thu được
+        $$q^2\tron{q+1}=a^2.$$
+        Từ đây, ta suy ra $q+1$ là số chính phương. Đặt $q+1=b^2,$ biến đổi tương đương cho ta
+        $$q=\tron{b-1}\tron{b+1}.$$
+        Vì $q$ là số nguyên tố nên $b-1=1$ và $b+1=q.$ Điều này dẫn đến $b=2$ và kéo theo $q=3.$ Do đó $p=q=3$ là cặp số nguyên tố thỏa mãn.
+        \item\chu{Trường hợp 2.} Với $p\ne q,$ ta suy ra $\tron{p,q}=1.$ Ta dễ dàng chứng minh $\tron{a+p,a-p}\mid 2p.$ Lại có, $q$ không chia hết cho $2,p$ nên $\tron{a+p,a-p}=1.$ Từ đây, ta suy ra
+        $$\heva{a-p&=1\\a+p&=q^3}\Rightarrow 2p=\tron{q-1}\tron{q^2+q+1}.$$
+        Do $p$ là số nguyên tố lẻ nên chỉ xảy ra trường hợp $q-1=2$ và $p=q^2+q+1.$ Điều này dẫn đến $q=3,p=13,$ nhưng khi đó $q^2+p^3=2206$ không là số chính phương, mâu thuẫn.
+    \end{itemize}
+\end{enumerate}
+Như vậy, có duy nhất bộ số nguyên tố thỏa mãn là $(p,q)=(3,3).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ sao cho $p+q$ và $p+4q$ đều là số chính phương.
+\nguon{Chuyên Toán Quảng Nam 2019}
+\loigiai{
+Giả sử tồn tại số nguyên tố $p,q$ thỏa mãn. Ta đặt $p+q=x^2$ và $p+4q=y^2.$ Lấy hiệu theo vế, ta được
+$$3q=(y-x)(y+x).$$
+Do các ước của $3q$ chỉ có thể là $1,3,q,3q$ nên ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $y-x=1$ và $y+x=3q,$ ta có $y=\dfrac{3q+1}{2}.$ Lúc này
+    $$p=y^2-4q=\tron{\dfrac{3q+1}{2}}^2-4q=\dfrac{9q^2-10q+1}{4}=\dfrac{(q-1)(9q-1)}{4}.$$
+    Rõ ràng $p$ lẻ. Nếu như $q=3,$ ta có $p=13.$ Nếu như $q\ge 5,$ ta có số
+    $$p=\tron{\dfrac{q-1}{2}}\tron{\dfrac{9q-1}{2}}$$
+    là hợp số do các thừa số của nó không nhỏ hơn $2,$ mâu thuẫn.
+    \item Nếu $y-x=3$ và $y+x=q,$ ta có $y=\dfrac{q+3}{2}.$ Lúc này
+    $$p=y^2-4q=\tron{\dfrac{q+3}{2}}^2-4q=\dfrac{q^2-10q+9}{4}=\dfrac{(q-1)(q-9)}{4}.$$
+    Rõ ràng $q$ lẻ và $p>9.$ Nếu như $q=11,$ ta có $p=5.$ Nếu như $q\ge 13,$ ta có số
+    $$p=\tron{\dfrac{q-1}{2}}\tron{\dfrac{q-9}{2}}$$
+    là hợp số do các thừa số của nó không nhỏ hơn $2,$ mâu thuẫn.    
+    \item Nếu $y-x=q$ và $y+x=3,$ ta có $q<3,$ và do $q$ nguyên tố nên $q=2.$\\
+    Lúc này $y-x$ và $y+x$ khác tính chẵn lẻ, mâu thuẫn.
+    \item Nếu $y-x=3q$ và $y+x=1,$ ta có $3q<1,$ mâu thuẫn. 
+\end{enumerate}
+Kết luận, có đúng hai cặp $(p,q)$ thỏa yêu cầu là $(13,3)$ và $(5,11).$}
+\end{gbtt}
+
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ thỏa mãn $9p+1$ là số chính phương.
+\loigiai{
+Đặt $9p+1=x^2$ với $x$ là số nguyên dương. Phép đặt này cho ta
+$$9p+1=x^2\Leftrightarrow9p=\tron{x-1}\tron{x+1}.$$
+Vì các ước của $9p$ chỉ có thể là $1,3,9,p,3p,9p$ và $x-1<x+1$ nên ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $x-1=1$ và $x+1=9p$, ta có $x=2$ và $p=\dfrac{1}{3}$ không là số nguyên tố.
+    \item  Với $x-1=3$ và $x+1=3p$, ta có $x=4$ và $p=\dfrac{5}{3}$ không là số nguyên tố.
+    \item Với $x-1=9$ và $x+1=p$, ta có $x=10$ và $p=11$. 
+    \item Với $x-1=p$ và $x+1=9$, ta có $x=8$ và $p=7$. 
+\end{enumerate}
+Như vậy, tất các số nguyên tố $p$ thỏa mãn là $7$ và $11.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ sao cho $2p^2+27$ là số lập phương.
+\loigiai{
+Giả sử tồn tại số nguyên tố $p$ thỏa mãn đề bài. Ta đặt $2p^2+27=x^3.$ Phép đặt này cho ta
+$$2p^2=x^3-27\Rightarrow 2p^2=\tron{x-3}\tron{x^2+3x+9}.$$
+Ta dễ dàng nhận thấy $\tron{x-3,x^2+3x+9}\mid 27$ nên  ta xét các trường hợp sau.
+    \begin{enumerate}
+    \item Nếu $\tron{x-3,x^2+3x+9}=1,$ ta lại xét tiếp các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $x-3=1$ và $x^2+3x+9=2p^2$, ta suy ra $x=4$ và $2p^2=37,$ vô lí. 
+        \item\chu{Trường hợp 2.} Với $x-3=2$ và $x^2+3x+9=p^2$, ta suy ra $x=5$ và $p=7.$
+    \end{itemize}
+    \item Nếu $\tron{x-3,x^2+3x+9}$ chia hết cho $3,$ ta lần lượt suy ra 
+    $$3\mid \tron{x-3}\tron{x^2+3x+9}\Rightarrow 3\mid 2p^2\Rightarrow p=3.$$
+    Thế trở lại ta được $2p^2+27=2\cdot3^2+27=45$ không phải là số lập phương.
+\end{enumerate}
+Như vậy, $p=7$ là số nguyên tố duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn \[n^3=(p+1)^2.\]
+\loigiai{
+Giả sử tồn tại số nguyên tố $p$ và số tự nhiên $n$ thỏa mãn. Ta sẽ chứng minh $n$ là số chính phương. Ta có
+$$\tron{\dfrac{p+1}{n}}^2=n.$$
+Rõ ràng $n\ne 0.$ Đặt $\dfrac{p+1}{n}=\dfrac{x}{y},$ trong đó $(x,y)=1$ và $y$ nguyên dương. Ta sẽ có
+$$\dfrac{x^2}{y^2}=n\Rightarrow y^2\mid x^2\Rightarrow y\mid x,$$
+nhưng do $(x,y)=1$ nên $y=1.$ Nói chung, số $n=\tron{\dfrac{p+1}{n}}^2$ là số chính phương, thế nên $p+1$ là số lập phương. Ta tiếp tục đặt $p+1=a^3.$ Ta có $$p=(a-1)(a^2+a+1).$$
+Vì $p$ là một số nguyên tố và $a^2+a+1\ge 3$ nên ta phải có $a-1=1,$ tức là $a=2,$ và như thế $p=7,n=4.$ Như vậy $(n,p)=(4,7)$ là cặp số duy nhất thỏa mãn yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên tố $p,q$ thỏa mãn $p+q^2$ là số chính phương. Chứng minh rằng
+\begin{enumerate}[a,]
+    \item $p=2q+1.$
+    \item $p^2+q^{2021}$ không phải là số chính phương.
+\end{enumerate}
+\nguon{Chuyên Toán Quảng Ngãi 2021}   
+\loigiai{
+ \begin{enumerate}[a,]
+    \item Từ giả thiết, ta có thể đặt $p+q^2=a^2,$ với $a$ nguyên dương. Phép đặt trên cho ta
+    $$p=(a-q)(a+q).$$
+    Do $p$ nguyên tố và $0<a-q<a+q,$ ta suy ra $a-q=1,$ còn $a+q=p.$ Lấy hiệu theo vế, ta được \[p=2q+1.\]
+    \item Giả sử $(2q+1)^2+q^{2021}$ là số chính phương. Theo đó, ta có thể đặt $(2q+1)^2+q^{2021}=b^2,$ với $b$ là số nguyên dương. Phép đặt này cho ta
+        $$q^{2021}=b^2-(2q+1)^2\Rightarrow q^{2021}=(b-2q-1)(b+2q+1).$$
+    Tới đây, ta xét các trường hợp sau.
+        \begin{itemize}
+            \item\chu{Trường hợp 1.} Nếu $b-2q-1$ và $b+2q+1$ có ước nguyên tố chung là $r,$ ta suy ra 
+            $$\heva{&r\mid (b-2q-1) \\ &r\mid (b+2q+1) \\ &r\mid q^{2021}}
+            \Rightarrow \heva{&r\mid (4q+2) \\ &r\mid q}\Rightarrow \heva{&r\mid 2 \\ &r\mid q}\Rightarrow q=r=2.$$ \\
+            Lúc này, $(2q+1)^2+q^{2021}=5^2+2^{2021}.$ Số này chia cho $5$ dư $2,$ do vậy nó không chính phương.
+            \item\chu{Trường hợp 2.} Nếu $b-2q-1$ và $b+2q+1$ nguyên tố cùng nhau, ta suy ra
+            $$\heva{&b-2q-1=1 \\ &b+2q+1=q^{2021}} 
+            \Rightarrow 4q+2=q^{2021}-1\Rightarrow 4q+3=q^{2021}.$$ \\
+            Xét tính chia hết cho $q$ ở cả hai vế, ta được $q=3.$ Thay $q=3$ trở lại đẳng thức $4q+3=q^{2021},$ ta có $15=3^{2021},$ một điều vô lí.
+        \end{itemize}
+        Mâu thuẫn chỉ ra ở tất cả các trường hợp chứng tỏ giả sử phản chứng là sai. \\Bài toán được chứng minh.
+    \end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn
+\[(p-2)\tron{p^2+p+2}=(q-3)(q+2).\]
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thỏa mãn đề bài. Giả sử như vậy cho ta
+\[p^2\tron{p-1}=\tron{q-2}\tron{q+1}.\tag{*}\label{snt5}\]
+Ta nhận thấy rằng một trong các số $q-2,q+1$ chia hết cho $p.$ Ta xét các trường hợp sau. 
+\begin{enumerate}
+    \item Nếu cả hai số $q+1$ và $q-2$ đều chia hết cho $p,$ ta có $p$ là ước của $3,$ và vì thế $p=3.$\\ Thế $p=3$ trở lại (\ref{snt5}), ta tìm ra $q=5.$
+    \item Nếu chỉ một trong hai số $q-2$ và $q+1$ chia hết cho $p^2,$ ta có
+    $$\hoac{p^2\le q-2 \\ p^2\le q+1}\Rightarrow p^2\le q+1\Rightarrow q\ge p^2-1.$$
+    Phép so sánh này kết hợp với (\ref{snt5}) cho ta
+    \begin{align*}
+        p^2\tron{p-1}\ge \tron{p^2-3}p^2&\Rightarrow p-1\ge p^2-3\\&\Rightarrow p^2-p-2\le 0\\&\Rightarrow (p+1)(p-2)\le 0\\&\Rightarrow p=2.
+    \end{align*}
+    Tiếp tục thế $p=2$ trở lại (\ref{snt5}), ta tìm ra $q=3.$
+\end{enumerate}
+Như vậy, có hai cặp số nguyên tố $(p,q)$ thỏa yêu cầu là $(2,3)$ và $(3,5).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn \[p^5+p^3+2=q^2-q.\]
+\nguon{Argentina Cono Sur Team Selection Test 2014}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thỏa mãn đề bài. Giả sử như vậy cho ta
+\[p^3\tron{p^2+1}=\tron{q+1}\tron{q-2}.\tag{*}\label{acgentila}\]
+Ta nhận thấy rằng một trong các số $q+1,q-2$ chia hết cho $p.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu cả $q+1$ và $q-2$ chia hết cho $p,$ ta có $p=3$ và $q=17.$
+    \item Nếu $q+1$ hoặc $q-2$ chia hết cho $p^3,$ ta có
+    $$\hoac{p^3\le q+1 \\ p^3\le q-2}\Rightarrow p^3\le q+1\Rightarrow q\ge p^3-1.$$
+    Phép so sánh này kết hợp với (\ref{acgentila}) cho ta
+    $$p^3\tron{p^2+1}\ge p^3\tron{p^3-3}\Rightarrow p^2+1\ge p^3-3\Rightarrow p^2(p-1)\le 4.$$
+    Với $p\ge 3,$ bất đẳng thức bên trên đổi chiều. Với $p=2,$ ta tìm được $q=17.$
+\end{enumerate}
+Kết luận, có hai cặp số nguyên tố $(p,q)$ thỏa yêu cầu là $(2,7)$ và $(3,17).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn
+\[q^3+2q^2=6p^4+17p^3+60p^2+8q.\]
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thỏa mãn đề bài. Giả sử như vậy cho ta
+\[q^3+2q^2-8q=6p^4+17p^3+60p^2\Rightarrow q\tron{q-2}\tron{q+4}=p^2\tron{6p^2+17p+60}.\tag{*}\label{snt6}\]
+Từ đây, ta xét các trường hợp sau
+\begin{enumerate}
+    \item Nếu một trong ba số $q,q-2,q+4$ chia hết cho $p^2,$ ta có
+    $$\hoac{&p^2\le q\\ &p^2\le q-2\\&p^2\le q+4}\Rightarrow p^2\le q+4\Rightarrow q\ge p^2-4.$$
+    Phép so sánh kể trên kết hợp với (\ref{snt6}) cho ta
+    $$p^2\tron{6p^2+17p+60}\ge \tron{p^2-4}\tron{p^2-6}p^2\Rightarrow 6p^2+17p+60\ge \tron{p^2-4}\tron{p^2-6}.$$
+    Nếu $p\ge 5,$ bất đẳng thức bên trên không xảy ra do 
+    \begin{align*}
+      \tron{p^2-4}\tron{p^2-6}
+      &\ge \tron{5p-4}\tron{5p-6}
+      =6p^2+17p+60+\tron{19p^2-67p-36}
+      \\&\ge 6p^2+17p+60+\tron{95p-67p-3}
+      \\&>6p^2+17p+60.
+    \end{align*}
+    Như vậy $p<5.$ Thử với $p=2,p=3,$ ta tìm được $(p,q)=(3,11).$
+    \item Nếu có hai trong ba số $q,q-2,q+4$ chia hết cho $p$, ta có $p$ chẵn, và thế thì $p=2.$ \\
+    Thử với $p=2,$ ta không tìm được $q$ nguyên.
+\end{enumerate}
+Như vậy, các số nguyên tố $(p,q)$ thỏa mãn đề bài là $(3,11).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ thỏa mãn
+\[p^8+7p^6=3q^2+11q.\]
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thỏa mãn. Giả sử này cho ta
+\[p^6\tron{p^2+7}=q\tron{3q+11}.\tag{*}\label{snt9}\]
+Dễ dàng nhận thấy $p=7$ không thỏa mãn (\ref{snt9}) nên $p\ne 7$ và $\tron{p^6,p^2+7}=1$.\\
+Vì $q$ là số nguyên tố nên $q\mid p$ hoặc $q\mid p^2+7.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $q\mid p$, ta suy ra $p=q.$ Ta thế trở lại (\ref{snt9}) và thu được
+    $$p^8+7p^6=3p^2+11p\Rightarrow p=0.$$
+    Điều này mâu thuẫn với điều kiện $p$ là số nguyên tố.
+    \item Nếu $q\mid \tron{p^2+7}$, ta suy ra $p^6\mid(3q+11).$ Ta có
+    $$\heva{&q\le p^2+7 \\ &p^6\le 3q+11}\Rightarrow \heva{&p^2+7\ge q \\ &3q+11\ge p^6}\Rightarrow p^6\le 3q+11\le 3p^2+32\Rightarrow p<2.$$
+    Điều này không thể xảy ra.
+\end{enumerate}
+Như vậy, không tồn tại các số nguyên tố $(p,q)$ thỏa mãn.}
+\end{gbtt}
+
+%nguyệt anh
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ và số nguyên tố $p$ thỏa mãn
+\[3p^2\tron{p+11}=n^3+n^2-2n.\]
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ và số nguyên tố $p$ thỏa mãn. Giả sử này cho ta
+\[3p^2\tron{p+11}=n\tron{n+2}\tron{n-1}.\tag{*}\label{snt10}\]
+Từ đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu đúng một số trong $n,n-1,n+2$ chia hết cho $p$, chắc chắn số đó chia hết cho $p^2.$ Ta có
+    $$\hoac{&p^2\le n \\ &p^2\le n-1 \\ &p^2\le n+2}\Rightarrow p^2\le n+2\Rightarrow n\ge p^2-2\ge p-2.$$
+    Phép so sánh này kết hợp với (\ref{snt10}) cho ta
+    $$3p^2\tron{p+11}\ge \tron{p-2}p\tron{p-3}\Rightarrow 3p(p+11)\ge \tron{p-2}\tron{p-3}\Rightarrow p^2+19p\le 3.$$
+    Không tồn tại số nguyên tố $p$ nào như vậy.
+    \item Có ít nhất hai số trong $n,n-1,n+2$ chia hết cho $p.$ Do
+    $$n-(n-1)=1,\quad (n+2)-(n-1)=3,\quad (n+2)-n=2$$
+    nên $p=2$ hoặc $p=3.$ Thử trực tiếp, ta tìm được $n=7$ khi $p=3.$
+    \end{enumerate}
+Như vậy, cặp số $(n,p)$ thỏa mãn đề bài là $(7,3).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ và số nguyên tố $p$ thỏa mãn
+\[n^5+p^4=p^8+n.\]
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ và số nguyên tố $p$ thỏa mãn đề bài. Giả sử cho ta
+\[n\tron{n^2-1}\tron{n^2+1}=p^4\tron{p^4-1}.\tag{*}\label{snt11}\]
+Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu duy nhất một số trong $n, n^2-1, n^2+1$ chia hết cho $p,$ số đó phải chia hết cho $p^4.$ Khi đó
+        $$\hoac{&p^4\le n \\ &p^4\le n^2-1 \\ &p^4\le n^2+1}\Rightarrow p^4\le n^2+1\Rightarrow p^2\le n.$$
+    Phép so sánh này kết hợp với (\ref{snt11}) cho ta
+    $$n\tron{n^2-1}\tron{n^2+1}\le n^2\tron{n^2-1}.$$
+    Không tồn tại số tự nhiên $n$ nào như vậy. Trường hợp này không xảy ra.
+    \item Nếu ít nhất hai số trong $n,n^2-1,n^2+1$ chia hết cho $p,$ do
+    $$\tron{n,n^2+1}=\tron{n,n^2-1}=1,\quad \tron{n^2-1,n^2+1}\in \{1;2\}$$
+    nên $p=2.$ Thử trực tiếp, ta tìm ra $n=3.$
+\end{enumerate}
+Như vậy, cặp số $(n,p)$ duy nhất thỏa yêu cầu là $(3,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $x, y, z$ sao cho $x^{2}+1, y^{2}+1$ đều là các số nguyên tố và
+$$\left(x^{2}+1\right)\left(y^{2}+1\right)=z^{2}+1.$$
+\nguon{Tạp chí Toán Tuổi thơ, ngày 20 tháng 5 năm 2020}
+\loigiai{
+Không mất tính tổng quát ta giả sử $x \geq y$. Ta sẽ so sánh $x,y$ và $z.$ Thật vậy
+\begin{align*}
+    z^2+1&=\left(x^{2}+1\right)\left(y^{2}+1\right)>x^2+1,\\
+    z^2+1&=\left(x^{2}+1\right)\left(y^{2}+1\right)\le \left(x^2+1\right)^2<\left(x^2+1\right)^2+1.
+\end{align*}
+Vì lẽ đó, $y\le x<z\le x^2.$ Ngoài ra, phương trình đã cho tương đương
+\[y^{2}\left(x^{2}+1\right)=(z-x)(z+x).\tag{*}\label{vailz}\]
+Do $x^2+1$ là số nguyên tố nên hoặc $z-x,$ hoặc $z+x$ chia hết cho $x^2+1.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $z-x$ chia hết cho $x^2+1$, ta có $x^2+1\le z-x<z<x^2,$ mâu thuẫn.
+    \item Nếu $z+x$ chia hết cho $x^2+1$, ta có $$x^2+1\le z+x<x^2+x<2x^2+2.$$
+    Ta suy ra $z+x=x^2+1,$ hay là $z=x^2-x+1$. Thế trở lại (\ref{vailz}), ta có
+    $$y^2\left(x^2+1\right)=\left(x^2+1\right)(x+1)^2.$$
+    Ta có $y=x+1,$ và khi ấy hai số nguyên tố $x^2+1,\ y^2+1$ khác tính chẵn lẻ. Số nhỏ hơn trong hai số này (là $y^2+1$) phải bằng $2$. Ta tìm ra $y=1,x=2,z=3$ từ đây.
+\end{enumerate}
+Kết luận, $(x,y,z)=(1,2,3)$ và $(x,y,z)=(2,1,3)$ là hai bộ số thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên tố $(p,q)$ thỏa mãn 
+\[p+q=2(p-q)^2.\]
+\nguon{Chuyên Đại học Vinh 2016}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q$ thỏa yêu cầu. Ta có
+$$p+q=2p^2-4pq+2q^2.$$
+Lấy đồng dư theo modulo $p$ hai vế, ta chỉ ra
+$$q\equiv q^2\pmod{p}\Rightarrow q(2q-1)\equiv 0\pmod{p}.$$
+Lấy đồng dư theo modulo $q$ hai vế, ta chỉ ra
+$$p\equiv 2p^2\pmod{q}\Rightarrow p(2p-1)\equiv 0\pmod{q}.$$
+Do $p\ne q$ nên $2p-1$ chia hết cho $q$ và $2q-1$ chia hết cho $q.$ Giả sử $p\ge q.$ Ta có
+$$1\le \dfrac{2q-1}{p}\le \dfrac{2p-1}{p}<2.$$
+Do $2q-1$ chia hết cho $p$ nên $2q-1=p.$ Lúc này, $$2p-1=2(2q-1)-1=4q-3$$
+chia hết cho $q,$ thế nên $q=3,$ và đồng thời $p=5.$\\ Kiểm tra trực tiếp, ta thấy có hai cặp $(p,q)$ thỏa yêu cầu là $(3,5)$ và $(5,3).$}
+\end{gbtt}
+
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q,r$ và số tự nhiên $n$ thỏa mãn
+\[p^3=q^3+9r^n.\]
+
+\loigiai{
+Đầu tiên, nếu cả ba số $p,q,r$ đều lẻ, hai vế phương trình khác tính chẵn lẻ, mâu thuẫn. Do vậy, trong các số $p,q,r$ phải có một số bằng $2.$ Ta xét các trường hợp dưới đây.
+\begin{enumerate}
+    \item Với $p=2$, ta có $q^3+9r^n=8$. Ta không tìm được $q$ và $r$ từ đây, do
+    $$q^3+9r^n\ge 2^3+9\cdot2=26\geq 8.$$
+    \item Với $q=2$, ta có $9r^n=p^3-8=\tron{p-2}\tron{p^2+2p+4}.$ \\
+    Dễ thấy $\tron{p-2,p^2+2p+4}\in\{1;3\}.$ Ta xét các trường hợp kể trên.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $\tron{p-2,p^2+2p+4}=1,$ bằng lập luận được rằng $$p^2+2p+4=(p+1)^2+3$$ không thể chia hết cho $9,$ ta suy ra $p-2$ chia hết cho $9,$ tức là $p\equiv 2\pmod{9}.$ Lúc này        $$p^2+2p+4\equiv 2^2+2\cdot2+4=12\equiv 0\pmod{3}.$$
+        Trong trường hợp này, cả $p-2$ và $p^2+2p+4$ đều chia hết cho $3,$ mâu thuẫn.
+        \item \chu{Trường hợp 2.} Với $\tron{p-2,p^2+2p+4}=3,$ do $p^2+2p+4$ không thể chia hết cho $9,$ ta có thể đặt $p-2=3x$ và $ p^2+2p+4=3y$ trong đó $x\le y$ và $\tron{x,y}=1$. Phép đặt này cho ta
+    $$9r^n=3x\cdot3y\Rightarrow r^n=xy.$$
+    Do $\tron{x,y}=1$ và $x\le y$, ta thu được $x=1,$ kéo theo $p=3x+2=5$. Thế trở lại, ta có
+    $$5^3=2^3+9r^n\Rightarrow 9r^n=117\Rightarrow r=13.$$
+    \end{itemize}
+    \item Với $r=2$, ta có $9\cdot2^n=\tron{p-q}\tron{p^2+pq+q^2}.$
+    Ta đặt $d=\tron{p-q,p^2+pq+q^2}.$ Theo đó
+    $$d\mid \tron{p^2+pq+q^2}-\tron{p-q}^2=3pq.$$
+    Ta xét các trường hợp sau đây.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $3\mid d$, ta đặt $p-q=3x$ và $p^2+pq+q^2=3y$. Ta chứng minh tương tự ý trên và thu được $x=1,p=5, q=2.$
+        \item \chu{Trường hợp 2.}Với $p\mid d$, ta thu được
+        $$p\mid\tron{p-q}\tron{p^2+pq+q^2}=9\cdot2^n$$
+        Từ đây, ta suy ra $p=2$ hoặc $p=3$. Thử trực tiếp, ta thấy không có số nào thỏa mãn.
+        \item \chu{Trường hợp 3.} Với $q\mid d$, tương tự trường hợp trên, ta thấy không có số nào thỏa mãn
+        \item \chu{Trường hợp 4.} Với $d=1$, ta dễ dàng chứng minh được $p-q=2^n$ và $p^2+pq+q^2=9$. Vì $p^2+pq+q^2=9$, nên $q\le p<3.$ Nhờ giả thiết $p,q$ là hai số nguyên tố, ta suy ra $p=q=2$. Thông qua thử trực tiếp, ta thấy chúng không thỏa mãn.
+    \end{itemize}
+\end{enumerate}
+Như vậy, có duy nhất một bộ số nguyên tố thỏa yêu cầu là $(p,q,r)=(5,2,13).$}
+\end{gbtt}

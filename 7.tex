@@ -1,0 +1,568 @@
+\chapter{Hàm phần nguyên, phần lẻ}
+
+Phần nguyên và phần lẻ là hai khái niệm mới hoàn toàn ở toán trung học cơ sở. Đây là những vấn đề số học khó và mang nhiều ý nghĩa lớn. Gần đây, hàm phần nguyên và phần lẻ đã bắt đầu xuất hiện nhiều hơn ở trong các đề thi học sinh giỏi qua các bài toán hay và đẹp. Ở chương VII, tác giả muốn giới thiệu những tính chất cơ bản nhất của hai hàm số này.
+
+\section*{Định nghĩa, tính chất}
+
+\begin{light}
+\chu{Định nghĩa 1.} Phần nguyên của một số thực $x$ $\big($thường được kí hiệu là $[x]\big)$ là số nguyên lớn nhất và nhỏ hơn với $x.$
+\end{light}
+
+Một vài ví dụ về phần nguyên có thể kể đến như
+ $$[2,4]=2,\quad [3]=3,\quad [-12,27]=-13,\quad \vuong{\sqrt{2}}=1.$$
+ 
+\begin{light}
+\chu{Định nghĩa 2.} Phần lẻ của một số thực $x$ $\big($được kí hiệu là $\{x\}\big)$ hàm số được định nghĩa theo công thức $\{x\}=x-\vuong{x}.$
+\end{light} 
+Một vài ví dụ về phần lẻ có thể kể đến như
+ $$\{2,4\}=0,4,\quad \{3\}=0,\quad \{-12,27\}=0,73,\quad \left\{\sqrt{2}\right\}=0,414123562\ldots$$
+
+Dưới đây là một vài tính chất quan trọng của phần nguyên và phần lẻ.
+\begin{light}
+\begin{enumerate}[\color{blue!60!black}\sffamily\bfseries Tính chất 1.]
+    \item Cho số thực $x$ và số nguyên $n.$ Các công thức dưới đây là tương đương nhau
+    \begin{multicols}{3}
+    \begin{itemize}
+        \item[i,] $\vuong{x}=n.$
+        \item[ii,] $n\le x< n+1.$
+        \item[iii,] $x-1< n\le x.$
+    \end{itemize}
+    \end{multicols}
+    \item Với mọi số thực $x,$ ta luôn có $0\le\{x\}<1.$
+\end{enumerate}
+\end{light}
+
+\section{Tính toán phần nguyên}
+
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Cho số nguyên dương $n.$ Hãy tính $\vuong{\tron{\sqrt{n}+\sqrt{n+1}}^{2}}.$ 
+\loigiai{
+Khai triển biểu thức trong dấu phần nguyên, ta có
+$$\tron{\sqrt{n}+\sqrt{n+1}}^2=2n+1+2\sqrt{n(n+1)}=2n+1+\sqrt{4n(n+1)}.$$
+Dựa trên so sánh $(2n)^2<4n(n+1)<(2n+1)^2,$ ta chỉ ra
+$$4n+1<\tron{\sqrt{n}+\sqrt{n+1}}^2<4n+2.$$
+Theo như tính chất đã biết về phần nguyên, ta kết luận rằng
+$$\vuong{\tron{\sqrt{n}+\sqrt{n+1}}^2}=4n+1.$$}
+\end{bx}
+
+\begin{bx}
+Tính tổng $A=\bigg[\sqrt{1}\bigg]+\bigg[\sqrt{2}\bigg]+\bigg[\sqrt{3}\bigg]+\ldots+\bigg[\sqrt{101}\bigg].$
+\loigiai{
+Với mọi số nguyên dương $x,$ ta có 
+    $$\bigg[\sqrt{x}\bigg]=n\Leftrightarrow n^2\le x<(n+1)^2.$$
+    Ứng với mỗi số nguyên dương $n,$ có tất cả $2n+1$ nguyên  $x$ thỏa mãn $n^2\le x<(n+1)^2,$ thế nên có đúng $2n+1$ số nguyên $x$ thỏa mãn $\bigg[\sqrt{x}\bigg]=n.$ Dựa vào nhận xét này, ta chỉ ra
+    \[\begin{aligned}
+    A
+    &=1(2\cdot 1+1)+2(2\cdot 2+1)+3(2\cdot 3+1)+\ldots+9(2\cdot 9+1)+10\cdot 2\\
+    &=2\tron{1^2+2^2+\ldots+9^2}+\tron{1+2+\ldots+9}+20\\
+    &=\dfrac{2\cdot9\cdot10\cdot19}{6}+\dfrac{9\cdot10}{2}+20=635.  
+    \end{aligned}\]}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Cho số nguyên dương $n.$ Tính giá trị biểu thức $\vuong{\sqrt{4 n^{2}+\sqrt{16 n^{2}+8 n+3}}}.$
+\end{btt}
+
+\begin{btt}
+Với mỗi số nguyên dương $n,$ ta đặt
+$$x_n=\vuong{\dfrac{n+1}{\sqrt{2015}}}-\vuong{\dfrac{n}{\sqrt{2015}}}.$$
+Hỏi trong dãy $x_1,x_2,\ldots,x_{2014}$ có bao nhiêu số bằng $0$?
+\nguon{Hanoi Open Mathematics Competitions 2014}
+\end{btt}
+
+\begin{btt}
+Tính tổng
+$B=\bigg[\sqrt[3]{1}\bigg]+\bigg[\sqrt[3]{2}\bigg]+\bigg[\sqrt[3]{3}\bigg]+\ldots+\bigg[\sqrt[3]{1000}\bigg].$
+\end{btt}
+
+\begin{btt}
+Tìm phần nguyên của số $$A=1+\dfrac{1}{\sqrt{2}}+\dfrac{1}{\sqrt{3}}+\dfrac{1}{\sqrt{4}}+\ldots+\dfrac{1}{\sqrt{1000000}}.$$
+\end{btt}
+
+\begin{btt}
+Tìm phần nguyên của số  $$B=\dfrac{1}{\sqrt[3]{4}}+\dfrac{1}{\sqrt[3]{5}}+\dfrac{1}{\sqrt[3]{6}}+\ldots+\dfrac{1}{\sqrt[3]{1000000}}.$$
+\end{btt}
+
+\begin{btt}
+Biết rằng số $A_n$ sau đây có $n$ dấu căn $(n\ge 1)$. Hãy tính phần nguyên của
+\[A_n=\sqrt{2+\sqrt{2+\ldots+\sqrt{2+\sqrt{2}}}}.\]
+\end{btt}
+
+\begin{btt}
+Biết rằng số $B_n$ sau đây có $n$ dấu căn $(n\ge 1)$. Hãy tính phần nguyên của
+\[B_n=\sqrt[3]{6+\sqrt[3]{6+\ldots+\sqrt[3]{6+\sqrt[3]{6}}}}.\]
+\end{btt}
+
+\begin{btt}
+Với mỗi số nguyên tố $p,$ chứng minh rằng $$S_p=\left[\sqrt{2}+\sqrt[3]{\dfrac{3}{2}}+\sqrt[4]{\dfrac{4}{3}}+\cdots+\sqrt[p+1]{\dfrac{p+1}{p}}\right]$$ 
+cũng là một số nguyên tố.
+\end{btt}
+
+\begin{btt}
+Cho số thực $a\ge\dfrac{1+\sqrt{5}}{2}$ và số nguyên dương $n.$ Tính giá trị biểu thức \[A=\vuong{\dfrac{1+\vuong{\dfrac{1+n{a^2}}{a}}}{a}}.\]
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Cho số nguyên dương $n.$ Tính giá trị biểu thức $\vuong{\sqrt{4 n^{2}+\sqrt{16 n^{2}+8 n+3}}}.$
+\loigiai{Nhận xét $4n+1<\sqrt{(4n+1)^2+2}=\sqrt{16n^2+8n+3}<\sqrt{16n^2+16n+4}=4n+2$ cho ta $$(2n+1)^2=4n^2+4n+1<4n^2+\sqrt{16n^2+8n+3}<4n^2+4n+2<4n^2+8n+4=(2n+2)^2.$$ Khai căn theo tất cả các vế, ta được 
+$$2n+1<\sqrt{4 n^{2}+\sqrt{16 n^{2}+8 n+3}}<2n+2.$$
+Do vậy, $\vuong{\sqrt{4 n^{2}+\sqrt{16 n^{2}+8 n+3}}}=2n+1.$}
+\end{gbtt}
+
+\begin{gbtt}
+Với mỗi số nguyên dương $n,$ ta đặt
+$$x_n=\vuong{\dfrac{n+1}{\sqrt{2015}}}-\vuong{\dfrac{n}{\sqrt{2015}}}.$$
+Hỏi trong dãy $x_1,x_2,\ldots,x_{2014}$ có bao nhiêu số bằng $0$?
+\nguon{Hanoi Open Mathematics Competitions 2014}
+\loigiai{
+Với mọi số nguyên dương $n,$ ta luôn có
+$$0\le \vuong{\dfrac{n+1}{\sqrt{2015}}}-\vuong{\dfrac{n}{\sqrt{2015}}} \le 1.$$
+Do đó, $0\le x_n\le 1.$ Ta lại có
+\begin{align*}
+  x_1+x_2+\ldots+x_{2014}&=\vuong{\dfrac{2}{\sqrt{2015}}}-\vuong{\dfrac{1}{\sqrt{2015}}}+\vuong{\dfrac{3}{\sqrt{2015}}}-\vuong{\dfrac{2}{\sqrt{2015}}}+\ldots+\vuong{\dfrac{2015}{\sqrt{2015}}}-\vuong{\dfrac{2014}{\sqrt{2015}}}\\
+  &=\vuong{\dfrac{2015}{\sqrt{2015}}}-\vuong{\dfrac{1}{\sqrt{2015}}}=\vuong{\dfrac{2015}{\sqrt{2015}}}.  
+\end{align*}
+
+Ta nhận thấy rẳng $44^2<2015<45^2.$ Điều này dẫn đến $\vuong{\dfrac{2015}{\sqrt{2015}}}=44.$ Từ đây, ta suy ra có $44$ dãy số bằng $1$ nên số dãy số bằng $0$ là $2014-44=1970.$\\
+Như vậy, trong $2014$ dãy số có $1970$ số bằng $0.$
+}
+\end{gbtt}
+
+\begin{gbtt}\label{phannguyen1}
+Tính tổng
+$B=\bigg[\sqrt[3]{1}\bigg]+\bigg[\sqrt[3]{2}\bigg]+\bigg[\sqrt[3]{3}\bigg]+\ldots+\bigg[\sqrt[3]{1000}\bigg].$
+\loigiai{
+Với mọi số nguyên dương $x,$ ta có 
+    $$\bigg[\sqrt[3]{x}\bigg]=n\Leftrightarrow n^3\le x<(n+1)^3.$$
+    Ứng với mỗi số nguyên dương $n,$ có tất cả $(n+1)^3-n^3=3n^2+3n+1$ số nguyên  $x$ thỏa mãn $$n^3\le x<(n+1)^3,$$ thế nên có đúng $3n^2+3n+1$ số nguyên $x$ thỏa mãn $\bigg[\sqrt[3]{x}\bigg]=n.$ Dựa vào nhận xét này, ta chỉ ra
+    \[\begin{aligned}
+    B&=1\tron{3\cdot 1^2+3\cdot 1+1}+2\tron{3\cdot 2^2+3\cdot 2+1}+\ldots +9\tron{3\cdot 9^2+3\cdot 9+1}+10
+    \\&=3\tron{1^3+2^3+\ldots+9^3}+3\tron{1^2+2^2+\ldots+9^2}+\tron{1+2+\ldots+9}+10
+    \\&=3\tron{\dfrac{9\cdot10}{2}}^2+3\tron{\dfrac{9\cdot 10\cdot 19}{6}}+\dfrac{9\cdot10}{2}+10=6985.
+    \end{aligned}\]}
+\end{gbtt}
+
+\begin{gbtt}
+	Tìm phần nguyên của số $A=1+\dfrac{1}{\sqrt{2}}+\dfrac{1}{\sqrt{3}}+\dfrac{1}{\sqrt{4}}+\ldots+\dfrac{1}{\sqrt{1000000}}.$
+	\loigiai{
+Trước tiên ta sẽ đi chứng minh rằng, với mọi số nguyên dương $n,$ ta luôn có
+$$2\sqrt{n+1}-2\sqrt{n}<\dfrac{1}{\sqrt{n}}<2\sqrt{n}-2\sqrt{n-1}.$$
+	Thật vậy, ta có $2\sqrt{n+1}-2\sqrt{n}=2\left(\sqrt{n+1}-\sqrt{n}\right)=\dfrac{2}{\sqrt{n+1}+\sqrt{n}}<\dfrac{2}{\sqrt{n}+\sqrt{n}}=\dfrac{1}{\sqrt{n}}$.\\
+	Bất đẳng thức thứ hai được chứng minh tương tự. Áp dụng vào bài toán, ta được
+	\begin{align*}
+		A&>1+2\left[\left(\sqrt{3}-\sqrt{2}\right)+\left(\sqrt{4}-\sqrt{3}\right)+...+\left(\sqrt{1000001}-\sqrt{1000000}\right)\right]\\ 
+		A&<1+2\left[\left(\sqrt{2}-1\right)+\left(\sqrt{3}-\sqrt{2}\right)+...+\left(\sqrt{1000000}-\sqrt{999999}\right)\right]
+	\end{align*}
+Các kết quả kể trên cho ta biết
+\begin{align*}
+    & A>1+2\left(\sqrt{1000001}-\sqrt{2}\right)>1998\\ 
+	& A<1+2\left(\sqrt{1000000}-1\right)<1+2.999=1999.
+\end{align*}
+Ta có $1998<A<1999.$ Kết quả, phần nguyên của số thực $A$ bằng $1998.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm phần nguyên của số  $B=\dfrac{1}{\sqrt[3]{4}}+\dfrac{1}{\sqrt[3]{5}}+\dfrac{1}{\sqrt[3]{6}}+\ldots+\dfrac{1}{\sqrt[3]{1000000}}.$
+\loigiai{
+Với mọi số nguyên dương $n.$ ta có
+	$$\left(1+\dfrac{2}{3n}\right)^3=1+\dfrac{2}{n}+\dfrac{4}{3n^2}+\dfrac{8}{27n^3}>1+\dfrac{2}{n}+\dfrac{1}{n^2}=\left(1+\dfrac{1}{n}\right)^2.$$
+Lấy căn bậc ba các vế, ta lần lượt chỉ ra
+	\[1 + \dfrac{2}{{3n}} > {\left( {1 + \dfrac{1}{n}} \right)^{\dfrac{2}{3}}} \Rightarrow {n^{\dfrac{2}{3}}} + \dfrac{2}{{3{n^{\dfrac{1}{3}}}}} > {\left( {n + 1} \right)^{\dfrac{2}{3}}} \Rightarrow \dfrac{1}{{\sqrt[3]{n}}} > \dfrac{3}{2}\left[ {\sqrt[3]{{{{\left( {n + 1} \right)}^2}}} - \sqrt[3]{{{n^2}}}} \right]\tag{1}\label{ceilng.1}\] 
+Hoàn toàn tương tự, ta chứng minh được
+\[\dfrac{1}{\sqrt[3]{n}}<\dfrac{3}{2}\left[\sqrt[3]{n^2}-\sqrt[3]{\left(n-1\right)^2}\right].\tag{2}\label{ceilng.2}\]
+Kết hợp (\ref{ceilng.1}) và (\ref{ceilng.2}), ta có $$\dfrac{3}{2}\left[\sqrt[3]{\left(n+1\right)^2}-\sqrt[3]{n^2}\right]<\dfrac{1}{\sqrt[3]{n}}<\dfrac{3}{2}\left[\sqrt[3]{n^2}-\sqrt[3]{\left(n-1\right)^2}\right].$$
+Lần lượt cho $n=1,2,\ldots,1000000$ rồi lấy tổng, ta nhận thấy $14996<B<14997.$ Vậy $[B]=14996.$}
+\end{gbtt}
+
+\begin{gbtt}
+Biết rằng số $A_n$ sau đây có $n$ dấu căn $(n\ge 1)$. Hãy tính phần nguyên của
+\[A_n=\sqrt{2+\sqrt{2+\ldots+\sqrt{2+\sqrt{2}}}}.\]
+\loigiai{
+Ta có $A_n>\sqrt{2}>1$ với mọi $n.$ Ngoài ra, ta chứng minh được
+$$A_{n+1}=\sqrt{2+A_n}.$$
+Ta đi chứng minh bằng quy nạp rằng $A_n<2$ với mọi $n\in\mathbb{Z^+}.$ Với $n=1$, ta có $$A_n=A_1=\sqrt{2}<2.$$ Do vậy, khẳng định đúng với $n=1$. Giả sử khẳng định đúng với $n=1,2,\ldots,k.$ Với $n=k+1$, ta có \[A_{k+1}=\sqrt{2+A_k}<\sqrt{2+2}=2.\]
+Khẳng định cũng đúng với $n=k+1$ nên nó đúng với mọi số nguyên dương $n$. Vậy ta đã chứng minh được $1<A_n<2$. Do đó $[A_n]=1$ với mọi $n.$}
+\end{gbtt}
+
+\begin{gbtt}
+Biết rằng số $B_n$ sau đây có $n$ dấu căn $(n\ge 1)$. Hãy tính phần nguyên của
+\[B_n=\sqrt[3]{6+\sqrt[3]{6+\ldots+\sqrt[3]{6+\sqrt[3]{6}}}}.\]
+\loigiai{
+Ta có $B_n>\sqrt[3]{6}>1$ với mọi $n.$ Ngoài ra, ta còn chứng minh được
+$$B_{n+1}=\sqrt[3]{6+B_n}.$$
+Ta đi chứng minh bằng quy nạp rằng $B_n<2$ với mọi $n\in\mathbb{Z^+}.$ Với $n=1$, ta có $$B_n=B_1=\sqrt[3]{6}<2.$$ Do vậy, khẳng định đúng với $n=1$. Giả sử khẳng định đúng với $n=1,2,\ldots,k.$ Với $n=k+1$, ta có
+\[B_{k+1}=\sqrt[3]{6+B_k}<\sqrt[3]{6+2}=2.\]
+Khẳng định cũng đúng với $n=k+1$ nên nó đúng với mọi số nguyên dương $n$. Vậy ta đã chứng minh được $1<B_n<2$. Do đó $[B_n]=1$ với mọi $n.$}
+\end{gbtt}
+
+\begin{gbtt}
+Với mỗi số nguyên tố $p,$ chứng minh rằng $$S_p=\left[\sqrt{2}+\sqrt[3]{\dfrac{3}{2}}+\sqrt[4]{\dfrac{4}{3}}+\cdots+\sqrt[p+1]{\dfrac{p+1}{p}}\right]$$ 
+cũng là một số nguyên tố.
+\loigiai{
+Hiển nhiên $S_{p}>p$. Ngoài ra, khi áp dụng bất đẳng thức $AM-GM$ cho mỗi bộ $k+1$ số dương, ta có $$\sqrt[k+1]{\dfrac{k+1}{k}}<\dfrac{\dfrac{k+1}{k}+1+1+\cdots+1}{k+1}=1+\dfrac{1}{k(k+1)},$$ 
+trong đó trên tử số có $k$ số $1$ không kể  $\dfrac{k+1}{k},$ với $k=1,2, \ldots, p$. Đánh giá trên cho ta biết $$S_{p}<p+\dfrac{1}{1.2}+\dfrac{1}{2.3}+\cdots+\dfrac{1}{p(p+1)}<p+1 .$$ 
+Ta có $p<S_p<p,$ và như vậy $\vuong{S_p}=p$ cũng là số nguyên tố. Bài toán được chứng minh.}
+\begin{luuy}
+Bài toán tương tự của bài này cũng đã từng xuất hiện trên \chu{tạp chí Toán học và Tuổi trẻ số 364}:
+\begin{quote}
+    \it Tính phần nguyên của $S,$ biết rằng
+\[S=\sqrt{\dfrac{2+1}{2}}+\sqrt[3]{\dfrac{3+1}{3}}+\sqrt[4]{\dfrac{4+1}{4}}\ldots+\sqrt[n]{\dfrac{n+1}{n}}.\]
+\end{quote}
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số thực $a\ge\dfrac{1+\sqrt{5}}{2}$ và số nguyên dương $n.$ Tính giá trị biểu thức \[A=\vuong{\dfrac{1+\vuong{\dfrac{1+n{a^2}}{a}}}{a}}.\]
+\loigiai{
+Từ giả thiết $a\ge\dfrac{1+\sqrt{5}}{2}$ ta được $a^2-a-1\ge 0$ hay $a\ge\dfrac{1}{a}+1.$ Ta nhận thấy rằng \[\vuong{\dfrac{1+n{a^2}}{a}}=\dfrac{1}{a}+na-\alpha \text{ với }0\le\alpha <1.\]
+Dựa vào nhận xét bên trên, ta chỉ ra
+$$\vuong{\dfrac{1+\vuong{\dfrac{1+n{a^2}}{a}}}{a}}=\vuong{\dfrac{1+\dfrac{1}{a}+na-\alpha}{a}}=\vuong{\left(1+\dfrac{1}{a}-\alpha\right)\dfrac{1}{a}+n}.$$
+Với các đánh giá
+$\left(1+\dfrac{1}{a}-\alpha\right)\dfrac{1}{a}\le\left(a-\alpha\right)\dfrac{1}{a}=1-\dfrac{\alpha}{a}<1$ và $\left(1+\dfrac{1}{a}-\alpha\right)\dfrac{1}{a}>\dfrac{1}{a^2}>0,$ ta có
+$$\vuong{\dfrac{1+\vuong{\dfrac{1+n{a^2}}{a}}}{a}}=n.$$
+Như vậy, giá trị biểu thức đã cho là $A$ bằng $n.$}
+\end{gbtt}
+
+\section{Giải phương trình có chứa phần nguyên}
+
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Giải phương trình $\left[\dfrac{x-3}{2}\right]=\left[\dfrac{x-2}{3}\right] $.
+\loigiai{
+	Ta giả sử phương trình đã cho có nghiệm nguyên. Ta đặt $$\vuong{\dfrac{x-3}{2}}=n,$$
+	trong đó $n$ là số nguyên. Theo đó
+	$$\heva{
+		& n\le\dfrac{x-3}{2}<n+1\\ 
+		& n\le\dfrac{x-2}{3}<n+1}
+		\Rightarrow\heva{
+		& 2n+3\le x<2n+5\\ 
+		& 3n+2\le x<3n+5}
+        \Rightarrow\heva{
+		& 3n+2<2n+5\\ 
+		& 2n+3<3n+5}\Rightarrow -2<n<3.$$
+	Do $n$ là số nguyên nên $n\in\{-1;0;1;2\}.$ Ta xét các trường hợp kể trên.
+	\begin{enumerate}
+		\item Nếu $n=-1,$ ta có $1\le x<3$ và $-1\le x<2$ nên $x\in[1,2)$.
+		\item Nếu $n=0,$ ta có $3\le x<5$ và $2\le x<5$ nên $x\in[3,5)$.
+		\item Nếu $n=1,$ ta có $5\le x<7$ và $5\le x<8$ nên $x\in[5,7)$.
+		\item Nếu $n=2,$ ta có $7\le x<9$ và $8\le x<11$ nên $x\in[8,9).$
+	\end{enumerate}
+	Như vậy, tập nghiệm của phương trình đã cho là $S=[1,2)\cup[3,7)\cup[8,9)$.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các nghiệm thực của phương trình
+$4{x^2} - 40\left[ x \right]  + 51 = 0$.
+\loigiai{
+Trước tiên, ta có nhận xét rằng
+	$$\left( {2x - 3} \right)\left( {2x - 17} \right) = 4{x^2} - 40x + 51 \leqslant 4{x^2} - 40\left[ x \right]  + 51 = 0.$$
+	Ta suy ra $\dfrac{3}{2} \leqslant x \leqslant \dfrac{{17}}{2}$ và $1 \leqslant \left[ x \right]  \leqslant 8$. Như vậy $x = \dfrac{{\sqrt {40\left[ x \right]  + 51} }}{2}.$ Lấy phần nguyên hai vế, ta được 
+    \[\left[ x \right]  = \left[ {\dfrac{{\sqrt {40\left[ x \right]  + 51} }}{2}} \right]\tag{*}\label{clmm}.\]
+	Lần lượt thay $\left[ x \right]  \in \left\{ {1,2,3,4,5,6,7,8} \right\}$ vào (\ref{clmm}), ta thấy $\left[ x \right]  = \left\{ {2,6,7,8} \right\}$ thỏa mãn. Bằng phép thay như trên, ta tìm được tập nghiệm của phương trình đã cho là
+		\[S = \left\{ {\dfrac{{\sqrt {29} }}{2};\dfrac{{\sqrt {189} }}{2};\dfrac{{\sqrt {229} }}{2};\dfrac{{\sqrt {269} }}{2}} \right\}\]}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Giải phương trình sau trên tập số thực
+$$\vuong{\dfrac{{2x - 1}}{3}}+ \vuong{\dfrac{{4x + 1}}{6}} = \dfrac{{5x - 4}}{3}.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+	$$\di\bigg[ {\dfrac{x}{2}} \bigg]  + \bigg[ {\dfrac{x}{3}} \bigg]  + \bigg[ {\dfrac{x}{5}} \bigg]  = x.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình sau trên tập số thực
+\[x^3-\left[ x\right]=3.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình sau trên tập số thực \[x^4=2x^2+\left[x\right].\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$x=8\left[\sqrt[4]{x}\right]+3.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình sau trên tập số thực
+\[\left[ x\left[ x\right]\right]=1.\]
+\end{btt}
+
+\begin{btt}
+Giải hệ phương trình sau trên tập số thực \[\left\{\begin{array}{l}x+[y]+\left\{z\right\}=3,9 \\ y+[z]+\left\{x\right\}=3,5 \\ z+[x]+\left\{y\right\}=2\end{array}\right.\]
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Giải phương trình sau trên tập số thực
+\[\vuong{\dfrac{{2x - 1}}{3}}+ \vuong{\dfrac{{4x + 1}}{6}} = \dfrac{{5x - 4}}{3}.\]
+\loigiai{
+	Trước hết ta đặt $\dfrac{{2x - 1}}{3} = y,$ và ta có $x = \dfrac{{3y + 1}}{2}.$ Thay vào phương trình, ta được
+	\[[y] +\vuong{{y + \dfrac{1}{2}}} = \dfrac{{5y - 1}}{2} \Rightarrow [2y]  = \dfrac{{5y - 1}}{2}\]
+	Bây giờ, ta tiếp đặt 
+	$\di\dfrac{{5y - 1}}{2} = t.$ Ta lại có 
+	$$y = \dfrac{{2t + 1}}{5} \Rightarrow \left[ {\dfrac{{4t + 2}}{5}} \right]  = t \Rightarrow 0 \leqslant \dfrac{{4t + 2}}{5} - t < 1.$$ 
+	Do $t$ là số nguyên nên ta suy ra được 
+	\[t \in \left\{ { - 2, - 1,0,1,2} \right\} \Rightarrow y \in \left\{ { - \dfrac{3}{5}, - \dfrac{1}{5},\dfrac{1}{5},\dfrac{3}{5},1} \right\}\]
+	Kết luận, tập nghiệm của phương trình đã cho là
+	$\di S = \left\{ { - \dfrac{2}{5},\dfrac{1}{5},\dfrac{4}{5},\dfrac{7}{5},2} \right\}.$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên
+	$\di\bigg[ {\dfrac{x}{2}} \bigg]  + \bigg[ {\dfrac{x}{3}} \bigg]  + \bigg[ {\dfrac{x}{5}} \bigg]  = x.$
+\nguon{Canada 1998}	
+\loigiai{
+	Vì vế trái là một số nguyên nên $x$ cũng phải là một số nguyên. Ta đặt $x = 30q + r,$ trong đó $r$ là thương của phép chia $x$ chia $30$. Phương trình ban đầu trở thành
+	\[31q + \bigg[ {\dfrac{r}{2}} \bigg]  + \bigg[ {\dfrac{r}{3}} \bigg]  + \bigg[ {\dfrac{r}{5}} \bigg]  = 30q + r\] 
+	Chuyển vế, ta thu được phương trình tương đương
+	\[q = r - \left( {\bigg[ {\dfrac{r}{2}} \bigg]  + \bigg[ {\dfrac{r}{3}} \bigg]  + \bigg[ {\dfrac{r}{5}} \bigg]} \right)\]
+	Như vậy, tập nghiệm của phương trình đã cho là
+	$$S=\left\{x \:|\: x=30\tron{r -  {\left[ {\dfrac{r}{2}} \right]  - \left[ {\dfrac{r}{3}} \right]  - \left[ {\dfrac{r}{5}} \right]} }+r,r=0,1,2,\ldots,29\right\}.$$
+	}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình sau trên tập số thực
+\[x^3-\left[ x\right]=3.\]
+\loigiai{
+	Đặt $\left[ x\right]=n.$ Từ phương trình đã cho, ta có $x=\sqrt[3]{n+3}.$ Kết hợp với định nghĩa hàm phần nguyên, ta được
+		$$n+1>\sqrt[3]{n+3}\ge n\Rightarrow{(n+1)^3}>n+3\ge{n^3}\Rightarrow\heva{& n+3\ge{n^3}\\ 
+		&{(n+1)^3}-n-3>0}\Rightarrow n=1.$$
+	Thế trở lại $n=1,$ ta tìm ra $x=\sqrt[3]{4}.$ Đây cũng là nghiệm thực duy nhất của phương trình đã cho.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình sau trên tập số thực \[x^4=2x^2+\left[x\right].\]
+\loigiai{
+Phương trình đã cho tương đương với $[x]=x^4-2x^2.$ Ta xét các trường hợp sau.
+    \begin{enumerate}
+        \item Với $x^2\le 2,$ ta có nhận xét rằng
+        \[- \sqrt 2  \leqslant x \leqslant \sqrt 2  \Rightarrow \left[ x \right]  \leqslant 1 \Rightarrow \left[ x \right]  \in \left\{ { - 1;0;1} \right\}.\]
+        Thế trở lại $[x]=-1,[x]=0$ và $[x]=1$ vào phương trình ban đầu, ta lần lượt tìm ra $x=0$ và $x=1.$
+        \item Với $x^2>2,$ ta có nhận xét rằng
+		\begin{align*}
+			{x^2} > 2 \Rightarrow \left[ x \right]  > 0 \Rightarrow x > \sqrt 2  &\Rightarrow {x^2}\left( {{x^2} - 2} \right) = \dfrac{{\left[ x \right] }}{x} \leqslant 1 \Rightarrow {x^2} - 2 \leqslant \dfrac{1}{x} < 1\\&
+			\Rightarrow x < \sqrt 3  \Rightarrow \sqrt 2  < x < \sqrt 3  \Rightarrow \left[ x \right]  = 1
+		\end{align*}
+		Thế trở lại phương trình, ta được
+		$x = \sqrt {1 + \sqrt 2 }.$
+    \end{enumerate}
+    Như vậy, tập nghiệm của phương trình đã cho là $S=\left\{0;1;\sqrt{1+\sqrt{2}}\right\}.$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên \[x=8\left[\sqrt[4]{x}\right]+3.\]
+\loigiai{
+	Đặt $\sqrt[4]{x}=n+y,$ trong đó $n$ là số tự nhiên và $0\le y<1.$ Phương trình đã cho trở thành 
+	$$(n+y)^4=8n+3\Leftrightarrow y=\sqrt[4]{8n+3}-n.$$ Như vậy ta cần tìm $n$ sao cho $\sqrt[4]{8n+3}-n\in[0,1)$. Ta lần lượt suy ra $$\sqrt[4]{8n+3}-n\ge 0\Rightarrow 8n+3>n^4\Rightarrow n\in\{0,1,2\}.$$
+	Tới đây, ta xét các trường hợp sau.
+	\begin{enumerate}
+		\item Với $n=0,$ ta có $y=\sqrt[4]{3},$ thỏa mãn điều kiện $0\le y<1.$
+		\item Với $n=1,$ ta có $y=\sqrt[4]{11}-1,$ thỏa mãn điều kiện $0\le y<1.$
+		\item Với $n=2,$ ta có $y=\sqrt[4]{19}-2,$ thỏa mãn điều kiện $0\le y<1.$
+	\end{enumerate}
+Như vậy, tập nghiệm tự nhiên của phương trình đã cho là $S=\{3,11,19\}$.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình sau trên tập số thực
+\[\left[ x\left[ x\right]\right]=1.\]
+\loigiai{
+Từ định nghĩa về phần nguyên, ta có $1\le x\left[ x\right] <2.$ Ta xét các trường hợp sau đây.
+	\begin{enumerate}
+		\item Nếu $x<-1$ thì $\left[ x\right]\le-2$ và $x\left[ x\right] >2$, mâu thuẫn.
+		\item Nếu $x=-1$ thì $\left[ x\right]=-1$ và $x\left[ x\right]=\left(-1\right)\left(-1\right)=1$ và $\left[ x\left[ x\right]\right]=1$, thỏa mãn.
+		\item Nếu $-1<x<0$ thì $\left[ x\right]=-1$ và $x\left[ x\right]=-x<1$, mâu thuẫn.
+		\item Nếu $0\le x<1$ thì $\left[ x\right]=0$ và $x\left[ x\right]=0<1$, mâu thuẫn.
+		\item Nếu $1\le x<2$ thì $\left[ x\right]=1$ và $x\left[ x\right]=\left[ x\right]=1$, thỏa mãn.
+		\item Nếu $x\ge 2$ thì $\left[ x\right]\ge 2$ và $x\left[ x\right]=2x\ge 4,$ mâu thuẫn.
+\end{enumerate}
+Vậy tập nghiệm của phương trình là $S=\left[1;2\right)\cup\{-1\}$.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải hệ phương trình sau trên tập số thực \[\left\{\begin{array}{l}x+[y]+\left\{z\right\}=3,9 \\ y+[z]+\left\{x\right\}=3,5 \\ z+[x]+\left\{y\right\}=2\end{array}\right.\]
+\loigiai{
+Ta đặt $[x]=a,\{x\}=\alpha,[y]=b.\{y\}=\beta,[z]=c,\{z\}=\gamma.$ Hệ phương trình đã cho trở thành
+\[\heva{a+b+\alpha+\gamma&=3,9 \\
+b+c+\beta+\alpha&=3,5 \\
+c+a+\gamma+\beta&=2}\tag{1}\]
+Cộng theo vế ba phương trình trong hệ, ta được
+\[2\tron{a+b+c+\alpha+\beta+\gamma}=9,4.\]
+Phương trình kể trên tương đương
+\[a+b+c+\alpha+\beta+\gamma=4,7\tag{2}\]
+Trừ (2) cho từng phương trình trong (1), ta nhận được hệ
+\[\heva{a+\gamma&=1,2\\b+\alpha&=2,7\\c+\beta&=0,8}\]
+Do $0\le \alpha,\beta,\gamma<1$ nên là
+$$0,2<a\le 1,2,\quad 1,7<b\le 2,7,\quad -0,2<c\le 0,8.$$
+Điều kiện phép đặt $a,b,c$ nguyên cho ta $a=1,b=2,c=0.$ Thể trở lại, ta tìm ra $\alpha=0,7,\beta=0,8,\gamma=0,2.$\\ Kết luân, hệ phương trình đã cho có nghiệm duy nhất là $(x;y;z)=(1,7;2,8;0,2).$
+}
+\end{gbtt}
+
+\section{Phần nguyên và các bài toán đồng dư số mũ lớn}
+
+\subsection*{Ví dụ minh họa}
+\begin{bx}\
+\label{phannguyen2} 
+\begin{enumerate}[a,] 
+    \item Với mỗi số nguyên dương $n,$ ta đặt \[S_{n}=\tron{5+2\sqrt{6}}^{n}+\tron{5-2\sqrt{6}}^{n}.\] Chứng minh $S_{n+4}$ và $S_{n}$ là các số nguyên có cùng chữ số tận cùng.
+    \item Tìm chữ số hàng đơn vị của $\left[\tron{\sqrt{3}+\sqrt{2}}^{48}\right].$
+    \item Tìm chữ số tận cùng của $\left[\tron{\sqrt{3}+\sqrt{2}}^{250}\right].$
+\end{enumerate}    
+\loigiai{
+Trước hết, hết, tác giá xin phát biểu một bổ đề tương tự bổ đề đã được học ở \chu{chương IV}:
+\begin{light}
+\begin{quote}
+ \it   Cho hai số nguyên dương $a$ và $b.$ Chứng minh rằng ứng với mỗi số tự nhiên $n,$ tồn tại các số nguyên $x_n$ và $y_n$ sao cho
+\begin{align*}
+    &\left(a+\sqrt{b}\right)^n=x_n+y_n\sqrt{b},
+    \\&\left(a-\sqrt{b}\right)^n=x_n-y_n\sqrt{b}.
+\end{align*}
+\end{quote}
+\end{light}
+Ta định nghĩa $S_0=\tron{5+2\sqrt{6}}^{0}+\tron{5-2\sqrt{6}}^{0}=2.$
+\begin{enumerate}[a,]
+    \item Áp dụng bổ đề trên, ta thấy $S_n$ là số nguyên. Với mọi số nguyên dương $n$, ta có\[\begin{aligned}
+     10S_{n+1}&=\vuong{\tron{5+2\sqrt{6}}^{n+1}+\tron{5-2\sqrt{6}}^{n+1}}\vuong{\tron{5+2\sqrt{6}}+\tron{5-2\sqrt{6}}}\\
+     &=\tron{5+2\sqrt{6}}^{n+2}+\tron{5+2\sqrt{6}}^{n}+\tron{5-2\sqrt{6}}^{n+2}+\tron{5-2\sqrt{6}}^{n}\\
+     &=S_{n+2}+S_{n}.
+    \end{aligned}
+    \]
+      Suy ra $S_{n+2}=10S_{n+1}-S_n$ với mọi $n$. Khi đó
+      \[\begin{aligned}
+      S_{n+4}&=10S_{n+3}-S_{n+2}\\
+      &=10S_{n+3}-\tron{10S_{n+1}-S_n}\\
+      &=10S_{n+3}-10S_{n+1}+S_n\equiv S_n\pmod{10}.
+      \end{aligned}
+      \]Do vậy $S_{n+4}$ và $S_n$ có cùng chữ số tận cùng. Đây là điều phải chứng minh.
+      \item Từ câu a ta suy ra $S_{4k+i}\equiv S_{i}\pmod{10}$ với mọi $k\in\mathbb{N}, i\in\{0,1,2,3\}.$\\
+      Do $0<5-2\sqrt{6}<1$ nên $0<\tron{5-2\sqrt{6}}^n<1$ với mọi $n,$ và như vậy \[S_n-1<\tron{5+2\sqrt{6}}^n<S_n.\] 
+      Nhận xét trên cho ta $\vuong{\tron{5+2\sqrt{6}}^n}=S_n-1.$ Theo đó $$\vuong{\tron{\sqrt{3}+\sqrt{2}}^{48}}=\vuong{\tron{5+2\sqrt{6}}^{24}}=S_{24}-1\equiv S_0-1\equiv 1\pmod {10}.$$ Vậy chữ số hàng đơn vị của số $\vuong{\tron{\sqrt{3}+\sqrt{2}}^{48}}$ là $1.$
+      \item Ta có $\left[(\sqrt{3}+\sqrt{2})^{250}\right]=\vuong{\tron{5+2\sqrt{6}}^{125}}=S_{125}-1\equiv S_1-1\equiv 9\pmod{10}.$ \\Vậy chữ số tận cùng của $\left[\tron{\sqrt{3}+\sqrt{2}}^{250}\right]$ là $9.$
+\end{enumerate}}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Với mọi số nguyên dương $n,$ chứng minh rằng $\left[\tron{2+\sqrt{3}}^{n}\right]$ là một số lẻ.
+\end{btt}
+
+\begin{btt}
+Tìm số dư của $x_{n}=\left[\tron{4+\sqrt{15}}^{n}\right]$ khi chia cho $8.$
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng $\left[\tron{\sqrt{3}+\sqrt{2}}^{2 n}\right]$ không chia hết cho $5$ với mọi số tự nhiên $n.$
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng trong biểu diễn
+thập phân của số $\left(8+3 \sqrt{7}\right)^{7}$ có bảy chữ số $9$ liền sau dấu phẩy.
+\end{btt}
+
+\begin{btt}
+Tìm số nguyên tố $p$ nhỏ nhất để $\left[\tron{3+\sqrt{p}}^{2 n}\right]+1$ chia hết cho $2^{n+1}$ với mọi $n$ tự nhiên.
+\nguon{Tạp chí Toán học và Tuổi trẻ, tháng 2, 2005}
+\end{btt}
+
+\subsection*{Hướng dẫn tập tự luyện}
+
+\begin{gbtt}
+Với mọi số nguyên dương $n,$ chứng minh rằng $\left[\tron{2+\sqrt{3}}^{n}\right]$ là một số lẻ.
+\loigiai{
+Ta đặt $S_n=\tron{2+\sqrt{3}}^n+\tron{2-\sqrt{3}}^n.$ Khi đó $S_0=2,S_1=4.$ Với mọi số tự nhiên $n,$ ta có
+\[
+\begin{aligned}
+4S_{n+1}&=\vuong{\tron{2+\sqrt{3}}^{n+1}+\tron{2-\sqrt{3}}^{n+1}}\vuong{\tron{2+\sqrt{3}}+\tron{2-\sqrt{3}}}\\
+&=\tron{2+\sqrt{3}}^n+\tron{2-\sqrt{3}}^n+\tron{2+\sqrt{3}}^{n+1}+\tron{2-\sqrt{3}}^{n+1}\\
+&=S_{n+2}+S_{n}.
+\end{aligned}
+\]
+Nhận xét trên cho ta $S_{n+2}=4S_{n+1}-S_n$ với mọi $n$. Do $S_0,S_1$ là hai số chẵn nên ta dễ dàng suy ra được $S_n$ là số chẵn với mọi $n$. Ngoài ra, ta có $0<2-\sqrt{3}<1.$ Hoàn toàn tương tự ý b \chu{ví dụ \ref{phannguyen2}}, ta chỉ ra \[\left[\tron{2+\sqrt{3}}^{n}\right]=S_n-1\] với mọi $n$ nguyên dương. Lại do $S_n$ là số chẵn nên $\left[\tron{2+\sqrt{3}}^{n}\right]$ là số lẻ. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số dư của $x_{n}=\left[\tron{4+\sqrt{15}}^{n}\right]$ khi chia cho $8.$
+\loigiai{
+Ta đặt $S_n=\tron{4+\sqrt{15}}^{n}+\tron{4-\sqrt{15}}^{n}.$ Chứng minh tương tự các bài toán trên, ta có $S_n$ là số nguyên và $S_{n+2}=8S_{n+1}-S_n$ với mọi $n,$ như thế thì
+\[
+\begin{aligned}
+S_{n+4}=8S_{n+3}-S_{n+2}=8S_{n+3}-(8S_{n+1}-S_n)=8S_{n+3}-8S_{n+1}+S_n
+\end{aligned}
+\]Do đó $S_{n+4}\equiv S_n\pmod 8$ với mọi $n$, kéo theo
+\[S_{4k+i}\equiv S_i\pmod 8\quad \text{ với mọi }k\in\mathbb{N}, i\in\{0,1,2,3\}.\]
+Với việc $0<4+\sqrt{15}<1,$ ta dễ dàng suy ra $x_n=\left[\tron{4+\sqrt{15}}^{n}\right]=S_n-1.$ Bước tính toán cuối cùng của ta sẽ là xét theo $n$ số dư của nó khi chia cho $4.$ Với mọi số nguyên $k$ thì 
+\begin{multicols}{2}
+\begin{itemize}
+    \item $x_{4k}\equiv S_0-1\equiv 1\pmod 8$
+    \item $x_{4k+1}\equiv S_1-1\equiv 7\pmod 8$
+    \item $x_{4k+2}\equiv S_2-1\equiv 5\pmod 8$
+    \item $x_{4k+3}\equiv S_3-1\equiv 7\pmod 8$
+\end{itemize}
+\end{multicols}
+Phép liệt kê trên cũng chính là kết luận bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng $\left[\tron{\sqrt{3}+\sqrt{2}}^{2 n}\right]$ không chia hết cho $5$ với mọi số tự nhiên $n.$
+\loigiai{
+Ta đặt $S_n=\tron{5+2\sqrt{6}}^{n}+\tron{5-2\sqrt{6}}^{n}.$
+Theo như \chu{ví dụ \ref{phannguyen2}}, với mọi $n\in\mathbb{N}$ thì \[S_{n+2}=10S_{n+1}-S_n.\]Suy ra $S_{n+2}\equiv S_n\pmod {5}$ với mọi $n\in\mathbb{N}.$ Theo đó, với mọi số tự nhiên $k,$ ta có
+\[\begin{cases}
+     S_{2k+1}\equiv S_1\equiv 0\pmod 5.\\
+     S_{2k}\equiv S_0\equiv 2\pmod 5.
+\end{cases}\]
+Cũng theo \chu{ví dụ \ref{phannguyen2}}, ta có  $\left[\tron{\sqrt{3}+\sqrt{2}}^{2 n}\right]=\vuong{\tron{5+2\sqrt{6}}^{n}}=S_n-1.$ Nhận xét này cho ta 
+\begin{itemize}
+    \item $\left[\tron{\sqrt{3}+\sqrt{2}}^{2 n}\right]\equiv -1\pmod 5$ với mọi $n$ lẻ,
+    \item $\left[\tron{\sqrt{3}+\sqrt{2}}^{2 n}\right]\equiv 1\pmod 5$ với mọi $n$ chẵn.
+\end{itemize}
+Từ đây suy ra $\left[\tron{\sqrt{3}+\sqrt{2})^{2 n}}\right]$ không chia hết cho 5 với mọi số tự nhiên $n$.\\ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng trong biểu diễn
+thập phân của số $\left(8+3 \sqrt{7}\right)^{7}$ có bảy chữ số $9$ liền sau dấu phẩy.
+\loigiai{
+Áp dụng bổ đề, ta suy ra $\left(8+3 \sqrt{7}\right)^{7}+\left(8-3 \sqrt{7}\right)^{7}$ là một số tự nhiên. Ta đặt $$a=\left(8+3 \sqrt{7}\right)^{7}+\left(8-3 \sqrt{7}\right)^{7},$$ trong đó $a$ là một số tự nhiên. Do $0<8-3 \sqrt{7}<0,1$ nên là 
+$$\left(8+3 \sqrt{7}\right)^{7}=a-\left(8-3 \sqrt{7}\right)^{7}>a-(0,1)^7.$$ 
+Bắt buộc, $\left(8+3 \sqrt{7}\right)^{7}$ có bảy chữ số $9$ liền sau dấu phẩy. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số nguyên tố $p$ nhỏ nhất để $\left[\tron{3+\sqrt{p}}^{2 n}\right]+1$ chia hết cho $2^{n+1}$ với mọi $n$ tự nhiên.
+\nguon{Tạp chí Toán học và Tuổi trẻ, tháng 2, 2005}
+\loigiai{
+Kiểm tra trực tiếp, ta thấy $p=2,p=3$ không thỏa. Ta sẽ chứng minh $p=5$ thỏa mãn yêu cầu đề bài. Với mỗi số tự nhiên $n,$ ta đặt\[S_n=\left(14+6\sqrt{5}\right)^n+\left(14-6\sqrt{5}\right)^n.\] Phép đặt trên cho ta $S_0=2, S_1=28,$ và
+$28S_{n+1}=S_{n+2}+16S_n$ nên $S_{n+2}=28S_{n+1}-16S_{n}.$ 
+Bây giờ, ta đi chứng minh $S_n$ chia hết cho $2^{n+1}$ với mọi $n$ bằng quy nạp.
+\begin{itemize}
+    \item Với $n=0$, ta có $S_n=S_0=2$ chia hết cho $2^1.$
+    \item Với $n=1$, ta có $S_n=S_1=28$ chia hết cho $2^2.$    
+    \item Giả sử khẳng định trên đúng đến $n=k\ge 1.$ Khi đó 
+    $$
+    \heva{&2^{k+1}\mid S_k \\ &2^k\mid S_{k-1}}
+    \Rightarrow
+    \heva{&2^{k+2}\mid 28S_k \\ &2^{k+2}\mid 16S_{k-1}} \Rightarrow   
+    2^{k+2}\mid \tron{28S_{k}-16S_{k-1}}=S_{k+1}.
+    $$
+    Vậy khẳng định cũng đúng với $n=k+1.$
+\end{itemize}
+Theo nguyên lí quy nạp, khẳng định được chứng minh. Ta có $0<14-6\sqrt{5}<1$, và khi chứng minh tương tự ý b \chu{ví dụ \ref{phannguyen2}}, ta thu được \[\left[\tron{3+\sqrt{p}}^{2 n}\right]+1=\left[\tron{14+6\sqrt{5}}^n\right]+1=S_n\] chia hết cho $2^{n+1}$ với mọi $n$ tự nhiên.\\
+Vậy số nguyên tố nhỏ nhất thỏa mãn yêu cầu bài toán là $p=5.$
+}
+\end{gbtt}

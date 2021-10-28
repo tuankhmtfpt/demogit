@@ -1,0 +1,2114 @@
+\section{Bất đẳng thức trong chia hết}
+
+\subsection*{Lí thuyết}
+
+Trong mục này, chúng ta sẽ làm quen với các kĩ thuật đánh giá
+\begin{quote}
+    \it
+    Nếu $a$ chia hết cho $b$ thì hoặc $a=0,$ hoặc $|a|\ge |b|.$
+\end{quote}
+Một số kĩ thuật đánh giá bất đẳng thức khác trong chia hết cũng được đưa vào viết ở trong tiểu mục này. Xin mời bạn đọc tìm hiểu qua một vài ví dụ.
+
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Tìm các số nguyên dương $x,y$ thỏa mãn $x+1$  chia hết cho $y$ và $y+1$ chia hết cho $x.$
+\loigiai{
+Ta đã biết, với các số nguyên dương $a,b,$ nếu $a$ chia hết cho $b$ thì $a\ge b.$ \\
+Như vậy, kết hợp hai giả thiết đã cho, ta có
+$$x+1\ge y\ge x-1.$$
+Do $y$ là số nguyên dương, ta suy ra $y\in \{x-1;x;x+1\}.$ 
+\begin{enumerate}
+    \item Với $y=x-1,$ ta có $x-1$ là ước của $x+1=(x-1)+2,$ tức $x-1$ là ước của $2.$ Ta được các cặp
+    $$(x,y)=(2,1),\quad (x,y)=(3,2).$$
+    \item  Với $y=x,$ ta có $x$ là ước của $x+1$ tức $x=1,$ kéo theo $(x,y)=(1,1).$
+    \item Với $y=x+1,$ ta có $x$ là ước của $x+2,$ kéo theo $(x,y)=(1,2)$ hoặc $(x,y)=(2,3)$.
+\end{enumerate}
+Kết luận, có tất cả $5$ cặp $(x,y)$ thỏa mãn đề bài, bao gồm 
+$$(1,1),(1,2),(2,1),(2,3),(3,2).$$}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $a,b$ sao cho $\dfrac{a^2b+b}{ab^2+9}$ là số nguyên.
+\nguon{Rioplantense Mathematical Olympiad 1998}
+\loigiai{
+Với các số $a,b$ thỏa yêu cầu, ta có 
+$$ab^2+9\mid b\left(a^2b+b\right)-a\left(ab^2+9\right)=b^2-9a.$$
+Tới đây, ta xét các trường hợp sau
+\begin{enumerate}
+    \item Với $b=1,$ ta có $1-9a$ chia hết cho $a+9.$ Ta tìm được $a=32,a=73.$
+    \item Với $b=2,$ ta có $4-9a$ chia hết cho $4a+9.$ Ta tìm được $a=22.$
+    \item Với $b\ge 3,$ ta nhận xét
+    $$-9-ab^2<b^2-ab^2\le b^2-9a< b^2<ab^2+9.$$
+    Nhận xét trên kết hợp với việc $ab^2+9$ là ước của $b^2-9a$ giúp ta suy ra $b^2=9a.$ Ta có
+    $$\dfrac{a^2b+b}{ab^2+9}=\dfrac{\left(\dfrac{b^2}{9}\right)^2b+b}{\left(\dfrac{b^2}{9}\right)b^2+9}=\dfrac{b^5+81b}{9b^4+729}=\dfrac{b}{9}.$$
+    Số bên trên là số nguyên. Bộ $(a,b)$ trong trường hợp này có dạng $\left(9k^2,9k\right),$ với $k$ nguyên dương.
+\end{enumerate}
+Kết luận, các bộ $(a,b)$ thỏa yêu cầu là $$(22,2),\quad (32,1),\quad (73,1)$$ và dạng tổng quát $\left(9k^2,9k\right),$ với $k$ là số nguyên dương.}
+\begin{luuy}
+\nx Nhờ vào biến đổi $b\left(a^2b+b\right)-a\left(ab^2+9\right)=b^2-9a$ ở phía trên, bậc của số bị chia được hạ từ \chu{bậc ba} xuống \chu{bậc hai}, trong khi đó bậc của số chia vẫn là bậc ba. Sự chênh lệch bậc này dẫn ta nghĩ đến việc so sánh số bị chia và số chia, để thông qua đó ta có thể áp dụng bổ đề
+\begin{quote}
+\it
+    "Nếu $a$ chia hết cho $b$ thì $|a|\ge |b|$ hoặc $a=0.$"
+\end{quote}
+\end{luuy}
+\end{bx}
+
+%nguyệt anh
+\begin{bx}
+Tìm tất cả các số nguyên dương $k$ sao cho tồn tại số nguyên dương $n$ thỏa mãn $2^n+11$ chia hết cho $2^k-1.$
+\nguon{Hanoi Open Mathematics Competitions 2018}
+\loigiai{
+Giả sử tồn tại số nguyên dương $k$ thỏa mãn đề bài. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $k\ge5,$ ta có $2^{k-1}+11\le2^k-1$. Đặt $n=ka+b$ trong đó $a,b$ là số tự nhiên và $0\le b\le k-1.$ Phép đặt này cho ta
+    $$2^n+11\equiv\tron{2^k}^a\cdot2^b+11\equiv2^b+11\equiv0\pmod{2^k-1}.$$
+    Kết hợp với nhận xét dưới đây
+    $$0<2^b+11\le 2^{k-1}+11\le 2^k-1,$$
+    ta suy ra $2^b+11=2^k-1.$ Biến đổi tương đương cho ta
+    $$2^b\tron{2^{k-b}-1}=10.$$
+    Ta dễ dàng nhận thấy $b=1,$ kéo theo $2^{k-1}-1=5.$ Không có $k$ thỏa mãn trong trường hợp này.
+    \item Với $k=4,$ ta thấy $n=2$ là một giá trị của $n$ thỏa mãn.
+    \item Với $k=3,$ ta có $2^k-1=7.$ Đặt $n=3k+a$ trong đó $a$ là số tự nhiên và $0\le a\le 2.$ Ta có
+    $$2^n+11\equiv \tron{2^3}\cdot2^a+4\equiv2^a+4\equiv 5,6,1\pmod{7}.$$
+    Do đó, không tồn tại số tự nhiên $n$ thỏa mãn $2^n+11$ chia hết cho $2^3-1.$
+    \item Với $k=2,$ ta thấy $n=1$ là một giá trị của $n$ thỏa mãn.
+    \item Với $k=1,$ ta thấy $n=1$ là một giá trị của $n$ thỏa mãn.    
+\end{enumerate}
+Như vậy, các số nguyên dương $k$ thỏa mãn đề bài là $1,2,4.$}
+\begin{luuy}
+Ý tưởng được sử dụng trong bài trên là so sánh các biểu thức có chứa số mũ. Cụ thể, biểu thức chứa lũy thừa của số mũ cao cộng hoặc trừ đi một số sẽ hầu như lớn hơn biểu thức chứa lũy thừa của số mũ thấp cộng hoặc trừ đi một số. Để tìm hiểu thêm các ý tưởng so sánh liên quan tới mũ khác, bạn đọc có thể tham khảo phần bài tập tự luyện.
+\end{luuy}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các các cặp số nguyên dương $(x,y)$ thỏa mãn $3x-1$  chia hết cho $y$ và $3y-1$ chia hết cho $x.$
+\end{btt}
+
+\begin{btt}
+Tìm các cặp số nguyên dương $(x,y)$ sao cho $2xy-1$ chia hết cho $(x-1)(y-1).$
+\end{btt}
+
+\begin{btt}
+Tìm ba số nguyên dương thỏa mãn tổng hai số bất kì chia hết cho số còn lại.
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $m,n$ thỏa mãn $5m+n$ chia hết cho $m+5n.$ Chứng minh rằng $m$ chia hết cho $n.$
+\nguon{Chuyên Toán thành phố Hồ Chí Minh 2017}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ sao cho $a^2-2$ chia hết cho $ab+2.$
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $a,b$ sao cho $a^2+b$ chia hết cho $b^2-a$ và $b^2+a$ chia hết cho $a^2-b.$
+\nguon{Asian Pacific Mathematical Olympiad 2002}
+\end{btt}
+
+\begin{btt}
+Cho ba số nguyên dương $a, p, q$ thỏa mãn các điều kiện
+\begin{multicols}{2}
+\begin{enumerate}[i,]
+        \item $ap+1$ chia hết cho $q.$
+        \item $aq+1$ chia hết cho $p.$
+\end{enumerate}
+\end{multicols}
+Chứng minh rằng  $a>\dfrac{pq}{2\left( p+q \right)}.$
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2009 $-$ 2010}
+\end{btt}
+
+Tìm tất cả các số nguyên $m, n$ trong đó $m \geqslant n \geqslant 0$ sao cho $9n\left( {{m^2} + mn + {n^2}} \right) + 16$ chia hết cho ${\left( {m + 2n} \right)^3}$.
+\nguon{Chuyên Toán Hải Phòng 2016 $-$ 2017}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ thỏa mãn $ab$ là ước của $a+b^2+1.$
+\nguon{Tạp chí Pi, tháng 1 năm 2018}	
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $a,b$ sao cho $a+b^2$ chia hết cho $a^2b-1.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ sao cho $\dfrac{x^2y+x+y}{xy^2+y+7}$ là số nguyên.
+\nguon{International Mathematical Olympiad 1998}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $1<a< b< c$ thỏa mãn $(a-1)(b-1)(c-1)$ là một ước của $abc-1.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ sao cho $8^n+n$ chia hết cho $2^n+n$.
+\nguon{Japanese Mathematical Olympiad Finals 2009}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $m,n$ thoả mãn $m^2+2m$ chia hết cho $n^m-m.$
+\nguon{Pan African 2012}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x$ sao cho tồn tại số nguyên dương $n$ thỏa mãn \[\tron{x^n+2^n+1} \mid \tron{x^{n+1}+2^{n+1}+1}. \]
+\nguon{Romanian Team Selection Test 1998}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn $n\cdot 2^{n+1}+1$ là số chính phương.
+\nguon{Junior Balkan Mathematical Olympiad 2010}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ sao cho tồn tại hoán vị $\left(a_1, a_2, \ldots, a_{n}\right)$ của bộ số $(1,2,3, \ldots, n)$ thỏa mãn tổng $a_{1}+a_{2}+\ldots+a_{k}$ chia hết cho $k$ với mọi $k=1,2,3, \ldots, n .$
+\nguon{Trường đông Toán học Nam Trung Bộ 2016}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $n$ sao cho với mọi số nguyên $a$ lẻ, nếu $a^2\leq n$ thì $a$ là ước của $n$.
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $n>1$ thỏa mãn với mọi ước nguyên dương $d$ của $n,$ $d+1$ là ước nguyên dương của $n+1.$ Chứng minh rằng $n$ là số nguyên tố.
+\nguon{Chọn đội tuyển chuyên Khoa học Tự nhiên 2015 $-$ 2016}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n>1$ thỏa mãn tính chất:
+\begin{it}
+Với hai ước nhỏ hơn $n$ của $n$ là $k$ và $l$, ít nhất một trong hai số $2 k-l$ và $2l-k$ cũng là một ước (không nhất thiết phải dương) của $n.$
+\end{it}
+\nguon{Benelux Mathematical Olympiad 2014}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các các cặp số nguyên dương $(x,y)$ thỏa mãn $3x-1$  chia hết cho $y$ và $3y-1$ chia hết cho $x.$
+\loigiai{
+Do $x,y$ có vai trò như nhau nên không mất tính tổng quát, ta giả sử $x\ge y.$ Giả sử này cho ta
+$$3y-1\le 3x.$$
+Kết hợp với giả thiết $3y-1$ chia hết cho $x,$ ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $3y-1=x,$ ta có $y$ là ước của
+    $$3x-1=3\tron{3y-1}-1=9y-4.$$
+    Ta có $y$ là ước của $4,$ và ta chỉ ra $(x,y)=(2,1),(x,y)=(5,2)$ và $(x,y)=(11,4)$ từ đây.
+    \item Với $3y-1=2x,$ ta có $y$ là ước của  
+    $$3x-1=\dfrac{3(3y-1)}{2}-1=\dfrac{9y-5}{2}.$$
+    Ta có $y$ là ước của $5,$ và ta chỉ ra $(x,y)=(1,1)$ và $(x,y)=(7,5)$ từ đây.
+\end{enumerate}
+Kết luận, có tất cả $9$ cặp $(x,y)$ thỏa mãn đề bài, bao gồm
+\[(1,1),(1,2),(2,1),(2,5),(5,2),(5,7),(7,5),(4,11),(11,4).\]}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các cặp số nguyên dương $(x,y)$ sao cho $2xy-1$ chia hết cho $(x-1)(y-1).$
+\loigiai{
+Từ giả thiết, ta suy ra $2xy-1$ chia hết cho cả $x-1$ và $y-1.$ Ta chia bài toán thành các trường hợp sau.
+\begin{enumerate}
+    \item Với $x=2,$ ta có $y=1$ hoặc $y=2.$ Thử trực tiếp, chỉ có cặp $(x,y)=(2,2)$ thỏa mãn.
+    \item Với $x\ge 3,$ không mất tổng quát, ta giả sử $y\le x.$ Ta có nhận xét
+    $$2y-1\le 2x-1<3(x-1).$$
+    Nhận xét trên kết hợp với chú ý $2y-1$ chia hết cho $x-1$ cho ta biết 
+    $$2y-1=x-1\text{ hoặc }2y-1=2x-2.$$ 
+    Trường hợp $2y-1=2x-2$ rõ ràng không xảy ra do tính chẵn lẻ ở hai bên, vậy nên chỉ có $2y=x.$\\ Kết hợp với $2xy-1$ chia hết cho $(x-1)(y-1),$ ta có $2y+1$ chia hết cho $y-1.$ Ta dễ dàng tìm ra $$(x,y)=(4,2),\quad (x,y)=(8,4)$$
+\end{enumerate}
+Kết luận, có tất cả $5$ bộ $(x,y,z)$ thỏa yêu cầu, bao gồm
+$$(2,2,7),(2,4,5),(4,2,5),(4,8,3),(8,4,3).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm ba số nguyên dương thỏa mãn tổng hai số bất kì chia hết cho số còn lại.
+\loigiai{
+Gọi ba số đã cho là $a,b,c.$ Ta giả sử $a\ge b\ge c.$ Kết hợp với giả thiết $b+c$ chia hết cho $a,$ ta có
+$$a\le b+c\le a+a=2a.$$
+Như vậy $b+c=a$ hoặc $b+c=2a.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $b+c=2a,$ dấu bằng trong đánh giá vừa rồi phải xảy ra, tức là $a=b=c.$
+    \item Nếu $b+c=a,$ ta lần lượt suy ra
+    $$b\mid (c+a)\Rightarrow b\mid (b+2c)\Rightarrow b\mid 2c.$$
+    Do giả sử $b\ge c$ nên $b=c$ hoặc $b=2c.$ Thử trực tiếp, các trường hợp này đều thỏa.
+\end{enumerate}
+Như vậy, các bộ $(a,b,c)$ cần tìm sẽ có dạng $(k,k,k)$ và hoán vị của $(3k,2k,k),$ trong đó $k$ là một số nguyên dương tùy ý.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $m,n$ thỏa mãn $5m+n$ chia hết cho $m+5n.$ Chứng minh rằng $m$ chia hết cho $n.$
+\nguon{Chuyên Toán thành phố Hồ Chí Minh 2017}
+\loigiai{
+Do $5m+n<5(m+5n)$ nên $\dfrac{5m+n}{m+5n}\in\{1;2;3;4\}.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $5m+n=m+5n,$ ta có $m=n.$
+    \item Nếu $5m+n=2(m+5n),$ ta có $m=3n.$    
+    \item Nếu $5m+n=3(m+5n),$ ta có $m=7n.$     
+    \item Nếu $5m+n=4(m+5n),$ ta có $m=19n.$          
+\end{enumerate}
+Trong mọi trường hợp, $m$ đều chia hết cho $n.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ sao cho $a^2-2$ chia hết cho $ab+2.$
+\loigiai{
+Từ giả thiết, ta có $ab+2$ là ước của
+$$b\tron{a^2-2}=a^2b-2b=a(ab+2)-2(a+b),$$
+thế nên $ab+2$ là ước của $2(a+b).$ Ta suy ra
+$$ab+2\le 2(a+b)\Rightarrow (a-2)(b-2)\le 2.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu một trong các trường hợp $a=1,\ a=2,\ b=1,\ b=2$ xảy ra, ta thử trực tiếp và không tìm ra được kết quả thỏa mãn.
+    \item Nếu $a\ge 3$ và $b\ge 3,$ từ $(a-2)(b-2)\le 2$ ta nhận được
+    $$(a,b)\in \{(3,3);(3,4);(4,3)\}.$$
+    Thử trực tiếp, ta thấy chỉ có $(a,b)=(4,3)$ thỏa mãn, và đây là đáp số bài toán.
+\end{enumerate}
+Bài toán được giải quyết.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $a,b$ sao cho $a^2+b$ chia hết cho $b^2-a$ và $b^2+a$ chia hết cho $a^2-b.$
+\nguon{Asian Pacific Mathematical Olympiad 2002}
+\loigiai{
+Không mất tính tổng quát, ta giả sử $a\ge b.$ Do $b^2+a$ chia hết cho $a^2-b$ nên là
+$$0\le \tron{b^2+a}-\tron{a^2-b}=(a+b)(b-a-1).$$
+Đánh giá trên cho ta $b-a\ge 1,$ nhưng do $a\ge b$ nên chỉ có hai trường hợp sau xảy ra.
+\begin{enumerate}
+    \item Với $b-a=0,$ ta có $a^2+a$ chia hết cho $a^2-a.$ Ta tìm ra $a=2,a=3$ từ đây.
+    \item Với $b-a=1,$ ta có $a^2+3a+1$ chia hết cho $a^2-a-1.$ Ta tìm ra $a=1,a=2$ từ đây.
+\end{enumerate}
+Kết luận, có tất cả $6$ cặp $(a,b)$ thỏa yêu cầu, bao gồm
+$$(1,2),(2,1),(2,3),(3,2),(2,2),(3,3).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho ba số nguyên dương $a, p, q$ thỏa mãn các điều kiện
+\begin{multicols}{2}
+\begin{enumerate}[i,]
+        \item $ap+1$ chia hết cho $q.$
+        \item $aq+1$ chia hết cho $p.$
+\end{enumerate}
+\end{multicols}
+Chứng minh rằng  $a>\dfrac{pq}{2\left( p+q \right)}.$
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2009 $-$ 2010}
+\loigiai{
+Từ giả thiết ta có $pq\mid \left( ap+1 \right)\left( aq+1 \right).$ Ta suy ra
+\begin{align*}
+    pq\mid \left( {{a}^{2}}pq+ap+aq+1 \right)
+    &\Rightarrow pq\mid (ap+aq+1)
+    \\&\Rightarrow pq\le ap+aq+1
+    \\&\Rightarrow pq< 2(ap+aq)
+    \\&\Rightarrow a>\dfrac{pq}{2(p+q)}.
+\end{align*}
+Bất đẳng thức đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $m, n$ trong đó $m \geqslant n \geqslant 0$ sao cho $9n\left( {{m^2} + mn + {n^2}} \right) + 16$ chia hết cho ${\left( {m + 2n} \right)^3}$.
+\nguon{Chuyên Toán Hải Phòng 2016 $-$ 2017}
+\loigiai{
+Đặt $A=9n\left( {{m^2} + mn + {n^2}} \right) + 16 - {\left( {m + 2n} \right)^3}.$ Ta có
+\[A = {n^3} - 3{n^2}m + 3n{m^2} - {m^3} + 16 = {\left( {n - m} \right)^3} + 16.\]
+Đặt $B=(m+2n)^3.$ Ta có
+\[B = {\left( {m - n + 3n} \right)^3} = {\left( {m - n} \right)^3} + 9{\left( {m - n} \right)^2}n + 27\left( {m - n} \right){n^2} + 27{n^3}.\]
+Do giả thiết $A$ là bội của $B$ nên $\left| A \right| \geqslant \left| B \right|$. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $m-n\ge 3$ thì ta có $|A|=(m-n)^3-16.$ Mặt khác
+    \[{\left( {m - n} \right)^3} - 16 \le {\left( {m - n} \right)^3} + 9{\left( {m - n} \right)^2}n + 27\left( {m - n} \right){n^2} + 27{n^3}.\]
+    Ta chỉ ra $|A|\le |B|,$ mâu thuẫn.
+    \item Nếu $m-n=2,$ ta có $|A|=8$ chia hết cho 
+    $$B=(m+2n)^3=(n+2+2n)^3=(3n+2)^3.$$
+    Ta tìm ra $n=0$ từ đây, kéo theo $m=2.$
+    \item Nếu $m-n=1,$ ta có $|A|=15$ chia hết cho 
+    $$B=(m+2n)^3=(n+1+2n)^3=(3n+1)^3.$$
+    Ta tìm ra $n=0$ từ đây, kéo theo $m=1.$ \item Nếu $m=n,$ ta có $|A|=16$ chia hết cho  
+    $$B=(m+2n)^3=(3n)^3=27n^3.$$
+    Ta có $16$ chia hết cho $27$ từ đây, vô lí.
+\end{enumerate}
+Như vậy, có hai cặp $(m,n)$ thỏa mãn yêu cầu là $(2,0)$ và $(1,0).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên dương $(a,b)$ thỏa mãn $ab$ là ước của $a+b^2+1.$
+\nguon{Tạp chí Pi, tháng 1 năm 2018}	
+\loigiai{Giả sử $(a,b)$ là cặp số nguyên dương thỏa yêu cầu. Ta dễ dàng suy ra $a\mid \tron{b^2+1}$ và $b\mid (a+1)$. Đặt
+\[a+1=bk.\tag{1}\label{pip1331}\]
+Do $a\mid \tron{b^2+1}$ nên $(bk-1)\mid (b^2+1)=((b^2+1)k-(bk-1)b),$ hay là
+\[(bk-1)\mid (b+k).\tag{2}\label{pip1332}\]
+Do $b+k>0$ nên $b+k\geq bk-1,$ dẫn tới $bk-b-k+1\leq 2$ hay 
+\[(b-1)(k-1)\leq 2.\tag{3}\label{pip1333}\]
+Vì $b,k$ là các số nguyên dương nên $b-1$ và $k-1$ là các số tự nhiên. Do đó, từ (\ref{pip1333}) ta suy ra 
+$$(b-1)(k-1) \in \lbrace 0;1;2\rbrace.$$
+Ta sẽ xét các trường hợp kể trên.
+\begin{enumerate}
+	\item Với $(b-1)(k-1)=0,$ ta có $b=1$ hoặc $k=1$. 
+	\begin{itemize}
+	    \item \chu{Trường hợp 1.} Với $k=1,$ thế vào (\ref{pip1332}) ta có 
+	    $$(b-1)\mid(b+1).$$
+	    Ta tìm được $b=2$ hoặc $b=3$ từ đây, lại thế hết vào (\ref{pip1331}) thì ta có $(a,b)=(1,2),(2,3).$
+	    \item \chu{Trường hợp 2.} Với $b=1,$ thế vào giả thiết ta có $a$ là ước của $a+2,$ suy ra $a=1$ hoặc $a=2.$	
+    \end{itemize}
+	\item Với $(b-1)(k-1)=1,$ ta có $b-1=k-1=1,$ hay là $b=k=2.$ Thế trở lại (\ref{pip1331}), ta tìm ra $a=3.$
+	\item Với $(b-1)(k-1)=2,$ ta có $b-1=1$ và $k-1=2$ hoặc $b-1=2$ và $k-1=1,$ tức $$(b,k)\in \{(3,2);(2,3)\}.$$ 
+	Lần lượt thế các giá trị của $b$ và $k$ trở lại (\ref{pip1331}), ta được $a=5.$
+\end{enumerate}
+Tất cả các cặp số $(a,b)$ thu được từ mỗi trường hợp trên là
+$$ (1,2),\ (2,3),\ (1,1),\ (2,1),\ (3,2),\ (5,2),\ (5,3).$$
+Bằng cách kiểm tra trực tiếp, chúng đều thỏa tính chất đã cho. Bài toán được giải quyết.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $a,b$ sao cho $a+b^2$ chia hết cho $a^2b-1.$
+\loigiai{
+Giả sử $a+{{b}^{2}}$ chia hết cho ${{a}^{2}}b-1$, khi đó tồn tại số nguyên dương $k$ sao cho \[a+{{b}^{2}}=k\left( {{a}^{2}}b-1 \right)\Leftrightarrow a+k=b\left( k{{a}^{2}}-b \right).\]
+Đặt $m=k{{a}^{2}}-b$ với $m$ là một số nguyên. Ta lại có $mb=a+k,$ kéo theo $$mb-m-b=a+k-ka^2.$$ Biến đổi tương đương cho ta
+\[mb-m-b+1=a+k-k{{a}^{2}}+1\Leftrightarrow \left( m-1 \right)\left( b-1 \right)=\left( a+1 \right)\left( k+1-ka \right).\tag{*}\label{chanchiahet11}\]
+Do $a,b,k$ là các số nguyên dương nên ta suy ra được $m\ge 1$.
+Điều này dẫn đến \[\left( b-1 \right)\left( m-1 \right)\ge 0.\] Từ đây, ta suy ra  $\left( a+1 \right)\left( k+1-ka \right)\ge 0.$
+Vì $a$ là số nguyên dương nên ta có \[k+1-ka\ge 0\] hay $k\left( a-1 \right)\le 1.$
+Lại có $k$ cũng là số nguyên dương nên từ $k\left( a-1 \right)\le 1$ ta được \[k\left( a-1 \right)=0\quad \text{hoặc}\quad k\left( a-1 \right)=1.\]  
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $k(a-1)=0$ thì $a=1.$ Thế vào (\ref{chanchiahet11}) ta được
+    \[\left( b-1 \right)\left( m-1 \right)=2.\]
+    Ta tìm được $b=2$ và $b=3$ từ đây. Thử lại, ta thấy thỏa mãn.
+    \item Nếu $k\left( a-1 \right)=1$ thì $k=1$ và $a=2.$ Thế vào (\ref{chanchiahet11}) ta được
+    \[\left( b-1 \right)\left( m-1 \right)=0.\]
+    Nếu $b=1,$ thử lại ta thấy thỏa mãn. Nếu $m=1,$ kết hợp với hệ thức $mb=a+k$ ta có $b=3$.\\ Trường hợp này cho ta $(a,b)=(2,1),(2,3)$.
+\end{enumerate}
+Vậy có tất cả $4$ cặp số nguyên dương $(a,b)$ thỏa mãn yêu cầu bài toán, bao gồm
+$$(1,2),\quad (1,3),\quad (2,1),\quad (2,3).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ sao cho $\dfrac{x^2y+x+y}{xy^2+y+7}$ là số nguyên.
+\nguon{International Mathematical Olympiad 1998}
+\loigiai{
+Với các số $x,y$ thỏa yêu cầu, ta có $xy^2+y+7$ là ước của
+$$y\left(x^2y+x+y\right)-x\left(xy^2+y+7\right)=y^2-7x.$$
+Tới đây, ta xét các trường hợp sau
+\begin{enumerate}
+    \item Với $y=1,$ ta có $1-7x$ chia hết cho $x+8.$ Ta tìm được các cặp $(x,y)=(11,1),(49,1).$
+    \item Với $y=2,$ ta có $4-7x$ chia hết cho $6x+7.$ Ta không tìm ra bộ $(x,y,z)$ nguyên dương nào.
+    \item Với $y\ge 3,$ ta nhận xét
+    $$-xy^2-y-7<-xy^2<-7x<y^2-7x<y^2<xy^2+y+7.$$
+    Nhận xét trên kết hợp với việc $xy^2+y+7$ là ước của $y^2-7x$ giúp ta suy ra $y^2=7x.$ Ta có
+    $$\dfrac{x^2y+x+y}{xy^2+y+7}=\dfrac{    \left(\dfrac{y^2}{7}\right)^2y+    \dfrac{y^2}{7}+y}{    \left(\dfrac{y^2}{7}\right)y^2+y+7}=\dfrac{y}{7}.$$
+    Số bên trên là số nguyên. Bắt buộc, $(x,y)=\left(7k^2,7k\right),$ với $k$ nguyên dương.
+\end{enumerate}
+Đối chiếu và thử lại, tất cả các bộ $(x,y)$ thỏa yêu cầu là $(11,1),(49,1)$ và dạng tổng quát $\left(7k^2,7k\right),$ với $k$ là số nguyên dương.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $1<a< b< c$ thỏa mãn $(a-1)(b-1)(c-1)$ là một ước của $abc-1.$
+\loigiai{
+Ta đặt $x=a-1,y=b-1,z=c-1$. Giả thiết về chia hết cho ta $xyz\mid \left[ (x+1)(y+1)(z+1)-1 \right],$ hay là 
+\[xyz\mid (xy+yz+zx+x+y+z).\]
+Theo đó, tồn tại số nguyên dương $k$ sao cho $kxyz=xy+yz+zx+x+y+z.$ Sự tồn tại ấy kéo theo  $$k=\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{z}+\dfrac{1}{xy}+\dfrac{1}{yz}+\dfrac{1}{zx}.$$
+Ngoài ra, điều kiện phép đặt $1\le x<y<z$ còn cho ta
+\[k\le 1+\dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{1\cdot 2}+\dfrac{1}{2\cdot 3}+\dfrac{1}{3\cdot 1}<3.\] 
+Do vậy, $k=1$ hoặc $k=2$. Hơn thế nữa, nếu như $x\ge 3,y\ge 4, z\ge 5,$ ta có \[k\le\dfrac{1}{3}+\dfrac{1}{4}+\dfrac{1}{5}+\dfrac{1}{3\cdot 4}+\dfrac{1}{4\cdot 5}+\dfrac{1}{5\cdot 3}<1.\] 
+Đây là điều không thể xảy ra. Sự không tồn tại này chứng tỏ $x\in\{1;2\}.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $x=1,k=1,$ ta có $1+2(y+z)+yz=yz.$ Phương trình này vô nghiệm nguyên dương.
+    \item Với $x=1,k=2$, ta có 
+    $$1+2(y+z)=yz\Leftrightarrow yz-2y-2z-1=0\Leftrightarrow (y-2)(z-2)=5.$$
+    Ta tìm được $y=3,z=7$ từ đây, thế nên $a=2,b=4,c=8.$
+    \item Với $x=2,k=1$, ta có 
+    $$2+3(y+z)=yz\Leftrightarrow yz-3y-3z-2=0\Leftrightarrow (y-3)(z-3)=11.$$ 
+    Ta tìm được $y=4,z=15$ từ đây, thế nên $a=3,b=5,c=16.$
+    \item Với $x=2,k=2.$ ta có
+    $$2=\dfrac{1}{2}+\dfrac{1}{y}+\dfrac{1}{z}+\dfrac{1}{2y}+\dfrac{1}{yz}+\dfrac{1}{2z}\le \dfrac{1}{2}+\dfrac{1}{3}+\dfrac{1}{4}+\dfrac{1}{6}+\dfrac{1}{12}+\dfrac{1}{8}<2.$$
+    Đây là điều không thể xảy ra.
+\end{enumerate} 
+Kết luận, có tất cả hai bộ $(a,b,c)$ thỏa mãn yêu cầu đề bài là $(2,4,8)$ và $(3,5,16).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ sao cho $8^n+n$ chia hết cho $2^n+n$.
+\nguon{Japanese Mathematical Olympiad Finals 2009}
+\loigiai{
+Với mọi số nguyên dương $n,$ ta luôn luôn có $\tron{2^n+n}\mid \tron{8^n+n^3}.$ \\Kết hợp giả thiết, ta suy ra $n^3-n$ chia hết cho $2^n+n.$ Ta sẽ chứng minh rằng
+\[2^n>n^3,\text{ với mọi }n\ge 10.\]
+Bất đẳng thức trên đúng với $n=10,$ đồng thời
+$$2^{n+1}=2\cdot2^n>2n^3>(n+1)^3.$$
+Bất đẳng thức trên đã được chứng minh bằng quy nạp.\\ Quay lại bài toán, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $n\ge 10,$ từ $n^3-n$ chia hết cho $2^n+n,$ ta suy ra
+    $$n^3-n\ge 2^n+n>n^3+n.$$
+    Đánh giá trên không thể xảy ra do $n\ge 1.$
+    \item Nếu $n\le 9,$ kiểm tra trực tiếp, các giá trị thỏa mãn của $n$ là $n=1,n=2,n=4$ và $n=6.$    
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $m,n$ thoả mãn $m^2+2m$ chia hết cho $n^m-m.$
+\nguon{Pan African 2012}
+\loigiai{
+Đầu tiên, ta sẽ chứng minh bằng quy nạp rằng nếu $m\geq 6$ thì $$2^m>m^2+3m.$$
+Bất đẳng thức trên đúng với $n=6,$ đồng thời
+$$2^{m+1}=2\cdot 2^m=2\left(m^2+3m\right)>(m+1)^2+3(m+1).$$
+Theo nguyên lí quy nạp, bất đẳng thức trên được chứng minh. \\Quay trở lại bài toán. Với $n=1$, kiểm tra trực tiếp, ta tìm ta $m=2$ hoặc $m=4.$\\
+Với $n\ge 2,$ ta có
+$$n^m-m\geq 2^m-m> m^2+2m.$$
+Đánh giá này này mâu thuẫn với $\tron{n^m-m}\mid \tron{m^2+2m},$ thế nên $m\le 5.$\\ Thử trực tiếp, ta chỉ ra có tất cả $6$ cặp $(m,n)$ thỏa yêu cầu, bao gồm $$(2,1),\ (4,1),\ (1,2),\ (1,4),\ (3,2),\ (4,2).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x$ sao cho tồn tại số nguyên dương $n$ thỏa mãn
+\[\tron{x^n+2^n+1} \mid \tron{x^{n+1}+2^{n+1}+1}. \]
+\nguon{Romanian Team Selection Test 1998}
+\loigiai{
+Ta có nhận xét
+$x^{n+1}+2^{n+1}+1=x(x^n+2^n+1)-2^nx+1-x+2^{n+1}.$
+Kết hợp với giả thiết, ta suy ra
+$$\left(x^n+2^n+1\right)\mid \left(2^{n+1}-2^nx+1-x\right).$$
+Với $x=1,x=2$ ta dễ dàng chỉ ra được điều mâu thuẫn. Ta chỉ xét $x\geq 3$. Khi đó không khó để thấy $$2^{n+1}-2^nx+1-x< 0,$$ 
+và ta nghĩ đến đánh giá
+$$2^nx-2^{n+1}+x-1=\left|2^{n+1}-2^nx+1-x \right|\geq x^n+2^n+1.$$
+Rút gọn, ta được $\left(2^n+1\right)x\geq x^n+2^{n+1}+2^n+2.$ \\
+Với $n\geq 3$, ta chứng minh bằng quy nạp được là $$x^n\ge x\left(2^n+1\right),$$ thế nên
+$x^n+2^{n+1}+2^n+2> x(2^n+1),$
+mâu thuẫn. Do vậy, ta phải có $n\leq 2$.
+\begin{enumerate}
+    \item Với $n=2,$ từ $\left(2^n+1\right)x\geq x^n+2^{n+1}+2^n+2$ ta có $5x\geq x^2+14$. Không có số $x\in\mathbb{Z}$ nào như vậy.
+    \item Với $n=1,$ thay vào giả thiết ban đầu, ta được
+    $$(x+3)\mid \left(x^2+5\right)=\big[(x+3)(x-3)+14\big].$$ Ta suy ra $x+3$ là ước của $14,$ vì thế $x=1$ hoặc $x=14.$
+\end{enumerate}
+Kết luận, tất cả các giá trị của $x$ thỏa yêu cầu là $x=1$ và $x=14.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn $n\cdot 2^{n+1}+1$ là số chính phương.
+\nguon{Junior Balkan Mathematical Olympiad 2010}
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ thỏa yêu cầu bài toán. \\
+Do $n\cdot 2^{n+1}+1$ là số lẻ, ta đặt $n\cdot2^{n+1} + 1 = \tron{2k+1}^2.$ Phép đặt này cho ta
+\[n\cdot2^{n-1}=k\tron{k+1}.\tag{1}\label{junibmo2010}\]
+Trong hai số tự nhiên liên tiếp $k$ và $k+1,$ có một số là lẻ. Số này nguyên tố cùng nhau với $2^{n-1},$ và bắt buộc số còn lại chia hết cho $2^{n-1}.$ Lập luận này cho ta biết được rằng
+\[\hoac{&2^{n-1}\mid k \\ &2^{n-1}\mid (k+1)}
+\Rightarrow 
+\hoac{&2^{n-1}\le k \\ &2^{n-1}\le k+1}
+\Rightarrow 
+2^{n-1}\le k+1\Rightarrow k\ge 2^{n-1}-1.\tag{2}\label{junibmo2010.2}\]
+Kết hợp (\ref{junibmo2010}) và (\ref{junibmo2010.2}), ta được
+$n\cdot 2^{n-1}\ge 2^{n-1}(2^{n-1}-1),$ hay là $$n\ge 2^{n-1}-1.$$
+Dựa vào chứng minh bằng quy nạp, ta dễ thấy bất đẳng thức trên đổi chiều với $n\ge4,$ và bắt buộc $n\le 3.$ Ta xét các trường hợp dưới đây.
+\begin{enumerate}
+    \item Với $n=1,$ ta có $n\cdot 2^{n+1}+1=5$ không là số chính phương.
+    \item Với $n=2,$ ta có $n\cdot 2^{n+1}+1=17$ không là số chính phương.
+    \item Với $n=3,$ ta có $n\cdot 2^{n+1}+1=49=7^2.$ 
+\end{enumerate}
+Như vậy, $n=3$ là giá trị duy nhất của $n$ thỏa yêu cầu bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ sao cho tồn tại hoán vị $\left(a_1, a_2, \ldots, a_{n}\right)$ của bộ số $(1,2,3, \ldots, n)$ thỏa mãn tổng $a_{1}+a_{2}+\ldots+a_{k}$ chia hết cho $k$ với mọi $k=1,2,3, \ldots, n .$
+\nguon{Trường đông Toán học Nam Trung Bộ 2016}
+\loigiai{
+Kiểm tra trực tiếp với $n=1,2,3,$ ta thấy $n=1,n=3$ thỏa mãn. \\Ta sẽ chứng minh rằng với $n\ge 4$ không còn số nào thỏa mãn nữa. 
+\begin{enumerate}[a,]
+    \item Ta sẽ tính trực tiếp $a_n.$ Cho $k=n,$ ta nhận thấy $n$ là ước của
+    $$a_1+a_2+\ldots+a_n=\dfrac{n(n+1)}{2},$$
+    thế nên $n$ lẻ và $n\ge 5.$ Tiếp theo, cho $k=n-1,$ ta nhận thấy $n-1$ là ước của
+    $$a_1+a_2+\ldots+a_{n-1}=\dfrac{n(n+1)}{2}-a_n=\frac{(n+1)(n-1)}{2}+\frac{n+1}{2}-a_n,$$ 
+    thế nên $\dfrac{n+1}{2}-a_n$ chia hết cho $n-1.$ Lập luận này kết hợp với các đánh giá
+    \begin{align*}
+        &\dfrac{n+1}{2}-a_n\ge \dfrac{n+1}{2}-n=-\dfrac{n-1}{2}>-n+1, \\
+        &\dfrac{n+1}{2}-a_n\le \dfrac{n+1}{2}-1=\dfrac{n-1}{2}<n-1.
+    \end{align*}
+    cho ta biết $\dfrac{n+1}{2}-a_n=0,$ hay là $a_n=\dfrac{n+1}{2}.$
+    \item Ta sẽ tính trực tiếp $a_{n-1}.$ Cho $k=n-2,$ ta nhận thấy $n-2$ là ước của    
+    $$a_1+a_2+\ldots+a_{n-2}=\dfrac{n^2-1}{2}-a_{n-1}=\frac{(n-2)(n+1)}{2}+\frac{n+1}{2}-a_{n-1},$$  
+    thế nên $\dfrac{n+1}{2}-a_{n-1}$ chia hết cho $n-2.$ Lập luận này kết hợp với các đánh giá
+    \begin{align*}
+        &\dfrac{n+1}{2}-a_{n-1}\ge \dfrac{n+1}{2}-n+1=-\dfrac{n-3}{2}>-n-2, \\
+        &\dfrac{n+1}{2}-a_{n-1}\le \dfrac{n+1}{2}-1=\dfrac{n-1}{2}<n-2.
+    \end{align*}
+    cho ta biết $\dfrac{n+1}{2}-a_{n-1}=0,$ hay là $a_{n-1}=\dfrac{n+1}{2}.$
+\end{enumerate}
+Dựa vào các tính toán bên trên, ta chỉ ra $a_n=a_{n-1},$ mâu thuẫn với việc các số trong hoán vị là phân biệt. Do đó, trường hợp $n\ge 4$ không xảy ra. Tất cả các số tự nhiên $n$ cần tìm là $n=1$ và $n=3.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ sao cho với mọi số nguyên $a$ lẻ, nếu $a^2\leq n$ thì $a$ là ước của $n$.
+\loigiai{Ta thấy $n=1$ là một kết quả. Giả sử tồn tại số nguyên dương $n\ge 1$ thỏa mãn. Xét số nguyên lẻ $m$ lớn nhất sao cho $m^2<n.$ Ta có $n\le\tron{m+2}^2.$  Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Với $m\ge7,$ theo giả thiết, ta có $m,m-2,m-4$ là ước của $n.$\\ Vì ba số $m,m-2,m-4$ đôi một nguyên tố cùng nhau nên ta suy ra
+    $$m\tron{m-2}\tron{m-4}\mid n.$$
+    Từ những nhận xét trên, ta thu được
+    $$m\tron{m-2}\tron{m-4}< n \le \tron{m+2}^2.$$
+    Biến đổi bất phương trình $m\tron{m-2}\tron{m-4}<\tron{m+2}^2$ cho ta
+    $$m^2\tron{7-m}+4\tron{1-m}=\tron{m+2}^2-m\tron{m-2}\tron{m-4}\le 0.$$
+    Điều này không thể xảy ra.
+    \item Với $1\le m\le 5,$ ta có $n<49.$ Ta lập bảng giá trị sau đây.
+    \begin{center}
+        \begin{tabular}{c|c|c|c}
+            Điều kiện của $n$ & $2\le n\le 8$ & $9\le n\le 24$ & $25\le n \le 48$  \\
+            \hline
+            Tính chia hết &  & $3\mid n$ & $[3,5]\mid n$ \\     
+            \hline
+            $n$ & $2,3,4,5,6,7,8$  & $12,15,18,21,24$ & $30,45$
+        \end{tabular}
+    \end{center}    
+\end{enumerate}
+Như vậy, các số nguyên dương $n$ thỏa mãn yêu cầu là $1,2,3,4,5,6,7,8,12,15,18,21,24,30,45.$}
+\begin{luuy}
+Một câu hỏi đặt ra là tại sao tác giả lại tìm được mốc $m\ge 7.$ \\Hãy để ý bất đẳng thức sau trong trường hợp đầu tiên
+$$m(m-2)(m-4)<(m+2)^2.$$
+Bất đẳng thức kể trên đổi dấu khi đi qua giá trị $m$ xấp xỉ $6,478.$ Tác giả chọn mốc đánh giá của $m$ là $7$ để số lượng các trường hợp còn lại cần xét trở nên ít hơn.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên dương $n>1$ thỏa mãn với mọi ước nguyên dương $d$ của $n,$ $d+1$ là ước nguyên dương của $n+1.$ Chứng minh rằng $n$ là số nguyên tố.
+\nguon{Chọn đội tuyển chuyên Khoa học Tự nhiên 2015 $-$ 2016}
+\loigiai{
+Giả sử phản chứng rằng $n$ là hợp số. Ta đặt $n=ab,$ trong đó  $b\ge a\ge2.$ Do $b+1$ là ước của $$ab+1=a(b+1)+1-a$$ nên $b+1$ cũng là ước của $a-1.$ Ta suy ra
+$$a+1\le b+1\le a-1.$$
+Đây là điều không thể xảy ra. Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\begin{luuy}
+Phản chứng, áp dụng phép chia đa thức đã học, và sử dụng bất đẳng thức trong chia hết là tất cả các phương pháp sử dụng trong bài toán trên.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n>1$ thỏa mãn tính chất:
+\begin{it}
+Với hai ước nhỏ hơn $n$ của $n$ là $k$ và $l$, ít nhất một trong hai số $2 k-l$ và $2l-k$ cũng là một ước (không nhất thiết phải dương) của $n.$
+\end{it}
+\nguon{Benelux Mathematical Olympiad 2014}
+\loigiai{
+Ta dễ thấy tất cả các số $n$ nguyên tố đều thỏa yêu cầu. \\
+Nếu $n$ là hợp số, ta gọi $p$ là ước nguyên tố nhỏ nhất của $n,$ đồng thời đặt $n=pm.$ Khi cho $(k,l)=(1,m),$ ta nhận thấy $n$ chia hết cho $2m-1$ hoặc $m-2.$ Ước lớn nhất của $n$ là $m,$ lại do
+    $$m<2m-1<2m\le n$$
+    nên $2m-1$ không là ước của $n,$ và bắt buộc $m-2$ là ước của $n.$ Ta có
+    $$(m-2)\mid mp=(m-2)p+2p.$$
+    Dựa vào nhận xét trên, ta chỉ ra $m-2$ là ước của $2p,$ vì thế $m-2$ chỉ có thể nhận một trong các giá trị $1,2,p,2p.$ Ta xét các trường hợp kể trên.
+    \begin{enumerate}
+        \item Với $m-2=1$ hay $m=3,$ do $p\le m$ nên $p\in\{2;3\}.$ \\
+        Từ đó, ta chỉ ra $n=6$ hoặc $n=9.$ Thử trực tiếp, cả hai số này thỏa yêu cầu.
+        \item Với $m-2=2$ hay $m=4,$ do $p\le m$ nên $p\in\{2;3\}.$\\
+        Từ đó, ta chỉ ra $n=8$ hoặc $n=12.$ Thử trực tiếp, không có số nào thỏa yêu cầu.
+        \item  Với $m-2=p$ hay $m=p+2,$ ta có $n=p(p+2).$ 
+        Ngoài ra, ta còn có thể giả sử $p>2$ (do trường hợp $m-2=2$ đã được giải quyết). Khi cho $(k,l)=(1,p),$ ta chỉ ra $p-2$ hoặc $2p-1$ là ước của $n.$
+        \begin{itemize}
+            \item Nếu $n=p(p+2)$ chia hết cho $p-2,$ ta tìm ra $p=3,$ và khi ấy $n=15.$
+            \item Nếu $n=p(p+2)$ chia hết cho $2p-1,$ ta tìm ra $p=5,$ và khi ấy $n=35.$
+        \end{itemize}
+        Thử với từng trường hợp, ta thấy chỉ có $n=15$ thỏa yêu cầu.
+        \item Với $m-2=2p$ hay $m=2p+2,$ vậy nên $n$ là số chẵn và $p=2.$ Ta tìm ra $n=12.$ \\Thử lại, ta thấy $n=12$ không thỏa yêu cầu.
+    \end{enumerate}
+Kết luận, tất cả các số nguyên tố $n$ và $n=6,n=9,n=15$ là các số $n$ ta cần tìm.}
+\end{gbtt}
+
+\section{Tính nguyên tố cùng nhau}
+
+\subsection*{Lí thuyết}
+
+Lí thuyết quan trọng nhất được sử dụng trong mục này là tính chất: 
+\begin{it}
+"Với mọi số nguyên $a,b,c,$ nếu $ab$ chia hết cho $c$ và $(a,c)=1$ thì $b$ chia hết cho $c$".
+\end{it}
+
+
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Tìm tất cả số tự nhiên $n$ sao cho $(2n+1)^{3}+1$ chia hết cho $2^{2021}.$
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2021}
+\loigiai{
+Từ giả thiết, ta có $2^{2020}$ là ước của $(n+1)\tron{4n^2+2n+1}.$ Ta nhận thấy $4n^2+2n+1$ là số lẻ, do đó $$\left(4n^2+2n+1,2^{2021}\right)=1.$$ Như vậy, phép chia hết trong giả thiết tương đương với
+    $$2^{2021}\mid (n+1).$$
+Kết quả, tất cả các số tự nhiên $n$ cần tìm có dạng $2^{2020}k-1,$ ở đây $k$ nguyên dương.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số hữu tỉ dương $a,b$ sao cho $$a+b\:\text{ và }\:\dfrac{1}{a}+\dfrac{1}{b}$$ đồng thời là các số nguyên dương.
+\nguon{Tạp chí Toán Tuổi thơ}
+\loigiai{
+Ta đặt $a=\dfrac{x}{m},\ b=\dfrac{y}{n},$ trong đó $(x,m)=(y,n)=1.$ Phép đặt này cho ta số sau đây nguyên
+$$a+b=\dfrac{x}{m}+\dfrac{y}{n}=\dfrac{xn+ym}{mn}.$$
+Từ đây và điều kiện $(x,m)=(y,n)=1,$ ta lần lượt suy ra
+$$mn\mid\tron{xn+ym}\Rightarrow \heva{m\mid xn \\ n\mid ym}\Rightarrow \heva{m\mid n \\ n\mid m}\Rightarrow m=n.$$
+Bằng cách làm tương tự, ta chỉ ra được $x=y.$ Kết hợp với $m=n,$ ta có $a=b.$ Thay trở lại giả thiết thì
+$$2a\in \mathbb{Z}^+,\quad \dfrac{2}{a}\in\mathbb{Z}^+.$$
+Đặt $2a=c,$ ta có $\dfrac{2}{a}=\dfrac{4}{2a}=\dfrac{4}{c}$ là số nguyên dương, kéo theo $c\in \{1;2;4\}.$ Dựa trên kết quả này, ta tìm ra $$(a,b)=\tron{\dfrac{1}{2},\dfrac{1}{2}},\quad (a,b)=(1,1),\quad (a,b)=(2,2)$$ là tất cả các cặp số hữu tỉ thỏa yêu cầu.}
+\end{bx}
+
+
+\subsection*{Bài tập tự luyện}
+
+
+\begin{btt}
+Cho hai số nguyên dương $x,y$ lớn hơn $1.$ Chứng minh rằng rằng nếu $x^{3}-y^{3}$ chia hết cho $x+y$ thì $x+y$ không là số nguyên tố.
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2017}
+\end{btt}
+
+\begin{btt} \label{bdscp1}
+Cho $x, y$ là số nguyên dương sao cho $x^{2}+y^{2}-x$ chia hết cho $x y$. \\Chứng minh $x$ là số chính phương.
+\nguon{Polish Mathematical Olympiad 2000}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $m,n$ lớn hơn $1$ thỏa mãn $mn-1$ là ước của $n^3-1.$
+\nguon{International Mathematical Olympiad 1998}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn $xy>1$ và $x^3+x$ chia hết cho $xy-1.$
+\end{btt}
+
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $(x,y)$ thỏa mãn $x^2y+x$ chia hết cho $xy^2+7.$
+\nguon{Korea Junior Mathematical Olympiad 2014}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $a,b$ thỏa mãn $a+b^3$ và $a^3+b$ cùng chia hết cho $a^2+b^2.$
+\end{btt}
+
+\begin{btt}
+Cho $a,b$ là các số nguyên tố cùng nhau. Chứng minh rằng $\dfrac{2 a\left(a^{2}+b^{2}\right)}{a^{2}-b^{2}}$ không phải là số nguyên.
+\nguon{Thailand Mathematical Olympiad 2019}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p>2$ sao cho $\dfrac{(p+2)^{p+2}(p-2)^{p-2} - 1}{(p+2)^{p-2}(p-2)^{p+2}- 1}$ là một số nguyên.
+\nguon{Tạp chí Pi, tháng 9 năm 2017}
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $x,y$ khác $-1$ thỏa mãn
+$$\dfrac{x^4-1}{y+1}+\dfrac{y^4-1}{x+1}$$
+là số nguyên. Chứng minh rằng $x^4y^{44}-1$ cho hết cho $y+1.$
+\nguon{Vietnam Mathematical Olympiad 2007}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ $ 3 $ số hữu tỉ dương $ a, b, c $ sao cho $a+\dfrac{1}{b},\ b + \dfrac{1}{c}$ và $ c + \dfrac{1}{a} $ đều là các số nguyên.	
+\nguon{Tạp chí Pi tháng 1 năm 2017}
+\end{btt}
+
+\begin{btt}
+Tìm bộ các số nguyên dương $x,y,z$ thỏa mãn điều kiện $xy+1,\ yz+1$ và $zx+1$ lần lượt chia hết cho $z,x,y.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba số nguyên dương $x,y,z$ đôi một nguyên tố cùng nhau thỏa mãn đồng thời các điều kiện
+\[\heva{(x+1)(y+1)&\equiv 1\pmod{z}\\
+    (y+1)(z+1)&\equiv 1\pmod{x}\\    (z+1)(x+1)&\equiv 1\pmod{y}.}\]
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2007 $-$ 2008}
+\end{btt}
+\subsection*{Hướng dẫn bài tập tự luyện}
+\begin{gbtt}
+Cho hai số nguyên dương $x,y$ lớn hơn $1.$ Chứng minh rằng rằng nếu $x^{3}-y^{3}$ chia hết cho $x+y$ thì $x+y$ không là số nguyên tố.
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2017}
+\loigiai{
+Ta sẽ chứng minh bài toán bằng phản chứng. Giả sử $x+y$ là số nguyên tố.\\
+Do $x+y$ là ước của cả $x^3+y^3$ và $x^3-y^3$ nên nó cũng là ước của
+\[\tron{x^3+y^3}+\tron{x^3-y^3}=2x^3.\]
+Vì $x+y$ là số nguyên tố lớn hơn $2$ nên $(x+y)\mid x^3.$ Tiếp tục sử dụng điều kiện $x+y$ nguyên tố, ta có $(x+y)\mid x$. Đây là điều không thể xảy ra do $x<x+y.$ Giả sử phản chứng là sai. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt} \label{bdscp1}
+Cho $x, y$ là số nguyên dương sao cho $x^{2}+y^{2}-x$ chia hết cho $x y$. \\Chứng minh $x$ là số chính phương.
+\nguon{Polish Mathematical Olympiad 2000}
+\loigiai{
+Gọi ước chung lớn nhất của $x$ và $y$ là $d.$ Ta đặt $x=dm,y=dn,$ với $(m,n)=1.$ Phép đặt này cho ta
+
+\[\heva{x^2+y^2-x&=d^2m^2+d^2n^2-dm  \\ xy&=d^2mn.}\]
+Kết hợp với giả thiết, ta được 
+\[d^2mn\mid \left(d^2m^2+d^2n^2-dm\right) \Rightarrow dmn\mid \left(dm^2+dn^2-m\right).\tag{*}\label{pmo2000}\]
+Kết hợp (\ref{pmo2000}) với việc xét tính chia hết cho $m$ và $d$ ở cả số bị chia và số chia, ta lần lượt suy ra
+$$\heva{&m\mid dn^2 \\ &d\mid m}\Rightarrow \heva{&m\mid d \\ &d\mid m}\Rightarrow d=m.$$
+Ta có $x=dm=d^2$ là số chính phương. Bài toán được chứng minh.}
+\begin{luuy}
+Phép gọi ước chung trong bài toán trên giúp chúng ta tận dụng tính chia hết dựa trên các điều kiện về tính nguyên tố cùng nhau.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $m,n$ lớn hơn $1$ thỏa mãn $mn-1$ là ước của $n^3-1.$
+\nguon{International Mathematical Olympiad 1998}
+\loigiai{
+Với các số nguyên $m,n$ thỏa yêu cầu, ta $mn-1$ là ước của
+$$n^3-1-\tron{mn-1}=n\tron{m^2-n}.$$
+Do $(n,mn-1)=1$ nên $m^2-n$ chia hết cho $mn-1.$ Theo đó, $mn-1$ cũng là ước cửa
+$$n\tron{m^2-n}=m^2n-n^2=mn(m-1)+m-n^2.$$
+Ta suy ra $n^2-m$ cũng chia hết cho $mn-1.$ Vai trò tương đương của $m$ và $n$ được chứng tỏ. Không mất tính tổng quát, ta giả sử $m\ge n.$ Ta có
+$$1-mn<1-m<n^2-m\le mn-m<mn-1.$$
+Phép so sánh trên kết hợp với lập luận $n^2-m$ chia hết cho $mn-1$ cho ta $m=n^2.$ Thử trực tiếp, ta thấy thỏa mãn. Như vậy tất cả các cặp $(m,n)$ thỏa yêu cầu là $\tron{k,k^2}$ và $\tron{k^2,k},$ trong đó $k$ là số nguyên dương lớn hơn $1.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn $xy>1$ và $x^3+x$ chia hết cho $xy-1.$
+\loigiai{
+Với các số nguyên dương $x,y$ thỏa yêu cầu, ta lần lượt suy ra
+$$(xy-1)\mid x\tron{x^2+1}
+\Rightarrow (xy-1)\mid\tron{x^2+1}
+\Rightarrow (xy-1)\mid\tron{x^2y+y}
+\Rightarrow (xy-1)\mid\tron{x+y}.$$
+Phép chia hết kể trên cho ta $xy-1\le x+y.$ Biến đổi bất đẳng thức này, ta có
+$$xy-x-y-1\le 0\Leftrightarrow (x-1)(y-1)\le 2.$$
+Theo như đánh giá ấy, một trong hai số $x,y$ phải bằng $1,$ hoặc $$(x,y)\in \{(2,2);(2,3);(3,2)\}.$$ Ta xét các trường hợp kể trên.
+\begin{center}
+    \begin{tabular}{c|c|c}
+        $\quad (x,y)\quad$ & $\quad$ Trạng thái chia hết  $\quad$  & $\quad$ Kiểm tra $\quad$ \\
+    \hline
+        $(1,y)$ & $\tron{y-1}\mid 2$ & $(x,y)=(1,2),(1,3)$\\
+    \hline
+        $(x,1)$ & $(x-1)\mid\tron{x^3+x}$ & $(x,y)=(2,1),(3,1)$\\  
+    \hline
+        $(2,2)$ & $3\mid 10$ & Loại\\
+    \hline
+        $(2,3)$ & $5\mid 10$ & Chọn\\     
+    \hline        
+        $(3,2)$ & $5\mid 30$ & Chọn\\
+    \end{tabular}
+\end{center} 
+Như vậy, có $6$ cặp $(x,y)$ thỏa yêu cầu, đó là
+$(1,2),(1,3),(2,1),(3,1),(2,3),(3,2).$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $(x,y)$ thỏa mãn $x^2y+x$ chia hết cho $xy^2+7.$
+\nguon{Korea Junior Mathematical Olympiad 2014}
+\loigiai{Giả sử tồn tại $x,y$ nguyên dương thỏa mãn đề bài. Với giả sử như vậy, ta chỉ ra $xy^2+7$ là ước của
+$$x^2y+x=x\tron{xy+1}.$$
+Ta nhận thấy $\tron{xy^2+7,x} \in \left\{1,7\right\}$. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $\tron{x^2y+7,x}=1,$ ta có
+    $\tron{xy^2+7}\mid(xy+1).$\\
+    Do $xy+1>xy^2+7$ với mọi $x,y$ nguyên dương, bất đẳng thức trên không thể xảy ra.
+    \item Với $\tron{x^2y+7,x}=7,$ ta có $x$ chia hết cho $7.$ Đặt $x=7z.$ Ta có
+    $$\tron{7zy^2+7}\mid\vuong{(7z)^2y+7z}
+    \Rightarrow \tron{zy^2+1}\mid z\tron{7zy+1}.$$
+    Do $\tron{zy^2+1,z}=1,$ ta có $7zy+1$ chia hết cho $zy^2+1.$ Lúc này
+    $$zy^2+1\le 7yz+1\Rightarrow zy^2\le 7yz\Rightarrow y\le 7.$$
+    Tới đây, ta lập được bảng như sau
+    \begin{center}
+        \begin{tabular}{c|c|c|c}
+            $\quad y\quad$ & $\quad$ Trạng thái chia hết  $\quad$  & $\quad z\quad $ & $\quad x\quad $\\
+        \hline
+            $1$ & $\tron{7z+1}\mid\tron{7z^2+1}$ & $1,2,5$ & $7,14,35$\\
+        \hline
+            $2$ & $\tron{28z+1}\mid\tron{7z^2+1}$ & $1$ & $7$\\  
+        \hline
+            $3$ & $\tron{63z+1}\mid\tron{7z^2+1}$ & $\not\in\mathbb{N}^*$ & $\not\in\mathbb{N}^*$ \\  
+        \hline
+            $4$ & $\tron{112z+1}\mid\tron{7z^2+1}$ & $\not\in\mathbb{N}^*$ & $\not\in\mathbb{N}^*$ \\          
+        \hline        
+            $5$ & $\tron{175z+1}\mid\tron{7z^2+1}$ & $\not\in\mathbb{N}^*$ & $\not\in\mathbb{N}^*$ \\   
+        \hline        
+            $6$ & $\tron{252z+1}\mid\tron{7z^2+1}$ & $\not\in\mathbb{N}^*$ & $\not\in\mathbb{N}^*$ \\   
+        \hline        
+            $7$ & $\tron{343z+1}\mid\tron{7z^2+1}$ & $z$ & $7z$
+        \end{tabular}
+    \end{center}    
+\end{enumerate}
+Kết luận, tất cả các cặp $(x,y)$ thỏa yêu cầu là $$(7,1),\ (7,2),\ (14,1),\ (35,1)$$ và dạng tổng quát $(7z,7),$ trong đó $z$ là số nguyên dương tùy ý.}
+\end{gbtt}
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $a,b$ thỏa mãn $a+b^3$ và $a^3+b$ cùng chia hết cho $a^2+b^2.$
+\loigiai{
+Ta đặt $d=(a,b),$ như vậy tồn tại các số nguyên dương $m,n$ sao cho $(m,n)=1,a=dm,b=dn.$ Khi đó, $$a^2+b^2=(dm)^2+(dn)^2=d^2\tron{m^2+n^2}$$ là ước của
+$a+b^3=dm+(dn)^3=d\tron{m+d^2n}.$\\
+Ta suy ra $d\tron{m^2+n^2}$ là ước của $m+d^2n,$ thế nên $n$ chia hết cho $d.$ Tương tự, $m$ chia hết cho $d,$ nhưng do $(m,n)=1$ nên $d=1.$ Cũng từ giả thiết $a^3+b$ và $a+b^3$ đều là bội của $a^2+b^2,$ ta có
+$$\left(a^3+b\right)-\left(a+b^3\right)=\tron{a-b}\tron{a^2+ab+b^2-1}$$
+chia hết cho $a^2+b^2.$ Tiếp theo, đặt $d'=\tron{a-b,a^2+b^2},$ và ta có
+\begin{align*}
+    \heva{&d'\mid (a-b) \\ &d'\mid\tron{a^2+b^2}}
+    \Rightarrow \heva{&a\equiv b\pmod{d'}\\ &d'\mid\tron{a^2+b^2}}
+    \Rightarrow \heva{&d\mid 2a^2 \\ &d\mid 2b^2}
+    \Rightarrow d\mid 2\tron{a,b}^2\Rightarrow d\in \{1;2\}.
+\end{align*}
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $a=b,$ ta có $a+b^3=a+a^3$ chia hết cho $a^2+b^2=2a^2.$ Ta dễ dàng tìm ra $a=b=1$ từ đây.
+    \item Nếu $\tron{a-b,a^2+b^2}=1,$ ta có
+    $\tron{a^2+b^2}\mid \tron{a^2+ab+b^2-1}.$ Bằng nhận xét
+    $$a^2+b^2\le a^2+ab+b^2-1\le a^2+\dfrac{a^2+b^2}{2}+b^2-1=\dfrac{3}{2}\tron{a^2+b^2}-1<2\tron{a^2+b^2},$$
+    ta chỉ ra $a^2+ab+b^2-1=a^2+b^2,$ và như vậy $a=b=1,$ mâu thuẫn điều kiện $\tron{a-b,a^2+b^2}=1.$
+    \item Nếu $\tron{a-b,a^2+b^2}=2,$ ta có
+    $\dfrac{a^2+b^2}{2}\mid \tron{a^2+ab+b^2-1}.$ Bằng nhận xét tương tự là
+    $$2\tron{\dfrac{a^2+b^2}{2}}\le a^2+ab+b^2-1<3\tron{\dfrac{a^2+b^2}{2}},$$
+    ta chỉ ra $a^2+ab+b^2-1=2\tron{\dfrac{a^2+b^2}{2}}$ hay $a=b=1,$ thỏa mãn.
+\end{enumerate}
+Kết luận, cặp $(a,b)=(1,1)$ là cặp số duy nhất thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a,b$ là các số nguyên tố cùng nhau. Chứng minh rằng $\dfrac{2 a\left(a^{2}+b^{2}\right)}{a^{2}-b^{2}}$ không phải là số nguyên.
+\nguon{Thailand Mathematical Olympiad 2019}
+%mà khoan, em thiếu gỉa sử phản chứng
+\loigiai{Ta giả sử phản chứng rằng $\dfrac{2 a\left(a^{2}+b^{2}\right)}{a^{2}-b^{2}}$ là số nguyên. Đặt $\tron{a,a^2-b^2}=d_1$, phép đặt này cho ta
+$$\heva{d_1&\mid a\\d_1&\mid \tron{a^2-b^2}}\Rightarrow 
+\heva{d_1&\mid a^2 \\ d_1&\mid \tron{a^2-b^2}}\Rightarrow d_1\mid a^2-\tron{a^2-b^2}\Rightarrow d_1\mid b^2.$$
+Từ đây, ta suy ra $\tron{a,b^2}=d_1$. Kết hợp giả thiết $(a,b)=1,$ ta lại có $\tron{a,b}=1$. Bắt buộc, $d_1$ phải bằng $1$.\\
+Ta tiếp tục đặt $\tron{a^2+b^2, a^2-b^2}=d_2$, và ta sẽ có
+$$\heva{d_2\mid \tron{a^2+b^2}\\d_2\mid \tron{a^2-b^2}}\Rightarrow \heva{d_2\mid \tron{a^2+b^2}+\tron{a^2-b^2}\\d_2\mid \tron{a^2+b^2}-\tron{a^2-b^2} }\Rightarrow\heva{d_2&\mid2a^2\\d_2&\mid 2b^2.}$$
+Do đó, $\tron{2a^2,2b^2}=d_2$. Bằng lập luận tương tự, ta thu được $d\in \left\{1,2\right\}$. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $d_2=1$, ta có $\dfrac{2 a\left(a^{2}+b^{2}\right)}{a^{2}-b^{2}}$ là số nguyên chỉ khi $a^2-b^2$ là ước của $2.$\\
+    Ta dễ dàng nhận thấy không có số nguyên $a,b$ thỏa mãn trường hợp này.
+    \item  Với $d_2=2$, ta đặt $a^2=2x$ và $b^2=2y$ trong đó $\tron{x,y}=1$. Phép đặt kể trên cho ta biết $$\dfrac{2 a\left(a^{2}+b^{2}\right)}{a^{2}-b^{2}}=\dfrac{2\tron{x+y}}{x-y}\in \mathbb{Z}.$$ 
+    Do $\tron{x+y,x-y}=1$ nên $x-y$ là ước của $2.$ Ta xét trường hợp sau.
+    \begin{itemize}
+        \item Với $x-y=1$, ta có $a^2-b^2=2$. Ta nhận thấy không có $a,b$ nguyên thỏa mãn khả năng này.
+        \item Với $x-y=2$, ta có $a^2-b^2=4$. Ta suy ra $a=2$ và $b=0$, mâu thuẫn với điều kiện bài toán.
+    \end{itemize}
+\end{enumerate}
+%phần này kết luận chưa tốt, phải là "Vậy ... không phải là số nguyên với mọi cặp (a,b) nguyên tố cùng nhau". Nêú không muốn viết dài, em có thể viết là
+Như vậy, giả sử phản chứng là sai. Bài toán được chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p>2$ sao cho $$\dfrac{(p+2)^{p+2}(p-2)^{p-2} - 1}{(p+2)^{p-2}(p-2)^{p+2}- 1} $$ là một số nguyên. 
+\nguon{Tạp chí Pi, tháng 9 năm 2017}
+\loigiai
+{Ta đặt $T=(p+2)^{p+2}(p-2)^{p-2} - 1,M=(p+2)^{p-2}(p-2)^{p+2}- 1.$ \\
+Với giả sử $T$ chia hết cho $M$, ta nhận thấy $M$ cũng là ước của
+$$T-M= (p+2)^{p-2}(p-2)^{p-2} \left((p+2)^4 - (p-2)^4 \right).$$ 
+Với điều hiển nhiên là $\tron{M, (p+2)^{p-2}(p-2)^{p-2}}=1,$ từ trên ta chỉ ra
+$$(p+2)^4 - (p-2)^4$$
+chia hết cho $M.$ Với hai số nguyên dương $A,B$ nếu $A$ chia hết cho $B$ thì $A\ge B.$ Kết quả này cho ta
+ $$M \leq (p+2)^4 - (p-2)^4 \leq (p+2)^4 - 1\Rightarrow (p+2)^{p-6} \cdot (p-2)^{p+2} \leq 1.$$
+Do vậy, $p<7,$ vì với $p\leq 7$, hiển nhiên ta có $(p+2)^{p-6}(p-2)^{p+2} > 1.$\\ Thử trực tiếp $p=2,3,5,$ ta kết luận chỉ có $p=3$ là số nguyên tố thỏa yêu cầu.}
+\begin{luuy}
+\nx 	
+Trong lời giải trên, tính nguyên tố của $p$ chỉ được sử dụng khi kiểm tra các giá trị $p<7$. Vì vậy, khi thay đổi yêu cầu đã cho "tìm tất cả các số nguyên tố $p>2$" bởi yêu cầu "tìm tất cả các số nguyên $p>2$", bài toán vẫn có hướng giải quyết tương tự.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $x,y$ khác $-1$ thỏa mãn
+$$\dfrac{x^4-1}{y+1}+\dfrac{y^4-1}{x+1}$$
+là số nguyên. Chứng minh rằng $x^4y^{44}-1$ cho hết cho $y+1.$
+\nguon{Vietnam Mathematical Olympiad 2007}
+\loigiai{
+Đặt $\dfrac{a}{m}=\dfrac{x^4-1}{y+1},$ $\dfrac{b}{n}=\dfrac{y^4-1}{x+1}$ với $a,b,m,n$ là các số nguyên dương thỏa mãn
+$$\tron{a,m}=1=\tron{b,n}=1.$$
+Ta có $\dfrac{x^4-1}{y+1}+\dfrac{y^4-1}{x+1}=\dfrac{a}{m}+\dfrac{b}{n}=\dfrac{an+bm}{mn}.$ Nhờ điều kiện $\tron{a,m}=\tron{b,n}=1,$ ta suy ra 
+$$mn\mid (an+bm)\Rightarrow\heva{m&\mid an\\n&\mid bm}\Rightarrow\heva{m&\mid n\\n&\mid m}\Rightarrow n=m.$$
+Ngoài ra, khi lấy tích hai số hạng trong tổng đã cho, ta được
+$$\dfrac{ab}{mn}=\tron{\dfrac{x^4-1}{y+1}}\tron{\dfrac{y^4-1}{x+1}}=\tron{x-1}\tron{x^2+1}\tron{y-1}\tron{y^2+1}\in \mathbb{Z}.$$
+Nhận xét trên kết hợp với $m=n$ cho ta $ab$ chia hết cho $m^2,$ nhưng vì $(a,m)=1$ nên $m=n=1.$ \\Ta có $x^4-1$ chia hết cho $y+1$ và như vậy
+$$x^4y^{44}-1\equiv y^{44}-1\equiv(-1)^{44}-1\equiv 0\pmod{y+1}.$$
+Đồng dư thức trên chứng tỏ $x^4y^{44}-1$ chia hết cho $y+1.$ Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ $ 3 $ số hữu tỉ dương $ a, b, c $ sao cho 
+$$a+\dfrac{1}{b},\ b + \dfrac{1}{c}\text{ và } c + \dfrac{1}{a} $$ đều là các số nguyên.	
+\nguon{Tạp chí Pi tháng 1 năm 2017}
+\loigiai
+{
+Đặt $ a = \dfrac{m}{x},\ b = \dfrac{n}{y}, \ c = \dfrac{p}{z} $, với $m,n,n,y,z $ là các số nguyên dương và 
+$$(m,x)=(n,y)=(p,z)=1. $$
+Tính toán trực tiếp, ta được
+$a + \dfrac{1}{b} = \dfrac{m}{x} + \dfrac{y}{n} = \dfrac{mn + xy}{nx}.$\\
+Do giả thiết $a+\dfrac{1}{b}$ là số nguyên và điều kiện $(m,x)=(n,y)=(p,z)=1,$ ta có
+$$nx\mid  (mn+xy) 
+\Rightarrow \heva{&n\mid xy \\ &x\mid mn}
+\Rightarrow \heva{&n\mid x \\ &x\mid n}\Rightarrow n=x.$$
+Hoàn toàn tương tự, ta chỉ ra $n=x,p=y,m=z.$
+Ta viết lại ràng buộc của bài toán thành
+$$y\mid (x+z),\quad z\mid (y+x),\quad x\mid (z+y).$$
+Không mất  tổng quát, giả sử $ x \geq y \geq t $. Khi đó,  ta có $ 0 < \dfrac{z + y}{x } \leq 2$. Ta xét các trường hợp dưới đây.
+\begin{enumerate}
+	\item Với $y+z=2x,$ hiển nhiên $x=y=z$ lúc này. Bộ số thu được ở đây là $(a,b,c)=(1,1,1).$
+	\item Với $y+z=x,$ từ $y\mid x+z=2z-y,$ ta suy ra $y\mid 2z,$ lại do $y\ge z$ nên $y=z$ hoặc $y=2z.$
+	\begin{itemize}
+		\item\chu{Trường hợp 1.} Với $y=z,$ ta có $x=2y.$ Bộ số thu được ở đây là $(a,b,c)=\left(\dfrac{1}{2},2,1\right).$
+		\item\chu{Trường hợp 2.} Với $y=2z,$ ta có $x=3y.$ Bộ số thu được ở đây là $(a,b,c)=\left(\dfrac{3}{2},2,\dfrac{1}{3}\right).$
+	\end{itemize}	
+\end{enumerate}	
+Chú ý rằng, nếu bộ ba số $ (a_0, b_0, c_0) $ thỏa mãn điều kiện đề bài thì mỗi bộ ba số nhận được từ nó nhờ phép hoán vị vòng quanh cũng là một bộ ba số thỏa mãn điều kiện đề bài. Vì vậy, từ các kết quả thu được ở trên, ta thấy có tất cả $ 7 $ bộ ba số hữu tỉ dương thỏa mãn điều kiện đề bài, đó là $$ (1,1,1), \left ( \dfrac{3}{2}, 2, \dfrac{1}{3} \right ), \left ( 2, \dfrac{1}{3}, \dfrac{3}{2} \right ), \left (\dfrac{1}{3}, \dfrac{3}{2},2 \right ), \left ( 2,1, \dfrac{1}{2} \right ), \left ( 1,\dfrac{1}{2},2 \right ) \text{ và } \left ( \dfrac{1}{2}, 2, 1 \right ). $$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm bộ các số nguyên dương $x,y,z$ thỏa mãn điều kiện $xy+1,\ yz+1$ và $zx+1$ lần lượt chia hết cho $z,x,y.$
+\loigiai{
+Giả sử $x$ và $z$ tồn tại một ước chung là $p,$ khi đó $xy+1$ chia hết cho $p$ và $xy$ chia hết cho $p.$ Hai khẳng định này mâu thuẫn với nhau, chứng tỏ $(x,z)=1.$ Bằng lập luận tương tự, ta chỉ ra
+$$(x,y)=(y,z)=(z,x)=1.$$
+Tiếp theo, ta suy ra được các điều sau đây từ giả thiết
+\begin{align*}
+    z&\mid (xy+1)+z(x+y)=xy+yz+zx+1,\\
+    y&\mid (zx+1)+y(z+x)=xy+yz+zx+1,\\
+    x&\mid (yz+1)+y(z+x)=xy+yz+zx+1.
+\end{align*}
+Kết hợp nhận xét trên với chứng minh $x,y,z$ đôi một nguyên tố cùng nhau, ta chỉ ra
+$$xyz\mid (xy+yz+zx+1).$$
+Lập luận trên hướng ta tới việc xét thương của $xy+yz+zx+1$ và $xyz.$ Ta có
+$$\dfrac{xy+yz+zx+1}{xyz}=\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{z}+\dfrac{1}{xyz}\le 4.$$
+Không mất tổng quát, ta giả sử $x\ge y\ge z.$ Do $\dfrac{xy+yz+zx+1}{xyz}$ là số nguyên, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $xy+yz+zx+1=4xyz,$ dấu bằng ở đánh giá bên trên phải xảy ra, tức $x=y=z=1.$
+    \item Nếu $xy+yz+zx+1=3xyz,$ ta chứng minh $z=1.$ Thật vậy, nếu $x\ge y\ge z\ge 2,$ ta có
+    $$\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{z}+\dfrac{1}{xyz}\le \dfrac{1}{2}+\dfrac{1}{2}+\dfrac{1}{2}+\dfrac{1}{2\cdot2\cdot2}=\dfrac{13}{8}<3,$$
+    một điều mâu thuẫn. Mâu thuẫn này chứng tỏ $z=1.$ Thế ngược lại $z=1,$ ta được
+    $$xy+x+y+1=3xy\Leftrightarrow 2xy-x-y-1=0\Leftrightarrow (2x-1)(2y-1)=3.$$
+    Giải phương trình ước số trên, ta suy ra $(x,y)=(2,1).$
+    \item Nếu $xy+yz+zx+1=2xyz,$ lập luận tương tự, ta tìm ra $z=1.$
+    Thế ngược lại $z=1,$ ta có
+    $$xy+x+y+1=2xy\Leftrightarrow xy-x-y-1=0\Leftrightarrow (x-1)(y-1)=2.$$
+    Giải phương trình ước số trên, ta thu được $(x,y)=(3,2).$    
+    \item Nếu $xy+yz+zx+1=xyz,$ lập luận tương tự, ta tìm ra $z\le 3.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu như $z=3,$ ta có
+        \begin{align*}
+            xy+3x+3y+1=3xy&\Leftrightarrow 2xy-3x-3y-1=0\\&\Leftrightarrow (2x-3)(2y-3)=11.
+        \end{align*}
+        Giải phương trình ước số trên, ta thu được $(x,y)=(7,2),$ mâu thuẫn với giả sử $y\ge z.$
+        \item \chu{Trường hợp 2.} Nếu như $z=2,$ ta có
+        \begin{align*}
+            xy+2x+2y+1=2xy&\Leftrightarrow xy-2x-2y-1=0\\&\Leftrightarrow (x-2)(y-2)=5.
+        \end{align*}
+        Giải phương trình ước số trên, ta thu được $(x,y)=(7,3).$    
+        \item \chu{Trường hợp 3.} Nếu như $z=1,$ ta có
+        $$xy+x+y+1=xy\Leftrightarrow x+y+1=0.$$
+        Phương trình trên không có nghiệm nguyên dương.    
+    \end{itemize}
+\end{enumerate}
+Tổng kết lại, có tất cả $16$ bộ $(x,y,z)$ thỏa yêu cầu bài toán, bao gồm $$(1,1,1),\ (1,1,2),\ (1,2,3),\ (2,3,7)$$ và tất cả các hoán vị của chúng.}
+\begin{luuy}
+Ở bước chỉ ra
+\begin{align*}
+    z&\mid (xy+1)+z(x+y)=xy+yz+zx+1,\\
+    y&\mid (zx+1)+y(z+x)=xy+yz+zx+1,\\
+    x&\mid (yz+1)+y(z+x)=xy+yz+zx+1,
+\end{align*}
+ta đã tạo ra một \chu{số bị chia chung}, trong khi số chia có thể được tăng lên nhờ vào tính nguyên tố cùng nhau. Bằng cách này, ta có thể so sánh số bị chia và số chia, để rồi cho ra được các kết quả của $x,y,z.$
+\end{luuy}
+\end{gbtt}
+
+\begin{light}
+Một bài toán khác liên quan tới các tổng $xy+1,yz+1$ và $zx+1$ lần đầu xuất hiện trên tạp chí \chu{Mathematics Magazine} số 71, được xuất bản vào tháng 2 năm 1988 và được giới thiệu bởi tác giả \chu{Kiran S. Kedlaya}.
+\begin{center}
+    \includegraphics[scale=0.55]{magazine.png}
+\end{center}
+Lời giải của tác giả cho bài toán này vô cùng tinh tế và thú vị, các bạn có thể tham khảo ở đây:
+\url{https://www.jstor.org/stable/2691347}
+\end{light}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba số nguyên dương $x,y,z$ đôi một nguyên tố cùng nhau thỏa mãn đồng thời các điều kiện
+\[\heva{(x+1)(y+1)&\equiv 1\pmod{z}\\
+    (y+1)(z+1)&\equiv 1\pmod{x}\\    (z+1)(x+1)&\equiv 1\pmod{y}.}\]
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2007 $-$ 2008}
+\loigiai{
+Từ giả thiết, ta suy ra được
+$$\heva{(x+1)(y+1)(z+1)\equiv z+1&\equiv1\pmod{z}\\
+(x+1)(y+1)(z+1)\equiv x+1&\equiv1\pmod{x}\\
+(x+1)(y+1)(z+1)\equiv y+1&\equiv1\pmod{y}.}$$
+Từ đây, ta có $(x+1)(y+1)(z+1)-1$ chia hết cho $\vuong{x,y,z}$. Kết hợp với giả thiết $x,y,z$ đôi một nguyên tố cùng nhau, ta thu được $xyz\mid(x+1)(y+1)(z+1)-1.$ Biến đổi ta được
+$$xyz\mid \tron{xyz+xy+yz+xz+x+y+z}\Rightarrow xyz\mid \tron{xy+yz+xz+x+y+z}.$$
+Lập luận trên hướng ta đến việc xét thương của $xy+yz+xz+x+y+z$ và $xyz$. Ta có
+$$\dfrac{xy+yz+xz+x+y+z}{xyz}=\dfrac{1}{z}+\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{yz}+\dfrac{1}{xz}+\dfrac{1}{xy}\le 6.$$
+Ta giả sử $x\ge y\ge z.$ Do $\dfrac{xy+yz+zx+x+y+z}{xyz}$ là số nguyên, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $xy+yz+zx+x+y+z=6xyz,$ dấu bằng ở đánh giá xảy ra, tức $x=y=z=1.$
+    \item Với $xy+yz+zx+x+y+z=5xyz,$ nếu như $x\ge y\ge z\ge2,$ ta có
+    $$\dfrac{1}{z}+\dfrac{1}{x}+\dfrac{1}{y}+\dfrac{1}{yz}+\dfrac{1}{xz}+\dfrac{1}{xy}\le \dfrac{1}{2}+\dfrac{1}{2}+\dfrac{1}{2}+\dfrac{1}{2\cdot2}+\dfrac{1}{2\cdot2}+\dfrac{1}{2\cdot2}=\dfrac{9}{4}<5.$$
+    một điều mâu thuẫn. Mâu thuẫn này chứng tỏ $z=1.$ Thế ngược lại $z=1,$ ta được
+    $$xy+y+x+x+y+1=5xy\Leftrightarrow 4xy-2x-2y=1.$$
+    Điều này không thể xảy ra vì $4xy-2x-2y$ chia hết cho $2$ còn $1$ không chia hết cho $2$.
+    \item Với $xy+yz+zx+x+y+z=4xyz,$ lập luận tương tự, ta suy ra $z=1.$ Thế ngược lại $z=1,$ ta có
+    $$xy+y+x+x+y+1=4xy\Leftrightarrow 3xy-2x-2y-1=0\Leftrightarrow(3x-2)(3y-2)=7.$$
+    Giải phương trình ước số trên, ta nhận được $(x,y)=(3,1).$
+    \item Với $xy+yz+zx+x+y+z=3xyz,$ lập luận tương tự, ta suy ra $z=1.$ Thế ngược lại $z=1,$ ta có
+    $$xy+y+x+x+y+1=4xy\Leftrightarrow 2xy-2x-2y=1.$$
+    Điều này không thể xảy ra vì $2xy-2x-2y$ chia hết cho $2$ còn $1$ không chia hết cho $2$.
+    \item Với $xy+yz+zx+x+y+z=4xyz,$ cách chặn tương tự cho ta $z\le 2.$
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu như $z=1,$ ta có
+        $$xy+y+x+x+y+1=2xy\Leftrightarrow xy-2x-2y-1=0\Leftrightarrow(x-2)(y-2)=5.$$
+        Giải phương trình ước số trên, ta suy ra $(x,y)=(7,3).$
+        \item\chu{Trường hợp 2.} Nếu như $z=2,$ ta có
+         $$xy+2y+2x+x+y+2=4xy\Leftrightarrow 3xy-3x-3y=2.$$
+        Điều này không thể xảy ra vì $3xy-3x-3y$ chia hết cho $3$ còn $1$ không chia hết cho $2$.
+    \end{itemize}
+    \item Với $xy+yz+zx+x+y+z=xyz,$ cách chặn tương tự cho ta $z\le3.$ \\Thử trực tiếp các trường hợp của $z$, ta tìm được $(x,y,z)=(14,4,2).$
+\end{enumerate}
+Như vậy, các bộ $(x,y,z)$ thỏa mãn đề bài là $(1,1,1),(3,1,1), (7,3,1),(14,4,2)$ và hoán vị.}
+\end{gbtt}
+
+\section{Phép đặt ước chung đôi một cho ba biến số}
+    Trong một số bài toán cần xét tới tính chia hết của ba biến số, chẳng hạn như $a,b,c,$ rất nhiều bạn loay hoay tìm hướng giải quyết, nhưng rồi chẳng thể nhìn thấy mấu chốt của vấn đề. Nhằm giúp các bạn tháo gỡ khúc mắc này, tác giả xin phép đưa ra một cách đặt ẩn phụ như bên dưới. Mục này trong sách cũng chính là một phần bài viết của tác giả \text{\it Nguyễn Nhất Huy} được gửi lên tập san \text{\it Gặp gỡ toán học}.
+\subsection*{Bài toán mở đầu} 
+\begin{light}
+\chu{Bài toán.} Cho ba số nguyên dương $a,b,c$ thỏa mãn $(a,b,c)=1.$ Chứng minh rằng tồn tại các số nguyên dương $x,y,z,m,n,p$ sao cho $a=myz,b=nxz,c=pxy,$ đồng thời
+\begin{align*}
+    (m,n)&=(n,p)=(p,m)=(x,y)=(y,z)\\&=(z,x)=(m,x)=(n,y)=(p,z)=1.
+\end{align*}
+\end{light}
+\chu{Chứng minh.}
+Đầu tiên, ta đặt
+\[(a,b)=z,(b,c)=x,(c,a)=y.\tag{*}\label{dat3bien.1}\]
+Ta sẽ chứng minh $(x,y)=1.$ Thật vậy, nếu $x$ và $y$ có ước chung, ta sẽ có
+$$2\le ((b,c),(c,a))=(a,b,c)=1,$$
+một điều mâu thuẫn. Mâu thuẫn này kết hợp với suy luận tương tự cho ta
+$$(x,y)=(y,z)=(z,x)=1.$$
+Ngoài ra, cách đặt ở (\ref{dat3bien.1}) còn cho ta $a$ chia hết cho $y$ và $z,$ nhưng vì $(y,z)=1$ nên $a$ chia hết cho $yz.$ \\Tới đây, sự tồn tại đã cho được chứng tỏ. \hfill $\square$
+\begin{luuy}
+\nx Ngoài những kết quả về ước trong bài toán, phép đặt trên còn cho ta những kết quả về bội chung nhỏ nhất, đó là
+\begin{multicols}{2}
+\begin{itemize}
+    \item $[a,b]=mnxyz,$
+    \item $[b,c]=npxyz,$
+    \item $[c,a]=pmxyz,$   
+    \item $[a,b,c]=mnpxyz.$    
+\end{itemize}
+\end{multicols}
+\end{luuy}
+
+\subsection*{Ví dụ minh họa}
+\begin{bx}
+Chứng minh rằng với mọi số nguyên dương $m,n,p,$ ta luôn có
+\[\left( m,\left[ n,p \right] \right)=\left[ \left( m,n \right),\left( m,p \right) \right].\]
+\loigiai{
+Ta đặt $d=(m,n,p),$ khi đó tồn tại các số nguyên dương $M,N,P$ sao cho $(M,N,P)=1,$ đồng thời
+$$m=dM,\quad n=dN,\quad p=dP.$$
+Tiếp theo, ta đặt $M=abx,N=bcy,P=caz,$ ở đây
+$$(a,b)=(b,c)=(c,a)=(x,y)=(y,z)=(z,x)=(a,y)=(b,z)=(c,x)=1.$$
+Tính nguyên tố cùng nhau kể trên giúp ta nhận thấy
+\begin{align*}
+    VT&=\left( dabx,\left[ dbcy,dcaz \right] \right)=\left( dabx,dabcz \right)=dab,
+    \\VP&=\left[ \left( dabx,dbcy \right),\left( dabx,dcaz \right) \right]=\left[ db,da \right]=dab.   
+\end{align*}
+Vế trái bằng vế phải. Đẳng thức được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các bộ số nguyên dương $a,b,c$ nguyên tố cùng nhau thỏa mãn $$\dfrac{a}{b}+\dfrac{b}{c}+\dfrac{c}{a} \text{ và } \dfrac{a}{c}+\dfrac{c}{b}+\dfrac{b}{a}$$ là hai số nguyên dương.
+\loigiai{
+Ta đặt $a=mnx,b=npy,c=pmz,$ trong đó
+$$(m,n)=(n,p)=(p,m)=(x,y)=(y,z)=(z,x)=(m,y)=(n,z)=(p,x)=1.$$
+Phép đặt này cho ta số sau đây nguyên dương
+$$\dfrac{a}{b}+\dfrac{b}{c}+\dfrac{c}{a}=\dfrac{mnx}{npy}+\dfrac{npy}{pmz}+\dfrac{pmz}{mnx}=\dfrac{nz(mx)^2+px(ny)^2+my(pz)^2}{mnpxyz}.$$
+Xét tính chia hết cho $mz$ ở cả tử và mẫu, ta chỉ ra
+$mz\mid px(ny)^2.$ 
+\begin{itemize}
+    \item[i,] Điều kiện phép đặt $(m,y)=(m,n)=(m,p)$ cho ta $m\mid x.$
+    \item[ii,] Điều kiện phép đặt $(z,x)=(z,y)=(z,n)$ cho ta $z\mid p.$
+\end{itemize}
+Một cách tương tự, ta chỉ ra được các phép chia hết là
+$$m\mid x,\quad z\mid p,\quad n\mid y,\quad x\mid m,\quad p\mid z,\quad y\mid n.$$
+Các nhận xét trên cho ta $x=m,y=n,z=p.$ \\
+Bằng cách làm tương tự đối với điều kiện $\dfrac{a}{c}+\dfrac{c}{b}+\dfrac{b}{a}$ nguyên dương, ta chỉ ra thêm
+$$x=n,\quad y=p,\quad z=n.$$
+Tổng kết lại, ta có
+$x=y=z=m=n=p.$ Theo đó, ta suy ra $a=b=c.$ \\Tuy nhiên, do điều kiện $(a,b,c)=1,$ bộ số duy nhất thỏa mãn đề bài chỉ có thể là $(a,b,c)=(1,1,1).$
+}
+\begin{luuy}
+Bài toán trên vẫn có thể được tiến hành bằng cách làm tương tự trong trường hợp ba số $a,b,c$ không có ràng buộc phải nguyên tố cùng nhau.
+\end{luuy}
+\end{bx}
+
+
+\subsection*{Bài tập tự luyện}
+\begin{btt}
+Chứng minh rằng với mọi số nguyên dương $m,n,p,$ ta luôn có
+\[\left[ m,n,p \right]=\displaystyle\dfrac{mnp\left( m,n,p \right)}{\left( m,n \right)\left( n,p \right)\left( p,m \right)}.\]
+\end{btt}
+
+\begin{btt}
+Cho các số nguyên dương $a,b,c$ thỏa mãn $\dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{c}.$ \\ Chứng minh rằng $a^2+b^2+c^2$ là số chính phương.
+\end{btt}
+
+\begin{btt}
+Cho $a,b,c$ là các số nguyên dương thỏa mãn $(a,b,c)=1$ và $a^3b^3+b^3c^3+c^3a^3$ chia hết cho $a^2b^2c^2$. Chứng minh rằng $abc$ là số chính phương.
+\end{btt}
+
+\begin{btt}
+Cho $a, b, c$ là độ dài ba cạnh của một tam giác, $(a, b, c)=1$ và
+$$\dfrac{a^{2}+b^{2}-c^{2}}{a+b-c}, \quad \dfrac{b^{2}+c^{2}-a^{2}}{b+c-a}, \quad \dfrac{c^{2}+a^{2}-b^{2}}{c+a-b}$$
+đều là các số nguyên. Chứng minh rằng một trong hai số sau đây là số chính phương
+$$(a+b-c)(b+c-a)(c+a-b),\quad 2(a+b-c)(b+c-a)(c+a-b).$$ 
+\nguon{Czech and Slovak Olympiad 2018}
+\end{btt}
+
+\begin{btt}
+Tìm các số nguyên dương $a,b,c$ sao cho $a^3+b^3+c^3$ chia hết cho $a^2b,b^2c$ và $c^2a.$
+\nguon{Bulgaria Mathematical Olympiad 2001}
+\end{btt}
+
+\begin{btt}
+Cho ba số nguyên dương $a,b,c$ đôi một phân biệt thỏa mãn $(a,b,c) = 1$ và 
+$$a \mid (b - c)^2, \quad b \mid (c-  a)^2, \quad c \mid (a - b)^2.$$ Chứng minh rằng $a, b$  $c$ không là độ dài ba cạnh của một tam giác.
+\nguon{Baltic Way 2015}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng không tồn tại ba số nguyên dương $a,b,c$ nguyên tố cùng nhau nào thỏa mãn đồng thời các điều kiện 
+\[2(a,b)+[a,b]=a^2,\quad 2(b,c)+[b,c]=b^2,\quad 2(c,a)+[c,a]=c^2.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các bộ ba số tự nhiên $(m,n,p)$ thỏa mãn đồng thời các điều kiện
+\[m + n = {\left( {m,n} \right)^2},\quad n + p= {\left( {n,p} \right)^2},\quad p+m = {\left( {p,m} \right)^2}.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $a,b,c$ thỏa mãn \[[a,b,c]=\dfrac{ab+bc+ca}{4}.\]
+\nguon{Junior Japanese Mathematical Olympiad 2019}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+\begin{gbtt}
+Chứng minh rằng với mọi số nguyên dương $m,n,p,$ ta luôn có
+\[\left[ m,n,p \right]=\displaystyle\dfrac{mnp\left( m,n,p \right)}{\left( m,n \right)\left( n,p \right)\left( p,m \right)}.\]
+\loigiai{
+Ta đặt $d=(m,n,p),$ khi đó tồn tại các số nguyên dương $M,N,P$ sao cho $(M,N,P)=1,$ đồng thời
+$$m=dM,\quad n=dN,\quad p=dP.$$
+Tiếp theo, ta đặt $M=abx,N=bcy,P=caz,$ ở đây
+$$(a,b)=(b,c)=(c,a)=(x,y)=(y,z)=(z,x)=(a,y)=(b,z)=(c,x)=1.$$
+Bằng cách đặt này, đẳng thức đã cho trở thành
+$$[abx,bcy,caz]=\dfrac{(abx)(bcy)(caz)(abx,bcy,caz)}{(abx,bcy)(bcy,caz)(caz,abx)}.$$
+Đẳng thức trên là đúng do ta nhận xét được
+\begin{itemize}
+    \item[i,] $[abx,bcy,caz]=[abcxy,caz]=abcxyz.$
+    \item[ii,] $(abx,bcy,caz)=(b,caz)=1.$
+    \item[iii,] $(abx,bcy)=b,\quad (bcy,caz)=c,\quad (caz,abx)=a.$
+\end{itemize}
+Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho các số nguyên dương $a,b,c$ thỏa mãn $\dfrac{1}{a}+\dfrac{1}{b}=\dfrac{1}{c}.$ \\ Chứng minh rằng $a^2+b^2+c^2$ là số chính phương.
+\loigiai{Ta chỉ cần xét bài toán này trong trường hợp $(a,b,c)=1.$ \\
+Theo như bổ đề, ta có thể đặt $a=mnx,b=npy,c=pmz,$ trong đó
+$$(m,n)=(n,p)=(p,m)=(x,y)=(y,z)=(z,x)=(m,y)=(n,z)=(p,x)=1.$$
+Đẳng thức đã cho trở thành $\dfrac{1}{{mnx}} + \dfrac{1}{{npy}} = \dfrac{1}{{pmz}}.$ Biến đổi tương đương, ta có
+$$\dfrac{1}{{mnx}} + \dfrac{1}{{npy}} = \dfrac{1}{{pmz}} \Leftrightarrow \dfrac{{pzy + mzx}}{{nxy}} = 1 \Leftrightarrow  pzy+mzx=nxy.$$
+Xét tính chia hết cho $y$ ở cả hai vế, ta chỉ ra $mzx$ chia hết cho $y,$ nhưng do điều kiện phép đặt
+$$(m,y)=(y,z)=(x,y)=1$$ 
+nên $y=1.$ Một cách tương tự, ta chứng minh được $x=y=1.$ \\
+Thế $x=y=1$ vào $pzy+mzx=nxy,$ ta có
+$$z(m+p)=n.$$
+Do $(n,z)=1$ và $n$ chia hết cho $z,$ ta nhận được $z=1,$ đồng thời $n=m+p.$ Lúc ấy
+$$a^2+b^2+c^2=\left(m^2+pm\right)^2+\left(p^2+mp\right)^2+(pm)^2=\tron{m^2+mp+p^2}^2.$$
+Ta nhận được $a^2+b^2+c^2$ là số chính phương. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt} 
+Cho $a,b,c$ là các số nguyên dương thỏa mãn $(a,b,c)=1$ và $a^3b^3+b^3c^3+c^3a^3$ chia hết cho $a^2b^2c^2$. Chứng minh rằng $abc$ là số chính phương.
+\nguon{Diễn đàn Art Of Problem Solving}
+\loigiai{ Vì $(a,b,c)=1$ nên ta có thể đặt $a=myz,b=nzx,c=pxy,$ ở đây
+$$(m,n)=(n,p)=(p,m)=(x,y)=(y,z)=(z,x)=(m,x)=(n,y)=(p,z)=1.$$
+Kết hợp với giả thiết $a^2b^2c^2 \mid \tron{a^3b^3+b^3c^3+c^3a^3}$ ta có 
+$$m^2n^2p^2xyz \mid\left(m^3n^3z^3+n^3p^3x^3+m^3p^3y^3\right).$$
+Xét tính chia hết cho $m^2$ ở cả tử và mẫu, ta chỉ ra được
+$$m^2\mid n^3p^3x^3.$$
+Nhờ vào điều kiện phép đặt $(m,n)=(m,p)=(m,x)=1,$ ta có $m=1.$ Hoàn toàn tương tự, ta chứng minh được $n=p=1.$ Với các kết quả thu được vừa rồi, ta nhận thấy 
+$$abc=mnpx^2y^2z^2=x^2y^2z^2.$$
+Số bên trên là số chính phương, và bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a, b, c$ là độ dài ba cạnh của một tam giác, $(a, b, c)=1$ và
+$$\dfrac{a^{2}+b^{2}-c^{2}}{a+b-c}, \quad \dfrac{b^{2}+c^{2}-a^{2}}{b+c-a}, \quad \dfrac{c^{2}+a^{2}-b^{2}}{c+a-b}$$
+đều là các số nguyên. Chứng minh rằng một trong hai số sau đây là số chính phương
+$$(a+b-c)(b+c-a)(c+a-b),\quad 2(a+b-c)(b+c-a)(c+a-b).$$ 
+\nguon{Czech and Slovak Olympiad 2018}
+\loigiai{ Ta đặt $x=a+b-c, y=b+c-a, z=c+a-b.$ Phép đặt này cho ta  
+$$a=\dfrac{1}{2}(z+x),\quad b=\dfrac{1}{2}(x+y),\quad c=\dfrac{1}{2}(y+z).$$
+Bằng khai triển trực tiếp, ta chỉ ra
+$$\dfrac{a^2+b^2-c^2}{a+b-c}=\dfrac{x^2+xy+zx-yz}{2x}.$$
+Số kể trên là số nguyên, chứng tỏ $yz$ chia hết cho $2x.$ Lập luận tương tự, ta chỉ ra
+$$2x\mid yz,\quad 2y\mid zx,\quad 2z\mid xy.$$
+Mặt khác, giả thiết $(a,b,c)=1$ cho ta $(x,y,z)\in \{1;2\}.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $({x}, {y}, {z})=1,$ ta đặt $x=mnX,b=npY,c=pmZ,$ trong đó
+\begin{align*}
+    (m,n)&=(n,p)=(p,m)=\left(X,Y\right)=(Y,Z)\\&=(Z,X)=(m,Y)=(n,Z)=(p,X)=1.
+\end{align*}
+Từ việc $yz$ chia hết cho $2x,$ ta lần lượt suy ra
+$$2mnX\mid (npY)(pmZ)\Rightarrow 2X\mid p^2YZ.$$
+Nhờ điều kiện $(X,Y)=(X,Z)=(X,p)=1,$ nhận xét trên cho ta $1$ chia hết cho $2X.$ \\
+Điều này không thể xảy ra.
+    \item Nếu $({x}, {y}, {z})=2,$ ta đặt $x=2mnX,b=2npY,c=2pmZ,$ trong đó
+\begin{align*}
+    (m,n)&=(n,p)=(p,m)=\left(X,Y\right)=(Y,Z)\\&=(Z,X)=(m,Y)=(n,Z)=(p,X)=1.
+\end{align*}
+Lập luận tương tự trường hợp trên, ta chỉ ra $X,Y,Z$ đều là ước của $2.$ Không mất tổng quát, giả sử $$X\ge Y\ge Z.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{itemize}
+    \item \chu{Trường hợp 1.} Với $X=Y=Z=2,$ ta có $(X,Y,Z)=2>1,$ mâu thuẫn.
+    \item \chu{Trường hợp 2.} Với $X=Y=2$ và $Z=1,$ ta có $$xyz=4mn \cdot 4np \cdot 2pm=32(mnp)^2$$ là hai lần một số chính phương.
+    \item \chu{Trường hợp 3.} Với $X=2$ và $Y=Z=1,$ ta có $$xyz=4mn \cdot 2np \cdot 2pm=16(mnp)^2$$ là một số chính phương.
+    \item \chu{Trường hợp 4.} Với $X=Y=Z=1,$ ta có $$xyz=2mn \cdot 2np \cdot 2pm=8(mnp)^2$$ là hai lần một số chính phương.    
+\end{itemize}
+\end{enumerate}
+Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số nguyên dương $a,b,c$ sao cho $a^3+b^3+c^3$ chia hết cho $a^2b,b^2c$ và $c^2a.$
+\nguon{Bulgaria Mathematical Olympiad 2001}
+\loigiai{
+Do cả $a,b,c$ đều dương, ta có thể gọi $d$ là ước chung lớn nhất của $a,b,c.$\\ Phép gọi này cho ta biết, tồn tại các số nguyên dương $A,B,C$ sao cho
+$$(A,B,C)=1,a=dA,b=dB,c=dC.$$
+Ta viết lại giả thiết thành
+$$d^3A^3+d^3B^3+d^3C^3\text{ chia hết cho }d^3A^2B,d^3B^2C,d^3C^2A,$$
+hay là
+$A^3+B^3+C^3\text{ chia hết cho }A^2B,B^2C,C^2A.$ \\Do $(A,B,C)=1,$ nên ta có thể đặt $A=mnx,B=npy,C=pmz,$ với các số $m,n,p,x,y,z$ thỏa mãn
+$$(m,n)=(n,p)=(p,m)=(x,y)=(y,z)=(z,x)=(m,y)=(n,z)=(p,x)=1.$$
+Đầu tiên, ta viết lại điều kiện $A^2B\mid \left(A^3+B^3+C^3\right)$ về thành
+\[(mnx)^2npy\mid \left(m^3n^3x^3+n^3p^3y^3+p^3m^3z^3\right).\tag{1}\label{bai3bien1}\]
+Do cả $(mnx)^2npy,m^3n^3x^3,n^3p^3y^3$ đều chia hết cho $n^3$ nên $p^3m^3z^3$ cũng chia hết cho $n^3.$ Tuy nhiên, vì $$(m,n)=(p,n)=(z,n)=1,$$ ta bắt buộc phải có $n=1.$ Lập luận tương tự, ta chỉ ra $m=n=p=1.$ Chính vì thế, (\ref{bai3bien1}) cho ta
+\[x^2y\mid \left(x^3+y^3+z^3\right).\tag{2}\label{bai3bien2}\]
+Thiết lập các đánh giá tương tự, ta được
+\[y^2z\mid \left(x^3+y^3+z^3\right),\tag{3}\label{bai3bien3}\]
+\[z^2x\mid \left(x^3+y^3+z^3\right).\tag{4}\label{bai3bien4}\]
+Bội chung nhỏ nhất của $x^2y,y^2z$ và $z^2x$ bằng $x^2y^2z^2,$ thế nên (\ref{bai3bien2}),(\ref{bai3bien3}) và (\ref{bai3bien4}) cho ta
+$$x^2y^2z^2\mid \left(x^3+y^3+z^3\right).$$
+Không mất tổng quát, ta giả sử $x=\max\{x;y;z\}.$ Giả sử này cho ta
+$$x^2y^2z^2\le x^3+y^3+z^3\le 3x^3.$$
+Ta suy ra $y^2z^2\le 3x$ từ đây. Từ (\ref{bai3bien2}), ta suy ra thêm $z^3+y^3$ chia hết cho $x^2,$ và như vậy
+$$z^3+y^3\ge x^2\ge \dfrac{y^4z^4}{3}.$$
+Với đánh giá $z^3+y^3\ge \dfrac{y^4z^4}{3}$ bên trên, chia cả hai vế cho $y^3z^3,$ ta được
+$$yz\le \dfrac{3}{y^3}+\dfrac{3}{x^3}\le 3+3=6.$$
+Lần lượt kiểm tra trực tiếp các trường hợp
+$$xy=6,\quad xy=5,\quad xy=4,\quad xy=3,\quad xy=2,\quad xy=1,$$
+ta chỉ ra có vô hạn bộ $(a,b,c)=(kx,ky,kz)$ như sau
+
+    $$(k,k,k),\: (k,2k,3k),\: (k,3k,2k),$$
+    $$(2k,k,3k),\: (2k,3k,k),\: (3k,k,2k),\: (3k,2k,k),$$
+
+ở đây $k$ là số nguyên dương bất kì.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho ba số nguyên dương $a,b,c$ đôi một phân biệt thỏa mãn $(a,b,c) = 1$ và 
+$$a \mid (b - c)^2, \quad b \mid (c-  a)^2, \quad c \mid (a - b)^2.$$ Chứng minh rằng $a, b$  $c$ không là độ dài ba cạnh của một tam giác.
+\nguon{Baltic Way 2015}
+\loigiai{
+Ta đặt $a=mnx,b=npy,c=pmz,$ trong đó
+$$(m,n)=(n,p)=(p,m)=(x,y)=(y,z)=(z,x)=(m,y)=(n,z)=(p,x)=1.$$
+Phép đặt này cho ta 
+$$mnx \mid (npy - pmz)^2, \quad npy \mid (pmz-  mnx)^2, \quad pmz \mid (mnx - npy)^2.$$
+Dựa vào $mnx \mid (npy - pmz)^2,$ ta nhận thấy $(npy)^2$ chia hết cho $m.$ Kết hợp với điều kiện $$(m,y)=(m,p)=(m,n)=1,$$ ta chỉ ra $m=1.$ Tương tự, ta có $m=n=p=1,$ vậy nên hệ trên trở thành
+$$x \mid (y - z)^2, \quad y \mid (z-  x)^2, \quad z \mid (x - y)^2.$$ 
+Không khó để chỉ ra $$x^2+y^2+z^2-2xy-2yz-2zx=(y-z)^2+x(x-2y-2z)$$ chia hết cho $x.$ Bằng việc thiết lập các đẳng thức tương tự, ta thu được
+\begin{align*}
+    x \mid \left(x^2+y^2+z^2-2xy-2yz-2zx\right), \\
+    y \mid \left(x^2+y^2+z^2-2xy-2yz-2zx\right), \\
+    z \mid \left(x^2+y^2+z^2-2xy-2yz-2zx\right).
+\end{align*}
+Do $(x,y)=(y,z)=(z,x)=1,$ từ các nhận xét trên ta có
+$$xyz\mid \left(x^2+y^2+z^2-2xy-2yz-2zx\right).$$
+Ta giả sử phản chứng rằng $a,b,c$ là độ dài ba cạnh tam giác. Lúc này
+\begin{align*}
+    \heva{a>|b-c| \\ b>|c-a| \\ c>|a-b|}
+    \Rightarrow
+    \heva{x>|y-z| \\ y>|z-x| \\ z>|x-y|}
+    \Rightarrow
+    \heva{x^2&>(y-z)^2 \\ y^2&>(z-x)^2 \\ z&>(x-y)^2.}
+\end{align*}
+Lấy tổng theo vế rồi rút gọn, ta được
+$$x^2+y^2+z^2<2xy+2yz+2zx.$$
+Hướng đi tiếp theo của chúng ta là so sánh $2xy+2yz+2zx-x^2-y^2-z^2$ với $xyz.$\\ Ta xét các trường hợp dưới đây, với giả sử không mất tổng quát rằng $x\ge y\ge z.$
+\begin{enumerate}
+    \item Nếu $x\ge y\ge z\ge 3,$ ta có
+$$0<2xy+2yz+2zx-x^2-y^2-z^2\le xy+yz+zx\le \dfrac{xyz}{3}+\dfrac{xyz}{3}+\dfrac{xyz}{3}=xyz.$$
+Dấu bằng ở đánh giá trên phải xảy ra, tức là $x=y=z,$ mâu thuẫn với việc $x,y,z$ đôi một phân biệt.
+    \item Nếu $z=2,$ ta có $2>|x-y|=x-y,$ và do $x\ne y$ nên $x=y+1,$ nhưng lúc này $(x-y)^2$ không chia hết cho $z,$ mâu thuẫn.
+    \item Nếu $z=1,$ ta có $1>|x-y|,$ kéo theo $x\ne y,$ mâu thuẫn.
+\end{enumerate}
+Mâu thuẫn chỉ ra ở các trường hợp chứng tỏ giả sử phản chứng là sai. Bài toán được chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng không tồn tại ba số nguyên dương $a,b,c$ nguyên tố cùng nhau nào thỏa mãn đồng thời các điều kiện 
+\[2(a,b)+[a,b]=a^2,\quad 2(b,c)+[b,c]=b^2,\quad 2(c,a)+[c,a]=c^2.\]
+
+\loigiai{
+Giả sử tồn tại các số nguyên dương $a,b,c$ thỏa mãn. Ta đặt $a=mnx,b=npy,c=pmz,$ trong đó
+$$(m,n)=(n,p)=(p,m)=(x,y)=(y,z)=(z,x)=(m,y)=(n,z)=(p,x)=1.$$
+Các phương trình đã cho được viết lại thành
+$$\heva{
+    2n+mnpxy&=m^2n^2x^2 \\
+    2p+mnpyz&=n^2p^2y^2 \\
+    2m+mnpzx&=p^2m^2z^2}
+\Leftrightarrow 
+\heva{
+    2+mpxy&=m^2nx^2  \\
+    2+nmyz&=n^2py^2  \\
+    2+pnzx&=p^2mz^2.}$$
+Lần lượt xét tính chia hết cho $mx,ny,pz$ ở cả $3$ đẳng thức, ta chỉ ra $2$ chia hết cho cả $mx,ny,pz.$ \\Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $mx=1,$ xuất phát từ $2+mpxy=m^2nx^2,$ ta có
+    $$2+py=n.$$
+    Trong trường hợp này, ta chỉ ra $n=2+py\ge 3,$ vô lí do $n$ là ước của $2.$
+    \item Nếu $mx=2,$ xuất phát từ $2+mpxy=m^2nx^2,$ ta có   
+    $$2+2py=4n\Leftrightarrow 1+py=2n.$$
+    Rõ ràng, từ điều trên ta suy ra cả $p$ và $y$ là số lẻ. Kết hợp với dữ kiện $p,y$ đều là ước của $2,$ ta nhận được $p=y=1,$ và được thêm $n=1.$ Tuy nhiên, khi thế tất cả vào $2+nmyz=n^2py^2,$ ta nhận thấy không thỏa mãn.
+\end{enumerate}
+Như vậy, giả sử ban đầu là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các bộ ba số tự nhiên $(m,n,p)$ thỏa mãn đồng thời các điều kiện
+\[m + n = {\left( {m,n} \right)^2},\quad n + p= {\left( {n,p} \right)^2},\quad p+m = {\left( {p,m} \right)^2}.\]
+\loigiai{
+Nếu một trong ba số $m,n,p$ bằng $0,$ không mất tổng quát, ta giả sử $m=0.$ Trong trường hợp này, ta có
+$$0+n=(0,n)^2\Rightarrow n=n^2\Rightarrow
+\left[\begin{aligned}
+  &n=0\\
+  &n=1.
+\end{aligned}\right.$$
+Một cách tương tự, ta chỉ ra $p=0$ hoặc $p=1.$ Khi kiểm tra trực tiếp, ta thấy có các bộ $$(0,0,0),\quad (0,1,0),\quad (0,0,1)$$ thỏa mãn. Nếu cả $m,n,p$ đều dương, ta gọi $d$ là ước chung lớn nhất của $m,n,p.$ Phép gọi này cho ta biết, tồn tại các số nguyên dương $M,N,P$ sao cho
+$$(M,N,P)=1,\ m=dM,\ n=dN,\ p=dP.$$
+Lần lượt, ta thu được ba phương trình
+$$dM+dN=(dM,dN)^2,\quad dN+dP=(dN,dP)^2,\quad dP+dM=(dP,dM)^2.$$
+Hệ bên trên tương đương với
+$$M+N=d(M,N)^2,\quad N+P=d(N,P)^2,\quad P+M=d(P,M)^2,$$
+Ta có $d$ là ước của $M+N,N+P,P+M,$ thế nên
+$$d\mid (M+N)+(N+P)-(P+M)=2N.$$
+Một cách tương tự, ta chỉ ra $d$ là ước của $2M,2N,2P,$ lại do điều kiện $(M,N,P)=1$ nên $d\mid 2,$ tức $d=1$ hoặc $d=2.$ Ta xét hai trường hợp kể trên. 
+\begin{enumerate}
+    \item Nếu $d=1,$ do $(M,N,P)=(m,n,p)=1$ nên ta có thể đặt $$m=axy,\ n=byz,\ p=czx,$$ ở đây
+$(a,b)=(b,c)=(c,a)=(x,y)=(y,z)=(z,x)=(a,z)=(b,x)=(c,y)=1.$\\
+Phương trình đầu tiên trở thành
+$axy+byz=y^2,$
+hay là
+\[ax+bz=y.\tag{1}\label{3bien1}\]
+Một cách tương tự, ta thu được hệ gồm (\ref{3bien1}) và hai phương trình
+\begin{align}
+by+cx&=z,\tag{2}\label{3bien2}\\
+cz+ay&=x.\tag{3}\label{3bien3}  
+\end{align}
+Không mất tổng quát, ta giả sử $x=\max \{x;y;z\}.$ Giả sử này kết hợp với (\ref{3bien3}) cho ta
+$$x\ge cx+ax=x(c+a).$$
+Đây là điều mâu thuẫn.
+    \item Nếu $d=2,$ tương tự như trường hợp trước, ta có thể đặt $m=2axy,n=2byz,p=2czx,$ ở đây
+$$(a,b)=(b,c)=(c,a)=(x,y)=(y,z)=(z,x)=(a,z)=(b,x)=(c,y)=1.$$
+Đồng thời, hệ phương trình ta thu được gồm $3$ phương trình sau
+\begin{align}
+ax+bz&=2y,\tag{4}\label{3bien4}\\
+by+cx&=2z,\tag{5}\label{3bien5}\\
+cz+ay&=2x.\tag{6}\label{3bien6}
+\end{align}
+Không mất tổng quát, ta giả sử $x=\max \{x;y;z\}.$ Giả sử này kết hợp với (\ref{3bien6}) cho ta
+$$2x=cz+ay\ge cx+ax=x(c+a).$$
+Ta thu được $2\ge c+a.$ Do cả $c$ và $a$ là số nguyên dương nên $c=a=1.$ \\
+Ngoài ra, kết quả $c=a=1$ này cho ta biết, dấu bằng ở đánh giá $$cz+ay\ge cz+ax$$ phải xảy ra, tức là $x=y=z.$ Tuy nhiên, điều kiện $$(x,y)=(y,z)=(z,x)=1$$ bắt buộc $x,y,z$ đều phải bằng $1.$ Thế $x=y=z=1,a=c=1$ vào (\ref{3bien6}), ta tìm ra $b=1.$\\ Đối chiếu lại với các phép đặt, ta có $m=n=p=2.$
+\end{enumerate}
+Kết luận, có $5$ bộ $(x,y,z)$ thỏa mãn đề bài, đó là $(0,0,0),(2,2,2)$ và các hoán vị của bộ $(0,0,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $a,b,c$ thỏa mãn \[[a,b,c]=\dfrac{ab+bc+ca}{4}.\]
+\nguon{Junior Japanese Mathematical Olympiad 2019}
+\loigiai{
+Giả sử tồn tại các số nguyên dương $a,b,c$ thỏa mãn.
+\\Ta đặt $a=dmnx,b=dnpy,c=dpmz,$ ở đây $d=(a,b,c)$ và
+$$(m,n)=(n,p)=(p,m)=(x,y)=(y,z)=(z,x)=(m,y)=(n,z)=(p,x)=1.$$
+Đẳng thức đã cho được viết lại thành
+$$4dmnpxyz=d^2n^2mpxy+d^2p^2nmyz+d^2m^2pnzx.$$
+Chia cả hai vế cho $dmnp,$ ta được
+$$4xyz=d\left(xyn+yzp+zxm\right).$$
+Ta sẽ chứng minh $(xyn+yzm+zxp,xyz)=1.$ Thật vậy, 
+\begin{itemize}
+    \item[i,] $(xyn+yzp+zxm,x)=(yzp,x)=1$ do $(x,y)=(x,z)=(x,p)=1.$
+    \item[ii,] $(xyn+yzp+zxm,y)=(zxm,y)=1$ do $(y,z)=(y,x)=(y,m)=1.$    
+    \item[iii,] $(xyn+yzp+zxm,z)=(xyn,z)=1$ do $(z,x)=(z,y)=(z,n)=1.$
+\end{itemize}
+Các chứng minh vừa rồi dẫn đến $4$ chia hết cho $d\left(xyn+yzp+zxm\right).$ Với việc
+$$xyn+yzp+zxm\ge 1\cdot1\cdot1+1\cdot1\cdot1+1\cdot1\cdot1=3,$$
+ta chỉ ra $d=1$ và $xyn+yzp+zxm=4.$ Trong ba số $xyn,yzp,zxm$ lúc này, phải có hai số bằng $1$ và một số bằng $2.$ Các trường hợp trên cho ta ba bộ $(a,b,c)$ thỏa mãn đề bài là $(1,2,2),(2,1,2)$ và $(2,2,1).$}
+\end{gbtt}
+
+\section{Bài toán về các ước của một số nguyên dương}
+
+\subsection*{Lí thuyết}
+
+Trước hết, tác giả xin phép nhắc lại một vài lí thuyết quan trọng được sử dụng trong phần này.
+\begin{enumerate}
+    \item Số ước dương của một số nguyên dương $A$ gồm $n$ ước nguyên tố và có phân tích tiêu chuẩn $A=p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}$ là $\left(k_1+1\right)\left(k_2+1\right)\ldots\left(k_n+1\right).$
+    \item Nếu số nguyên dương $A$ có các ước $1<d_1<d_2<\ldots<d_n$ thì 
+    $$A=d_1d_n=d_2d_{n-1}=\ldots=d_kd_{n+1-k}.$$
+    \item Ước dương nhỏ thứ nhất của một số lớn hơn $1$ luôn là $1$, trong khi ước dương tiếp theo là số nguyên tố.
+\end{enumerate}
+\subsection*{Ví dụ minh họa}
+\begin{bx}
+Tìm tất cả số nguyên $n$ có đúng $16$ ước nguyên dương $$1=d_1<d_2<d_3<\ldots<d_{16}=n$$ thỏa mãn $d_6=18$ và $d_9-d_8=7.$
+\loigiai{
+Từ giả thiết $d_6=18,$ ta chỉ ra
+$$d_1=1,\: d_2=2,\: d_3=3,\: d_4=6,\: d_5=9.$$
+Theo đó, $n$ nhận $2$ và $3$ là ước nguyên tố, ngoài ra số mũ của $3$ phải lớn hơn $1.$
+Với điều kiện $k_1,k_2,\ldots,k_n$ đều là các số nguyên dương, ta đặt
+	$n=2^{k_1}3^{k_2}p_3^{k_3}p_4^{k_4}\ldots p_m^{k_m}.$
+Tổng số ước của $A$ là $16,$ vậy nên
+	$$\left(k_1+1\right)\left(k_2+1\right)\ldots\left(k_m+1\right)=16.$$
+Ta nhận thấy $k_2+1\ge 3,$ vậy nên ta có $k_1+1\ge 2,k_2+1\ge 4,$ kéo theo $m\le 3.$ \\
+Tới đây, ta chia bài toán làm hai trường hợp.
+\begin{enumerate}
+    \item Nếu $m=2,k_1=3,k_2=3,$ ta tìm ra $n=216.$ Lúc này, $d_6=8$, mâu thuẫn.
+    \item Nếu $m=3,k_1=1,k_2=3,k_3=1,$ để đơn giản, ta đặt $p_3=p,$ khi đó $n=2\cdot 3^3\cdot p,$ và rõ ràng $p>18.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1. }Nếu $18<p<27,$ ta có 
+        $$d_7=p,\quad d_8=27,\quad d_9=2p.$$
+        Ta nhận được $2p-27=7,$ thế nên $p=17,$ mâu thuẫn với $18<p<27.$
+        \item \chu{Trường hợp 2. }Nếu $p>27,$ ta có
+        $$d_7=27,\quad d_8=p,\quad d_9=54.$$
+        Ta nhận được $54-p=7,$ thế nên $p=47.$ 
+    \end{itemize}
+\end{enumerate}
+Tổng kết lại và thử trực tiếp, ta có số $n=2\cdot 3^3\cdot 47=2538$ thỏa yêu cầu bài toán.}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn $$n=d^2_1+d^2_2+d^2_3+d^2_4,$$ trong đó $d_1<d_2<d_3<d_4$ là $4$ ước số dương nhỏ nhất của $n.$
+\nguon{Iran Mathematical Olympiad 1999}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn $$n=d_2d_3+d_3d_5+d_5d_2,$$ trong đó $d_1<d_2<d_3<d_4<d_5$ là $5$ ước số dương nhỏ nhất của $n.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả số nguyên $n$ có các ước nguyên dương $$1=d_1<d_2<d_3<\ldots<d_{k}=n$$ thỏa mãn $n$ chia hết cho $2019$ và $n=d_{19}d_{20}.$
+\nguon{Belarusian Mathematical Olympiad 2019}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả số nguyên $n$ có các ước nguyên dương $$1=d_1<d_2<d_3<\ldots<d_{k}=n$$ thỏa mãn $n=d_{13}+d_{14}+d_{15}$ và $\left(d_5+1\right)^3=d_{15}+1.$ 
+\end{btt}
+
+\begin{btt}
+Tìm tất cả số nguyên $n$ có các ước nguyên dương $$1=d_1<d_2<d_3<\ldots<d_{k}=n$$ thỏa mãn $d_5-d_3=50$ và $11d_5+8d_7=3n.$
+\nguon{Czech and Slovak Mathematical Olympiad 2014}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n$ có $12$ ước dương $1=d_{1}<d_{2}<\cdots<d_{12}=n$ thỏa mãn \[d_{d_4-1}=\left(d_1+d_2+d_4\right)d_8.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $n>1$ thỏa mãn nếu $n$ có $k$ ước nguyên dương $1=d_1<d_2<\ldots <d_k=n$ thì $d_1+d_2,d_1+d_2+d_3,\ldots ,d_1+d_2+\ldots+d_{k-1}$ cũng là các ước của $n$. 
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $n$ có tất cả $k$ ước số dương là $d_{1}< d_{2}< \ldots<d_{k}$. Giả sử
+$$d_{1}+d_{2}+\ldots+d_{k}+k=2 n+1.$$ Chứng minh rằng $2m$ là số chính phương.
+\end{btt}
+
+\begin{btt}
+Số nguyên dương $n$ được gọi là số \chu{điều hòa} nếu như tổng bình phương các ước dương của nó (kể cả $1$ và $n$) đúng bằng ${{\left( n+3 \right)}^{2}}$.
+\begin{enumerate}[a,]
+    \item Chứng minh rằng số $287$ là một số \chu{điều hòa}.
+    \item Chứng minh rằng số $n=p^3$ (với $p$ là một số nguyên tố) không thể là số \chu{điều hòa}.
+    \item Chứng minh rằng nếu số $n=pq$ (với $p$ và $q$ là các số nguyên tố khác nhau) là số \chu{điều hòa} thì $n+2$ là một số chính phương.
+\end{enumerate}
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2013}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $N$ biết rằng tổng tất cả các ước số của $N$ bằng $2N$ và tích tất cả các ước số của $N$ bằng $N^2$.
+\nguon{Tạp chí Toán học và Tuổi trẻ số 512, tháng 2 năm 2020}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn $$n=d^2_1+d^2_2+d^2_3+d^2_4,$$ trong đó $d_1<d_2<d_3<d_4$ là $4$ ước số dương nhỏ nhất của $n.$
+\nguon{Iran Mathematical Olympiad 1999}
+\loigiai{Hiển nhiên, ta có $d_1=1.$ Với số nguyên dương $n$ thỏa yêu cầu, ta chứng minh $d_2=2.$ Trong trường hợp $n$ là một số lẻ thì $d_{1}, d_{2}, d_{3}, d_{4}$ cũng là 4 số lẻ, do đó
+$$d_{1}^{2} \equiv d_{2}^{2} \equiv d_{3}^{2} \equiv d_{4}^{2} \equiv 1 \pmod{4}.$$
+Kết hợp với giả thiết $n=d^2_1+d^2_2+d^2_3+d^2_4,$ ta chỉ ra
+ $$n=d_{1}^{2}+d_{2}^{2}+d_{3}^{2}+d_{4}^{2} \equiv 0 \pmod{4}.$$  Điều này trái với điều kiện $n$ là số lẻ. Mâu thuẫn thu được chứng tỏ $d_2=2.$  \\
+Với $n$ chia hết cho $4,$ do $d_{1}=1$ và $d_{2}=2$ nên
+$$n \equiv 1+0+d_{3}^{2}+d_{4}^{2} \equiv 0 \pmod{4}.$$
+Ta suy ra $d_3^2+d_4^2\equiv 3\pmod{4}$ từ đây, nhưng điều này không thể xảy ra vì
+$$d_3^2+d_4^2\equiv 0,1,2\pmod{4}.$$
+Do đó $n$ không thể chia hết cho $4,$ và kéo theo $n \equiv 2 \pmod{4}$. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $d_3= p$ và $d_4=q$ với $p, q$ là các số nguyên tố lẻ, ta có 
+    $$n=1+p^2+q^2\equiv 1+1+1\equiv 3 \pmod{4},$$ 
+    mâu thuẫn với $n \equiv 2 \pmod{4}.$ Trường hợp này không xảy ra.
+    \item Nếu $d_2=p,d_3=2p$ với $p$ là số nguyên tố, ta có
+    $$n=d_{1}^{2}+d_{2}^{2}+d_{3}^{2}+d_{4}^{2} \equiv 5\left(1+p^{2}\right).$$
+    Đánh giá trên chứng tỏ $p=5,$ và vậy thì $n=130.$
+\end{enumerate}
+Kiểm tra trực tiếp số $n=130,$ ta thấy đây là giá trị $n$ duy nhất thỏa mãn đề bài. Bài toán được giải quyết.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n$ thỏa mãn $$n=d_2d_3+d_3d_5+d_5d_2,$$ trong đó $d_1<d_2<d_3<d_4<d_5$ là $5$ ước số dương nhỏ nhất của $n.$
+\loigiai{Đầu tiên, ta có $d_2=p,$ với $p$ là số nguyên tố, đồng thời $d_3=p^2$ hoặc $d_3=q,$ với $q$ là số nguyên tố.
+\begin{enumerate}
+    \item Trong trường hợp $d_3=p^2,$ ta sẽ có
+    $$n=d_2d_3+d_3d_5+d_5d_2=p^3+d_5\left(p^2+p\right).$$
+    Với việc $n$ và $p^3$ cùng chia hết cho $p^2,$ ta nhận thấy $d_5\left(p^2+p\right)$ chia hết cho $p^2,$ hay là $p\mid d_5.$ \\
+    Tuy nhiên, nếu $d_5$ có ước nguyên tố $r>p,$ ta nhận thấy 
+    $$r\mid n,\quad r\nmid p^3,\quad r\mid d_5\left(p^2+p\right).$$
+    Các nhận xét này mâu thuẫn với việc $n=p^3+d_5\left(p^2+p\right),$ thế nên $d_5$ chỉ có duy nhất một ước nguyên tố là $p.$ Nhờ vào giả thiết $d_5$ là ước thứ $5$ của $n,$ ta suy ra $d_5=p^3$ hoặc $d_5=p^4.$ 
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $d_5=p^3,$ ta có $n=p^3\left(p^2+p+1\right)$ và $d_4=p^2+p+1$ nguyên tố.\\ Kiểm tra trực tiếp, tất cả các số có dạng trên đều thỏa mãn. 
+        \item\chu{Trường hợp 2.} Nếu $d_5=p^4,$ ta có $n=p^3+p^5+p^6$ và $d_4=p^3$ nguyên tố. \\Tuy nhiên, $n$ không chia hết cho $p^4$ trong khả năng này, một điều mâu thuẫn. 
+    \end{itemize}
+    \item Trong trường hợp $d_3=q,$ ta sẽ có
+    $$n=d_2d_3+d_3d_5+d_5d_2=pq+d_5p+d_5q.$$
+    Do cả $n,pq$ và $d_5p$ chia hết cho $p$ nên $d_5q$ chia hết cho $p,$ và vì $(p,q)=1$ nên $p\mid d_5.$ \\Một cách tương tự, ta chỉ ra $pq\mid d_5,$ và bắt buộc $d_5=p^2q.$ Ta suy ra
+    $$n=pq+p^2q\cdot p+p^2q\cdot q=pq(p^2+pq+1).$$
+    Do $n$ chia hết cho $p^2q,$ ta cần phải có $p^2+pq+1$ chia hết cho $p.$ Điều này là không thể.
+\end{enumerate}
+Tóm lại, các số $n$ cần tìm có dạng $n=p^3\left(p^2+p+1\right),$ trong đó $p$ và $p^2+p+1$ là số nguyên tố.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả số nguyên $n$ có các ước nguyên dương $$1=d_1<d_2<d_3<\ldots<d_{k}=n$$ thỏa mãn $n$ chia hết cho $2019$ và $n=d_{19}d_{20}.$
+\nguon{Belarusian Mathematical Olympiad 2019}
+\loigiai{ 
+Vì $n=d_{19}d_{20}$ và $1=d_1<d_2<d_3<\ldots<d_{k}=n$ nên $n$ có $19\cdot2=38$ ước nguyên dương. Đặt $$n=p_1^{\alpha_1}p_2^{\alpha_2}\cdots p_m^{\alpha_m},$$ trong đó $p_i$ là các số nguyên tố phân biệt, $\alpha_i$ là số tự nhiên và $i=\overline{1,2,\cdots,m}.$ Phép đặt này cho ta
+$$\tron{\alpha_1+1}\tron{\alpha_2+1}\cdots\tron{\alpha_m+1}=38=2\cdot19.$$
+Nhờ nhận xét trên, ta thu được $m\le 2,$ và dẫn đến $n=p_1^{\alpha_1}p_2^{\alpha_2}$ hoặc $n=p_1^{\alpha_1}.$ Với giả thiết $n$ chia hết cho $2019,$ ta suy ra số ước nguyên tố của $n$ phải lớn hơn $1,$ và chỉ tồn tại trường hợp $$n=p_1^{\alpha_1}p_2^{\alpha_2}.$$ 
+Hơn nữa, từ
+$\tron{\alpha_1+1}\tron{\alpha_2+1}=2\cdot19,$ ta chỉ ra $\tron{\alpha_1,\alpha_2}=\tron{1,18}$ hoặc $\tron{\alpha_1,\alpha_2}=\tron{18,1}.$\\
+Như vậy, tất cả các số nguyên $n$ thỏa mãn là $3\cdot673^{18}$ và $673\cdot3^{18}$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả số nguyên $n$ có các ước nguyên dương $$1=d_1<d_2<d_3<\ldots<d_{k}=n$$ thỏa mãn $n=d_{13}+d_{14}+d_{15}$ và $\left(d_5+1\right)^3=d_{15}+1.$ 
+\loigiai{
+Từ dữ kiện $n=d_{13}+d_{14}+d_{15}$, ta suy ra $d_{13}+d_{14}$ chia hết cho $d_{15}.$ Tuy nhiên, do
+$$d_{13}+d_{14}< 2d_{15}$$
+nên bắt buộc $d_{13}+d_{14}=d_{15}.$ Ta cũng đã biết $d_{13}d_4=d_{14}d_3=n,$ thế nên là
+$$n=d_{13}+d_{14}+d_{15}=2d_{13}+2d_{14}=\dfrac{2n}{d_4}+\dfrac{2n}{d_3}.$$
+Ta suy ra
+$d_4d_3=2d_4+2d_3.$
+Chuyển về dạng phương trình ước số tương đương, ta được
+$$\left(d_4-2\right)\left(d_3-2\right)=4.$$
+Do $d_4-2>d_3-2>0$ nên bắt buộc $d_4=6,d_3=3.$\\ Nhận xét này cho ta biết $n$ nhận $2$ và $3$ là ước nguyên tố.  Ta xét các trường hợp sau đây
+\begin{enumerate}
+    \item Nếu $d_5=p$ là số nguyên tố (và chắc chắn lớn hơn $6$), ta có
+    $$(p+1)^3=d_{15}+1\Rightarrow p^3=\dfrac{n}{2}-3p^2-3p.$$
+    Xét tính chia hết cho $3$ ở cả hai vế, ta chỉ ra $p^3$ chia hết cho $3,$ tức $p=3,$ mâu thuẫn với $p>6.$
+    \item Nếu $d_5$ không là số nguyên tố, các ước nguyên tố của $d_5$ chỉ có thể là $2$ và $3,$ đồng thời số mũ của chúng không vượt quá $2.$ Ta xét tới các khả năng nhỏ sau đây.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $d_5=2^2,$ ta có $d_5<4\le d_4,$ mâu thuẫn.
+        \item \chu{Trường hợp 2.} Nếu $d_5=3^2,$ ta tìm được $d_{15}=999,$ và khi ấy $n=1998.$
+        \item \chu{Trường hợp 3.} Nếu $d_5=2^a\cdot3^b,$ với ít nhất một trong hai số $a,b$ lớn hơn $1,$ ta chỉ ra tồn tại ít nhất $5$ ước của $n$ nhỏ hơn $d_5,$ mâu thuẫn. 
+    \end{itemize}
+\end{enumerate}
+Thử trực tiếp $n=1998,$ ta thấy thỏa yêu cầu, và đây là số nguyên dương ta cần tìm.}
+\end{gbtt}
+
+
+\begin{gbtt}
+Tìm tất cả số nguyên $n$ có các ước nguyên dương $$1=d_1<d_2<d_3<\ldots<d_{k}=n$$ thỏa mãn $d_5-d_3=50$ và $11d_5+8d_7=3n.$
+\nguon{Czech and Slovak Mathematical Olympiad 2014}
+\loigiai{Giả sử tồn tại số nguyên $n$ thỏa mãn.
+Vì $d_5,d_7$ đều là ước của $n$ nên từ giả thiết $3n=11d_5+8d_7,$ ta có
+$$d_5\mid 8d_7,\qquad d_7\mid11d_5.$$
+Đặt $8d_7=ad_5$ và $11d_5=bd_7,$ điều này dẫn đến $88d_7=abd_7$ kéo theo $b\mid 88.$ Vì $11d_5=bd_7$ và $d_5<d_7$ nên $11>b.$ Từ những nhận xét trên, ta suy ra $b\in\left\{1,2,4,8\right\}.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $b=8,$ ta có $11d_5=8d_7$ dẫn đến $8\mid d_5$ hay $8\mid n.$ Vì $d_5-d_3=50$ và $d_5$ là số chẵn nên $d_3$ chẵn. Do $n$ chia hết cho $8$ nên $d_3=4.$ Từ đây, ta suy ra $d_5=54,$ và $n$ chia hết cho $3,$ nhưng lúc này $d_3=3,$ mâu thuẫn.
+    \item Với $b=4,$ ta có $11d_5=4d_7$ dẫn đến $4\mid d_5$ hay $4\mid n.$ Chứng minh tương tự trường hợp trên, ta nhận thấy không có $n$ thỏa mãn.
+    \item Với $b=2,$ tương tự trường hợp trên, ta có $2\mid d_5,n,d_3.$ Kết hợp với $11\mid d_7,$ ta suy ra $11\mid n.$ \\Do đó, $d_3$ là số chẵn thỏa mãn $2<d_3\le 11.$ Ta xét các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Với $d_3=4,$ ta có $d_5=50+4=54,$ nhưng lúc này $d_3=3,$ mâu thuẫn.
+        \item\chu{Trường hợp 2.} Với $d_3=6,$ ta có $3\mid n$ kéo theo $d_3=3,$ mâu thuẫn.
+        \item\chu{Trường hợp 3.} Với $d_3=8,$  ta có $4\mid n$ kéo theo $d_3=4,$ mâu thuẫn.
+        \item\chu{Trường hợp 4.} Với $d_3=10,$ ta có $5\mid n$ kéo theo $d_3=5,$ mâu thuẫn.
+    \end{itemize}
+    \item Với $b=1,$ ta có $11d_5=d_7,$ và khi ấy
+    $$11d_5+88d_7=3n,$$
+    hay $33d_5=n.$ Từ đây, ta suy ra $n=33d_3+1650,$ và $d_3$ là ước của $1650.$ Bằng phản chứng, ta dễ dàng chứng minh được $d_3$ chỉ có một ước nguyên tố. Do $d_3$ là ước của $1650$ nên
+    $d_3\in\left\{3,5,11\right\}.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $d_3=3,$ ta có $n=33\cdot3+1650=1749.$ Thử trực tiếp, ta thấy $$d_5-d_3=33-3=30,$$ mâu thuẫn với giả thiết $d_5-d_3=50.$
+        \item \chu{Trường hợp 2.} Nếu $d_3=5,$ ta có $n=33\cdot5+1650=1815.$ Thử trực tiếp, ta thấy $$d_5-d_3=15-5=10,$$ mâu thuẫn với giả thiết $d_5-d_3=50.$      
+        \item \chu{Trường hợp 3.} Nếu $d_3=11,$ ta có $n=33\cdot11+1650=2013.$ Thử trực tiếp, ta thấy thỏa. 
+    \end{itemize}
+\end{enumerate}
+Như vậy, có duy nhất một số nguyên $n$ thỏa mãn là $2013.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả số nguyên dương $n$ có $12$ ước dương $1=d_{1}<d_{2}<\cdots<d_{12}=n$ thỏa mãn \[d_{d_4-1}=\left(d_1+d_2+d_4\right)d_8.\]
+\loigiai{
+Do $d_8$ là một ước của $n$ và $d_8$ chia hết cho $d_{d_4-1}$ nên tồn tại $1 \leqslant i \leqslant 12$ sao cho 
+$$d_i = d_1 + d_2 + d_4.$$ 
+Vì $d_i>d_4$ nên ta có $i \geqslant 5$. Ngoài ra, do $d_id_8=d_{d_4- 1}\leqslant n$ nên $i\le 5.$ Như vậy $i = 5$ và 
+$$d_1+d_2+d_4=d_5.$$ 
+Từ đây và $d_{d_4 - 1}=d_5d_8=n=d_{12},$ ta suy ra $d_4 = 13$ còn ${d_5} = 14 + {d_2}$. Tất nhiên ${d_2}$ là ước số nguyên tố nhỏ nhất của $n$ và vì ${d_4} = 13$, chúng ta chỉ có thể có ${d_2} \in \left\{ {2;3;5;7;11} \right\}$. Lại vì $n$ có 12 ước số, nó có nhiều nhất $3$ thừa số nguyên tố.
+\begin{enumerate}
+    \item Nếu $d_2=2$ thì $d_5=16,$ kéo theo $d_3=4,d_4=8,$ nhưng khi ấy $d_5\ne d_1+d_2+d_4,$ mâu thuẫn.
+    \item Nếu $d_2=3$ thì $d_5=17.$ Do đây là hai số nguyên tố nên trong $d_3,d_4$ chỉ có một số nguyên tố lớn hơn $3$ và nhỏ hơn $17.$ Với việc $n$ có $12$ ước nguyên dương và $3$ ước nguyên tố, phải có một ước nguyên tố của $n$ mang mũ $2.$ Từ các lập luận kể trên, ta chỉ ra
+    $$\tron{d_3,d_4}\in\left\{\tron{5,9};\tron{7,9};\tron{9,11};\tron{9,13}\right\}.$$
+    Thử trực tiếp, ta tìm ra $n=9\cdot13\cdot17=1989$ khi $d_3=9,d_4=13.$
+    \item Nếu $d_2\in\{5;7;11\}$ do $d_2<d_3<d_4<d_5<d^2_2$ nên $d_3,d_4$ là số nguyên tố, nhưng khi ấy $n$ có ít nhất $4$ ước nguyên tố, mâu thuẫn.
+\end{enumerate}
+Như vậy, $n=1989$ là số nguyên dương duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $n>1$ thỏa mãn nếu $n$ có $k$ ước nguyên dương $$1=d_1<d_2<\ldots <d_k=n$$ thì $d_1+d_2,d_1+d_2+d_3,\ldots ,d_1+d_2+\ldots+d_{k-1}$ cũng là các ước của $n.$ 
+\loigiai{
+Với việc $d_1,d_2,\ldots,d_k$ là các số nguyên dương, ta nhận xét
+$$d_2<d_1+d_2<d_1+d_2+d_3<\ldots <d_1+d_2+\ldots+d_{k-1}\le n.$$
+Do $d_1+d_2,d_1+d_2+d_3,\ldots ,d_1+d_2+\ldots+d_{k-1}$ cũng là các ước của $n$ nên ta chỉ ra được rằng 
+\begin{align*}
+    d_3&=d_1+d_2,\\
+    d_4&=d_1+d_2+d_3,\\
+    &\ldots\\
+    d_k&=d_1+d_2+d_3\ldots+d_{k-1}.
+\end{align*}
+Rõ ràng $k\ge 3.$ Các nhận xét trên kéo theo
+\begin{align*}
+    d_3&=d_1+d_2,\\
+    d_4&=d_1+d_2+d_3=d_3+d_3=2d_3,\\
+    d_5&=d_1+d_2+d_3+d_4=d_4+d_4=2d_4=4d_3,\\   
+    d_6&=d_1+d_2+d_3+d_4+d_5=d_5+d_5=2d_5=8d_3,\\       
+    &\ldots\\
+    d_k&=d_1+d_2+d_3\ldots+d_{k-1}=d_{k-1}+d_{k-1}=2d_{k-1}=2^{k-3}d_3.
+\end{align*}
+Do $d_4=2d_3$ và $n$ chia hết cho $d_4$ nên $d_2=2.$ Như thế thì $d_3=3$ và $n=d_k=3\cdot2^{k-3}.$\\ Đây cũng là dạng tổng quát của các số nguyên $n$ thỏa yêu cầu.}
+\end{gbtt}
+ 
+\begin{gbtt}
+Cho số nguyên dương $n$ có tất cả $k$ ước số dương là $d_{1}< d_{2}< \ldots<d_{k}$. Giả sử
+$$d_{1}+d_{2}+\ldots+d_{k}+k=2 n+1.$$ Chứng minh rằng $2m$ là số chính phương.
+\loigiai{Gọi $l_{1}, l_{2}, \ldots, l_{s}$ là các ước lẻ của $n$ và $2^m$ là lũy thừa lớn nhất của $2$ trong khai triển $n.$ Các ước của $n$ là 
+$$l_{1}, l_{2}, \ldots, l_{s}, 2 l_{1}, 2 l_{2}, \ldots, 2 l_{s}, \ldots, 2^{m} l_{1}, 2^{m} l_{2}, \ldots, 2^{m} l_{s}.$$
+Đẳng thức ở đề bài trở thành
+$$l_{1}+l_{2}+\ldots+l_{s}+2 l_{1}+2 l_{2}+\ldots+2 l_{s}+\ldots+2^{m} l_{1}+2^{m} l_{2}+\ldots+2^{m} l_{s}+(m+1) s=2 n+1.$$
+Đưa các nhân tử $l_{1}+l_{2}+\ldots+l_{s}$ về một nhóm, đẳng thức trên tương đương
+\[\left(l_{1}+l_{2}+\ldots+l_{s}\right)\left(2^{m+1}-1\right)+(m+1) s=2 n+1 .\label{n2lascp}\tag{*}\]
+Tới đây, ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $s$ chẵn thì vế trái của (\ref{n2lascp}) chẵn, còn vế phải của (\ref{n2lascp}) lẻ, mâu thuẫn.
+    \item Nếu $s$ lẻ và $m$ chẵn thì vể trái của vế trái của (\ref{n2lascp}) cũng chẵn, còn vế phải của (\ref{n2lascp}) lẻ, mâu thuẫn.
+    \item Nếu $s$ lẻ và $m$ chẵn, $\dfrac{n}{2^m}$ có số ước lẻ. Số $\dfrac{n}{2^{m}}=p_{1}^{k_{1}} p_{2}^{k_{2}} \cdots p_{m}^{k_{m}}$ có số ước là 
+    $$\left(k_{1}+1\right)\left(k_{2}+1\right) \ldots\left(k_{m}+1\right).$$
+    Theo đó, các $k_i$ là số chẵn, và $2^{m+1}\cdot\dfrac{n}{2^m}=2n$ là số chính phương.
+\end{enumerate}
+Như vậy, bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Số nguyên dương $n$ được gọi là số \chu{điều hòa} nếu như tổng bình phương các ước dương của nó (kể cả $1$ và $n$) đúng bằng ${{\left( n+3 \right)}^{2}}$.
+\begin{enumerate}[a,]
+    \item Chứng minh rằng số $287$ là một số \chu{điều hòa}.
+    \item Chứng minh rằng số $n=p^3$ (với $p$ là một số nguyên tố) không thể là số \chu{điều hòa}.
+    \item Chứng minh rằng nếu số $n=pq$ (với $p$ và $q$ là các số nguyên tố khác nhau) là số \chu{điều hòa} thì $n+2$ là một số chính phương.
+\end{enumerate}
+\nguon{Chuyên Toán Phổ thông Năng khiếu 2013}
+\loigiai{
+\begin{enumerate}[a,]
+    \item  Dễ thấy $287=1\cdot 7\cdot 41.$ Ta có 
+    $${{\left( 287+3 \right)}^{2}}={{290}^{2}}= 84100={{1}^{2}}+{{7}^{2}}+{{41}^{2}}+{{287}^{2}}.$$ 
+    Từ đây, ta suy ra $287$ là số điều hòa.
+    \item Giả sử $n=p^3$ là số điều hòa. Các ước dương của $n$ lúc này là $1,p,p^2,p^3.$ Giả thiết cho ta
+    $${{\left( {{p}^{3}}+3 \right)}^{2}}={{1}^{2}}+{{p}^{2}}+{{p}^{4}}+{{p}^{6}}.$$ Biến đổi tương đương, ta được
+    $${{p}^{6}}+6{{p}^{3}}+9={{1}^{2}}+{{p}^{2}}+{{p}^{4}}+{{p}^{6}}\Leftrightarrow p\left( {{p}^{3}}-6{{p}^{2}}+p \right)=8.$$
+    Do đó ta được $p\mid 8$ mà $p$ là số nguyên tố nên $p=2$. Khi đó $p\left( {{p}^{3}}-6{{p}^{2}}+p \right)=28\ne 8.$\\ 
+    Vì vậy, giả sử sai hay  $n={{p}^{3}}$ không thể là số điều hòa.
+    \item Ta có $n=pq$ là số điều hòa với $p$ và $q$ là các nguyên tố khác nhau. Ta nhận được
+    $$1+p^2+q^2+p^2q^2=(pq+3)^2\Leftrightarrow p^2-6pq+q^2=8\Leftrightarrow (p-q)^2=4pq+8.$$
+    Ta có $4\mid{{\left( p-q \right)}^{2}}$ nên $2\mid (p-q)$. Như vậy
+    $$n+2=pq+2=\dfrac{(p-q)^2}{4}=\tron{\dfrac{p-q}{2}}^2$$
+    là một số chính phương. Bài toán được chứng minh.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $N$ biết rằng tổng tất cả các ước số của $N$ bằng $2N$ và tích tất cả các ước số của $N$ bằng $N^2$.
+\nguon{Tạp chí Toán học và Tuổi trẻ số 512, tháng 2 năm 2020}
+\loigiai{Ta không xét số $N=0$ vì số $0$ có vô hạn ước số. Số $N$ khác $1$ vì tổng tất cả các ước số của $N=1$ bằng $1$ khác $2N=2$. Ta xét các trường hợp sau đối với $N>1.$
+\begin{enumerate}
+\item  Nếu $N$ có nhiều hơn bốn ước số, gọi $a$ là ước số nhỏ nhất của $N~(a\neq 1)$ và $c$ là ước số lớn nhất
+		 của $N~(c\neq N)$ thì tồn tại ít nhất một ước số $b$ thỏa mãn 
+		 $$1<a<b<c<N.$$ 
+		 Ngoài ra ta còn có $N=ac.$ Lúc đó tích tất cả các ước số của $N$ bằng $$a^2c^2\stackrel{\text{phép đặt}}{=}N^2\stackrel{\text{giả thiết}}{=}1 \cdot a \cdot b\cdots c \cdot N\geq abcac=a^2c^2b,$$ suy ra $b=1$ trái giả thiết $b>a>1$.
+        \item Nếu $N$ có đúng hai ước số, tích tất cả các ước số của $N$ bằng $N^2,$ suy ra $N=1,$ trái giả thiết $N>1$.
+		\item Nếu $N$ có đúng ba ước số, xét phân tích tiêu chuẩn của $N$
+		$$N=p_1^{k_1}p_2^{k_2}\ldots p_n^{k_n}.$$
+		Do số ước nguyên dương của $N$ bằng $3$ nên 
+		$$\tron{k_1+1}\tron{k_2+1}\cdots\tron{k_n+1}=3.$$
+		Trong các thừa số ở vế trái, buộc phải có $n-1$ thừa số bằng $1$ và thừa số còn lại bằng $3.$ Như vậy $N=a^2,$ với $a$ nguyên dương. Tích tất cả các ước số của $N$ bằng $N^2$ nên
+		$$a^3=1\cdot a\cdot N=N^2=a^4,$$
+		suy ra $a=1$, trái giả thiết $a>1$.
+		\item Nếu $N$ có đúng bốn ước số, ta lập luận tương tự trường hợp trước rồi xét các trường hợp nhỏ hơn.
+		\begin{itemize}
+		    \item \chu{Trường hợp 1.} Nếu $N=pq$ với $p,q$ là các số nguyên tố, tổng các ước của $N$ bằng $2N$ nên
+		    $$2pq=pq+p+q+1.$$
+		    Chuyển vế, ta được $(p-1)(q-1)=2.$ Ta tìm ra $(p,q)=(2,3),(3,2),$ kéo theo $N=pq=6.$
+		    \item \chu{Trường hợp 2.} Nếu $N=k^3$ với $k$ là số nguyên tố, tổng các ước của $N$ bằng $2N$ nên
+		    $$2k^3=1+k+k^2+k^3.$$
+		    Ta không tìm được $k$ nguyên từ đây.
+		\end{itemize}
+\end{enumerate}
+Kết luận, chỉ có một giá trị của $N$ thoả mãn là $N=6.$}
+\end{gbtt}
+
+\section{Sự tồn tại trong các bài toán chia hết, ước, bội}
+
+Mục này chủ yếu đưa ra một vài bài toán về sự tồn tại trong số học và có sử dụng phép chia hết. 
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt} \
+\begin{enumerate}[a,]
+    \item Tìm tất cả các số tự nhiên có thể viết thành tổng của hai số nguyên lớn hơn $1$ và nguyên tố cùng nhau.
+    \item Tìm tất cả các số tự nhiên có thể viết thành tổng của ba số nguyên lớn hơn $1$ và đôi một nguyên tố cùng nhau.
+\end{enumerate}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng mọi số nguyên dương $n$ đều có thể biểu diễn dưới dạng
+\[n=\dfrac{ab+bc+ca}{a+b+c+\min\{a;b;c\}},\]
+trong đó $a,b,c$ là các số nguyên dương.
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Kí hiệu $(a,b)$ là ước chung lớn nhất của hai số nguyên $a,b.$ Chứng minh rằng mọi số nguyên dương $n$ đều có thể biểu diễn dưới dạng
+\[n=(a,b)\left(c^2-ab\right)+(b,c)\left(a^2-bc\right)+(c,a)\left(b^2-ca\right).\]
+\nguon{Kazakhstan Mathematical Olympiad 2013, Grade 9}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng có vô hạn số nguyên dương $n$ sao cho $n!$ chia hết cho $n^3-1.$
+	\nguon{Tạp chí Pi, tháng 3 năm 2017}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên $(a, b)$ thoả mãn tính chất: 
+\begin{it}
+Tồn tại số nguyên $d \geq 2$ sao cho $a^{n}+b^{n}+1$ chia hết cho $d$ với mọi số nguyên dương $n.$
+\end{it}
+\end{btt}
+
+\begin{btt}
+Một số tự nhiên $n$ được gọi là \chu{đẹp}, nếu như $n$ có thể được biểu diễn dưới dạng $a+b+c,$ trong đó $b$ vừa chia hết cho $a$ vừa là ước của $c,$ đồng thời $a<b<c.$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng tập các số \chu{đẹp} là vô hạn.
+    \item Tính tổng tất cả các số không \chu{đẹp}.
+\end{enumerate}
+\nguon{Indian National Mathematical Olympiad 2011}
+\end{btt}
+
+\begin{btt}
+Một số nguyên dương $n$ được gọi là \chu{đẹp} nếu như nó có thể biểu diễn dưới dạng
+$$n=\dfrac{\left(x^{2}+y\right)\left(x+y^{2}\right)}{(x-y)^{2}} \text{ với } x,y \text{ là các số nguyên dương thỏa mãn }x>y.$$ 
+\begin{enumerate}[a,]
+    \item Chứng minh rằng có vô số số \chu{đẹp} chẵn và vô số số \chu{đẹp} lẻ.
+    \item Tìm số \chu{đẹp} nhỏ nhất.
+\end{enumerate}
+\nguon{Olympic Toán học Nam Trung Bộ 2020}
+\end{btt}
+
+\begin{btt}
+Một số nguyên dương $n$ được gọi là \chu{đẹp} nếu tồn tại các số nguyên dương $a,b,c,d$ thỏa mãn đồng thời các điều kiện
+$$n\le a<b<c<d\le n+49,\quad ad=bc.$$
+Hãy tìm số \chu{đẹp} lớn nhất.
+\nguon{Trường thu Trung du Bắc Bộ 2019}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $n$. Chứng minh rằng tồn tại các số tự nhiên $a$, $b$ sao cho $$0<b\leq\sqrt{n}+1,\quad \sqrt{n}\leq\dfrac{a}{b}\leq\sqrt{n+1}.$$
+	\nguon{Tạp chí Pi tháng 2 năm 2017, IMO 2001}
+\end{btt}
+
+\begin{btt}
+Cho $n$ là số nguyên dương. Chứng minh rằng tất cả các số lớn hơn $\dfrac{n^4}{16}$ có thể viết thành tối đa một cách dưới tích của hai ước nguyên dương của số đó mà có hiệu không vượt quá $n.$
+\nguon{Saint Petersburg Mathematical Olympiad 1989}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+\begin{gbtt} \
+\begin{enumerate}[a,]
+    \item Tìm tất cả các số tự nhiên có thể viết thành tổng của hai số nguyên lớn hơn $1$ và nguyên tố cùng nhau.
+    \item Tìm tất cả các số tự nhiên có thể viết thành tổng của ba số nguyên lớn hơn $1$ và đôi một nguyên tố cùng nhau.
+\end{enumerate}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta giả sử tồn tại số tự nhiên $n$ thỏa mãn yêu cầu bài toán. Rõ ràng $n\ge 5.$\\Ta sẽ xét trường hợp dựa theo các số dư của $n$ khi chia cho $4.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $n$ lẻ, ta đặt $n=2k+1.$ Dễ thấy $k\ge 2.$ \\
+        Trong trường hợp này, ta lựa chọn cách biểu diễn
+      $$n = \tron{k+1} + k.$$ Do $\tron{k+1, k} = 1,$ tất các số tự nhiên trong trường hợp này đều thỏa yêu cầu.
+         \item\chu{Trường hợp 2.} Với $n$ chia cho $4$ dư $2,$ ta đặt $n = 4k + 2.$ Dễ thấy $k\ge 1.$\\
+        Trong trường hợp này, ta lựa chọn cách biểu diễn
+         $$n= \tron{2k+3} + \tron{2k-1}.$$
+         Do $2k+1$ và $2k-1$ là hai số nguyên dương lẻ có khoảng cách bằng $4,$ chúng nguyên tố cùng nhau. Như vậy, trừ khi $n=6,$ các số $n$ còn lại trong trường hợp này đều thỏa yêu cầu.
+         \item \chu{Trường hợp 3.} Với $n$ chia hết cho $4,$ ta đặt $n = 4k.$ Dễ thấy $k\ge2.$\\
+        Trong trường hợp này, ta lựa chọn cách biểu diễn
+          $$n= \tron{2k+1} + \tron{2k-1}.$$
+          Do $2k+3$ và $2k-1$ là hai số nguyên dương lẻ liên tiếp, chúng nguyên tố cùng nhau. Tất cả các số $n$ trong trường hợp này đều thỏa yêu cầu.
+        \end{itemize}
+        Kết luận, tập các số tự nhiên $n$ thỏa mãn đề bài là $S=\left\{{n\in \mathbb{N}^*| x \ne 1,2,3,4,6}\right\}.$
+    \item  Ta giả sử tồn tại số tự nhiên $n$ thỏa mãn yêu cầu bài toán. Rõ ràng $n\ge 9.$ Ta sẽ xét trường hợp sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $n= 6x+2y,$ với $x,y$ là các số nguyên dương, ta biểu diễn
+        $$n= \tron{6x+2y-8} + 3 + 5.$$
+        Vì $6x+2y-8$ là số chẵn nên $3, 5, \tron{6x+2y-8}$ đôi một nguyên tố cùng nhau. \\Các số tự nhiên $n$ trong trường hợp này đều thỏa mãn yêu cầu.
+        \item \chu{Trường hợp 2.} Nếu $n=6x+3,$ với $x$ là số nguyên dương, ta biểu diễn
+        $$n= \tron{2x+3}+ \tron{2x+1} +\tron{2x-1}.$$
+        Do $2x+3, \ 2x+1, \ 2x-1$ là ba số lẻ liên tiếp, chúng đôi một nguyên tố cùng nhau.
+        \\Các số tự nhiên $n$ trong trường hợp này đều thỏa mãn yêu cầu.        
+        \item \chu{Trường hợp 3.} Nếu $n=6x+1,$ với $x$ là số nguyên dương, ta biểu diễn
+        \begin{align*}
+            n &= \tron{2x+3} +\tron{2x+1}+ \tron{2x-3} \\
+            &= \tron{2x+7} + \tron{2x-1} + \tron{2x-5}\\ 
+            &= \tron{2x+5} + \tron{2x-1} + \tron{2x-3}.
+        \end{align*}
+        Trong cách biểu diễn trên, ít nhất một bộ ba số hạng ở vế phải nguyên tố cùng nhau đôi một.
+        \\Các số tự nhiên $n$ trong trường hợp này đều thỏa mãn yêu cầu.               
+        \item \chu{Trường hợp 4.} Nếu $n=6x+5,$ trong đó $x$ là các số nguyên dương, bằng cách làm hoàn toàn tương tự \chu{trường hợp 3}, ta chỉ ra tất cả các số $n$ trong trường hợp này cũng thỏa yêu cầu.
+    \end{itemize}
+    Kết luận, tập các số tự nhiên $n$ thỏa mãn đề bài là $S=\left\{{n\in \mathbb{N}^*| n \ge 9}\right\}.$
+\end{enumerate}
+}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng mọi số nguyên dương $n$ đều có thể biểu diễn dưới dạng
+\[n=\dfrac{ab+bc+ca}{a+b+c+\min\{a;b;c\}},\]
+trong đó $a,b,c$ là các số nguyên dương.
+\nguon{Titu Andreescu}
+\loigiai{
+Với mỗi số nguyên dương $n,$ ta chọn $a=n,b=n,c=2n.$ Ta nhận thấy rằng
+$$\dfrac{ab+bc+ca}{a+b+c+\min\{a;b;c\}}=\dfrac{n^2+2n^2+2n^2}{n+n+2n+n}=n.$$
+Bài toán được chứng minh.}
+\begin{luuy}
+\nx Chiến thuật chọn bộ số trong bài toán trên chính là chọn $a,b,c$ tỉ lệ thuận với $n.$ Cụ thể, khi chọn $a=xn,b=yn,c=zn,$ trong đó $x\le y\le z,$ ta có
+$$n=\dfrac{n^2xy+n^2yz+n^2zx}{2nx+ny+nz}\Rightarrow 2x+y+z=xy+yz+zx.$$
+Để tối ưu hóa quá trình tìm ra $y$ và $z$, ta sẽ chọn $x=1.$ Cách chọn này cho ta
+$$y+z+2=y+z+yz\Rightarrow yz=2.$$
+Ta thu được $y=1,z=2,$ và đây là cơ sở cho phép chọn ở phần lời giải.
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Kí hiệu $(a,b)$ là ước chung lớn nhất của hai số nguyên $a,b.$ Chứng minh rằng mọi số nguyên dương $n$ đều có thể biểu diễn dưới dạng
+\[n=(a,b)\left(c^2-ab\right)+(b,c)\left(a^2-bc\right)+(c,a)\left(b^2-ca\right).\]
+\nguon{Kazakhstan Mathematical Olympiad 2013, Grade 9}
+\loigiai{
+Ứng với mỗi số nguyên dương $n,$ bộ $(a,b,c)=\left(1,n\left(n^2+n-1\right),n(n+1)\right)$ thỏa yêu cầu bài toán, và đây là bộ ta cần chọn.}
+\begin{luuy}
+Do quan sát được rằng vế phải xuất hiện các đại lượng ước chung là $(a,b),(b,c),(c,a),$ ta nghĩ đến việc chọn $a=1$ nằm đưa $(a,b)$ và $(c,a)$ về $1.$ Công việc còn lại chỉ là chọn $b,c$ sao cho
+$$n=c^2-b+(b,c)\left(1-bc\right)+b^2-c.$$
+Nhằm triệt tiêu $n$ ở cả hai vế, ta sẽ chọn $(b,c)$ sao cho $(b,c)=n.$ Khi đó
+$$c^2-b-nbc+b^2-c=0\Leftrightarrow n=\dfrac{b^2+c^2-b-c}{bc}.$$
+Việc tìm ra cách chọn $b,c$ tốt nhất, mời các độc giả tự suy nghĩ.
+\end{luuy}
+\end{gbtt}
+
+
+\begin{gbtt}
+	Chứng minh rằng có vô hạn số nguyên dương $n$ sao cho $n!$ chia hết cho $n^3-1.$
+	\nguon{Tạp chí Pi, tháng 3 năm 2017}
+	\loigiai
+	{Ta có $n^3-1=(n-1)(n^2+n+1).$
+		Xét $n=a^4,$ với $a$ là số nguyên lớn hơn $1.$
+		Khi đó 
+		{\allowdisplaybreaks
+	\begin{align*}
+		n^3-1&=\left(a^4-1\right)\left(a^8+a^4+1\right)\\
+		&=\left(a^4-1\right)\left[(a^8+2a^4+1)-a^4\right]\\
+		&=\left(a^4-1\right)\left(a^4+a^2+1\right)\left(a^4-a^2+1\right)\\
+		&=
+		\left(a^4-1\right)\left(a^2+a+1\right)\left(a^2-a+1\right)\left(a^4-a^2+1\right).
+		\end{align*}}Dễ thấy, với $a>1,$ các số $a^4-1$, $a^2+a+1$, $a^2-a+1$ và $a^4-a^2+1$ đôi một khác nhau và đều nhỏ hơn $a^4=n.$
+		Thế nên nếu $n$ có dạng $a^4,$ thì $n!$ chia hết cho $n^3-1.$ \\
+		Kết luận, có vô số số nguyên dương $n$ sao cho $n!$ chia hết cho $n^3-1.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên $(a, b)$ thoả mãn tính chất: 
+\begin{it}
+Tồn tại số nguyên $d \geq 2$ sao cho $a^{n}+b^{n}+1$ chia hết cho $d$ với mọi số nguyên dương $n.$
+\end{it}
+\loigiai{ 
+Giả sử tồn tại cặp số nguyên $(a,b)$ thỏa mãn. Xét ước nguyên tố lớn nhất $p \mid d$. Nếu $p=2$ thì một trong hai số $a,b$ lẻ. Nếu $p\ge 3,$ ta sẽ chứng minh rằng $p=3$. Thật vậy ta có
+$$
+\begin{aligned}
+a+b \equiv-1 &\pmod{p},\\
+a^{2}+b^{2} \equiv-1 &\pmod{p}, \\
+a^{3}+b^{3} \equiv-1 &\pmod{p}.
+\end{aligned}
+$$
+Ta thấy rằng $a b=\dfrac{1}{2}\left((a+b)^{2}-\left(a^{2}+b^{2}\right)\right) \equiv \dfrac{1}{2}(1-(-1))=1\pmod{p}.$ Khi đó
+$$
+\begin{aligned}
+-1 & \equiv a^{3}+b^{3} \\
+&=(a+b)\left(a^{2}+b^{2}-a b\right) \\
+& \equiv(-1) \cdot(-1-1) \\
+&=2 \pmod{p}.
+\end{aligned}
+$$
+Do đó $p=3$. Từ $a^{2}+b^{2} \equiv 2\pmod{3}$ và $a+b \equiv 2\pmod{3}$ dễ dàng để thu được $$a\equiv b\pmod{3}.$$
+Vậy tất cả cặp $(a,b)$ thỏa mãn là các cặp $(a,b)$ cùng lẻ và các cặp $(a,b)$ cùng chia $3$ dư $1.$}
+\end{gbtt}
+
+\begin{gbtt}
+Một số tự nhiên $n$ được gọi là \chu{đẹp}, nếu như $n$ có thể được biểu diễn dưới dạng $a+b+c,$ trong đó $b$ vừa chia hết cho $a$ vừa là ước của $c,$ đồng thời $a<b<c.$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng tập các số \chu{đẹp} là vô hạn.
+    \item Tính tổng tất cả các số không \chu{đẹp}.
+\end{enumerate}
+\nguon{Indian National Mathematical Olympiad 2011}
+\loigiai{
+\begin{enumerate}
+    \item Ta nhận thấy các số có dạng $7m$ là số \chu{đẹp}, với $m$ là số tự nhiên bất kì, bởi vì
+    $$7m=4m+2m+m,\quad m\mid 2m,\quad 2m\mid 4m.$$
+    Do tập các số tự nhiên $m$ là vô hạn, tập các số \chu{đẹp} cũng là vô hạn.
+    \item Theo như chứng minh ở câu đầu tiên, nếu $n$ là số \chu{đẹp}, $kn$ cũng là số \chu{đẹp} với $k$ là số tự nhiên nào đó. Với số nguyên tố $p>5,$ ta nhận thấy rằng
+    $$p=(p-3)+2+1.$$
+    Vì lẽ đó, $kp$ là số \chu{đẹp} với mọi số tự nhiên $k,$ và lập luận này chứng tỏ nếu $n$ không là số \chu{đẹp}, $n$ không thể có ước nguyên tố $p>5.$ Nói cách khác,
+    $$n=2^x3^y5^z,\quad x,y,z\in \mathbb{N}.$$
+    Ta quan sát được
+    $$2^{4}=16=12+3+1,\quad3^{2}=9=6+2+1,\quad 5^{2}=25=22+2+1.$$
+    Quan sát trên cho ta biết $2^4,3^2$ và $5^2$ không phải là các số \chu{đẹp}, thế nên $$x \le 3,\quad y\le 1,\quad z\le 1.$$
+    Với việc chặn $x,y,z$ như vừa rồi, $n$ chỉ có thể nhận các giá trị là
+    $$1,2,3,4,5,6,8,10,12,15,20,24,30,40,60,120.$$
+    Trong các số ấy, có những số \chu{đẹp} là
+    \begin{multicols}{3}
+    \begin{itemize}
+        \item $120=112+7+1,$
+        \item $60=48+8+4,$
+        \item $40=36+3+1,$
+        \item $30=18+9+3,$
+        \item $20=12+6+2,$
+        \item $15=12+2+1,$
+        \item $10=6+3+1,$
+    \end{itemize}
+    \end{multicols}
+    còn các số $1,2,3,4,5,6,8,12,24$ thì không. Như vậy, tổng cần tìm là $$1+2+3+4+5+6+8+12+24=65.$$
+\end{enumerate}
+}
+\end{gbtt}
+
+\begin{gbtt}
+Một số nguyên dương $n$ được gọi là \chu{đẹp} nếu như nó có thể biểu diễn dưới dạng
+$$n=\dfrac{\left(x^{2}+y\right)\left(x+y^{2}\right)}{(x-y)^{2}} \text{ với } x,y \text{ là các số nguyên dương thỏa mãn }x>y.$$ 
+\begin{enumerate}[a,]
+    \item Chứng minh rằng có vô số số \chu{đẹp} chẵn và vô số số \chu{đẹp} lẻ.
+    \item Tìm số \chu{đẹp} nhỏ nhất.
+\end{enumerate}
+\nguon{Olympic Toán học Nam Trung Bộ 2020}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Với một số \chu{đẹp} $n$ có biểu diễn như đề bài, cho $x=y+1$, ta có
+$$n=\frac{\left(x^{2}+y\right)\left(x+y^{2}\right)}{(x-y)^{2}}=\left(x^{2}+x+1\right)\left(x+(x+1)^{2}\right)=\left(x^{2}+x+1\right)\left(x^{2}+3 x+1\right).$$
+Rõ ràng $x^{2}+x=x(x+1)$ và $x^{2}+3 x=x(x+3)=x(x+1)+2x$ đều là các số chẵn nên biểu thức trên là số lẻ, tức là tồn tại vô số số \chu{đẹp} lẻ. Lại cho $x=2 y+1$, ta được
+$$n=\frac{\left(x^{2}+y\right)\left(x+y^{2}\right)}{(x-y)^{2}}=\frac{\left((2 y+1)^{2}+y\right)\left(2 y+1+y^{2}\right)}{(2 y+1-y)^{2}}=4 y^{2}+5 y+1.$$
+Với mọi $y$ lẻ, ta có $4 y^{2}+5 y+1$ chẵn, suy ra tồn tại vô số số \chu{đẹp} chẵn. Bài toán được chứng minh.
+\item Ta giả sử $n$ là số \chu{đẹp}, khi đó vì
+\[\begin{aligned}
+  (x - y)&\mid\left[ {\underbrace {\left( {{x^2} + y} \right) - \left( {x + {y^2}} \right)}_{ = (x - y)(x + y - 1)}} \right] \hfill, \quad
+  {(x - y)^2}&\mid\left( {{x^2} + y} \right)\left( {x + {y^2}} \right) \hfill \\ 
+\end{aligned} \]
+nên mỗi số $x^{2}+y, x+y^{2}$ đều chia hết cho $x-y$.
+Từ đây, ta có thể đặt
+$$x^{2}+y=u(x-y),\quad x+y^{2}=v(x-y),$$
+ở đây $u,v$ là các số nguyên dương. Rõ ràng $u>v\ge 2,$ và ta có
+$$n=\frac{x^{2}+y}{x-y} \cdot \frac{x+y^{2}}{x-y}=uv,\quad x+y-1=u-v.$$
+Do $x>y,$ ta có $u-v=x+y+1\ge 2y\ge 2,$ kéo theo $v\ge 2,u\ge 4,n\ge 8.$ Ta xét các trường hợp sau đây.
+\begin{itemize}
+    \item \chu{Trường hợp 1. }Nếu $n=8,$ ta có
+    $$\heva{u&=4 \\ v&=2}
+    \Rightarrow x+y-1=2
+    \Rightarrow x+y=3
+    \Rightarrow \heva{x&=2 \\ y&=1.}$$
+    Thử lại, ta thấy $n=15,$ mâu thuẫn với $n=8.$
+    \item \chu{Trường hợp 2. }Nếu $n=9,$ ta có $uv=9,$ mâu thuẫn với $1<v<u.$
+    \item \chu{Trường hợp 3. }Nếu $n=10,$ ta nhận thấy cặp $(x,y)=(3,1)$ thỏa yêu cầu.
+\end{itemize}
+Kết luận, số \chu{đẹp} bé nhất là $10.$
+\end{enumerate}}
+\begin{luuy}
+Đây là bài toán khá nhẹ nhàng về tính chia hết và sự tồn tại trong số học. Rõ ràng chỉ cần xét các trường hợp đặc biệt trong quan hệ giữa $x, y$ là có thể làm cho biểu thức $n$ đã cho đơn giản hơn rất nhiều. Ở ý sau, cần chú ý rằng hiệu của 2 nhân tử trên tử số là
+$$\left(x^{2}+y\right)-\left(x+y^{2}\right)=(x-y)(x+y-1),$$ chia hết cho $x-y$
+thì lập luận cũng dễ dàng hơn rất nhiều. Ta có thể xét
+\begin{align*}
+    &x=(k+1) d, y=k d \Rightarrow x^{2}+y=(k+1)^{2} d^{2}+k d, x+y^{2}=(k+1) d+k^{2} d^{2},\\
+    &\left(x^{2}+y\right)\left(x+y^{2}\right)=d^{2}\left[(k+1)^{2} d+k\right]\left[(k+1)+k^{2} d\right] \text { và }(x-y)^{2}=d^{2}
+\end{align*}
+Suy ra $n=\left[(k+1)^{2} d+k\right]\left[(k+1)+k^{2} d\right]$ với $k, d$ là các số nguyên. Từ đây, ta có thể có nhiều câu hỏi khác liên quan đến $n$.
+\nguon{Trích "Tổng hợp đề thi và lời giải trường đông ba miền 2015"}
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt} \label{duyhungdz}
+Một số nguyên dương $n$ được gọi là \chu{đẹp} nếu tồn tại các số nguyên dương $a,b,c,d$ thỏa mãn đồng thời các điều kiện
+$$n\le a<b<c<d\le n+49,\quad ad=bc.$$
+Hãy tìm số \chu{đẹp} lớn nhất.
+\nguon{Trường thu Trung du Bắc Bộ 2019}
+\loigiai{
+Trước hết, ta sẽ chứng minh bổ đề sau đây.
+\begin{light}
+    Cho bốn số nguyên dương $a,b,c,d$ thỏa mãn $ad=bc.$ Khi đó, tồn tại các số nguyên dương $x,y,z,t$ thỏa mãn
+    $$(x,y)=(z,t)=1,a=xt,b=yt,c=xz,d=yz.$$
+\end{light}
+\chu{Chứng minh.}\\
+Ta đặt $x=(a,c).$ Lúc này, tồn tại các số nguyên dương $t,z$ thỏa mãn $$(t,z)=1,a=xt,c=xz.$$ Kết hợp với $ad=bc,$ phép đặt này cho ta
+    $xt\cdot d=xz\cdot b,$
+    hay là 
+    $bx=dz.$ \\
+    Ta nhận thấy $t\mid dz,$ nhưng do $(t,z)=1$ nên $t\mid d.$ Tiếp tục đặt $d=yt,$ ta được $b=yz.$ Bằng các cách đặt như vậy, ta chỉ ra được sự tồn tại của các số nguyên dương $x,y,z,t$ sao cho $$a=xt,b=yt,c=xz,d=yz.$$
+    Bổ đề được chứng minh.\\
+\chu{Quay lại bài toán.}\\
+Giả sử tồn tại số $n$ \chu{đẹp}. Theo như bổ đề vừa phát biểu, tồn tại các số nguyên dương $x,y,z,t$ thỏa mãn
+    $$(x,y)=(z,t)=1,\quad n\le xt<yt<xz<yz\le n+49.$$
+    Với số $n$ \chu{đẹp} như vậy, rõ ràng, $t<z$ và $x<y,$ và từ đây ta suy ra
+    $$n\le xt\le (y-1)(z-1)=yz-(y+z)+1\le \left(\sqrt{yz}-1\right)^2\le\left(\sqrt{n+49}-1\right)^2.$$
+    Theo như tính chất bắc cầu, ta có
+    $$n\le \left(\sqrt{n+49}-1\right)^2\Rightarrow n\le \sqrt{n+49}-1\Rightarrow \sqrt{n+49}+\sqrt{n}\le 49\Rightarrow n\le 576.$$
+    Nói riêng, với $n=576,$ tất cả các dấu bằng trong đánh giá phía trên phải xảy ra, thế nên $$xt=576,yz=625,y=z=x+1=t+1.$$
+    Ta tìm ra $x=t=24,y=z=25,$ nhưng lúc này $b=c=600,$ mâu thuẫn. \\
+    Do đó, $n\le 575.$ Số $n=575$ rõ ràng là một số \chu{đẹp}, do
+    $$575= 23\cdot 25<23\cdot26<24\cdot 25<24\cdot26=575+49.$$
+    Kết luận, số \chu{đẹp} lớn nhất là $575.$}
+\end{gbtt}
+
+\begin{gbtt}
+	Cho số nguyên dương $n$. Chứng minh rằng tồn tại các số tự nhiên $a$, $b$ sao cho $$0<b\leq\sqrt{n}+1,\quad \sqrt{n}\leq\dfrac{a}{b}\leq\sqrt{n+1}.$$
+	\nguon{Tạp chí Pi tháng 2 năm 2017, IMO 2001}
+	\loigiai{Gọi $m$ là số nguyên dương sao cho $m^{2}\leq n< (m+1)^{2}$. Dễ thấy, có duy nhất số $m$ như vậy. \\
+	Đặt $s=n-m^{2}$, ta có $s$ là số tự nhiên và $0\leq s \leq 2m$. Ta xét hai trường hợp sau.
+\begin{enumerate}
+	\item Nếu $s$ là số chẵn, ta có
+	$$n=m^{2}+s\leq m^{2}+s+\dfrac{s^{2}}{(2m)^{2}}\leq m^{2}+s+1= n+1.$$
+	Suy ra $\sqrt{n}\leq m+\dfrac{s}{2m}\leq \sqrt{n+1}$. \\
+	Do đó các số tự nhiên $a=m^{2}+\dfrac{s}{2}$ và $b=m$ thỏa mãn yêu cầu đề bài.
+	\item Nếu $s$ là số lẻ, ta có
+	{\allowdisplaybreaks
+		\begin{align*}
+		n&=m^{2}+s\\&=(m+1)^{2}-(2m+1-s) \\
+		&\leq (m+1)^{2}-(2m+1-s)+\left(\dfrac{2m+1-s}{2(m+1)}\right)^{2} \\
+		&\leq (m+1)^{2}-(2m+1-s)+1\\&
+		= n+1.
+		\end{align*}}Suy ra $\sqrt{n}< m+1-\dfrac{2m+s-1}{2(m+1)}\leq\sqrt{n+1}$.
+\end{enumerate}
+Do đó, các số tự nhiên $a=(m+1)^{2}-m+\dfrac{s-1}{2}$ và $b=m+1$ thỏa mãn yêu cầu đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $n$ là số nguyên dương. Chứng minh rằng tất cả các số lớn hơn $\dfrac{n^4}{16}$ có thể viết thành tối đa một cách dưới tích của hai ước nguyên dương của số đó mà có hiệu không vượt quá $n.$
+\nguon{Saint Petersburg Mathematical Olympiad 1989}
+\loigiai{
+Ta giả sử phản chứng rằng, tồn tại hai cách viết một số lớn hơn $\dfrac{n^4}{16}$ nào thành tích của hai ước nguyên dương của số đó, sao cho hiệu giữa chúng không vượt quá $n.$ Đối với giả sử phản chứng này, tồn tại các số nguyên dương $a,b,c,d$ sao cho 
+$$ad=bc>\dfrac{n^4}{16},\ a>b\ge c>d,\ n\ge a-d.$$
+Theo như kết quả của \chu{bài \ref{duyhungdz}}, tồn tại các số nguyên dương $x,y,z,t$ sao cho
+$$a=xt,b=yt,c=xz,d=yz.$$
+Do $a>b\ge c>d,$ ta suy ra $x>y$ và $t>z.$ Áp dụng bất đẳng thức $AM-GM$ với chú ý bên trên, ta có
+$$n\ge a-d=xt-yz\ge (y+1)(z+1)-yz=y+z+1\ge 2\sqrt{yz}+1=2\sqrt{d}+1.$$
+Theo như tính chất bắc cầu, ta suy ra $n\ge 2\sqrt{d}+1$ hay $\left(\dfrac{n-1}{2}\right)^2\ge d.$ Vì thế
+$$a\le d+n\le n+\left(\dfrac{n-1}{2}\right)^2=\left(\dfrac{n+1}{2}\right)^2.$$
+Lập luận trên cho ta nhận xét được
+$$ad\le \left(\dfrac{n+1}{2}\right)^2\left(\dfrac{n-1}{2}\right)^2=\dfrac{n^4-2n^2+1}{16}<\dfrac{n^4}{16}.$$
+Điều bên trên mâu thuẫn với giả sử. Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{gbtt}

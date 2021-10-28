@@ -1,0 +1,1832 @@
+\chapter{Đa thức}
+
+Đa thức là một đối tượng nghiên cứu của phân môn Đại số. Song, ẩn chứa trong đó, đa thức cũng có nhiều tính chất số học thú vị. Đối với chương trình trung học cơ sơ, việc nghiên cứu các tính chất số học trong đa thức đa thức của ta chủ yếu nằm ở đa thức một biến trên trường số nguyên hoặc trường số hữu tỉ. Các lí thuyết  như định lí $Bezout,$ định lí $Viete$ hay tính chất về nghiệm hữu tỉ của đa thức nguyên là những kết quả đẹp và có nhiều ý nghĩa.\\ \\
+Để làm rõ những tính chất trên và các bài toán liên quan, chương IV của cuốn sách được chia là 4 phần
+\begin{itemize}
+    \item\chu{Phần 1.} Tính chia hết của đa thức.
+    \item\chu{Phần 2.} Phép đồng nhất hệ số trong đa thức.
+    \item\chu{Phần 3.} Nghiệm của đa thức.
+    \item\chu{Phần 4.} Đa thức và phương trình bậc hai
+\end{itemize}
+
+\section*{Các định nghĩa, phép toán và kí hiệu}
+\begin{enumerate}
+    \item Định nghĩa đa thức, đơn thức
+    \begin{itemize}
+        \item Đơn thức là một biểu thức đại số gồm một số, hoặc một biến, hoặc một tích giữa các số và các biến.
+        \item Đa thức là một tổng của những đơn thức.
+    \end{itemize}
+    \item Các thành phần của đa thức
+    \begin{itemize}
+        \item Bậc của đa thức là bậc của hạng tử có bậc cao nhất trong dạng thu gọn của đa thức đó.
+        \item Hệ số bậc $n$ của đa thức là hệ số của đơn thức bậc $n$ trong đa thức ấy.    
+    \end{itemize}
+    \item Các phép toán thông thường trên đa thức trong chương trình phổ thông, bao gồm
+    \begin{itemize}
+        \item Phép cộng trừ hai hoặc nhiều đa thức.
+        \item Phép nhân hai hoặc nhiều đa thức.
+        \item Phép chia đa thức cho đa thức không đồng nhất với $0.$
+    \end{itemize}
+    \item Nghiệm của đa thức $P(x)$ là một giá trị $a$ nào đó mà tại $x=a,$ đa thức $P(x)$ có giá trị bằng $0.$ 
+    \item Một số kí hiệu sử dụng ở trong sách
+    \begin{itemize}
+        \item $\deg P:$ kí hiệu cho số chỉ bậc của đa thức $P(x).$
+        \item $P(x)\equiv a:$ kí hiệu thay cho $P(x)=a,\forall x\in \mathbb{R}.$
+    \end{itemize}
+\end{enumerate}
+
+\section{Tính chia hết của đa thức}
+
+\subsection*{Lí thuyết}
+
+Cho đa thức $P(x)$ với hệ số nguyên.
+\begin{enumerate}
+    \item Đa thức $P(x)$ chia hết cho đa thức $Q(x)$ khi và chỉ khi tồn tại đa thức $R(x)$ thỏa mãn
+    $$P(x)=Q(x)R(x).$$
+    \item Khi nói đa thức $P(x)$ chia cho đa thức $Q(x)$ được thương là $R(x)$ và dư là $S(x),$ ta viết
+    $$P(x)=Q(x)R(x)+S(x).$$  
+    Ngoài ra, ta còn có $\deg S<\deg Q.$
+    \item \chu{Định lý Bezout.} Đa thức $P(x)$ chia cho đa thức $x-a$ được dư là $R$ thì $R=f(a).$
+    \item Nếu đa thức $P(x)$ chia hết cho các đa thức $$R_1(x),R_2(x),...,R_n(x)$$ đôi một nguyên tố cùng nhau thì tồn tại đa thức $Q(x)$ sao cho
+        $$P(x)=R_1(x)R_2(x)\ldots R_n(x)Q(x).$$
+\end{enumerate}
+
+\subsection*{Ví dụ minh họa}
+\begin{bx}
+Cho đa thức $P(x)$ với hệ số nguyên. Biết rằng $P(1)=5,$ hãy chứng minh $P(12)\ne 40.$
+\loigiai{
+Ta đặt $P(x)=a_nx^n+a_{n-1}x^{n-1}+\ldots+a_0$, với $a_n \ne 0$. Phép đặt này cho ta
+\begin{align*}
+    P(12)&=12^na_n+12^{n-1}a_{n-1}+\ldots+a_0,
+    \\P(1)&=a_n+a_{n-1}+\ldots+a_0.
+\end{align*}
+Ta giả sử $P(12)=40.$ Lấy hiệu theo vế, ta được
+\begin{align*}
+    P(12)-P(1)&=\left(12^na_n+12^{n-1}a_{n-1}+\ldots+a_0\right)-\left(a_n+a_{n-1}+\ldots+a_0\right).\\
+    35&=\left(12^n-1\right)a_n+\left(12^{n-1}-1\right)a_{n-1}+\ldots+\left(12-1\right)a_{1}.
+\end{align*}
+Với mọi số nguyên dương $m,$ ta có $12^m-1$ chia hết cho $11.$ Đối chiếu với đánh giá vừa rồi, ta suy ra $35$ chia hết cho $11,$ một điều vô lí. Như vậy, giả sử là sai, và ta có điều phải chứng minh.}
+\begin{luuy}
+Qua bài toán trên, ta khám phá được thêm tính chất sau
+\begin{quote}
+\it
+    Với mọi số nguyên $a,b$ khác nhau và mọi đa thức $P(x)$ hệ số nguyên, ta có
+    $$(a-b)\mid \left[P(a)-P(b)\right].$$
+\end{quote}
+Ngoài cách chứng minh trực tiếp bằng xét hiệu, bạn đọc có thể giải quyết bài toán bằng cách sử dụng định lí $Bezout$. Cụ thể, do $a$ là nghiệm của đa thức $P(x)-P(a)$ nên
+$$P(x)=(x-a)Q(x)+P(a),$$
+trong đó $Q(x)$ là một đa thức hệ số nguyên. Cho $x=b$ ta được
+$$P(b)=(b-a)Q(x)+P(a).$$
+Ta dễ dàng suy ra $P(a)-P(b)$ chia hết cho $a-b$ từ đây.
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Cho đa thức $f(x)$ có các hệ số nguyên. Biết rằng $f(1)f(2) = 35$. Chứng minh rằng đa thức $f(x)$ không có nghiệm nguyên.
+\loigiai 
+{Giả sử đa thức $f(x)$ có nghiệm nguyên $a,$ thế thì $f(x)=(x-a)g(x)$, trong đó $g(x)$ là đa thức có các hệ số nguyên. Kết hợp với giả thiết, ta có
+	\begin{align*}
+		f(1)&=(1-a)g(1), \\
+		f(2)&=(2-a)g(2).
+	\end{align*}
+Lấy tích theo vế, ta được $35=(1-a)(2-a)g(1)g(2).$ Tuy nhiên, đẳng thức trên không xảy ra vì vế trái là số lẻ, còn vế phải chia hết cho $(a-1)(a-2)$ là một số chẵn. Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Cho đa thức $P(x)$ có các hệ số nguyên. Biết rằng $P(x)$ không chia hết cho $3$ với ba giá trị nguyên liên tiếp nào đó của $x,$ chứng minh rằng $P(x)$ không có nghiệm nguyên.
+\loigiai {
+Giả sử tồn tại số nguyên $a$ sao cho $P(a),P(a+1),P(a+2)$ đều không chia hết cho $3.$ \\
+Tiếp theo, giả sử phản chứng rằng đa thức $P(x)$ có nghiệm nguyên $x_0$ thế thì $$P(x)=(x-x_0)g(x_0),$$ trong đó $Q(x)$ là đa thức có các hệ số nguyên. Kết hợp các giả sử, ta có
+	\begin{align*}
+		P(a)&=(a-x_0)Q(a), \\
+		P(a+1)&=(a+1-x_0)Q(a+1), \\
+		P(a+2)&=(a+2-x_0)Q(a+2).
+	\end{align*}
+Lấy tích theo vế, ta được $$P(a)P(a+1)P(a+2)=(a-x_0)(a+1-x_0)(a+2-x_0)Q(a)Q(a+1)Q(a+2).$$ 
+Tuy nhiên, đẳng thức trên không xảy ra vì vế trái không chia hết cho $3$, còn vế phải chia hết cho $$(a-x_0)(a+1-x_0)(a+2-x_0)$$ 
+là một tích ba số nguyên liên tiếp. Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Biết rằng đa thức $P(x)$ nhận giá trị bằng $2$ với $4$ giá trị nguyên khác nhau của $x.$ Chứng minh rằng không tồn tại số nguyên $x_0$ sao cho $P(x_0)=2019.$
+\loigiai{Xét đa thức
+$Q(x)=P(x)-2.$ Từ giả thiết, ta suy ra $Q(x)$ có $4$ nghiệm nguyên phân biệt. Ta gọi $4$ nghiệm này là $x_1,x_2,x_3,x_4.$ Theo định lí $Bezout$, ta có
+$$
+Q(x)=\left(x-x_{1}\right)\left(x-x_{2}\right)\left(x-x_{3}\right)\left(x-x_{4}\right) R(x),
+$$
+ở đây $R(x)$ là một đa thức hệ số nguyên. \\
+Bây giờ, giả sử tồn tại số nguyên $x_0$ thỏa mãn $P(x_0)=2019.$ Giả sử này cho ta $Q(x_0)=2017,$ hay là
+$$\left(x_0-x_{1}\right)\left(x_0-x_{2}\right)\left(x_0-x_{3}\right)\left(x_0-x_{4}\right) R(x_0)=2017.$$
+Do $2017$ là số nguyên tố nên có ít nhất $3$ trong $4$ số $$x_0-x_1,\,\,x_0-x_2,\,\,x_0-x_3,\,\,x_0-x_4$$ có trị tuyệt đối bằng $1.$ Theo nguyên lí $Dirichlet$, có ít nhất hai số bằng nhau trong ba số này, giả sử là $x_0-x_1$ và $x_0-x_2.$ Giả sử này cho ta $x_0-x_1=x_0-x_2,$ hay là 
+$$x_1=x_2.$$
+Đây là điều mâu thuẫn với giả thiết. Giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{bx}
+
+\begin{bx}
+Cho đa thức $P(x)=\dfrac{x^5}{5}+\dfrac{x^3}{3}+\dfrac{7x}{15}.$ Chứng minh rằng đa thức $P(x)$ nhận giá trị nguyên với mọi số nguyên $x.$
+\loigiai{
+Ta viết lại đa thức $P(x)$ như sau
+$P(x)=x+\dfrac{x^5-x}{5}+\dfrac{x^3-x}{3}.$ Theo định lí $Fermat$ nhỏ, ta có $5\mid \left(x^5-x\right)$ và $3\mid \left(x^3-x\right).$ Như vậy $P(x)\in\mathbb{Z}$ với mọi $x\in \mathbb{Z}.$ Đây chính là điều phải chứng minh.}
+\begin{luuy}
+\begin{enumerate}
+    \item Ta nhắc lại định lí $Fermat$ nhỏ kèm hệ quả của nó.
+\begin{enumerate}
+    \item[i,] Nếu số nguyên dương $a$ không chia hết cho số nguyên tố $p$ thì $a^{p-1}-1$ chia hết cho $p.$
+    \item[ii,] Với mọi số nguyên dương $a$ và số nguyên tố $p,$ ta có $a^p-a$ chia hết cho $p.$
+\end{enumerate}
+    \item Ngoài ra, các bổ đề chia hết áp dụng trong bài trên đã được chứng minh không bằng định lí $Fermat$ ở phần phụ lục và \chu{chương I}.
+\end{enumerate}
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên $a,b$ sao cho đa thức bậc ba $P(x)=x^3+ax+b$ nhận giá trị chia hết cho $3$ với mọi số nguyên $x.$
+\loigiai{
+\begin{enumerate}
+    \item Giả sử $P(x)$ chia hết cho $3$ với mọi $x$ nguyên. Ta đã biết $x^3-x$ chia hết cho $3,$ vì vậy
+    $$P(x)\equiv (a+1)x+b\equiv \heva{
+    b, &\text{ nếu } x=3k \\
+    a+b+1, &\text{ nếu } x=3k+1 \\
+    2a+b+2, &\text{ nếu } x=3k+2
+    } \pmod{3}.$$
+    Dựa vào nhận xét trên, ta chỉ ra được 
+    $$b\equiv 0\pmod{3},\quad a\equiv 2\pmod{3}.$$
+    \item Đảo lại, với $b$ và $a-2$ đều chia hết cho $3,$ ta viết lại $P(x)$ dưới dạng
+    $$P(x)=x^3-x+(a+1)x+b.$$
+    Do cả $x^3-x,a+1$ và $b$ đều chia hết cho $3$ nên điều kiện đủ được chứng minh.
+\end{enumerate}
+Như vậy, các giá trị của $a,b$ thỏa mãn là $b\equiv 0\pmod{3},\: a\equiv 2\pmod{3}.$ Bài toán được giải quyết.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên dương $n$ sao cho đa thức $$P(x)=x^{n+1}+x^n+x^3+1$$ chia hết cho đa thức $x^2+1.$
+\loigiai{
+Ta sẽ đi tìm số dư của đa thức $P(x)$ khi chia cho $x^2+1.$ Ta đã biết
+$$x^4-1=\left(x^2+1\right)\left(x^2-1\right).$$
+Vì lẽ đó, ta nghĩ đến việc đặt $n=4m+r,$ với $m,r$ là các số tự nhiên và $0\le r\le 3.$ Phép đặt này cho ta
+\begin{align*}
+    P(x)
+    &=x^{4m+r+1}+x^{4m+r}+x^3+1
+    \\&=\left(x^{4m+r+1}-x^{r+1}\right)+\left(x^{4m+r}-x^{r}\right)+\left(x^3+x\right)+x^{r+1}+x^r-x+1.
+    \\&=x^{r+1}\left(x^{4m}-1\right)+x^r\left(x^{4m}-1\right)+x\left(x^2+1\right)+x^{r+1}+x^r-x+1.    
+\end{align*}
+Giả sử tồn tại đa thức $P(x)$ thỏa mãn đề bài. Nhờ vào nhận xét
+$$\tron{x^2+1}\mid\tron{x^4-1}\mid\tron{x^{4m}-1}.$$
+ta suy ra đa thức $x^{r+1}+x^r-x+1$ chia hết cho đa thức $x^2+1.$
+\begin{enumerate}
+    \item Với $r=0,$ ta có $x^{r+1}+x^r-x+1=2$ không chia hết cho đa thức $x^2+1.$
+    \item Với $r=1,$ ta có $x^{r+1}+x^r-x+1=x^2+1$ chia hết cho đa thức $x^2+1.$
+    \item Với $r=2,$ ta có đa thức $$x^{r+1}+x^r-x+1=x^3+x^2-x+1=\left(x^2+1\right)(x+1)-2x$$ không chia hết cho đa thức $x^2+1.$
+    \item Với $r=3,$ ta có đa thức $$x^{r+1}+x^r-x+1=x^4+x^3-x+1=\left(x^2+1\right)\left(x^2+x-1\right)-2x+2$$ 
+    không chia hết cho đa thức $x^2+1.$
+\end{enumerate}
+Như vậy, tất cả các số nguyên $n$ cần tìm là $n=4m+1,$ với $m$ là số tự nhiên.} 
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Với $b,c$ là các số nguyên và $a$ là số nguyên dương, xét đa thức $P(x)=ax^2+bx+c.$  Biết $P(9)-P(6)=2019,$ chứng minh rằng $P(10)-P(7)$ là một số lẻ.
+\nguon{Chuyên Toán Nghệ An 2019}
+\end{btt}
+
+\begin{btt}
+Cho đa thức $f(x)$ có hệ số nguyên. Chứng minh rằng không tồn tại ba số nguyên phân biệt $a,b,c$ sao cho $f(a)=b,f(b)=c,f(c)=a.$
+\end{btt}
+
+\begin{btt}
+Cho đa thức $P(x)$ với hệ số nguyên thỏa mãn $P(0)P(1)P(4)P(7)P(8)=19.$ Chứng minh rằng đa thức này không có nghiệm nguyên.
+\end{btt}
+
+\begin{btt}
+Cho đa thức $P(x)$ có hệ số nguyên. Giả sử tồn tại các số nguyên $a,b,c,d$ thỏa mãn đồng thời các điều kiện
+\begin{enumerate}[i,]
+    \item $a<b,c<d,a<c.$
+    \item$P(a)=P(b)=1,P(c)=P(d)=-1.$
+\end{enumerate}
+Chứng minh $a,b,c,d$ là bốn số nguyên liên tiếp.
+
+\end{btt}
+
+\begin{btt}
+Cho $p_{1}, p_{2}, p_{3}, p_{4}$ là bốn số nguyên tố phân biệt. Chứng minh rằng không tồn tại đa thức $Q(x)$ bậc ba hệ số nguyên thỏa mãn $$\left|Q\left(p_{1}\right)\right|=\left|Q\left(p_{2}\right)\right|=\left|Q\left(p_{3}\right)\right|=\left|Q\left(p_{4}\right)\right|=3.$$
+\nguon{Cao Đình Huy}
+\end{btt}    
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên $(a,b)$ để đa thức hệ số nguyên $P(x)=x^2-ax+b$ thỏa mãn tính chất:
+\begin{it}
+Tồn tại ba số nguyên đôi một khác nhau $m$, $n$, $p$ thuộc đoạn $[1;9]$ sao cho
+\end{it}
+	$$|P(m)|=|P(n)|=|P(p)|=7.$$
+\nguon{Tạp chí Pi tháng 11 năm 2017}
+\end{btt}
+
+\begin{btt}
+Cho $n$ số nguyên phân biệt $a_{1}, a_{2}, \ldots, a_{n}$. Chứng minh rằng đa thức
+$$P(x)=\left(x-a_{1}\right)\left(x-a_{2}\right) \ldots\left(x-a_{n}\right)-1.$$
+không thể phân tích được thành tích của hai đa thức hệ số nguyên khác hằng.
+\end{btt}
+
+\begin{btt}
+Cho $k\ge 6$ số nguyên dương $x_1<x_2<\ldots<x_k.$ Giả sử tồn tại đa thức $P(x)$ với hệ số nguyên thỏa mãn $P\left(x_1\right),P\left(x_2\right),\ldots,P\left(x_k\right)$ nhận giá trị trong đoạn $[1;k-1].$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng $P\left(x_1\right)=P\left(x_k\right).$
+    \item Chứng minh rằng $P\left(x_1\right)=P\left(x_2\right)=\ldots=P\left(x_k\right).$
+\end{enumerate}
+\nguon{Moscow Mathematical Olympiad 2008}
+\end{btt}
+
+\begin{btt}
+Cho $P(x)$ là một đa thức hệ số nguyên có bậc tối đa là mười. Biết rằng tồn tại các số nguyên $x_1,x_2,\ldots,x_{10}$ sao cho
+$$P\left(x_1\right)=1,P\left(x_2\right)=2,\ldots,P\left(x_{10}\right)=10.$$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng $x_1,x_2,\ldots,x_{10}$ là một dãy số nguyên cách đều nhau.
+    \item Giả sử $\left|P(10)-P(0)\right|<1000.$ Chứng minh rằng với mọi số nguyên $k,$ luôn tồn tại số tự nhiên $m$ sao cho $P(m)=k.$
+\end{enumerate}
+\nguon{Titu Andreescu}   
+\end{btt}
+
+\begin{btt}
+Cho đa thức $P(x)=x^{4}-x^{3}-3 x^{2}-x+1.$ Chứng minh rằng tồn tại vô số số nguyên dương $n$ sao cho $P\left(3^{n}\right)$ là hợp số.
+\nguon{Mediterranean Competition 2015}
+\end{btt}
+
+
+\begin{btt}
+Tìm tất cả các số thực $a,b,c$ sao cho đa thức bậc hai $P(x)=ax^2+bx+c$ nhận giá trị nguyên với mọi giá trị nguyên của $x.$
+\end{btt}
+
+\begin{btt}
+Cho đa thức $P(x)$ bậc bốn với hệ số nguyên. Chứng minh rằng $P(x)$ chia hết cho $7$ với mọi số nguyên $x$ khi và chỉ khi tất cả các hệ số của $P(x)$ đều chia hết cho $7.$
+
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ sao cho đa thức
+$$P(x)=x^{3n+7}+2x^{2n}+x^5-x^4+1$$
+chia hết cho đa thức $x^5+x^4+x+1.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $a,b$ sao cho đa thức $P(x)=x^a+x^b+1$ chia hết cho đa thức $Q(x)=x^2+x+1.$
+\end{btt}
+
+\begin{btt}
+Với $n$ là một số nguyên dương, xét đa thức $P_n(x)=(x-1)^n+(x+2)^n.$ Xác định $n$ để $P_n(x)$ chia hết cho $2x^2+2x+5.$
+\nguon{Chọn đội tuyển chuyên Trần Phú $-$ Hải Phòng 2021}
+\end{btt}
+
+\begin{btt}
+Cho $P(x)$ và $Q(x)$ là hai đa thức với hệ số nguyên thỏa mãn đa thức $P\tron{x^3}+xQ\tron{x^3}$ chia hết cho đa thức $x^2+x+1.$ Chứng minh rằng $P(2021)-Q(2021)$ chia hết cho $2020.$
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Với $b,c$ là các số nguyên và $a$ là số nguyên dương, xét đa thức $P(x)=ax^2+bx+c.$  Biết $P(9)-P(6)=2019,$ chứng minh rằng $P(10)-P(7)$ là một số lẻ.
+\nguon{Chuyên Toán Nghệ An 2019}
+\loigiai{
+Dựa theo tính chất đã biết, ta có
+\begin{align*}
+    4&=(10-6) \mid \left[P(10)-P(6)\right],
+   \\
+   2 &= (9-7) \mid
+   \left[P(9)-P(7)\right].
+\end{align*}
+Như vậy, $P(9)-P(6)$ và $P(10)-P(7)$ có cùng tính chẵn lẻ. Do giả thiết $P(9)-P(6)=2019$ lẻ, ta suy ra $P(10)-P(7)$ cũng là số lẻ. Đây chính là điều phải chứng minh.}
+\end{gbtt}
+
+
+\begin{gbtt}
+Cho đa thức $f(x)$ có hệ số nguyên. Chứng minh rằng không tồn tại ba số nguyên phân biệt $a,b,c$ sao cho $f(a)=b,f(b)=c,f(c)=a.$
+\loigiai{Giả sử tồn tại ba số nguyên $a,b,c$ thỏa mãn đề bài. Dựa theo tính chất đã biết, ta có
+\[(a-b)\mid f(a)-f(b)=b-c,\tag{1}\]
+\[(b-c)\mid f(b)-f(c)=c-a,\tag{2}\]
+\[(c-a)\mid f(c)-f(a)=a-b.\tag{3}\]
+Do $a,b,c$ là các số nguyên phân biệt nên
+\begin{align*}
+    &\text{(1)}\Rightarrow |a-b|\le |b-c|, 
+    \\&\text{(2)}\Rightarrow |b-c|\le |c-a|,
+    \\&\text{(3)}\Rightarrow |c-a|\le |a-b|.
+\end{align*}
+Kết hợp các suy luận kể trên, ta được
+$$|a-b|\le |b-c|\le |c-a|\le |a-b|.$$
+Đẳng thức bắt buộc phải xảy ra, tức là
+\[|a-b|=|b-c|=|c-a|.\tag{4}\]
+Không mất tổng quát, ta giả sử $a = \max\{ a;b;c\}$. Khi đó ta viết lại (4) như sau
+$$a-b=b-c=a-c.$$
+Ta suy ra được $b=c,$ mâu thuẫn với giả sử. Giả sử phản chứng là sai. Bài toán được chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Cho đa thức $P(x)$ với hệ số nguyên thỏa mãn $P(0)P(1)P(4)P(7)P(8)=19.$ Chứng minh rằng đa thức này không có nghiệm nguyên.
+\loigiai{
+Giả sử phản chứng $a$ là nghiệm nguyên của $P(x),$ thế thì 
+$$P(i)=(i-a)Q(i),$$
+trong đó $i=0,1,4,7,8.$ Trong các số $P(0),P(1),P(4),P(7),P(8),$ rõ ràng có $4$ số có trị tuyệt đối bằng $1.$ Ngoài ra, với mọi cách chọn $4$ số từ $5$ số $0,1,4,7,8,$ ta luôn thu được $2$ số khác tính chẵn lẻ trong $4$ số ấy, gọi là $b$ và $c.$ Ta dễ dàng nhận thấy
+$$P(b)=(b-a)P(b),\: P(c)=(c-a)P(c).$$
+Lấy tích, ta được $P(b)P(c)=(b-a)(c-a)P(c).$ Vế trái có trị tuyệt đối là $1,$ nhưng vế phải chia hết cho $(b-a)(c-a)$ là số chẵn. Giả sử sai. Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho đa thức $P(x)$ có hệ số nguyên. Giả sử tồn tại các số nguyên $a,b,c,d$ thỏa mãn đồng thời các điều kiện
+\begin{enumerate}[i,]
+    \item $a<b,c<d,a<c.$
+    \item$P(a)=P(b)=1,P(c)=P(d)=-1.$
+\end{enumerate}
+Chứng minh $a,b,c,d$ là bốn số nguyên liên tiếp.
+
+\loigiai{Xét đa thức $P(x)+1.$ Đa thức này nhận $c$ và $d$ làm nghiệm, thế nên theo định lí $Bezout,$ tồn tại đa thức $Q(x)$ với hệ số nguyên sao cho
+\[P(x)+1=(x-c)(x-d)Q(x).\tag{1}\]
+Do $P(a)=1$ nên $2=(a-c)(a-d)Q(a).$ Vì $a-c>a-d$ và $a-c<0,$ ta chỉ ra
+\[\heva{&a-c=-1 \\ &a-d=-2}\Rightarrow\heva{&a+1=c \\ &a+2=d.}\tag{2}\]
+Cũng do $P(b)=1$ nên từ (1) ta có
+\[(b-c)(b-d)Q(b)=2.\tag{3}\]
+Do $b>a,$ ta xét các trường hợp sau
+\begin{enumerate}
+    \item Với $b=a+1,$ từ (2) ta có $b=c,$ mâu thuẫn với (3).
+    \item Với $b=a+2,$ từ (2) ta có $b=d,$ mâu thuẫn với (3).    
+    \item Với $b\ge a+3,$ ta có $b-c>b-d>0.$ Kết hợp với (3), ta được
+    \[\heva{&b-c=2 \\ &b-d=1}\Rightarrow\heva{&b=c+2 \\ &b=d+1.}\tag{4}\]
+\end{enumerate}
+Đối chiếu (2) và (4), ta được
+$b=d+1=c+2=a+3.$ Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $p_{1}, p_{2}, p_{3}, p_{4}$ là bốn số nguyên tố phân biệt. Chứng minh rằng không tồn tại đa thức $Q(x)$ bậc ba hệ số nguyên thỏa mãn $$\left|Q\left(p_{1}\right)\right|=\left|Q\left(p_{2}\right)\right|=\left|Q\left(p_{3}\right)\right|=\left|Q\left(p_{4}\right)\right|=3.$$
+\nguon{Cao Đình Huy}
+\loigiai{
+Giả sử tồn tại đa thức $Q(x)$ thỏa mãn. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $Q\left(p_{1}\right)= Q\left(p_{2}\right)= Q\left(p_{3}\right)= Q\left(p_{4}\right),$ không mất tính tổng quát, ta giả sử $$Q\left(p_{1}\right)=Q\left(p_{2}\right)=Q\left(p_{3}\right)=Q\left(p_{4}\right)=3.$$
+    Xét đa thức $P(x)=Q(x)-3.$ Ta có $$P\left(p_{1}\right)=P\left(p_{2}\right)=P\left(p_{3}\right)=P\left(p_{4}\right)=0.$$ 
+    Đa thức bậc ba $P(x)$ lúc này có $4$ nghiệm là $p_1,\ p_2,\ p_3,\ p_4$, thế nên 
+    $$P(x)=\tron{x-p_1}\tron{x-p_2}\tron{x-p_3}\tron{x-p_4}R(x),$$
+    trong đó $R(x)$ là đa thức hệ số nguyên khác không. Ta suy ra $\deg P\ge 4$ từ đây, kéo theo $\deg Q\ge 4,$ trái giả thiết $\deg Q=3.$
+     \item Nếu trong các số $Q\tron{p_1},\ Q\tron{p_2},\ Q\tron{p_3}$ và $Q\tron{p_4}$ có một số khác các số còn lại, không mất tổng quát, ta giả sử $Q\left(p_{1}\right)=Q\left(p_{2}\right)=Q\left(p_{3}\right)=-3, Q\left(p_{4}\right)=3$ và hệ số bậc ba của $Q(x)$ dương. Gọi $a$ là hệ số bậc ba của $P(x)$ $\big($đồng thời cũng là của $Q(x)\big)$, khi đó ta có
+    $$Q(x)=a\left(x-p_{1}\right)\left(x-p_{2}\right)\left(x-p_{3}\right)-3.$$
+    Do $Q(p_4)=3$ nên là
+    $a\left(p_{4}-p_{1}\right)\left(p_{4}-p_{2}\right)\left(p_{4}-p_{3}\right)=6.$ 
+    Lấy trị tuyệt đối hai vế, ta được
+      \[\left|a\left(p_{4}-p_{1}\right)\left(p_{4}-p_{2}\right)\left(p_{4}-p_{3}\right)\right|=6.\tag{*}\]
+     Tới đây, ta xét các trường hợp sau.
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $p_{4}$ lẻ thì do $p_{1}, p_{2}, p_{3}, p_{4}$ phân biệt nên tồn tại ít nhất hai số nguyên tố lẻ trong ba số $p_{1}, p_{2}, p_{3}$, ta có thể giả sử $p_{2}, p_{3}$ lẻ. Khi đó $$6=a\left(p_{4}-p_{1}\right)\left(p_{4}-p_{2}\right)\left(p_{4}-p_{3}\right)$$
+        chia hết cho $\left(p_{4}-p_{2}\right)\left(p_{4}-p_{3}\right),$ vô lí vì $\left(p_{4}-p_{2}\right)\left(p_{4}-p_{3}\right)$ chia hết cho $4.$
+        điều này là vô lí.
+        \item\chu{Trường hợp 2.} Nếu $p_{4}$ chẵn, $p_{4}=2$. Lúc này, do $p_4$ nhỏ hơn các số nguyên tố còn lại nên
+        \begin{align*}
+        \left|a\left(p_{4}-p_{1}\right)\left(p_{4}-p_{2}\right)\left(p_{4}-p_{3}\right)\right|
+        &=\left|a\right||\left(p_{4}-p_{1}\right)\left(p_{4}-p_{2}\right)\left(p_{4}-p_{3}\right)|       
+        \\&=\left|a\right|\left(p_{1}-2\right)\left(p_{2}-2\right)\left(p_{3}-2\right) \\&\geq|a|(3-2)(5-2)(7-2)
+        \\&\ge 15|a|\\&\ge 15\\&>6, \text{ mâu thuẫn với (*).}
+        \end{align*}
+    \end{itemize}
+    \item Nếu trong các số $Q\tron{p_1},\ Q\tron{p_2},\ Q\tron{p_3}$ và $Q\tron{p_4}$ có hai số bằng $3$ và hai số bằng $-3,$ không mất tổng quát, ta giả sử $Q\left(p_{1}\right)=Q\left(p_{2}\right)=-3, Q\left(p_{3}\right)=Q\left(p_{4}\right)=3.$ Trong trường hợp này, đa thức $Q(x)+3$ có hai nghiệm là $p_1,p_2.$ Như vậy, tồn tại đa thức $G(x)$ bậc nhất với hệ số nguyên sao cho $$Q(x)=\left(x-p_{1}\right)\left(x-p_{2}\right)G(x)-3.$$
+    Bằng cách đặt như vậy, ta có
+    $$\left(p_{3}-p_{1}\right)\left(p_{3}-p_{2}\right) G\left(p_{3}\right)=\left(p_{4}-p_{1}\right)\left(p_{4}-p_{2}\right) G\left(p_{4}\right)=6.$$
+     Tới đây, ta xét các trường hợp sau.    
+    \begin{itemize}
+        \item\chu{Trường hợp 1.} Nếu $p_1,p_2,p_3,p_4$ đều lẻ thì 
+        $$6=\left(p_{3}-p_{1}\right)\left(p_{3}-p_{2}\right) G\left(p_{3}\right),$$ 
+        chia hết cho $\left(p_{3}-p_{1}\right)\left(p_{3}-p_{2}\right)$ vô lí vì $\left(p_{3}-p_{1}\right)\left(p_{3}-p_{2}\right)$ chia hết cho $4.$
+        \item\chu{Trường hợp 2.} Nếu $p_1=2$ hoặc $p_2=2,$ không mất tổng quát, ta giả sử $p_1=2.$ Ta có
+        $$p_{3}-2 \mid Q\left(p_{3}\right)-Q(2)= 6.$$
+        Chú ý rằng $p_3$ lẻ, ta có $p_{3} \in\{3,5\}.$ Một cách tương tư, ta được $p_{4} \in\{3,5\}$. Do $p_{3}, p_{4}$ phân biệt, không mất tính tổng quát, ta giả sử $p_{3}=3, p_{4}=5.$ Giả sử này cho ta
+        $$\left(p_{4}-p_{1}\right)\left(p_{4}-p_{2}\right)\left|6 \Rightarrow\left(5-p_{2}\right)\right| 2 \Rightarrow p_{2} \in\{7,3\}.$$
+        Lại do $p_2\ne p_3,$ ta suy ra $p_2=7$, khi đó
+        $6$ chia hết cho $\left(p_{3}-p_{1}\right)\left(p_{3}-p_{2}\right)=-4,$ vô lí.
+        \item\chu{Trường hợp 3.} Nếu $p_3=2$ hoặc $p_4=2,$ lập luận tương tự, ta chỉ ra điều vô lí. 
+    \end{itemize}
+\end{enumerate}
+Các mâu thuẫn chỉ ra chứng tỏ giả sử phản chứng là sai. Chứng minh hoàn tất!}
+\end{gbtt}    
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên $(a,b)$ để đa thức hệ số nguyên $P(x)=x^2-ax+b$ thỏa mãn tính chất: \textit{Tồn tại ba số nguyên đôi một khác nhau $m$, $n$, $p$ thuộc đoạn $[1;9]$ sao cho}
+	$$|P(m)|=|P(n)|=|P(p)|=7.$$
+\nguon{Tạp chí Pi tháng 11 năm 2017}
+\loigiai{
+Giả sử $(a,b)$ là cặp số nguyên thỏa mãn yêu cầu đề bài.\\ Khi đó, tồn tại ba số nguyên đôi một khác nhau $m$, $n$, $p\in[1;9]$ sao cho 
+\[P(m),\,P(n),\,P(p)\in\{-7;7\}.\]
+Dễ dàng thấy rằng các số $P(m),P(n),P(p)$ không nhận cùng một giá trị. Chỉ có hai trường hợp xảy ra là $\tron{P(m),P(n),P(p)}$ là hoán vị của $(7,7,-7)$ hoặc $(7,-7,-7).$ Không mất tổng quát, ta giả sử $m<n<p.$ Tổng cộng có $6$ trường hợp cần xét, bao gồm
+\begin{multicols}{2}
+\begin{enumerate}
+    \item $P(m)=P(n)=7$ và $P(p)=-7.$
+    \item $P(n)=P(p)=7$ và $P(m)=-7.$ 
+    \item $P(p)=P(m)=7$ và $P(n)=-7.$ 
+    \item $P(m)=P(n)=-7$ và $P(p)=7.$
+    \item $P(n)=P(p)=-7$ và $P(m)=7.$ 
+    \item $P(p)=P(m)=-7$ và $P(n)=7.$
+\end{enumerate}
+\end{multicols}
+Ta sẽ xét đại diện một trường hợp, đó là
+$$P(m)=P(n)=-7\text{ và }P(p)=7.$$ 
+Lúc này, theo định lí $Bezout,$ ta dễ dàng chỉ ra đa thức $P(x)$ có dạng
+$$P(x)=(x-m)(x-n)-7.$$
+Do $P(p)=7$ nên $7=(p-m)(p-n)-7,$ hay là
+$$(p-n)(p-m)=14.$$
+Vì $1\le p-n<p-m\le 8,$ ta suy ra $p-n=2,p-m=7,$ và thế thì
+$$(m,n,p)\in\{(1,6,8);(2,7,9)\}.$$
+Thay trở lại, trường hợp này cho ta $(a,b)=(7,-1)$ và $(a,b)=(9,7).$ \\
+Bạn đọc tự xét các trường hợp khác. Tất cả các cặp $(a,b)$ thỏa yêu cầu bài toán là
+$$(11,7),(13,29),(7,-1),(9,7).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $n$ số nguyên phân biệt $a_{1}, a_{2}, \ldots, a_{n}$. Chứng minh rằng đa thức
+$$P(x)=\left(x-a_{1}\right)\left(x-a_{2}\right) \ldots\left(x-a_{n}\right)-1.$$
+không thể phân tích được thành tích của hai đa thức hệ số nguyên khác hằng.
+\loigiai{
+Giả sử tồn tại hai đa thức $Q(x), R(x)$ hệ số nguyên khác hằng sao cho $P(x)=Q(x) R(x).$ \\Lần lượt thay $x=a_1,a_2,\ldots,a_n,$ ta có
+$$Q\left(a_{1}\right) R\left(a_{1}\right)=Q\left(a_{2}\right) R\left(a_{2}\right)=\ldots=Q\left(a_{n}\right) R\left(a_{n}\right)=-1.$$
+Trong hai số dạng $Q\tron{a_i}$ và $R\tron{a_i},$ bao giờ cũng có một số bằng $1$ và một số bằng $-1.$ Vì lẽ đó 
+$$Q\left(a_{1}\right)+R\left(a_{1}\right)=Q\left(a_{2}\right)+R\left(a_{2}\right)=\ldots=Q\left(a_{n}\right)+R\left(a_{n}\right)=0.$$ 
+Đa thức $Q(x)+R(x)$ lúc này có $n$ nghiệm nguyên phân biệt. Theo định lí $Bezout,$ ta có thể viết
+$$Q(x)+R(x)=\tron{x-a_1}\tron{x-a_2}\ldots\tron{x-a_n}H(x),$$
+trong đó $H(x)$ là một đa thức hệ số nguyên khác đa thức không. Bậc của $Q(x)+R(x)$ phải nhỏ hơn $n,$ vì 
+$$\deg Q +\deg R=n\text{ và }\deg Q\ge 1,\deg R\ge 1.$$ Trong khi đó, bậc của vế phải lớn hơn $n$ vì nó chia hết cho đa thức $\tron{x-a_1}\tron{x-a_2}\ldots\tron{x-a_n}.$ Sự chênh lệch bậc này dẫn đến mâu thuẫn. Giả sử ban đầu là sai. Bài toán được chứng minh.}
+\begin{luuy}
+Ta cũng tìm ra được một bổ đề quen thuộc liên hệ giữa bậc và số nghiệm của đa thức trong bài toán trên.
+\begin{quote}
+\it
+    Đa thức bậc $n$ có tối đa $n$ nghiệm thực.
+\end{quote}
+\end{luuy}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $k\ge 6$ số nguyên dương $x_1<x_2<\ldots<x_k.$ Giả sử tồn tại đa thức $P(x)$ với hệ số nguyên thỏa mãn $P\left(x_1\right),P\left(x_2\right),\ldots,P\left(x_k\right)$ nhận giá trị trong đoạn $[1;k-1].$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng $P\left(x_1\right)=P\left(x_k\right).$
+    \item Chứng minh rằng $P\left(x_1\right)=P\left(x_2\right)=\ldots=P\left(x_k\right).$
+\end{enumerate}
+\nguon{Moscow Mathematical Olympiad 2008}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Theo như tính chất đã biết, ta có
+    $$\left(x_{k}-x_{1}\right) \mid\left(P\left(x_{k}\right)-P\left(x_{1}\right)\right).$$
+    Với các chú ý $2-k\le P\left(x_{k}\right)-P\left(x_{1}\right) \leq k-2$ và $x_k-x_1\ge k-1,$ ta thu được $P\left(x_{k}\right)=P\left(x_{1}\right).$
+    \item Ta có thể viết lại đa thức $P(x)$ dưới dạng
+    $$P(x)=P\left(x_{1}\right)+\left(x-x_{1}\right)\left(x-x_{k}\right) Q(x),$$
+    trong đó $Q(x)$ cũng là một đa thức hệ số nguyên. \\
+    Nếu tồn tại số nguyên $i\in \{3;4;\ldots;k-2\}$ để cho $P\left(x_{i}\right) \neq P\left(x_{1}\right),$ ta có $\left|Q\left(x_i\right)\right|\ne 0,$ và thế thì
+    $$\left|P\left(x_{i}\right)-P\left(x_{1}\right)\right| \geq\left|\left(x_{i}-x_{1}\right)\left(x_{i}-x_{k}\right)\right| \geq 2(k-2)>k-2,$$
+    một điều mâu thuẫn, chứng tỏ $P\left(x_{i}\right)=P\left(x_{1}\right)$ với $i=3, \ldots, k-2.$ Ta tiếp tục viết $P(x)$ dưới dạng
+    $$P(x)=P\left(x_{1}\right)+\left(x-x_{1}\right)\left(x-x_{3}\right)  \cdots \left(x-x_{k-2}\right)\left(x-x_{k}\right) R(x),$$
+    trong đó $R(x)$ cũng là một đa thức hệ số nguyên. \\
+    Tiếp theo, nếu như $P\left(x_{1}\right) \neq P\left(x_{t}\right)$ với $t=2$ hoặc $t=k-1,$ ta có $R\left(x_{t}\right) \neq 0$, và thế thì
+    $$\left|P\left(x_{t}\right)-P\left(x_{1}\right)\right| \geq(k-4)!\cdot (k-2)>k-2.$$
+    Đây cũng là một điều mâu thuẫn. Ta suy ra $P(x_2)=P(x_1),$ kéo theo điều phải chứng minh.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $P(x)$ là một đa thức hệ số nguyên có bậc tối đa là 10. Biết rằng tồn tại các số nguyên $x_1,x_2,\ldots,x_{10}$ sao cho
+$$P\left(x_1\right)=1,P\left(x_2\right)=2,\ldots,P\left(x_{10}\right)=10.$$
+\begin{enumerate}[a,]
+    \item Chứng minh rằng $x_1,x_2,\ldots,x_{10}$ là một dãy số nguyên cách đều nhau.
+    \item Giả sử $\left|P(10)-P(0)\right|<1000.$ Chứng minh rằng với mọi số nguyên $k,$ luôn tồn tại số tự nhiên $m$ sao cho $P(m)=k.$
+\end{enumerate}
+\nguon{Titu Andreescu}   
+\loigiai{\hfill
+\begin{enumerate}[a,]
+    \item Do
+    $x_2-x_1$ là ước của $P(x_2)-P(x_1)=1$ nên $x_2-x_1=\pm 1.$ Chứng minh tương tự, dễ thấy $x_3-x_2=\pm 1.$ Tính phân biệt của dãy số cho ta $x_2-x_1=x_3-x_2.$ Nói chung
+    $$x_{10}-x_9=x_9-x_8=\ldots=x_3-x_2=x_2-x_1=\pm 1.$$
+    \item Không mất tổng quát, ta xét dãy $x_1,x_2,\ldots,x_{10}$ tăng dần. Áp dụng định lí $Bezout$ cho đa thức $$Q(x)=P(x)-1-x+x_1$$ ta được
+    $P(x)=c\left(x-x_1\right)\left(x-x_2\right)\ldots\left(x-x_{10}\right)+x+1-x_1.$\\
+    Nếu như $c\ne 0,$ ta có
+    \begin{align*}
+        P(10)-P(0) &=10+c\left[\left(10-x_{1}\right)  \cdots \left(10-x_{10}\right)-\left(0-x_{1}\right)  \cdots \left(0-x_{10}\right)\right] \\
+        &=10+(N+20)(N+19)\cdots(N+11)-(N+10)  \cdots (N+1).
+    \end{align*}
+    Ở trong biến đổi trên, ta đặt $N=x_{1}-1$. Ta cũng chứng minh được
+    $$(N+20)(N+19) \cdots (N+11) \text{ và } (N+10)(N+9)\cdots (N+1)$$
+    là hai số khác nhau (cụ thể, số thứ nhất lớn hơn khi $N \geq-10,$ còn số thứ hai lớn hơn khi  $N \leq-11$). Cả hai số này đều chia hết cho $10!,$ chính vì vậy
+    $$\left|(N+20)(N+19) \cdots(N+11)-(N+10)(N+9) \cdots (N+1)\right| \geq 10 !.$$
+    Do đó, $|P(10)-P(0)|>10 !-10>1000$, mâu thuẫn với giả thiết. Ta thu được $c=0.$\\ Bạn đọc tự hoàn tất chứng minh.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Cho đa thức $P(x)=x^{4}-x^{3}-3 x^{2}-x+1.$ Chứng minh rằng tồn tại vô số số nguyên dương $n$ sao cho $P\left(3^{n}\right)$ là hợp số.
+\nguon{Mediterranean Competition 2015}
+\loigiai{
+Với $x=3^{2n-1},$ ta có
+$P\left(3^{2 n-1}\right)=81^{2 n-1}-27^{2 n-1}-3.9^{2 n-1}-3^{2 n-1}+1 .$
+Xét modulo $5$ hai vế, ta được
+$$P\left(3^{2 n-1}\right) \equiv 1-2^{2 n-1}-3(-1)^{2 n-1}-3^{2 n-1}+1 \equiv -2^{2 n-1}-3^{2 n-1} \pmod{5}.$$
+Do $2^{2 n-1}+3^{2 n-1}$ chia hết cho $5$ nên $P\tron{3^{2n-1}}$ là hợp số. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số thực $a,b,c$ sao cho đa thức bậc hai $P(x)=ax^2+bx+c$ nhận giá trị nguyên với mọi giá trị nguyên của $x.$
+\loigiai{
+\begin{enumerate}
+    \item Giả sử $P(x)$ nhận giá trị nguyên với mọi số nguyên $x.$ Do $P(1),P(0)$ và $P(-1)$ nguyên, ta xây dựng được hệ điều kiện dưới đây
+    $$\heva{&c\in \mathbb{Z} \\&a+b+c\in \mathbb{Z} \\ &a-b+c\in \mathbb{Z}}\Rightarrow \heva{&c\in \mathbb{Z} \\&a+b\in \mathbb{Z} \\ &a-b\in \mathbb{Z}}\Rightarrow \heva{&c\in \mathbb{Z} \\&2a\in \mathbb{Z} \\ &a+b\in \mathbb{Z}} \Rightarrow \heva{
+    c \in \mathbb{Z}\\
+    2a \in \mathbb{Z}\\
+    2b \in \mathbb{Z}.
+    }$$
+    \item Đảo lại, với $a,b,c$ như trên, ta viết lại $P(x)$ dưới dạng
+    $$P(x)=a\left(x^2-x\right)+(a+b)x+c.$$
+    Do cả $x^2-x,a+b$ và $c$ đều chia hết cho $2,$ điều kiện đủ được chứng minh.
+\end{enumerate}
+ Như vậy, tất cả các giá trị của $a,b,c$ thỏa mãn là $2a,2b$ và $c$ nguyên.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho đa thức $P(x)$ bậc bốn với hệ số nguyên. Chứng minh rằng $P(x)$ chia hết cho $7$ với mọi số nguyên $x$ khi và chỉ khi tất cả các hệ số của $P(x)$ đều chia hết cho $7.$
+
+\loigiai{
+Ta đặt $P(x)=ax^4+bx^3+cx^2+dx+e.$ Lần lượt tính $P(0),\ P(1),\ P(-1),$ ta có các số
+$$e,\ a+b+c+d+e,\ a-b+c-d+e$$
+đều chia hết cho $7.$ Suy ra $a+c$ và $b+d$ chia hết cho $7.$ Ngoài ra, ta còn có
+$$P(2)+P(-2)=8(a+c)+2e+24a$$
+cũng chia hết cho $7,$ thế nên $a$ chia hết cho $7.$ Kết hợp với $a+c$ chia hết cho $7,$ ta có $c$ chia hết cho $7.$ Tới đây, xét nốt điều kiện $P(3)$ chia hết cho $7$ rồi sử dụng các kết quả $a,c,e,b+d$ chia hết cho $7$ vừa tìm được để hoàn tất chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ sao cho đa thức 
+$$P(x)=x^{3n+7}+2x^{2n}+x^5-x^4+1$$
+chia hết cho đa thức $x^5+x^4+x+1.$
+\loigiai{
+Trước hết, ta sẽ tìm dư của $P(x)$ trong phép chia cho đa thức
+$$x^8-1=(x-1)(x+1)\tron{x^2+1}\tron{x^4+1}=(x-1)\tron{x^2+1}\tron{x^5+x^4+x+1}.$$
+Với việc đặt $n=8q+r,$ trong đó $r$ đóng vai trò như số dư của $n$ khi chia cho $8,$ ta có
+$$P(x)=\tron{x^8-1}Q(x)+\tron{x^{3r+7}+2x^{2r}+x^5-x^4+1}.$$
+Tiếp theo, ta xét các trường hợp của $r$ để nhận xét khi nào $x^{3r+7}+2x^{2r}+x^5-x^4+1$ chia hết cho $$x^5+x^4+x+1.$$ Đáp số bài toán là tất cả các số tự nhiên $n$ thỏa mãn $n$ chia $8$ dư $6.$}
+\end{gbtt}
+
+\begin{gbtt} \label{caohuy123}
+Tìm tất cả các số nguyên dương $a,b$ sao cho đa thức $P(x)=x^a+x^b+1$ chia hết cho đa thức $Q(x)=x^2+x+1.$
+\loigiai{Ta đã biết
+$x^3-1=(x-1)\left(x^2+x+1\right).$ Trong bài toán này, ta sẽ xét số dư khi chia cho $3$ của $a$ và $b.$ \\
+Ta đặt $a=3k+r,b=3l+s,$ với $k,l,r,s$ là các số tự nhiên, đồng thời $0\le r\le s\le 2.$ Phép đặt này cho ta
+\begin{align*}
+    P(x)&=x^{3k+r}+x^{3l+s}+1\\&=x^{3k}x^r+x^{3l}x^s+1\\&=\left(x^{3k}-1\right)x^r+\left(x^{3l}-1\right)x^s+x^r+x^s+1.
+\end{align*}
+Giả sử tồn tại đa thức $P(x)$ thỏa mãn đề bài. Nhờ vào các nhận xét
+$$\tron{x^2+x+1}\mid \tron{x^3-1},\quad \tron{x^3-1}\mid\tron{ x^{3l}-1},\quad \tron{x^3-1}\mid \tron{x^{3k}-1}.$$
+ta suy ra $x^r+x^s+1$ chia hết cho $x^2+x+1.$ \\
+Với việc $0\le r\le s\le 2,$ ta bắt buộc phải có $r=1,s=2.$ Như vậy, bài toán trên có hai kết quả
+\begin{align*}
+    &a\equiv 1\pmod{3},\quad b\equiv 2\pmod{3} ;
+    \\&a\equiv 2\pmod{3},\quad b\equiv 1 \pmod{3}.   
+\end{align*}}
+\end{gbtt}
+
+\begin{gbtt}
+Với $n$ là một số nguyên dương, xét đa thức $P_n(x)=(x-1)^n+(x+2)^n.$ Xác định $n$ để $P_n(x)$ chia hết cho $2x^2+2x+5.$
+\nguon{Chọn đội tuyển chuyên Trần Phú $-$ Hải Phòng 2021}
+\loigiai{
+Giả sử tồn tại số nguyên dương $n$ thỏa yêu cầu bài toán. Do $P_n(2)=1+4^n$ chia hết cho $17$ nên ta sẽ đi tìm số dư của phép chia $4^n+1$ cho $17.$ Cụ thể
+\begin{enumerate}
+    \item Nếu $n=4k$ thì $1+4^n=1+4^{4k}=1+256^k\equiv 1+1\equiv 2\pmod{17}.$
+    \item Nếu $n=4k+1$ thì $1+4^n=1+4^{4k+1}=1+4\cdot256^k\equiv 1+4\equiv 5\pmod{17}.$    
+    \item Nếu $n=4k+2$ thì $1+4^n=1+4^{4k+2}=1+16\cdot256^k\equiv 1+16\equiv 0\pmod{17}.$    
+    \item Nếu $n=4k+3$ thì $1+4^n=1+4^{4k+3}=1+64\cdot256^k\equiv 1+64\equiv 14\pmod{17}.$    
+\end{enumerate}
+Thử lại, ta kết luận các số nguyên dương $n$ thỏa yêu cầu bài toán là $n$ chia $4$ dư $2.$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $P(x)$ và $Q(x)$ là hai đa thức với hệ số nguyên thỏa mãn đa thức $P\tron{x^3}+xQ\tron{x^3}$ chia hết cho đa thức $x^2+x+1.$ Chứng minh rằng $P(2021)-Q(2021)$ chia hết cho $2020.$
+\loigiai{Giống với các bài trước, ta sẽ dư trong phép chia đa thức $P\tron{x^3}+xQ\tron{x^3}$ cho đa thức $x^2+x+1.$ Ta có
+\begin{align*}
+    P\tron{x^3}+xQ\tron{x^3}
+    =P\tron{x^3}-P(1)+x\left[Q\tron{x^3}-Q(1)\right]+xQ(1)+P(1).
+\end{align*}
+Tương tự \chu{ví dụ \ref{caohuy123}}, ta suy ra đa thức $xQ(1)+P(1)$ chia hết cho đa thức $x^2+x+1.$ Tuy nhiên, do $$\deg\left(xQ(1)+P(1)\right)\le \deg\left(x^2+x+1\right),$$ 
+ta có $Q(1)=P(1)=0.$ Theo định lí $Bezout$, cả $P(x)$ và $Q(x)$ đều chia hết cho đa thức $x-1.$ Ta suy ra
+$$\heva{
+2020\mid P\left ( 2021 \right )\\ 
+2020\mid Q\left ( 2021 \right )}\Rightarrow 2020\mid \left [ P\left ( 2021 \right )-Q\left ( 2021 \right ) \right ].$$
+Đây chính là điều phải chứng minh.}
+\end{gbtt}
+
+\section{Phép đồng nhất hệ số trong đa thức}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các đa thức bậc hai $P(x)=a x^{2}+b x+c$ với hệ số nguyên thỏa mãn 
+$$\heva{&P(1)<P(2)<P(3) \\ &P^2(1)+P^2(2)+P^2(3)=22.}$$
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Xác định tất cả các số nguyên dương $n$ sao cho tồn tại đa thức $P(x)$ hệ số nguyên thỏa mãn
+\[\deg P\le 3,\quad P(0)=5,\quad P(n)=11,\quad P(3n)=41.\]
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng không tồn tại các đa thức $P(x),Q(x)$ có bậc lớn hơn một với hệ số nguyên thỏa mãn $P(x)Q(x)=x^5+2x+1.$
+\nguon{India National Olympiad 1999}
+\end{btt}
+
+\begin{btt}
+Chứng minh rằng đa thức $P(x)=x^4+2x^3+2x^2+2$ không thể phân tích thành tích thành hai đa thức hệ số nguyên và có bậc lớn hơn hoặc bằng một.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các đa thức $P(x)$ bậc $n\ge 1$ với hệ số nguyên thỏa mãn đồng thời hai điều kiện
+\begin{enumerate}[i,]
+    \item Các hệ số của $P(x)$ là hoán vị của bộ $\left(0,1,2,\ldots,n\right).$
+    \item Đa thức $P(x)$ có $n$ nghiệm hữu tỉ.
+\end{enumerate}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các đa thức bậc hai $P(x)=a x^{2}+b x+c$ với hệ số nguyên thỏa mãn 
+$$\heva{&P(1)<P(2)<P(3) \\ &P^2(1)+P^2(2)+P^2(3)=22.}$$
+\nguon{Titu Andreescu}
+\loigiai{
+Rõ ràng $P(1), P(2), P(3)$ là các số nguyên. Do tổng bình phương của chúng là $22=4+9+9,$ và điều kiện $P(1)<P(2)<P(3),$ ta suy ra 
+$$P(1)=-3, P(2) \in\{-2;2\}, P(3)=3.$$
+Lập luận trên hướng ta đến việc giải hai hệ phương trình
+$$
+\heva{a+b+c &=-3 \\
+4 a+2 b+c &=-2 \\
+9 a+3 b+c &=3},\quad 
+\heva{a+b+c &=-3 \\
+4 a+2 b+c &=2 \\
+9 a+3 b+c &=3}.
+$$
+Hai hệ này lần lượt cho ta $(a,b,c)=(2,-5,0)$ và $(a,b,c)=(-2,11,-12).$ \\
+Kết quả, tất cả các đa thức $P(x)$ thỏa mãn đề bài là $P(x)=2 x^{2}-5 x$ và $P(x)=-2 x^{2}+11 x-12.$}
+\end{gbtt}
+
+\begin{gbtt}
+Xác định tất cả các số nguyên dương $n$ sao cho tồn tại đa thức $P(x)$ hệ số nguyên thỏa mãn
+\[\deg P\le 3,\quad P(0)=5,\quad P(n)=11,\quad P(3n)=41.\]
+\loigiai{
+Áp dụng tính chất $P(a)-P(b)$ chia hết cho $a-b$ với mọi $a,b$ nguyên phân biệt, ta có $6$ chia hết cho $n$ và $30$ chia hết cho $2n.$ Ta tìm ra $n=1$ và $n=3.$ \begin{enumerate}
+    \item Với $n=1,$ một trong các đa thức thỏa mãn đề bài là $P(x)=3x^2+3x+5.$
+    \item Với $n=3,$ ta đặt $P(x)=ax^3+bx^2+cx+d,$ với $a$ không nhất thiết khác $0.$ Khi đó
+    \begin{align*}
+    \heva{P(0)&=5\\P(3)&=11\\P(9)&=11}
+    \Rightarrow \heva{d&=5\\27a+9b+3c+d&=11\\729a+81b+9c+d&=41}
+    \Rightarrow \heva{d&=5\\9a+3b+c&=2\\81a+9b+c&=4}
+    \Rightarrow 72a+6b=2.
+    \end{align*}
+    Vế trái chia hết cho $3,$ trong khi $2$ không chia hết cho $3,$ mâu thuẫn.
+\end{enumerate}
+Như vậy $n=1$ là giá trị duy nhất của $n$ thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng không tồn tại các đa thức $P(x),Q(x)$ có bậc lớn hơn một với hệ số nguyên thỏa mãn $P(x)Q(x)=x^5+2x+1.$
+\nguon{India National Olympiad 1999}
+\loigiai{
+Giả sử tồn tại các đa thức $P(x),Q(x)$ thỏa yêu cầu bài toán và $\deg P\ge \deg Q.$ Do giả thiết $\deg Q\ge 1$ nên 
+$$\deg P=3,\quad \deg Q=2.$$
+Ta đặt $P(x)=x^3+ax^2+bx+c,Q(x)=x^2+dx+e.$ Với mọi số thực $x,$ ta có
+$$\tron{x^3+ax^2+bx+c}\tron{x^2+dx+e}=x^5+2x+1.$$
+Ta sẽ thực hiện đồng nhất hệ số lần lượt.
+\begin{enumerate}
+    \item Đồng nhất hệ số bậc bốn, ta có $a=0.$
+    \item Đồng nhất hệ số bậc ba, ta có $ad+e=0,$ nhưng vì $a=0$ nên $e=0.$
+    \item Đồng nhất hệ số tự do, ta có $ce=1,$ mâu thuẫn với $e=0.$
+\end{enumerate}
+Giả sử ban đầu là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Chứng minh rằng đa thức $P(x)=x^4+2x^3+2x^2+2$ không thể phân tích thành tích thành hai đa thức hệ số nguyên và có bậc lớn hơn hoặc bằng một.
+\loigiai{
+Ta xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $P(x)=(x+a)\tron{x^3+bx^2+c+d}$ thì $ad=2,$ suy ra $a\in \{-2;-1;1;2\}.$ Tuy nhiên, các số trong tập trên không phải nghiệm của $P(x)$ nên phân tích này không thỏa.
+    \item Nếu $P(x)=\tron{x^2+ax+b}\tron{x^2+cx+d},$ ta có
+    $$a+c=2,ac+b+d=2,ad+bc=0,bd=2.$$
+    Vì $bd=2$ nên $b+d=3$ hoặc $b+d=-3,$ thế trở lại $ac+b+d=2$ thì $ac=5$ hoặc $ac=-1.$ Không có nguyên hai số nào có tổng bằng $2,$ tích bằng $5$ hoặc $-1.$ Trường hợp này cũng không xảy ra. 
+\end{enumerate}
+Hoàn tất chứng minh.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các đa thức $P(x)$ bậc $n\ge 1$ với hệ số nguyên thỏa mãn đồng thời hai điều kiện
+\begin{enumerate}[i,]
+    \item Các hệ số của $P(x)$ là hoán vị của bộ $\left(0,1,2,\ldots,n\right).$
+    \item Đa thức $P(x)$ có $n$ nghiệm hữu tỉ.
+\end{enumerate}
+\loigiai{
+Dựa vào điều kiện thứ hai, ta có thể đặt
+\[P(x)=\left(a_nx+b_n\right)\left(a_{n-1}x+b_{n-1}\right)\ldots\left(a_1x+b_1\right).\tag{*}\]
+Mặt khác, dựa vào điều kiện thứ nhất, ta chỉ ra
+$$P(1)=0+1+\ldots +n=\dfrac{n(n+1)}{2}.$$
+Trong (*), cho $x=1$ ta được
+\[\dfrac{n(n+1)}{2}=\left(a_n+b_n\right)\left(a_{n-1}+b_{n-1}\right)\ldots\left(a_1+b_1\right).\tag{**}\]
+Ta sẽ chứng minh có tối đa $1$ trong $n$ số $b_n,b_{n-1},\ldots,b_1$ bằng $0.$ Thật vậy, trong trường hợp có $2$ trong $n$ số này bằng $0,$ hệ số tự do và hệ số bậc nhất của $P(x)$ đều bằng $0,$ và lúc này vì $P(x)$ chia hết cho $x^2$ nên nó không thể có $n$ nghiệm hữu tỉ, mâu thuẫn. Nhận xét trên cho ta
+$$\left(a_nx+b_n\right)\left(a_{n-1}x+b_{n-1}\right)\ldots\left(a_1x+b_1\right)\ge 2^{n-1}.$$
+Kết hợp với (**), ta được
+$\dfrac{n(n+1)}{2}\ge 2^{n-1}.$
+Nhận thấy hàm số mũ hầu như có giá trị lớn hơn hàm đa thức, ta sẽ tìm cách chặn $n.$ Ta chứng minh rằng $$n(n+1)< 2^n, \text{ với mọi }n\ge 4.$$
+Với $n=4,$ khẳng định đúng. Giả sử khẳng định đúng với $n=4,5,\ldots,k,$ ta có
+    $$2^{k+1}=2\cdot 2^k\ge 2k(k+1)>(k+1)(k+2).$$
+Theo nguyên lí quy nạp, khẳng định trên được chứng minh. Ta suy ra $n\le 3.$ 
+\begin{enumerate}
+    \item Với $n=1,$ ta có đa thức $P(x)=x$ thỏa mãn.
+    \item Với $n=2,$ ta có các đa thức $P(x)=x^2+2x,\: P(x)=2x^2+x$ thỏa mãn.
+    \item Với $n=3,$ ta có các đa thức    $P(x)=x^3+3x^2+2x,\: P(x)=2x^3+3x^2+x$ thỏa mãn.
+\end{enumerate}}
+\end{gbtt}
+
+\section{Nghiệm của đa thức}
+\subsection*{Ví dụ minh họa}
+
+\begin{bx}
+Với $m$ là tham số nguyên, chứng minh rằng đa thức $$P(x)=x^4-3x^3+(4+m)x^2-5x+m$$  không thể có hai nghiệm nguyên phân biệt.
+\loigiai{
+Giả sử $a$ là một nghiệm nguyên của $P(x).$ Ta có 
+$$a^4-3a^3+(4+m)a^2-5a+m=0,$$
+\[m\left(a^2+1\right)=-a^4+3a^3-4a^2+5a.\tag{*}\]
+Từ đây, ta suy ra $-a^4+3a^3-4a^2+5a$ chia hết cho $a^2+1$. Ta biểu diễn $-a^4+3a^3-4a^2+5a$ dưới dạng
+$$-a^{4}+3a^{3}-4a^{2}+5 a=-\left(a^{2}+1\right)\left(a^{2}-3 a+3\right)+2a+3.$$
+Nhờ vào biểu diễn trên, ta suy ra
+\begin{align*}
+\left(a^2+1\right)\mid (2a+3)
+&\Rightarrow \left(a^2+1\right)\mid (2a+3)(2a-3)
+\\&\Rightarrow \left(a^2+1\right)\mid \left(4a^2+4-13\right)
+\\&\Rightarrow\left(a^2+1\right)\mid 13.  
+\end{align*}
+Rõ ràng $a^2+1>0.$ Ta xét các trường hợp.
+\begin{enumerate}
+    \item Với $a^2+1=13,$ ta có $a=\pm 2\sqrt{3}$ là số vô tỉ.
+    \item Với $a^2+1=1,$ ta có $a=0.$
+\end{enumerate}
+Thay $a=0$ trở lại (*), ta được $m=0.$ Như vậy
+$$P(x)=x^{4}-3 x^{3}+4 x^{2}-5 x=x\left(x^{3}-3 x^{2}+4x-5\right).$$
+Phản chứng, giả sử $P(x)$ có hai nghiệm nguyên phân biệt là $a=0$ và $b$.\\
+Theo đó, $b$ bắt buộc phải là nghiệm nguyên (khác $0$) của $x^{3}-3 x^{2}+4 x^{2}-5,$ và thế thì
+\begin{align*}
+    b^3-3b^2+4b-5&=0,\\
+    b\left(b^2-3b+4\right)&=5.\tag{**}
+\end{align*}
+Ta được $b\in\{\pm 1;\pm 5\}.$ Thử với từng trường hợp, ta không tìm ra được $b$ thỏa mãn (**). \\Kết luận, $P(x)$ không thể có hai nghiệm nguyên phân biệt.}
+\end{bx}
+
+\begin{bx}
+Tìm tất cả các số nguyên $a$ sao cho đa thức $f(x)=x^3+ax+3$  có nghiệm hữu tỉ. 
+\nguon{Khảo sát chất lượng trường THCS Archimedes Academy 2021}
+\loigiai{
+Giả sử $f(x)$ có nghiệm $x_0$ hữu tỉ. Theo đó, ta đặt $x_0=\dfrac{p}{q},$ với $(p,q)=1$ và $q>0.$ Phép đặt này cho ta
+$$\left(\dfrac{p}{q}\right)^3+a\left(\dfrac{p}{q}\right)+3=0\Rightarrow p^3+apq^2+3q^3=q^3.$$
+Ta nhận thấy cả $apq^2,3q^3$ và $q^3,$ đều chia hết cho $q,$ thế nên $p^3$ cũng chia hết cho $q,$ nhưng do $(p,q)=1$ nên $q=1.$ Lập luận trên cho ta $x_0$ là số nguyên. Do $x_0\ne 0$ nên 
+$x_0^3+ax_0+3=0$
+hay $$a=-\dfrac{x^3_0+3}{x_0}.$$
+Ta có $x_0$ là ước của $3.$ Đến đây, ta lần lượt xét $x_0=-3,-1,1,3$ để chỉ ra tất cả các giá trị thỏa mãn đề bài của $a$ là $a=-8,a=-4,a=2,a=-10.$
+}
+\end{bx} 
+
+\begin{luuy}
+Trong bài toán trên, tác giả đã chứng minh tính chất
+\begin{quote}
+\it
+     Nếu đa thức hệ số nguyên $P(x)$ nhận $\dfrac{p}{q}$ là một nghiệm hữu tỉ (với $(p,q)=1$) thì
+\begin{itemize}
+    \item Hệ số bậc cao nhất của $P(x)$ chia hết cho $p.$
+    \item Hệ số tự do của $P(x)$ chia hết cho $q.$
+\end{itemize}
+\end{quote}
+Từ nay về sau, tác giả sử dụng trực tiếp tính chất này mà không thông qua chứng minh.
+\end{luuy}
+
+\begin{bx}
+Cho đa thức $P(x)$ khác hằng với hệ số nguyên thỏa mãn $P(0)=-2021.$ Hỏi $P(x)$ có tối đa bao nhiêu nghiệm nguyên phân biệt?
+\loigiai{Gọi $r$ là một nghiệm nguyên của $P(x).$ Theo tính chất đã phát biểu, ta có
+$$r \in\{\pm 1, \pm 43, \pm 47, \pm 2021\}.$$
+Do vậy, trường hợp thu được nhiều nghiệm nhất xảy ra khi $P(x)$ chia hết cho đa thức $$(x-1)(x+1)\left(x\pm 43\right)\left(x\pm 47\right).$$ Trong trường hợp này, $P(x)$ có đúng $4$ nghiệm.}
+\end{bx}
+
+\begin{bx}
+Với $a,b$ là các số hữu tỉ, xét đa thức $P(x)=x^3+ax^2+bx+6.$ Biết rằng $P(x)$ nhận $\sqrt{3}$ là nghiệm, tìm tất cả các nghiệm còn lại của $P(x).$
+\loigiai{Từ giả thiết, ta có $\di P\left(\sqrt{3}\right)=0,$ tức là
+$$(3a+6)+(b+3)\sqrt{3}=0.$$
+Do $3a+6$ và $b+3$ là các số hữu tỉ, ta bắt buộc có $3a+6=0$ và $b+3=0.$\\
+Giải ra, ta tìm được $a=-2,b=-3.$ Với $a=-2,b=-3,$ ta nhận thấy rằng
+$$P(x)=x^3-2x^2-3x+6=\left(x-\sqrt{3}\right)\left(x+\sqrt{3}\right)(x-2).$$
+Dựa vào đây, ta được các nghiệm còn lại của $P(x)$ là $x=2$ và $x=-\sqrt{3}.$}
+\end{bx}
+
+\begin{bx}
+Chứng minh rằng không tồn tại đa thức $P(x)$ bậc hai với hệ số nguyên nhận $\sqrt[3]{7}$ làm nghiệm.
+\loigiai{
+Ta giả sử tồn tại đa thức $P(x)=ax^2+bx+c$ (với $a\ne 0$) nhận $\sqrt[3]{7}$ làm một nghiệm. Theo đó
+\begin{align*}
+    a\sqrt[3]{49}+b\sqrt[3]{7}+c=0
+    &\Rightarrow \left(a\sqrt[3]{7}-b\right)\left(a\sqrt[3]{49}+b\sqrt[3]{7}+c\right)=0
+    \\&\Rightarrow 7a^2-bc=\tron{b^2-ca}\sqrt[3]{7}.
+\end{align*}
+Do $\sqrt[3]{7}$ là số vô tỉ nên bắt buộc $7a^2-bc=0$ và $b^2-ca=0.$ Ta có hệ
+$$\heva{&7a^2=bc \\ &b^2=ca}\Rightarrow \heva{&7a^3=abc \\ &b^3=abc}\Rightarrow 7a^3=b^3\Rightarrow \left(\dfrac{b}{a}\right)^3=7.$$
+Điều trên là không thể xảy ra. Như vậy, giả sử phản chứng là sai, và bài toán được chứng minh.
+}
+\begin{luuy}
+Ngoài cách nhân với $a\sqrt[3]{7}-b,$ trong bài này ta cũng có thể xử lí đẳng thức
+$$a\sqrt[3]{49}+b\sqrt[3]{7}+c=0$$
+bằng cách chuyển $-c$ qua vế phải rồi lấy lập phương hai vế.
+\end{luuy}
+\end{bx}
+
+\begin{bx} \label{dtcan1}
+Giả sử $P(x)$ là đa thức khác đa thức không có hệ số hữu tỉ nhận $\sqrt{2}+\sqrt{3}$ làm nghiệm.
+\begin{enumerate}[a,]
+    \item Hỏi, đa thức $P(x)$ có bậc nhỏ nhất là bao nhiêu?
+    \item Tìm tất cả các đa thức $P(x)$ thỏa mãn.
+\end{enumerate}
+\nguon{Titu Andreescu}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Ta đặt $a=\sqrt{2}+\sqrt{3}.$ Phép đặt này cho ta
+\begin{align*}
+    a-\sqrt{3}=\sqrt{2}
+    &\Rightarrow a^2-2a\sqrt{3}+3=2
+    \\&\Rightarrow a^2+1=2a\sqrt{3}
+    \\&\Rightarrow \left(a^2+1\right)^2=12a^2\\&
+    \Rightarrow a^4-10a^2+1=0
+\end{align*}
+Biến đổi trên cho ta biết, $a$ là nghiệm của đa thức
+$$Q(x)=x^4-10x^2+1.$$
+Ta sẽ chứng minh $\min\left(\deg P\right)=\deg Q=4.$ Thật vậy, ta giả sử bậc của $P(x)$ nhỏ hơn $4.$ Đặt
+$$P(x)=ax^3+bx^2+cx+d,$$
+ở đây $a,b,c,d$ là các số hữu tỉ không đồng thời bằng $0.$ Cho $x=\sqrt{2}+\sqrt{3},$ ta được
+$$2b\sqrt{6}+(9a+c)\sqrt{3}+(11a+c)\sqrt{2}+5b+d=0.$$
+Lần lượt đặt $2b=A,9a+c=B,11a+c=C,5b+d=D,$ ta có
+\[A\sqrt{6}+B\sqrt{3}+C\sqrt{2}+D=0.\tag{1}\]
+Chuyển $B\sqrt{3}$ sang vế phải rồi bình phương, ta được
+\begin{align*}
+    A\sqrt{6}+C\sqrt{2}=-D-B\sqrt{3}
+    &\Rightarrow 6A^2+2C^2+4AC\sqrt{3}=D^2+3B^2+2BD\sqrt{3}
+    \\&\Rightarrow 2(2AC-BD)\sqrt{3}=D^2+3B^2-6A^2-2C^2.
+\end{align*}
+Do $\sqrt{3}$ là số vô tỉ, ta bắt buộc phải có 
+\[D^2+3B^2=6A^2+2C^2.\tag{2}\]
+Một cách tương tự, khi chuyển $C\sqrt{3}$ sang vế phải, ta cũng suy ra được
+\[D^2+2C^2=6A^2+3B^2.\tag{3}\]
+Kết hợp (2) và (3), ta nhận thấy $2C^2=3B^2.$ Do $B,C$ hữu tỉ, ta có $B=C=0.$ Thế vào (1), ta được
+$$A\sqrt{6}+D=0.$$
+Lại do $A,D$ đều hữu tỉ, ta suy ra $A=D=0.$ Vì $A=B=C=D=0$ nên $a=b=c=d=0.$\\ Ta được $P(x)\equiv 0,$ trái với giả thiết $P(x)$ khác đa thức không. \\
+Như vậy, giả sử phản chứng là sai, và ta chứng minh được $\min\left(\deg P\right)=4.$
+    \item Với việc $\deg P\ge 4,$ ta gọi thương và số dư trong phép chia đa thức $P(x)$ cho đa thức $$Q(x)=x^4-10x^2+1$$ lần lượt là $S(x)$ và $R(x),$ trong đó $\deg R\le 3.$ Ta có
+    \[P(x)=Q(x)S(x)+R(x).\tag{4}\]
+    Trong (4), cho $x=\sqrt{2}+\sqrt{3}$ ta được
+    $$P\left(\sqrt{2}+\sqrt{3}\right)=Q\left(\sqrt{2}+\sqrt{3}\right)S\left(\sqrt{2}+\sqrt{3}\right)+R\tron{\sqrt{2}+\sqrt{3}}.$$
+     Do $\sqrt{2}+\sqrt{3}$ là nghiệm của cả $P(x)$ và $Q(x)$ nên $P\left(\sqrt{2}+\sqrt{3}\right)=Q\left(\sqrt{2}+\sqrt{3}\right)=0,$ và vì thế $$R\left(\sqrt{2}+\sqrt{3}\right)=0.$$
+     Theo đó, $\sqrt{2}+\sqrt{3}$ cũng là một nghiệm của $S(x).$ Theo như câu a, ta bắt buộc phải có $R(x)=0$ (vì nếu $\deg R\ge 0$ thì $\deg R\ge 4,$ trái điều kiện $\deg R\le 3$).
+     Tổng kết lại, các đa thức $P(x)$ cần tìm có dạng
+     $$P(x)=\left(x^4-10x^2+1\right)S(x).$$
+     Trong đó, $S(x)$ là một đa thức hệ số nguyên khác đa thức không.
+\end{enumerate}}
+\end{bx}
+
+\begin{luuy}
+Các bài toán trên là các trường hợp riêng của \chu{bổ đề về bậc nhỏ nhất của đa thức}, đó là
+\begin{enumerate}
+    \item Với $a,b$ là các số nguyên thỏa mãn $\sqrt{b}$ là số vô tỉ, đa thức nhận $a+\sqrt{b}$ làm nghiệm luôn chia hết cho đa thức $(x-a)^2-b.$
+    \item Với $a,b$ là các số nguyên thỏa mãn $\sqrt[3]{b}$ là số vô tỉ, đa thức nhận $a+\sqrt[3]{b}$ làm nghiệm luôn chia hết cho đa thức $(x-a)^3-b.$
+    \item Với $a,b$ là các số nguyên thỏa mãn $\sqrt{a}$ và $\sqrt{b}$ là số vô tỉ, đa thức nhận $\sqrt{a}+\sqrt{b}$ làm nghiệm luôn chia hết cho đa thức $x^4-2(a+b)x^2+(a-b)^2.$
+\end{enumerate}
+\end{luuy}
+
+\begin{bx}
+Tìm tất cả các đa thức $P(x)$ với hệ số nguyên thỏa mãn
+$$P\tron{1+\sqrt{3}}=2+\sqrt{3}, \quad P\tron{3+\sqrt{5}}=3+\sqrt{5}.$$
+\nguon{Zhautykov Mathematical Olympiad 2014}
+\loigiai{
+Giả sử tồn tại đa thức $P(x)$ thỏa mãn đề bài. \\
+Xét đa thức $Q(x)=P(x)-x.$ Rõ ràng $a=3+\sqrt{5}$ là nghiệm của $Q(x).$ Mặt khác,
+$$a-3=\sqrt{5}\Rightarrow (a-3)^2=5\Rightarrow a^2-6a+4=0.$$
+Theo như nhận xét ở bài trước, ta suy ra tất cả các đa thức $Q(x)$ đều có dạng
+\[Q(x)=\left(x^2-6x+4\right)S(x),\tag{*}\]
+ở đây, $S(x)$ là một đa thức hệ số nguyên khác đa thức không. \\
+Hơn nữa, từ giả thiết ta cũng có thể suy ra $Q\tron{1+\sqrt{3}}=1.$ Trong (*), cho $x=1+\sqrt{3},$ ta được
+$$1=\left(2-4\sqrt{3}\right)S\tron{1+\sqrt{3}}.$$
+Ta đã biết, $S\tron{1+\sqrt{3}}$ có thể được viết dưới dạng $A+B\sqrt{3},$ trong đó $A,B$ là các số nguyên dương (tham khảo phần \chu{căn thức}). Phép đặt này cho ta
+$$1=\left(2-4\sqrt{3}\right)\left(A+B\sqrt{3}\right),$$
+hay là
+$2A-12B-1=\left(4A-2B\right)\sqrt{3}.$
+Do $\sqrt{3}$ là số vô tỉ, ta suy ra 
+$$2A-12B-1=0,\:4A-2B=0.$$
+Giải hệ trên, ta tìm ra $A=-\dfrac{1}{22}$ và $B=-\dfrac{1}{11},$ mâu thuẫn với điều kiện $A,B$ nguyên.\\ Như vậy, giả sử đã cho là sai, và ta không tìm được đa thức $P(x)$ nào thỏa mãn đề bài.
+}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm số nguyên $m$ sao cho đa thức
+\[P(x)=x^3-(m+1)x^2+2x+6-m\]
+có nhiều nghiệm nguyên phân biệt nhất có thể.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $m$ sao cho đa thức 
+$$P(x)=x^3+(m+1)x^2-(2 m-1) x-\left(2m^2+m+4\right)$$
+tồn tại nghiệm nguyên.
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương ${n}$ sao cho đa thức $P(x)=x^{n}+(2+x)^{n}+(2-x)^{n}$ có nghiệm hữu tỉ.
+\end{btt}
+
+\begin{btt}
+Giả sử $m$ là một nghiệm hữu tỉ chung của hai đa thức
+\begin{align*}
+    P(x)&=a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0}, \\Q(x)&=b_{n} x^{n}+b_{n-1} x^{n-1}+\ldots+b_{1}
+    x+b_{0}.
+\end{align*}
+Biết rằng $a_{n}-b_{n}$ là một số nguyên tố và $a_{n-1}=b_{n-1}$. Chứng minh $m$ là số nguyên.
+\nguon{Cao Đình Huy}
+\end{btt}
+
+\begin{btt}
+Cho đa thức bậc ba $P(x)=a x^{3}+b x^{2}+c x+d$ với tất cả các hệ số đều nguyên, trong đó $ad$ là số lẻ, còn $abc$ là số chẵn. Chứng minh rằng $P(x)$ có nghiệm vô tỉ.
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $n \geq 2.$ Xét đa thức
+$$P(x)=x^{n}+2 x^{n-1}+3 x^{n-2}+\ldots+n x+n+1.$$ 
+\begin{enumerate}[a,]
+    \item Chứng minh rằng $(x-1)^{2}P(x)=x^{n+2}-(n+2) x+n+1.$
+    \item Chứng minh rằng $P(x)$ không có nghiệm hữu tỉ.
+\end{enumerate}
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Với $a,b$ là các số hữu tỉ, xét đa thức $P(x)=x^{3}+a x+b.$ Giả sử $P(x)$ có nghiệm  $x=1+\sqrt{3}$. Chứng minh rằng $P(x)$ chia hết cho đa thức $x^{2}-2x-2.$
+\nguon{Chọn học sinh giỏi Hà Nội 2021}
+\end{btt}
+
+\begin{btt}
+Cho đa thức $P(x)=x^3+px^2+qx+1,$ với $p,q$ là các số hữu tỉ. Biết rằng $2+\sqrt{5}$ là một nghiệm của $P(x),$ hãy tìm tất cả các giá trị có thể của $p$ và $q.$
+\nguon{Hanoi Open Mathematics Competition 2012}
+\end{btt}
+
+\begin{btt}
+Cho số nguyên dương $a$ không chính phương. Gọi $r$ là một nghiệm thực của phương trình $x^3-2ax+1=0.$ Chứng minh rằng $r+\sqrt{a}$ là một số vô tỉ.
+\nguon{China Girls Mathematical Olympiad 2014}
+\end{btt}
+
+\begin{btt}
+Gọi $\alpha $ là nghiệm dương của phương trình $x^2+x=5$. Với số nguyên dương $n$ nào đó, gọi $c_0,c_1,\ldots ,c_n$ là các số nguyên không âm thỏa mãn đẳng thức $$c_0+c_1\alpha +c_2\alpha ^2+\ldots+c_n\alpha^n=2015.$$
+Chứng minh rằng ${{c}_{0}}+{{c}_{1}}+{{c}_{2}}+\ldots+{{c}_{n}}\equiv 2\pmod{3}.$
+\nguon{Vietnamese Team Selection Test 2015}
+\end{btt}
+
+\begin{btt}
+Với các số nguyên $a, b, c$ thỏa mãn $|a|,|b|,|c|\le 10,$ xét đa thức $f(x)=x^3+ax^2+bx+c$ thỏa mãn điều kiện
+$$
+\left|f\tron{2+\sqrt{3}}\right|<0,0001.
+$$
+Chứng minh rằng $2+\sqrt{3}$ là một nghiệm của $f(x).$
+\nguon{China Girls Mathematical Olympiad 2017}
+\end{btt}
+
+\begin{btt}
+Tồn tại hay không đa thức $P(x)$ với hệ số nguyên thỏa mãn $$P\left(1+\sqrt[3]{2}\right)=1+\sqrt[3]{2},\quad P\left(1+\sqrt{5}\right)=2+3\sqrt{5}\:?$$ 
+\nguon{Vietnam Mathematical Olympiad 2017}
+\end{btt}
+
+\begin{btt} \
+\begin{enumerate}[a,]
+    \item Tìm đa thức $P(x)$ khác hằng, có hệ số hữu tỉ, có bậc nhỏ nhất có thể thỏa mãn $$P\tron{\sqrt[3]{3}+\sqrt[3]{9}}=3+\sqrt[3]{3}.$$
+    \item Tồn tại hay không đa thức $P(x)$ khác hằng và có hệ số nguyên thỏa mãn $$P\tron{\sqrt[3]{3}+\sqrt[3]{9}}=3+\sqrt[3]{3} \: ?$$
+\end{enumerate}
+\nguon{Vietnam Mathematical Olympiad 1997}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm số nguyên $m$ sao cho đa thức
+\[P(x)=x^3-(m+1)x^2+2x+6-m\]
+có nhiều nghiệm nguyên phân biệt nhất có thể.
+\loigiai{
+Giả sử $a$ là một nghiệm nguyên của đa thức. Chuyển vế và cô lập $m,$ ta có
+$$a^3-a^2+2a+6=m\tron{a^2+1}.$$
+Ta nhận thấy rằng $a^3-a^2+2a+6$ chia hết cho $a^2+1.$ Phép chia hết này cho ta
+$$(a,m)\in\{(-7,-8);(-2,-2);(-1,1);(0,6);(1,4);(3,3)\}.$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $m=-8,$ đa thức $P(x)=(x+7)\tron{x^2+2}$ có một nghiệm duy nhất.
+    \item Với $m=-2,$ đa thức $P(x)=(x+2)\tron{x^2-x+4}$ có một nghiệm duy nhất.
+    \item Với $m=1,$ đa thức $P(x)=(x+1)\tron{x^2-3x+5}$ có một nghiệm duy nhất.
+    \item Với $m=3,$ đa thức $P(x)=(x-3)\tron{x^2-x-1}$ có một nghiệm nguyên và hai nghiệm vô tỉ.
+    \item Với $m=4,$ đa thức $P(x)=(x-1)\tron{x^2-4x-2}$ có một nghiệm nguyên và hai nghiệm vô tỉ. 
+    \item Với $m=7,$ đa thức $P(x)=x\tron{x^2-7x+2}$ có một nghiệm nguyên và hai nghiệm vô tỉ.     
+\end{enumerate}
+Tổng kết lại, tất cả các giá trị kể trên đều thỏa yêu cầu bài toán.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $m$ sao cho đa thức 
+$$P(x)=x^3+(m+1)x^2-(2 m-1) x-\left(2m^2+m+4\right)$$
+tồn tại nghiệm nguyên.
+\nguon{Titu Andreescu}
+\loigiai{
+Ta có thế thực hiện phân tích $P(x)+5$ thành nhân tử. Thật vậy
+$$P(x)+5=\left(x+m+1\right)\left( x^{2}-2 m+1\right).$$
+Theo đó, nếu $P(x)$ có nghiệm nguyên là $a$, ta suy ra
+$$\left(a+m+1, a^{2}-2 m+1\right) \in\{(1,5),(-1,-5),(5,1),(-5,-1)\}.$$
+Đến đây, ta chia bài toán làm bốn trường hợp.
+\begin{enumerate}
+    \item Nếu $a+m+1=1$ và $a^{2}-2m+1=5,$ ta có
+    $$\heva{&a=-m \\ &m^2-2m-4=0}\Leftrightarrow\heva{&a=-m \\ &(m-1)^2=5.}$$
+    Hệ trên không có nghiệm nguyên dương.
+    \item Nếu $a+m+1=-1$ và $a^{2}-2m+1=-5,$ ta có
+    $$\heva{&a=-m-2 \\ &(m+2)^2-2m+6=0}\Leftrightarrow \heva{&a=-m-2 \\ &m^2+4m+10=0}\Leftrightarrow \heva{&a=-m-2 \\ &(m+2)^2+6=0.}$$
+    Hệ trên không có nghiệm nguyên dương.    
+    \item Nếu $a+m+1=5$ và $a^{2}-2m+1=1,$ ta có
+    $$\heva{&a=-m+4 \\ &(m-4)^2-2m=0}
+    \Leftrightarrow \heva{&a=-m+4 \\ &(m-2)(m-8)=0}
+    \Leftrightarrow
+    \hoac{
+         a=-2,&\:m=2  \\
+         a=4,&\:m=8.}$$
+    \item Nếu $a+m+1=-5$ và $a^{2}-2m+1=-1,$ ta có
+    $$\heva{&a=-m-6 \\ &(m+6)^2-2m+2=0}
+    \Leftrightarrow \heva{&a=-m-6 \\ &m^2+10m+38=0}\Leftrightarrow \heva{&a=-m-6 \\ &(m+5)^2+13=0.}$$  
+    Hệ trên không có nghiệm nguyên dương.  
+\end{enumerate}
+Tổng kết lại, $m=2$ và $m=8$ là tất cả các giá trị thỏa mãn đề bài.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương ${n}$ sao cho đa thức $P(x)=x^{n}+(2+x)^{n}+(2-x)^{n}$ có nghiệm hữu tỉ.
+\loigiai{
+Một cách hiển nhiên, ta phải có $n$ lẻ. Đồng thời, hệ số cao nhất của $P(x)$ bằng $1,$ và ta suy ra tất cả các nghiệm hữu tỉ của $P(x)$ phải là nghiệm nguyên. Giả sử đa thức có nghiệm $x_0$ nguyên khác $0.$ Ta có
+$$\left(x_0\right)^{n}+\left(x_0+2\right)^{n}+\left(2-x_0\right)^{n}=0.$$
+Tiếp theo, lấy đồng dư hai vế theo modulo $x_0,$ ta được
+$$2^{n+1}\equiv 0\pmod{x_0}.$$
+Bắt buộc, $2^{n+1}$ chia hết cho $x_0.$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $x_0=2^k$ ta có
+    $2^{kn}+\left(2+2^k\right)^{n}+\left(2-2^k\right)^{n}=0.$ Một cách tương đương, ta nhận được
+    $$2^{kn}+\left(2+2^k\right)^{n}=\left(2^k-2\right)^{n},$$  
+    mâu thuẫn do $2^{kn}+\left(2+2^k\right)^{n}>\left(2+2^k\right)^{n}>\left(2^k-2\right)^{n}.$
+    \item Với $x_0=-2^k$, ta có
+    $-2^{kn}+\left(2+2^k\right)^{n}+\left(2-2^k\right)^{n}=0.$  Một cách tương đương, ta nhận được
+    $$\left(2^{k-1}+1\right)^{n}=\left(2^{k-1}-1\right)^{n}+2^{(k-1)n}.$$   Lấy đồng dư theo modulo $2^{k-1}$ ở hai vế, ta chỉ ra $2$ chia hết cho $2^{k-1},$ thế nên $k\in\{0;1;2\}.$ \\
+    Thử trực tiếp, ta tìm ra $k=2,$ và khi này thì $n=1.$ Đây là giá trị duy nhất của $n$ ta cần tìm.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Giả sử $m$ là một nghiệm hữu tỉ chung của hai đa thức
+\begin{align*}
+    P(x)&=a_{n} x^{n}+a_{n-1} x^{n-1}+\ldots+a_{1} x+a_{0}, \\Q(x)&=b_{n} x^{n}+b_{n-1} x^{n-1}+\ldots+b_{1}
+    x+b_{0}.
+\end{align*}
+Biết rằng $a_{n}-b_{n}$ là một số nguyên tố và $a_{n-1}=b_{n-1}$. Chứng minh $m$ là số nguyên.
+\nguon{Cao Đình Huy}
+\loigiai{
+Từ giả thiết, ta có thể đặt $m=\dfrac{r}{s},$ ở đây $r,s$ là các số nguyên tố cùng nhau và $s>0.$ \\
+Do $m=\dfrac{r}{s}$ là một nghiệm $P(x)$ và $Q(x)$ nên ta có
+\[r\mid a_0, \quad s\mid a_n.\tag{1}\]
+\[r\mid b_0, \quad s\mid b_n.\tag{2}\]
+Đối chiếu (1) và (2), ta được $s\mid \tron{a_n-b_n}.$ Do giả thiết $a_n-b_n$ là số nguyên tố, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $s=1,$ ta có $m=\dfrac{r}{s}=r$ là số nguyên.
+    \item Với $s=a_n-b_n,$ ta xét đa thức $S(x)=P(x)-Q(x).$ Rõ ràng $m=\dfrac{r}{a_n-b_n}$ cũng là nghiệm của $S(x),$ thế nên ta có
+        $$\tron{a_n-b_n}\left(\dfrac{r}{a_n-b_n}\right)^n+\left(a_{n-1}-b_{n-1}\right)\left(\dfrac{r}{a_n-b_n}\right)^{n-1}+\ldots+\left(a_0-b_0\right)=0.$$
+   Với chú ý rằng $a_{n-1}=b_{n-1},$ ta suy ra
+      $$\tron{a_n-b_n}\left(\dfrac{r}{a_n-b_n}\right)^n+\left(a_{n-2}-b_{n-2}\right)\left(\dfrac{r}{a_n-b_n}\right)^{n-2}+\ldots+\left(a_0-b_0\right)=0.$$
+    Nhân cả hai vế với $\tron{a_n-b_n}^{n-1},$ ta được
+    $$r^n+\left(a_{n-2}-b_{n-2}\right)\tron{a_n-b_n}r^{n-2}+\ldots +\left(a_0-b_0\right)\tron{a_n-b_n}^{n-1}=0.$$
+    So sánh số dư khi chia hai vế cho $a_n-b_n,$ ta chỉ ra
+    $$\tron{a_n-b_n}\mid r^n.$$
+    Kết hợp với khẳng định $s\mid\tron{a_n-b_n}, $ ta suy ra $s\mid r,$ tức là $m\in\mathbb{Z}.$
+\end{enumerate}
+Tổng kết lại, bài toán được chứng minh trong mọi trường hợp.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho đa thức bậc ba $P(x)=a x^{3}+b x^{2}+c x+d$ với tất cả các hệ số đều nguyên, trong đó $ad$ là số lẻ, còn $abc$ là số chẵn. Chứng minh rằng $P(x)$ có nghiệm vô tỉ.
+\nguon{Titu Andreescu}
+\loigiai{
+Giả sử phản chứng rằng tất cả các nghiệm $P(x)$ là hữu tỉ, gồm $\dfrac{p_1}{q_1},\dfrac{p_2}{q_2},\dfrac{p_3}{q_3}.$ Theo tính chất đã biết, ta có $p_{i} \mid d$ and $q_{i} \mid a,$ với $i=1,2,3.$ Do giả thiết $ad$ lẻ, các $p_{i}$ và $q_{i}$ đều lẻ. Mặt khác, theo định lí Viète cho đa thức bậc ba, ta có thể viết
+\begin{align*}
+-&\dfrac{b}{a}=\dfrac{p_{1}}{q_{1}}+\frac{p_{2}}{q_{2}}+\dfrac{p_{3}}{q_{3}}=\dfrac{p_{1} q_{2} q_{3}+p_{2} q_{1} q_{3}+p_{3} q_{1} q_{2}}{q_{1} q_{2} q_{3}} \\
+&\frac{c}{a}=\frac{p_{1}}{q_{1}} \frac{p_{2}}{q_{2}}+\frac{p_{3}}{q_{3}} \frac{p_{2}}{q_{2}}+\frac{p_{1}}{q_{1}} \frac{p_{3}}{q_{3}}=\frac{p_{1} p_{2} q_{3}+p_{3} p_{2} q_{1}+p_{1} p_{3} q_{2}}{q_{1} q_{2} q_{3}}.
+\end{align*}
+Các số $p_{1} q_{2} q_{3}+p_{2} q_{1} q_{3}+p_{3} q_{1} q_{2},p_{1} p_{2} q_{3}+p_{3} p_{2} q_{1}+p_{1} p_{3} q_{2},q_{1} q_{2} q_{3}$ đều lẻ, thế nên
+$$b=\dfrac{-a\left(p_{1} q_{2} q_{3}+p_{2} q_{1} q_{3}+p_{3} q_{1} q_{2}\right)}{q_1q_2q_3},\quad c=\dfrac{a\left(p_{1} p_{2} q_{3}+p_{3} p_{2} q_{1}+p_{1} p_{3} q_{2}\right)}{q_1q_2q_3}$$ 
+cũng là số lẻ, điều này mâu thuẫn với giả thiết $abc$ là số chẵn. \\
+Như vậy, giả sử phản chứng là sai, và ta có điều phải chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên dương $n \geq 2.$ Xét đa thức
+$$P(x)=x^{n}+2 x^{n-1}+3 x^{n-2}+\ldots+n x+n+1.$$ 
+\begin{enumerate}[a,]
+    \item Chứng minh rằng $(x-1)^{2}P(x)=x^{n+2}-(n+2) x+n+1.$
+    \item Chứng minh rằng $P(x)$ không có nghiệm hữu tỉ.
+\end{enumerate}
+\nguon{Titu Andreescu}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Với mọi $x\ne 1,$ ta có
+    \begin{align*}
+      x^{n}+2 x^{n-1}+\ldots+n x+n+1 
+    &=\left(x^{n}+x^{n-1}+\ldots+1\right)+\ldots+(x+1)+1 \\
+    &= \dfrac{x^{n+1}-1}{x-1}+\dfrac{x^{n}-1}{x-1}+\ldots+\dfrac{x^{2}-1}{x-1}+\dfrac{x-1}{x-1} \\
+    &= \dfrac{\dfrac{x^{n+2}-1}{x-1}-n-2}{x-1} \\ &=\dfrac{x^{n+2}-(n+2) x+n+1}{(x-1)^{2}}.
+    \end{align*}
+    Nhân hai vế với $(x-1)^2,$ ta suy ra
+    \[(x-1)^2P(x)=x^{n+2}-(n+2) x+n+1,\forall x\ne 1.\tag{*}\]
+    Đối với $x=1,$ kiểm tra trực tiếp, ta thấy thỏa mãn (*). Đẳng thức được chứng minh.
+    \item Chú ý rằng $P(x)$ không có nghiệm $x=1.$ Chính vì thế, toàn bộ các nghiệm của đa thức $P(x)$ cũng chính là nghiệm của đa thức
+    $$Q(x)=x^{n+2}-(n+2) x+n+1.$$
+    Giả sử phản chứng rằng $Q(x)$ có nghiệm hữu tỉ là $r=\dfrac{p}{q}$, trong đó $q>0$ và $(p,q)=1.$ Theo tính chất đã biết, ta chỉ ra $q \mid 1$, kéo theo $r=\dfrac{p}{q}$ cũng là số nguyên. Bằng kiểm tra trực tiếp, ta suy ra $-1,0,1$ không là nghiệm của $Q(x),$ thế nên $|r|\ge 2.$ Do $r$ là nghiệm của $Q(x),$ ta có
+    $$r^{n+2}=(n+2)r-n-1.$$
+    Ta lần lượt có các nhận xét
+    \begin{align*}
+        \left|(n+2)r-n-1\right|&\le (n+2)|r|+(n+1)\\&
+        <2(n+2)|r|,
+        \\\left|r^{n+2}\right|&\ge 2^{n+1}|r|.
+    \end{align*}
+    Dựa vào các nhận xét này, ta suy ra $2^{n+1}<n+2,$ thế nên $n<0,$ một điều vô lí. \\
+    Như vậy, giả sử phản chứng là sai. 
+\end{enumerate}
+Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Với $a,b$ là các số hữu tỉ, xét đa thức $P(x)=x^{3}+a x+b.$ Giả sử $P(x)$ có nghiệm  $x=1+\sqrt{3}$. Chứng minh rằng $P(x)$ chia hết cho đa thức $x^{2}-2x-2.$
+\nguon{Chọn học sinh giỏi Hà Nội 2021}
+\loigiai{
+Từ giả thiết, ta có $P\tron{1+\sqrt{3}}=0,$ tức là
+$$(a+b+10)+(a+6)\sqrt{3}=0.$$
+Do $a+b+10$ và $a+6$ đồng thời là các số hữu tỉ, ta bắt buộc có $a+6=0$ và $a+b+10=0.$ Hơn nữa, do
+$$P\left(1-\sqrt{3}\right)=(a+b+10)-(a+6)\sqrt{3}=0$$
+nên $1-\sqrt{3}$ cũng là nghiệm của $P(x).$ Các kết quả trên chứng tỏ $P(x)$ chia hết cho đa thức $$\left(x-1-\sqrt{3}\right)\left(x-1+\sqrt{3}\right)=x^2-2x-2.$$ 
+Toàn bộ bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho đa thức $P(x)=x^3+px^2+qx+1,$ với $p,q$ là các số hữu tỉ. Biết rằng $2+\sqrt{5}$ là một nghiệm của $P(x),$ hãy tìm tất cả các giá trị có thể của $p$ và $q.$
+\nguon{Hanoi Open Mathematics Competition 2012}
+\loigiai{
+Từ giả thiết, ta có $P\left(2+\sqrt{5}\right)=0,$ tức là
+$$(9p+2q+39)+(4p+q+17)\sqrt{5}=0.$$
+Do $9p+2q+39$ và $4p+q+17$ đồng thời là các số hữu tỉ, ta bắt buộc có $9p+2q+39=4p+q+17=0.$ Giải hệ, ta tìm ra $p=-5$ và $q=3.$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Cho số nguyên dương $a$ không chính phương. Gọi $r$ là một nghiệm thực của phương trình $x^3-2ax+1=0.$ Chứng minh rằng $r+\sqrt{a}$ là một số vô tỉ.
+\nguon{China Girls Mathematical Olympiad 2014}
+\loigiai{Từ giả thiết, ta có
+$r^3-2ar+1=0.$
+Ta giả sử $r+\sqrt{a}$ là một số hữu tỉ. Đặt $r+\sqrt{a}=b,$ ta có
+    $$\left(b-\sqrt{a}\right)^3-2a\left(b-\sqrt{a}\right)+1=0,$$
+    $$b^3+ab+1=\sqrt{a}\left(3b^2-a\right).$$
+Nếu như $3b^2-a\ne 0,$ ta nhận được $\sqrt{a}=\dfrac{3b^2-a}{b^3+3ab^2-2ab+1}$ là số hữu tỉ, vô lí. Như thế thì
+\begin{align*}
+b^3+ab+1&=0,\tag{1}\\
+3b^2-a&=0.\tag{2}
+\end{align*}
+
+Từ (2), ta có $a=3b^2.$ Thế vào (1), ta có
+$$4b^3+1=0\Leftrightarrow b=-\sqrt[3]{\dfrac{1}{4}}.$$
+Kết quả $b$ vô tỉ ở trên cho ta thấy giả sử phản chứng là sai. Như vậy, bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Gọi $\alpha $ là nghiệm dương của phương trình $x^2+x=5$. Với số nguyên dương $n$ nào đó, gọi $c_0,c_1,\ldots ,c_n$ là các số nguyên không âm thỏa mãn đẳng thức $$c_0+c_1\alpha +c_2\alpha ^2+\ldots+c_n\alpha^n=2015.$$
+Chứng minh rằng ${{c}_{0}}+{{c}_{1}}+{{c}_{2}}+\ldots+{{c}_{n}}\equiv 2\pmod{3}.$
+\nguon{Vietnamese Team Selection Test 2015}
+\loigiai{
+Ta xét đa thức
+$P(x)=c_nx^n+c_{n-1}x^{n-1}+\ldots+c_1x+c_0-2015.$
+Từ giả thiết, ta có $$P\left(\alpha\right)=2015-2015=0.$$ Theo như \chu{bổ đề bề bậc nhỏ nhất của đa thức}, ta chỉ ra tồn tại đa thức $Q(x)$ với hệ số nguyên sao cho $P(x)=\left(x^2+x-5\right)Q(x).$ Cho $x=1$ ta được
+$$P(1)=-3Q(1).$$
+Tổng các hệ số của $P(x)$ chính là $P(1),$ vì thế $P(1)$ phải là bội của $3,$ và vậy thì
+$${{c}_{0}}+{{c}_{1}}+{{c}_{2}}+...+{{c}_{n}}\equiv 2015\equiv 2\pmod{3}.$$
+Bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+
+\begin{gbtt}
+Với các số nguyên $a, b, c$ thỏa mãn $|a|,|b|,|c|\le 10,$ xét đa thức $f(x)=x^3+ax^2+bx+c$ thỏa mãn điều kiện
+$$\left|f\tron{2+\sqrt{3}}\right|<0,0001.$$
+Chứng minh rằng $2+\sqrt{3}$ là một nghiệm của $f(x).$
+\nguon{China Girls Mathematical Olympiad 2017}
+\loigiai{Bằng tính toán trực tiếp, ta nhận thấy
+\begin{align*}
+f\tron{2+\sqrt{3}}&=(7a+2b+c+26)+\sqrt{3}(4a+b+15),\tag{1}\\
+f\left(2-\sqrt{3}\right)&=(7a+2b+c+26)-\sqrt{3}(4a+b+15).\tag{2}
+\end{align*}
+Lấy tích theo vế của (1) và (2), ta được
+\[f\tron{2+\sqrt{3}}f\left(2-\sqrt{3}\right)=(7a+2b+c+26)^2-3(4a+b+15)^2.\tag{3}\]
+Giả sử $2+\sqrt{3}$ không là nghiệm của $f(x),$ tức $f\tron{2+\sqrt{3}}\ne 0.$ \\
+Với mọi số nguyên $A,B \ne 0$ ta luôn có $A^2-2B^2\ne 0,$ hay là $\left|A^2-2B^2\right|\ge 1.$ Nhận xét này cho ta
+$$\left|(7a+2b+c+26)^2-3(4a+b+15)^2\right|\ge 1.$$
+Đối chiếu với (3) và kết hợp giả thiết $\left|f\tron{2+\sqrt{3}}\right|<0,0001,$ ta có
+\[\left|f\left(2-\sqrt{3}\right)\right|>10000.\tag{4}\]
+Mặt khác, dựa vào giả thiết $|a|,|b|,|c|\le 10$ và bất đẳng thức $a\le |a|,$ ta chỉ ra
+\begin{align*}
+    \left|f\left(2-\sqrt{3}\right)\right|
+    &=(7a+2b+c+26)-\sqrt{3}(4a+b+15)
+    \\&=\left(7-4\sqrt{3}\right)a+\left(2-\sqrt{3}\right)b+c+26-15\sqrt{3}
+    \\&\le\left(7-4\sqrt{3}\right)|a|+\left(2-\sqrt{3}\right)|b|+|c|+26-15\sqrt{3}
+    \\&\le 10\left(7-4\sqrt{3}\right)+10\left(2-\sqrt{3}\right)+10+26-15\sqrt{3}  
+    \\&\le 126-65\sqrt{3}
+    \\&<126.
+\end{align*}
+Đối chiếu điều vừa thu được với (4), ta thấy mâu thuẫn. \\
+Mâu thuẫn này chứng tỏ giả sử là sai, do vậy, $f\tron{2+\sqrt{3}}=0.$ Chứng minh hoàn tất.}
+\end{gbtt}
+
+\begin{gbtt}
+Tồn tại hay không đa thức $P(x)$ với hệ số nguyên thỏa mãn $$P\left(1+\sqrt[3]{2}\right)=1+\sqrt[3]{2},\quad P\left(1+\sqrt{5}\right)=2+3\sqrt{5}\:?$$ 
+\nguon{Vietnam Mathematical Olympiad 2017}
+\loigiai{
+Giả sử tồn tại đa thức $P(x)$ thỏa mãn đề bài. \\
+Xét đa thức $Q(x)=P(x)-x.$ Rõ ràng $a=1+\sqrt[3]{2}$ là nghiệm của $Q(x).$ Mặt khác,
+$$a-1=\sqrt[3]{2}\Rightarrow (a-1)^3=2\Rightarrow a^3-3a^2+3a-3=0.$$
+Theo như \chu{bổ đề về bậc nhỏ nhất của đa thức}, ta suy ra tất cả các đa thức $Q(x)$ đều có dạng
+\[Q(x)=\left(x^3-3x^2+3x-3\right)S(x).\tag{*}\]
+Ở đây, $S(x)$ là một đa thức hệ số nguyên khác đa thức không. \\
+Ngoài ra, từ giả thiết ta cũng có thể suy ra $Q\left(1+\sqrt{5}\right)=1+2\sqrt{5}.$ Trong (*), cho $x=1+\sqrt{5},$ ta được
+$$1+2\sqrt{5}=\left(-2+5\sqrt{5}\right)S\left(1+\sqrt{5}\right).$$
+Ta đã biết, $S\left(1+\sqrt{5}\right)$ có thể được viết dưới dạng $A+B\sqrt{5},$ trong đó $A,B$ là các số nguyên dương (tham khảo phần \chu{căn thức}). Phép đặt này cho ta
+$$1+2\sqrt{5}=\left(-2+5\sqrt{5}\right)\left(A+B\sqrt{5}\right),$$
+hay là
+$2A-25B+1=\left(5A-2B-2\right)\sqrt{5}.$
+Do $\sqrt{5}$ là số vô tỉ, ta suy ra 
+\begin{align*}
+    2A-25B+1&=0,
+    \\5A-2B-2&=0.
+\end{align*}
+Giải hệ trên, ta tìm ra $A=\dfrac{52}{121}$ và $B=\dfrac{9}{121},$ mâu thuẫn với điều kiện $A,B$ nguyên.\\ Như vậy, giả sử đã cho là sai. Câu trả lời của bài toán là phủ định.}
+\end{gbtt}
+
+\begin{gbtt} \
+\begin{enumerate}[a,]
+    \item Tìm đa thức $P(x)$ khác hằng, có hệ số hữu tỉ, có bậc nhỏ nhất có thể thỏa mãn $$P\tron{\sqrt[3]{3}+\sqrt[3]{9}}=3+\sqrt[3]{3}.$$
+    \item Tồn tại hay không đa thức $P(x)$ khác hằng và có hệ số nguyên thỏa mãn $$P\tron{\sqrt[3]{3}+\sqrt[3]{9}}=3+\sqrt[3]{3} \: ?$$
+\end{enumerate}
+\nguon{Vietnam Mathematical Olympiad 1997}
+\loigiai{
+Trong bài toán này, ta có sử dụng bổ đề: Nếu $A,B,C$ là các số hữu tỉ thỏa mãn $A\sqrt[3]{3}+B\sqrt[3]{9}+C=0$ thì $A=B=C=0.$ Về phần chứng minh bổ đề, xin mời bạn đọc nghiên cứu lại phần căn thức.
+\begin{enumerate}[a,]
+    \item Nếu $P(x)$ có bậc nhất, ta đặt $P(x)=ax+b$ với $a, b$ hữu tỉ. Theo đó $$a\left(\sqrt[3]{3}+\sqrt[3]{9}\right)+b=3+\sqrt[3]{3}\Leftrightarrow(a-1)\sqrt[3]{3}+a \sqrt[3]{9}+b-3=0.$$ 
+    Theo như bổ đề đã phát biểu, ta có $a-1=a=0$ ở đây, một điều vô lí. \\
+    Nếu $P(x)$ có bậc hai, ta đặt $P(x)=a x^2+b x+c$ với $a, b,c$ hữu tỉ. Theo đó
+    $$a\left(\sqrt[3]{3}+\sqrt[3]{9}\right)^2+b\left(\sqrt[3]{3}+\sqrt[3]{9}\right)+c=3+\sqrt[3]{3}$$
+    $$(a+b) \sqrt[3]{9}+(3a+b-1) \sqrt[3]{3}+6 a+c-3=0.$$
+    Theo như bổ đề đã phát biểu, ta có
+    \begin{align*}
+        a+b=0,\quad
+        3a+b=1,\quad
+        6a+c=3.
+    \end{align*}
+    Giải hệ, ta tìm được $a=\dfrac{1}{2},\ b=-\dfrac{1}{2},\ c=0.$ Đa thức $P(x)$ duy nhất thỏa mãn là
+    $$P(x)=\dfrac{1}{2}\left(x^2-x\right).$$
+    \item Ta đặt $s=\sqrt[3]{3}+\sqrt[3]{9}$. Lập phương hai vế, ta được
+    $$s^3=\left(\sqrt[3]{3}+\sqrt[3]{9}\right)^3=12+9\sqrt[3]{3}+9\sqrt[3]{9}=12+9s.$$
+    Theo đó, $s$ là nghiệm của đa thức dưới đây
+    $$Q(x)=x^{3}-9 x-12 .$$ 
+    Giả sử tồn tại đa thức $P(x)$ hệ số nguyên có bậc $n \geq 3$ sao cho $P(s)=3+\sqrt[3]{3}.$ Thực hiện phép chia đa thức $P(x)$ cho đa thức $Q(x),$ ta có
+    $$P(x)=Q(x) T(x)+R(x),$$
+    ở đây hệ số các đa thức $T(x)$ và $R(x)$ đều nguyên, và ngoài ra $\deg R \leq 2 .$ Cho $x=\sqrt[3]{3}+\sqrt[3]{9},$ ta được
+    $$3+\sqrt[3]{3}=R\left(\sqrt[3]{3}+\sqrt[3]{9}\right).$$
+    Theo như kết quả của câu trước, ta có $R(x)=\dfrac{1}{2}\left(x^2-x\right),$ mâu thuẫn với điều kiện các hệ số của $R(x)$ là nguyên. Như vậy, giả sử phản chứng là sai. Câu trả lời là phủ định.
+\end{enumerate}}
+\end{gbtt}
+
+\section{Đa thức và phương trình bậc hai}
+
+\subsection*{Lí thuyết}
+
+\begin{enumerate}
+    \item Cho phương trình $ax^2+bx+c=0$ với $a,b,c$ là các số thực, $a\ne 0.$ Ta đặt $\Delta =b^2-4ac.$ Lúc này
+    \begin{itemize}
+        \item Phương trình có hai nghiệm phân biệt khi và chỉ khi $\Delta>0$ và hai nghiệm ấy là
+        $$x=\dfrac{-b+\sqrt{\Delta}}{2},\quad x=\dfrac{-b-\sqrt{\Delta}}{2}.$$
+        \item Phương trình  có nghiệm duy nhất khi và chỉ khi $\Delta=0,$ và nghiệm đó là
+        $$x=\dfrac{-b}{2a}.$$
+        \item Phương trình  vô nghiệm khi và chỉ khi $\Delta<0.$         
+    \end{itemize}
+    Đặt biệt hơn, trong điều kiện $a,b,c$ là các số nguyên, phương trình có nghiệm nguyên chỉ khi $\Delta$ là số chính phương. Chiều ngược lại là không đúng, vì chẳng hạn, phương trình
+    $$12x^2+7x+1=0$$
+    có $\Delta=1$ là số chính phương, thế nhưng hai nghiệm $x=\dfrac{-1}{3}$ và $x=\dfrac{-1}{4}$ của nó đều không nguyên.
+    \item \chu{Định lí Viete.} \\Giả sử phương trình bậc hai $ax^2+bx+c=0$ có hai nghiệm $x=x_1$ và $x=x_2.$ Khi đó
+    $$x_1+x_2=\dfrac{-b}{a},\quad x_1x_2=\dfrac{c}{a}.$$
+\end{enumerate}
+
+
+\subsection*{Ví dụ minh họa}
+\begin{bx}
+Xét phương trình $x^2-mx+m+2=0$. Tìm tất cả các giá trị nguyên của $m$ sao cho phương trình có các nghiệm đều là số nguyên.
+\loigiai{Ta đã biết, một phương trình bậc hai bất kì có nghiệm nguyên thì $\Delta$ phải là số chính phương. Với phương trình đã cho, ta có
+$$\Delta=m^2-4(m+2).$$
+Như vậy, ta có thể đặt $m^2-4(m+2)=k^2,$ với $k$ là số nguyên dương. Phép đặt này cho ta
+$$m^2-4(m+2)=k^2 \Leftrightarrow(m-2+k)(m-2-k)=12.$$
+Ta nhận thấy rằng hai số $m-2+k$ và $m-2-k$ cùng tính chẵn lẻ, do tổng của chúng bằng $$m-2+k+m-2-k=2(m-2)$$ là số chẵn. Đồng thời, $m-2+k\ge m-2-k$. Dựa vào hai nhận xét này, ta lập được bảng giá trị sau
+\begin{center}
+    \begin{tabular}{c|c|c}
+        $m-2+k$ & $6$ & $-2$  \\
+    \hline
+        $m-2-k$ & $2$ & $-6$ \\
+    \hline
+        $m$ & $6$ & $-2$ \\
+    \end{tabular}
+\end{center}
+Tổng kết lại, có tất cả hai giá trị của $m$ thỏa mãn đề bài, đó là $m=-2$ và $m=6.$
+}
+\end{bx}
+
+\begin{bx}
+Giải hệ phương trình nghiệm nguyên
+\[\heva{&x+y+z=5 \\ &xy+yz+zx=8.}\]
+\loigiai{
+Hệ phương trình đã cho tương đương với
+$$
+\heva{&xy+(y+x)z=8 \\ &x+y=5-z}
+\Leftrightarrow
+\heva{&xy+(5-z)z=8 \\ &x+y=5-z}
+\Leftrightarrow
+\heva{&xy=z^2-5z+8 \\ &x+y=5-z.}
+$$
+Như vậy theo định lí $Viete$, $x$ và $y$ là hai nghiệm của phương trình bậc hai ẩn $t$ và tham số $z$ là
+\[t^2-(5-z)t+(z^2-5z+8).\tag{*}\label{dathuc.ongloi}\]
+Phương trình trên có nghiệm khi và chỉ khi $\Delta \ge 0.$ Ta tính được $\Delta=-(3z^2-10z+7),$ vậy nên
+$$3 z^{2}-10 z+7 \leq 0 \Leftrightarrow 1 \leq z \leq \frac{7}{3}.$$ 
+Do $z$ nhận giá trị nguyên, ta có $z=1$ hoặc $z=2$.
+\begin{enumerate}
+    \item Với ${z}=1$, phương trình (\ref{dathuc.ongloi}) trở thành ${t}^{2}-4 {t}+4=0$. Đến đây, ta tìm được ${x}={y}=2$ thỏa mãn.
+    \item Với ${z}=1$, phương trình (\ref{dathuc.ongloi}) trở thành ${t}^{2}-3 {t}+2=0$. Đến đây, ta tìm được
+    $$(x,y)=(1,2)\text{ và }(x,y)=(2,1).$$
+\end{enumerate}
+Tổng kết lại, hệ phương trình có các nghiệm nguyên là $(2,2,1),(2,1,2)$ và $(1,2,2).$}
+\begin{luuy}
+Ví dụ trên là một bài toán về nghiệm nguyên và việc sử dụng định lí $Viete$ giúp ta có lời giải ngắn gọn và dễ hiểu. Thông thường, với các bài toán nghiệm nguyên, ta hay chú ý đến sử dụng các kiến thức số học để giải quyết. Tuy nhiên trong ví dụ này, việc làm ấy lại không đem lại hiệu quả, trong khi đó một định lí đại số lại cho ta một lời giải đẹp.
+\end{luuy}
+\end{bx}
+
+\begin{bx}
+Biết rằng phương trình $x^2-ax+b+2=0$ (với $a,b$ là các số nguyên) có hai nghiệm nguyên. Chứng minh rằng $2a^2+b^2$ là hợp số.
+\nguon{Chuyên Toán Quảng Trị 2021}
+\loigiai{
+Gọi $2$ nghiệm nguyên của phương trình đã cho là $x_1$ và $x_2.$ Theo định lí $Viete$, ta có
+$$\heva{&x_1+x_2=a \\ &x_1x_2=b+2}\Rightarrow \heva{&a=x_1+x_2 \\ &b=x_1x_2-2.}$$
+Các hệ thức trên cho ta
+$$2a^2+b^2=2\left(x_1+x_2 \right)^2+\left(x_1x_2-2\right)^2=x^2_1x^2_2+2x^2_1+2x^2_2+4=\left(x^2_1+2\right)\left(x^2_2+2\right).$$
+Do $x^2_1+2\ge 2$ và $x^2_2+2\ge 2,$ ta suy ra $2a^2+b^2$ là hợp số. Chứng minh hoàn tất.}
+\end{bx}
+
+\begin{bx}
+Tìm số nguyên tố $p$ thỏa mãn $p^3-4p+9$ là số chính phương.
+\loigiai{
+Từ giả thiết, ta có thể đặt $p^{3}-4 p+9=t^{2},$ với $t$ là số tự nhiên. Theo đó
+\[p\left(p^{2}-4\right)=(t-3)(t+3).\tag{*}\label{scamhuycao}\]
+Do $p$ là số nguyên tố, một trong hai số $t-3$ và $t+3$ phải chia hết cho $p.$ Ta xét các trường hợp kể trên.
+\begin{enumerate}
+    \item Nếu $t-3$ chia hết cho $p,$ ta đặt $t-3=pk,$ với $k$ là số tự nhiên. Thế vào (\ref{scamhuycao}), ta được
+    $$p\left(p^{2}-4\right)=pk(pk+6) \Leftrightarrow k(pk+6)=p^{2}-4\Leftrightarrow p^2-k^2p-(6k+4)=0.$$
+    Coi đây là một phương trình bậc hai theo ẩn $p,$ tham số $k.$ Ta tính ra $$\Delta=k^4+4(6k+4)=k^4+24k+16.$$   
+    Mặt khác, với $k>3,$ ta chứng minh được
+    $$\left(k^{2}\right)^{2}<k^{4}+24 k+16<\left(k^{2}+4\right)^{2}.$$
+    Do $\Delta$ là số chính phương, ta xét các trường hợp sau đây.
+    \begin{itemize}
+        \item Với $k^{4}+24 k+16=\left(k^{2}+1\right)^{2},$ ta có $2 k^{2}-24 k=15.$ Ta không tìm ra $k$ nguyên.
+        \item Với $k^{4}+24 k+16=\left(k^{2}+2\right)^{2},$ ta có $k^{2}-6 k=3.$ Ta không tìm ra $k$ nguyên.
+        \item Với $k^{4}+24 k+16=\left(k^{2}+3\right)^{2},$ ta có $6 k^{2}-24k=7.$ Ta không tìm ra $k$ nguyên.
+    \end{itemize}
+    Các trường hợp trên không cho ta $k$ nguyên, chứng tỏ $k\le 3$ thỏa mãn. \\Thử trực tiếp, ta tìm được $k=3,$ kéo theo $t=36$ và $p=11.$
+    \item Nếu $t+3$ chia hết cho $p,$ ta đặt $t+3=pl,$ với $l$ là số tự nhiên. Thế vào (\ref{scamhuycao}), ta được
+    $$p\left(p^{2}-4\right)=pl(pl-6) \Leftrightarrow l(pl-6)=p^{2}-4\Leftrightarrow p^2-l^2p+(6k-4)=0.$$Coi đây là một phương trình bậc hai theo ẩn $p,$ tham số $l.$ Ta tính ra $$\Delta=l^4-4(6k-4)=l^4-24l+16.$$ 
+    Mặt khác, với $l>3,$ ta chứng minh được
+    $$\left(l^{2}-4\right)^{2}<l^{4}-24 l+16<\left(l^{2}\right)^{2}.$$    
+    Do $\Delta$ là số chính phương, ta xét các trường hợp sau đây.
+    \begin{itemize}
+        \item Với $l^{4}-24l+16=\left(l^{2}-1\right)^{2},$ ta có $2 l^{2}-24l=-15.$ Ta không tìm ra $l$ nguyên.
+        \item Với $l^{4}-24l+16=\left(l^{2}-2\right)^{2},$ ta có $2 l^{2}-24l=-15.$ Ta không tìm ra $l$ nguyên.
+        \item Với $l^{4}-24l+16=\left(l^{2}-3\right)^{2},$ ta có $6 l^{2}-24l=-7.$ Ta không tìm ra $l$ nguyên.
+    \end{itemize}
+    Các trường hợp trên không cho ta $l$ nguyên, chứng tỏ $l\le 3$ thỏa mãn. \\Thử trực tiếp, ta tìm được $l=3,$ kéo theo $(t,p)=(3,2)$ và $(t,p)=(18,7).$
+\end{enumerate}
+Kết luận, $p=2,p=7$ và $p=11$ là ba số nguyên tố thỏa mãn yêu cầu.}
+\end{bx}
+
+\subsection*{Bài tập tự luyện}
+
+\begin{btt}
+Tìm tất cả các cặp số nguyên $(x,y)$ thỏa mãn
+$$x^2+5y^2+4xy+4y+2x-3=0.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các nghiệm nguyên của hệ phương trình
+$$\heva{x+y+z&=3 \\ x^3+y^3+z^3&=3.}$$
+\end{btt}
+
+\begin{btt}
+Cho hai số nguyên phân biệt $p,q.$ Chứng minh rằng ít nhất một trong hai phương trình
+$$x^2+px+q=0,\quad x^2+qx+p=0.$$
+có hai nghiệm thực (không nhất thiết phân biệt).
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ sao cho phương trình $x^2-px+q=0$ có các nghiệm là số nguyên.
+\nguon{Chuyên Tin Thái Nguyên 2021}
+\end{btt}
+
+\begin{btt}
+Với $a,b,c$ là ba số nguyên dương, xét hai phương trình bậc hai sau đây
+\begin{align*}
+    ax^2+bx+c=0,\\
+    ax^2+bx-c=0.
+\end{align*}
+Giả sử cả hai phương trình trên đều có nghiệm nguyên. Chứng minh rằng $abc$ chia hết cho $30.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q$ và số tự nhiên $m$ thỏa mãn
+$$\dfrac{pq}{p+q}=\dfrac{m^2+6}{m+1}.$$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $a,b$ sao cho phương trình
+$$x^2-abx+a+b=0$$
+có tất cả các nghiệm đều nguyên.
+\end{btt}
+
+\begin{btt}
+Cho \(m\) và \(n\) là các số nguyên dương, khi đó nếu số 
+\[ k=\dfrac{(m+n)^2}{4m(m-n)^2+4}\]
+là một số nguyên thì \(k\) là một số chính phương.
+\nguon{Turkey National Olympiad 2015 }
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $N$ sao cho $N$ có thể biểu diễn duy nhất một cách biểu diễn ở dạng $\dfrac{x^2+y}{xy+1}$ với $x,y$ là hai số nguyên dương.
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2021}
+\end{btt}
+
+\begin{btt}
+Cho $a,b,c$ là ba số nguyên dương sao cho mỗi số trong ba số đó đều biểu diễn dạng lũy thừa của $2$ với số mũ tự nhiên. Biết rằng phương trình bậc hai $ax^2-bx+c=0$ có hai nghiệm đều là số nguyên. Chứng minh rằng hai nghiệm của phương trình này bằng nhau.
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2021}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên $n$ và số nguyên tố $p$ thỏa mãn $n^3=p^2-p-1.$
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p$ sao cho $\dfrac{p^2-p-2}{2}$ là một số lập phương.
+\end{btt}
+
+\begin{btt}
+Cho ba số nguyên dương $a,b,c$ thỏa mãn $$c\tron{ac+1}^2=(5a+2b)(2c+b).$$
+Chứng minh rằng $c$ là một số chính phương lẻ.
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm tất cả các cặp số nguyên $(x,y)$ thỏa mãn
+$$x^2+5y^2+4xy+4y+2x-3=0.$$
+\loigiai{
+Phương trình đã cho tương đương với
+$$x^2+(4y+2)x+\tron{5y^2+4y-3}=0.$$
+Coi đây là phương trình ẩn $x,$ ta có $\Delta_x^{\prime}=(2y+1)^2-\tron{5y^2+4y-3}=-y^2+4.$ Số này chính phương nên $y\in\{-2;0;2\}.$ Thử từng trường hợp, đáp số của bài toán là $(x,y)=(-5,2),(-3,0),(1,0),(3,-2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các nghiệm nguyên của hệ phương trình
+$$\heva{x+y+z&=3 \\ x^3+y^3+z^3&=3.}$$
+\loigiai{
+Thế $z=3-x-y$ vào phương trình thứ hai, ta được
+$$x^3+y^3+(3-x-y)^3=3.$$
+Phương trình này tương đương với
+$$\tron{-x+3}y^2+\tron{-x^2+6x-9}y+\tron{3x^2-9x+8}=0.$$
+Nếu $x=3,$ ta không tìm được $y.$ Nếu $x\ne 3,$ coi đây là phương trình bậc hai ẩn $y$ và ta tính được
+$$\Delta_y=9(x-1)^2(x-3)(x+5).$$
+Do $\Delta_x$ là số chính phương nên hoặc $x=1,$ hoặc $(x-3)(x+5)$ là số chính phương. Đối với trường hợp thứ hai, ta đặt $(x-3)(x+5)=t^2$ rồi tiến hành tách về $(x+1-t)(x+1+t)=16$ và xét trường hợp. Kết quả, các nghiệm nguyên của hệ phương trình là $(1,1,1),(4,4,-5)$ và hoán vị.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho hai số nguyên phân biệt $p,q.$ Chứng minh rằng ít nhất một trong hai phương trình
+$$x^2+px+q=0,\quad x^2+qx+p=0.$$
+có hai nghiệm thực (không nhất thiết phân biệt).
+\loigiai{
+Giả sử cả hai phương trình đều không có nghiệm thực, thế thì $p^2<4q$ và $q^2<4p.$ Do $p,q>0$ nên khi kết hợp, ta có $p^4<16q^2<64p,$ suy ra $p<4.$ Tương tự thì $q<4.$
+\begin{enumerate}
+    \item Với $p=3,$ ta có $9<4q$ và $q^2<12,$ suy ra $2,25\le q\le 2\sqrt{3}$ tức $q=3,$ trái giả thiết $p\ne q.$
+    \item Với $p=2,$ ta có $4<4q$ và $q^2<8,$ suy ra $1< q\le 2\sqrt{2}$ tức $q=2,$ trái giả thiết $p\ne q.$  
+    \item Với $p=1,$ ta có $1<4q$ và $q^2<4,$ suy ra $0,25\le q<2$ tức $q=1,$ trái giả thiết $p\ne q.$        
+\end{enumerate}
+Nói tóm lại, giả sử phản chứng là sai. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ sao cho phương trình $x^2-px+q=0$ có các nghiệm là số nguyên.
+\nguon{Chuyên Tin Thái Nguyên 2021}
+\loigiai{
+Ta tìm ra $\Delta =p^2-4q$. Theo đó, ta có thể đặt $p^2-4q=a^2$ với $a$ là số tự nhiên. Phép đặt này cho ta $$4q=(p-a)(p+a).$$
+Dựa vào các nhận xét $p-a\equiv p+a\pmod{2}$ và $0<p-a<p+a$, ta lập nên bảng giá trị sau
+    \begin{center}
+            \begin{tabular}{c|c|c|c}
+            $p-a$ & $2$ & $4$ & $q$  \\
+            \hline
+            $p+a$ & $2q$ & $q$ & $4$ \\
+            \hline
+            $p$ & $q+1$ & $\dfrac{q+4}{2}$ & $\dfrac{q+4}{2}$ \\
+            \end{tabular}
+        \end{center}
+\begin{enumerate}
+    \item Với $p=q+1,$ ta nhận thấy $p$ và $q$ khác tính chẵn lẻ, thế nên số nhỏ hơn trong hai số đó (là $q$) phải bằng $2.$ Ta tìm ra $(p,q)=(3,2).$
+    \item Với $p=\dfrac{q+4}{2},$ ta có $2p=q+4.$ Bắt buộc, $q$ phải là số nguyên tố chẵn, thế nên $q=2$.\\ Thay ngược lại, ta chỉ ra $p=3.$
+\end{enumerate}
+Tổng kết lại, $(p,q)=(3,2)$ là cặp số nguyên tố duy nhất thỏa mãn yêu cầu đề bài.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Với $a,b,c$ là ba số nguyên dương, xét hai phương trình bậc hai sau đây
+\begin{align*}
+    ax^2+bx+c=0,\\
+    ax^2+bx-c=0.
+\end{align*}
+Giả sử cả hai phương trình trên đều có nghiệm nguyên. Chứng minh rằng $abc$ chia hết cho $30.$
+\loigiai{
+Từ giả thiết, ta suy ra cả $b^2-4ac$ và $b^2+4ac$ đều là số chính phương. Theo đó, ta chia bài toán thành các bước làm sau đây.
+\begin{enumerate}[\color{tuancolor}\bf\sffamily Bước 1.]
+    \item Chứng minh $2 \mid abc.$
+\begin{itemize}
+    \item Nếu $b$ chẵn, hiển nhiên $abc$ chia hết cho $2.$
+    \item Nếu $b$ lẻ thì ${b}^{2} \equiv 1 \pmod{8}$. Lại do ${b}^{2}-4 {ac}$ và $b^{2}+4ac$ là các số chính phương lẻ nên ta lần lượt suy ra
+    \begin{align*}
+        {b}^{2}-4 {ac}, \: {b}^{2}+4 {ac} \equiv 1\pmod{8} &\Rightarrow 4 {ac} \equiv 0\pmod{8} \\&\Rightarrow 2 \mid {ac} 
+        \\&\Rightarrow 2 \mid {abc}.
+    \end{align*}
+\end{itemize}
+    \item Chứng minh $3 \mid abc.$
+\begin{itemize}
+    \item Nếu ${b}$ chia hết cho $3$, hiển nhiên $abc$ chia hết cho $3.$
+    \item Nếu $b$ không chia hết cho $3$ thì ${b}^{2} \equiv 1\pmod{3}$. Lại do ${b}^{2}-4 {ac}$ và $b^{2}+4ac$ là các số chính phương nên ta lần lượt suy ra
+    \begin{align*}
+        b^2-4ac\equiv 0,1\pmod{3}\Rightarrow 4ac\equiv 1,0\pmod{3}\Rightarrow ac\equiv 1,0\pmod{3},\\
+        b^2+4ac\equiv 0,1\pmod{3}\Rightarrow 4ac\equiv 2,0\pmod{3}\Rightarrow ac\equiv 2,0\pmod{3}.
+    \end{align*}
+    Đối chiếu, ta chỉ ra $ac$ chia hết cho $3,$ vậy nên $abc$ cũng chia hết cho $3.$
+\end{itemize}
+    \item Chứng minh  $5 \mid abc$.
+\begin{itemize}
+    \item Nếu $b$ chia hết cho $5$, hiển nhiên $abc$ chia hết cho $5.$
+    \item Nếu $b$ không chia hết cho $5$ thì $b^{2} \equiv 1,4\pmod{5}$.
+    \begin{itemize}
+        \item Với $b^2\equiv 1\pmod{5},$ do ${b}^{2}-4 {ac}$ và $b^{2}+4ac$ là các số chính phương nên ta có
+    \begin{align*}
+        b^2-4ac\equiv 0,1,4\pmod{5}&\Rightarrow 4ac\equiv 1,0,2\pmod{5}\\&\Rightarrow ac\equiv 4,0,3\pmod{5},\\
+        b^2+4ac\equiv 0,1,4\pmod{5}&\Rightarrow 4ac\equiv 4,0,3\pmod{5}\\&\Rightarrow ac\equiv 1,0,2\pmod{5}.
+    \end{align*}
+    Đối chiếu, ta chỉ ra $ac$ chia hết cho $5$, vậy nên $abc$ cũng chia hết cho $5.$
+        \item Với $b^2\equiv 4\pmod{5},$ bằng cách làm tương tự, ta cũng có $abc$ chia hết cho $5$  
+    \end{itemize}
+\end{itemize}
+\end{enumerate}
+Thông qua các bước làm bên trên, ta nhận thấy $abc$ chia hết cho $[2,3,5]=30.$ \\
+Như vậy, bài toán đã cho được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q$ sao cho tồn tại số tự nhiên $m$ thỏa mãn $$\dfrac{pq}{p+q}=\dfrac{m^2+6}{m+1}.$$
+\nguon{Hanoi Opening Mathematical Olympiad 2018}
+\loigiai{
+Giả sử tồn tại các số $p,q$ thỏa yêu cầu. Đầu tiên, ta đặt $d=(pq,p+q).$ Ta có
+\begin{align*}
+    \heva{&d\mid pq \\ &d\mid (p+q)}
+    \Rightarrow \heva{&\hoac{d\mid p \\ d\mid q}\\ &d\mid (p+q)}
+    \Rightarrow \heva{d\mid p \\ d\mid q}
+    \Rightarrow d\mid (p,q).
+\end{align*}
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $p=q$, ta có nhận xét
+    $$p=\dfrac{2pq}{p+q}=\dfrac{2m^2+12}{m+1}=2m-2+\dfrac{14}{m+1}.$$
+    Ta chỉ ra được $m+1$ là ước nguyên dương của $14.$ Kiểm tra, ta nhận thấy $p=q=7$ khi $m=1.$
+    \item Nếu $p \neq q$, ta sẽ xét tới tính tối giản ở hai vế. Thật vậy, ta nhận xét
+    \begin{itemize}
+        \item[i,] $(pq,p+q)=1,$ đã chứng minh ở trên.
+        \item[ii,] $\left(m^2+6,m+1\right)=1$ hoặc $\left(m^2+6,m+1\right)=7.$
+    \end{itemize}
+    Theo đó, ta cần xét hai trường hợp sau
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $\left(m^2+6,m+1\right)=1$, ta có $\heva{&{p}+{q}={m}+1 \\ &{pq}={m}^{2}+6}.$ \\
+        Dựa vào bất đẳng thức quen thuộc $(p+q)^2\ge 4pq,$ ta chỉ ra $(m+1)^2\ge 4\left(m^2+6\right),$ vô lí.
+        \item \chu{Trường hợp 2.} Nếu $\left(m^2+6,m+1\right)=7$, ta có $\heva{&7p+7q=m+1 \\ &7pq=m^2+6}.$ \\
+        Căn cứ vào đây, ta suy ra ${p}$ và ${q}$ là hai nghiệm của phương trình
+        $$7x^{2}-(m+1) x+m^{2}+1=0.$$
+        Ta nhận thấy $\Delta=-27 {m}^{2}+2 {m}-27=-({m}-1)^{2}-\left(26 {m}^{2}+26\right)<0$, và khi ấy phương trình đã cho vô nghiệm.
+    \end{itemize}
+\end{enumerate}
+Tổng kết lại, bộ các số nguyên tố cần tìm là $(p,q)=(7,7).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $a,b$ sao cho phương trình
+$$x^2-abx+a+b=0$$
+có tất cả các nghiệm đều nguyên.
+\loigiai{
+Phương trình đã cho có nghiệm nguyên khi thì $\Delta$ là số chính phương. Ta nhận thấy
+$$\Delta=a^2b^2-4a-4b.$$
+Không mất tính tổng quát, ta giả sử $a\ge b.$ Ta xét các hiệu sau
+\begin{align*}
+    a^2b^2-\left(a^2b^2-4a-4b\right)&=4a+4b,
+    \\\left(a^2b^2-4a-4b\right)-(ab-2)^2&=4(ab-a-b-1)\\&
+    =4\left[(a-1)(b-1)-2\right].
+\end{align*}
+Hai hiệu trên cùng dương khi mà $a\ge b\ge 3.$ Đánh giá này giúp ta chia bài toán thành các trường hợp sau.
+\begin{enumerate}
+    \item Với $b\ge 3,$ ta có đánh giá bất đẳng thức
+    $$(ab-2)^2<a^2b^2-4a-4b<(ab)^2.$$
+    Do $a^2b^2-4a-4b$ chính phương nên ta có $a^2b^2-4a-4b=\left(ab-1\right)^2,$ hay là 
+    $$a^2b^2-4a-4b=a^2b^2-2ab+1\Leftrightarrow 2ab-4a-4b=1.$$
+    Vế trái là chẵn, còn vế phải là lẻ. Trường hợp này không xảy ra.
+    \item Với $b=2,$ ta có $4a^2-4a-8$ là số chính phương. Đặt $4a^2-4a-8=z^2,$ và phép đặt này cho ta
+    \begin{align*}
+    4a^{2}-4a-8=z^{2} &\Leftrightarrow(2 a-1)^{2}-z^{2}=9 \\&\Leftrightarrow(2 a-1-z)(2a-1+z)=9.    
+    \end{align*}
+    Giải phương trình ước số trên, ta tìm ra $a=2$ và $a=3.$
+    \item Với $b=1,$ ta có $a^2-4a-4$ là số chính phương. Đặt $a^2-4a-4=t^2,$ và phép đặt này cho ta
+    \begin{align*}
+    a^2-4a-4=t^2
+    &\Leftrightarrow (a-2)^2-8=t^2
+    \\&\Leftrightarrow (a-2-t)(a-2+t)=8.    
+    \end{align*}
+\end{enumerate}
+Như vậy, có $5$ cặp số $(a,b)$ thỏa mãn đề bài, bao gồm
+$(1,5),(5,1),(2,3),(3,2),(2,2).$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho \(m\) và \(n\) là các số nguyên dương, khi đó nếu số 
+\[ k=\dfrac{(m+n)^2}{4m(m-n)^2+4}\]
+là một số nguyên thì \(k\) là một số chính phương.
+\nguon{Turkey National Olympiad 2015 }
+\loigiai{
+Với giả thiết đã cho, $k$ là số nguyên dương. Ta xét các trường hợp sau đây
+ \begin{enumerate}
+     \item Nếu \(m=n\), ta có
+     $k=\dfrac{(2n)^2}{4}=n^2.$
+     \item Nếu \(m\neq n\), từ giả thiết \(k\) là số nguyên dương, ta lần lượt suy ra
+         $$4\mid \left ( m+n \right )^2\Rightarrow 4\mid \left ( m-n \right )^2+4mn\\
+         \Rightarrow 4\mid \left ( m-n \right )^2$$
+     Ta có \(m-n\equiv m+n\equiv 0\pmod 2\), và như thế, tồn tại các số nguyên dương $a,b$ sao cho
+     $$a=\dfrac{m+n}{2},\qquad b=\dfrac{m-n}{2}.$$
+     Thế trở lại, ta được
+    $k=\dfrac{(2a)^2}{4(a+b)\cdot2b+4}=\dfrac{a^2}{4b^2\left ( a+b \right )+1},$ thế nên là
+    $$a^2-\left ( 4kb^2 \right )a-\left ( 4kb^3+k \right )=0.$$
+    Coi đây là một phương trình bậc hai theo ẩn $a,$ và ta tính ra
+     \begin{align*}
+         \Delta_a =\left ( 4kb^2 \right )^{2}+4\left ( 4kb^3+k \right )=16k^2b^4+16kb^3+4k =4\left ( 4k^2b^4+4kb^3+k \right ).
+     \end{align*}
+     Do $k$ là số nguyên dương, ta cần phải có $4k^2b^4+4kb^3+k$ là số chính phương. Không mất tính tổng quát, ta có thể giả sử \(m>n\), khi đó thì \(b=\dfrac{m-n}{2}>0\). Ta có đánh giá
+     \[\left ( 2kb^2+b-1 \right )^2<4k^2b^4+4kb^3+k<\left ( 2kb^2+b+1 \right )^2.\]
+     Theo như kiến thức đã học, ta có $4k^2b^4+4kb^3+k=\left ( 2kb^2+b\right)^2.$ Ta tìm ra $k=b^2$ từ đây.
+ \end{enumerate}
+Trong tất cả các trường hợp, $k$ đều là số chính phương. Bài toán được chứng minh.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $N$ sao cho $N$ có thể biểu diễn duy nhất một cách biểu diễn ở dạng $\dfrac{x^2+y}{xy+1}$ với $x,y$ là hai số nguyên dương.
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2021}
+\loigiai{
+Giả sử tồn tại số nguyên dương $N$ thỏa mãn, tức là tồn tại duy nhất một cặp $(x,y)$ sao cho
+    \[x^2-\left(Ny\right)x+y-N=0.\tag{*}\label{csp1}\]
+    Tính tồn tại của $x$ chứng tỏ $N^2y^2-4y+4N$ là số chính phương. Ta nhận thấy rằng
+    \begin{align*}
+       \left(Ny+2\right)^2- \left(N^2y^2-4y+4N\right)&=4Ny+4y-4N+4=4(N+1)(y-1)+8>0, \\
+       \left(N^2y^2-4y+4N\right)-\left(Ny-2\right)^2&=4Ny-4y+4N-4=4(N-1)(y+1)\ge 0,
+    \end{align*}
+    Các đánh giá trên cho ta
+    $\left(Ny-2\right)^2\le N^2y^2-4y+4N< \left(Ny+2\right)^2.$
+    Đến đây, ta xét các trường hợp sau
+    \begin{enumerate}
+        \item Với $N^2y^2-4y+4N=\left(Ny-2\right)^2,$ ta có    
+        \begin{align*}
+        N^2y^2-4y+4N=N^2y^2-4Ny+4
+        &\Leftrightarrow 4Ny+4N-4y-4=0
+        \\&\Leftrightarrow 4(N-1)(y+1)=0.   
+        \end{align*}
+        Ta tìm ra $N=1.$ Thay trở lại (\ref{csp1}), ta có
+        \begin{align*}
+        x^2-xy+y-1=0
+        &\Leftrightarrow (x-1)(x-y+1)=0.
+        \end{align*}      
+        Bằng phân tích như vậy, ta chỉ ra số $1$ có vô hạn dạng biểu diễn thỏa mãn, đó là $$1=\dfrac{x^2+(x+1)}{x(x+1)+1},$$
+        với $x$ là một số nguyên dương bất kì.
+        \item Với $N^2y^2-4y+4N=\left(Ny-1\right)^2,$ ta có
+        $$N^2y^2-4y+4N=N^2y^2-2Ny+1\Leftrightarrow 2Ny-2y+4N=1.$$
+        So sánh tính chẵn lẻ của hai vế, ta thấy mâu thuẫn.
+        \item Với $N^2y^2-4y+4N=\left(Ny\right)^2,$ ta có $y=N.$ Thay trở lại (\ref{csp1}), ta tìm được $x=N^2.$
+        \item Với $N^2y^2-4y+4N=\left(Ny+1\right)^2,$ ta có
+        $$N^2y^2-4y+4N=N^2y^2+2Ny+1\Leftrightarrow -2Ny-2y+4N=1.$$
+        So sánh tính chẵn lẻ của hai vế, ta thấy mâu thuẫn.  
+    \end{enumerate}
+Kết luận, tất cả các số nguyên dương $N>1$ đều thỏa mãn yêu cầu bài toán, và cách biểu diễn của mỗi số $N$ này là $N=\dfrac{\left(N^2\right)^2+N}{N^2\cdot N+1}.$}
+\end{gbtt}
+
+\begin{gbtt}
+Cho $a,b,c$ là ba số nguyên dương sao cho mỗi số trong ba số đó đều biểu diễn dạng lũy thừa của $2$ với số mũ tự nhiên. Biết rằng phương trình bậc hai $ax^2-bx+c=0$ có hai nghiệm đều là số nguyên. Chứng minh rằng hai nghiệm của phương trình này bằng nhau.
+\nguon{Chuyên Đại học Sư phạm Hà Nội 2021}
+\loigiai{
+Từ giả thiết, ta có thể đặt $a=2^m,b=2^n,c=2^p,$ với $m,n,p$ nguyên dương. Phương trình đã cho trở thành
+    $$2^mx^2-2^nx+2^p=0.$$
+    Phương trình này có hai nghiệm nguyên chỉ khi
+    $$\Delta=4^n-2^{m+p+2}=2^{2n}-2^{m+p+2}$$
+    là số chính phương, và hiển nhiên $2n\ge m+p+2.$ \\
+    Ta đặt $2^{2n}-2^{m+p+2}=q^2,$ với $q$ nguyên dương. Theo đó,
+    $$\left(2^n-q\right)\left(2^n+q\right)=2^{m+p+2}.$$
+    Rõ ràng, $2^n-q$ và $2^n+q$ đều là các lũy thừa cơ số $2.$ Ta tiếp tục đặt $2^n-q=2^k,2^n+q=2^l,$ với $k,l$ là các số tự nhiên và $k\le l.$ Lấy tổng theo vế, ta được
+    $$2^{n+1}=2^k+2^l=2^k\left(2^{l-k}+1\right).$$
+    So sánh số mũ của $2$ ở hai vế, ta tìm được $k=l,$ kéo theo $q=0$ và $\Delta=0.$ Nói cách khác, phương trình bậc hai đã cho có nghiệm kép. Bài toán được chứng minh.}
+\end{gbtt}
+
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên $n$ và số nguyên tố $p$ thỏa mãn $n^3=p^2-p-1.$
+\loigiai{
+Chuyển vế, ta được $\tron{n+1}\tron{n^2-n+1}=p(p-1).$
+\begin{enumerate}
+    \item Nếu $n+1$ chia hết cho $p$ thì ta có
+    $$p(p-1)\ge p\tron{(p-1)^2-(p-1)+1}=p\tron{p^2-3p+3},$$
+    suy ra $p=2,$ và khi thế ngược lại ta được $n=1.$
+    \item Nếu $n^2-n+1$ chia hết cho $p,$ ta đặt $n^2-n+1=kp.$ Kết hợp với $\tron{n+1}\tron{n^2-n+1}=p(p-1),$ ta có $p-1=k(n+1),$ và thế trở lại $n^2-n+1=kp$ thì
+    $$n^2-\tron{k^2+1}n-\tron{k^2+k-1}=0.$$
+    Coi đây là phương trình bậc hai ẩn $n,$ khi đó
+    $$\Delta_n=\tron{k^2+1}^2+4\tron{k^2+k-1}$$
+    là số chính phương. Bằng so sánh
+    $$\tron{k^2+1}^2<\tron{k^2+1}^2+4\tron{k^2+k-1}<\tron{k^2+4}^2,$$
+    ta tìm được $k=3.$ Theo đó thì $n=11$ và $p=37.$
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p$ sao cho $\dfrac{p^2-p-2}{2}$ là một số lập phương.
+\loigiai{
+Ta đặt $\dfrac{{p}^{2}-{p}-2}{2}={n}^{3},$ với ${n}$ là một số tự nhiên. Phép đặt này cho ta
+$$p^2-p-2=2n^3\Leftrightarrow p^2-p=2n^3+2\Leftrightarrow p(p-1)=2(n+1)\left(n^2-n+1\right).$$
+Ta được $p\mid 2(n+1)\left(n^2-n+1\right).$ Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $p=2,$ bằng kiểm tra trực tiếp, ta thấy thỏa mãn đề bài.
+    \item Với $p \mid (n+1),$ ta có $p\le n+1.$ Đánh giá này cho ta
+    $$2(n+1)\left(n^2-n+1\right)=p(p-1)\le (n+1)n. $$
+    Ta được $2n^2-2n+1\le n.$ Đến đây ta tìm được $n=1$ và $p=2$. 
+    \item Với $p \mid \left(n^2-n+1\right),$ ta đặt $n^2-n+1=kp,$ ở đây ${k}$ là số nguyên dương. Phép đặt này cho ta
+    $$p(p-1)=2(n+1)\left(n^2-n+1\right)=2(n+1)kp.$$
+    Từ đây, ta có $p=2kn+2k+1.$ Thế ngược lại phép đặt, ta chỉ ra
+    $$n^2-n+1=k(2kn+2k+1)\Leftrightarrow n^2-\left(2k^2+1\right)n-\left(2k^2+k-1\right)=0.$$
+    Coi phương trình trên là một phương trình bậc hai ẩn $n,$ lúc này 
+    $$\Delta=\left(2 {k}^{2}+1\right)^{2}+4\left(2 {k}^{2}+{k}-1\right)$$ 
+    phải là số chính phương. Đánh giá được $\left(2 k^{2}+1\right)^{2}<\Delta<\left(2 k^{2}+4\right)^{2}$ và $\Delta$ lẻ, ta suy ra $$\Delta=\left(2 k^{2}+3\right)^{2}.$$ Ta lần lượt tìm được $k=3,n=20,p=127.$
+\end{enumerate}
+Như vậy, có $2$ giá trị của $p$ thỏa mãn đề bài là ${p}=2$ và ${p}=127$.}
+\end{gbtt}
+
+\begin{gbtt}
+Cho ba số nguyên dương $a,b,c$ thỏa mãn $$c\tron{ac+1}^2=(5c+2b)(2c+b).$$
+Chứng minh rằng $c$ là một số chính phương lẻ.
+\loigiai{
+Đẳng thức đã cho tương đương với
+$$2b^2+9cb+10c^2-c(ac+1)^2=0.$$
+Nếu $b$ là biến và $a,c$ là tham số, đây sẽ là phương trình bậc hai ẩn $b.$ Ta tính được
+$$\Delta_b=c\vuong{c+8(ac+1)^2}.$$
+Với việc $\Delta_b$ là số chính phương, ta sẽ nghĩ đến phép đặt $d=\tron{c,c+8(ac+1)^2}.$ Phép đặt cho ta
+$$\heva{&d\mid c \\ &d\mid \vuong{c+8(ac+1)^2}}
+\Rightarrow \heva{&d\mid c \\ &d\mid \vuong{c\tron{1+8a^2c+16a}+8}}
+\Rightarrow d\mid 8.$$
+Ta sẽ có $d\in \{1;2;4;8\}.$ Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $d=8$ hoặc $d=2,$ ta có $c$ và $c+8(ac+1)^2$ đều là hai lần một số chính phương. \\
+    Ta đặt
+    $c=2x^2$ và $c+8(ac+1)^2=2y^2.$ Khi đó
+    $$2y^2=2x^2+8\tron{2ax^2+1}^2\Leftrightarrow y^2=x^2+4\tron{2ax^2+1}^2.$$
+    Thế nhưng, điều này là không thể xảy ra do
+    $$\tron{4ax^2+2}^2<x^2+4\tron{2ax^2+1}^2<\tron{4ax^2+3}^2.$$
+    \item Nếu $d=4,$ ta có $c$ và $c+8(ac+1)^2$ hai số chính phương chẵn, và ngoài ra
+    $$\tron{\dfrac{c}{4},\dfrac{c}{4}+2(ac+1)^2}=1.$$
+    Nếu $\dfrac{c}{4}$ là số chẵn thì $\dfrac{c}{4}+2(ac+1)^2$ cũng chẵn, mâu thuẫn.\\ Do đó $\dfrac{c}{4}$ là số chính phương lẻ, và khi ấy $\dfrac{c}{4}\equiv 1\pmod{4}.$ Nhưng lúc này
+    $$\dfrac{c}{4}+2(ac+1)^2\equiv 1+2\equiv 3\pmod{4}.$$
+    Không có số chính phương nào chia $4$ dư $3.$ Trường hợp này không xảy ra.
+    \item Nếu $d=1,$ ta có $c$ là số chính phương. Hoàn toàn tương tự trường hợp trước, ta chỉ ra $c$ lẻ.
+\end{enumerate}
+Từ tất cả các trường hợp đã xét, bài toán đã cho được chứng minh.}
+\end{gbtt}

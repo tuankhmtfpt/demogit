@@ -1,0 +1,828 @@
+\section{Phương trình chứa căn thức}
+
+\subsection*{Bài tập tự luyện}
+\begin{btt}
+Giải phương trình nghiệm nguyên \[\sqrt{9x^2+16x+96}=3x-16y-24.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên \[y^2=1+\sqrt{9-x^2-4x}.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên $$xy-7\sqrt{x^2+y^2}=1.$$
+\nguon{Adrian Adreescu} 
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$xy+yz+zx-5\sqrt{x^2+y^2+z^2}=1.$$
+\nguon{Titu Andreescu}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên $$2\sqrt{x}-3\sqrt{y}=\sqrt{48}.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên $$\sqrt{x}+\sqrt{x+3}=y.$$
+\end{btt}
+ 
+\begin{btt}
+Giải phương trình nghiệm nguyên dương $$\sqrt{x}+\sqrt{y}=\sqrt{1980}.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+$$\sqrt{x}+\sqrt{y}=\sqrt{z+2\sqrt{2}}.$$
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên
+\[xy+3x+\sqrt{4x-1}=\sqrt{y+2}+4y.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn
+\[1+\sqrt{x+y+3}=\sqrt{x}+\sqrt{y}.\]
+\nguon{Chuyên Khoa học Tự nhiên 2015}
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số hữu tỉ $x,y$ thỏa mãn
+$$\sqrt{2\sqrt{3}-3}=\sqrt{3x\sqrt{3}}-\sqrt{y\sqrt{3}}.$$
+\nguon{Chọn học sinh giỏi Vĩnh Phúc 2012 $-$ 2013}
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm tự nhiên
+\[2x\sqrt{x}-2y\sqrt{y}=7\sqrt{xy}.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên dương
+\[\sqrt{4x^3+14x^2+3xy-2y}+\sqrt{y^2-y+3}=z.\]
+\end{btt} 
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+\[\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x}}}}=y.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên
+\[y=\sqrt[3]{2+\sqrt{x}}+\sqrt[3]{2-\sqrt{x}}.\]
+\end{btt}
+
+\begin{btt}
+Giải phương trình nghiệm nguyên \[\dfrac{4}{y}+\sqrt[3]{4-x}=\sqrt[3]{4+4\sqrt{x}+x}+\sqrt[3]{4-4\sqrt{x}+x}.\]
+\end{btt}
+
+\begin{btt}
+Tìm bộ số nguyên dương $(x,y,z)$ nhỏ nhất thỏa mãn điều kiện
+\[\dfrac{\sqrt{x}}{2}=\dfrac{\sqrt[3]{y}}{3}=\dfrac{\sqrt[5]{z}}{5}.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên $x,y$ khác $0$ thỏa mãn 
+\[\dfrac{1}{\sqrt[3]{x}}+\dfrac{2}{\sqrt{y}}=\dfrac{4}{9}.\]
+\end{btt}
+
+
+\begin{btt}
+Tìm tất cả các số nguyên tố $p,q,r,s,t$ thỏa mãn $$p+\sqrt{q^{2}+r}=\sqrt{s^{2}+t}.$$
+\nguon{Kazakhstan Mathematical Olympiad 2012, Grade 9}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+\begin{gbtt}
+Giải phương trình nghiệm nguyên \[\sqrt{9x^2+16x+96}=3x-16y-24.\]
+\loigiai{
+Với điều kiện $3x-16y-24\ge 0,$ phương trình đã cho tương đương
+\begin{align*}
+9x^2+16x+96=(3x-16y-24)^2
+&\Leftrightarrow  81x^2+9\cdot 16x+864=9(3x-16y-24)^2
+\\&\Leftrightarrow (9x+8)^2-(3(3x-16y-24))^2=-800
+\\&\Leftrightarrow (18x-48y-64)(48y+80)=-800
+\\&\Leftrightarrow(9x-24y-32)(3y+5)=-25.
+\end{align*}
+Do $3y+5$ là ước của $25$ và chia cho $3$ dư $2,$ ta lập được bảng giá trị sau đây
+\begin{center}
+\begin{tabular}{c|c|c|c}
+$3y+5$ & $-1$ & $5$ & $-25$ \\ 
+\hline 
+$y$ & $-2$ & $0$ & $-10$ \\ 
+\hline 
+$x$ & $1$ & $3$ & $-23$ \\ 
+\end{tabular} 
+\end{center}
+Đối chiếu với $3x-16y-24\ge 0,$ phương trình có hai nghiệm nguyên thỏa mãn là 
+$$(-23,-10),\quad (1,-2).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên $y^2=1+\sqrt{9-x^2-4x}.$
+\loigiai{
+Với $x$ nguyên, điều kiện xác định của phương trình là $-5\le x\le 1.$ \\
+Giả sử phương trình có nghiệm $(x,y).$ Ta nhận thấy rằng
+$$y^2=1+\sqrt{13-(x+2)^2}\le 1+\sqrt{13},$$
+thế nên $0\le y^2\le 4.$
+\begin{enumerate}
+    \item Với $y=0,$ ta tìm được $x=\pm 2.$
+    \item Với $y^2=1,$ ta tìm được $x=-2\pm \sqrt{13},$ mâu thuẫn.
+    \item Với $y^2=4,$ ta tìm được $x=0$ hoặc $x=-4.$
+\end{enumerate}
+Kết luận, phương trình đã cho có đúng bốn nghiệm nguyên là $$(0,-2),(0,2),(-4,2),(-4,-2).$$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên $xy-7\sqrt{x^2+y^2}=1.$
+\nguon{Adrian Adreescu} 
+\loigiai{
+Ta sẽ chỉ cần tìm các nghiệm dương của phương trình.\\
+Với điều kiện $xy\ge 1,$ phương trình đã cho tương đương với
+\begin{align*}
+    \left(xy-1\right)^2=49\left(x^2+y^2\right)
+    & \Leftrightarrow \left(xy-1\right)^2+98xy=49(x+y)^2
+    \\&\Leftrightarrow (xy)^2+96xy+1=49(x+y)^2
+    \\&\Leftrightarrow (xy)^2+96xy+2304=49(x+y)^2+2303
+    \\&\Leftrightarrow (xy+48)^2=(7x+7y)^2+2303
+    \\&\Leftrightarrow  (xy-7x-7y+48)(xy+7x+7y+48)=2303.
+\end{align*}
+Do $1\le xy-7x-7y+48<xy+7x+7y+48$ và $2303=7^2.47,$ ta xét các trường hợp sau
+\begin{itemize}
+    \item \chu{Trường hợp 1.} $xy-7x-7y+48=1$ và  $xy+7x+7y+48=2303.$
+    \item \chu{Trường hợp 2.} $xy-7x-7y+48=7$ và  $xy+7x+7y+48=329.$
+    \item \chu{Trường hợp 3.} $xy-7x-7y+48=47$ và  $xy+7x+7y+48=49.$
+\end{itemize}
+Giải mỗi hệ trên, ta chỉ ra được các cặp $(x,y)$ thỏa mãn đề bài là $(8,15)$ và $(15,8).$ \\
+Kết luận, phương trình có $4$ nghiệm nguyên là $(-15,-8),(-8,-15),(8,15)$ và $(15,8).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương \[xy+yz+zx-5\sqrt{x^2+y^2+z^2}=1.\]
+\nguon{Titu Andreescu}
+\loigiai{
+Đặt $x+y+z=u,\sqrt{x^2+y^2+z^2}=v.$ Ta có $xy+yz+zx=\dfrac{u^2-v^2}{2}.$ \\ 
+Phương trình đã cho trở thành
+\begin{align*}
+    \dfrac{u^2-v^2}{2}-5v=1
+    &\Leftrightarrow u^2=v^2+10v+2
+    \Leftrightarrow u^2+23=(v+5)^2
+    \\&\Leftrightarrow (v+5-u)(v+5+u)=23.
+\end{align*}
+Do $23$ là số nguyên tố và $0< v+5-u<v+5+u,$ chỉ có trường hợp $v+5-u=1$ và $v+5+u=23$ là xảy ra, thế nên $v=7,$ và
+$$x^2+y^2+z^2=49.$$
+Chỉ có một cách biểu diễn $49$ dưới dạng tổng ba số chính phương, đó là 
+$$49=6^2+3^2+2^2.$$
+Thử với các hoán vị của $(2,3,6),$ ta thấy tất cả chúng đều thỏa phương trình, và đây cùng là toàn bộ nghiệm nguyên của phương trình đã cho.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên $2\sqrt{x}-3\sqrt{y}=\sqrt{48}.$
+\loigiai{
+Giả sử phương trình đã cho có nghiệm $(x,y).$ Chuyển vế và bình phương, ta có
+\begin{align*}
+    4x^2=9y^2+6y\sqrt{48}+48.
+\end{align*}
+Nếu như $y=0,$ ta tìm được $x=12.$ Còn đối với $y\ne 0,$ ta có
+$$\sqrt{48}=\dfrac{4x^2-9y^2-48}{6y}.$$
+Vế trái là số vô tỉ, trong khi vế phải hữu tỉ, mâu thuẫn.\\
+Kết luận, $(x,y)=(12,0)$ là nghiệm duy nhất của phương trình.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên $\sqrt{x}+\sqrt{x+3}=y.$
+\loigiai{
+Giả sử phương trình đã cho có nghiệm $(x,y).$ \\
+Theo như bổ đề đã học ở \chu{chương III}, cả $x$ và $x+3$ là số chính phương. Ta đặt
+$$x+3=z^2,\quad x=t^2,$$
+trong đó $z$ và $t$ là hai số nguyên dương. Trừ theo vế, ta được
+$$(z-t)(z+t)=3.$$
+Do $0<z-t<z+t,$ ta suy ra $z-t=1$ và $z+t=3.$ Ta tính được $z=2,$ kéo theo $x=1.$ \\
+Kết luận, phương trình có nghiệm nguyên duy nhất là $(x,y)=(1,3).$
+}
+\end{gbtt}
+
+Tác giả xin phép nhắc lại kiến thức đã học ở \chu{chương III}. 
+\begin{light}
+Với các số tự nhiên $a,b,$ ta có các khẳng định sau.
+\begin{enumerate}
+    \item Nếu $\sqrt{a}+\sqrt{b}$ là số tự nhiên thì $a,b$ là các số chính phương.
+    \item Nếu $\sqrt{a}-\sqrt{b}$ là số tự nhiên thì hoặc $a,b$ là các số chính phương, hoặc $a=b.$
+    \item Nếu $\sqrt{a}$ là số hữu tỉ thì $a$ là số chính phương.  
+\end{enumerate}    
+Tương tự, với các số hữu tỉ không âm $a,b,$ ta có các khẳng định sau.
+\begin{enumerate}
+    \item Nếu $\sqrt{a}+\sqrt{b}$ là số tự nhiên thì $a,b$ là bình phương các số hữu tỉ.
+    \item Nếu $\sqrt{a}-\sqrt{b}$ là số hữu tỉ thì hoặc $a,b$ là bình phương các số hữu tỉ, hoặc $a=b.$
+    \item Nếu $\sqrt{a}$ là số hữu tỉ thì $a$ là bình phương một số hữu tỉ.     \end{enumerate}
+Đối với một số khẳng định tương tự dạng căn bậc cao hơn và phần chứng minh chúng, mời bạn đọc tự nghiên cứu.
+ \end{light}
+ 
+\begin{gbtt}\label{laoth1}
+Giải phương trình nghiệm nguyên dương $\sqrt{x}+\sqrt{y}=\sqrt{1980}.$
+\loigiai{
+Giả sử phương trình đã cho có nghiệm $(x,y).$ Chuyển vế và bình phương, ta có
+\begin{align*}
+    x=1980+y-2\sqrt{1980y}
+    &\Rightarrow x=1980+y-12\sqrt{55y}
+    \\&\Rightarrow \sqrt{55y}=\dfrac{y+1980-x}{12}.
+\end{align*}
+Do $\sqrt{55y}$ là số hữu tỉ nên theo như bổ đề, ta chỉ ra $55y$ là số chính phương, vậy nên $y$ phải là $55$ lần một số chính phương. Chứng minh tương tự, $x$ cũng là $55$ lần một số chính phương.\\
+Ta đặt $x=55z^2,y=55t^2,$ với $z,t$ là hai số nguyên dương. Khi ấy
+$$z\sqrt{55}+t\sqrt{55}=6\sqrt{55}\Rightarrow z+t=6.$$
+Không mất tổng quát, ta giả sử $y\le x$ và $a\le b.$ Ta lập được bảng giá trị sau
+\begin{center}
+\begin{tabular}{c|c|c|c}
+$a$ & $b$ & $x=55a^2$ & $y=55b^2$ \\ 
+\hline 
+$1$ & $5$ & $55$ & $1375$ \\ 
+\hline 
+$2$ & $4$ & $220$ & $880$ \\ 
+\hline 
+$3$ & $3$ & $495$ & $495$ 
+\end{tabular} 
+\end{center}
+Dựa theo bảng giá trị, ta kết luận phương trình đã cho có các nghiệm nguyên là $$(55,1375),(1375,55),(220,880),(880,220),(495,495).$$
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+$\sqrt{x}+\sqrt{y}=\sqrt{z+2\sqrt{2}}.$
+\loigiai{
+Phương trình đã cho tương đương với
+$$x+y+2\sqrt{xy}=z+2\sqrt{2}\Leftrightarrow x+y-z=\sqrt{8}-\sqrt{4xy}.$$
+Hiệu hai căn thức $\sqrt{8}$ và $\sqrt{4xy}$ là một số nguyên, vậy nên ta chia bài toán làm các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $4xy=8$ và $x+y=z,$ ta tìm được các bộ $(x,y,z)=(1,2,3)$ và $(x,y,z)=(2,1,3).$
+    \item Nếu $4xy$ và $8$ là số chính phương, ta thấy ngay điều mâu thuẫn.
+\end{enumerate}
+Kết luận, $(x,y,z)=(1,2,3)$ và $(x,y,z)=(2,1,3)$ là hai nghiệm nguyên dương của phương trình.}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên
+\[xy+3x+\sqrt{4x-1}=\sqrt{y+2}+4y.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm tự nhiên $(x,y).$ Giả sử này cho ta
+$$\sqrt{4x-1}-\sqrt{y+2}=4y-xy-3x.$$
+Theo như bổ đề đã học, ta chia bài toán làm hai trường hợp sau.
+\begin{enumerate}
+    \item Nếu $4x-1=y+2,$ ta có
+    $$\heva{4x-1&=y+2 \\ 4y&=xy-3x}\Rightarrow \heva{y&=4x-3 \\ 4(4x-3)&=x(4x-3)+3x}\Rightarrow\hoac{x&=1,y=1 \\ x&=3,y=9.}$$
+    \item Nếu $4x-1\ne y+2,$ ta có cả $4x-1$ và $y+2$ là số chính phương, vô lí do $4x-1\equiv 3\pmod{4}.$
+\end{enumerate}
+Như vậy, phương trình đã cho có hai nghiệm tự nhiên là $(1,1)$ và $(3,9).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn
+\[1+\sqrt{x+y+3}=\sqrt{x}+\sqrt{y}.\]
+\nguon{Chuyên Khoa học Tự nhiên 2015}
+\loigiai{Giả sử phương trình đã cho có nghiệm $(x,y)$ thỏa mãn. Ta có
+\begin{align*}
+    1+\sqrt{x+y+3}=\sqrt{x}+\sqrt{y}
+    &\Rightarrow \left(1+\sqrt{x+y+3}\right)^2=\left(\sqrt{x}+\sqrt{y}\right)^2
+    \\&\Rightarrow 1+x+y+3+2\sqrt{x+y+3}=x+y+2\sqrt{xy}
+    \\&\Rightarrow 4+2\sqrt{x+y+3}=2\sqrt{xy}
+    \\&\Rightarrow \sqrt{xy}-\sqrt{x+y+3}=2.
+\end{align*}
+Theo như nội dung bổ đề, ta cần phải xét hai trường hợp từ đây.
+\begin{enumerate}
+    \item Nếu $xy=x+y+3,$ ta có $0=2,$ vô lí.
+    \item Nếu cả $xy$ và $x+y+3$ đều chính phương, kết hợp $x+y+3$ chính phương với phương trình đã cho, ta suy ra được $x,y$ đều là các số chính phương. Đặt $x=a^2,y=b^2$, với $a,b$ là các số nguyên dương. \\
+    Từ $\sqrt{xy}-\sqrt{x+y+3}=2,$ ta có $\sqrt{x+y+3}=ab-2.$ Phương trình đã cho trở thành
+    $$ab-1=a+b \Leftrightarrow (a-1)(b-1)=2.$$ 
+    Phương trình ước số trên cho ta hai nghiệm là $(2,3)$ và $(3,2).$\\
+    Thế ngược lại, ta tìm được $(4,9)$ và $(9,4)$ là hai cặp số  thỏa mãn đề bài.
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số hữu tỉ $x,y$ thỏa mãn
+$$\sqrt{2\sqrt{3}-3}=\sqrt{3x\sqrt{3}}-\sqrt{y\sqrt{3}}.$$
+\nguon{Chọn học sinh giỏi Vĩnh Phúc 2012 $-$ 2013}
+\loigiai{Giả sử tồn tại cặp số $(x,y)$ hữu tỉ thỏa mãn đẳng thức. Ta có
+\begin{align*}
+\sqrt{2\sqrt{3}-3}=\sqrt{3x\sqrt{3}}-\sqrt{y\sqrt{3}}  
+&\Rightarrow 2 \sqrt{3}-3=3 x \sqrt{3}+y \sqrt{3}-6 \sqrt{x y} 
+\\& \Rightarrow\sqrt{3}(3x+y-2)=6 \sqrt{x y}-3 
+\\& \Rightarrow 3(3x+y-2)^{2}=36 x y-36 \sqrt{x y}+9
+\\&\Rightarrow \sqrt{xy}=\dfrac{12 x y+3-(3 x+y-2)^{2}}{12}.
+\tag{*}\label{vp1213}
+\end{align*}
+Do $x, y$ là các số hữu tỉ, nên từ $(\ref{vp1213})$ ta suy ra $\sqrt{xy}$ là số hữu tỉ. 
+\begin{enumerate}
+    \item Nếu $3x+y-2 \ne 0$, vế trái của $\sqrt{3}(3x+y-2)=6 \sqrt{x y}-3$ là một số vô tỉ, trong khi vế phải của nó hữu tỉ, điều này vô lí.
+    \item Nếu $3x+y-2=0$, kết hợp với $(*),$ ta được
+    \begin{align*}
+    \heva{&3x+y=2 \\ &12\sqrt{xy}=12xy+3}
+    &\Leftrightarrow \heva{&3x+y=2 \\ &3\left(2\sqrt{xy}-1\right)^2=0}\\&
+    \Leftrightarrow \heva{&y=2-3x \\ &xy=\dfrac{1}{4}}
+    \\&\Leftrightarrow \heva{&y=2-3x \\ &4x(2-3x)-1=0} \\&
+    \Leftrightarrow \heva{&x=\dfrac{1}{2},y=\dfrac{1}{2} \\ &x=\dfrac{1}{6},y=\dfrac{3}{2}.}    
+    \end{align*}
+\end{enumerate}
+Thử lại, ta nhận thấy chỉ có $x=y=\dfrac{1}{2}$ là thỏa mãn. Bài toán kết thúc.
+}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm tự nhiên
+\[2x\sqrt{x}-2y\sqrt{y}=7\sqrt{xy}.\]
+\loigiai{
+Giả sử phương trình đã cho tồn tại nghiệm tự nhiên $(x,y)$ thỏa mãn.\\
+Ta bình phương hai vế của phương trình đã cho và nhận được
+$$4x^3-8xy\sqrt{xy}+4y^3=49xy.$$
+Từ đây, ta suy ra $8xy\sqrt{xy}=4x^3+4y^3-49xy.$ Vì $x,y$ là số tự nhiên nên $\sqrt{xy}$ là số tự nhiên. \\
+Thế trở lại phương trình đã cho, theo bổ đề, ta có $2$ trường hợp sau.
+\begin{enumerate} 
+    \item Với $x\sqrt{x}=y\sqrt{y},$ ta có $x=y=0.$
+    \item Với $x,y$ là số chính phương khác $0,$ ta đặt $x=u^2, y=v^2.$ Phương trình đã cho trở thành
+    $$2u^3-2v^3=7uv.$$
+    Đặt $u=dm$ và $v=dn$ trong đó $m,$ $n$ là các số tự nhiên sao cho $\tron{m,n}=1$. Phép đặt này cho ta
+    $$2d^3m^3-2d^3n^3=7d^2mn.$$
+    Phương trình kể trên tương đương với
+    \[2d\tron{m^3-n^3}=7mn.\tag{*}\label{pttn1}\]
+    Theo như kiến thức đã học ở \chu{chương I}, ta chứng minh được $\tron{mn,m^3-n^3}=1.$ Kết hợp với (\ref{pttn1}), ta chỉ ra $7$ chia hết cho $m^3-n^3.$ Ta xét các trường hợp sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Với $m^3-n^3=1$, ta có
+        $$\tron{m-n}\tron{m^2+mn+n^2}=1.$$
+        Biến đổi kể trên cho ta $m-n=m^2-mn+n^2=1,$ thế nên $m=1,n=0.$ Thế trở lại (\ref{pttn1}), ta được $1d=0,$ vô lí.
+        \item \chu{Trường hợp 2.} Với $m^3-n^3=7$, ta có
+        $$\tron{m-n}\tron{m^2+mn+n^2}=7.$$
+        Do $m-n<m<m^2+mn+n^2$ nên $$\heva{&m-n=1\\&m^2+mn+n^2=7.}$$ 
+        Giải hệ, ta tìm ra $m=2,n=1,$ thế vào (\ref{pttn1}) thì $d=1$ và lúc này $x=4,y=1.$
+    \end{itemize}
+\end{enumerate}
+Như vậy, phương trình đã cho có $2$ nghiệm tự nhiên là $(0,0)$ và $(4,1).$}
+\end{gbtt}
+
+\begin{gbtt}
+Giải phương trình nghiệm nguyên dương
+\[\sqrt{4x^3+14x^2+3xy-2y}+\sqrt{y^2-y+3}=z.\]
+\loigiai{
+Giả sử phương trình đã cho tồn tại nghiệm $(x,y,z)$ thỏa mãn. Theo như bổ đề đã biết, hai số
+$$4x^3+14x^2+3xy-2y,\quad y^2-y+3$$ 
+đều là chính phương. Ngoài ra, ta còn nhận thấy rằng
+$$(y-1)^2< y^2-y+3< (y+1)^2.$$
+Ta suy ra $y^2-y+3=y^2,$ hay là $y=3,$ và lúc này
+$$4x^3+14x^2+3xy-2y=4x^3+14x^2+9x-6=(x+2)\left(4x^2+6x-3\right)$$
+là một số chính phương. Ta đặt $d=\left(x+2,4x^2+6x-3\right).$ Phép đặt này cho ta
+$$
+\heva{&d\mid (x+2)\\ &d\mid \left(4x^2+6x-3\right)}
+\Rightarrow
+\heva{&d\mid (x+2)\\ &d\mid \left(2(x+2)(2x-1)+1\right)}
+\Rightarrow d=1.
+$$
+Theo như kiến thức đã học ở \chu{chương III}, ta thu được $4x^2+6x-3$ là số chính phương. Do
+$$(2x+1)^2\le 4x^2+6x-3< (2x+3)^2$$
+và $4x^2+6x-3$ lẻ nên $4x^2+6x-3=(2x+1)^2,$ hay là $x=2.$ Với $x=2,y=3,$ thay trở lại, ta tìm được $z=13.$ Kết luận, phương trình đã cho có nghiệm nguyên dương duy nhất là $(x,y,z)=(2,3,13).$}
+\end{gbtt} 
+% fact
+\begin{gbtt}\label{ptvt1}
+Giải phương trình nghiệm nguyên\[\sqrt{x+\sqrt{x+\sqrt{x+\sqrt{x}}}}=y.\]
+\loigiai{
+Với điều kiện xác định là $x\ge 0,$ phương trình đã cho tương đương $$\sqrt{x+\sqrt{x+\sqrt{x}}}=y^2-x.$$
+Đặt $y^2-x=z.$ Bình phương rồi chuyển vế, phương trình trở thành $$\sqrt{x+\sqrt{x}}=z^2-x.$$
+Tiếp tục đặt $z^2-x=t.$ Bình phương hai vế, phương trình trở thành
+$$x+\sqrt{x}=t^2.$$
+Với giả sử phương trình có nghiệm nguyên dương, ta chỉ ra $\sqrt{x}$ là số tự nhiên, chứng tỏ $x$ là một số chính phương. Đặt $\sqrt{x}=u,$ ta có
+$$u^2+u=t^2.$$
+Bằng đánh giá $u^2\le u^2+u<(u+1)^2,$ ta chỉ ra $u=0,$ kéo theo $x=0.$\\
+Kết luận, $(x,y)=(0,0)$ là nghiệm nguyên duy nhất của phương trình.
+}
+\end{gbtt}
+
+\begin{gbtt}\label{laoth2}
+Giải phương trình nghiệm nguyên
+\[y=\sqrt[3]{2+\sqrt{x}}+\sqrt[3]{2-\sqrt{x}}.\]
+\loigiai{
+Giả sử phương trình đã cho có nghiệm nguyên. Ta nhận thấy rằng
+$$y=\sqrt[3]{2+\sqrt{x}}+\sqrt[3]{2-\sqrt{x}}>\sqrt[3]{-2+\sqrt{x}}+\sqrt[3]{2-\sqrt{x}}=0,$$
+thế nên $y>0.$  Lấy lập phương hai vế phương trình đã cho, ta được
+\begin{align*}
+    y^3=4+3\left(\sqrt[3]{2+\sqrt{x}}+\sqrt[3]{2-\sqrt{x}}\right)\sqrt[3]{4-x}
+    \Rightarrow 
+    y^3=4+3y\sqrt[3]{4-x}    
+    \Rightarrow \sqrt[3]{4-x}=\dfrac{y^3-4}{3y}.
+\end{align*}
+Nhờ điều kiện xác định là $x\ge 0,$ ta chỉ ra
+$$\dfrac{y^3-4}{3y}\le \sqrt[3]{4}.$$
+Quy đồng, ta có $y^3\le\sqrt[3]{4}y+4,$ thế nên ta dễ dàng thu được $y\le 1$ nhờ vào phản chứng.  \\
+Các nhận xét trên cho ta $0<y\le 1,$ vậy nên $y=1.$ Thế trở lại, ta tìm ra $x=5.$\\
+Kết luận, $(x,y)=(5,2)$ là nghiệm nguyên duy nhất của phương trình đã cho.
+}
+
+\end{gbtt}
+\begin{gbtt}
+Giải phương trình nghiệm nguyên \[\dfrac{4}{y}+\sqrt[3]{4-x}=\sqrt[3]{4+4\sqrt{x}+x}+\sqrt[3]{4-4\sqrt{x}+x}.\]
+\loigiai{
+Đặt $\sqrt[3]{2+\sqrt{x}}=z,\sqrt[3]{2-\sqrt{x}}=t.$ Phương trình đã cho trở thành
+$$\dfrac{z^3+t^3}{y}+zt=z^2+t^2.$$
+Do $z$ và $t$ không đồng thời bằng $0,$ ta có
+$$\dfrac{z^3+t^3}{y}=z^2-zt+t^2\Leftrightarrow \dfrac{(z+t)\left(z^2-zt+t^2\right)}{y}=z^2-zt+t^2\Leftrightarrow z+t=y.$$
+Từ đó, ta thu được
+$y=\sqrt[3]{2+\sqrt{x}}+\sqrt[3]{2-\sqrt{x}}.$ \\
+Bài toán quen thuộc này cho ta kết quả $(x,y)=(1,5).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm bộ số nguyên dương $(x,y,z)$ nhỏ nhất thỏa mãn điều kiện
+\[\dfrac{\sqrt{x}}{2}=\dfrac{\sqrt[3]{y}}{3}=\dfrac{\sqrt[5]{z}}{5}.\]
+\loigiai{
+Giả sử tồn tại bộ số nguyên dương $(x,y,z)$ thỏa mãn điều kiện. Lúc này
+$$\tron{\dfrac{\sqrt{x}}{2}}^6=\tron{\dfrac{\sqrt[3]{y}}{3}}^6\Rightarrow \dfrac{x^3}{2^6}=\dfrac{y^2}{3^6}\Rightarrow3^6x^3=2^6y^2.$$
+Vì $2^6y^2$ là số chính phương ta có $3^6x^3$ là số chính phương, và như vậy $x$ cũng là số chính phương.\\
+Cũng từ lập luận $x$ chẵn, ta nhận thấy rằng $x\ge 4.$ Với $x=4,$ thế trở lại, ta có
+$$\dfrac{\sqrt[3]{y}}{3}=\dfrac{\sqrt[5]{z}}{5}=1 \Rightarrow y=3^3=27, \quad z=5^5=3125.$$
+Như vây, bộ ba số nguyên dương $(x,y,z)$ nhỏ nhất thỏa mãn điều kiện $\tron{4,27,3125}.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên $x,y$ khác $0$ thỏa mãn 
+\[\dfrac{1}{\sqrt[3]{x}}+\dfrac{2}{\sqrt{y}}=\dfrac{4}{9}.\]
+\loigiai{
+Phương trình đã cho tương đương với
+\begin{align*}
+   \dfrac{1}{\sqrt[3]{x}}=\dfrac{4}{9}-\dfrac{2}{\sqrt{y}}
+   &\Leftrightarrow \dfrac{1}{x}=\left(\dfrac{4}{9}-\dfrac{2}{\sqrt{y}}\right)^3
+   \\&\Leftrightarrow \dfrac{1}{x}=\dfrac{64}{729}+\dfrac{16}{3y}-\dfrac{8}{y\sqrt{y}}-\dfrac{32}{27\sqrt{y}}
+   \\&\Leftrightarrow\dfrac{1}{x}-\dfrac{64}{729}-\dfrac{16}{3y}=-\dfrac{8\sqrt{y}}{y^2}-\dfrac{32\sqrt{y}}{27y}
+   \\&\Leftrightarrow \dfrac{64}{729}+\dfrac{16}{3y}-\dfrac{1}{x}=\sqrt{y}\left(\dfrac{8}{y^2}+\dfrac{32}{27y}\right).
+\end{align*}
+Ta đươc $\sqrt{y}$ hữu tỉ, và ta suy ra $y$ chính phương. Kết hợp với $\dfrac{1}{\sqrt[3]{x}}+\dfrac{2}{\sqrt{y}}=\dfrac{4}{9},$ ta được $\sqrt[3]{x}$ hữu tỉ, và suy ra $x$ là số lập phương. Bằng lập luân trên, ta đặt $$x=a^3,y=b^2,\text{ ở đây }a\in\mathbb{Z},b\in\mathbb{N}^*$$ 
+Phép đặt này cho ta
+\begin{align*}
+    \dfrac{1}{a}+\dfrac{2}{b}=\dfrac{4}{9}\Leftrightarrow \dfrac{1}{a}=\dfrac{4}{9}-\dfrac{2}{b}\Leftrightarrow \dfrac{1}{a}=\dfrac{4b-18}{9b}\Leftrightarrow a=\dfrac{9b}{4b-18}
+\end{align*}
+Với việc $a$ là số nguyên, ta được 
+\begin{align*}
+    (4b-18)\mid 9b
+    &\Rightarrow (4b-18)\mid 36b
+    \\&\Rightarrow (4b-18)\mid 9(4b-18)+162
+    \\&\Rightarrow (4b-18)\mid 162
+    \\&\Rightarrow (2b-9)\mid 81.
+\end{align*}
+Căn cứ vào điều này, ta lập ra bảng giá trị sau.
+       \begin{center}
+            \begin{tabular}{c|c|c|c|c|c|c|c}
+            $2b-9$ & $-3$ & $-1$ & $1$ & $3$ & $9$ & $27$ & $81$ \\
+            \hline
+            $b$ & $3$ & $4$ & $5$ & $6$ & $9$ & $18$ & $45$\\
+            \hline
+            $a$ & $-4,5$ & $-18$ & $22,5$ & $9$ & $4,5$ & $3$ & $2,5$ \\ 
+            \end{tabular}
+        \end{center}
+Đối chiếu với phép đặt $x=a^3,y=b^2,$ ta nhận thấy có $3$ cặp số nguyên $(x,y)$ thỏa đề, bao gồm $$(-5832,16),(729,36),(27,324).$$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên tố $p,q,r,s,t$ thỏa mãn $$p+\sqrt{q^{2}+r}=\sqrt{s^{2}+t}.$$
+\nguon{Kazakhstan Mathematical Olympiad 2012, Grade 9}
+\loigiai{
+Giả sử tồn tại các số nguyên tố $p,q,r,s,t$ thỏa mãn đẳng thức. Ta nhận thấy $\sqrt{s^{2}+t}-\sqrt{q^{2}+r}$ là số nguyên dương, thế nên theo bổ đề, hai số $s^2+t$ và $q^2+r$ chính phương. Ta đặt
+$$s^2+t=x^2,\quad q^2+r=y^2.$$
+Từ $s^2+t=x^2,$ ta có $t=(x-s)(x+s).$ Dựa vào nhận xét
+$$0<x-s<x+s,$$
+ta chỉ ra $x-s=1,$ còn $x+s=t,$ và vì thế $t=2s+1.$ \\
+Chứng minh tương tự, ta cũng có thể chỉ ra $r=2q+1.$ Thể trở lại đẳng thức ban đầu, ta được
+$$p+\sqrt{q^2+2q+1}=\sqrt{s^2+2s+1}\Rightarrow p+q=s.$$
+Tính chẵn lẻ khác nhau của $p,q$ cho phép ta xét những trường hợp sau đây.
+\begin{enumerate}
+    \item Với $p=2,$ ta có
+    $t=2s+1, r=2q+1, q+2=s.$ \\
+    Nếu như $q\ge 5,$ từ $q+2=s$ và $t=2s+1,$ ta lần lượt suy ra
+    $$q\equiv 5\pmod{6},\quad s\equiv 1\pmod{6}\Rightarrow t\equiv 3\pmod{6},$$
+    vô lí do $t$ là số nguyên tố lớn hơn $5.$ \\
+    Vì vậy, bắt buộc $q\le 4,$ tức $q=3$ hoặc $q=2.$ Kiểm tra trực tiếp, ta tìm ra $$(p,q,r,s,t)=(2,3,7,5,11).$$
+    \item Với $q=2,$ ta có $t=2s+1,r=5,p+2=s.$ \\
+    Bằng cách xét số dư của $p$ khi chia cho $6$ như trường hợp trước, ta thấy trường hợp $p\ge 5$ không thể xảy ra, thế nên $p=2$ hoặc $p=3.$ Kiểm tra trực tiếp, ta tìm ra $$(p,q,r,s,t)=(3,2,5,5,11).$$
+\end{enumerate}
+Kết luận, có hai bộ $(p,q,r,s,t)$ thỏa yêu cầu là
+$$(2,3,7,5,11),\: (3,2,5,5,11).$$
+}
+\end{gbtt}
+
+\section{Bài toán về cấu tạo số}
+
+Phát triển từ ý tưởng các bài toán cấu tạo số ở cấp học dưới, các bài toán về số tự nhiên và các chữ số trong cuốn sách mở ra thêm nhiều hướng đi mới cho dạng bài tập này, có thể kể đến như chặn giá trị cho chữ số. Dưới đây là một vài bài tập tự luyện.
+
+\subsubsection*{Bài tập tự luyện}
+\begin{btt}
+Tìm các số tự nhiên $\overline{abc}$ với các chữ số khác nhau sao cho
+\[9a = 5b + 4c.\]
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số tự nhiên có $4$ chữ số $\overline{abcd}$ thỏa mãn đồng thời các điều kiện $\overline{abcd}$ chia hết cho $3$ và $\overline{abc}-\overline{bda}=650.$
+\nguon{Chuyên Toán Hải Dương 2021}
+\end{btt}
+
+\begin{btt}
+Tìm các số tự nhiên có ba chữ số, biết rằng nếu cộng chữ số hàng trăm với $n,$ đồng thời trừ các chữ số hàng chục và đơn vị cho $n,$ ta được một số gấp $n$ lần số ban đầu.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn đồng thời các tính chất
+\begin{enumerate}[i,]
+    \item $x$ và $y$ đều có hai chữ số.
+    \item $x=2 y.$
+    \item Một chữ số của $y$ thì bằng tổng hai chữ số của $x$, còn chữ số kia thì bằng trị tuyệt đối của hiệu hai chữ số của $x$.
+\end{enumerate}
+\end{btt}
+
+\begin{btt}
+Tìm các số tự nhiên có bốn chữ số và bằng tổng các bình phương của số tạo bởi hai chữ số đầu và số tạo bởi hai chữ số cuối, biết rằng hai chữ số cuối giống nhau.
+\end{btt}
+
+\begin{btt}
+Tìm tất cả các số có $5$ chữ số $\overline{abcde}$ sao cho $\sqrt[3]{\overline{abcde}}=\overline{ab}$.
+\nguon{Chuyên Toán Thái Nguyên 2016} 
+\end{btt}
+
+\begin{btt}
+Tìm hai số chính phương có bốn chữ số, biết rằng mỗi chữ số của số thứ nhất đều lớn hơn chữ số cùng hàng của số thứ hai cùng bằng một số.
+\end{btt}
+
+\begin{btt}
+Tìm số tự nhiên $\overline{abc}$ thỏa mãn điều kiện $\overline{abc}=\tron{a+b}^24c.$
+\end{btt}
+\begin{btt}
+Hãy tìm tất cả các chữ số nguyên dương $a,b,c$ đôi một khác nhau thỏa mãn 
+\[\dfrac{\overline{ab}}{\overline{ca}}=\dfrac{b}{c}.\]
+\nguon{ Chuyên Quốc Học Huế năm 2011}
+\end{btt}
+\begin{btt}
+Số nguyên dương $n$ được gọi là số bạch kim nếu $n$ bằng tổng bình phương các chữ số của nó.
+\begin{enumerate}[a,]
+    \item Chứng minh rằng không tồn tại số bạch kim có $3$ chữ số.
+    \item Tìm tất cả các số nguyên dương $n$ là số bạch kim.
+\end{enumerate}
+\nguon{Phổ thông Năng khiếu 2008}
+\end{btt}
+
+\begin{btt}
+Tìm hai số tự nhiên liên tiếp, mỗi số có hai chữ số, biết rằng nếu viết số lớn trước số nhỏ thì ta được một số chính phương.
+\end{btt}
+
+\begin{btt}
+Tìm các số tự nhiên có bốn chữ số và bằng bình phương của tổng của số tạo bởi hai chữ số đầu và số tạo bởi hai chữ số cuối của số đó (viết theo thứ tự cũ).
+\end{btt}
+
+\begin{btt}
+Tìm các số tự nhiên có bốn chữ số thỏa mãn đồng thời các điều kiện. 
+\begin{enumerate}
+\item[i,] Hai chữ số đầu như nhau, hai chữ số cuối như nhau.
+\item[ii,] Số cần tìm  bằng tích của hai số, mỗi số gồm hai chữ số như nhau.
+\end{enumerate}
+\end{btt}
+
+\subsection*{Hướng dẫn bài tập tự luyện}
+
+\begin{gbtt}
+Tìm các số tự nhiên $\overline{abc}$ với các chữ số khác nhau sao cho
+\[9a = 5b + 4c.\]
+\loigiai
+{Giả sử tồn tại số tự nhiên $\overline{abc}$ thỏa mãn đề bài. Ta có
+$$9a = 5b + 4c \Leftrightarrow 9a - 9c = 5b - 5c \Leftrightarrow 9(a - c) = 5(b - c).$$    
+Do $(5,9)=1$ nên $b-c$ chia hết cho $9.$ Với việc $-9\le b-c\le 9$ và giả thiết $b,c$ là hai chữ số phân biệt, ta xét các trường hợp sau đây.
+\begin{enumerate}
+   \item Với $b-c=9,$ ta có $b=9$ và $c=0.$
+   Kiểm tra, ta tìm ra $\overline{abc}=590.$
+   \item Với $b-c=-9,$ ta có $b=0$ và $c=9.$
+   Kiểm tra, ta tìm ra $\overline{abc}=409.$
+\end{enumerate}
+Vậy tất các số cần tìm là $590$ và $409$.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số tự nhiên có $4$ chữ số $\overline{abcd}$ thỏa mãn đồng thời hai điều kiện là $\overline{abcd}$ chia hết cho $3$ và $\overline{abc}-\overline{bda}=650.$
+\nguon{Chuyên Toán Hải Dương 2021}
+\loigiai{
+Giả sử tồn tại số tự nhiên $\overline{abcd}$ thỏa mãn đề bài. Rõ ràng, $c=a$ và từ giả thiết, ta nhận thấy $a\ge 7.$\\
+Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $a=c=7,$ ta có
+        $$650=\overline{abc}-\overline{bda}=\overline{7b7}-\overline{bd7}=700-90b-10d\le 700-90\cdot1=630,$$
+        một điều mâu thuẫn.
+    \item Với $a=c=8,$ ta có
+        $$650=\overline{abc}-\overline{bda}=\overline{8b8}-\overline{bd8}=800-90b-10d.$$
+        Từ đây, ta suy ra $9b+d=15,$ tức $b=1$ và $c=6.$\\
+        Kiểm tra trực tiếp, ta thấy số $\overline{abcd}=8186$ không chia hết cho $3,$ mâu thuẫn.
+    \item Với $a=c=9,$ ta có
+        $$650=\overline{abc}-\overline{bda}=\overline{9b9}-\overline{bd9}=900-90b-10d.$$
+        Từ đây, ta suy ra $9b+d=25.$ Do $b,d$ là các chữ số, chỉ có trường hợp $b=2,d=7$ xảy ra.\\ Kiểm tra trực tiếp, ta thấy số $\overline{abcd}=9297$ chia hết cho $3.$
+\end{enumerate}
+Kết luận, $\overline{abcd}=9297$ là số tự nhiên duy nhất thỏa yêu cầu.}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số tự nhiên có ba chữ số, biết rằng nếu cộng chữ số hàng trăm với $n,$ đồng thời trừ các chữ số hàng chục và đơn vị cho $n,$ ta được một số gấp $n$ lần số ban đầu.
+\loigiai{
+Gọi số phải tìm là $x.$ Khi thêm $n$ vào hàng trăm, bớt $n$ ở hàng chục và hàng đơn vị, số đó sẽ tăng thêm
+$$100n-10n-n=89n.$$
+Số mới gấp $n$ lần số cũ, chứng tỏ $nx-x=89n,$ hay là $(n-1)x=89n.$ \\
+Do $(n,n-1)=1$ nên $89$ chia hết cho $n-1.$ Với chú ý $0\le n\le 9,$ ta tìm ra $n=2.$ Số cần tìm là $178.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số nguyên dương $x,y$ thỏa mãn đồng thời các tính chất
+\begin{enumerate}[i,]
+    \item $x$ và $y$ đều có hai chữ số.
+    \item $x=2 y.$
+    \item Một chữ số của $y$ thì bằng tổng hai chữ số của $x$, còn chữ số kia thì bằng trị tuyệt đối của hiệu hai chữ số của $x$.
+\end{enumerate}
+\loigiai{Giả sử tồn tại các số nguyên dương $x=\overline{a b}, y=\overline{c d}$ thỏa yêu cầu. Ta sẽ có $x=2 y,d=a+b,c=|a-b|$. Ta lần lượt xét các trường hợp sau đây.
+\begin{enumerate}
+    \item Nếu $c=a-b, d=a+b,$ ta có $10 a+b=2(10 c+d)=2(10 a-10 b+a+b),$ hay là $19 b=12 a.$ Điều này mâu thuẫn với điều kiện $0\le b,a\le 10.$
+    \item Nếu $c=b-a, d=a+b,$ ta có 
+    $$10 a+b=2(10 c+d)=2(10 b-10 a+a+b) \Leftrightarrow 28 a=21 b \Leftrightarrow 4 a=3 b.$$
+    Trong trường hợp này, ta tìm được $\overline{ab}\in\{34;68\}.$ Thử trực tiếp, ta chỉ ra được $\overline{cd}=17$ khi $\overline{ab}=34.$ 
+\end{enumerate}
+Kết luận, cặp số duy nhất thỏa yêu cầu bài toán là $(34,17).$}
+\end{gbtt}
+
+\begin{gbtt}
+ Tìm các số tự nhiên có bốn chữ số và bằng tổng các bình phương của số tạo bởi hai chữ số đầu và số tạo bởi hai chữ số cuối, biết rằng hai chữ số cuối giống nhau.
+ \loigiai{
+Gọi số cần tìm là $\overline{abcc}.$ Từ giả thiết, ta có
+$$\overline{abcc} = \overline{ab}^2 + \overline{cc}^2.$$
+Ta tiếp tục đặt $\overline{ab} = x$, $\overline{cc} = y.$ Dựa vào phép đặt này, ta lại có 
+$$100x + y = x^2 + y^2\Rightarrow 4x^2-400x+4y^2-4y=0\Rightarrow 4(x-50)^2+(2y-1)^2=10001.$$
+Phân tích trên cho ta $(2y-1)^2\le 10001,$ hay là $y\le 50.$ Song, với việc $y$ chia hết cho $11,$ có bốn trường hợp xảy ra, là $y=11,y=22,y=33,y=44.$ Thử trực tiếp từng trường hợp, ta chỉ ra tất cả các số tự nhiên cần tìm là $1233$ và $8833.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm tất cả các số có $5$ chữ số $\overline{abcde}$ sao cho $\sqrt[3]{\overline{abcde}}=\overline{ab}$.
+\nguon{Chuyên Toán Thái Nguyên 2016} 
+\loigiai{Từ giả thiết, ta có $1000\overline{ab} + \overline{cde} = (\overline{ab})^3.$  Đặt $m=\overline{ab},n=\overline{cde}.$ Phép đặt này giúp ta lần lượt suy ra $$1000m+n=m^3 \Rightarrow m^3 \geq 1000m \Rightarrow m^2 \geq 1000 \Rightarrow m \geq 32.$$
+Nếu như $m\geq 33,$ ta nhận xét $$n=m(m^2-1000)\geq 33\cdot 89=2937>1000.$$
+Điều này mâu thuẫn với điều kiện $n$ có không quá ba chữ số. Theo đó, chỉ khả năng $m=32$ xảy ra. Ta tìm được $\overline{abcde}=32^3=32768.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm hai số chính phương có bốn chữ số, biết rằng mỗi chữ số của số thứ nhất đều lớn hơn chữ số cùng hàng của số thứ hai cùng bằng một số.
+\loigiai{
+Gọi hai số chính phương lần lượt là $x^2 = \overline{abcd}$ và $y^2 = \overline{a'b'c'd'}.$
+Từ giả thiết, ta có $$a - a' = b - b' = c - c' = d - d' = m,$$ với $m \leq 8$ và $32 \leq y < x \leq 99,$ đồng thời
+  $$x^2 - y^2 = 1111m \Rightarrow (x + y)(x - y) = 11\cdot101m.$$
+Do $11,101$ đều là số nguyên tố và
+$$ x - y \leq 99 - 32 = 67, \quad x + y \leq 99 + 98 = 197$$
+  nên $\heva{& x + y = 101 \\& x - y = 11m} \Rightarrow \heva{& x = \dfrac{101 + 11m}{2} \\& y = \dfrac{101 - 11m}{2}}\Rightarrow 101 - 11m \geq 64 \Rightarrow m \leq \dfrac{34}{11}.$ \\
+Từ $2y=101-11m,$ ta cũng nhận thấy $m$ là số lẻ. Ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Với $m = 1,$ ta có  $\heva{& x = 56 \\& y = 45} \Rightarrow \heva{& x^2 = 3136 \\& y^2 = 2025.}$
+    \item Với $m = 3,$ ta có  $\heva{& x = 67 \\& y = 34} \Rightarrow \heva{& x^2 = 4489 \\& y^2 = 1156.}$
+\end{enumerate}
+Như vậy có hai cặp số thỏa mãn đề bài, gồm $(3136,2025)$ và $(4489,1156).$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm số tự nhiên $\overline{abc}$ thỏa mãn điều kiện $\overline{abc}=\tron{a+b}^24c.$
+\loigiai{
+Từ giả thiết bài toán ta có $100a+10b+c=4c{{\left( a+b \right)}^{2}}$. Do đó ta được 
+\[c\vuong{4(a+b)^2-1}=10\vuong{(a+b)+9a}.\tag{*}\label{cts01}\]
+Nếu $c$ chia hết cho $5,$ ta có $c=0$ hoặc $c=5,$ nhưng cả hai trường hợp này đều mâu thuẫn với giả thiết.\\ Do đó $c$ không chia hết cho $5,$ và ta suy ra
+$$5\mid \vuong{4{{\left( a+b \right)}^{2}}-1}.$$
+Vì $4(a+b)^2$ là số chẵn nên nó phải có tận cùng là $6,$ kéo theo $(a+b)^2$ phải có tận cùng là $4$ hoặc $9.$\\
+Ngoài ra, ta cũng có $c$ chẵn. Do $c$ chẵn và $c\ne 0$ nên $c\ge 2.$ Kết hợp với (\ref{cts01}) ta có
+$$4(a+b)^2-1\le  \dfrac{10(a+b)+90a}{2}\le \dfrac{10\cdot9\cdot 2+90\cdot9}{2}=495.$$
+Từ các kết quả trên ta nhận được  ${\left( a+b \right)}^{2}\in \left\{ 4;9;49;64 \right\}$ hay \[a+b \in \left\{2;3;7;8\right\}.\tag{**}\label{cts02}\]
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu $a+b\in \left\{ 2;7;8 \right\}$ thì $a+b$ có dạng $3k\pm 1,$ khi đó $4{{\left( a+b \right)}^{2}}-1$ chia hết cho $3.$ Lại có \[\left( a+b \right)+9a=3k\pm 1+9a\] không chia hết cho $3$ nên $10\left[ \left( a+b \right)+9a \right]$ không chia hết cho $3,$ suy ra $c\notin \mathbb{N},$ mâu thuẫn.
+    \item Nếu $a+b=3$ ta có $c=\dfrac{10\left( 3+9a \right)}{35}=\dfrac{6\left( 1+3a \right)}{7}$. \\
+    Ta suy ra $1+3a$ chia hết cho $7.$ Thử với $a=1,2,3,\ldots,9,$ ta tìm ra $a=2$ và $a=9.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $a=2,$ ta có $b\in \{1;5;6\}.$ Thế trở lại (\ref{cts01}), ta tìm ra $c=6$ khi $b=1.$
+        \item \chu{Trường hợp 2.} Nếu $a=9,$ đối chiếu với (\ref{cts02}), ta có $b<0,$ mâu thuẫn.      
+    \end{itemize}
+\end{enumerate}
+Vậy số $\overline{abc}=216$ là số tự nhiên cần tìm.}
+\end{gbtt}
+\begin{gbtt}
+Hãy tìm tất cả các chữ số nguyên dương $a,b,c$ đôi một khác nhau thỏa mãn 
+\[\dfrac{\overline{ab}}{\overline{ca}}=\dfrac{b}{c}.\]
+\nguon{ Chuyên Quốc Học Huế năm 2011}
+\loigiai{Giả sử tồn tại các bộ số $\left(a,b,c \right)$ thỏa mãn đề bài. 
+Khi đó đẳng thức đã cho trở thành \[\left( 10a+b \right)c=\left( 10c+a \right)b\tag{*}\label{quochoc11}\]
+hay $2\cdot 5\cdot c\left( a-b \right)=b\left( a-c \right)$. 
+Ta suy ra $5$ là ước số của $bac$. Vì $1\le a,b,c\le 9$ và $a\ne c$ nên
+$$b=5 \quad\text{hoặc}\quad a-c=5 \quad \text{ hoặc }\quad c-a=5.$$
+Ta đi xét các trường hợp sau.
+\begin{enumerate}
+\item Với $b=5$ ta có $2c\left( a-5 \right)=a-c.$ Biến đổi tương đương cho ta
+\[ c=\dfrac{a}{2a-9}\Leftrightarrow 2c=1+\dfrac{9}{2a-9}.\]
+Vì $a\ne 5$ nên $2a-9=3$ hoặc $2a-9=9.$ Trong trường hợp này, ta tìm ra
+$$\overline{abc}=652,\quad \overline{abc}=951.$$
+\item Với $a-c=5$ ta có $a=c+5.$ Thế vào (\ref{quochoc11}) ta được
+$$2c\left( c+5-b \right)=b\Leftrightarrow b=\dfrac{2{{c}^{2}}+10c}{2c+1}\Leftrightarrow 2b=2c+9-\dfrac{9}{2c+1}.$$
+Ta được $2c+1=3$ hoặc $2c+1=9$ vì $c\ne 0$. 
+Trong trường hợp này, ta tìm ra
+$$\overline{abc}=641,\quad \overline{abc}=984.$$
+\item Với $c-a=5$ ta có $c=a+5.$ Thế vào (\ref{quochoc11}) ta được
+$$2\left( a+5 \right)\left( a-b \right)=-b\Leftrightarrow b=\dfrac{2{{a}^{2}}+10a}{2a-9}.$$
+Từ đó suy ra $2b=2a+19+\dfrac{9.19}{2a-9}>9,$ mâu thuẫn.
+\end{enumerate}
+Vậy các bộ số  $\left( a,b,c \right)$ thỏa mãn yêu cầu bài toán là 
+$\left( 6,5,2 \right),\ \left( 9,5,1 \right),\ \left( 6,4,1 \right),\ \left( 9,8,4 \right).$}
+\end{gbtt}
+\begin{gbtt}
+Một số nguyên dương $n$ được gọi là số bạch kim nếu $n$ bằng tổng bình phương các chữ số của nó.
+\begin{enumerate}[a,]
+    \item Chứng minh rằng không tồn tại số bạch kim có $3$ chữ số.
+    \item Tìm tất cả các số nguyên dương $n$ là số bạch kim.
+\end{enumerate}
+\nguon{Phổ thông Năng khiếu 2008}
+\loigiai{
+\begin{enumerate}[a,]
+    \item Gọi số bạch kim có $3$ chữ số là $\overline{abc}.$ Từ giả thiết, ta có
+    $$\overline{abc}= a^2+b^2+c^2.$$
+    Từ đây, ta suy ra điều sau
+    $$100a+10b+c=a^2+b^2+c^2\Rightarrow a\tron{100-a}+b\tron{10-b}+c-c^2=0.$$
+    Vì $a,b,c\le9$ nên $91\le(100-a), 0\le(10-b), c^2\le 81.$ Ta nhận thấy $0<(100-a)-c^2.$ \\
+    Từ những lập luận vừa rồi, ta thu được
+    $$\vuong{a\tron{100-a}-c^2}+b\tron{10-b}+c>0.$$
+    Điều này mâu thuẫn với lập luận trên của ta. Vậy nên không tồn tại số bạch kim có $3$ chữ số.
+    \item Ta sẽ chứng minh không tồn tại số bạch kim có số chữ số lớn hơn $2.$ Thật vậy, ta gọi số bạch kim có $n$ chữ số là $\overline{a_1a_2\cdots a_n}$ trong đó $3\le n, 1\le a_1\le 9$ và $0\le a_2,a_3,\cdots, a_n\le9.$ Điều kiện ở giả thiết cho ta
+    \[a_1\tron{10^{n-1}-a}+a_2\tron{10^{n-2}-a_2}+\cdots+a_n-a^2_n=0\tag{*}\label{platinumhcm}.\]
+    Mặt khác, từ những điều kiện $1\le a_1\le 9$ và $0\le a_2,a_3,\cdots, a_n\le9,$ ta suy ra  $81<a_1\tron{10^{n-1}-a}$ và $0<10^{n-2}-a_2,\cdots,10-a_{n-1}.$ Các nhận xét kể trên giúp ta đánh giá được vế trái của (\ref{platinumhcm})
+    $$\vuong{a_1\tron{10^{n-1}-a}-a^2_n}+a_2\tron{10^{n-2}-a_2}+\cdots+a_n>0.$$
+    Đánh giá trên là một mâu thuẫn, chứng tỏ một số bạch kim chỉ có thể có $1$ hoặc $2$ chữ số. Ta xét các trường hợp sau.
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $n=1,$ ta gọi số bạch kim có một chữ số là $a.$ Từ giả thiết, ta có
+        $a=a^2.$
+        Vì $a$ là số nguyên dương nên $a=1.$ 
+        \item \chu{Trường hợp 2.} Nếu $n\ge 2,$  ta gọi số bạch kim có hai chữ số là $\overline{ab}.$ Từ giả thiết, ta có
+        $\overline{ab}=a^2+b^2,$
+        hay là $10a+b=a^2+b^2.$ Từ đây, ta suy ra
+        $$b\tron{b-1}=a\tron{10-a}.$$
+        Xét tính chẵn lẻ của hai vế, ta chỉ ra $a$ chẵn. Thử trực tiếp với $a=2,4,6,8,$ ta không tìm được $b$ thỏa mãn.
+    \end{itemize}
+Như vậy, có duy nhất số bạch kim là $1.$
+\end{enumerate}}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm hai số tự nhiên liên tiếp, mỗi số có hai chữ số, biết rằng nếu viết số lớn trước số nhỏ thì ta được một số chính phương.
+\loigiai{Gọi hai số tự nhiên phải tìm là $x$ và $x + 1$, số chính phương là $n^2$, trong đó $x$, $n$ thuộc $\mathbb{N}$. Rõ ràng $10 \leq x \leq 98; \, 32 \leq n \leq 99.$ Từ giả thiết, ta có
+$$100(x + 1) + x = n^2 \Leftrightarrow 101x + 100 = n^2 \Leftrightarrow (n + 10)(n - 10) = 101x.$$
+Với chú ý $(n + 10)(n - 10)$ chia hết cho số nguyên tố $101$, ta thấy tồn tại một thừa số chia hết cho $101$. Việc chặn $32\le n\le 99$ ở ban đầu cho ta
+$$ 22 \leq n - 10 \leq 89, \quad 42 \leq n + 10 \leq 109.$$
+Quan sát, ta nhận ra chỉ tồn tại trường hợp $n+10=101.$ Ta lần lượt tìm được $n = 91$ và $n^2 = 91^2 = 8281$. Như vậy hai số cần tìm là $81$ và $82.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số tự nhiên có bốn chữ số và bằng bình phương của tổng của số tạo bởi hai chữ số đầu và số tạo bởi hai chữ số cuối của số đó (viết theo thứ tự cũ).
+\loigiai{
+Gọi số cần tìm là $\overline{abcd}.$ Từ giả thiết, ta có 
+$$\overline{abcd} = \left( \overline{ab} + \overline{cd} \right)^2.$$
+Ta đặt $\overline{ab} = x$, $\overline{cd} = y$ trong đó $10\le x,y\le 99.$ Phép đặt này cho ta
+$$100x + y = (x + y)^2 \Leftrightarrow 99x = (x + y)^2 - (x + y) \Leftrightarrow 99x = (x + y)(x + y - 1).$$
+Tới đây, ta xét các trường hợp sau.
+\begin{enumerate}
+    \item Nếu một trong hai thừa số $x + y$, $x + y - 1$ chia hết cho $99,$ do $32 \leq x + y \leq 99$ nên $$31 \leq x + y - 1 \leq 98.$$ 
+    Chỉ tồn tại khả năng $x+y=99.$ Ta tìm ra $\overline{abcd}=99^2=9801.$
+    \item Nếu trong hai thừa số $x + y$, $x + y - 1,$ không có thừa số nào chia hết cho $99,$ một thừa số phải chia hết cho $11,$ còn thừa số còn lại chia hết cho $9.$
+    \begin{itemize}
+        \item \chu{Trường hợp 1.} Nếu $11\mid \tron{x+y}$ và $9\mid\tron{x+y-1},$ ta có
+        $$\heva{& (x + y) \in \{33; 44; 55; 66; 77; 88 \} \\& (x + y - 1) \in \{36; 45; 54; 63; 72; 81; 90 \}}.$$
+        Đối chiếu các dòng trong hệ, ta tìm ra $x+y=55,$ và như vậy $\overline{abcd}=55^2=3025.$
+        \item \chu{Trường hợp 2.} Nếu $9\mid \tron{x+y}$ và $11\mid\tron{x+y-1},$ ta có
+        $$\heva{& (x + y) \in \{36; 45; 54; 63; 72; 81; 90 \} \\& (x + y - 1) \in \{33; 44; 55; 66; 77; 88 \}}.$$
+        Đối chiếu các dòng trong hệ, ta tìm ra $x+y=45,$ và như vậy $\overline{abcd}=45^2=2025.$
+   \end{itemize}
+\end{enumerate}
+Thử trực tiếp từng trường hợp, ta kết luận tất cả các số cần tìm là $2025,3025$ và $9801.$}
+\end{gbtt}
+
+\begin{gbtt}
+Tìm các số tự nhiên có bốn chữ số thỏa mãn đồng thời các điều kiện. 
+\begin{enumerate}
+\item[i,] Hai chữ số đầu như nhau, hai chữ số cuối như nhau.
+\item[ii,] Số cần tìm  bằng tích của hai số, mỗi số gồm hai chữ số như nhau.
+\end{enumerate}
+\loigiai{
+Gọi số cần tìm là $\overline{xxyy}.$ Từ giả thiết, ta có
+   \begin{align*}
+    \overline{xxyy} = \overline{aa} \cdot \overline{bb} & \Leftrightarrow 1100x + 11y = 11a \cdot 11b \text{ (với $a$, $b$ thuộc $\mathbb{N}^*$)}\\
+    & \Leftrightarrow 100x + y = 11ab \\
+    & \Leftrightarrow 99x + x + y = 11ab.
+   \end{align*}
+Xét tính chia hết cho $11$ ở cả hai vế, ta nhận thấy rằng $x+y$ chia hết cho $11.$ Với việc $2\le x+y\le 18,$ chỉ khả năng $x+y=11$ xảy ra. Ta lập bảng giá trị sau đây.
+    \begin{center}
+    \begin{tabular}{c|c|c|c|c|c|c|c|c}
+    $\overline{xy}$ & $29$ & $38$ & $47$ & $56$ & $65$ & $74$ & $83$ & $92$\\
+    \hline
+    $ab$ & $19$  & $28$  & $37$  & $46$  & $55$  & $64$  & $73$  & $82$\\
+    \end{tabular}
+    \end{center}
+Trong các tích $ab$ ở bảng trên, chỉ có hai trường hợp cho $a,b$ là hai số có một chữ số, đó là
+   $$28 = 4 \cdot 7, \hspace*{0.5cm} 64 = 8 \cdot 8.$$
+Kiểm tra trực tiếp, ta nhận thấy các số cần tìm là $3388 = 44 \cdot 77$ và $7744 = 88 \cdot 88.$}
+\end{gbtt}
